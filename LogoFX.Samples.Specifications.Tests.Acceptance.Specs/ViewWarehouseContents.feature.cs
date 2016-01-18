@@ -66,11 +66,11 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Specs
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Add two numbers")]
+        [NUnit.Framework.DescriptionAttribute("Display warehouse items")]
         [NUnit.Framework.CategoryAttribute("Sanity")]
-        public virtual void AddTwoNumbers()
+        public virtual void DisplayWarehouseItems()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add two numbers", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display warehouse items", new string[] {
                         "Sanity"});
 #line 7
 this.ScenarioSetup(scenarioInfo);

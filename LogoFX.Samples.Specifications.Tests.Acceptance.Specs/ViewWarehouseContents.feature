@@ -4,7 +4,7 @@
 	I want to be told the sum of two numbers
 
 @Sanity
-Scenario: Add two numbers
+Scenario: Display warehouse items
 	Given warehouse contains the following items:
 	| Kind | Price  | Quantity |
 	| Oven | 34.95  | 20       |
