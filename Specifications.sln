@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{719AD31A-1447-494B-93D5-897FCA9E0CCF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{1EAEA804-9B78-4EF6-8D4F-3B6D3FA398D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Samples.Client.Presentation.Shell", "LogoFX.Samples.Client.Presentation.Shell\LogoFX.Samples.Client.Presentation.Shell.csproj", "{5270F84D-8FF4-4756-83B0-78DD9777643D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App", "App", "{DB76F33D-308E-48EF-8660-FF4AA7760616}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{10B9B54F-4AED-4C27-AF18-54193FB50410}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6BA94BB3-D326-4A10-B4DF-04AE91A0C15E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Specs", "Specs", "{26C907FD-58BC-4A70-8DCC-6CAF085D6125}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Steps", "Steps", "{5CBC5578-3B16-47AA-8176-C33356E8B019}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Acceptance", "Acceptance", "{835945EF-48E0-4F18-8BDC-F6B63DF01961}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Samples.Specifications.Tests.Acceptance.Specs", "LogoFX.Samples.Specifications.Tests.Acceptance.Specs\LogoFX.Samples.Specifications.Tests.Acceptance.Specs.csproj", "{DA41EB1E-ECAF-400B-A1A4-82EBACDD7600}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5270F84D-8FF4-4756-83B0-78DD9777643D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5270F84D-8FF4-4756-83B0-78DD9777643D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5270F84D-8FF4-4756-83B0-78DD9777643D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5270F84D-8FF4-4756-83B0-78DD9777643D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA41EB1E-ECAF-400B-A1A4-82EBACDD7600}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA41EB1E-ECAF-400B-A1A4-82EBACDD7600}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA41EB1E-ECAF-400B-A1A4-82EBACDD7600}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA41EB1E-ECAF-400B-A1A4-82EBACDD7600}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{719AD31A-1447-494B-93D5-897FCA9E0CCF} = {10B9B54F-4AED-4C27-AF18-54193FB50410}
+		{1EAEA804-9B78-4EF6-8D4F-3B6D3FA398D8} = {10B9B54F-4AED-4C27-AF18-54193FB50410}
+		{5270F84D-8FF4-4756-83B0-78DD9777643D} = {719AD31A-1447-494B-93D5-897FCA9E0CCF}
+		{10B9B54F-4AED-4C27-AF18-54193FB50410} = {DB76F33D-308E-48EF-8660-FF4AA7760616}
+		{26C907FD-58BC-4A70-8DCC-6CAF085D6125} = {835945EF-48E0-4F18-8BDC-F6B63DF01961}
+		{5CBC5578-3B16-47AA-8176-C33356E8B019} = {835945EF-48E0-4F18-8BDC-F6B63DF01961}
+		{835945EF-48E0-4F18-8BDC-F6B63DF01961} = {6BA94BB3-D326-4A10-B4DF-04AE91A0C15E}
+		{DA41EB1E-ECAF-400B-A1A4-82EBACDD7600} = {26C907FD-58BC-4A70-8DCC-6CAF085D6125}
+	EndGlobalSection
+EndGlobal
