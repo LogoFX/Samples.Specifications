@@ -3,6 +3,6 @@
 namespace LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.EndToEnd
 {
     public class ShellScreenObject : IShellScreenObject
-    {
+    {        
     }
 }

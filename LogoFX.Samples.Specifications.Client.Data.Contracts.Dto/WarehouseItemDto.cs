@@ -7,6 +7,6 @@ namespace LogoFX.Samples.Specifications.Client.Data.Contracts.Dto
     {
         public string Kind { get; set; }
         public double Price { get; set; }
-        public double Quantity { get; set; }
+        public int Quantity { get; set; }
     }
 }

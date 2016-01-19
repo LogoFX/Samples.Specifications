@@ -19,7 +19,8 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Bridge
         {
             ScenarioHelper.Add(new StartApplicationService(), typeof(IStartApplicationService));
             ScenarioHelper.Add(new BuilderRegistrationService(), typeof(IBuilderRegistrationService));            
-            ScenarioHelper.Add(new ShellScreenObject(), typeof(IShellScreenObject));            
+            ScenarioHelper.Add(new ShellScreenObject(), typeof(IShellScreenObject));  
+            ScenarioHelper.Add(new MainScreenObject(), typeof(IMainScreenObject));          
         }
 
         protected override void OnAfterTeardown()
