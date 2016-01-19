@@ -2,7 +2,7 @@
 
 namespace LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.EndToEnd
 {
-    class ShellScreenObject : IShellScreenObject
+    public class ShellScreenObject : IShellScreenObject
     {
     }
 }

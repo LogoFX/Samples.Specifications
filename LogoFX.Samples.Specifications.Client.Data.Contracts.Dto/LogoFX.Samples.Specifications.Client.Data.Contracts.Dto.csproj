@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CBE2F355-1F23-4A58-A6AE-BA7BE542F76C}</ProjectGuid>
+    <ProjectGuid>{84A92671-0079-42F2-B567-D7FFCE23A7E3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LogoFX.Samples.Specifications.Tests.Acceptance.Steps.Adapters</RootNamespace>
-    <AssemblyName>LogoFX.Samples.Specifications.Tests.Acceptance.Steps.Adapters</AssemblyName>
+    <RootNamespace>LogoFX.Samples.Specifications.Client.Data.Contracts.Dto</RootNamespace>
+    <AssemblyName>LogoFX.Samples.Specifications.Client.Data.Contracts.Dto</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\Bin\Tests\</OutputPath>
+    <OutputPath>..\Bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -37,37 +37,10 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="TechTalk.SpecFlow, Version=1.9.0.77, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
-      <HintPath>..\packages\SpecFlow.1.9.0\lib\net35\TechTalk.SpecFlow.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GeneralStepsAdapter.cs" />
-    <Compile Include="GivenMainStepsAdapter.cs" />
-    <Compile Include="MainStepsAdapter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\LogoFX.Samples.Specifications.Client.Data.Contracts.Dto\LogoFX.Samples.Specifications.Client.Data.Contracts.Dto.csproj">
-      <Project>{84A92671-0079-42F2-B567-D7FFCE23A7E3}</Project>
-      <Name>LogoFX.Samples.Specifications.Client.Data.Contracts.Dto</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders\LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders.csproj">
-      <Project>{AF68283B-5283-4DEF-8DA0-6FB6CA85C1BD}</Project>
-      <Name>LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LogoFX.Samples.Specifications.Tests.Acceptance.Steps\LogoFX.Samples.Specifications.Tests.Acceptance.Steps.csproj">
-      <Project>{DE972164-E8D0-4601-B3BE-B36AD22D7581}</Project>
-      <Name>LogoFX.Samples.Specifications.Tests.Acceptance.Steps</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="TestData\" />
+    <Compile Include="WarehouseItemDto.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

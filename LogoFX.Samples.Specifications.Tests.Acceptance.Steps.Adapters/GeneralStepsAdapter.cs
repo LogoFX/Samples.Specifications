@@ -7,8 +7,8 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Steps.Adapters
     {
         [When(@"I open the application")]
         public void WhenIOpenTheApplication()
-        {            
-            ScenarioContext.Current.Pending();
+        {
+            GeneralSteps.WhenIOpenTheApplication();
         }
     }
 }

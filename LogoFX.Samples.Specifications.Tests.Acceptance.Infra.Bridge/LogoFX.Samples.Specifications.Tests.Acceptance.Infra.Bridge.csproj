@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DE972164-E8D0-4601-B3BE-B36AD22D7581}</ProjectGuid>
+    <ProjectGuid>{3FC45A34-C028-4F72-B8A7-7B8BF15C5BB8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LogoFX.Samples.Specifications.Tests.Acceptance.Steps</RootNamespace>
-    <AssemblyName>LogoFX.Samples.Specifications.Tests.Acceptance.Steps</AssemblyName>
+    <RootNamespace>LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Bridge</RootNamespace>
+    <AssemblyName>LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Bridge</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -46,16 +46,32 @@
       <HintPath>..\packages\Attest.Tests.Core.1.1.0\lib\net45\Attest.Tests.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Attest.Tests.SpecFlow, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Attest.Tests.SpecFlow.1.1.0\lib\net45\Attest.Tests.SpecFlow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.3.3.0\lib\net45\Castle.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="LogoFX.Client.Tests.Contracts, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Client.Tests.Contracts.1.0.4\lib\net45\LogoFX.Client.Tests.Contracts.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    <Reference Include="LogoFX.Client.Tests.EndToEnd, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Client.Tests.EndToEnd.1.0.4\lib\net45\LogoFX.Client.Tests.EndToEnd.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Solid.Practices.IoC, Version=1.0.6.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Solid.Practices.IoC.1.0.6\lib\portable-net45+sl4+wp7+win8\Solid.Practices.IoC.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Solid.Practices.Middleware, Version=1.0.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Practices.Middleware.1.0.6\lib\portable-net45+sl4+wp7+win8\Solid.Practices.Middleware.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Solid.Practices.Modularity, Version=1.0.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Practices.Modularity.1.0.6\lib\portable-net4+sl4+wp7+win8\Solid.Practices.Modularity.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -65,23 +81,31 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="TechTalk.SpecFlow, Version=1.9.0.77, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpecFlow.1.9.0\lib\net35\TechTalk.SpecFlow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TestStack.White, Version=0.13.0.0, Culture=neutral, PublicKeyToken=2672efbf3e161801, processorArchitecture=MSIL">
+      <HintPath>..\packages\TestStack.White.0.13.3\lib\net40\TestStack.White.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GeneralSteps.cs" />
-    <Compile Include="GivenMainSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpecFlowBridge.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LogoFX.Samples.Specifications.Client.Data.Contracts.Dto\LogoFX.Samples.Specifications.Client.Data.Contracts.Dto.csproj">
-      <Project>{84A92671-0079-42F2-B567-D7FFCE23A7E3}</Project>
-      <Name>LogoFX.Samples.Specifications.Client.Data.Contracts.Dto</Name>
+    <ProjectReference Include="..\LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.Contracts\LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.Contracts.csproj">
+      <Project>{E08E7AE2-C849-47AD-99F2-B8A05307B06A}</Project>
+      <Name>LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.Contracts</Name>
     </ProjectReference>
-    <ProjectReference Include="..\LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders\LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders.csproj">
-      <Project>{AF68283B-5283-4DEF-8DA0-6FB6CA85C1BD}</Project>
-      <Name>LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders</Name>
+    <ProjectReference Include="..\LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.EndToEnd\LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.EndToEnd.csproj">
+      <Project>{DE6BB2E9-4303-426B-AE23-D58DD6C78339}</Project>
+      <Name>LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.EndToEnd</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

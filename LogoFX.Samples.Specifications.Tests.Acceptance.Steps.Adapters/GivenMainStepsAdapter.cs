@@ -1,4 +1,6 @@
-﻿using TechTalk.SpecFlow;
+﻿using LogoFX.Samples.Specifications.Client.Data.Contracts.Dto;
+using TechTalk.SpecFlow;
+using TechTalk.SpecFlow.Assist;
 
 namespace LogoFX.Samples.Specifications.Tests.Acceptance.Steps.Adapters
 {
@@ -8,7 +10,8 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Steps.Adapters
         [Given(@"warehouse contains the following items:")]
         public void GivenWarehouseContainsTheFollowingItems(Table table)
         {
-            ScenarioContext.Current.Pending();
+            var warehouseItems = table.CreateSet<WarehouseItemDto>();
+            var warehouseProviderBuilder = GivenMainSteps.SetupWarehouseItems(warehouseItems);
         }
 
     }
