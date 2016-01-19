@@ -100,7 +100,7 @@ this.ScenarioSetup(scenarioInfo);
                         "Number",
                         "Kind",
                         "Price",
-                        "Quanity",
+                        "Quantity",
                         "Total Cost"});
             table2.AddRow(new string[] {
                         "1",

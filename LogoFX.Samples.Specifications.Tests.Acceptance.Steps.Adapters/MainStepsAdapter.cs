@@ -1,4 +1,6 @@
-﻿using TechTalk.SpecFlow;
+﻿using LogoFX.Samples.Specifications.Tests.Acceptance.TestData;
+using TechTalk.SpecFlow;
+using TechTalk.SpecFlow.Assist;
 
 namespace LogoFX.Samples.Specifications.Tests.Acceptance.Steps.Adapters
 {
@@ -8,7 +10,8 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Steps.Adapters
         [Then(@"I expect to see the following data on the screen:")]
         public void ThenIExpectToSeeTheFollowingDataOnTheScreen(Table table)
         {
-            ScenarioContext.Current.Pending();
+            var warehouseItems = table.CreateSet<WarehouseItemAssertionTestData>();
+            MainSteps.ThenIExpectToSeeTheFollowingDataOnTheScreen(warehouseItems);
         }
 
     }

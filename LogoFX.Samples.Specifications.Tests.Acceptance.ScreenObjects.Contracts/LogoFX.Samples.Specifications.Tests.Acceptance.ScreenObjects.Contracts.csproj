@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IMainScreenObject.cs" />
     <Compile Include="IShellScreenObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
