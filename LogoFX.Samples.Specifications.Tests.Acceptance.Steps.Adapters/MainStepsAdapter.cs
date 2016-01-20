@@ -1,4 +1,5 @@
-﻿using LogoFX.Samples.Specifications.Tests.Acceptance.TestData;
+﻿using System.Linq;
+using LogoFX.Samples.Specifications.Tests.Acceptance.TestData;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
 
@@ -11,7 +12,7 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Steps.Adapters
         public void ThenIExpectToSeeTheFollowingDataOnTheScreen(Table table)
         {
             var warehouseItems = table.CreateSet<WarehouseItemAssertionTestData>();
-            MainSteps.ThenIExpectToSeeTheFollowingDataOnTheScreen(warehouseItems);
+            MainSteps.ThenIExpectToSeeTheFollowingDataOnTheScreen(warehouseItems.ToArray());
         }
     }
 }

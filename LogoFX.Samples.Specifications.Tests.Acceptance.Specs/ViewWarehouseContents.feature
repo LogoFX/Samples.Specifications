@@ -12,7 +12,7 @@ Scenario: Display warehouse items
 	| PC   | 423.95 | 70       |	
 	When I open the application
 	Then I expect to see the following data on the screen:
-	| Number | Kind | Price | Quantity | Total Cost |
-	| 1      | Oven | 35    | 20      | 699.1      |
-	| 2      | TV   | 347   | 50      | 17347.5    |
-	| 3      | PC   | 424   | 70      | 29676.9    |
+	| Kind | Price | Quantity | Total Cost |
+	| Oven | 34.95    | 20      | 699      |
+	| TV   | 346.95   | 50      | 17347.5    |
+	| PC   | 423.95   | 70      | 29676.5   |

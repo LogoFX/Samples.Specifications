@@ -97,29 +97,25 @@ this.ScenarioSetup(scenarioInfo);
  testRunner.When("I open the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                        "Number",
                         "Kind",
                         "Price",
                         "Quantity",
                         "Total Cost"});
             table2.AddRow(new string[] {
-                        "1",
                         "Oven",
-                        "35",
+                        "34.95",
                         "20",
-                        "699.1"});
+                        "699"});
             table2.AddRow(new string[] {
-                        "2",
                         "TV",
-                        "347",
+                        "346.95",
                         "50",
                         "17347.5"});
             table2.AddRow(new string[] {
-                        "3",
                         "PC",
-                        "424",
+                        "423.95",
                         "70",
-                        "29676.9"});
+                        "29676.5"});
 #line 14
  testRunner.Then("I expect to see the following data on the screen:", ((string)(null)), table2, "Then ");
 #line hidden

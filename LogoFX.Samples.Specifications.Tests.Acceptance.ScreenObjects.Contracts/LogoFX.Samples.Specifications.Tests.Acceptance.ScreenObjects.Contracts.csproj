@@ -43,6 +43,12 @@
     <Compile Include="IShellScreenObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LogoFX.Samples.Specifications.Tests.Acceptance.TestData\LogoFX.Samples.Specifications.Tests.Acceptance.TestData.csproj">
+      <Project>{27BBAC7D-16A9-44AD-B35E-42F73D0CE4F5}</Project>
+      <Name>LogoFX.Samples.Specifications.Tests.Acceptance.TestData</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
