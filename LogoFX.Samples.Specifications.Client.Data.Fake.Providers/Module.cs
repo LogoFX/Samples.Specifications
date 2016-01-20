@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.Composition;
-using LogoFX.Client.Bootstrapping.Adapters.SimpleInjector;
+using LogoFX.Client.Bootstrapping.Adapters.Unity;
 using LogoFX.Samples.Specifications.Client.Data.Contracts.Dto;
 using LogoFX.Samples.Specifications.Client.Data.Contracts.Providers;
 using LogoFX.Samples.Specifications.Client.Data.Fake.Containers;
@@ -10,9 +10,9 @@ using Solid.Practices.Modularity;
 namespace LogoFX.Samples.Specifications.Client.Data.Fake.Providers
 {
     [Export(typeof(ICompositionModule))]
-    class Module : ICompositionModule<SimpleInjectorAdapter>
+    class Module : ICompositionModule<UnityContainerAdapter>
     {
-        public void RegisterModule(SimpleInjectorAdapter iocContainer)
+        public void RegisterModule(UnityContainerAdapter iocContainer)
         {
             RegisterDataContainers(iocContainer);
             RegisterBuilders(iocContainer);

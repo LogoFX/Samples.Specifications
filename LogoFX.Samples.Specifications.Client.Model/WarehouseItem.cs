@@ -14,10 +14,12 @@ namespace LogoFX.Samples.Specifications.Client.Model
             Kind = kind;
             Price = price;
             Quantity = quantity;
+            TotalCost = Price*Quantity;
         }
 
         public string Kind { get; }
         public double Price { get; }
         public int Quantity { get; }
+        public double TotalCost { get; }
     }
 }

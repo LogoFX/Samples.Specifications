@@ -13,6 +13,5 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Steps.Adapters
             var warehouseItems = table.CreateSet<WarehouseItemAssertionTestData>();
             MainSteps.ThenIExpectToSeeTheFollowingDataOnTheScreen(warehouseItems);
         }
-
     }
 }

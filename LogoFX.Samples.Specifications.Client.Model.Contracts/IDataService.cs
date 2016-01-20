@@ -8,6 +8,7 @@ namespace LogoFX.Samples.Specifications.Client.Model.Contracts
         string Kind { get; }   
         double Price { get; }
         int Quantity { get; }
+        double TotalCost { get; }
     }
 
     public interface IDataService
