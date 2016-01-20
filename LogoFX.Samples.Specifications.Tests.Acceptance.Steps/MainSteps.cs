@@ -3,7 +3,7 @@ using System.Linq;
 using Attest.Tests.Core;
 using LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.Contracts;
 using LogoFX.Samples.Specifications.Tests.Acceptance.TestData;
-using NUnit.Framework;
+using Shouldly;
 
 namespace LogoFX.Samples.Specifications.Tests.Acceptance.Steps
 {
@@ -18,10 +18,10 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Steps
             {
                 var expectedWarehouseItem = warehouseItems[i];
                 var actualWarehouseItem = actualWarehouseItems[i];
-                Assert.AreEqual(expectedWarehouseItem.Kind, actualWarehouseItem.Kind);
-                Assert.AreEqual(expectedWarehouseItem.Price, actualWarehouseItem.Price);
-                Assert.AreEqual(expectedWarehouseItem.Quantity, actualWarehouseItem.Quantity);
-                Assert.AreEqual(expectedWarehouseItem.TotalCost, actualWarehouseItem.TotalCost);
+                actualWarehouseItem.Kind.ShouldBe(expectedWarehouseItem.Kind);
+                actualWarehouseItem.Price.ShouldBe(expectedWarehouseItem.Price);
+                actualWarehouseItem.Quantity.ShouldBe(expectedWarehouseItem.Quantity);
+                actualWarehouseItem.TotalCost.ShouldBe(expectedWarehouseItem.TotalCost);               
             }            
         }
     }

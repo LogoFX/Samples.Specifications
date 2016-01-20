@@ -1,7 +1,7 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using Attest.Tests.Core;
 using LogoFX.Client.Tests.Contracts;
-using NUnit.Framework;
 
 namespace LogoFX.Samples.Specifications.Tests.Acceptance.Steps
 {
@@ -12,7 +12,7 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Steps
 
         public static void WhenIOpenTheApplication()
         {
-            var applicationDirectory = TestContext.CurrentContext.TestDirectory;
+            var applicationDirectory = Environment.CurrentDirectory;
             var applicationPath = Path.Combine(applicationDirectory, "LogoFX.Samples.Specifications.Client.Presentation.Shell.exe");
             _startApplicationService.StartApplication(applicationPath);            
         }
