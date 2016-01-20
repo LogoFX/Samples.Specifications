@@ -1,7 +1,4 @@
 ﻿using Attest.Tests.Core;
-using LogoFX.Client.Tests.Contracts;
-using LogoFX.Client.Tests.EndToEnd;
-using LogoFX.Client.Tests.EndToEnd.White;
 using LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.Contracts;
 using LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.EndToEnd;
 using TechTalk.SpecFlow;
