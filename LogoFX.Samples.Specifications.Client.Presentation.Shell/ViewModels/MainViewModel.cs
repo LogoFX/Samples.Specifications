@@ -28,7 +28,7 @@ namespace LogoFX.Samples.Specifications.Client.Presentation.Shell.ViewModels
         protected override async void OnInitialize()
         {
             base.OnInitialize();
-            await _dataService.WarehouseItemsAsync;
+            await _dataService.GetWarehouseItemsAsync();
         }
     }
 }

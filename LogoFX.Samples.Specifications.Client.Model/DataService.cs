@@ -12,33 +12,28 @@ namespace LogoFX.Samples.Specifications.Client.Model
     [UsedImplicitly]
     class DataService : ServiceBase, IDataService
     {
-        private readonly IWarehouseProvider _warehouseProvider;
-        private readonly RangeObservableCollection<IWarehouseItem> _warehouseItems = new RangeObservableCollection<IWarehouseItem>();
+        private readonly IWarehouseProvider _warehouseProvider;        
 
         public DataService(IWarehouseProvider warehouseProvider)
         {
             _warehouseProvider = warehouseProvider;
         }
 
-
+        private readonly RangeObservableCollection<IWarehouseItem> _warehouseItems = new RangeObservableCollection<IWarehouseItem>();
         IEnumerable<IWarehouseItem> IDataService.WarehouseItems
         {
             get { return _warehouseItems; }
         }
 
-        public Task WarehouseItemsAsync
+        public Task GetWarehouseItemsAsync()
         {
-            get
+            return RunAsync(() =>
             {
-                return RunAsync(() =>
-
-                {
-                    var warehouseItems =
-                        _warehouseProvider.GetWarehouseItems().Select(WarehouseMapper.MapToWarehouseItem);
-                    _warehouseItems.Clear();
-                    _warehouseItems.AddRange(warehouseItems);
-                });
-            }
+                var warehouseItems =
+                    _warehouseProvider.GetWarehouseItems().Select(WarehouseMapper.MapToWarehouseItem);
+                _warehouseItems.Clear();
+                _warehouseItems.AddRange(warehouseItems);
+            });
         }
     }
 

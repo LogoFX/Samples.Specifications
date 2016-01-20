@@ -15,6 +15,6 @@ namespace LogoFX.Samples.Specifications.Client.Model.Contracts
     {
         IEnumerable<IWarehouseItem> WarehouseItems { get; }
 
-        Task WarehouseItemsAsync { get; }
+        Task GetWarehouseItemsAsync();
     }
 }

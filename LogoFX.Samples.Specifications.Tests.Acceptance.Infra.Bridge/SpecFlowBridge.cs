@@ -13,24 +13,13 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Bridge
     /// for screen objects and application services
     /// </summary>
     [Binding]
-    class SpecFlowBridge : Attest.Tests.SpecFlow.EndToEndTestsBase
+    class SpecFlowBridge : LogoFX.Client.Tests.SpecFlow.EndToEndTestsBase
     {
-        public SpecFlowBridge()
+        protected override void RegisterScreenObjects()
         {
-            ScenarioHelper.Add(new StartApplicationService(), typeof(IStartApplicationService));
-            ScenarioHelper.Add(new BuilderRegistrationService(), typeof(IBuilderRegistrationService));            
-            ScenarioHelper.Add(new ShellScreenObject(), typeof(IShellScreenObject));  
-            ScenarioHelper.Add(new MainScreenObject(), typeof(IMainScreenObject));          
-        }
-
-        protected override void OnAfterTeardown()
-        {
-            base.OnAfterTeardown();
-            if (ApplicationContext.Application != null)
-            {
-                ApplicationContext.Application.Dispose();
-            }
-            ScenarioHelper.Clear();
+            base.RegisterScreenObjects();
+            ScenarioHelper.Add(new ShellScreenObject(), typeof(IShellScreenObject));
+            ScenarioHelper.Add(new MainScreenObject(), typeof(IMainScreenObject));
         }
     }
 }
