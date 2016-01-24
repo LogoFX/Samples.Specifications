@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.ComponentModel;
 using Caliburn.Micro;
 using JetBrains.Annotations;
 using LogoFX.Client.Mvvm.ViewModel;
@@ -21,13 +22,13 @@ namespace LogoFX.Samples.Specifications.Client.Presentation.Shell.ViewModels
             _viewModelCreatorService = viewModelCreatorService;
         }
 
-        private WrappingCollection _warehouseItems;
+        private ICollectionView _warehouseItems;
         public IEnumerable WarehouseItems
         {
             get { return _warehouseItems ?? (_warehouseItems = CreateWarehouseItems()); }
         }
 
-        private WrappingCollection CreateWarehouseItems()
+        private ICollectionView CreateWarehouseItems()
         {
             var wc = new WrappingCollection
             {
@@ -37,7 +38,7 @@ namespace LogoFX.Samples.Specifications.Client.Presentation.Shell.ViewModels
                             (IWarehouseItem) o)
             }.WithSource(_dataService.WarehouseItems);
 
-            return wc;
+            return wc.AsView();
         }
     }
 }

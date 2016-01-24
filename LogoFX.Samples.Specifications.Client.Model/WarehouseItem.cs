@@ -4,7 +4,7 @@ using LogoFX.Samples.Specifications.Client.Model.Contracts;
 namespace LogoFX.Samples.Specifications.Client.Model
 {
     [UsedImplicitly]
-    class WarehouseItem : IWarehouseItem
+    class WarehouseItem : AppModel, IWarehouseItem
     {
         public WarehouseItem(
             string kind, 
@@ -13,13 +13,46 @@ namespace LogoFX.Samples.Specifications.Client.Model
         {
             Kind = kind;
             Price = price;
-            Quantity = quantity;
-            TotalCost = Price*Quantity;
+            Quantity = quantity;            
         }
 
         public string Kind { get; }
-        public double Price { get; }
-        public int Quantity { get; }
-        public double TotalCost { get; }
+
+        private double _price;
+        public double Price
+        {
+            get { return _price;}
+            set
+            {
+                if (value == _price)
+                {
+                    return;
+                }
+                _price = value;
+                NotifyOfPropertyChange();
+                NotifyOfPropertyChange(() => TotalCost);
+            }
+        }
+
+        private int _quantity;
+        public int Quantity
+        {
+            get { return _quantity; }
+            set
+            {
+                if (value == _quantity)
+                {
+                    return;
+                }
+                _quantity = value;
+                NotifyOfPropertyChange();
+                NotifyOfPropertyChange(() => TotalCost);
+            }
+        }
+
+        public double TotalCost
+        {
+            get { return _quantity*_price; }
+        }
     }
 }

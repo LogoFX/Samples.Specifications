@@ -11,6 +11,11 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Steps
     {
         private static readonly IMainScreenObject _mainScreenObject = ScenarioHelper.Get<IMainScreenObject>();
 
+        public static void WhenISetThePriceForItemTo(string kind, int newPrice)
+        {
+            _mainScreenObject.EditWarehouseItem(kind, "Price", newPrice.ToString());
+        }
+
         public static void ThenIExpectToSeeTheFollowingDataOnTheScreen(WarehouseItemAssertionTestData[] warehouseItems)
         {
             var actualWarehouseItems = _mainScreenObject.GetWarehouseItems().ToArray();
@@ -23,6 +28,12 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Steps
                 actualWarehouseItem.Quantity.ShouldBe(expectedWarehouseItem.Quantity);
                 actualWarehouseItem.TotalCost.ShouldBe(expectedWarehouseItem.TotalCost);               
             }            
+        }
+
+        public static void ThenTotalCostOfItemIs(string kind, int expectedTotalCost)
+        {
+            var actualWarehouseItem = _mainScreenObject.GetWarehouseItemByKind(kind);
+            actualWarehouseItem.TotalCost.ShouldBe(expectedTotalCost);
         }
     }
 }

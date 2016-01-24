@@ -46,6 +46,18 @@
       <HintPath>..\packages\LogoFX.Client.Bootstrapping.Adapters.Unity.1.0.4\lib\net451\LogoFX.Client.Bootstrapping.Adapters.Unity.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="LogoFX.Client.Core, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Client.Core.1.0.5\lib\net45\LogoFX.Client.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LogoFX.Client.Mvvm.Model, Version=1.0.7.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Client.Mvvm.Model.1.0.7.2\lib\net45\LogoFX.Client.Mvvm.Model.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LogoFX.Client.Mvvm.Model.Contracts, Version=1.0.7.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Client.Mvvm.Model.1.0.7.2\lib\net45\LogoFX.Client.Mvvm.Model.Contracts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="LogoFX.Core, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Core.1.0.6.2\lib\net45\LogoFX.Core.dll</HintPath>
       <Private>True</Private>
@@ -64,6 +76,10 @@
     </Reference>
     <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
       <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Solid.Patterns.Memento, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Patterns.Memento.1.0.5\lib\portable-net45+wpa8+win8\Solid.Patterns.Memento.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Solid.Practices.IoC, Version=1.0.6.0, Culture=neutral, processorArchitecture=MSIL">
@@ -92,6 +108,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppModel.cs" />
     <Compile Include="DataService.cs" />
     <Compile Include="Mappers\MappingProfile.cs" />
     <Compile Include="Mappers\WarehouseMapper.cs" />

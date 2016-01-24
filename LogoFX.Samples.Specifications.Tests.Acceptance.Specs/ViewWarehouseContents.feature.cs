@@ -121,6 +121,34 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Edit item price")]
+        public virtual void EditItemPrice()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit item price", ((string[])(null)));
+#line 20
+this.ScenarioSetup(scenarioInfo);
+#line hidden
+            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Kind",
+                        "Price",
+                        "Quantity"});
+            table3.AddRow(new string[] {
+                        "TV",
+                        "346.95",
+                        "50"});
+#line 21
+ testRunner.Given("warehouse contains the following items:", ((string)(null)), table3, "Given ");
+#line 25
+ testRunner.When("I open the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 26
+ testRunner.And("I set the Price for \"TV\" item to 350", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 27
+ testRunner.Then("Total cost of \"TV\" item is 17500", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore
