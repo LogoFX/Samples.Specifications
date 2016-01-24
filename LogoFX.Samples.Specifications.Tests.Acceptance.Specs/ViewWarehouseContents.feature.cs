@@ -32,8 +32,8 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Specs
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "ViewWarehouseContents", "In order to avoid silly mistakes\nAs a math idiot\nI want to be told the sum of two" +
-                    " numbers", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "ViewWarehouseContents", "In order to view and manage warehouse contents\nAs an entitled user\nI want to be a" +
+                    "ble to edit the displayed items", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -134,6 +134,10 @@ this.ScenarioSetup(scenarioInfo);
                         "Kind",
                         "Price",
                         "Quantity"});
+            table3.AddRow(new string[] {
+                        "Oven",
+                        "34.95",
+                        "20"});
             table3.AddRow(new string[] {
                         "TV",
                         "346.95",
