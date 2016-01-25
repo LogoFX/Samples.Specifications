@@ -65,6 +65,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Samples.Specificatio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Real", "Real", "{48C09290-0E5A-49BE-87BC-D0C67A8D05EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Samples.Specifications.Client.Data.Real.Providers", "LogoFX.Samples.Specifications.Client.Data.Real.Providers\LogoFX.Samples.Specifications.Client.Data.Real.Providers.csproj", "{5B2A4689-2F21-48EC-9058-F89511CEACA3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -242,6 +244,16 @@ Global
 		{56272851-A255-4525-B8E6-27BC24154551}.TestsWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
 		{56272851-A255-4525-B8E6-27BC24154551}.TestsWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{56272851-A255-4525-B8E6-27BC24154551}.TestsWithReal|Any CPU.ActiveCfg = TestsWithReal|Any CPU
+		{5B2A4689-2F21-48EC-9058-F89511CEACA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B2A4689-2F21-48EC-9058-F89511CEACA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B2A4689-2F21-48EC-9058-F89511CEACA3}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
+		{5B2A4689-2F21-48EC-9058-F89511CEACA3}.DebugWithReal|Any CPU.ActiveCfg = DebugWithReal|Any CPU
+		{5B2A4689-2F21-48EC-9058-F89511CEACA3}.DebugWithReal|Any CPU.Build.0 = DebugWithReal|Any CPU
+		{5B2A4689-2F21-48EC-9058-F89511CEACA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B2A4689-2F21-48EC-9058-F89511CEACA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B2A4689-2F21-48EC-9058-F89511CEACA3}.TestsWithFake|Any CPU.ActiveCfg = TestsWithFake|Any CPU
+		{5B2A4689-2F21-48EC-9058-F89511CEACA3}.TestsWithReal|Any CPU.ActiveCfg = TestsWithReal|Any CPU
+		{5B2A4689-2F21-48EC-9058-F89511CEACA3}.TestsWithReal|Any CPU.Build.0 = TestsWithReal|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -276,5 +288,6 @@ Global
 		{B4CFCA84-591C-4433-873A-C9A006A25DB2} = {1EAEA804-9B78-4EF6-8D4F-3B6D3FA398D8}
 		{56272851-A255-4525-B8E6-27BC24154551} = {185AF0A9-9D92-4E5D-A331-CAC92C535A94}
 		{48C09290-0E5A-49BE-87BC-D0C67A8D05EE} = {20C55ED7-08B4-47D0-B7C0-7AD4E6854ACC}
+		{5B2A4689-2F21-48EC-9058-F89511CEACA3} = {48C09290-0E5A-49BE-87BC-D0C67A8D05EE}
 	EndGlobalSection
 EndGlobal

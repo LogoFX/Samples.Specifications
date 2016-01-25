@@ -4,19 +4,20 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DE972164-E8D0-4601-B3BE-B36AD22D7581}</ProjectGuid>
+    <ProjectGuid>{5B2A4689-2F21-48EC-9058-F89511CEACA3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LogoFX.Samples.Specifications.Tests.Acceptance.Steps</RootNamespace>
-    <AssemblyName>LogoFX.Samples.Specifications.Tests.Acceptance.Steps</AssemblyName>
+    <RootNamespace>LogoFX.Samples.Specifications.Client.Data.Real.Providers</RootNamespace>
+    <AssemblyName>LogoFX.Samples.Specifications.Client.Data.Real.Providers</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\Bin\Tests\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -29,18 +30,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithFake|AnyCPU'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TestsWithFake|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>..\Bin\TestsWithFake\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;FAKE</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithReal|AnyCPU'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\Bin\Tests\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -50,42 +42,65 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TestsWithReal|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>..\Bin\TestsWithReal\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;REAL</DefineConstants>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithFake|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Bin\DebugWithFake\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithReal|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Bin\DebugWithReal\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Attest.Fake.Builders, Version=1.0.7.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Attest.Fake.Builders.1.0.7.1\lib\net451\Attest.Fake.Builders.dll</HintPath>
+    <Reference Include="LogoFX.Client.Bootstrapping.Adapters.Contracts, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Client.Bootstrapping.Adapters.Contracts.1.0.3\lib\net451\LogoFX.Client.Bootstrapping.Adapters.Contracts.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Attest.Fake.Core, Version=1.0.7.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Attest.Fake.Core.1.0.7\lib\net451\Attest.Fake.Core.dll</HintPath>
+    <Reference Include="LogoFX.Client.Bootstrapping.Adapters.Unity, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Client.Bootstrapping.Adapters.Unity.1.0.4\lib\net451\LogoFX.Client.Bootstrapping.Adapters.Unity.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Attest.Fake.Registration, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Attest.Fake.Registration.1.0.3\lib\net45\Attest.Fake.Registration.dll</HintPath>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Attest.Tests.Core, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Attest.Tests.Core.1.1.0\lib\net45\Attest.Tests.Core.dll</HintPath>
+    <Reference Include="Microsoft.Practices.Unity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="LogoFX.Client.Tests.Contracts, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Tests.Contracts.1.0.4\lib\net45\LogoFX.Client.Tests.Contracts.dll</HintPath>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Shouldly, Version=2.6.0.0, Culture=neutral, PublicKeyToken=6042cbcb05cbc941, processorArchitecture=MSIL">
-      <HintPath>..\packages\Shouldly.2.6.0\lib\net40\Shouldly.dll</HintPath>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Solid.Practices.IoC, Version=1.0.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Solid.Practices.IoC.1.0.6\lib\portable-net45+sl4+wp7+win8\Solid.Practices.IoC.dll</HintPath>
+    </Reference>
+    <Reference Include="Solid.Practices.Modularity, Version=1.0.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Practices.Modularity.1.0.6\lib\portable-net4+sl4+wp7+win8\Solid.Practices.Modularity.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -94,13 +109,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GeneralSteps.cs" />
-    <Compile Include="GivenMainSteps.cs" />
-    <Compile Include="MainSteps.cs" />
+    <Compile Include="Module.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
+    <Compile Include="WarehouseProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LogoFX.Samples.Specifications.Client.Data.Contracts.Dto\LogoFX.Samples.Specifications.Client.Data.Contracts.Dto.csproj">
@@ -108,21 +119,12 @@
       <Name>LogoFX.Samples.Specifications.Client.Data.Contracts.Dto</Name>
     </ProjectReference>
     <ProjectReference Include="..\LogoFX.Samples.Specifications.Client.Data.Contracts.Providers\LogoFX.Samples.Specifications.Client.Data.Contracts.Providers.csproj">
-      <Project>{92a54367-c513-42bf-a8e9-ef84bdf8c5c3}</Project>
+      <Project>{92A54367-C513-42BF-A8E9-EF84BDF8C5C3}</Project>
       <Name>LogoFX.Samples.Specifications.Client.Data.Contracts.Providers</Name>
     </ProjectReference>
-    <ProjectReference Include="..\LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders\LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders.csproj"  Condition="'$(Configuration)|$(Platform)' == 'DebugWithFake|AnyCPU'">
-      <Project>{AF68283B-5283-4DEF-8DA0-6FB6CA85C1BD}</Project>
-      <Name>LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.Contracts\LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.Contracts.csproj">
-      <Project>{E08E7AE2-C849-47AD-99F2-B8A05307B06A}</Project>
-      <Name>LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.Contracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LogoFX.Samples.Specifications.Tests.Acceptance.TestData\LogoFX.Samples.Specifications.Tests.Acceptance.TestData.csproj">
-      <Project>{27BBAC7D-16A9-44AD-B35E-42F73D0CE4F5}</Project>
-      <Name>LogoFX.Samples.Specifications.Tests.Acceptance.TestData</Name>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
