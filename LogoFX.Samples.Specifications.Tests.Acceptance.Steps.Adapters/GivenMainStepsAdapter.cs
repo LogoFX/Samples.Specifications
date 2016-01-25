@@ -18,6 +18,5 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Steps.Adapters
             var warehouseProviderBuilder = GivenMainSteps.SetupWarehouseItems(warehouseItems);
             _builderRegistrationService.RegisterBuilder(warehouseProviderBuilder);
         }
-
     }
 }
