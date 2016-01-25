@@ -80,6 +80,10 @@
       <Project>{84A92671-0079-42F2-B567-D7FFCE23A7E3}</Project>
       <Name>LogoFX.Samples.Specifications.Client.Data.Contracts.Dto</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LogoFX.Samples.Specifications.Client.Data.Contracts.Providers\LogoFX.Samples.Specifications.Client.Data.Contracts.Providers.csproj">
+      <Project>{92a54367-c513-42bf-a8e9-ef84bdf8c5c3}</Project>
+      <Name>LogoFX.Samples.Specifications.Client.Data.Contracts.Providers</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders\LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders.csproj">
       <Project>{AF68283B-5283-4DEF-8DA0-6FB6CA85C1BD}</Project>
       <Name>LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders</Name>
