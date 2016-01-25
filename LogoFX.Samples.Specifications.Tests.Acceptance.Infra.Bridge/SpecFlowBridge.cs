@@ -10,7 +10,7 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Bridge
     /// for screen objects and application services
     /// </summary>
     [Binding]
-    class SpecFlowBridge : LogoFX.Client.Tests.SpecFlow.EndToEndTestsBase
+    class SpecFlowBridge : LogoFX.Client.Tests.SpecFlow.EndToEndTestsBase.WithFakeProviders
     {
         protected override void RegisterScreenObjects()
         {
