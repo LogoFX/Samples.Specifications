@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.Composition;
 using LogoFX.Client.Bootstrapping.Adapters.Unity;
-using LogoFX.Client.Tests.EndToEnd.Modularity;
+using LogoFX.Client.Tests.EndToEnd.FakeData.Modularity;
 using LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
