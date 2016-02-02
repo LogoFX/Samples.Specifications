@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.Composition;
+﻿using System.Composition;
 using LogoFX.Client.Bootstrapping.Adapters.Unity;
 using LogoFX.Samples.Specifications.Client.Data.Contracts.Dto;
 using LogoFX.Samples.Specifications.Client.Data.Contracts.Providers;

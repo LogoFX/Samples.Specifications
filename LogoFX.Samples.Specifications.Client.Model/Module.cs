@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.Composition;
+﻿using System.Composition;
 using AutoMapper;
 using LogoFX.Client.Bootstrapping.Adapters.Unity;
 using LogoFX.Samples.Specifications.Client.Model.Contracts;
