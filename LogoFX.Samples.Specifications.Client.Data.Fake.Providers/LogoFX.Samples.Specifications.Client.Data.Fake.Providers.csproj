@@ -66,12 +66,12 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Attest.Fake.Builders, Version=1.0.7.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Attest.Fake.Builders.1.0.7.1\lib\net451\Attest.Fake.Builders.dll</HintPath>
+    <Reference Include="Attest.Fake.Builders, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Attest.Fake.Builders.1.0.8\lib\net45\Attest.Fake.Builders.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Attest.Fake.Core, Version=1.0.7.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Attest.Fake.Core.1.0.7\lib\net451\Attest.Fake.Core.dll</HintPath>
+    <Reference Include="Attest.Fake.Core, Version=1.0.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Attest.Fake.Core.1.0.8\lib\portable-net45+wpa8+win8\Attest.Fake.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="JetBrains.Annotations, Version=10.0.0.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
@@ -102,16 +102,20 @@
       <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Shim, Version=1.0.2.0, Culture=neutral, PublicKeyToken=c55ec16d10c4b366, processorArchitecture=MSIL">
+      <HintPath>..\packages\shim.1.0.2.50909\lib\net45\Shim.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Solid.Practices.IoC, Version=1.0.6.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Solid.Practices.IoC.1.0.6\lib\portable-net45+sl4+wp7+win8\Solid.Practices.IoC.dll</HintPath>
+      <HintPath>..\packages\Solid.Practices.IoC.1.0.7\lib\portable-net45+wpa8+win8\Solid.Practices.IoC.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Solid.Practices.Middleware, Version=1.0.6.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Solid.Practices.Middleware.1.0.6\lib\portable-net45+sl4+wp7+win8\Solid.Practices.Middleware.dll</HintPath>
+      <HintPath>..\packages\Solid.Practices.Middleware.1.0.7\lib\portable-net45+wpa8+win8\Solid.Practices.Middleware.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Solid.Practices.Modularity, Version=1.0.6.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Solid.Practices.Modularity.1.0.6\lib\portable-net4+sl4+wp7+win8\Solid.Practices.Modularity.dll</HintPath>
+      <HintPath>..\packages\Solid.Practices.Modularity.1.0.7\lib\portable-net45+wpa8+win8\Solid.Practices.Modularity.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
