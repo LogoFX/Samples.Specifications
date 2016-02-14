@@ -1,9 +1,7 @@
 ﻿using LogoFX.Client.Tests.EndToEnd.White;
 using LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.Contracts;
-using TestStack.White.InputDevices;
 using TestStack.White.UIItems;
 using TestStack.White.UIItems.WindowItems;
-using TestStack.White.WindowsAPI;
 
 namespace LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.EndToEnd
 {
@@ -13,16 +11,14 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.EndToEnd
         {
             var loginScreen = GetLoginScreen();
             var loginButton = loginScreen.Get<Button>("Login_SignIn");
-            loginButton.Click();
-            ApplicationContext.Application.WaitWhileBusy();
+            loginButton.Click();            
         }
 
         public void SetUsername(string username)
         {
             var loginScreen = GetLoginScreen();
             var userNameTextBox = loginScreen.Get<TextBox>("Login_UserName");
-            userNameTextBox.Enter(username);
-            Keyboard.Instance.PressSpecialKey(KeyboardInput.SpecialKeys.RETURN);
+            userNameTextBox.Enter(username);            
         }
 
         private Window GetLoginScreen()
