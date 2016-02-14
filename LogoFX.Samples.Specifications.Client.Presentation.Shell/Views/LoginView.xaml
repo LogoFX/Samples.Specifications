@@ -70,7 +70,7 @@
         </Grid>
 
         <StackPanel Grid.Row="3" HorizontalAlignment="Right" Orientation="Horizontal">
-            <Button Margin="16,0" AutomationProperties.AutomationId="Login_SignIn" BorderThickness="0"
+            <Button Margin="16,16" AutomationProperties.AutomationId="Login_SignIn" BorderThickness="0"
                         Content="Sign in">
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="Click">

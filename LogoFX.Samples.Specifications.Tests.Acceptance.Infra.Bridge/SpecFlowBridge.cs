@@ -22,6 +22,7 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Bridge
         protected override void RegisterScreenObjects()
         {
             base.RegisterScreenObjects();
+            ScenarioHelper.Add(new LoginScreenObject(), typeof(ILoginScreenObject));
             ScenarioHelper.Add(new ShellScreenObject(), typeof(IShellScreenObject));
             ScenarioHelper.Add(new MainScreenObject(), typeof(IMainScreenObject));
         }

@@ -13,6 +13,7 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Providers
         protected override void OnRegisterProviders(IIocContainer iocContainer)
         {
             base.OnRegisterProviders(iocContainer);
+            RegisterAllBuilders(iocContainer, LoginProviderBuilder.CreateBuilder);
             RegisterAllBuilders(iocContainer, WarehouseProviderBuilder.CreateBuilder);            
         }
     }

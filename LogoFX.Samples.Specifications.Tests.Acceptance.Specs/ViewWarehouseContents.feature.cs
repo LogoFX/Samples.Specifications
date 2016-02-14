@@ -93,7 +93,13 @@ this.ScenarioSetup(scenarioInfo);
 #line 8
  testRunner.Given("warehouse contains the following items:", ((string)(null)), table1, "Given ");
 #line 13
+ testRunner.And("I am able to log in successfully with username \"Admin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 14
  testRunner.When("I open the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 15
+ testRunner.And("I set the username to \"Admin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 16
+ testRunner.And("I log in to the system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "Kind",
@@ -115,7 +121,7 @@ this.ScenarioSetup(scenarioInfo);
                         "423.95",
                         "70",
                         "29676.5"});
-#line 14
+#line 17
  testRunner.Then("I expect to see the following data on the screen:", ((string)(null)), table2, "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -126,7 +132,7 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void EditItemPrice()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit item price", ((string[])(null)));
-#line 20
+#line 23
 this.ScenarioSetup(scenarioInfo);
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
@@ -141,13 +147,19 @@ this.ScenarioSetup(scenarioInfo);
                         "TV",
                         "346.95",
                         "50"});
-#line 21
+#line 24
  testRunner.Given("warehouse contains the following items:", ((string)(null)), table3, "Given ");
-#line 25
+#line 28
+ testRunner.And("I am able to log in successfully with username \"Admin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 29
  testRunner.When("I open the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 26
+#line 30
+ testRunner.And("I set the username to \"Admin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 31
+ testRunner.And("I log in to the system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 32
  testRunner.And("I set the Price for \"TV\" item to 350", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 27
+#line 33
  testRunner.Then("Total cost of \"TV\" item is 17500", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

@@ -11,6 +11,5 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Steps.Adapters
             GivenLoginSteps.SetupAuthenticatedUserWithUsername(userName);
             GivenLoginSteps.SetupLoginSuccessfullyWithUsername(userName);
         }
-
     }
 }

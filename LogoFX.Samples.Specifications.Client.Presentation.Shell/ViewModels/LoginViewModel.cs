@@ -16,6 +16,7 @@ namespace LogoFX.Samples.Specifications.Client.Presentation.Shell.ViewModels
             ILoginService loginService)
         {
             _loginService = loginService;
+            DisplayName = "Login View";
         }
 
         public event EventHandler LoggedInSuccessfully;
