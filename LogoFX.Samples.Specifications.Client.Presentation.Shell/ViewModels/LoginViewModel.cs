@@ -28,7 +28,7 @@ namespace LogoFX.Samples.Specifications.Client.Presentation.Shell.ViewModels
             {
                 return _loginCommand ??
                        (_loginCommand = ActionCommand
-                           .When(() => !string.IsNullOrWhiteSpace(Username))
+                           .When(() => !string.IsNullOrWhiteSpace(UserName))
                            .Do(async () =>
                            {
                                LoginFailureCause = null;
@@ -36,7 +36,7 @@ namespace LogoFX.Samples.Specifications.Client.Presentation.Shell.ViewModels
                                try
                                {
                                    IsBusy = true;
-                                   await _loginService.LoginAsync(Username, Password);
+                                   await _loginService.LoginAsync(UserName, Password);
                                    OnLoginSuccess();
                                }
 
@@ -104,12 +104,7 @@ namespace LogoFX.Samples.Specifications.Client.Presentation.Shell.ViewModels
                 _isUserAuthenticated = value;
                 NotifyOfPropertyChange();
             }
-        }       
-
-        public string Username
-        {
-            get; private set;
-        }
+        }              
 
         public string CurrentDomain
         {
@@ -117,14 +112,14 @@ namespace LogoFX.Samples.Specifications.Client.Presentation.Shell.ViewModels
             private set;
         }
 
-        private string _fullCurrentUserName;
+        private string _userName;
 
-        public string FullCurrentUserName
+        public string UserName
         {
-            get { return _fullCurrentUserName; }
-            private set
+            get { return _userName; }
+            set
             {
-                _fullCurrentUserName = value;
+                _userName = value;
                 NotifyOfPropertyChange();
             }
         }

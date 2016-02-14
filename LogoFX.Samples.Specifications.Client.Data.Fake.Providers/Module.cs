@@ -1,4 +1,5 @@
-﻿using System.Composition;
+﻿using System;
+using System.Composition;
 using LogoFX.Client.Bootstrapping.Adapters.Unity;
 using LogoFX.Samples.Specifications.Client.Data.Contracts.Dto;
 using LogoFX.Samples.Specifications.Client.Data.Contracts.Providers;
@@ -22,8 +23,9 @@ namespace LogoFX.Samples.Specifications.Client.Data.Fake.Providers
         private static void RegisterDataContainers(IIocContainerRegistrator iocContainer)
         {
             var warehouseContainer = InitializeWarehouseContainer();
+            var userContainer = InitializeUserContainer();
             iocContainer.RegisterInstance(warehouseContainer);
-            iocContainer.RegisterInstance<IUserContainer>(new UserContainer());
+            iocContainer.RegisterInstance(userContainer);            
         }
 
         private static IWarehouseContainer InitializeWarehouseContainer()
@@ -39,6 +41,16 @@ namespace LogoFX.Samples.Specifications.Client.Data.Fake.Providers
                 }
             });
             return warehouseContainer;
+        }
+
+        private static IUserContainer InitializeUserContainer()
+        {
+            var userContainer = new UserContainer();
+            userContainer.UpdateUsers(new []
+            {
+                new Tuple<string, string>("User", "pass") 
+            });
+            return userContainer;
         }
 
         private static void RegisterBuilders(IIocContainerRegistrator iocContainer)

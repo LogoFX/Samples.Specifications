@@ -19,6 +19,7 @@ namespace LogoFX.Samples.Specifications.Client.Data.Fake.Providers
             foreach (var user in userContainer.Users)
             {
                 _loginProviderBuilder.WithUser(user.Item1, user.Item2);
+                _loginProviderBuilder.WithSuccessfulLogin(user.Item1);
             }            
         }
 

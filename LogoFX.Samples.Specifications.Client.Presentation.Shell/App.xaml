@@ -5,10 +5,10 @@
              xmlns:xaml="clr-namespace:LogoFX.Client.Mvvm.View.Infra.Xaml;assembly=LogoFX.Client.Mvvm.View.Infra">
     <Application.Resources>
         <xaml:SharedResourceDictionary>
-             <ResourceDictionary.MergedDictionaries>
-                 <ResourceDictionary>
-                     <shell:AppBootstrapper x:Key="AppBootstrapper" />
-                 </ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <xaml:SharedResourceDictionary>
+                    <shell:AppBootstrapper x:Key="AppBootstrapper" />
+                 </xaml:SharedResourceDictionary>
              </ResourceDictionary.MergedDictionaries>
          </xaml:SharedResourceDictionary>
     </Application.Resources>

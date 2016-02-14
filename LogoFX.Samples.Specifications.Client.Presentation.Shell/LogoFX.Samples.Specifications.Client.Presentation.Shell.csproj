@@ -335,6 +335,10 @@
       <Project>{61B320B8-1865-4C9D-9413-AFEF3730E654}</Project>
       <Name>LogoFX.Samples.Specifications.Client.Model.Shared</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LogoFX.Samples.Specifications.Client.Presentation.Shared\LogoFX.Samples.Specifications.Client.Presentation.Shared.csproj">
+      <Project>{a4245326-bb01-4b7a-b4de-6ebca9c8094e}</Project>
+      <Name>LogoFX.Samples.Specifications.Client.Presentation.Shared</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
