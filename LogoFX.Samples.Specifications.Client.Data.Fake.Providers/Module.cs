@@ -23,6 +23,7 @@ namespace LogoFX.Samples.Specifications.Client.Data.Fake.Providers
         {
             var warehouseContainer = InitializeWarehouseContainer();
             iocContainer.RegisterInstance(warehouseContainer);
+            iocContainer.RegisterInstance<IUserContainer>(new UserContainer());
         }
 
         private static IWarehouseContainer InitializeWarehouseContainer()
@@ -42,12 +43,14 @@ namespace LogoFX.Samples.Specifications.Client.Data.Fake.Providers
 
         private static void RegisterBuilders(IIocContainerRegistrator iocContainer)
         {
-            iocContainer.RegisterInstance(WarehouseProviderBuilder.CreateBuilder());
+            iocContainer.RegisterInstance(WarehouseProviderBuilder.CreateBuilder()); 
+            iocContainer.RegisterInstance(LoginProviderBuilder.CreateBuilder());           
         }
 
         private static void RegisterProviders(IIocContainerRegistrator iocContainer)
         {
             iocContainer.RegisterSingleton<IWarehouseProvider, FakeWarehouseProvider>();
+            iocContainer.RegisterSingleton<ILoginProvider, FakeLoginProvider>();
         }
     }
 }

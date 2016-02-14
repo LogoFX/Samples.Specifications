@@ -165,11 +165,13 @@
   <ItemGroup>
     <Compile Include="AppModel.cs" />
     <Compile Include="DataService.cs" />
+    <Compile Include="LoginService.cs" />
     <Compile Include="Mappers\MappingProfile.cs" />
     <Compile Include="Mappers\WarehouseMapper.cs" />
     <Compile Include="Module.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceBase.cs" />
+    <Compile Include="User.cs" />
     <Compile Include="WarehouseItem.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -184,6 +186,10 @@
     <ProjectReference Include="..\LogoFX.Samples.Specifications.Client.Model.Contracts\LogoFX.Samples.Specifications.Client.Model.Contracts.csproj">
       <Project>{5046FBC7-AADD-4AE7-A7F3-141764225824}</Project>
       <Name>LogoFX.Samples.Specifications.Client.Model.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogoFX.Samples.Specifications.Client.Model.Shared\LogoFX.Samples.Specifications.Client.Model.Shared.csproj">
+      <Project>{61B320B8-1865-4C9D-9413-AFEF3730E654}</Project>
+      <Name>LogoFX.Samples.Specifications.Client.Model.Shared</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

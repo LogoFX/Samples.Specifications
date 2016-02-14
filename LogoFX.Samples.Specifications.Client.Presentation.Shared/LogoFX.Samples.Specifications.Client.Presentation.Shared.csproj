@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5046FBC7-AADD-4AE7-A7F3-141764225824}</ProjectGuid>
+    <ProjectGuid>{A4245326-BB01-4B7A-B4DE-6EBCA9C8094E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LogoFX.Samples.Specifications.Client.Model.Contracts</RootNamespace>
-    <AssemblyName>LogoFX.Samples.Specifications.Client.Model.Contracts</AssemblyName>
+    <RootNamespace>LogoFX.Samples.Specifications.Client.Presentation.Shared</RootNamespace>
+    <AssemblyName>LogoFX.Samples.Specifications.Client.Presentation.Shared</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\Bin\Debug\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -29,11 +29,20 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithFake|AnyCPU'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\Bin\DebugWithFake\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DebugType>full</DebugType>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TestsWithFake|AnyCPU'">
+    <OutputPath>bin\TestsWithFake\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TestsWithReal|AnyCPU'">
+    <OutputPath>..\Bin\TestsWithReal\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
@@ -47,18 +56,9 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TestsWithFake|AnyCPU'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithFake|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\Bin\TestsWithFake\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TestsWithReal|AnyCPU'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\Bin\TestsWithReal\</OutputPath>
+    <OutputPath>bin\DebugWithFake\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -66,26 +66,28 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="JetBrains.Annotations, Version=10.0.0.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <HintPath>..\packages\JetBrains.Annotations.10.0.0\lib\net20\JetBrains.Annotations.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="LogoFX.Client.Core, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Client.Core.1.0.5\lib\net45\LogoFX.Client.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="LogoFX.Client.Mvvm.Model, Version=1.0.7.2, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Mvvm.Model.1.0.7.2\lib\net45\LogoFX.Client.Mvvm.Model.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="LogoFX.Client.Mvvm.Model.Contracts, Version=1.0.7.2, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Mvvm.Model.1.0.7.2\lib\net45\LogoFX.Client.Mvvm.Model.Contracts.dll</HintPath>
+    <Reference Include="LogoFX.Client.Mvvm.View.Infra, Version=1.0.3.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Client.Mvvm.View.1.0.3.2\lib\net451\LogoFX.Client.Mvvm.View.Infra.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="LogoFX.Core, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Core.1.0.6.2\lib\net45\LogoFX.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Solid.Patterns.Memento, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Solid.Patterns.Memento.1.0.5\lib\portable-net45+wpa8+win8\Solid.Patterns.Memento.dll</HintPath>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Client.Mvvm.View.1.0.3.2\lib\net451\Microsoft.Expression.Interactions.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -93,14 +95,17 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IAppModel.cs" />
-    <Compile Include="IDataService.cs" />
-    <Compile Include="ILoginService.cs" />
-    <Compile Include="IUser.cs" />
-    <Compile Include="IWarehouseItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Page Include="Themes\Baselight\Baselight.normalcolor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

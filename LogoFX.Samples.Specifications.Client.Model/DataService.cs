@@ -36,6 +36,4 @@ namespace LogoFX.Samples.Specifications.Client.Model
             });
         }
     }
-
-    
 }

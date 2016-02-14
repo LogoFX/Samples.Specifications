@@ -22,5 +22,5 @@ namespace LogoFX.Samples.Specifications.Client.Data.Fake.Containers
             _warehouseItems.Clear();
             _warehouseItems.AddRange(warehouseItems);
         }
-    }
+    }   
 }

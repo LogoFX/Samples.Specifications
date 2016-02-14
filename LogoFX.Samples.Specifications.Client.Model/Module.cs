@@ -14,6 +14,7 @@ namespace LogoFX.Samples.Specifications.Client.Model
         {
             Mapper.Initialize(x => x.AddProfile<MappingProfile>());
             iocContainer.RegisterSingleton<IDataService, DataService>();
+            iocContainer.RegisterSingleton<ILoginService, LoginService>();
         }
     }
 }

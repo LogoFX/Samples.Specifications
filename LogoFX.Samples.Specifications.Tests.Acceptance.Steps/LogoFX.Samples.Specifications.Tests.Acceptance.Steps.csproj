@@ -99,7 +99,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GeneralSteps.cs" />
+    <Compile Include="GivenLoginSteps.cs" />
     <Compile Include="GivenMainSteps.cs" />
+    <Compile Include="LoginSteps.cs" />
     <Compile Include="MainSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
