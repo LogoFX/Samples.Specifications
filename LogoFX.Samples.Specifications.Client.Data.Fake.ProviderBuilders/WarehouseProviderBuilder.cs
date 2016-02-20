@@ -32,11 +32,9 @@ namespace LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders
             var initSetup = ServiceCall<IWarehouseProvider>.CreateServiceCall(FakeService);
             
             var setup = initSetup
-                .AddMethodCall(MethodCallWithResult<IWarehouseProvider, IEnumerable<WarehouseItemDto>>
-                        .CreateMethodCall(t => t.GetWarehouseItems())
-                        .BuildCallbacks(r => r.Complete(GetWarehouseItems())));
+                .AddMethodCallWithResult(t => t.GetWarehouseItems(), r => r.Complete(GetWarehouseItems));                        
            
-            setup.SetupService();
+            setup.Build();
         }
 
         private IEnumerable<WarehouseItemDto> GetWarehouseItems()

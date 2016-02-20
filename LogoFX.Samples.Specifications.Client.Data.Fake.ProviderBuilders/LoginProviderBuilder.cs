@@ -32,17 +32,15 @@ namespace LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders
             var initSetup = ServiceCall<ILoginProvider>.CreateServiceCall(FakeService);
 
             var setup = initSetup
-                .AddMethodCall(MethodCall<ILoginProvider, string, string>
-                    .CreateMethodCall(t => t.Login(It.IsAny<string>(), It.IsAny<string>()))                    
-                    .BuildCallbacks(
-                        (r,login, password) =>
-                            _isLoginAttemptSuccessfulCollection.ContainsKey(login)
-                                ? _isLoginAttemptSuccessfulCollection[login]
-                                    ? r.Complete()
-                                    : r.Throw(new Exception("unable to login"))
-                                : r.Throw(new Exception("unable to login"))));
+               .AddMethodCall<string, string>(t => t.Login(It.IsAny<string>(), It.IsAny<string>()),
+                    (r, login, password) =>
+                           _isLoginAttemptSuccessfulCollection.ContainsKey(login)
+                               ? _isLoginAttemptSuccessfulCollection[login]
+                                   ? r.Complete()
+                                   : r.Throw(new Exception("unable to login"))
+                               : r.Throw(new Exception("unable to login")));           
 
-            setup.SetupService();
+            setup.Build();
         }
 
         public void WithSuccessfulLogin(string username)
