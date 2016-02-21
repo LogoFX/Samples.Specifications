@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using Attest.Fake.Moq;
-using Attest.Fake.Setup;
 using LogoFX.Samples.Specifications.Client.Data.Contracts.Providers;
 
 namespace LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders
 {
     [Serializable]
-    public class LoginProviderBuilder : BuilderBase<ILoginProvider>
+    public class LoginProviderBuilder : FakeBuilderBase<ILoginProvider>
     {        
         private readonly List<Tuple<string, string>> _users = new List<Tuple<string, string>>();
         private readonly Dictionary<string, bool> _isLoginAttemptSuccessfulCollection = new Dictionary<string, bool>();
@@ -29,9 +28,9 @@ namespace LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders
 
         protected override void SetupFake()
         {            
-            var initSetup = ServiceCall<ILoginProvider>.CreateServiceCall(FakeService);
+            var initialSetup = CreateInitialSetup();
 
-            var setup = initSetup
+            var setup = initialSetup
                .AddMethodCall<string, string>(t => t.Login(It.IsAny<string>(), It.IsAny<string>()),
                     (r, login, password) =>
                            _isLoginAttemptSuccessfulCollection.ContainsKey(login)

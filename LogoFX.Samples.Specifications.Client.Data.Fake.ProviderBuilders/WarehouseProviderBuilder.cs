@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using Attest.Fake.Setup;
 using LogoFX.Samples.Specifications.Client.Data.Contracts.Dto;
 using LogoFX.Samples.Specifications.Client.Data.Contracts.Providers;
 
 namespace LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders
 {
     [Serializable]
-    public class WarehouseProviderBuilder : BuilderBase<IWarehouseProvider>
+    public class WarehouseProviderBuilder : FakeBuilderBase<IWarehouseProvider>
     {
         private readonly List<WarehouseItemDto> _warehouseItemsStorage = new List<WarehouseItemDto>();
 
@@ -29,9 +28,9 @@ namespace LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders
 
         protected override void SetupFake()
         {
-            var initSetup = ServiceCall<IWarehouseProvider>.CreateServiceCall(FakeService);
+            var initialSetup = CreateInitialSetup();
             
-            var setup = initSetup
+            var setup = initialSetup
                 .AddMethodCallWithResult(t => t.GetWarehouseItems(), r => r.Complete(GetWarehouseItems));                        
            
             setup.Build();
