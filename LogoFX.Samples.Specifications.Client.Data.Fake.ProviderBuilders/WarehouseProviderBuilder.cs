@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using LogoFX.Client.Data.Fake.ProviderBuilders;
 using LogoFX.Samples.Specifications.Client.Data.Contracts.Dto;
 using LogoFX.Samples.Specifications.Client.Data.Contracts.Providers;
 
