@@ -3,11 +3,12 @@ using JetBrains.Annotations;
 using LogoFX.Samples.Specifications.Client.Data.Contracts.Providers;
 using LogoFX.Samples.Specifications.Client.Model.Contracts;
 using LogoFX.Samples.Specifications.Client.Model.Shared;
+using Solid.Practices.Scheduling;
 
 namespace LogoFX.Samples.Specifications.Client.Model
 {
     [UsedImplicitly]
-    class LoginService : ServiceBase, ILoginService
+    class LoginService : ILoginService
     {
         private readonly ILoginProvider _loginProvider;
 
@@ -18,7 +19,7 @@ namespace LogoFX.Samples.Specifications.Client.Model
 
         public async Task LoginAsync(string username, string password)
         {
-            await RunAsync(() =>
+            await TaskRunner.RunAsync(() =>
             {
                 _loginProvider.Login(username, password);
                 UserContext.Current = new User(username);

@@ -15,8 +15,7 @@ namespace LogoFX.Samples.Specifications.Client.Presentation.Shell.ViewModels
     public class ShellViewModel : Conductor<INotifyPropertyChanged>.Collection.OneActive     
     {
         private readonly IWindowManager _windowManager;
-        private readonly IViewModelCreatorService _viewModelCreatorService;                
-        private readonly TaskFactory _taskFactory = TaskFactoryFactory.CreateTaskFactory();        
+        private readonly IViewModelCreatorService _viewModelCreatorService;                        
 
         public ShellViewModel(
             IWindowManager windowManager,
@@ -79,7 +78,7 @@ namespace LogoFX.Samples.Specifications.Client.Presentation.Shell.ViewModels
 
         private async Task Close()
         {
-            await _taskFactory.StartNew(() => Dispatch.Current.OnUiThread(() =>
+            await TaskRunner.RunAsync(() => Dispatch.Current.OnUiThread(() =>
             {
                 TryClose();
             }));
