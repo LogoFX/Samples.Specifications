@@ -1,13 +1,10 @@
-﻿using System;
-using LogoFX.Samples.Specifications.Client.Model.Contracts;
+﻿using LogoFX.Samples.Specifications.Client.Model.Contracts;
 
 namespace LogoFX.Samples.Specifications.Client.Model.Shared
 {
     public static class UserContext
     {
         private static IUser _currentUser;
-
-        public static event EventHandler CurrentChanged = delegate { };
 
         public static IUser Current
         {
@@ -19,14 +16,8 @@ namespace LogoFX.Samples.Specifications.Client.Model.Shared
                     return;
                 }
 
-                _currentUser = value;
-                OnCurrentChanged();
+                _currentUser = value;         
             }
-        }
-
-        private static void OnCurrentChanged()
-        {
-            CurrentChanged(null, EventArgs.Empty);
-        }
+        }        
     }
 }

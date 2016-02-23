@@ -17,13 +17,13 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Steps
         public static void SetupWarehouseItems(IEnumerable<WarehouseItemDto> warehouseItems)
         {
 #if FAKE
-                  var warehouseProviderBuilder = ScenarioHelper.GetOrCreate(WarehouseProviderBuilder.CreateBuilder);
+            var warehouseProviderBuilder = ScenarioHelper.GetOrCreate(WarehouseProviderBuilder.CreateBuilder);
             warehouseProviderBuilder.WithWarehouseItems(warehouseItems);
             ScenarioHelper.Get<IBuilderRegistrationService>().RegisterBuilder(warehouseProviderBuilder);
 #endif
 
 #if REAL
-            //put here real Setup
+    //put here real Setup
 #endif
         }
     }

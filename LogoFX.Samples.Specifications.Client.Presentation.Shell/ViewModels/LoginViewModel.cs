@@ -8,7 +8,7 @@ using LogoFX.Samples.Specifications.Client.Model.Contracts;
 namespace LogoFX.Samples.Specifications.Client.Presentation.Shell.ViewModels
 {   
     [UsedImplicitly]
-    public sealed partial class LoginViewModel : BusyScreen
+    public sealed class LoginViewModel : BusyScreen
     {
         private readonly ILoginService _loginService;
 

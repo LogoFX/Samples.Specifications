@@ -29,8 +29,7 @@ namespace LogoFX.Samples.Specifications.Client.Model
         {
             return RunAsync(() =>
             {
-                var warehouseItems =
-                    _warehouseProvider.GetWarehouseItems().Select(WarehouseMapper.MapToWarehouseItem);
+                var warehouseItems = _warehouseProvider.GetWarehouseItems().Select(WarehouseMapper.MapToWarehouseItem);
                 _warehouseItems.Clear();
                 _warehouseItems.AddRange(warehouseItems);
             });

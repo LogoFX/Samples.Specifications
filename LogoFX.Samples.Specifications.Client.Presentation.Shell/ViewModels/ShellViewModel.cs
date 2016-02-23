@@ -12,7 +12,7 @@ using Solid.Practices.Scheduling;
 namespace LogoFX.Samples.Specifications.Client.Presentation.Shell.ViewModels
 {
     [UsedImplicitly]
-    public class ShellViewModel : Conductor<INotifyPropertyChanged>.Collection.OneActive//, ICanBeBusy      
+    public class ShellViewModel : Conductor<INotifyPropertyChanged>.Collection.OneActive     
     {
         private readonly IWindowManager _windowManager;
         private readonly IViewModelCreatorService _viewModelCreatorService;                
