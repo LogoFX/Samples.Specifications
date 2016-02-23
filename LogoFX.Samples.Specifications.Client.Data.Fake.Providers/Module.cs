@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Composition;
-using LogoFX.Client.Bootstrapping.Adapters.Unity;
 using LogoFX.Samples.Specifications.Client.Data.Contracts.Dto;
 using LogoFX.Samples.Specifications.Client.Data.Contracts.Providers;
 using LogoFX.Samples.Specifications.Client.Data.Fake.Containers;
@@ -11,9 +10,9 @@ using Solid.Practices.Modularity;
 namespace LogoFX.Samples.Specifications.Client.Data.Fake.Providers
 {
     [Export(typeof(ICompositionModule))]
-    class Module : ICompositionModule<UnityContainerAdapter>
+    class Module : ICompositionModule<IIocContainer>
     {
-        public void RegisterModule(UnityContainerAdapter iocContainer)
+        public void RegisterModule(IIocContainer iocContainer)
         {
             RegisterDataContainers(iocContainer);
             RegisterBuilders(iocContainer);
