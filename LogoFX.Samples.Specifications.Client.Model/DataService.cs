@@ -6,7 +6,6 @@ using LogoFX.Core;
 using LogoFX.Samples.Specifications.Client.Data.Contracts.Providers;
 using LogoFX.Samples.Specifications.Client.Model.Contracts;
 using LogoFX.Samples.Specifications.Client.Model.Mappers;
-using Solid.Practices.Scheduling;
 
 namespace LogoFX.Samples.Specifications.Client.Model
 {
@@ -26,14 +25,11 @@ namespace LogoFX.Samples.Specifications.Client.Model
             get { return _warehouseItems; }
         }
 
-        public Task GetWarehouseItemsAsync()
+        public async Task GetWarehouseItemsAsync()
         {
-            return TaskRunner.RunAsync(() =>
-            {
-                var warehouseItems = _warehouseProvider.GetWarehouseItems().Select(WarehouseMapper.MapToWarehouseItem);
-                _warehouseItems.Clear();
-                _warehouseItems.AddRange(warehouseItems);
-            });
+            var warehouseItems = (await _warehouseProvider.GetWarehouseItems()).Select(WarehouseMapper.MapToWarehouseItem);
+            _warehouseItems.Clear();
+            _warehouseItems.AddRange(warehouseItems);
         }
     }
 }

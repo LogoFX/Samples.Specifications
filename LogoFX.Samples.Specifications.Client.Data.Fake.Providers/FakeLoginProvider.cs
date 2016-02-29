@@ -1,4 +1,5 @@
-﻿using Attest.Fake.Builders;
+﻿using System.Threading.Tasks;
+using Attest.Fake.Builders;
 using JetBrains.Annotations;
 using LogoFX.Samples.Specifications.Client.Data.Contracts.Providers;
 using LogoFX.Samples.Specifications.Client.Data.Fake.Containers;
@@ -23,10 +24,10 @@ namespace LogoFX.Samples.Specifications.Client.Data.Fake.Providers
             }            
         }
 
-        void ILoginProvider.Login(string username, string password)
+        async Task ILoginProvider.Login(string username, string password)
         {
             var service = GetService(() => _loginProviderBuilder, b => b);
-            service.Login(username, password);
+            await service.Login(username, password);
         }
     }
 }

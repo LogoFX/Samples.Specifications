@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading;
+using System.Threading.Tasks;
 using Attest.Fake.Builders;
 using JetBrains.Annotations;
 using LogoFX.Samples.Specifications.Client.Data.Contracts.Dto;
@@ -24,11 +25,12 @@ namespace LogoFX.Samples.Specifications.Client.Data.Fake.Providers
             _warehouseProviderBuilder.WithWarehouseItems(warehouseContainer.WarehouseItems);
         }
 
-        IEnumerable<WarehouseItemDto> IWarehouseProvider.GetWarehouseItems()
+        async Task<IEnumerable<WarehouseItemDto>> IWarehouseProvider.GetWarehouseItems()
         {
             Thread.Sleep(_random.Next(2000));
             var service = GetService(() => _warehouseProviderBuilder, b => b);
-            return service.GetWarehouseItems();
+            var warehouseItems = await service.GetWarehouseItems();
+            return warehouseItems;
         }
     }
 }

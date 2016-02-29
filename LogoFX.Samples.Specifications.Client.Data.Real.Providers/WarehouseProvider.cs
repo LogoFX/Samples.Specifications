@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using LogoFX.Samples.Specifications.Client.Data.Contracts.Dto;
 using LogoFX.Samples.Specifications.Client.Data.Contracts.Providers;
 
@@ -6,10 +7,10 @@ namespace LogoFX.Samples.Specifications.Client.Data.Real.Providers
 {
     class WarehouseProvider : IWarehouseProvider
     {
-        public IEnumerable<WarehouseItemDto> GetWarehouseItems()
+        public Task<IEnumerable<WarehouseItemDto>> GetWarehouseItems()
         {
             //put here real data logic
-            return new WarehouseItemDto[]
+            return Task.FromResult((IEnumerable<WarehouseItemDto>) new[]
             {
                 new WarehouseItemDto
                 {
@@ -17,7 +18,7 @@ namespace LogoFX.Samples.Specifications.Client.Data.Real.Providers
                     Price = 10,
                     Quantity = 10
                 }
-            };           
+            });           
         }
     }
 }
