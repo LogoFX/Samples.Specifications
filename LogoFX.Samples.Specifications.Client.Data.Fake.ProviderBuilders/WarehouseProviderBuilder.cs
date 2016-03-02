@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using LogoFX.Client.Data.Fake.ProviderBuilders;
 using LogoFX.Samples.Specifications.Client.Data.Contracts.Dto;
 using LogoFX.Samples.Specifications.Client.Data.Contracts.Providers;
-using Solid.Practices.Scheduling;
 
 namespace LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders
 {
@@ -33,8 +32,8 @@ namespace LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders
             var initialSetup = CreateInitialSetup();
 
             var setup = initialSetup
-                .AddMethodCallWithResult(t => t.GetWarehouseItems(),
-                    r => r.Complete(TaskRunner.RunAsync(() => GetWarehouseItems()))); 
+                .AddMethodCallWithResultAsync(t => t.GetWarehouseItems(),
+                    r => r.Complete(GetWarehouseItems)); 
            
             setup.Build();
         }

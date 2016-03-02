@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using Attest.Fake.Moq;
 using LogoFX.Client.Data.Fake.ProviderBuilders;
 using LogoFX.Samples.Specifications.Client.Data.Contracts.Providers;
-using Solid.Practices.Scheduling;
 
 namespace LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders
 {
@@ -34,11 +32,11 @@ namespace LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders
             var initialSetup = CreateInitialSetup();
 
             var setup = initialSetup
-               .AddMethodCallWithResult<string, string, Task>(t => t.Login(It.IsAny<string>(), It.IsAny<string>()),
+               .AddMethodCallAsync<string, string>(t => t.Login(It.IsAny<string>(), It.IsAny<string>()),
                     (r, login, password) =>
                            _isLoginAttemptSuccessfulCollection.ContainsKey(login)
                                ? _isLoginAttemptSuccessfulCollection[login]
-                                   ? r.Complete(TaskRunner.RunAsync(() => { }))
+                                   ? r.Complete()
                                    : r.Throw(new Exception("unable to login"))
                                : r.Throw(new Exception("unable to login")));           
 

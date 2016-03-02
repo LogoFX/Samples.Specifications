@@ -8,6 +8,7 @@ using LogoFX.Samples.Specifications.Client.Data.Contracts.Dto;
 using LogoFX.Samples.Specifications.Client.Data.Contracts.Providers;
 using LogoFX.Samples.Specifications.Client.Data.Fake.Containers;
 using LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders;
+using Solid.Practices.Scheduling;
 
 namespace LogoFX.Samples.Specifications.Client.Data.Fake.Providers
 {
@@ -27,7 +28,7 @@ namespace LogoFX.Samples.Specifications.Client.Data.Fake.Providers
 
         async Task<IEnumerable<WarehouseItemDto>> IWarehouseProvider.GetWarehouseItems()
         {
-            Thread.Sleep(_random.Next(2000));
+            await TaskRunner.RunAsync(() => Thread.Sleep(_random.Next(2000)));
             var service = GetService(() => _warehouseProviderBuilder, b => b);
             var warehouseItems = await service.GetWarehouseItems();
             return warehouseItems;
