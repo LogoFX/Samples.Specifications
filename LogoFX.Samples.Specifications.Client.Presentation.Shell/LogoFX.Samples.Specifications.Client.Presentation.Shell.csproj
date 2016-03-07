@@ -79,11 +79,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Caliburn.Micro, Version=2.0.2.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
-      <HintPath>..\packages\Caliburn.Micro.Core.2.0.2\lib\net45\Caliburn.Micro.dll</HintPath>
+      <HintPath>..\packages\Caliburn.Micro.Core.3.0.0\lib\net45\Caliburn.Micro.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Caliburn.Micro.Platform, Version=2.0.2.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
-      <HintPath>..\packages\Caliburn.Micro.2.0.2\lib\net45\Caliburn.Micro.Platform.dll</HintPath>
+      <HintPath>..\packages\Caliburn.Micro.3.0.0\lib\net45\Caliburn.Micro.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Caliburn.Micro.Platform.Core, Version=2.0.2.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Caliburn.Micro.3.0.0\lib\net45\Caliburn.Micro.Platform.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="JetBrains.Annotations, Version=10.0.0.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
@@ -102,8 +106,8 @@
       <HintPath>..\packages\LogoFX.Client.Bootstrapping.Adapters.Unity.1.0.6\lib\net451\LogoFX.Client.Bootstrapping.Adapters.Unity.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="LogoFX.Client.Bootstrapping.Platform, Version=1.0.7.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Bootstrapping.1.0.7\lib\net45\LogoFX.Client.Bootstrapping.Platform.dll</HintPath>
+    <Reference Include="LogoFX.Client.Bootstrapping.Platform, Version=1.0.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Client.Bootstrapping.1.0.8\lib\net45\LogoFX.Client.Bootstrapping.Platform.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="LogoFX.Client.Core, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
@@ -138,8 +142,8 @@
       <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModel.1.0.3.3\lib\net451\LogoFX.Client.Mvvm.ViewModel.Contracts.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="LogoFX.Client.Mvvm.ViewModel.Extensions, Version=1.0.4.5, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModel.Extensions.1.0.4.5\lib\net45\LogoFX.Client.Mvvm.ViewModel.Extensions.dll</HintPath>
+    <Reference Include="LogoFX.Client.Mvvm.ViewModel.Extensions, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModel.Extensions.1.0.5\lib\net45\LogoFX.Client.Mvvm.ViewModel.Extensions.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="LogoFX.Client.Mvvm.ViewModel.Services, Version=1.0.3.2, Culture=neutral, processorArchitecture=MSIL">
@@ -194,8 +198,8 @@
       <HintPath>..\packages\Solid.Practices.Composition.Desktop.1.0.7\lib\net45\Solid.Practices.Composition.Desktop.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Solid.Practices.Composition.Platform, Version=1.0.7.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Solid.Practices.Composition.1.0.7\lib\net45\Solid.Practices.Composition.Platform.dll</HintPath>
+    <Reference Include="Solid.Practices.Composition.Platform, Version=1.0.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Practices.Composition.1.0.8\lib\net45\Solid.Practices.Composition.Platform.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Solid.Practices.IoC, Version=1.0.8.0, Culture=neutral, processorArchitecture=MSIL">
@@ -253,7 +257,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\MahApps.Metro.1.2.3.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+      <HintPath>..\packages\Caliburn.Micro.3.0.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Xml" />

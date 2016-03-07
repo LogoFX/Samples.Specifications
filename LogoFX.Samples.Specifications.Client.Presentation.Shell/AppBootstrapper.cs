@@ -21,6 +21,6 @@ namespace LogoFX.Samples.Specifications.Client.Presentation.Shell
             iocContainerAdapter.RegisterSingleton<IWindowManager, WindowManager>();
             iocContainerAdapter.RegisterSingleton<IViewModelCreatorService, ViewModelCreatorService>();
             iocContainerAdapter.RegisterSingleton<IViewModelFactory, ViewModelFactory>();
-        }
+        }        
     }
 }
