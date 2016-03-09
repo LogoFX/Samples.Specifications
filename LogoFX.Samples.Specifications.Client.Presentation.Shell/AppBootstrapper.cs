@@ -11,7 +11,13 @@ namespace LogoFX.Samples.Specifications.Client.Presentation.Shell
     public class AppBootstrapper : BootstrapperContainerBase<ShellViewModel, UnityContainerAdapter>
     {
         public AppBootstrapper() 
-            : base(new UnityContainerAdapter(), useApplication : true, reuseCompositionInformation : false)
+            : base(new UnityContainerAdapter(), new BootstrapperCreationOptions
+            {
+                DiscoverCompositionModules = true,
+                InspectAssemblies = true,
+                ReuseCompositionInformation = false,
+                UseApplication = true
+            })
         {
         }
 
