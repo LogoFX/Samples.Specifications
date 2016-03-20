@@ -1,6 +1,6 @@
 ﻿#if FAKE
-using Attest.Tests.Core;
-using LogoFX.Client.Tests.Contracts;
+using Attest.Testing.Core;
+using LogoFX.Client.Testing.Contracts;
 using LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders;
 #endif
 

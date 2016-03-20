@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
+using Attest.Testing.Core;
+using LogoFX.Client.Testing.Contracts;
 using LogoFX.Samples.Specifications.Client.Data.Contracts.Dto;
 
 #if FAKE
-using Attest.Tests.Core;
-using LogoFX.Client.Tests.Contracts;
 using LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders;
 #endif
 

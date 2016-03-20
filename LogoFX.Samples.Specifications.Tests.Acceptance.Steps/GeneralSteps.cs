@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
-using Attest.Tests.Core;
-using LogoFX.Client.Tests.Contracts;
+using Attest.Testing.Core;
+using LogoFX.Client.Testing.Contracts;
 
 namespace LogoFX.Samples.Specifications.Tests.Acceptance.Steps
 {

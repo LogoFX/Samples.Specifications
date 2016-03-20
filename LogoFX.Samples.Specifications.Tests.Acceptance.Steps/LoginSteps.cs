@@ -1,4 +1,4 @@
-﻿using Attest.Tests.Core;
+﻿using Attest.Testing.Core;
 using LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.Contracts;
 
 namespace LogoFX.Samples.Specifications.Tests.Acceptance.Steps

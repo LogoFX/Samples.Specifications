@@ -1,5 +1,5 @@
 ﻿using System.Composition;
-using LogoFX.Client.Tests.EndToEnd.FakeData.Modularity;
+using LogoFX.Client.Testing.EndToEnd.FakeData.Modularity;
 using LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;

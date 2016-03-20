@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-using Attest.Tests.Core;
+using Attest.Testing.Core;
 using LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.Contracts;
 using LogoFX.Samples.Specifications.Tests.Acceptance.TestData;
 using Shouldly;

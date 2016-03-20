@@ -1,4 +1,4 @@
-﻿using LogoFX.Client.Tests.EndToEnd.White;
+﻿using LogoFX.Client.Testing.EndToEnd.White;
 using TestStack.White.Factory;
 using TestStack.White.UIItems.Finders;
 using TestStack.White.UIItems.WindowItems;

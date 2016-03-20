@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                                xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:xaml="clr-namespace:LogoFX.Client.Mvvm.View.Infra.Xaml;assembly=LogoFX.Client.Mvvm.View.Infra"
+             xmlns:xaml="clr-namespace:LogoFX.Client.Mvvm.View.Xaml;assembly=LogoFX.Client.Mvvm.View.Platform"
                                mc:Ignorable="d">
 
     <!--<Style x:Key="MetroWindow" TargetType="{x:Type controls:MetroWindow}">

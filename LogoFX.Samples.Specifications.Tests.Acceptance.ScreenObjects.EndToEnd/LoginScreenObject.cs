@@ -1,4 +1,4 @@
-﻿using LogoFX.Client.Tests.EndToEnd.White;
+﻿using LogoFX.Client.Testing.EndToEnd.White;
 using LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.Contracts;
 using TestStack.White.UIItems;
 using TestStack.White.UIItems.WindowItems;

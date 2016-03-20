@@ -1,4 +1,4 @@
-﻿using Attest.Tests.Core;
+﻿using Attest.Testing.Core;
 using LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.Contracts;
 using LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.EndToEnd;
 using TechTalk.SpecFlow;
@@ -12,11 +12,11 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Bridge
     [Binding]
     class SpecFlowBridge :
 #if FAKE
-          LogoFX.Client.Tests.SpecFlow.EndToEndTestsBase.WithFakeProviders
+          LogoFX.Client.Testing.EndToEnd.SpecFlow.EndToEndTestsBase.WithFakeProviders
 #endif
 
 #if REAL
-        LogoFX.Client.Tests.SpecFlow.EndToEndTestsBase.WithRealProviders
+        LogoFX.Client.Testing.EndToEnd.SpecFlow.EndToEndTestsBase.WithRealProviders
 #endif
     {
         protected override void RegisterScreenObjects()
