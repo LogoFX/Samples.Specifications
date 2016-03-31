@@ -1,12 +1,11 @@
-﻿using System.Composition;
+﻿using JetBrains.Annotations;
 using LogoFX.Client.Testing.EndToEnd.FakeData.Modularity;
 using LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders;
 using Solid.Practices.IoC;
-using Solid.Practices.Modularity;
 
 namespace LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Providers
-{
-    [Export(typeof(ICompositionModule))]
+{    
+    [UsedImplicitly]
     public class Module : ProvidersModuleBase<IIocContainer>
     {
         protected override void OnRegisterProviders(IIocContainer iocContainer)

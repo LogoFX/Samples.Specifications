@@ -1,11 +1,11 @@
-﻿using System.Composition;
-using AutoMapper;
+﻿using AutoMapper;
+using JetBrains.Annotations;
 using LogoFX.Samples.Specifications.Client.Model.Mappers;
 using Solid.Practices.Modularity;
 
 namespace LogoFX.Samples.Specifications.Client.Model
 {
-    [Export(typeof(ICompositionModule))]
+    [UsedImplicitly]
     class MappingModule : IPlainCompositionModule
     {
         public void RegisterModule()

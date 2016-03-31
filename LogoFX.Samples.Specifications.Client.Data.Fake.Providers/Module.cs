@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Composition;
+using JetBrains.Annotations;
 using LogoFX.Samples.Specifications.Client.Data.Contracts.Dto;
 using LogoFX.Samples.Specifications.Client.Data.Contracts.Providers;
 using LogoFX.Samples.Specifications.Client.Data.Fake.Containers;
@@ -9,7 +9,7 @@ using Solid.Practices.Modularity;
 
 namespace LogoFX.Samples.Specifications.Client.Data.Fake.Providers
 {
-    [Export(typeof(ICompositionModule))]
+    [UsedImplicitly]
     class Module : ICompositionModule<IIocContainer>
     {
         public void RegisterModule(IIocContainer iocContainer)
