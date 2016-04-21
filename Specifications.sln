@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{719AD31A-1447-494B-93D5-897FCA9E0CCF}"
 EndProject
@@ -70,6 +70,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Samples.Specifications.Client.Presentation.Shared", "LogoFX.Samples.Specifications.Client.Presentation.Shared\LogoFX.Samples.Specifications.Client.Presentation.Shared.csproj", "{A4245326-BB01-4B7A-B4DE-6EBCA9C8094E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Samples.Specifications.Client.Model.Shared", "LogoFX.Samples.Specifications.Client.Model.Shared\LogoFX.Samples.Specifications.Client.Model.Shared.csproj", "{61B320B8-1865-4C9D-9413-AFEF3730E654}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Samples.Specifications.Client.Launcher", "LogoFX.Samples.Specifications.Client.Launcher\LogoFX.Samples.Specifications.Client.Launcher.csproj", "{1344B63D-D9A3-452F-9E42-BFA2CE948681}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -282,6 +284,18 @@ Global
 		{61B320B8-1865-4C9D-9413-AFEF3730E654}.TestsWithFake|Any CPU.Build.0 = TestsWithFake|Any CPU
 		{61B320B8-1865-4C9D-9413-AFEF3730E654}.TestsWithReal|Any CPU.ActiveCfg = Release|Any CPU
 		{61B320B8-1865-4C9D-9413-AFEF3730E654}.TestsWithReal|Any CPU.Build.0 = Release|Any CPU
+		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
+		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
+		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.DebugWithReal|Any CPU.ActiveCfg = DebugWithReal|Any CPU
+		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.DebugWithReal|Any CPU.Build.0 = DebugWithReal|Any CPU
+		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.TestsWithFake|Any CPU.ActiveCfg = TestsWithFake|Any CPU
+		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.TestsWithFake|Any CPU.Build.0 = TestsWithFake|Any CPU
+		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.TestsWithReal|Any CPU.ActiveCfg = TestsWithReal|Any CPU
+		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.TestsWithReal|Any CPU.Build.0 = TestsWithReal|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -319,5 +333,6 @@ Global
 		{5270F84D-8FF4-4756-83B0-78DD9777643D} = {719AD31A-1447-494B-93D5-897FCA9E0CCF}
 		{A4245326-BB01-4B7A-B4DE-6EBCA9C8094E} = {719AD31A-1447-494B-93D5-897FCA9E0CCF}
 		{61B320B8-1865-4C9D-9413-AFEF3730E654} = {1EAEA804-9B78-4EF6-8D4F-3B6D3FA398D8}
+		{1344B63D-D9A3-452F-9E42-BFA2CE948681} = {10B9B54F-4AED-4C27-AF18-54193FB50410}
 	EndGlobalSection
 EndGlobal

@@ -13,7 +13,7 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Steps
         public static void WhenIOpenTheApplication()
         {
             var applicationDirectory = Environment.CurrentDirectory;
-            var applicationPath = Path.Combine(applicationDirectory, "LogoFX.Samples.Specifications.Client.Presentation.Shell.exe");
+            var applicationPath = Path.Combine(applicationDirectory, "LogoFX.Samples.Specifications.Client.Launcher.exe");
             _startApplicationService.StartApplication(applicationPath);            
         }
     }

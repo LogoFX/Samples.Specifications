@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
+#if FAKE
 using Attest.Testing.Core;
 using LogoFX.Client.Testing.Contracts;
+#endif
 using LogoFX.Samples.Specifications.Client.Data.Contracts.Dto;
-
 #if FAKE
 using LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders;
 #endif
-
 #if REAL
 #endif
 
