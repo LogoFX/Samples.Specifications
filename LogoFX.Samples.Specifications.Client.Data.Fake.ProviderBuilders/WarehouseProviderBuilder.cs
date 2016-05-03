@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Attest.Fake.Setup.Contracts;
 using LogoFX.Client.Data.Fake.ProviderBuilders;
 using LogoFX.Samples.Specifications.Client.Data.Contracts.Dto;
 using LogoFX.Samples.Specifications.Client.Data.Contracts.Providers;
@@ -25,17 +26,14 @@ namespace LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders
         {
             _warehouseItemsStorage.Clear();
             _warehouseItemsStorage.AddRange(warehouseItems);
-        }
+        }        
 
-        protected override void SetupFake()
+        protected override IServiceCall<IWarehouseProvider> CreateServiceCall(IHaveNoMethods<IWarehouseProvider> serviceCallTemplate)
         {
-            var initialSetup = CreateInitialSetup();
-
-            var setup = initialSetup
+            var setup = serviceCallTemplate
                 .AddMethodCallWithResultAsync(t => t.GetWarehouseItems(),
-                    r => r.Complete(GetWarehouseItems)); 
-           
-            setup.Build();
+                    r => r.Complete(GetWarehouseItems));
+            return setup;
         }
 
         private IEnumerable<WarehouseItemDto> GetWarehouseItems()

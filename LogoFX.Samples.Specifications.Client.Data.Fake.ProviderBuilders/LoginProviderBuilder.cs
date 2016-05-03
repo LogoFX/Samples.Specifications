@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Attest.Fake.Moq;
+using Attest.Fake.Setup.Contracts;
 using LogoFX.Client.Data.Fake.ProviderBuilders;
 using LogoFX.Samples.Specifications.Client.Data.Contracts.Providers;
 
@@ -25,22 +26,19 @@ namespace LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders
         public void WithUser(string username, string password)
         {
             _users.Add(new Tuple<string, string>(username, password));            
-        }
+        }        
 
-        protected override void SetupFake()
-        {            
-            var initialSetup = CreateInitialSetup();
-
-            var setup = initialSetup
+        protected override IServiceCall<ILoginProvider> CreateServiceCall(IHaveNoMethods<ILoginProvider> serviceCallTemplate)
+        {
+            var setup = serviceCallTemplate
                .AddMethodCallAsync<string, string>(t => t.Login(It.IsAny<string>(), It.IsAny<string>()),
                     (r, login, password) =>
                            _isLoginAttemptSuccessfulCollection.ContainsKey(login)
                                ? _isLoginAttemptSuccessfulCollection[login]
                                    ? r.Complete()
                                    : r.Throw(new Exception("unable to login"))
-                               : r.Throw(new Exception("unable to login")));           
-
-            setup.Build();
+                               : r.Throw(new Exception("unable to login")));
+            return setup;
         }
 
         public void WithSuccessfulLogin(string username)
