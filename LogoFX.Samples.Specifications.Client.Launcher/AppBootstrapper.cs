@@ -6,8 +6,8 @@ namespace LogoFX.Samples.Specifications.Client.Launcher
 {
     public class AppBootstrapper : BootstrapperContainerBase<UnityContainerAdapter>.WithRootObject<ShellViewModel>
     {
-        public AppBootstrapper() 
-            : base(new UnityContainerAdapter())
+        public AppBootstrapper(UnityContainerAdapter containerAdapter) 
+            : base(containerAdapter)
         {
         }              
     }

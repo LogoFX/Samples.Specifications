@@ -1,4 +1,6 @@
-﻿using LogoFX.Client.Mvvm.ViewModel.Services;
+﻿using LogoFX.Bootstrapping;
+using LogoFX.Client.Bootstrapping.Adapters.Unity;
+using LogoFX.Client.Mvvm.ViewModel.Services;
 using LogoFX.Client.Mvvm.ViewModelFactory.Unity;
 
 namespace LogoFX.Samples.Specifications.Client.Launcher
@@ -7,8 +9,13 @@ namespace LogoFX.Samples.Specifications.Client.Launcher
     {
         public App()
         {
-            var bootstrapper = new AppBootstrapper();
-            bootstrapper.UseViewModelCreatorService().UseViewModelFactory();
+            var container = new UnityContainerAdapter();
+            var bootstrapper = new AppBootstrapper(container);
+
+            bootstrapper
+                .UseViewModelCreatorService()
+                .UseViewModelFactory()
+                .UseResolver(container);
             bootstrapper.Initialize();
         }
     }
