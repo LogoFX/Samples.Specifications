@@ -6,7 +6,7 @@ using Solid.Practices.IoC;
 namespace LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Providers
 {    
     [UsedImplicitly]
-    public class Module : ProvidersModuleBase<IIocContainerRegistrator>
+    public class Module : ProvidersModuleBase
     {
         protected override void OnRegisterProviders(IIocContainerRegistrator iocContainer)
         {
