@@ -12,10 +12,10 @@ namespace LogoFX.Samples.Specifications.Client.Launcher
             var container = new UnityContainerAdapter();
             var bootstrapper = new AppBootstrapper(container);
 
-            bootstrapper                
+            bootstrapper
+                .UseResolver(container)
                 .UseViewModelCreatorService()
-                .UseViewModelFactory()
-                .UseResolver(container);
+                .UseViewModelFactory();                
             bootstrapper.Initialize();
         }
     }
