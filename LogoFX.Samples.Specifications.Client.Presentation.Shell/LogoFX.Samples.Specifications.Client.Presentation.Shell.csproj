@@ -333,17 +333,17 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LogoFX.Samples.Specifications.Client.Model.Contracts\LogoFX.Samples.Specifications.Client.Model.Contracts.csproj">
-      <Project>{5046FBC7-AADD-4AE7-A7F3-141764225824}</Project>
-      <Name>LogoFX.Samples.Specifications.Client.Model.Contracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LogoFX.Samples.Specifications.Client.Model.Shared\LogoFX.Samples.Specifications.Client.Model.Shared.csproj">
-      <Project>{61B320B8-1865-4C9D-9413-AFEF3730E654}</Project>
-      <Name>LogoFX.Samples.Specifications.Client.Model.Shared</Name>
-    </ProjectReference>
     <ProjectReference Include="..\LogoFX.Samples.Specifications.Client.Presentation.Shared\LogoFX.Samples.Specifications.Client.Presentation.Shared.csproj">
       <Project>{a4245326-bb01-4b7a-b4de-6ebca9c8094e}</Project>
       <Name>LogoFX.Samples.Specifications.Client.Presentation.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samples.Client.Model.Contracts\Samples.Client.Model.Contracts.csproj">
+      <Project>{536D34E4-A409-4567-B7C6-58F50206740E}</Project>
+      <Name>Samples.Client.Model.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samples.Client.Model.Shared\Samples.Client.Model.Shared.csproj">
+      <Project>{49724A56-9FA9-44C4-B731-1E414EE598BC}</Project>
+      <Name>Samples.Client.Model.Shared</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
