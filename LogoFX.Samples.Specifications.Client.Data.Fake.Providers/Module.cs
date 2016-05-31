@@ -1,9 +1,9 @@
 ﻿using System;
 using JetBrains.Annotations;
-using LogoFX.Samples.Specifications.Client.Data.Contracts.Providers;
 using LogoFX.Samples.Specifications.Client.Data.Fake.Containers;
 using LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders;
 using Samples.Client.Data.Contracts.Dto;
+using Samples.Client.Data.Contracts.Providers;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
 

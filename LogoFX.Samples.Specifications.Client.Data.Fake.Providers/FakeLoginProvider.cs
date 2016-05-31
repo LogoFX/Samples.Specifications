@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
 using Attest.Fake.Builders;
 using JetBrains.Annotations;
-using LogoFX.Samples.Specifications.Client.Data.Contracts.Providers;
 using LogoFX.Samples.Specifications.Client.Data.Fake.Containers;
 using LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders;
+using Samples.Client.Data.Contracts.Providers;
 
 namespace LogoFX.Samples.Specifications.Client.Data.Fake.Providers
 {

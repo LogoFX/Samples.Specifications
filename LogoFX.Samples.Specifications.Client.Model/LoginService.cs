@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
 using JetBrains.Annotations;
-using LogoFX.Samples.Specifications.Client.Data.Contracts.Providers;
 using LogoFX.Samples.Specifications.Client.Model.Contracts;
 using LogoFX.Samples.Specifications.Client.Model.Shared;
+using Samples.Client.Data.Contracts.Providers;
 
 namespace LogoFX.Samples.Specifications.Client.Model
 {

@@ -1,5 +1,5 @@
 ﻿using JetBrains.Annotations;
-using LogoFX.Samples.Specifications.Client.Data.Contracts.Providers;
+using Samples.Client.Data.Contracts.Providers;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
 

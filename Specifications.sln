@@ -47,8 +47,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestData", "TestData", "{AB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Samples.Specifications.Tests.Acceptance.TestData", "LogoFX.Samples.Specifications.Tests.Acceptance.TestData\LogoFX.Samples.Specifications.Tests.Acceptance.TestData.csproj", "{27BBAC7D-16A9-44AD-B35E-42F73D0CE4F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Samples.Specifications.Client.Data.Contracts.Providers", "LogoFX.Samples.Specifications.Client.Data.Contracts.Providers\LogoFX.Samples.Specifications.Client.Data.Contracts.Providers.csproj", "{92A54367-C513-42BF-A8E9-EF84BDF8C5C3}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Samples.Specifications.Client.Data.Fake.Providers", "LogoFX.Samples.Specifications.Client.Data.Fake.Providers\LogoFX.Samples.Specifications.Client.Data.Fake.Providers.csproj", "{E27A6439-921C-455F-A062-1EBCB50F439F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Samples.Specifications.Client.Data.Fake.Containers", "LogoFX.Samples.Specifications.Client.Data.Fake.Containers\LogoFX.Samples.Specifications.Client.Data.Fake.Containers.csproj", "{064BD680-2955-4CEC-A56B-B48891EC6AA1}"
@@ -72,6 +70,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Samples.Specifications.Client.Launcher", "LogoFX.Samples.Specifications.Client.Launcher\LogoFX.Samples.Specifications.Client.Launcher.csproj", "{1344B63D-D9A3-452F-9E42-BFA2CE948681}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Client.Data.Contracts.Dto", "Samples.Client.Data.Contracts.Dto\Samples.Client.Data.Contracts.Dto.csproj", "{8A567338-89FB-49AA-80FE-B47AE861D6A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Client.Data.Contracts.Providers", "Samples.Client.Data.Contracts.Providers\Samples.Client.Data.Contracts.Providers.csproj", "{D2432BC9-C269-47CA-85AC-7B1F79BDD2B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -163,18 +163,6 @@ Global
 		{27BBAC7D-16A9-44AD-B35E-42F73D0CE4F5}.TestsWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{27BBAC7D-16A9-44AD-B35E-42F73D0CE4F5}.TestsWithReal|Any CPU.ActiveCfg = TestsWithReal|Any CPU
 		{27BBAC7D-16A9-44AD-B35E-42F73D0CE4F5}.TestsWithReal|Any CPU.Build.0 = TestsWithReal|Any CPU
-		{92A54367-C513-42BF-A8E9-EF84BDF8C5C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{92A54367-C513-42BF-A8E9-EF84BDF8C5C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{92A54367-C513-42BF-A8E9-EF84BDF8C5C3}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
-		{92A54367-C513-42BF-A8E9-EF84BDF8C5C3}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
-		{92A54367-C513-42BF-A8E9-EF84BDF8C5C3}.DebugWithReal|Any CPU.ActiveCfg = DebugWithReal|Any CPU
-		{92A54367-C513-42BF-A8E9-EF84BDF8C5C3}.DebugWithReal|Any CPU.Build.0 = DebugWithReal|Any CPU
-		{92A54367-C513-42BF-A8E9-EF84BDF8C5C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{92A54367-C513-42BF-A8E9-EF84BDF8C5C3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{92A54367-C513-42BF-A8E9-EF84BDF8C5C3}.TestsWithFake|Any CPU.ActiveCfg = TestsWithFake|Any CPU
-		{92A54367-C513-42BF-A8E9-EF84BDF8C5C3}.TestsWithFake|Any CPU.Build.0 = TestsWithFake|Any CPU
-		{92A54367-C513-42BF-A8E9-EF84BDF8C5C3}.TestsWithReal|Any CPU.ActiveCfg = TestsWithReal|Any CPU
-		{92A54367-C513-42BF-A8E9-EF84BDF8C5C3}.TestsWithReal|Any CPU.Build.0 = TestsWithReal|Any CPU
 		{E27A6439-921C-455F-A062-1EBCB50F439F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E27A6439-921C-455F-A062-1EBCB50F439F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E27A6439-921C-455F-A062-1EBCB50F439F}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
@@ -296,6 +284,18 @@ Global
 		{8A567338-89FB-49AA-80FE-B47AE861D6A7}.TestsWithFake|Any CPU.Build.0 = Release|Any CPU
 		{8A567338-89FB-49AA-80FE-B47AE861D6A7}.TestsWithReal|Any CPU.ActiveCfg = Release|Any CPU
 		{8A567338-89FB-49AA-80FE-B47AE861D6A7}.TestsWithReal|Any CPU.Build.0 = Release|Any CPU
+		{D2432BC9-C269-47CA-85AC-7B1F79BDD2B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2432BC9-C269-47CA-85AC-7B1F79BDD2B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2432BC9-C269-47CA-85AC-7B1F79BDD2B7}.DebugWithFake|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2432BC9-C269-47CA-85AC-7B1F79BDD2B7}.DebugWithFake|Any CPU.Build.0 = Debug|Any CPU
+		{D2432BC9-C269-47CA-85AC-7B1F79BDD2B7}.DebugWithReal|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2432BC9-C269-47CA-85AC-7B1F79BDD2B7}.DebugWithReal|Any CPU.Build.0 = Debug|Any CPU
+		{D2432BC9-C269-47CA-85AC-7B1F79BDD2B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2432BC9-C269-47CA-85AC-7B1F79BDD2B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2432BC9-C269-47CA-85AC-7B1F79BDD2B7}.TestsWithFake|Any CPU.ActiveCfg = Release|Any CPU
+		{D2432BC9-C269-47CA-85AC-7B1F79BDD2B7}.TestsWithFake|Any CPU.Build.0 = Release|Any CPU
+		{D2432BC9-C269-47CA-85AC-7B1F79BDD2B7}.TestsWithReal|Any CPU.ActiveCfg = Release|Any CPU
+		{D2432BC9-C269-47CA-85AC-7B1F79BDD2B7}.TestsWithReal|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -321,7 +321,6 @@ Global
 		{AF68283B-5283-4DEF-8DA0-6FB6CA85C1BD} = {901D5FC5-7C6D-4200-B66B-440486E0BE5F}
 		{ABE4DD8C-AFB7-4C65-96EA-33D4B8A28E3F} = {835945EF-48E0-4F18-8BDC-F6B63DF01961}
 		{27BBAC7D-16A9-44AD-B35E-42F73D0CE4F5} = {ABE4DD8C-AFB7-4C65-96EA-33D4B8A28E3F}
-		{92A54367-C513-42BF-A8E9-EF84BDF8C5C3} = {3C9A8028-CB9D-41EF-A826-C7532C206504}
 		{E27A6439-921C-455F-A062-1EBCB50F439F} = {901D5FC5-7C6D-4200-B66B-440486E0BE5F}
 		{064BD680-2955-4CEC-A56B-B48891EC6AA1} = {901D5FC5-7C6D-4200-B66B-440486E0BE5F}
 		{5046FBC7-AADD-4AE7-A7F3-141764225824} = {1EAEA804-9B78-4EF6-8D4F-3B6D3FA398D8}
@@ -334,5 +333,6 @@ Global
 		{61B320B8-1865-4C9D-9413-AFEF3730E654} = {1EAEA804-9B78-4EF6-8D4F-3B6D3FA398D8}
 		{1344B63D-D9A3-452F-9E42-BFA2CE948681} = {10B9B54F-4AED-4C27-AF18-54193FB50410}
 		{8A567338-89FB-49AA-80FE-B47AE861D6A7} = {3C9A8028-CB9D-41EF-A826-C7532C206504}
+		{D2432BC9-C269-47CA-85AC-7B1F79BDD2B7} = {3C9A8028-CB9D-41EF-A826-C7532C206504}
 	EndGlobalSection
 EndGlobal

@@ -3,9 +3,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using JetBrains.Annotations;
 using LogoFX.Core;
-using LogoFX.Samples.Specifications.Client.Data.Contracts.Providers;
 using LogoFX.Samples.Specifications.Client.Model.Contracts;
 using LogoFX.Samples.Specifications.Client.Model.Mappers;
+using Samples.Client.Data.Contracts.Providers;
 
 namespace LogoFX.Samples.Specifications.Client.Model
 {
