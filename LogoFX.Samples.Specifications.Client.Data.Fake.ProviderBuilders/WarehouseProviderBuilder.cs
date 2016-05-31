@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using Attest.Fake.Setup.Contracts;
 using LogoFX.Client.Data.Fake.ProviderBuilders;
-using LogoFX.Samples.Specifications.Client.Data.Contracts.Dto;
 using LogoFX.Samples.Specifications.Client.Data.Contracts.Providers;
+using Samples.Client.Data.Contracts.Dto;
 
 namespace LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders
 {

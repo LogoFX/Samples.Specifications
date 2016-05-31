@@ -80,9 +80,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LogoFX.Samples.Specifications.Client.Data.Contracts.Dto\LogoFX.Samples.Specifications.Client.Data.Contracts.Dto.csproj">
-      <Project>{84A92671-0079-42F2-B567-D7FFCE23A7E3}</Project>
-      <Name>LogoFX.Samples.Specifications.Client.Data.Contracts.Dto</Name>
+    <ProjectReference Include="..\Samples.Client.Data.Contracts.Dto\Samples.Client.Data.Contracts.Dto.csproj">
+      <Project>{8A567338-89FB-49AA-80FE-B47AE861D6A7}</Project>
+      <Name>Samples.Client.Data.Contracts.Dto</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

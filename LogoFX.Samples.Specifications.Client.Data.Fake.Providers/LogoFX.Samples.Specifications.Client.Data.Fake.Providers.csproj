@@ -129,10 +129,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LogoFX.Samples.Specifications.Client.Data.Contracts.Dto\LogoFX.Samples.Specifications.Client.Data.Contracts.Dto.csproj">
-      <Project>{84A92671-0079-42F2-B567-D7FFCE23A7E3}</Project>
-      <Name>LogoFX.Samples.Specifications.Client.Data.Contracts.Dto</Name>
-    </ProjectReference>
     <ProjectReference Include="..\LogoFX.Samples.Specifications.Client.Data.Contracts.Providers\LogoFX.Samples.Specifications.Client.Data.Contracts.Providers.csproj">
       <Project>{92A54367-C513-42BF-A8E9-EF84BDF8C5C3}</Project>
       <Name>LogoFX.Samples.Specifications.Client.Data.Contracts.Providers</Name>
@@ -144,6 +140,10 @@
     <ProjectReference Include="..\LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders\LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders.csproj">
       <Project>{AF68283B-5283-4DEF-8DA0-6FB6CA85C1BD}</Project>
       <Name>LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samples.Client.Data.Contracts.Dto\Samples.Client.Data.Contracts.Dto.csproj">
+      <Project>{8A567338-89FB-49AA-80FE-B47AE861D6A7}</Project>
+      <Name>Samples.Client.Data.Contracts.Dto</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

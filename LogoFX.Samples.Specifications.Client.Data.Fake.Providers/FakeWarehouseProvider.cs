@@ -4,10 +4,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using Attest.Fake.Builders;
 using JetBrains.Annotations;
-using LogoFX.Samples.Specifications.Client.Data.Contracts.Dto;
 using LogoFX.Samples.Specifications.Client.Data.Contracts.Providers;
 using LogoFX.Samples.Specifications.Client.Data.Fake.Containers;
 using LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders;
+using Samples.Client.Data.Contracts.Dto;
 using Solid.Practices.Scheduling;
 
 namespace LogoFX.Samples.Specifications.Client.Data.Fake.Providers

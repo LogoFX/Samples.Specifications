@@ -133,10 +133,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LogoFX.Samples.Specifications.Client.Data.Contracts.Dto\LogoFX.Samples.Specifications.Client.Data.Contracts.Dto.csproj">
-      <Project>{84A92671-0079-42F2-B567-D7FFCE23A7E3}</Project>
-      <Name>LogoFX.Samples.Specifications.Client.Data.Contracts.Dto</Name>
-    </ProjectReference>
     <ProjectReference Include="..\LogoFX.Samples.Specifications.Client.Data.Contracts.Providers\LogoFX.Samples.Specifications.Client.Data.Contracts.Providers.csproj">
       <Project>{92a54367-c513-42bf-a8e9-ef84bdf8c5c3}</Project>
       <Name>LogoFX.Samples.Specifications.Client.Data.Contracts.Providers</Name>
@@ -152,6 +148,10 @@
     <ProjectReference Include="..\LogoFX.Samples.Specifications.Tests.Acceptance.TestData\LogoFX.Samples.Specifications.Tests.Acceptance.TestData.csproj">
       <Project>{27BBAC7D-16A9-44AD-B35E-42F73D0CE4F5}</Project>
       <Name>LogoFX.Samples.Specifications.Tests.Acceptance.TestData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samples.Client.Data.Contracts.Dto\Samples.Client.Data.Contracts.Dto.csproj">
+      <Project>{8A567338-89FB-49AA-80FE-B47AE861D6A7}</Project>
+      <Name>Samples.Client.Data.Contracts.Dto</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,4 +1,4 @@
-﻿using LogoFX.Samples.Specifications.Client.Data.Contracts.Dto;
+﻿using Samples.Client.Data.Contracts.Dto;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
 

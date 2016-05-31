@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using LogoFX.Samples.Specifications.Client.Data.Contracts.Dto;
+using Samples.Client.Data.Contracts.Dto;
 
 namespace LogoFX.Samples.Specifications.Client.Data.Fake.Containers
 {

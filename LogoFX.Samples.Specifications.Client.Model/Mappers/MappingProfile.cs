@@ -1,7 +1,7 @@
 ﻿using System;
 using AutoMapper;
-using LogoFX.Samples.Specifications.Client.Data.Contracts.Dto;
 using LogoFX.Samples.Specifications.Client.Model.Contracts;
+using Samples.Client.Data.Contracts.Dto;
 
 namespace LogoFX.Samples.Specifications.Client.Model.Mappers
 {
