@@ -14,8 +14,8 @@ namespace LogoFX.Samples.Specifications.Client.Launcher
             bootstrapper
                 .UseResolver()                
                 .UseViewModelCreatorService()
-                .UseViewModelFactory();                
-            bootstrapper.Initialize();
+                .UseViewModelFactory()
+                .Initialize();                            
         }
     }
 }
