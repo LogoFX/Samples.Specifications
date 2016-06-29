@@ -1,6 +1,6 @@
 ﻿using JetBrains.Annotations;
 using LogoFX.Client.Testing.EndToEnd.FakeData.Modularity;
-using LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders;
+using Samples.Specifications.Client.Data.Fake.ProviderBuilders;
 using Solid.Practices.IoC;
 
 namespace LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Providers

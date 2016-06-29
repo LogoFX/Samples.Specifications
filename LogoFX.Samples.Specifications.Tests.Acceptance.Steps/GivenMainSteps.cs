@@ -4,8 +4,9 @@ using Attest.Testing.Core;
 using LogoFX.Client.Testing.Contracts;
 #endif
 using Samples.Client.Data.Contracts.Dto;
+using Samples.Specifications.Client.Data.Fake.ProviderBuilders;
 #if FAKE
-using LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders;
+
 #endif
 #if REAL
 #endif

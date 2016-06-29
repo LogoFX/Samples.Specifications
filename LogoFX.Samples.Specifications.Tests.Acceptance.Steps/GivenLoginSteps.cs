@@ -1,7 +1,8 @@
 ﻿#if FAKE
 using Attest.Testing.Core;
 using LogoFX.Client.Testing.Contracts;
-using LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders;
+using Samples.Specifications.Client.Data.Fake.ProviderBuilders;
+
 #endif
 
 #if REAL

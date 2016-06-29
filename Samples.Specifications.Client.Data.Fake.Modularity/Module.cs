@@ -3,7 +3,7 @@ using Attest.Fake.Moq;
 using JetBrains.Annotations;
 using Solid.Practices.Modularity;
 
-namespace Samples.Specifications.Client.Data.Fake.ProviderBuilders.Modularity
+namespace Samples.Specifications.Client.Data.Fake.Modularity
 {    
     [UsedImplicitly]    
     class Module : IPlainCompositionModule

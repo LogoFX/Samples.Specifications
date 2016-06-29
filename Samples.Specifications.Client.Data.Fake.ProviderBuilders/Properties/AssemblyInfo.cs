@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Samples.Specifications.Client.Data.Fake.Modularity")]
+[assembly: AssemblyTitle("Samples.Specifications.Client.Data.Fake.ProviderBuilders")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Samples.Specifications.Client.Data.Fake.Modularity")]
+[assembly: AssemblyProduct("Samples.Specifications.Client.Data.Fake.ProviderBuilders")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("1db4c693-200d-46dc-af84-3c0ad40392b5")]
+[assembly: Guid("af68283b-5283-4def-8da0-6fb6ca85c1bd")]
 
 // Version information for an assembly consists of the following four values:
 //
