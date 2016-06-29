@@ -6,8 +6,7 @@ using LogoFX.Client.Data.Fake.ProviderBuilders;
 using Samples.Client.Data.Contracts.Providers;
 
 namespace LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders
-{
-    [Serializable]
+{    
     public class LoginProviderBuilder : FakeBuilderBase<ILoginProvider>
     {        
         private readonly List<Tuple<string, string>> _users = new List<Tuple<string, string>>();

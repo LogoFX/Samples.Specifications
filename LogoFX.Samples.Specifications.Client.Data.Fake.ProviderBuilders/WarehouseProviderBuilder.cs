@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Attest.Fake.Setup.Contracts;
 using LogoFX.Client.Data.Fake.ProviderBuilders;
 using Samples.Client.Data.Contracts.Dto;
 using Samples.Client.Data.Contracts.Providers;
 
 namespace LogoFX.Samples.Specifications.Client.Data.Fake.ProviderBuilders
-{
-    [Serializable]
+{    
     public class WarehouseProviderBuilder : FakeBuilderBase<IWarehouseProvider>
     {
         private readonly List<WarehouseItemDto> _warehouseItemsStorage = new List<WarehouseItemDto>();
