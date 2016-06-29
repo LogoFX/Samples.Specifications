@@ -25,25 +25,6 @@ namespace LogoFX.Samples.Specifications.Client.Presentation.Shell.ViewModels
             get { return _warehouseItems ?? (_warehouseItems = _viewModelCreatorService.CreateViewModel<WarehouseItemsViewModel>()); }
         }
 
-        private bool _isGrid = true;
-
-        public bool IsGrid
-        {
-            get { return _isGrid; }
-            set
-            {
-                if (_isGrid == value)
-                    return;
-
-                _isGrid = value;
-
-                NotifyOfPropertyChange();
-                NotifyOfPropertyChange(() => ViewContext);
-            }
-        }
-
-        public string ViewContext => _isGrid ? "Grid" : "List";
-
         protected override async void OnInitialize()
         {
             base.OnInitialize();
