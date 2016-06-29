@@ -5,10 +5,25 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:cal="http://www.caliburnproject.org"
              xmlns:viewModels="clr-namespace:LogoFX.Samples.Specifications.Client.Presentation.Shell.ViewModels"
+             xmlns:shell="clr-namespace:LogoFX.Samples.Specifications.Client.Presentation.Shell"
              mc:Ignorable="d" 
              d:DataContext="{d:DesignInstance viewModels:MainViewModel}"
              d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <shell:NegateConverter x:Key="NegateConverter"/>
+    </UserControl.Resources>
     <Grid>
-      <ContentControl cal:View.Model="{Binding WarehouseItems, Mode=OneTime}"></ContentControl>     
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <StackPanel Orientation="Horizontal">
+            <RadioButton IsChecked="{Binding IsGrid}" Content="Grid" GroupName="switch"/>
+            <RadioButton IsChecked="{Binding IsGrid, Converter={StaticResource NegateConverter}}" Content="List" GroupName="switch"/>
+        </StackPanel>
+      <ContentControl Grid.Row="1"
+                      cal:View.Context="{Binding ViewContext, Mode=OneWay}"
+                      cal:View.Model="{Binding WarehouseItems, Mode=OneWay}"/>     
     </Grid>
 </UserControl>
