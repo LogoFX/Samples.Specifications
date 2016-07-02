@@ -7,8 +7,8 @@
     <ProjectGuid>{1DB4C693-200D-46DC-AF84-3C0AD40392B5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Samples.Specifications.Client.Data.Fake.Modularity</RootNamespace>
-    <AssemblyName>Samples.Specifications.Client.Data.Fake.Modularity</AssemblyName>
+    <RootNamespace>Samples.Specifications.Client.Data.Fake.ProviderBuilders.Setup</RootNamespace>
+    <AssemblyName>Samples.Specifications.Client.Data.Fake.ProviderBuilders.Setup</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
