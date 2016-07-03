@@ -118,6 +118,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationExtensions.cs" />
     <Compile Include="LoginScreenObject.cs" />
     <Compile Include="MainScreenObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

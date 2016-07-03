@@ -3,12 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
-        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:behaviors="clr-namespace:LogoFX.Client.Mvvm.View.Interactivity.Behaviors;assembly=LogoFX.Client.Mvvm.View.Platform"
         xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
         xmlns:actions="clr-namespace:LogoFX.Client.Mvvm.View.Interactivity.Actions;assembly=LogoFX.Client.Mvvm.View.Platform"
         xmlns:viewModels="clr-namespace:LogoFX.Samples.Specifications.Client.Presentation.Shell.ViewModels"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         mc:Ignorable="d"
         MaxWidth="600"
         d:DataContext="{d:DesignInstance viewModels:LoginViewModel}"
@@ -36,9 +35,7 @@
             <TextBox Grid.Row="0" Grid.Column="1" Height="28"
                          AutomationProperties.AutomationId="Login_UserName"
                          Text="{Binding Path=UserName,
-                                        Mode=TwoWay}"
-                         controls:TextBoxHelper.ClearTextButton="True"
-                         controls:TextBoxHelper.Watermark="Username">
+                                        Mode=TwoWay}">
                 <i:Interaction.Behaviors>
                     <behaviors:UpdateSourceOnChangeBehavior />
                 </i:Interaction.Behaviors>
@@ -54,9 +51,7 @@
             <PasswordBox Grid.Row="1" Grid.Column="1" Height="28"
                              AutomationProperties.AutomationId="Login_Password" behaviors:PasswordHelper.BindPassword="True"
                              behaviors:PasswordHelper.BoundPassword="{Binding Path=Password,
-                                                                              Mode=TwoWay}"
-                             controls:TextBoxHelper.ClearTextButton="True"
-                             controls:TextBoxHelper.Watermark="Enter password">
+                                                                              Mode=TwoWay}">
                 <i:Interaction.Triggers>
                     <ei:KeyTrigger Key="Enter">
                         <actions:ExecuteCommandAction Command="{Binding Path=LoginCommand}" ManageEnableState="False" />

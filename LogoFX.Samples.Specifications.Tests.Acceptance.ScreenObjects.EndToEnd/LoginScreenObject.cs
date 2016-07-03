@@ -24,8 +24,7 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.EndToEnd
         private Window GetLoginScreen()
         {
             var application = ApplicationContext.Application;
-            var loginScreen =
-                application.GetWindow("Login View");
+            var loginScreen = application.GetWindowEx("Login View");
             return loginScreen;
         }
     }

@@ -89,11 +89,12 @@ namespace LogoFX.Samples.Specifications.Client.Presentation.Shell.ViewModels
             base.OnViewLoaded(view);
 
             _windowManager.ShowDialog(LoginViewModel);
+
             if (UserContext.Current == null)
             {
                 await Close();
             }
-        }       
+        }
 
         private void OnLoggedInSuccessfully(object sender, EventArgs eventArgs)
         {
