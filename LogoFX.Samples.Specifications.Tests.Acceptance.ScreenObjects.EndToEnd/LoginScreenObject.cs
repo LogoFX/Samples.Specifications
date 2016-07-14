@@ -1,6 +1,7 @@
 ﻿using LogoFX.Client.Testing.EndToEnd.White;
 using LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.Contracts;
 using TestStack.White.UIItems;
+using TestStack.White.UIItems.Finders;
 using TestStack.White.UIItems.WindowItems;
 
 namespace LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.EndToEnd
@@ -19,6 +20,13 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.EndToEnd
             var loginScreen = GetLoginScreen();
             var userNameTextBox = loginScreen.Get<TextBox>("Login_UserName");
             userNameTextBox.Enter(username);            
+        }
+
+        public void SetPassword(string password)
+        {
+            var loginScreen = GetLoginScreen();
+            var passwordBox = loginScreen.Get(SearchCriteria.ByAutomationId("Login_Password"));
+            passwordBox.Enter(password);
         }
 
         private Window GetLoginScreen()

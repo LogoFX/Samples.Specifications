@@ -17,6 +17,12 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Steps.Adapters
             LoginSteps.WhenILogInToTheSystem();
         }
 
+        [When(@"I set the password to ""(.*)""")]
+        public void WhenISetThePasswordTo(string password)
+        {
+            LoginSteps.WhenISetThePasswordTo(password);
+        }
+
         [Then(@"the login screen is displayed")]
         public void ThenTheLoginScreenIsDisplayed()
         {

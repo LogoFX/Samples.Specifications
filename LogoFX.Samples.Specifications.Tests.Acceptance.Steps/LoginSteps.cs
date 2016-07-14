@@ -12,6 +12,11 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Steps
             _loginScreenObject.SetUsername(username);
         }
 
+        public static void WhenISetThePasswordTo(string password)
+        {
+            _loginScreenObject.SetPassword(password);
+        }
+
         public static void WhenILogInToTheSystem()
         {
             _loginScreenObject.Login();

@@ -29,7 +29,7 @@ namespace LogoFX.Samples.Specifications.Client.Presentation.Shell.ViewModels
             {
                 return _loginCommand ??
                        (_loginCommand = ActionCommand
-                           .When(() => !string.IsNullOrWhiteSpace(UserName))
+                           .When(() => !string.IsNullOrWhiteSpace(UserName) && !string.IsNullOrWhiteSpace(Password))
                            .Do(async () =>
                            {
                                LoginFailureCause = null;
@@ -44,15 +44,14 @@ namespace LogoFX.Samples.Specifications.Client.Presentation.Shell.ViewModels
                                catch (Exception ex)
                                {
                                    LoginFailureCause = "Failed to log in";
-                               }                               
+                               }
 
                                finally
                                {
                                    Password = string.Empty;
                                    IsBusy = false;
                                }
-                           })                           
-                           .RequeryOnPropertyChanged(this, () => Password));
+                           }));
             }
         }
 

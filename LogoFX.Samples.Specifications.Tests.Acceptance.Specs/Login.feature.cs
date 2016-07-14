@@ -89,14 +89,16 @@ this.ScenarioSetup(scenarioInfo);
 #line 11
 this.ScenarioSetup(scenarioInfo);
 #line 12
- testRunner.Given("I am able to log in successfully with username \"Admin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I am able to log in successfully with username \'Admin\' and password \'Pass\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 13
  testRunner.When("I open the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 14
  testRunner.And("I set the username to \"Admin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 15
- testRunner.And("I log in to the system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I set the password to \"Pass\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 16
+ testRunner.And("I log in to the system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 17
  testRunner.Then("Application navigates to the main screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

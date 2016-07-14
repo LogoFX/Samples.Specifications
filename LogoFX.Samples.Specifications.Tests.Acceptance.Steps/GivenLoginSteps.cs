@@ -2,7 +2,6 @@
 using Attest.Testing.Core;
 using LogoFX.Client.Testing.Contracts;
 using Samples.Specifications.Client.Data.Fake.ProviderBuilders;
-
 #endif
 
 #if REAL
@@ -12,11 +11,11 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Steps
 {
     public static class GivenLoginSteps
     {
-        public static void SetupAuthenticatedUserWithUsername(string username)
+        public static void SetupAuthenticatedUserWithCredentials(string username, string password)
         {
 #if FAKE
             var loginProviderBuilder = ScenarioHelper.GetOrCreate(LoginProviderBuilder.CreateBuilder);
-            loginProviderBuilder.WithUser(username, string.Empty);
+            loginProviderBuilder.WithUser(username, password);
             ScenarioHelper.Get<IBuilderRegistrationService>().RegisterBuilder(loginProviderBuilder);
 #endif
 
