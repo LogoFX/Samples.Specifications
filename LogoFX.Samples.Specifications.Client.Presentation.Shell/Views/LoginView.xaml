@@ -8,6 +8,7 @@
         xmlns:actions="clr-namespace:LogoFX.Client.Mvvm.View.Interactivity.Actions;assembly=LogoFX.Client.Mvvm.View.Platform"
         xmlns:viewModels="clr-namespace:LogoFX.Samples.Specifications.Client.Presentation.Shell.ViewModels"
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:commanding="clr-namespace:LogoFX.Client.Mvvm.Commanding;assembly=LogoFX.Client.Mvvm.Commanding.Platform"
         mc:Ignorable="d"
         MaxWidth="600"
         d:DataContext="{d:DesignInstance viewModels:LoginViewModel}"
@@ -54,7 +55,7 @@
                                                                               Mode=TwoWay}">
                 <i:Interaction.Triggers>
                     <ei:KeyTrigger Key="Enter">
-                        <actions:ExecuteCommandAction Command="{Binding Path=LoginCommand}" ManageEnableState="False" />
+                        <commanding:ExecuteCommandAction Command="{Binding Path=LoginCommand}" ManageEnableState="False" />
                     </ei:KeyTrigger>
                 </i:Interaction.Triggers>
                 <i:Interaction.Behaviors>
@@ -69,7 +70,7 @@
                         Content="Sign in">
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="Click">
-                        <actions:ExecuteCommandAction Command="{Binding Path=LoginCommand}" ManageEnableState="True" />
+                        <commanding:ExecuteCommandAction Command="{Binding Path=LoginCommand}" ManageEnableState="True" />
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
             </Button>
@@ -77,7 +78,7 @@
                         Content="Cancel">
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="Click">
-                        <actions:ExecuteNamedCommandAction CommandName="LoginCancelCommand" ManageEnableState="True" />
+                        <commanding:ExecuteNamedCommandAction CommandName="LoginCancelCommand" ManageEnableState="True" />
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
             </Button>
