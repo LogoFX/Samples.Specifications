@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
 using Attest.Testing.Core;
+using FluentAssertions;
 using LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.Contracts;
 using LogoFX.Samples.Specifications.Tests.Acceptance.TestData;
-using Shouldly;
 
 namespace LogoFX.Samples.Specifications.Tests.Acceptance.Steps
 {
@@ -23,17 +23,17 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Steps
             {
                 var expectedWarehouseItem = warehouseItems[i];
                 var actualWarehouseItem = actualWarehouseItems[i];
-                actualWarehouseItem.Kind.ShouldBe(expectedWarehouseItem.Kind);
-                actualWarehouseItem.Price.ShouldBe(expectedWarehouseItem.Price);
-                actualWarehouseItem.Quantity.ShouldBe(expectedWarehouseItem.Quantity);
-                actualWarehouseItem.TotalCost.ShouldBe(expectedWarehouseItem.TotalCost);               
+                actualWarehouseItem.Kind.Should().Be(expectedWarehouseItem.Kind);
+                actualWarehouseItem.Price.Should().Be(expectedWarehouseItem.Price);
+                actualWarehouseItem.Quantity.Should().Be(expectedWarehouseItem.Quantity);
+                actualWarehouseItem.TotalCost.Should().Be(expectedWarehouseItem.TotalCost);               
             }            
         }
 
         public static void ThenTotalCostOfItemIs(string kind, int expectedTotalCost)
         {
             var actualWarehouseItem = _mainScreenObject.GetWarehouseItemByKind(kind);
-            actualWarehouseItem.TotalCost.ShouldBe(expectedTotalCost);
+            actualWarehouseItem.TotalCost.Should().Be(expectedTotalCost);
         }
     }
 }
