@@ -11,7 +11,7 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Fake
     {
         public void RegisterModule(IIocContainerRegistrator iocContainer)
         {
-            ;iocContainer.RegisterInstance<IStartApplicationService>(new StartApplicationService.WithFakeProviders());
+            iocContainer.RegisterInstance<IStartApplicationService>(new StartApplicationService.WithFakeProviders());
             iocContainer.RegisterInstance<IBuilderRegistrationService>(new BuilderRegistrationService());
             iocContainer.RegisterInstance(LoginProviderBuilder.CreateBuilder());
             iocContainer.RegisterInstance(WarehouseProviderBuilder.CreateBuilder());

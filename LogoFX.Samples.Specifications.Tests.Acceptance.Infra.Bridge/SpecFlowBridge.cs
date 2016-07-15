@@ -20,9 +20,7 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Bridge
             var containerAdapter = new ObjectContainerAdapter(objectContainer);
             var bootstrapper = new Bootstrapper(containerAdapter);            
             bootstrapper.Initialize();
-            containerAdapter.RegisterContainerAdapterCompositionModules(
-                bootstrapper.Modules.OfType<ICompositionModule<IIocContainerRegistrator>>()
-                    .Where(t => t.GetType().Namespace.Contains("Providers") == false));           
+            containerAdapter.RegisterContainerAdapterCompositionModules(bootstrapper.Modules);           
         }                       
     }
 }
