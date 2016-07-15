@@ -6,13 +6,13 @@ using TestStack.White.UIItems.WindowItems;
 
 namespace LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.EndToEnd
 {
-    public class LoginScreenObject : ILoginScreenObject
+    class LoginScreenObject : ILoginScreenObject
     {
         public void Login()
         {
             var loginScreen = GetLoginScreen();
             var loginButton = loginScreen.Get<Button>("Login_SignIn");
-            loginButton.Click();            
+            loginButton.Click();                        
         }
 
         public void SetUsername(string username)

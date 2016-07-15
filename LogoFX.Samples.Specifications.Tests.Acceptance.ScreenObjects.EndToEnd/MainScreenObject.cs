@@ -10,7 +10,7 @@ using TestStack.White.WindowsAPI;
 
 namespace LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.EndToEnd
 {
-    public class MainScreenObject : IMainScreenObject
+    class MainScreenObject : IMainScreenObject
     {
         public IEnumerable<WarehouseItemAssertionTestData> GetWarehouseItems()
         {
