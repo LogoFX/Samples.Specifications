@@ -1,9 +1,6 @@
-﻿using System.Linq;
-using BoDi;
+﻿using BoDi;
 using LogoFX.Bootstrapping;
 using LogoFX.Client.Testing.EndToEnd.SpecFlow;
-using Solid.Practices.IoC;
-using Solid.Practices.Modularity;
 using TechTalk.SpecFlow;
 
 namespace LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Bridge

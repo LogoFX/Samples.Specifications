@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using LogoFX.Client.Testing.Contracts;
 
 namespace LogoFX.Samples.Specifications.Tests.Acceptance.Steps
