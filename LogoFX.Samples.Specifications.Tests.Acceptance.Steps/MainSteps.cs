@@ -1,22 +1,26 @@
 ﻿using System;
 using System.Linq;
-using Attest.Testing.Core;
 using FluentAssertions;
 using LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.Contracts;
 using LogoFX.Samples.Specifications.Tests.Acceptance.TestData;
 
 namespace LogoFX.Samples.Specifications.Tests.Acceptance.Steps
 {
-    public static class MainSteps
+    public class MainSteps
     {
-        private static readonly IMainScreenObject _mainScreenObject = ScenarioHelper.Get<IMainScreenObject>();
+        private readonly IMainScreenObject _mainScreenObject;
 
-        public static void WhenISetThePriceForItemTo(string kind, int newPrice)
+        public MainSteps(IMainScreenObject mainScreenObject)
+        {
+            _mainScreenObject = mainScreenObject;
+        }
+
+        public void WhenISetThePriceForItemTo(string kind, int newPrice)
         {
             _mainScreenObject.EditWarehouseItem(kind, "Price", newPrice.ToString());
         }
 
-        public static void ThenIExpectToSeeTheFollowingDataOnTheScreen(WarehouseItemAssertionTestData[] warehouseItems)
+        public void ThenIExpectToSeeTheFollowingDataOnTheScreen(WarehouseItemAssertionTestData[] warehouseItems)
         {
             var actualWarehouseItems = _mainScreenObject.GetWarehouseItems().ToArray();
             for (int i = 0; i < Math.Max(warehouseItems.Length, actualWarehouseItems.Length); i++)
@@ -30,7 +34,7 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Steps
             }            
         }
 
-        public static void ThenTotalCostOfItemIs(string kind, int expectedTotalCost)
+        public void ThenTotalCostOfItemIs(string kind, int expectedTotalCost)
         {
             var actualWarehouseItem = _mainScreenObject.GetWarehouseItemByKind(kind);
             actualWarehouseItem.TotalCost.Should().Be(expectedTotalCost);

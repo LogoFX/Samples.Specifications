@@ -328,8 +328,8 @@ Global
 		{528F0326-586A-4BD6-ADAD-CB530F8E1DD2}.DebugWithReal|Any CPU.Build.0 = Debug|Any CPU
 		{528F0326-586A-4BD6-ADAD-CB530F8E1DD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{528F0326-586A-4BD6-ADAD-CB530F8E1DD2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{528F0326-586A-4BD6-ADAD-CB530F8E1DD2}.TestsWithFake|Any CPU.ActiveCfg = Release|Any CPU
-		{528F0326-586A-4BD6-ADAD-CB530F8E1DD2}.TestsWithFake|Any CPU.Build.0 = Release|Any CPU
+		{528F0326-586A-4BD6-ADAD-CB530F8E1DD2}.TestsWithFake|Any CPU.ActiveCfg = Debug|Any CPU
+		{528F0326-586A-4BD6-ADAD-CB530F8E1DD2}.TestsWithFake|Any CPU.Build.0 = Debug|Any CPU
 		{528F0326-586A-4BD6-ADAD-CB530F8E1DD2}.TestsWithReal|Any CPU.ActiveCfg = Release|Any CPU
 		{528F0326-586A-4BD6-ADAD-CB530F8E1DD2}.TestsWithReal|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection

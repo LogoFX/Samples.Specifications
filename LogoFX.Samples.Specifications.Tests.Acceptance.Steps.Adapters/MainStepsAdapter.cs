@@ -8,6 +8,13 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Steps.Adapters
     [Binding]
     class MainStepsAdapter
     {
+        public MainSteps MainSteps { get; set; }
+
+        public MainStepsAdapter(MainSteps mainSteps)
+        {
+            MainSteps = mainSteps;
+        }
+
         [When(@"I set the Price for ""(.*)"" item to (.*)")]
         public void WhenISetThePriceForItemTo(string kind, int newPrice)
         {

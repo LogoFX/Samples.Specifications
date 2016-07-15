@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 #if FAKE
-using Attest.Testing.Core;
 using LogoFX.Client.Testing.Contracts;
 #endif
 using Samples.Client.Data.Contracts.Dto;
@@ -13,14 +12,24 @@ using Samples.Specifications.Client.Data.Fake.ProviderBuilders;
 
 namespace LogoFX.Samples.Specifications.Tests.Acceptance.Steps
 {
-    public static class GivenMainSteps
+    public class GivenMainSteps
     {
-        public static void SetupWarehouseItems(IEnumerable<WarehouseItemDto> warehouseItems)
+        private readonly IBuilderRegistrationService _builderRegistrationService;
+        private readonly WarehouseProviderBuilder _warehouseProviderBuilder;
+
+        public GivenMainSteps(
+            IBuilderRegistrationService builderRegistrationService,
+            WarehouseProviderBuilder warehouseProviderBuilder)
         {
-#if FAKE
-            var warehouseProviderBuilder = ScenarioHelper.GetOrCreate(WarehouseProviderBuilder.CreateBuilder);
-            warehouseProviderBuilder.WithWarehouseItems(warehouseItems);
-            ScenarioHelper.Get<IBuilderRegistrationService>().RegisterBuilder(warehouseProviderBuilder);
+            _builderRegistrationService = builderRegistrationService;
+            _warehouseProviderBuilder = warehouseProviderBuilder;
+        }
+
+        public void SetupWarehouseItems(IEnumerable<WarehouseItemDto> warehouseItems)
+        {
+#if FAKE            
+            _warehouseProviderBuilder.WithWarehouseItems(warehouseItems);
+            _builderRegistrationService.RegisterBuilder(_warehouseProviderBuilder);
 #endif
 
 #if REAL

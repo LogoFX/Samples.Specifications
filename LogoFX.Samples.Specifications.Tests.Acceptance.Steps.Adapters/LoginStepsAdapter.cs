@@ -5,6 +5,13 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Steps.Adapters
     [Binding]
     public sealed class LoginStepsAdapter
     {
+        private LoginSteps LoginSteps { get; set; }
+
+        public LoginStepsAdapter(LoginSteps loginSteps)
+        {
+            LoginSteps = loginSteps;
+        }
+
         [When(@"I set the username to ""(.*)""")]
         public void WhenISetTheUsernameTo(string username)
         {

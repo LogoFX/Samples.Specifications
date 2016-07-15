@@ -1,5 +1,4 @@
 ﻿#if FAKE
-using Attest.Testing.Core;
 using LogoFX.Client.Testing.Contracts;
 using Samples.Specifications.Client.Data.Fake.ProviderBuilders;
 #endif
@@ -9,14 +8,23 @@ using Samples.Specifications.Client.Data.Fake.ProviderBuilders;
 
 namespace LogoFX.Samples.Specifications.Tests.Acceptance.Steps
 {
-    public static class GivenLoginSteps
+    public class GivenLoginSteps
     {
-        public static void SetupAuthenticatedUserWithCredentials(string username, string password)
+        private readonly IBuilderRegistrationService _builderRegistrationService;
+        private readonly LoginProviderBuilder _loginProviderBuilder;
+
+        public GivenLoginSteps(IBuilderRegistrationService builderRegistrationService, 
+            LoginProviderBuilder loginProviderBuilder)
         {
-#if FAKE
-            var loginProviderBuilder = ScenarioHelper.GetOrCreate(LoginProviderBuilder.CreateBuilder);
-            loginProviderBuilder.WithUser(username, password);
-            ScenarioHelper.Get<IBuilderRegistrationService>().RegisterBuilder(loginProviderBuilder);
+            _builderRegistrationService = builderRegistrationService;
+            _loginProviderBuilder = loginProviderBuilder;
+        }
+
+        public void SetupAuthenticatedUserWithCredentials(string username, string password)
+        {
+#if FAKE            
+            _loginProviderBuilder.WithUser(username, password);
+            _builderRegistrationService.RegisterBuilder(_loginProviderBuilder);
 #endif
 
 #if REAL
@@ -24,12 +32,11 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Steps
 #endif
         }
 
-        public static void SetupLoginSuccessfullyWithUsername(string username)
+        public void SetupLoginSuccessfullyWithUsername(string username)
         {
-#if FAKE
-            var loginProviderBuilder = ScenarioHelper.GetOrCreate(LoginProviderBuilder.CreateBuilder);
-            loginProviderBuilder.WithSuccessfulLogin(username);
-            ScenarioHelper.Get<IBuilderRegistrationService>().RegisterBuilder(loginProviderBuilder);
+#if FAKE            
+            _loginProviderBuilder.WithSuccessfulLogin(username);
+            _builderRegistrationService.RegisterBuilder(_loginProviderBuilder);
 #endif
 
 #if REAL

@@ -1,16 +1,19 @@
 ﻿using System;
 using System.IO;
-using Attest.Testing.Core;
 using LogoFX.Client.Testing.Contracts;
 
 namespace LogoFX.Samples.Specifications.Tests.Acceptance.Steps
 {
-    public static class GeneralSteps
+    public class GeneralSteps
     {
-        private static readonly IStartApplicationService _startApplicationService =
-            ScenarioHelper.Get<IStartApplicationService>();
+        private readonly IStartApplicationService _startApplicationService;
 
-        public static void WhenIOpenTheApplication()
+        public GeneralSteps(IStartApplicationService startApplicationService)
+        {
+            _startApplicationService = startApplicationService;
+        }
+
+        public void WhenIOpenTheApplication()
         {
             var applicationDirectory = Environment.CurrentDirectory;
             var applicationPath = Path.Combine(applicationDirectory, "LogoFX.Samples.Specifications.Client.Launcher.exe");

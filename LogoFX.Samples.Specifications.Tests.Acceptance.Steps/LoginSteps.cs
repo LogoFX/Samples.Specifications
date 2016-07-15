@@ -1,28 +1,32 @@
-﻿using Attest.Testing.Core;
-using LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.Contracts;
+﻿using LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.Contracts;
 
 namespace LogoFX.Samples.Specifications.Tests.Acceptance.Steps
 {
-    public static class LoginSteps
+    public class LoginSteps
     {
-        private static readonly ILoginScreenObject _loginScreenObject = ScenarioHelper.Get<ILoginScreenObject>();
+        private readonly ILoginScreenObject _loginScreenObject;
 
-        public static void WhenISetTheUsernameTo(string username)
+        public LoginSteps(ILoginScreenObject loginScreenObject)
+        {
+            _loginScreenObject = loginScreenObject;
+        }
+
+        public void WhenISetTheUsernameTo(string username)
         {
             _loginScreenObject.SetUsername(username);
         }
 
-        public static void WhenISetThePasswordTo(string password)
+        public void WhenISetThePasswordTo(string password)
         {
             _loginScreenObject.SetPassword(password);
         }
 
-        public static void WhenILogInToTheSystem()
+        public void WhenILogInToTheSystem()
         {
             _loginScreenObject.Login();
         }
 
-        public static void ThenTheLoginScreenIsDisplayed()
+        public void ThenTheLoginScreenIsDisplayed()
         {
            
         }
