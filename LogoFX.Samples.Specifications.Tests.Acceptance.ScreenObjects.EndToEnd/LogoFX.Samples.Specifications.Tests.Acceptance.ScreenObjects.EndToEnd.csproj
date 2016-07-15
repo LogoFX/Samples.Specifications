@@ -125,6 +125,7 @@
     <Compile Include="ApplicationExtensions.cs" />
     <Compile Include="LoginScreenObject.cs" />
     <Compile Include="MainScreenObject.cs" />
+    <Compile Include="Module.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShellScreenObject.cs" />
     <Compile Include="StructureHelper.cs" />

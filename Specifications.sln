@@ -77,6 +77,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Clie
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Samples.Specifications.Tests.Acceptance.Steps.Platform", "LogoFX.Samples.Specifications.Tests.Acceptance.Steps.Platform\LogoFX.Samples.Specifications.Tests.Acceptance.Steps.Platform.csproj", "{528F0326-586A-4BD6-ADAD-CB530F8E1DD2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Fake", "LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Fake\LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Fake.csproj", "{A3B306E2-2A20-4591-812D-677DD44E6640}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Real", "LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Real\LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Real.csproj", "{9B6E4171-3936-4C3E-8A29-F5A56761DF78}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -328,10 +332,33 @@ Global
 		{528F0326-586A-4BD6-ADAD-CB530F8E1DD2}.DebugWithReal|Any CPU.Build.0 = Debug|Any CPU
 		{528F0326-586A-4BD6-ADAD-CB530F8E1DD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{528F0326-586A-4BD6-ADAD-CB530F8E1DD2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{528F0326-586A-4BD6-ADAD-CB530F8E1DD2}.TestsWithFake|Any CPU.ActiveCfg = Debug|Any CPU
-		{528F0326-586A-4BD6-ADAD-CB530F8E1DD2}.TestsWithFake|Any CPU.Build.0 = Debug|Any CPU
+		{528F0326-586A-4BD6-ADAD-CB530F8E1DD2}.TestsWithFake|Any CPU.ActiveCfg = TestsWithFake|Any CPU
+		{528F0326-586A-4BD6-ADAD-CB530F8E1DD2}.TestsWithFake|Any CPU.Build.0 = TestsWithFake|Any CPU
 		{528F0326-586A-4BD6-ADAD-CB530F8E1DD2}.TestsWithReal|Any CPU.ActiveCfg = Release|Any CPU
 		{528F0326-586A-4BD6-ADAD-CB530F8E1DD2}.TestsWithReal|Any CPU.Build.0 = Release|Any CPU
+		{A3B306E2-2A20-4591-812D-677DD44E6640}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3B306E2-2A20-4591-812D-677DD44E6640}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3B306E2-2A20-4591-812D-677DD44E6640}.DebugWithFake|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3B306E2-2A20-4591-812D-677DD44E6640}.DebugWithFake|Any CPU.Build.0 = Debug|Any CPU
+		{A3B306E2-2A20-4591-812D-677DD44E6640}.DebugWithReal|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3B306E2-2A20-4591-812D-677DD44E6640}.DebugWithReal|Any CPU.Build.0 = Debug|Any CPU
+		{A3B306E2-2A20-4591-812D-677DD44E6640}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3B306E2-2A20-4591-812D-677DD44E6640}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3B306E2-2A20-4591-812D-677DD44E6640}.TestsWithFake|Any CPU.ActiveCfg = TestsWithFake|Any CPU
+		{A3B306E2-2A20-4591-812D-677DD44E6640}.TestsWithFake|Any CPU.Build.0 = TestsWithFake|Any CPU
+		{A3B306E2-2A20-4591-812D-677DD44E6640}.TestsWithReal|Any CPU.ActiveCfg = Release|Any CPU
+		{A3B306E2-2A20-4591-812D-677DD44E6640}.TestsWithReal|Any CPU.Build.0 = Release|Any CPU
+		{9B6E4171-3936-4C3E-8A29-F5A56761DF78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B6E4171-3936-4C3E-8A29-F5A56761DF78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B6E4171-3936-4C3E-8A29-F5A56761DF78}.DebugWithFake|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B6E4171-3936-4C3E-8A29-F5A56761DF78}.DebugWithFake|Any CPU.Build.0 = Debug|Any CPU
+		{9B6E4171-3936-4C3E-8A29-F5A56761DF78}.DebugWithReal|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B6E4171-3936-4C3E-8A29-F5A56761DF78}.DebugWithReal|Any CPU.Build.0 = Debug|Any CPU
+		{9B6E4171-3936-4C3E-8A29-F5A56761DF78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B6E4171-3936-4C3E-8A29-F5A56761DF78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B6E4171-3936-4C3E-8A29-F5A56761DF78}.TestsWithFake|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B6E4171-3936-4C3E-8A29-F5A56761DF78}.TestsWithReal|Any CPU.ActiveCfg = Release|Any CPU
+		{9B6E4171-3936-4C3E-8A29-F5A56761DF78}.TestsWithReal|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -372,5 +399,7 @@ Global
 		{5B2A4689-2F21-48EC-9058-F89511CEACA3} = {48C09290-0E5A-49BE-87BC-D0C67A8D05EE}
 		{1DB4C693-200D-46DC-AF84-3C0AD40392B5} = {901D5FC5-7C6D-4200-B66B-440486E0BE5F}
 		{528F0326-586A-4BD6-ADAD-CB530F8E1DD2} = {5CBC5578-3B16-47AA-8176-C33356E8B019}
+		{A3B306E2-2A20-4591-812D-677DD44E6640} = {185AF0A9-9D92-4E5D-A331-CAC92C535A94}
+		{9B6E4171-3936-4C3E-8A29-F5A56761DF78} = {185AF0A9-9D92-4E5D-A331-CAC92C535A94}
 	EndGlobalSection
 EndGlobal
