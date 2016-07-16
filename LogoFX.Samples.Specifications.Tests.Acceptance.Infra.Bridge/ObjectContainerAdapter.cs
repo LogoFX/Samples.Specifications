@@ -6,7 +6,7 @@ using Solid.Practices.IoC;
 
 namespace LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Bridge
 {
-    class ObjectContainerAdapter : IIocContainer, IIocContainerAdapter<IObjectContainer>
+    public class ObjectContainerAdapter : IIocContainer, IIocContainerAdapter<IObjectContainer>
     {
         private readonly IObjectContainer _objectContainer;
 

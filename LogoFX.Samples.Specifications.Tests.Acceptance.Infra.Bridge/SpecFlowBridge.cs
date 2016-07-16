@@ -1,5 +1,4 @@
 ﻿using BoDi;
-using LogoFX.Bootstrapping;
 using LogoFX.Client.Testing.EndToEnd.SpecFlow;
 using TechTalk.SpecFlow;
 
@@ -15,9 +14,9 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Bridge
         public SpecFlowBridge(IObjectContainer objectContainer)
         {
             var containerAdapter = new ObjectContainerAdapter(objectContainer);
-            var bootstrapper = new Bootstrapper(containerAdapter);            
-            bootstrapper.Initialize();
-            containerAdapter.RegisterContainerAdapterCompositionModules(bootstrapper.Modules);           
+            var bootstrapper = new Bootstrapper<ObjectContainerAdapter>(containerAdapter);
+            bootstrapper.Use(new RegisterCompositionModulesMiddleware<ObjectContainerAdapter>());           
+            bootstrapper.Initialize();            
         }                       
     }
 }
