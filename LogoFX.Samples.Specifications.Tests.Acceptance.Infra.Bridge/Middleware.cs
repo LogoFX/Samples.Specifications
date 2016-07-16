@@ -1,18 +1,19 @@
 ﻿using LogoFX.Bootstrapping;
-using Solid.Practices.IoC;
+using Solid.Bootstrapping;
+using Solid.Practices.Composition.Contracts;
 using Solid.Practices.Middleware;
 
 namespace LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Bridge
 {
-    public class RegisterCompositionModulesMiddleware<TIocContainer> : IMiddleware<Bootstrapper<TIocContainer>> 
-        where TIocContainer : class, IIocContainerRegistrator
+    public class RegisterCompositionModulesMiddleware<TBootstrapper> : IMiddleware<TBootstrapper> 
+        where TBootstrapper : class, ICompositionModulesProvider, IHaveContainerRegistrator
     {
         /// <summary>Applies the middleware on the specified object.</summary>
         /// <param name="object">The object.</param>
         /// <returns></returns>
-        public Bootstrapper<TIocContainer> Apply(Bootstrapper<TIocContainer> @object)
+        public TBootstrapper Apply(TBootstrapper @object)
         {
-            @object.Container.RegisterContainerCompositionModules(@object.Modules);
+            @object.Registrator.RegisterContainerCompositionModules(@object.Modules);
             return @object;
         }
     }

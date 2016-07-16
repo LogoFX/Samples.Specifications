@@ -10,20 +10,19 @@ using Solid.Practices.Modularity;
 
 namespace LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Bridge
 {
-    public class Bootstrapper<TIocContainer> : IInitializable, IExtensible<Bootstrapper<TIocContainer>>,         
+    public class Bootstrapper : IInitializable, 
+        IExtensible<Bootstrapper>,         
         ICompositionModulesProvider,
-        IHaveContainerRegistrator, IHaveContainer<TIocContainer>
-        where TIocContainer : IIocContainerRegistrator
+        IHaveContainerRegistrator        
     {
         private readonly
-            List<IMiddleware<Bootstrapper<TIocContainer>>>
+            List<IMiddleware<Bootstrapper>>
             _middlewares =
-                new List<IMiddleware<Bootstrapper<TIocContainer>>>();
+                new List<IMiddleware<Bootstrapper>>();
 
-        public Bootstrapper(TIocContainer registrator)
+        public Bootstrapper(IIocContainerRegistrator registrator)
         {
-            Registrator = registrator;
-            Container = registrator;
+            Registrator = registrator;         
             PlatformProvider.Current = new NetPlatformProvider();
         }
 
@@ -49,8 +48,8 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Bridge
         /// </summary>
         /// <param name="middleware">The middleware.</param>
         /// <returns></returns>
-        public Bootstrapper<TIocContainer> Use(
-            IMiddleware<Bootstrapper<TIocContainer>> middleware)
+        public Bootstrapper Use(
+            IMiddleware<Bootstrapper> middleware)
         {
             _middlewares.Add(middleware);
             return this;
@@ -60,8 +59,6 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Bridge
         {
             InitializeCompositionModules();
             MiddlewareApplier.ApplyMiddlewares(this, _middlewares);
-        }
-
-        public TIocContainer Container { get; }
+        }        
     }
 }

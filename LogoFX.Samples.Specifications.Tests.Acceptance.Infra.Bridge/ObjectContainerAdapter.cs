@@ -17,12 +17,12 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Bridge
 
         public void RegisterTransient<TService, TImplementation>() where TImplementation : class, TService
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public void RegisterTransient<TService>() where TService : class
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public void RegisterSingleton<TService, TImplementation>() where TImplementation : class, TService
@@ -42,7 +42,7 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Bridge
 
         public void RegisterCollection<TService>(IEnumerable<TService> dependencies) where TService : class
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public void RegisterCollection(Type dependencyType, IEnumerable<Type> dependencyTypes)
@@ -52,27 +52,27 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Bridge
 
         public void RegisterCollection(Type dependencyType, IEnumerable<object> dependencies)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public void RegisterCollection(Type dependencyType, IEnumerable dependencyTypes)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public void RegisterCollection<TService>(IEnumerable dependencyTypes) where TService : class
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public void RegisterHandler<TService>(Func<object> handler) where TService : class
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public void RegisterHandler(Type dependencyType, Func<object> handler)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public void RegisterHandler<TService>(Func<TService> handler) where TService : class
@@ -87,12 +87,12 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Bridge
 
         public void RegisterSingleton(Type serviceType, Type implementationType)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public void RegisterTransient(Type serviceType, Type implementationType)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public TService Resolve<TService>() where TService : class

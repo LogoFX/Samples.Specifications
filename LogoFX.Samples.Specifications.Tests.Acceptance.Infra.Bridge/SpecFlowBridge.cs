@@ -14,8 +14,8 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Bridge
         public SpecFlowBridge(IObjectContainer objectContainer)
         {
             var containerAdapter = new ObjectContainerAdapter(objectContainer);
-            var bootstrapper = new Bootstrapper<ObjectContainerAdapter>(containerAdapter);
-            bootstrapper.Use(new RegisterCompositionModulesMiddleware<ObjectContainerAdapter>());           
+            var bootstrapper = new Bootstrapper(containerAdapter);
+            bootstrapper.Use(new RegisterCompositionModulesMiddleware<Bootstrapper>());           
             bootstrapper.Initialize();            
         }                       
     }
