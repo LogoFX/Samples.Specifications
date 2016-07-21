@@ -3,7 +3,7 @@ using Solid.Bootstrapping;
 using Solid.Practices.Composition.Contracts;
 using Solid.Practices.Middleware;
 
-namespace LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Bridge
+namespace Samples.Specifications.Tests.Acceptance.Infra.Launcher
 {
     public class RegisterCompositionModulesMiddleware<TBootstrapper> : IMiddleware<TBootstrapper> 
         where TBootstrapper : class, ICompositionModulesProvider, IHaveContainerRegistrator

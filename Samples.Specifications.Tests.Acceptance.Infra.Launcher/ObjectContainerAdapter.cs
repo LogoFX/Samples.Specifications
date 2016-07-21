@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using BoDi;
 using Solid.Practices.IoC;
 
-namespace LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Bridge
+namespace Samples.Specifications.Tests.Acceptance.Infra.Launcher
 {
     /// <summary>
     /// Represents a container adapter for <see cref="IObjectContainer"/>

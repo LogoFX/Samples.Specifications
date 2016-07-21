@@ -8,7 +8,7 @@ using Solid.Practices.IoC;
 using Solid.Practices.Middleware;
 using Solid.Practices.Modularity;
 
-namespace LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Bridge
+namespace Samples.Specifications.Tests.Acceptance.Infra.Launcher
 {
     public class Bootstrapper : IInitializable, 
         IExtensible<Bootstrapper>,         
