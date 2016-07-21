@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Linq;
 using FluentAssertions;
-using LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.Contracts;
 using LogoFX.Samples.Specifications.Tests.Acceptance.TestData;
+using Samples.Specifications.Tests.Acceptance.Contracts;
 
 namespace LogoFX.Samples.Specifications.Tests.Acceptance.Steps
 {

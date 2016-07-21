@@ -1,7 +1,7 @@
 using System;
 using System.Threading;
 
-namespace LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.EndToEnd
+namespace Samples.Specifications.Tests.Acceptance.EndToEnd
 {
     class RetryHelper
     {

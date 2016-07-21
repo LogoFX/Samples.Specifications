@@ -3,7 +3,7 @@ using System.Linq;
 using TestStack.White;
 using TestStack.White.UIItems.WindowItems;
 
-namespace LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.EndToEnd
+namespace Samples.Specifications.Tests.Acceptance.EndToEnd
 {
     public static class ApplicationExtensions
     {

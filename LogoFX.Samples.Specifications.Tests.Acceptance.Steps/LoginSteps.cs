@@ -1,4 +1,4 @@
-﻿using LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.Contracts;
+﻿using Samples.Specifications.Tests.Acceptance.Contracts.ScreenObjects;
 
 namespace LogoFX.Samples.Specifications.Tests.Acceptance.Steps
 {

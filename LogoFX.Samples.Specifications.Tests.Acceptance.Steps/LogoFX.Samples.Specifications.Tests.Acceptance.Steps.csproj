@@ -69,10 +69,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.Contracts\LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.Contracts.csproj">
-      <Project>{E08E7AE2-C849-47AD-99F2-B8A05307B06A}</Project>
-      <Name>LogoFX.Samples.Specifications.Tests.Acceptance.ScreenObjects.Contracts</Name>
-    </ProjectReference>
     <ProjectReference Include="..\LogoFX.Samples.Specifications.Tests.Acceptance.TestData\LogoFX.Samples.Specifications.Tests.Acceptance.TestData.csproj">
       <Project>{27BBAC7D-16A9-44AD-B35E-42F73D0CE4F5}</Project>
       <Name>LogoFX.Samples.Specifications.Tests.Acceptance.TestData</Name>
@@ -88,6 +84,10 @@
     <ProjectReference Include="..\Samples.Specifications.Client.Data.Fake.ProviderBuilders\Samples.Specifications.Client.Data.Fake.ProviderBuilders.csproj">
       <Project>{AF68283B-5283-4DEF-8DA0-6FB6CA85C1BD}</Project>
       <Name>Samples.Specifications.Client.Data.Fake.ProviderBuilders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samples.Specifications.Tests.Acceptance.Contracts\Samples.Specifications.Tests.Acceptance.Contracts.csproj">
+      <Project>{E08E7AE2-C849-47AD-99F2-B8A05307B06A}</Project>
+      <Name>Samples.Specifications.Tests.Acceptance.Contracts</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
