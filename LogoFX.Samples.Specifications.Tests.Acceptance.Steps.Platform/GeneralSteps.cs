@@ -16,7 +16,7 @@ namespace LogoFX.Samples.Specifications.Tests.Acceptance.Steps
         {
             var testDirectory = Directory.GetCurrentDirectory();            
             var applicationDirectory = Directory.GetParent(testDirectory).FullName;
-            var applicationPath = Path.Combine(applicationDirectory, "LogoFX.Samples.Specifications.Client.Launcher.exe");
+            var applicationPath = Path.Combine(applicationDirectory, "Samples.Specifications.Client.Launcher.exe");
             Directory.SetCurrentDirectory(applicationDirectory);
             _startApplicationService.StartApplication(applicationPath);            
             Directory.SetCurrentDirectory(testDirectory);
