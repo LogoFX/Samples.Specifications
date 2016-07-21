@@ -5,7 +5,7 @@ using Samples.Specifications.Client.Data.Fake.ProviderBuilders;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
 
-namespace LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Fake
+namespace Samples.Specifications.Tests.Acceptance.Infra.Fake
 {
     class Module : ICompositionModule<IIocContainerRegistrator>
     {

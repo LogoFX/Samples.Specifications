@@ -3,7 +3,7 @@ using LogoFX.Client.Testing.EndToEnd.White;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
 
-namespace LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Real
+namespace Samples.Specifications.Tests.Acceptance.Infra.Real
 {
     class Module : ICompositionModule<IIocContainerRegistrator>
     {

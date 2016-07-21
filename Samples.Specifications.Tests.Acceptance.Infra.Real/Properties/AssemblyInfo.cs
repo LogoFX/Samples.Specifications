@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Real")]
+[assembly: AssemblyTitle("Samples.Specifications.Tests.Acceptance.Infra.Real")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Real")]
+[assembly: AssemblyProduct("Samples.Specifications.Tests.Acceptance.Infra.Real")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

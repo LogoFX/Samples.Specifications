@@ -7,8 +7,8 @@
     <ProjectGuid>{9B6E4171-3936-4C3E-8A29-F5A56761DF78}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Real</RootNamespace>
-    <AssemblyName>LogoFX.Samples.Specifications.Tests.Acceptance.Infra.Real</AssemblyName>
+    <RootNamespace>Samples.Specifications.Tests.Acceptance.Infra.Real</RootNamespace>
+    <AssemblyName>Samples.Specifications.Tests.Acceptance.Infra.Real</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
