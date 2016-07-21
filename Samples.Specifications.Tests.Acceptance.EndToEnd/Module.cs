@@ -1,5 +1,4 @@
-﻿using Samples.Specifications.Tests.Acceptance.Contracts;
-using Samples.Specifications.Tests.Acceptance.Contracts.ScreenObjects;
+﻿using Samples.Specifications.Tests.Acceptance.Contracts.ScreenObjects;
 using Samples.Specifications.Tests.Acceptance.EndToEnd.ScreenObjects;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;

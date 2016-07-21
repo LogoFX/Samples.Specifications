@@ -136,9 +136,9 @@
       <Project>{E08E7AE2-C849-47AD-99F2-B8A05307B06A}</Project>
       <Name>Samples.Specifications.Tests.Acceptance.Contracts</Name>
     </ProjectReference>
-    <ProjectReference Include="..\LogoFX.Samples.Specifications.Tests.Acceptance.TestData\LogoFX.Samples.Specifications.Tests.Acceptance.TestData.csproj">
+    <ProjectReference Include="..\Samples.Specifications.Tests.Acceptance.TestData\Samples.Specifications.Tests.Acceptance.TestData.csproj">
       <Project>{27BBAC7D-16A9-44AD-B35E-42F73D0CE4F5}</Project>
-      <Name>LogoFX.Samples.Specifications.Tests.Acceptance.TestData</Name>
+      <Name>Samples.Specifications.Tests.Acceptance.TestData</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

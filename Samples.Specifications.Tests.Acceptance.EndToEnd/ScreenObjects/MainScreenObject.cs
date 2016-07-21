@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using LogoFX.Samples.Specifications.Tests.Acceptance.TestData;
-using Samples.Specifications.Tests.Acceptance.Contracts;
+using Samples.Specifications.Tests.Acceptance.Contracts.ScreenObjects;
+using Samples.Specifications.Tests.Acceptance.TestData;
 using TestStack.White.InputDevices;
 using TestStack.White.UIItems;
 using TestStack.White.UIItems.Finders;

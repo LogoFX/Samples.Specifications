@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using LogoFX.Samples.Specifications.Tests.Acceptance.TestData;
+using Samples.Specifications.Tests.Acceptance.TestData;
 
-namespace Samples.Specifications.Tests.Acceptance.Contracts
+namespace Samples.Specifications.Tests.Acceptance.Contracts.ScreenObjects
 {
     public interface IMainScreenObject
     {
