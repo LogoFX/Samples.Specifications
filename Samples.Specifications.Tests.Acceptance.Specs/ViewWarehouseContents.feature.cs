@@ -17,18 +17,20 @@ namespace Samples.Specifications.Tests.Acceptance.Specs
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("ViewWarehouseContents")]
-    public partial class ViewWarehouseContentsFeature
+    public partial class ViewWarehouseContentsFeature : Xunit.IClassFixture<ViewWarehouseContentsFeature.FixtureData>, System.IDisposable
     {
         
-        private TechTalk.SpecFlow.ITestRunner testRunner;
+        private static TechTalk.SpecFlow.ITestRunner testRunner;
         
 #line 1 "ViewWarehouseContents.feature"
 #line hidden
         
-        [NUnit.Framework.TestFixtureSetUpAttribute()]
-        public virtual void FeatureSetup()
+        public ViewWarehouseContentsFeature()
+        {
+            this.TestInitialize();
+        }
+        
+        public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "ViewWarehouseContents", "\tIn order to view and manage warehouse contents\r\n\tAs an entitled user\r\n\tI want to" +
@@ -36,19 +38,16 @@ namespace Samples.Specifications.Tests.Acceptance.Specs
             testRunner.OnFeatureStart(featureInfo);
         }
         
-        [NUnit.Framework.TestFixtureTearDownAttribute()]
-        public virtual void FeatureTearDown()
+        public static void FeatureTearDown()
         {
             testRunner.OnFeatureEnd();
             testRunner = null;
         }
         
-        [NUnit.Framework.SetUpAttribute()]
         public virtual void TestInitialize()
         {
         }
         
-        [NUnit.Framework.TearDownAttribute()]
         public virtual void ScenarioTearDown()
         {
             testRunner.OnScenarioEnd();
@@ -64,9 +63,19 @@ namespace Samples.Specifications.Tests.Acceptance.Specs
             testRunner.CollectScenarioErrors();
         }
         
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Display warehouse items")]
-        [NUnit.Framework.CategoryAttribute("Sanity")]
+        public virtual void SetFixture(ViewWarehouseContentsFeature.FixtureData fixtureData)
+        {
+        }
+        
+        void System.IDisposable.Dispose()
+        {
+            this.ScenarioTearDown();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Display warehouse items")]
+        [Xunit.TraitAttribute("FeatureTitle", "ViewWarehouseContents")]
+        [Xunit.TraitAttribute("Description", "Display warehouse items")]
+        [Xunit.TraitAttribute("Category", "Sanity")]
         public virtual void DisplayWarehouseItems()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display warehouse items", new string[] {
@@ -129,8 +138,9 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Edit item price")]
+        [Xunit.FactAttribute(DisplayName="Edit item price")]
+        [Xunit.TraitAttribute("FeatureTitle", "ViewWarehouseContents")]
+        [Xunit.TraitAttribute("Description", "Edit item price")]
         public virtual void EditItemPrice()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit item price", ((string[])(null)));
@@ -167,6 +177,22 @@ this.ScenarioSetup(scenarioInfo);
  testRunner.Then("Total cost of \"TV\" item is 17500", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
+        }
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
+        [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        public class FixtureData : System.IDisposable
+        {
+            
+            public FixtureData()
+            {
+                ViewWarehouseContentsFeature.FeatureSetup();
+            }
+            
+            void System.IDisposable.Dispose()
+            {
+                ViewWarehouseContentsFeature.FeatureTearDown();
+            }
         }
     }
 }
