@@ -1,4 +1,5 @@
 ﻿using BoDi;
+using LogoFX.Bootstrapping;
 using LogoFX.Client.Testing.EndToEnd.SpecFlow;
 using TechTalk.SpecFlow;
 
