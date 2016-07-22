@@ -58,7 +58,7 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TestsWithFake|AnyCPU'">
-    <OutputPath>..\Bin\TestsWithFake\</OutputPath>
+    <OutputPath>..\Bin\TestsWithFake\Infra\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
