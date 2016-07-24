@@ -63,5 +63,11 @@ namespace Samples.Specifications.Tests.Acceptance.EndToEnd.ScreenObjects
                 throw new InvalidOperationException($"Column {fieldName} cannot be found");
             }                        
         }
+
+        public bool IsActive()
+        {
+            //for nows
+            return true;
+        }
     }
 }

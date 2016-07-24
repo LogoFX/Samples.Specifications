@@ -8,5 +8,6 @@ namespace Samples.Specifications.Tests.Acceptance.Contracts.ScreenObjects
         IEnumerable<WarehouseItemAssertionTestData> GetWarehouseItems();
         WarehouseItemAssertionTestData GetWarehouseItemByKind(string kind);
         void EditWarehouseItem(string kind, string fieldName, string fieldValue);
+        bool IsActive();
     }
 }

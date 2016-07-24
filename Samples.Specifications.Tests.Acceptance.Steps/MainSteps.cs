@@ -39,5 +39,11 @@ namespace Samples.Specifications.Tests.Acceptance.Steps
             var actualWarehouseItem = _mainScreenObject.GetWarehouseItemByKind(kind);
             actualWarehouseItem.TotalCost.Should().Be(expectedTotalCost);
         }
+
+        public void ThenApplicationNavigatesToTheMainScreen()
+        {
+            var isActive = _mainScreenObject.IsActive();
+            isActive.Should().BeTrue();
+        }
     }
 }
