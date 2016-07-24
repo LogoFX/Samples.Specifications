@@ -59,6 +59,7 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="GeneralSteps.cs" />
     <Compile Include="GivenLoginSteps.cs" />
     <Compile Include="GivenMainSteps.cs" />
     <Compile Include="LoginSteps.cs" />

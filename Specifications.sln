@@ -73,8 +73,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Tests.Acceptance.Steps.Adapters", "Samples.Specifications.Tests.Acceptance.Steps.Adapters\Samples.Specifications.Tests.Acceptance.Steps.Adapters.csproj", "{CBE2F355-1F23-4A58-A6AE-BA7BE542F76C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Tests.Acceptance.Steps.Platform", "Samples.Specifications.Tests.Acceptance.Steps.Platform\Samples.Specifications.Tests.Acceptance.Steps.Platform.csproj", "{528F0326-586A-4BD6-ADAD-CB530F8E1DD2}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Tests.Acceptance.TestData", "Samples.Specifications.Tests.Acceptance.TestData\Samples.Specifications.Tests.Acceptance.TestData.csproj", "{27BBAC7D-16A9-44AD-B35E-42F73D0CE4F5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Tests.Acceptance.Specs", "Samples.Specifications.Tests.Acceptance.Specs\Samples.Specifications.Tests.Acceptance.Specs.csproj", "{DA41EB1E-ECAF-400B-A1A4-82EBACDD7600}"
@@ -339,18 +337,6 @@ Global
 		{CBE2F355-1F23-4A58-A6AE-BA7BE542F76C}.TestsWithFake|Any CPU.Build.0 = TestsWithFake|Any CPU
 		{CBE2F355-1F23-4A58-A6AE-BA7BE542F76C}.TestsWithReal|Any CPU.ActiveCfg = TestsWithReal|Any CPU
 		{CBE2F355-1F23-4A58-A6AE-BA7BE542F76C}.TestsWithReal|Any CPU.Build.0 = TestsWithReal|Any CPU
-		{528F0326-586A-4BD6-ADAD-CB530F8E1DD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{528F0326-586A-4BD6-ADAD-CB530F8E1DD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{528F0326-586A-4BD6-ADAD-CB530F8E1DD2}.DebugWithFake|Any CPU.ActiveCfg = Debug|Any CPU
-		{528F0326-586A-4BD6-ADAD-CB530F8E1DD2}.DebugWithFake|Any CPU.Build.0 = Debug|Any CPU
-		{528F0326-586A-4BD6-ADAD-CB530F8E1DD2}.DebugWithReal|Any CPU.ActiveCfg = Debug|Any CPU
-		{528F0326-586A-4BD6-ADAD-CB530F8E1DD2}.DebugWithReal|Any CPU.Build.0 = Debug|Any CPU
-		{528F0326-586A-4BD6-ADAD-CB530F8E1DD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{528F0326-586A-4BD6-ADAD-CB530F8E1DD2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{528F0326-586A-4BD6-ADAD-CB530F8E1DD2}.TestsWithFake|Any CPU.ActiveCfg = TestsWithFake|Any CPU
-		{528F0326-586A-4BD6-ADAD-CB530F8E1DD2}.TestsWithFake|Any CPU.Build.0 = TestsWithFake|Any CPU
-		{528F0326-586A-4BD6-ADAD-CB530F8E1DD2}.TestsWithReal|Any CPU.ActiveCfg = TestsWithFake|Any CPU
-		{528F0326-586A-4BD6-ADAD-CB530F8E1DD2}.TestsWithReal|Any CPU.Build.0 = TestsWithFake|Any CPU
 		{27BBAC7D-16A9-44AD-B35E-42F73D0CE4F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{27BBAC7D-16A9-44AD-B35E-42F73D0CE4F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27BBAC7D-16A9-44AD-B35E-42F73D0CE4F5}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
@@ -413,7 +399,6 @@ Global
 		{DE6BB2E9-4303-426B-AE23-D58DD6C78339} = {835945EF-48E0-4F18-8BDC-F6B63DF01961}
 		{DE972164-E8D0-4601-B3BE-B36AD22D7581} = {5CBC5578-3B16-47AA-8176-C33356E8B019}
 		{CBE2F355-1F23-4A58-A6AE-BA7BE542F76C} = {5CBC5578-3B16-47AA-8176-C33356E8B019}
-		{528F0326-586A-4BD6-ADAD-CB530F8E1DD2} = {5CBC5578-3B16-47AA-8176-C33356E8B019}
 		{27BBAC7D-16A9-44AD-B35E-42F73D0CE4F5} = {ABE4DD8C-AFB7-4C65-96EA-33D4B8A28E3F}
 		{DA41EB1E-ECAF-400B-A1A4-82EBACDD7600} = {26C907FD-58BC-4A70-8DCC-6CAF085D6125}
 	EndGlobalSection

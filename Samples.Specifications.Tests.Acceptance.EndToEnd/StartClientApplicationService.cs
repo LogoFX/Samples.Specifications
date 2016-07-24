@@ -1,24 +1,25 @@
 ﻿using System.IO;
 using LogoFX.Client.Testing.Contracts;
+using Samples.Specifications.Tests.Acceptance.Contracts;
 
-namespace Samples.Specifications.Tests.Acceptance.Steps
+namespace Samples.Specifications.Tests.Acceptance.EndToEnd
 {
-    public class GeneralSteps
+    class StartClientApplicationService : IStartClientApplicationService
     {
         private readonly IStartApplicationService _startApplicationService;
 
-        public GeneralSteps(IStartApplicationService startApplicationService)
+        public StartClientApplicationService(IStartApplicationService startApplicationService)
         {
             _startApplicationService = startApplicationService;
         }
 
-        public void WhenIOpenTheApplication()
+        public void StartApplication()
         {
-            var testDirectory = Directory.GetCurrentDirectory();            
+            var testDirectory = Directory.GetCurrentDirectory();
             var applicationDirectory = Directory.GetParent(testDirectory).FullName;
             var applicationPath = Path.Combine(applicationDirectory, "Samples.Specifications.Client.Launcher.exe");
             Directory.SetCurrentDirectory(applicationDirectory);
-            _startApplicationService.StartApplication(applicationPath);            
+            _startApplicationService.StartApplication(applicationPath);
             Directory.SetCurrentDirectory(testDirectory);
         }
     }
