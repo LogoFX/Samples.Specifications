@@ -56,8 +56,10 @@ namespace Samples.Specifications.Client.Tests.Integration.ScreenObjects
             var itemViewModel =
                 main.WarehouseItems.WarehouseItems
                     .OfType<WarehouseItemViewModel>().Single(t => t.Model.Kind == kind);
-            //for now
-            itemViewModel.Model.Price = double.Parse(fieldValue);
+            if (fieldName == "Price")
+            {
+                itemViewModel.Model.Price = double.Parse(fieldValue);
+            }            
         }
     }
 }
