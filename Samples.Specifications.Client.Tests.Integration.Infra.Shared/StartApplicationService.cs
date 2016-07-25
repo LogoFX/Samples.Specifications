@@ -11,15 +11,18 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra.Shared
     {
         public StructureHelper StructureHelper { get; set; }
         private readonly IBuilderRegistrationService _builderRegistrationService;
+        private readonly LoginProviderBuilder _loginProviderBuilder;
         private readonly WarehouseProviderBuilder _warehouseProviderBuilder;
 
         public StartApplicationService(
             IBuilderRegistrationService builderRegistrationService, 
+            LoginProviderBuilder loginProviderBuilder,
             WarehouseProviderBuilder warehouseProviderBuilder,
             StructureHelper structureHelper)
         {
             StructureHelper = structureHelper;
             _builderRegistrationService = builderRegistrationService;
+            _loginProviderBuilder = loginProviderBuilder;
             _warehouseProviderBuilder = warehouseProviderBuilder;
         }
 
@@ -27,6 +30,7 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra.Shared
         protected override void RegisterFakes()
         {
             base.RegisterFakes();
+            _builderRegistrationService.RegisterBuilder(_loginProviderBuilder);
             _builderRegistrationService.RegisterBuilder(_warehouseProviderBuilder);            
         }
 

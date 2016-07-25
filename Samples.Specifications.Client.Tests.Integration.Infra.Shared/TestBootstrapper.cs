@@ -1,5 +1,7 @@
 ﻿using LogoFX.Client.Bootstrapping;
 using LogoFX.Client.Bootstrapping.Adapters.Unity;
+using LogoFX.Client.Mvvm.ViewModel.Services;
+using LogoFX.Client.Mvvm.ViewModelFactory.Unity;
 using Samples.Specifications.Client.Presentation.Shell.ViewModels;
 
 namespace Samples.Specifications.Client.Tests.Integration.Infra.Shared
@@ -14,14 +16,16 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra.Shared
                 ReuseCompositionInformation = true
             })
         {
-            
+            this.UseResolver()                
+                .UseViewModelCreatorService()
+                .UseViewModelFactory();
         }
 
         public override string[] Prefixes
         {
             get
             {
-                return new[] { "Samples.Universal.Client.Presentation", "Samples.Client.Model", "Samples.Client.Data", "Samples.Universal.Client.Tests", "Samples.Client.Tests" };
+                return new[] { "Samples.Specifications.Client.Presentation", "Samples.Client.Model", "Samples.Specifications.Client.Data", "Samples.Specifications.Client.Tests", "Samples.Client.Tests" };
             }
         }
     }
