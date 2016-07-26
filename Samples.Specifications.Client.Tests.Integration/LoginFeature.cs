@@ -2,7 +2,7 @@
 using Samples.Specifications.Tests.Steps;
 using Xunit;
 
-namespace Samples.Specifications.Client.Tests
+namespace Samples.Specifications.Client.Tests.Integration
 {
     public class LoginFeature : IntegrationTestsBaseWithActivation
     {

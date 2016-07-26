@@ -5,7 +5,7 @@ namespace Samples.Specifications.Client.Tests.Integration.Domain.ScreenObjects
 {
     public class LoginScreenObject : ILoginScreenObject
     {
-        public StructureHelper StructureHelper { get; set; }
+        public StructureHelper StructureHelper { get; }
 
         public LoginScreenObject(StructureHelper structureHelper)
         {

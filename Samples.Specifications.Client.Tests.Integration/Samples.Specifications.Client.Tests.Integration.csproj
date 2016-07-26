@@ -8,8 +8,8 @@
     <ProjectGuid>{486997E8-2FA4-4203-96BD-8699BE71403B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Samples.Specifications.Client.Tests</RootNamespace>
-    <AssemblyName>Samples.Specifications.Client.Tests</AssemblyName>
+    <RootNamespace>Samples.Specifications.Client.Tests.Integration</RootNamespace>
+    <AssemblyName>Samples.Specifications.Client.Tests.Integration</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>

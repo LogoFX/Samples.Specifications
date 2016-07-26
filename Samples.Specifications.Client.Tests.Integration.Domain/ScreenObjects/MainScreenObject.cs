@@ -9,7 +9,7 @@ namespace Samples.Specifications.Client.Tests.Integration.Domain.ScreenObjects
 {
     public class MainScreenObject : IMainScreenObject
     {
-        public StructureHelper StructureHelper { get; set; }
+        public StructureHelper StructureHelper { get; }
 
         public MainScreenObject(StructureHelper structureHelper)
         {
