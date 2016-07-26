@@ -7,8 +7,8 @@
     <ProjectGuid>{DE972164-E8D0-4601-B3BE-B36AD22D7581}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Samples.Specifications.Tests.Acceptance.Steps</RootNamespace>
-    <AssemblyName>Samples.Specifications.Tests.Acceptance.Steps</AssemblyName>
+    <RootNamespace>Samples.Specifications.Tests.Steps</RootNamespace>
+    <AssemblyName>Samples.Specifications.Tests.Steps</AssemblyName>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>

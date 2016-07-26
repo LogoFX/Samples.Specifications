@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using Samples.Specifications.Tests.Data;
+using Samples.Specifications.Tests.Steps;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
 

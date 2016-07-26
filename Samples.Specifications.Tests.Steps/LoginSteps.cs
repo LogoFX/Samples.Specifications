@@ -1,6 +1,6 @@
 ﻿using Samples.Specifications.Tests.Domain.ScreenObjects;
 
-namespace Samples.Specifications.Tests.Acceptance.Steps
+namespace Samples.Specifications.Tests.Steps
 {
     public class LoginSteps
     {

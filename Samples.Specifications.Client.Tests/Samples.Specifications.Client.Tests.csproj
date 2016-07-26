@@ -138,9 +138,9 @@
       <Project>{CBF93BCE-066F-4A39-A4D2-408524F49490}</Project>
       <Name>Samples.Specifications.Client.Tests.Integration.Infra</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Samples.Specifications.Tests.Acceptance.Steps\Samples.Specifications.Tests.Acceptance.Steps.csproj">
+    <ProjectReference Include="..\Samples.Specifications.Tests.Steps\Samples.Specifications.Tests.Steps.csproj">
       <Project>{DE972164-E8D0-4601-B3BE-B36AD22D7581}</Project>
-      <Name>Samples.Specifications.Tests.Acceptance.Steps</Name>
+      <Name>Samples.Specifications.Tests.Steps</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,5 @@
-﻿using TechTalk.SpecFlow;
+﻿using Samples.Specifications.Tests.Steps;
+using TechTalk.SpecFlow;
 
 namespace Samples.Specifications.Tests.Acceptance.Steps.Adapters
 {

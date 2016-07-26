@@ -1,6 +1,6 @@
 ﻿using Samples.Specifications.Tests.Domain;
 
-namespace Samples.Specifications.Tests.Acceptance.Steps
+namespace Samples.Specifications.Tests.Steps
 {
     public class GeneralSteps
     {

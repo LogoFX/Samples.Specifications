@@ -6,7 +6,7 @@ using Samples.Specifications.Client.Data.Fake.ProviderBuilders;
 #if REAL
 #endif
 
-namespace Samples.Specifications.Tests.Acceptance.Steps
+namespace Samples.Specifications.Tests.Steps
 {
     public class GivenLoginSteps
     {

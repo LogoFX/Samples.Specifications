@@ -1,4 +1,5 @@
 ﻿using Samples.Client.Data.Contracts.Dto;
+using Samples.Specifications.Tests.Steps;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
 

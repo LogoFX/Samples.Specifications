@@ -1,5 +1,5 @@
 ﻿using Samples.Specifications.Client.Tests.Integration.Infra;
-using Samples.Specifications.Tests.Acceptance.Steps;
+using Samples.Specifications.Tests.Steps;
 using Xunit;
 
 namespace Samples.Specifications.Client.Tests
@@ -17,7 +17,7 @@ namespace Samples.Specifications.Client.Tests
         }
 
         [Fact]
-        public void NavigateToTheMainScreenWheTheLoginIsSuccessful()
+        public void NavigateToTheMainScreenWhenTheLoginIsSuccessful()
         {
             var GivenLoginSteps = Resolver.Resolve<GivenLoginSteps>();
             var userName = "Admin";

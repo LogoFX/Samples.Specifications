@@ -91,13 +91,13 @@
       <Project>{8A567338-89FB-49AA-80FE-B47AE861D6A7}</Project>
       <Name>Samples.Client.Data.Contracts.Dto</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Samples.Specifications.Tests.Acceptance.Steps\Samples.Specifications.Tests.Acceptance.Steps.csproj">
-      <Project>{DE972164-E8D0-4601-B3BE-B36AD22D7581}</Project>
-      <Name>Samples.Specifications.Tests.Acceptance.Steps</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Tests.Data\Samples.Specifications.Tests.Data.csproj">
       <Project>{27BBAC7D-16A9-44AD-B35E-42F73D0CE4F5}</Project>
       <Name>Samples.Specifications.Tests.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samples.Specifications.Tests.Steps\Samples.Specifications.Tests.Steps.csproj">
+      <Project>{DE972164-E8D0-4601-B3BE-B36AD22D7581}</Project>
+      <Name>Samples.Specifications.Tests.Steps</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
