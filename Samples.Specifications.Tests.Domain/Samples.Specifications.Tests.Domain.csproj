@@ -4,14 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CBE2F355-1F23-4A58-A6AE-BA7BE542F76C}</ProjectGuid>
+    <ProjectGuid>{E08E7AE2-C849-47AD-99F2-B8A05307B06A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Samples.Specifications.Tests.Acceptance.Steps.Adapters</RootNamespace>
-    <AssemblyName>Samples.Specifications.Tests.Acceptance.Steps.Adapters</AssemblyName>
+    <RootNamespace>Samples.Specifications.Tests.Domain</RootNamespace>
+    <AssemblyName>Samples.Specifications.Tests.Domain</AssemblyName>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -57,53 +58,29 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TestsWithFake|AnyCPU'">
-    <OutputPath>..\Bin\TestsWithFake\Infra\</OutputPath>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'IntegrationWithFake|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
     <OutputPath>..\Bin\IntegrationWithFake\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
-    <Reference Include="TechTalk.SpecFlow, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
-      <HintPath>..\packages\SpecFlow.2.1.0\lib\net45\TechTalk.SpecFlow.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="GeneralStepsAdapter.cs" />
-    <Compile Include="GivenLoginStepsAdapter.cs" />
-    <Compile Include="GivenMainStepsAdapter.cs" />
-    <Compile Include="LoginStepsAdapter.cs" />
-    <Compile Include="MainStepsAdapter.cs" />
+    <Compile Include="IStartClientApplicationService.cs" />
+    <Compile Include="ScreenObjects\ILoginScreenObject.cs" />
+    <Compile Include="ScreenObjects\IMainScreenObject.cs" />
+    <Compile Include="ScreenObjects\IShellScreenObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Samples.Client.Data.Contracts.Dto\Samples.Client.Data.Contracts.Dto.csproj">
-      <Project>{8A567338-89FB-49AA-80FE-B47AE861D6A7}</Project>
-      <Name>Samples.Client.Data.Contracts.Dto</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Samples.Specifications.Tests.Acceptance.Steps\Samples.Specifications.Tests.Acceptance.Steps.csproj">
-      <Project>{DE972164-E8D0-4601-B3BE-B36AD22D7581}</Project>
-      <Name>Samples.Specifications.Tests.Acceptance.Steps</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Tests.Data\Samples.Specifications.Tests.Data.csproj">
       <Project>{27BBAC7D-16A9-44AD-B35E-42F73D0CE4F5}</Project>
       <Name>Samples.Specifications.Tests.Data</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

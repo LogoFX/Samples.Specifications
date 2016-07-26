@@ -1,4 +1,4 @@
-﻿using Samples.Specifications.Tests.Acceptance.Contracts;
+﻿using Samples.Specifications.Tests.Domain;
 
 namespace Samples.Specifications.Tests.Acceptance.Steps
 {

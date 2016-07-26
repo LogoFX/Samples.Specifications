@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Linq;
 using FluentAssertions;
-using Samples.Specifications.Tests.Acceptance.Contracts.ScreenObjects;
-using Samples.Specifications.Tests.Acceptance.TestData;
+using Samples.Specifications.Tests.Data;
+using Samples.Specifications.Tests.Domain.ScreenObjects;
 
 namespace Samples.Specifications.Tests.Acceptance.Steps
 {

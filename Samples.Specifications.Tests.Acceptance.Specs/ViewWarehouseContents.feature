@@ -3,7 +3,6 @@
 	As an entitled user
 	I want to be able to edit the displayed items
 
-@Sanity
 Scenario: Display warehouse items
 	Given warehouse contains the following items:
 	| Kind | Price  | Quantity |

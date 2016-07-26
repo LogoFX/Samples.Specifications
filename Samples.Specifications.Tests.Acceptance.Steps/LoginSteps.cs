@@ -1,4 +1,4 @@
-﻿using Samples.Specifications.Tests.Acceptance.Contracts.ScreenObjects;
+﻿using Samples.Specifications.Tests.Domain.ScreenObjects;
 
 namespace Samples.Specifications.Tests.Acceptance.Steps
 {
