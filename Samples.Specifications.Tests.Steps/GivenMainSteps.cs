@@ -7,6 +7,10 @@ using Samples.Specifications.Client.Data.Fake.ProviderBuilders;
 #endif
 
 #if REAL
+using System.Collections.Generic;
+using LogoFX.Client.Testing.Contracts;
+using Samples.Client.Data.Contracts.Dto;
+using Samples.Specifications.Client.Data.Fake.ProviderBuilders;
 #endif
 
 namespace Samples.Specifications.Tests.Steps

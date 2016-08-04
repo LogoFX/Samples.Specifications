@@ -10,6 +10,7 @@ namespace Samples.Specifications.Client.Data.Real.Providers
     {
         public void RegisterModule(IIocContainerRegistrator iocContainer)
         {
+            iocContainer.RegisterSingleton<ILoginProvider, LoginProvider>();
             iocContainer.RegisterSingleton<IWarehouseProvider, WarehouseProvider>();
         }
     }

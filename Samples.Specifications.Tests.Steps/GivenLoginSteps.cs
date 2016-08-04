@@ -4,6 +4,8 @@ using Samples.Specifications.Client.Data.Fake.ProviderBuilders;
 #endif
 
 #if REAL
+using LogoFX.Client.Testing.Contracts;
+using Samples.Specifications.Client.Data.Fake.ProviderBuilders;
 #endif
 
 namespace Samples.Specifications.Tests.Steps
