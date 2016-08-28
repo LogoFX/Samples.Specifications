@@ -121,6 +121,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Themes\LogoFX\LogoFX.Dark.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Themes\LogoFX\LogoFX.normalcolor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
