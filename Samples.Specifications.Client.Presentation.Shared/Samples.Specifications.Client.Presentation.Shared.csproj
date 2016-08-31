@@ -107,7 +107,10 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Themes\LogoFX\Accent\" />
+    <Folder Include="Themes\LogoFX\Primary\" />
+  </ItemGroup>
   <ItemGroup>
     <Page Include="Themes\Baselight\Baselight.normalcolor.xaml">
       <SubType>Designer</SubType>
@@ -125,7 +128,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Themes\LogoFX\LogoFX.Default.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Themes\LogoFX\LogoFX.normalcolor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\LogoFX\LogoFX.Window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
