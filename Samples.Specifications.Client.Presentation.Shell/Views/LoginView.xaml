@@ -12,15 +12,19 @@
         d:DataContext="{d:DesignInstance viewModels:LoginViewModel}"
         Title="LoginView" 
         WindowStartupLocation="CenterOwner"
-        Height="300" 
+        ShowInTaskbar="False"
+        WindowStyle="ToolWindow"
+        ResizeMode="NoResize"
+        Height="200" 
         Width="300">
     
-    <Grid VerticalAlignment="Center"
+    <Grid VerticalAlignment="Stretch"
           HorizontalAlignment="Center">
         <Grid.RowDefinitions>
             <RowDefinition Height="40" />
             <RowDefinition Height="40" />
             <RowDefinition Height="40" />
+            <RowDefinition Height="*" />
             <RowDefinition Height="40" />
         </Grid.RowDefinitions>
         
@@ -57,7 +61,7 @@
                    Foreground="Red"
                    Text="{Binding Path=LoginFailureCause, Mode=OneWay}" />
         
-        <Grid Grid.Row="3" 
+        <Grid Grid.Row="4" 
               Grid.Column="0" 
               Grid.ColumnSpan="2">
             <Grid.ColumnDefinitions>

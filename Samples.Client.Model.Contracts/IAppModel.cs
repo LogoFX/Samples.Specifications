@@ -1,8 +1,9 @@
-﻿using LogoFX.Client.Mvvm.Model.Contracts;
+﻿using System;
+using LogoFX.Client.Mvvm.Model.Contracts;
 
 namespace Samples.Client.Model.Contracts
 {
-    public interface IAppModel : IModel<int>
+    public interface IAppModel : IModel<Guid>
     {
     }
 }

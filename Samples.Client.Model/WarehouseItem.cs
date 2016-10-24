@@ -1,22 +1,40 @@
-﻿using JetBrains.Annotations;
+﻿using System;
+using JetBrains.Annotations;
 using Samples.Client.Model.Contracts;
 
 namespace Samples.Client.Model
 {
     [UsedImplicitly]
-    class WarehouseItem : AppModel, IWarehouseItem
+    internal sealed class WarehouseItem : AppModel, IWarehouseItem
     {
         public WarehouseItem(
             string kind, 
             double price, 
             int quantity)
         {
+            Id = Guid.NewGuid();
             Kind = kind;
             Price = price;
             Quantity = quantity;            
         }
 
-        public string Kind { get; }
+        private string _kind;
+
+        public string Kind
+        {
+            get { return _kind; }
+            set
+            {
+                if (_kind == value)
+                {
+                    return;
+                }
+
+                _kind = value;
+                MakeDirty();
+                NotifyOfPropertyChange();
+            }
+        }
 
         private double _price;
         public double Price
@@ -29,6 +47,7 @@ namespace Samples.Client.Model
                     return;
                 }
                 _price = value;
+                MakeDirty();
                 NotifyOfPropertyChange();
                 NotifyOfPropertyChange(() => TotalCost);
             }
@@ -45,6 +64,7 @@ namespace Samples.Client.Model
                     return;
                 }
                 _quantity = value;
+                MakeDirty();
                 NotifyOfPropertyChange();
                 NotifyOfPropertyChange(() => TotalCost);
             }

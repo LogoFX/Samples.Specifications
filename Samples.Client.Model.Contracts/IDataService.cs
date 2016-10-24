@@ -8,5 +8,7 @@ namespace Samples.Client.Model.Contracts
         IEnumerable<IWarehouseItem> WarehouseItems { get; }
 
         Task GetWarehouseItemsAsync();
+
+        Task<IWarehouseItem> NewWarehouseItemAsync();
     }
 }
