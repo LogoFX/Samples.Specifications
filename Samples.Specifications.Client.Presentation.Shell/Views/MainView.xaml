@@ -7,6 +7,7 @@
              xmlns:viewModels="clr-namespace:Samples.Specifications.Client.Presentation.Shell.ViewModels"
              xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
              xmlns:commanding="clr-namespace:LogoFX.Client.Mvvm.Commanding;assembly=LogoFX.Client.Mvvm.Commanding.Platform"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
              mc:Ignorable="d" 
              d:DataContext="{d:DesignInstance viewModels:MainViewModel}"
              d:DesignHeight="300" d:DesignWidth="300">
@@ -26,10 +27,11 @@
             </Grid.RowDefinitions>
 
             <ContentControl Grid.Row="0"
-                            cal:View.Model="{Binding Path=ActiveWarehouseItem, Mode=OneWay}"
+                            IsEnabled="{Binding Path=ActiveWarehouseItem.IsEnabled}"
+                            cal:View.Model="{Binding Path=ActiveWarehouseItem, Mode=OneWay}"                            
                             cal:View.Context="Edit" />
             
-            <Grid Grid.Row="1">
+            <Grid Grid.Row="1" IsEnabled="{Binding Path=ActiveWarehouseItem.IsEnabled}">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="*" />
@@ -63,7 +65,7 @@
 
                 <Button Grid.Column="3"
                         Margin="5,0,0,0"
-                        Content="New"
+                        Content="Discard"
                         Width="100"
                         Height="24"
                         VerticalAlignment="Center">
@@ -83,5 +85,9 @@
                       VerticalAlignment="Stretch"
                       HorizontalAlignment="Stretch"
                       ResizeDirection="Columns" />
+        
+        <xctk:BusyIndicator Grid.Column="0"
+                            Grid.ColumnSpan="3"
+                            IsBusy="{Binding Path=IsBusy, Mode=OneWay}" />
     </Grid>
 </UserControl>

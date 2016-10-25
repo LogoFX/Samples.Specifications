@@ -10,6 +10,6 @@ namespace Samples.Specifications.Client.Launcher
         public AppBootstrapper(ExtendedSimpleContainerAdapter containerAdapter) 
             : base(containerAdapter)
         {
-        }              
+        }       
     }
 }

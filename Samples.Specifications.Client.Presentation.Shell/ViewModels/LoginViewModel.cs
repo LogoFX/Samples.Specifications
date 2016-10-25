@@ -4,6 +4,7 @@ using JetBrains.Annotations;
 using LogoFX.Client.Mvvm.Commanding;
 using LogoFX.Client.Mvvm.ViewModel.Extensions;
 using Samples.Client.Model.Contracts;
+using Samples.Specifications.Client.Presentation.Shell.Properties;
 
 namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
 {   
@@ -15,6 +16,17 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         public LoginViewModel(
             ILoginService loginService)
         {
+            SavePassword = Settings.Default.SavePassword;
+            UserName = Settings.Default.SavedUsername;
+            if (SavePassword)
+            {
+                Password = Settings.Default.SavedPassword;
+            }
+            else
+            {
+                Password = string.Empty;
+            }
+
             _loginService = loginService;
             DisplayName = "Login View";
         }
@@ -67,6 +79,23 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
                            {
                                TryClose();
                            }));
+            }
+        }
+
+        private bool _savePassword;
+
+        public bool SavePassword
+        {
+            get { return _savePassword; }
+            set
+            {
+                if (_savePassword == value)
+                {
+                    return;
+                }
+
+                _savePassword = value;
+                NotifyOfPropertyChange();
             }
         }
 
@@ -141,6 +170,18 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
                 
         private void OnLoginSuccess()
         {
+            Settings.Default.SavePassword = SavePassword;
+            Settings.Default.SavedUsername = UserName;
+
+            if (SavePassword)
+            {
+                Settings.Default.SavedPassword = Password;
+            }
+            else
+            {
+                Settings.Default.SavedPassword = string.Empty;
+            }
+
             TryClose(true);
 
             if (LoggedInSuccessfully != null)

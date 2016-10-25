@@ -16,6 +16,11 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             
         }
 
+        public bool IsEnabled
+        {
+            get { return Model != null; }
+        }
+
         //protected override Task<bool> SaveMethod(IWarehouseItem model)
         //{
         //    return TaskRunner.RunAsync(() => true);

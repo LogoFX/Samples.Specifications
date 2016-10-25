@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Caliburn.Micro;
 using JetBrains.Annotations;
@@ -21,6 +22,8 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         {
             _viewModelCreatorService = viewModelCreatorService;
             _dataService = dataService;
+
+            ActiveWarehouseItem = _viewModelCreatorService.CreateViewModel<WarehouseItemViewModel>();
         }
 
         private ICommand _newCommand;
@@ -82,10 +85,22 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         private WarehouseItemsViewModel _warehouseItems;
         public WarehouseItemsViewModel WarehouseItems
         {
-            get { return _warehouseItems ?? (_warehouseItems = _viewModelCreatorService.CreateViewModel<WarehouseItemsViewModel>()); }
+            get { return _warehouseItems ?? (_warehouseItems = CreateViewModel()); }
         }
 
-        private async void NewwarehouseItem()
+        private WarehouseItemsViewModel CreateViewModel()
+        {
+            var warehouseItemsViewModel = _viewModelCreatorService.CreateViewModel<WarehouseItemsViewModel>();
+            warehouseItemsViewModel.WarehouseItems.SelectionChanged += WarehouseItems_SelectionChanged;
+            return warehouseItemsViewModel;
+        }
+
+        private void WarehouseItems_SelectionChanged(object sender, System.EventArgs e)
+        {
+            ActiveWarehouseItem = (WarehouseItemViewModel) WarehouseItems.WarehouseItems.SelectedItem;
+        }
+
+        private async Task NewwarehouseItem()
         {
             Debug.Assert(!IsBusy);
 
@@ -94,7 +109,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             try
             {
                 var warehouseItem = await _dataService.NewWarehouseItemAsync();
-                ActiveWarehouseItem = new WarehouseItemViewModel(warehouseItem);
+                ActiveWarehouseItem = new WarehouseItemViewModel(warehouseItem);                
             }
 
             finally
@@ -106,7 +121,9 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         protected override async void OnInitialize()
         {
             base.OnInitialize();
+
             await _dataService.GetWarehouseItemsAsync();
+            //await NewwarehouseItem();
         }
     }
 }
