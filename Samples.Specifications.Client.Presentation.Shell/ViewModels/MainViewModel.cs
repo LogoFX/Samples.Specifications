@@ -35,7 +35,10 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
                 return _newCommand ??
                        (_newCommand = ActionCommand
                            .When(() => true)
-                           .Do(() => { }));
+                           .Do(async () =>
+                           {
+                               await NewwarehouseItem();
+                           }));
             }
         }
 
@@ -85,10 +88,10 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         private WarehouseItemsViewModel _warehouseItems;
         public WarehouseItemsViewModel WarehouseItems
         {
-            get { return _warehouseItems ?? (_warehouseItems = CreateViewModel()); }
+            get { return _warehouseItems ?? (_warehouseItems = CreateWarehouseItems()); }
         }
 
-        private WarehouseItemsViewModel CreateViewModel()
+        private WarehouseItemsViewModel CreateWarehouseItems()
         {
             var warehouseItemsViewModel = _viewModelCreatorService.CreateViewModel<WarehouseItemsViewModel>();
             warehouseItemsViewModel.WarehouseItems.SelectionChanged += WarehouseItems_SelectionChanged;
@@ -98,6 +101,17 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         private void WarehouseItems_SelectionChanged(object sender, System.EventArgs e)
         {
             ActiveWarehouseItem = (WarehouseItemViewModel) WarehouseItems.WarehouseItems.SelectedItem;
+        }
+
+        private EventsViewModel _events;
+        public EventsViewModel Events
+        {
+            get { return _events ?? (_events = CreateEvents()); }
+        }
+
+        private EventsViewModel CreateEvents()
+        {
+            return _viewModelCreatorService.CreateViewModel<EventsViewModel>();
         }
 
         private async Task NewwarehouseItem()
