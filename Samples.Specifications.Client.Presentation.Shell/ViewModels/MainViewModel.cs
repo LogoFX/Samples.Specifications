@@ -22,8 +22,6 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         {
             _viewModelCreatorService = viewModelCreatorService;
             _dataService = dataService;
-
-            ActiveWarehouseItem = _viewModelCreatorService.CreateViewModel<WarehouseItemViewModel>();
         }
 
         private ICommand _newCommand;
@@ -137,7 +135,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             base.OnInitialize();
 
             await _dataService.GetWarehouseItemsAsync();
-            //await NewwarehouseItem();
+            await NewwarehouseItem();
         }
     }
 }
