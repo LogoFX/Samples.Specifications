@@ -5,7 +5,7 @@ using Samples.Specifications.Client.Presentation.NavigationShell.ViewModels;
 namespace Samples.Specifications.Client.Launcher
 {
     public class AppBootstrapper : BootstrapperContainerBase<ExtendedSimpleContainerAdapter>
-        .WithRootObject<NavigationShellViewModel>
+        .WithRootObject<ShellViewModel>
     {
         public AppBootstrapper(ExtendedSimpleContainerAdapter containerAdapter) 
             : base(containerAdapter)

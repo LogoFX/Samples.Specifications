@@ -1,4 +1,4 @@
-﻿<Window x:Class="Samples.Specifications.Client.Presentation.NavigationShell.Views.NavigationShellView"
+﻿<Window x:Class="Samples.Specifications.Client.Presentation.NavigationShell.Views.ShellView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -11,7 +11,7 @@
         WindowState="Maximized"
         Background="{StaticResource LogoFXPaper}"
         mc:Ignorable="d"             
-        d:DataContext="{d:DesignInstance viewModels:NavigationShellViewModel}"
+        d:DataContext="{d:DesignInstance viewModels:ShellViewModel}"
         d:DesignHeight="300" d:DesignWidth="300">
 
     <Grid>

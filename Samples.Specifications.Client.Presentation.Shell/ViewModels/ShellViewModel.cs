@@ -124,7 +124,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             base.OnDeactivate(close);
         }
 
-        private void OnLoggedInSuccessfully(object sender, EventArgs eventArgs)
+        protected virtual void OnLoggedInSuccessfully(object sender, EventArgs eventArgs)
         {
             ActivateItem(MainViewModel);
         }

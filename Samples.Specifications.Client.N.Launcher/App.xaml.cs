@@ -16,7 +16,7 @@ namespace Samples.Specifications.Client.Launcher
             bootstrapper
                 .UseResolver()
                 .UseShared()
-                .UseNavigation<NavigationShellViewModel, ExtendedSimpleContainerAdapter>(containerAdapter)
+                .UseNavigation<ShellViewModel, ExtendedSimpleContainerAdapter>(containerAdapter)
                 .Initialize();
         }
     }
