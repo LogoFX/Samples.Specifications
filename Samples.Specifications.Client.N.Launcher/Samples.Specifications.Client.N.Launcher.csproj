@@ -259,6 +259,10 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Samples.Specifications.Client.Presentation.NavigationShell\Samples.Specifications.Client.Presentation.NavigationShell.csproj">
+      <Project>{491BDE8F-C506-456A-B51C-703F61485113}</Project>
+      <Name>Samples.Specifications.Client.Presentation.NavigationShell</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Client.Presentation.Shared\Samples.Specifications.Client.Presentation.Shared.csproj">
       <Project>{a4245326-bb01-4b7a-b4de-6ebca9c8094e}</Project>
       <Name>Samples.Specifications.Client.Presentation.Shared</Name>

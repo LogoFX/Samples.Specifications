@@ -1,9 +1,8 @@
-﻿using System;
-using LogoFX.Client.Bootstrapping;
+﻿using LogoFX.Client.Bootstrapping;
 using LogoFX.Client.Bootstrapping.Adapters.SimpleContainer;
 using LogoFX.Client.Mvvm.Navigation;
 using Samples.Specifications.Client.Launcher.Shared;
-using Samples.Specifications.Client.Presentation.Shell.ViewModels;
+using Samples.Specifications.Client.Presentation.NavigationShell.ViewModels;
 
 namespace Samples.Specifications.Client.Launcher
 {
@@ -17,7 +16,7 @@ namespace Samples.Specifications.Client.Launcher
             bootstrapper
                 .UseResolver()
                 .UseShared()
-                .UseNavigation<ShellViewModel, ExtendedSimpleContainerAdapter>(containerAdapter)
+                .UseNavigation<NavigationShellViewModel, ExtendedSimpleContainerAdapter>(containerAdapter)
                 .Initialize();
         }
     }
