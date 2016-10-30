@@ -89,14 +89,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Client.Tests.Integration", "Samples.Specifications.Client.Tests.Integration\Samples.Specifications.Client.Tests.Integration.csproj", "{486997E8-2FA4-4203-96BD-8699BE71403B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Client.SC.Launcher", "Samples.Specifications.Client.SC.Launcher\Samples.Specifications.Client.SC.Launcher.csproj", "{1344B63D-D9A3-452F-9E42-BFA2CE948681}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Client.SC.Launcher.Shared", "Samples.Specifications.Client.SC.Launcher.Shared\Samples.Specifications.Client.SC.Launcher.Shared.csproj", "{99D98150-0E31-4394-817D-047D4637636F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Client.Tests.Integration.Infra.SC.Shared", "Samples.Specifications.Client.Tests.Integration.Infra.SC.Shared\Samples.Specifications.Client.Tests.Integration.Infra.SC.Shared.csproj", "{91C8CBDF-1EE7-497C-964F-14AD1AD1D9D5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Client.N.Launcher", "Samples.Specifications.Client.N.Launcher\Samples.Specifications.Client.N.Launcher.csproj", "{1344B63D-D9A3-452F-9E42-BFA2CE948681}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
 		DebugWithFake|Any CPU = DebugWithFake|Any CPU
 		DebugWithReal|Any CPU = DebugWithReal|Any CPU
 		IntegrationWithFake|Any CPU = IntegrationWithFake|Any CPU
@@ -105,6 +106,8 @@ Global
 		TestsWithReal|Any CPU = TestsWithReal|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A567338-89FB-49AA-80FE-B47AE861D6A7}.Debug|Any CPU.ActiveCfg = DebugWithFake|Any CPU
+		{8A567338-89FB-49AA-80FE-B47AE861D6A7}.Debug|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{8A567338-89FB-49AA-80FE-B47AE861D6A7}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
 		{8A567338-89FB-49AA-80FE-B47AE861D6A7}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{8A567338-89FB-49AA-80FE-B47AE861D6A7}.DebugWithReal|Any CPU.ActiveCfg = DebugWithFake|Any CPU
@@ -117,6 +120,8 @@ Global
 		{8A567338-89FB-49AA-80FE-B47AE861D6A7}.TestsWithFake|Any CPU.Build.0 = TestsWithFake|Any CPU
 		{8A567338-89FB-49AA-80FE-B47AE861D6A7}.TestsWithReal|Any CPU.ActiveCfg = Release|Any CPU
 		{8A567338-89FB-49AA-80FE-B47AE861D6A7}.TestsWithReal|Any CPU.Build.0 = Release|Any CPU
+		{D2432BC9-C269-47CA-85AC-7B1F79BDD2B7}.Debug|Any CPU.ActiveCfg = DebugWithFake|Any CPU
+		{D2432BC9-C269-47CA-85AC-7B1F79BDD2B7}.Debug|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{D2432BC9-C269-47CA-85AC-7B1F79BDD2B7}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
 		{D2432BC9-C269-47CA-85AC-7B1F79BDD2B7}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{D2432BC9-C269-47CA-85AC-7B1F79BDD2B7}.DebugWithReal|Any CPU.ActiveCfg = DebugWithFake|Any CPU
@@ -129,6 +134,8 @@ Global
 		{D2432BC9-C269-47CA-85AC-7B1F79BDD2B7}.TestsWithFake|Any CPU.Build.0 = TestsWithFake|Any CPU
 		{D2432BC9-C269-47CA-85AC-7B1F79BDD2B7}.TestsWithReal|Any CPU.ActiveCfg = Release|Any CPU
 		{D2432BC9-C269-47CA-85AC-7B1F79BDD2B7}.TestsWithReal|Any CPU.Build.0 = Release|Any CPU
+		{536D34E4-A409-4567-B7C6-58F50206740E}.Debug|Any CPU.ActiveCfg = DebugWithFake|Any CPU
+		{536D34E4-A409-4567-B7C6-58F50206740E}.Debug|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{536D34E4-A409-4567-B7C6-58F50206740E}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
 		{536D34E4-A409-4567-B7C6-58F50206740E}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{536D34E4-A409-4567-B7C6-58F50206740E}.DebugWithReal|Any CPU.ActiveCfg = DebugWithFake|Any CPU
@@ -141,6 +148,8 @@ Global
 		{536D34E4-A409-4567-B7C6-58F50206740E}.TestsWithFake|Any CPU.Build.0 = TestsWithFake|Any CPU
 		{536D34E4-A409-4567-B7C6-58F50206740E}.TestsWithReal|Any CPU.ActiveCfg = Release|Any CPU
 		{536D34E4-A409-4567-B7C6-58F50206740E}.TestsWithReal|Any CPU.Build.0 = Release|Any CPU
+		{49724A56-9FA9-44C4-B731-1E414EE598BC}.Debug|Any CPU.ActiveCfg = DebugWithFake|Any CPU
+		{49724A56-9FA9-44C4-B731-1E414EE598BC}.Debug|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{49724A56-9FA9-44C4-B731-1E414EE598BC}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
 		{49724A56-9FA9-44C4-B731-1E414EE598BC}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{49724A56-9FA9-44C4-B731-1E414EE598BC}.DebugWithReal|Any CPU.ActiveCfg = DebugWithFake|Any CPU
@@ -153,6 +162,8 @@ Global
 		{49724A56-9FA9-44C4-B731-1E414EE598BC}.TestsWithFake|Any CPU.Build.0 = TestsWithFake|Any CPU
 		{49724A56-9FA9-44C4-B731-1E414EE598BC}.TestsWithReal|Any CPU.ActiveCfg = Release|Any CPU
 		{49724A56-9FA9-44C4-B731-1E414EE598BC}.TestsWithReal|Any CPU.Build.0 = Release|Any CPU
+		{33766857-5FCE-4C2C-B167-E76A9F521FF0}.Debug|Any CPU.ActiveCfg = DebugWithReal|Any CPU
+		{33766857-5FCE-4C2C-B167-E76A9F521FF0}.Debug|Any CPU.Build.0 = DebugWithReal|Any CPU
 		{33766857-5FCE-4C2C-B167-E76A9F521FF0}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
 		{33766857-5FCE-4C2C-B167-E76A9F521FF0}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{33766857-5FCE-4C2C-B167-E76A9F521FF0}.DebugWithReal|Any CPU.ActiveCfg = DebugWithReal|Any CPU
@@ -165,6 +176,8 @@ Global
 		{33766857-5FCE-4C2C-B167-E76A9F521FF0}.TestsWithFake|Any CPU.Build.0 = TestsWithFake|Any CPU
 		{33766857-5FCE-4C2C-B167-E76A9F521FF0}.TestsWithReal|Any CPU.ActiveCfg = Release|Any CPU
 		{33766857-5FCE-4C2C-B167-E76A9F521FF0}.TestsWithReal|Any CPU.Build.0 = Release|Any CPU
+		{064BD680-2955-4CEC-A56B-B48891EC6AA1}.Debug|Any CPU.ActiveCfg = DebugWithReal|Any CPU
+		{064BD680-2955-4CEC-A56B-B48891EC6AA1}.Debug|Any CPU.Build.0 = DebugWithReal|Any CPU
 		{064BD680-2955-4CEC-A56B-B48891EC6AA1}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
 		{064BD680-2955-4CEC-A56B-B48891EC6AA1}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{064BD680-2955-4CEC-A56B-B48891EC6AA1}.DebugWithReal|Any CPU.ActiveCfg = DebugWithReal|Any CPU
@@ -175,6 +188,8 @@ Global
 		{064BD680-2955-4CEC-A56B-B48891EC6AA1}.TestsWithFake|Any CPU.ActiveCfg = TestsWithFake|Any CPU
 		{064BD680-2955-4CEC-A56B-B48891EC6AA1}.TestsWithReal|Any CPU.ActiveCfg = TestsWithReal|Any CPU
 		{064BD680-2955-4CEC-A56B-B48891EC6AA1}.TestsWithReal|Any CPU.Build.0 = TestsWithReal|Any CPU
+		{AF68283B-5283-4DEF-8DA0-6FB6CA85C1BD}.Debug|Any CPU.ActiveCfg = DebugWithReal|Any CPU
+		{AF68283B-5283-4DEF-8DA0-6FB6CA85C1BD}.Debug|Any CPU.Build.0 = DebugWithReal|Any CPU
 		{AF68283B-5283-4DEF-8DA0-6FB6CA85C1BD}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
 		{AF68283B-5283-4DEF-8DA0-6FB6CA85C1BD}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{AF68283B-5283-4DEF-8DA0-6FB6CA85C1BD}.DebugWithReal|Any CPU.ActiveCfg = DebugWithReal|Any CPU
@@ -187,6 +202,8 @@ Global
 		{AF68283B-5283-4DEF-8DA0-6FB6CA85C1BD}.TestsWithFake|Any CPU.Build.0 = TestsWithFake|Any CPU
 		{AF68283B-5283-4DEF-8DA0-6FB6CA85C1BD}.TestsWithReal|Any CPU.ActiveCfg = TestsWithReal|Any CPU
 		{AF68283B-5283-4DEF-8DA0-6FB6CA85C1BD}.TestsWithReal|Any CPU.Build.0 = TestsWithReal|Any CPU
+		{E27A6439-921C-455F-A062-1EBCB50F439F}.Debug|Any CPU.ActiveCfg = DebugWithReal|Any CPU
+		{E27A6439-921C-455F-A062-1EBCB50F439F}.Debug|Any CPU.Build.0 = DebugWithReal|Any CPU
 		{E27A6439-921C-455F-A062-1EBCB50F439F}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
 		{E27A6439-921C-455F-A062-1EBCB50F439F}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{E27A6439-921C-455F-A062-1EBCB50F439F}.DebugWithReal|Any CPU.ActiveCfg = DebugWithReal|Any CPU
@@ -197,6 +214,8 @@ Global
 		{E27A6439-921C-455F-A062-1EBCB50F439F}.TestsWithFake|Any CPU.ActiveCfg = TestsWithFake|Any CPU
 		{E27A6439-921C-455F-A062-1EBCB50F439F}.TestsWithReal|Any CPU.ActiveCfg = TestsWithReal|Any CPU
 		{E27A6439-921C-455F-A062-1EBCB50F439F}.TestsWithReal|Any CPU.Build.0 = TestsWithReal|Any CPU
+		{5B2A4689-2F21-48EC-9058-F89511CEACA3}.Debug|Any CPU.ActiveCfg = DebugWithReal|Any CPU
+		{5B2A4689-2F21-48EC-9058-F89511CEACA3}.Debug|Any CPU.Build.0 = DebugWithReal|Any CPU
 		{5B2A4689-2F21-48EC-9058-F89511CEACA3}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
 		{5B2A4689-2F21-48EC-9058-F89511CEACA3}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{5B2A4689-2F21-48EC-9058-F89511CEACA3}.DebugWithReal|Any CPU.ActiveCfg = DebugWithReal|Any CPU
@@ -207,6 +226,8 @@ Global
 		{5B2A4689-2F21-48EC-9058-F89511CEACA3}.TestsWithFake|Any CPU.ActiveCfg = TestsWithFake|Any CPU
 		{5B2A4689-2F21-48EC-9058-F89511CEACA3}.TestsWithReal|Any CPU.ActiveCfg = TestsWithReal|Any CPU
 		{5B2A4689-2F21-48EC-9058-F89511CEACA3}.TestsWithReal|Any CPU.Build.0 = TestsWithReal|Any CPU
+		{1DB4C693-200D-46DC-AF84-3C0AD40392B5}.Debug|Any CPU.ActiveCfg = DebugWithFake|Any CPU
+		{1DB4C693-200D-46DC-AF84-3C0AD40392B5}.Debug|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{1DB4C693-200D-46DC-AF84-3C0AD40392B5}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
 		{1DB4C693-200D-46DC-AF84-3C0AD40392B5}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{1DB4C693-200D-46DC-AF84-3C0AD40392B5}.DebugWithReal|Any CPU.ActiveCfg = DebugWithFake|Any CPU
@@ -219,6 +240,8 @@ Global
 		{1DB4C693-200D-46DC-AF84-3C0AD40392B5}.TestsWithFake|Any CPU.Build.0 = TestsWithFake|Any CPU
 		{1DB4C693-200D-46DC-AF84-3C0AD40392B5}.TestsWithReal|Any CPU.ActiveCfg = TestsWithFake|Any CPU
 		{1DB4C693-200D-46DC-AF84-3C0AD40392B5}.TestsWithReal|Any CPU.Build.0 = TestsWithFake|Any CPU
+		{A4245326-BB01-4B7A-B4DE-6EBCA9C8094E}.Debug|Any CPU.ActiveCfg = DebugWithReal|Any CPU
+		{A4245326-BB01-4B7A-B4DE-6EBCA9C8094E}.Debug|Any CPU.Build.0 = DebugWithReal|Any CPU
 		{A4245326-BB01-4B7A-B4DE-6EBCA9C8094E}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
 		{A4245326-BB01-4B7A-B4DE-6EBCA9C8094E}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{A4245326-BB01-4B7A-B4DE-6EBCA9C8094E}.DebugWithReal|Any CPU.ActiveCfg = DebugWithReal|Any CPU
@@ -231,6 +254,8 @@ Global
 		{A4245326-BB01-4B7A-B4DE-6EBCA9C8094E}.TestsWithFake|Any CPU.Build.0 = TestsWithFake|Any CPU
 		{A4245326-BB01-4B7A-B4DE-6EBCA9C8094E}.TestsWithReal|Any CPU.ActiveCfg = TestsWithReal|Any CPU
 		{A4245326-BB01-4B7A-B4DE-6EBCA9C8094E}.TestsWithReal|Any CPU.Build.0 = TestsWithReal|Any CPU
+		{5270F84D-8FF4-4756-83B0-78DD9777643D}.Debug|Any CPU.ActiveCfg = DebugWithReal|Any CPU
+		{5270F84D-8FF4-4756-83B0-78DD9777643D}.Debug|Any CPU.Build.0 = DebugWithReal|Any CPU
 		{5270F84D-8FF4-4756-83B0-78DD9777643D}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
 		{5270F84D-8FF4-4756-83B0-78DD9777643D}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{5270F84D-8FF4-4756-83B0-78DD9777643D}.DebugWithReal|Any CPU.ActiveCfg = DebugWithReal|Any CPU
@@ -243,6 +268,8 @@ Global
 		{5270F84D-8FF4-4756-83B0-78DD9777643D}.TestsWithFake|Any CPU.Build.0 = TestsWithFake|Any CPU
 		{5270F84D-8FF4-4756-83B0-78DD9777643D}.TestsWithReal|Any CPU.ActiveCfg = TestsWithReal|Any CPU
 		{5270F84D-8FF4-4756-83B0-78DD9777643D}.TestsWithReal|Any CPU.Build.0 = TestsWithReal|Any CPU
+		{CBE2F355-1F23-4A58-A6AE-BA7BE542F76C}.Debug|Any CPU.ActiveCfg = DebugWithReal|Any CPU
+		{CBE2F355-1F23-4A58-A6AE-BA7BE542F76C}.Debug|Any CPU.Build.0 = DebugWithReal|Any CPU
 		{CBE2F355-1F23-4A58-A6AE-BA7BE542F76C}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
 		{CBE2F355-1F23-4A58-A6AE-BA7BE542F76C}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{CBE2F355-1F23-4A58-A6AE-BA7BE542F76C}.DebugWithReal|Any CPU.ActiveCfg = DebugWithReal|Any CPU
@@ -254,6 +281,8 @@ Global
 		{CBE2F355-1F23-4A58-A6AE-BA7BE542F76C}.TestsWithFake|Any CPU.Build.0 = TestsWithFake|Any CPU
 		{CBE2F355-1F23-4A58-A6AE-BA7BE542F76C}.TestsWithReal|Any CPU.ActiveCfg = TestsWithReal|Any CPU
 		{CBE2F355-1F23-4A58-A6AE-BA7BE542F76C}.TestsWithReal|Any CPU.Build.0 = TestsWithReal|Any CPU
+		{DA41EB1E-ECAF-400B-A1A4-82EBACDD7600}.Debug|Any CPU.ActiveCfg = DebugWithReal|Any CPU
+		{DA41EB1E-ECAF-400B-A1A4-82EBACDD7600}.Debug|Any CPU.Build.0 = DebugWithReal|Any CPU
 		{DA41EB1E-ECAF-400B-A1A4-82EBACDD7600}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
 		{DA41EB1E-ECAF-400B-A1A4-82EBACDD7600}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{DA41EB1E-ECAF-400B-A1A4-82EBACDD7600}.DebugWithReal|Any CPU.ActiveCfg = DebugWithReal|Any CPU
@@ -265,6 +294,8 @@ Global
 		{DA41EB1E-ECAF-400B-A1A4-82EBACDD7600}.TestsWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{DA41EB1E-ECAF-400B-A1A4-82EBACDD7600}.TestsWithReal|Any CPU.ActiveCfg = TestsWithReal|Any CPU
 		{DA41EB1E-ECAF-400B-A1A4-82EBACDD7600}.TestsWithReal|Any CPU.Build.0 = TestsWithReal|Any CPU
+		{207D3FBC-1EEC-43EA-BAED-E3C14F793119}.Debug|Any CPU.ActiveCfg = DebugWithFake|Any CPU
+		{207D3FBC-1EEC-43EA-BAED-E3C14F793119}.Debug|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{207D3FBC-1EEC-43EA-BAED-E3C14F793119}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
 		{207D3FBC-1EEC-43EA-BAED-E3C14F793119}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{207D3FBC-1EEC-43EA-BAED-E3C14F793119}.DebugWithReal|Any CPU.ActiveCfg = DebugWithFake|Any CPU
@@ -276,6 +307,8 @@ Global
 		{207D3FBC-1EEC-43EA-BAED-E3C14F793119}.TestsWithFake|Any CPU.ActiveCfg = Release|Any CPU
 		{207D3FBC-1EEC-43EA-BAED-E3C14F793119}.TestsWithReal|Any CPU.ActiveCfg = Release|Any CPU
 		{207D3FBC-1EEC-43EA-BAED-E3C14F793119}.TestsWithReal|Any CPU.Build.0 = Release|Any CPU
+		{CBF93BCE-066F-4A39-A4D2-408524F49490}.Debug|Any CPU.ActiveCfg = DebugWithFake|Any CPU
+		{CBF93BCE-066F-4A39-A4D2-408524F49490}.Debug|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{CBF93BCE-066F-4A39-A4D2-408524F49490}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
 		{CBF93BCE-066F-4A39-A4D2-408524F49490}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{CBF93BCE-066F-4A39-A4D2-408524F49490}.DebugWithReal|Any CPU.ActiveCfg = DebugWithFake|Any CPU
@@ -287,6 +320,8 @@ Global
 		{CBF93BCE-066F-4A39-A4D2-408524F49490}.TestsWithFake|Any CPU.ActiveCfg = Release|Any CPU
 		{CBF93BCE-066F-4A39-A4D2-408524F49490}.TestsWithReal|Any CPU.ActiveCfg = Release|Any CPU
 		{CBF93BCE-066F-4A39-A4D2-408524F49490}.TestsWithReal|Any CPU.Build.0 = Release|Any CPU
+		{A3B306E2-2A20-4591-812D-677DD44E6640}.Debug|Any CPU.ActiveCfg = DebugWithFake|Any CPU
+		{A3B306E2-2A20-4591-812D-677DD44E6640}.Debug|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{A3B306E2-2A20-4591-812D-677DD44E6640}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
 		{A3B306E2-2A20-4591-812D-677DD44E6640}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{A3B306E2-2A20-4591-812D-677DD44E6640}.DebugWithReal|Any CPU.ActiveCfg = DebugWithFake|Any CPU
@@ -298,6 +333,8 @@ Global
 		{A3B306E2-2A20-4591-812D-677DD44E6640}.TestsWithFake|Any CPU.Build.0 = TestsWithFake|Any CPU
 		{A3B306E2-2A20-4591-812D-677DD44E6640}.TestsWithReal|Any CPU.ActiveCfg = TestsWithFake|Any CPU
 		{A3B306E2-2A20-4591-812D-677DD44E6640}.TestsWithReal|Any CPU.Build.0 = TestsWithFake|Any CPU
+		{3FC45A34-C028-4F72-B8A7-7B8BF15C5BB8}.Debug|Any CPU.ActiveCfg = DebugWithReal|Any CPU
+		{3FC45A34-C028-4F72-B8A7-7B8BF15C5BB8}.Debug|Any CPU.Build.0 = DebugWithReal|Any CPU
 		{3FC45A34-C028-4F72-B8A7-7B8BF15C5BB8}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
 		{3FC45A34-C028-4F72-B8A7-7B8BF15C5BB8}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{3FC45A34-C028-4F72-B8A7-7B8BF15C5BB8}.DebugWithReal|Any CPU.ActiveCfg = DebugWithReal|Any CPU
@@ -309,6 +346,8 @@ Global
 		{3FC45A34-C028-4F72-B8A7-7B8BF15C5BB8}.TestsWithFake|Any CPU.Build.0 = TestsWithFake|Any CPU
 		{3FC45A34-C028-4F72-B8A7-7B8BF15C5BB8}.TestsWithReal|Any CPU.ActiveCfg = TestsWithReal|Any CPU
 		{3FC45A34-C028-4F72-B8A7-7B8BF15C5BB8}.TestsWithReal|Any CPU.Build.0 = TestsWithReal|Any CPU
+		{56272851-A255-4525-B8E6-27BC24154551}.Debug|Any CPU.ActiveCfg = DebugWithReal|Any CPU
+		{56272851-A255-4525-B8E6-27BC24154551}.Debug|Any CPU.Build.0 = DebugWithReal|Any CPU
 		{56272851-A255-4525-B8E6-27BC24154551}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
 		{56272851-A255-4525-B8E6-27BC24154551}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{56272851-A255-4525-B8E6-27BC24154551}.DebugWithReal|Any CPU.ActiveCfg = DebugWithReal|Any CPU
@@ -320,6 +359,8 @@ Global
 		{56272851-A255-4525-B8E6-27BC24154551}.TestsWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{56272851-A255-4525-B8E6-27BC24154551}.TestsWithReal|Any CPU.ActiveCfg = TestsWithReal|Any CPU
 		{56272851-A255-4525-B8E6-27BC24154551}.TestsWithReal|Any CPU.Build.0 = TestsWithReal|Any CPU
+		{9B6E4171-3936-4C3E-8A29-F5A56761DF78}.Debug|Any CPU.ActiveCfg = DebugWithFake|Any CPU
+		{9B6E4171-3936-4C3E-8A29-F5A56761DF78}.Debug|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{9B6E4171-3936-4C3E-8A29-F5A56761DF78}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
 		{9B6E4171-3936-4C3E-8A29-F5A56761DF78}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{9B6E4171-3936-4C3E-8A29-F5A56761DF78}.DebugWithReal|Any CPU.ActiveCfg = DebugWithFake|Any CPU
@@ -331,6 +372,8 @@ Global
 		{9B6E4171-3936-4C3E-8A29-F5A56761DF78}.TestsWithFake|Any CPU.Build.0 = IntegrationWithFake|Any CPU
 		{9B6E4171-3936-4C3E-8A29-F5A56761DF78}.TestsWithReal|Any CPU.ActiveCfg = IntegrationWithFake|Any CPU
 		{9B6E4171-3936-4C3E-8A29-F5A56761DF78}.TestsWithReal|Any CPU.Build.0 = IntegrationWithFake|Any CPU
+		{E08E7AE2-C849-47AD-99F2-B8A05307B06A}.Debug|Any CPU.ActiveCfg = DebugWithReal|Any CPU
+		{E08E7AE2-C849-47AD-99F2-B8A05307B06A}.Debug|Any CPU.Build.0 = DebugWithReal|Any CPU
 		{E08E7AE2-C849-47AD-99F2-B8A05307B06A}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
 		{E08E7AE2-C849-47AD-99F2-B8A05307B06A}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{E08E7AE2-C849-47AD-99F2-B8A05307B06A}.DebugWithReal|Any CPU.ActiveCfg = DebugWithReal|Any CPU
@@ -343,6 +386,8 @@ Global
 		{E08E7AE2-C849-47AD-99F2-B8A05307B06A}.TestsWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{E08E7AE2-C849-47AD-99F2-B8A05307B06A}.TestsWithReal|Any CPU.ActiveCfg = TestsWithReal|Any CPU
 		{E08E7AE2-C849-47AD-99F2-B8A05307B06A}.TestsWithReal|Any CPU.Build.0 = TestsWithReal|Any CPU
+		{DE6BB2E9-4303-426B-AE23-D58DD6C78339}.Debug|Any CPU.ActiveCfg = DebugWithReal|Any CPU
+		{DE6BB2E9-4303-426B-AE23-D58DD6C78339}.Debug|Any CPU.Build.0 = DebugWithReal|Any CPU
 		{DE6BB2E9-4303-426B-AE23-D58DD6C78339}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
 		{DE6BB2E9-4303-426B-AE23-D58DD6C78339}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{DE6BB2E9-4303-426B-AE23-D58DD6C78339}.DebugWithReal|Any CPU.ActiveCfg = DebugWithReal|Any CPU
@@ -354,6 +399,8 @@ Global
 		{DE6BB2E9-4303-426B-AE23-D58DD6C78339}.TestsWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{DE6BB2E9-4303-426B-AE23-D58DD6C78339}.TestsWithReal|Any CPU.ActiveCfg = TestsWithReal|Any CPU
 		{DE6BB2E9-4303-426B-AE23-D58DD6C78339}.TestsWithReal|Any CPU.Build.0 = TestsWithReal|Any CPU
+		{67A94ECC-8163-4EE6-94ED-2C07D317BF94}.Debug|Any CPU.ActiveCfg = DebugWithFake|Any CPU
+		{67A94ECC-8163-4EE6-94ED-2C07D317BF94}.Debug|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{67A94ECC-8163-4EE6-94ED-2C07D317BF94}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
 		{67A94ECC-8163-4EE6-94ED-2C07D317BF94}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{67A94ECC-8163-4EE6-94ED-2C07D317BF94}.DebugWithReal|Any CPU.ActiveCfg = DebugWithFake|Any CPU
@@ -366,6 +413,8 @@ Global
 		{67A94ECC-8163-4EE6-94ED-2C07D317BF94}.TestsWithFake|Any CPU.Build.0 = IntegrationWithFake|Any CPU
 		{67A94ECC-8163-4EE6-94ED-2C07D317BF94}.TestsWithReal|Any CPU.ActiveCfg = IntegrationWithFake|Any CPU
 		{67A94ECC-8163-4EE6-94ED-2C07D317BF94}.TestsWithReal|Any CPU.Build.0 = IntegrationWithFake|Any CPU
+		{27BBAC7D-16A9-44AD-B35E-42F73D0CE4F5}.Debug|Any CPU.ActiveCfg = DebugWithReal|Any CPU
+		{27BBAC7D-16A9-44AD-B35E-42F73D0CE4F5}.Debug|Any CPU.Build.0 = DebugWithReal|Any CPU
 		{27BBAC7D-16A9-44AD-B35E-42F73D0CE4F5}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
 		{27BBAC7D-16A9-44AD-B35E-42F73D0CE4F5}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{27BBAC7D-16A9-44AD-B35E-42F73D0CE4F5}.DebugWithReal|Any CPU.ActiveCfg = DebugWithReal|Any CPU
@@ -378,6 +427,8 @@ Global
 		{27BBAC7D-16A9-44AD-B35E-42F73D0CE4F5}.TestsWithFake|Any CPU.Build.0 = TestsWithReal|Any CPU
 		{27BBAC7D-16A9-44AD-B35E-42F73D0CE4F5}.TestsWithReal|Any CPU.ActiveCfg = TestsWithReal|Any CPU
 		{27BBAC7D-16A9-44AD-B35E-42F73D0CE4F5}.TestsWithReal|Any CPU.Build.0 = TestsWithReal|Any CPU
+		{DE972164-E8D0-4601-B3BE-B36AD22D7581}.Debug|Any CPU.ActiveCfg = DebugWithReal|Any CPU
+		{DE972164-E8D0-4601-B3BE-B36AD22D7581}.Debug|Any CPU.Build.0 = DebugWithReal|Any CPU
 		{DE972164-E8D0-4601-B3BE-B36AD22D7581}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
 		{DE972164-E8D0-4601-B3BE-B36AD22D7581}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{DE972164-E8D0-4601-B3BE-B36AD22D7581}.DebugWithReal|Any CPU.ActiveCfg = DebugWithReal|Any CPU
@@ -390,6 +441,8 @@ Global
 		{DE972164-E8D0-4601-B3BE-B36AD22D7581}.TestsWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{DE972164-E8D0-4601-B3BE-B36AD22D7581}.TestsWithReal|Any CPU.ActiveCfg = TestsWithReal|Any CPU
 		{DE972164-E8D0-4601-B3BE-B36AD22D7581}.TestsWithReal|Any CPU.Build.0 = TestsWithReal|Any CPU
+		{486997E8-2FA4-4203-96BD-8699BE71403B}.Debug|Any CPU.ActiveCfg = DebugWithFake|Any CPU
+		{486997E8-2FA4-4203-96BD-8699BE71403B}.Debug|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{486997E8-2FA4-4203-96BD-8699BE71403B}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
 		{486997E8-2FA4-4203-96BD-8699BE71403B}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{486997E8-2FA4-4203-96BD-8699BE71403B}.DebugWithReal|Any CPU.ActiveCfg = DebugWithFake|Any CPU
@@ -402,18 +455,8 @@ Global
 		{486997E8-2FA4-4203-96BD-8699BE71403B}.TestsWithFake|Any CPU.Build.0 = IntegrationWithFake|Any CPU
 		{486997E8-2FA4-4203-96BD-8699BE71403B}.TestsWithReal|Any CPU.ActiveCfg = IntegrationWithFake|Any CPU
 		{486997E8-2FA4-4203-96BD-8699BE71403B}.TestsWithReal|Any CPU.Build.0 = IntegrationWithFake|Any CPU
-		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
-		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
-		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.DebugWithReal|Any CPU.ActiveCfg = DebugWithReal|Any CPU
-		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.DebugWithReal|Any CPU.Build.0 = DebugWithReal|Any CPU
-		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.IntegrationWithFake|Any CPU.ActiveCfg = TestsWithReal|Any CPU
-		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.IntegrationWithFake|Any CPU.Build.0 = TestsWithReal|Any CPU
-		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.TestsWithFake|Any CPU.ActiveCfg = TestsWithFake|Any CPU
-		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.TestsWithFake|Any CPU.Build.0 = TestsWithFake|Any CPU
-		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.TestsWithReal|Any CPU.ActiveCfg = TestsWithReal|Any CPU
-		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.TestsWithReal|Any CPU.Build.0 = TestsWithReal|Any CPU
+		{99D98150-0E31-4394-817D-047D4637636F}.Debug|Any CPU.ActiveCfg = DebugWithFake|Any CPU
+		{99D98150-0E31-4394-817D-047D4637636F}.Debug|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{99D98150-0E31-4394-817D-047D4637636F}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
 		{99D98150-0E31-4394-817D-047D4637636F}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{99D98150-0E31-4394-817D-047D4637636F}.DebugWithReal|Any CPU.ActiveCfg = DebugWithFake|Any CPU
@@ -426,6 +469,8 @@ Global
 		{99D98150-0E31-4394-817D-047D4637636F}.TestsWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{99D98150-0E31-4394-817D-047D4637636F}.TestsWithReal|Any CPU.ActiveCfg = DebugWithFake|Any CPU
 		{99D98150-0E31-4394-817D-047D4637636F}.TestsWithReal|Any CPU.Build.0 = DebugWithFake|Any CPU
+		{91C8CBDF-1EE7-497C-964F-14AD1AD1D9D5}.Debug|Any CPU.ActiveCfg = DebugWithFake|Any CPU
+		{91C8CBDF-1EE7-497C-964F-14AD1AD1D9D5}.Debug|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{91C8CBDF-1EE7-497C-964F-14AD1AD1D9D5}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
 		{91C8CBDF-1EE7-497C-964F-14AD1AD1D9D5}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{91C8CBDF-1EE7-497C-964F-14AD1AD1D9D5}.DebugWithReal|Any CPU.ActiveCfg = DebugWithFake|Any CPU
@@ -438,6 +483,20 @@ Global
 		{91C8CBDF-1EE7-497C-964F-14AD1AD1D9D5}.TestsWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{91C8CBDF-1EE7-497C-964F-14AD1AD1D9D5}.TestsWithReal|Any CPU.ActiveCfg = DebugWithFake|Any CPU
 		{91C8CBDF-1EE7-497C-964F-14AD1AD1D9D5}.TestsWithReal|Any CPU.Build.0 = DebugWithFake|Any CPU
+		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.Debug|Any CPU.ActiveCfg = DebugWithReal|Any CPU
+		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.Debug|Any CPU.Build.0 = DebugWithReal|Any CPU
+		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
+		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
+		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.DebugWithReal|Any CPU.ActiveCfg = DebugWithReal|Any CPU
+		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.DebugWithReal|Any CPU.Build.0 = DebugWithReal|Any CPU
+		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.IntegrationWithFake|Any CPU.ActiveCfg = TestsWithReal|Any CPU
+		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.IntegrationWithFake|Any CPU.Build.0 = TestsWithReal|Any CPU
+		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.TestsWithFake|Any CPU.ActiveCfg = TestsWithFake|Any CPU
+		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.TestsWithFake|Any CPU.Build.0 = TestsWithFake|Any CPU
+		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.TestsWithReal|Any CPU.ActiveCfg = TestsWithReal|Any CPU
+		{1344B63D-D9A3-452F-9E42-BFA2CE948681}.TestsWithReal|Any CPU.Build.0 = TestsWithReal|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -484,8 +543,8 @@ Global
 		{66E31A07-598B-4745-BE60-6B550F11F970} = {6BA94BB3-D326-4A10-B4DF-04AE91A0C15E}
 		{DE972164-E8D0-4601-B3BE-B36AD22D7581} = {66E31A07-598B-4745-BE60-6B550F11F970}
 		{486997E8-2FA4-4203-96BD-8699BE71403B} = {1B15D99B-27E6-4BD4-802D-2E3F025789B1}
-		{1344B63D-D9A3-452F-9E42-BFA2CE948681} = {DB76F33D-308E-48EF-8660-FF4AA7760616}
 		{99D98150-0E31-4394-817D-047D4637636F} = {DB76F33D-308E-48EF-8660-FF4AA7760616}
 		{91C8CBDF-1EE7-497C-964F-14AD1AD1D9D5} = {60BDF84E-B822-40A1-982E-56E3E7433382}
+		{1344B63D-D9A3-452F-9E42-BFA2CE948681} = {DB76F33D-308E-48EF-8660-FF4AA7760616}
 	EndGlobalSection
 EndGlobal
