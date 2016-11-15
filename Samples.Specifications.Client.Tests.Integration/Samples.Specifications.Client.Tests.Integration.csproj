@@ -126,13 +126,17 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Samples.Specifications.Client.Presentation.Shared\Samples.Specifications.Client.Presentation.Shared.csproj">
+      <Project>{a4245326-bb01-4b7a-b4de-6ebca9c8094e}</Project>
+      <Name>Samples.Specifications.Client.Presentation.Shared</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Client.Presentation.Shell\Samples.Specifications.Client.Presentation.Shell.csproj">
       <Project>{5270f84d-8ff4-4756-83b0-78dd9777643d}</Project>
       <Name>Samples.Specifications.Client.Presentation.Shell</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Samples.Specifications.Client.Tests.Integration.Infra.SC.Shared\Samples.Specifications.Client.Tests.Integration.Infra.SC.Shared.csproj">
+    <ProjectReference Include="..\Samples.Specifications.Client.Tests.Integration.Infra.Shared\Samples.Specifications.Client.Tests.Integration.Infra.Shared.csproj">
       <Project>{91c8cbdf-1ee7-497c-964f-14ad1ad1d9d5}</Project>
-      <Name>Samples.Specifications.Client.Tests.Integration.Infra.SC.Shared</Name>
+      <Name>Samples.Specifications.Client.Tests.Integration.Infra.Shared</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Client.Tests.Integration.Infra\Samples.Specifications.Client.Tests.Integration.Infra.csproj">
       <Project>{CBF93BCE-066F-4A39-A4D2-408524F49490}</Project>
