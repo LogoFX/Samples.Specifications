@@ -1,18 +1,21 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using System.Windows.Threading;
 using Caliburn.Micro;
 using JetBrains.Annotations;
+using LogoFX.Client.Mvvm.Commanding;
 using LogoFX.Client.Mvvm.ViewModel.Services;
 using LogoFX.Core;
 using Samples.Client.Model.Shared;
+using Samples.Specifications.Client.Presentation.Shell.Properties;
 using Solid.Practices.Scheduling;
 
 namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
 {
     [UsedImplicitly]
-    public class ShellViewModel : Conductor<INotifyPropertyChanged>.Collection.OneActive     
+    public class ShellViewModel : Conductor<INotifyPropertyChanged>.Collection.OneActive
     {
         private readonly IWindowManager _windowManager;
         private readonly IViewModelCreatorService _viewModelCreatorService;                        
@@ -28,6 +31,21 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             LoginViewModel.LoggedInSuccessfully += WeakDelegate.From(strongHandler);
         }
 
+        private ICommand _closeCommand;
+
+        public ICommand CloseCommand
+        {
+            get
+            {
+                return _closeCommand ??
+                       (_closeCommand = ActionCommand
+                           .Do(() =>
+                           {
+                               TryClose();
+                           }));
+            }
+        }
+        
         private bool _isBusy;
 
         public bool IsBusy
@@ -94,6 +112,16 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             {
                 await Close();
             }
+        }
+
+        protected override void OnDeactivate(bool close)
+        {
+            if (close)
+            {
+                Settings.Default.Save();
+            }
+
+            base.OnDeactivate(close);
         }
 
         private void OnLoggedInSuccessfully(object sender, EventArgs eventArgs)

@@ -62,6 +62,7 @@ namespace Samples.Specifications.Client.Data.Fake.Providers
         {
             iocContainer.RegisterSingleton<IWarehouseProvider, FakeWarehouseProvider>();
             iocContainer.RegisterSingleton<ILoginProvider, FakeLoginProvider>();
+            iocContainer.RegisterSingleton<IEventsProvider, FakeEventsProvider>();
         }
     }
 }

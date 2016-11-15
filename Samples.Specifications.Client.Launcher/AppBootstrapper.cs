@@ -1,4 +1,6 @@
-﻿using LogoFX.Client.Bootstrapping;
+﻿#define Unity
+
+using LogoFX.Client.Bootstrapping;
 using LogoFX.Client.Bootstrapping.Adapters.Unity;
 using Samples.Specifications.Client.Presentation.Shell.ViewModels;
 
