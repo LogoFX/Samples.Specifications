@@ -1,5 +1,4 @@
-﻿using System;
-using LogoFX.Client.Bootstrapping;
+﻿using LogoFX.Client.Bootstrapping;
 using LogoFX.Client.Bootstrapping.Adapters.SimpleContainer;
 using Samples.Specifications.Client.Launcher.Shared;
 

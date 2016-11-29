@@ -89,11 +89,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Client.Tests.Integration", "Samples.Specifications.Client.Tests.Integration\Samples.Specifications.Client.Tests.Integration.csproj", "{486997E8-2FA4-4203-96BD-8699BE71403B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Client.SC.Launcher", "Samples.Specifications.Client.SC.Launcher\Samples.Specifications.Client.SC.Launcher.csproj", "{1344B63D-D9A3-452F-9E42-BFA2CE948681}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Client.Launcher", "Samples.Specifications.Client.SC.Launcher\Samples.Specifications.Client.Launcher.csproj", "{1344B63D-D9A3-452F-9E42-BFA2CE948681}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Client.SC.Launcher.Shared", "Samples.Specifications.Client.SC.Launcher.Shared\Samples.Specifications.Client.SC.Launcher.Shared.csproj", "{99D98150-0E31-4394-817D-047D4637636F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Client.Launcher.Shared", "Samples.Specifications.Client.SC.Launcher.Shared\Samples.Specifications.Client.Launcher.Shared.csproj", "{99D98150-0E31-4394-817D-047D4637636F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Client.Tests.Integration.Infra.SC.Shared", "Samples.Specifications.Client.Tests.Integration.Infra.SC.Shared\Samples.Specifications.Client.Tests.Integration.Infra.SC.Shared.csproj", "{91C8CBDF-1EE7-497C-964F-14AD1AD1D9D5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Client.Tests.Integration.Infra.Shared", "Samples.Specifications.Client.Tests.Integration.Infra.SC.Shared\Samples.Specifications.Client.Tests.Integration.Infra.Shared.csproj", "{91C8CBDF-1EE7-497C-964F-14AD1AD1D9D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

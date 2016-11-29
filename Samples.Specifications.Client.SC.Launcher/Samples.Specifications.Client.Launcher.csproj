@@ -146,10 +146,6 @@
       <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModel.1.0.5\lib\net45\LogoFX.Client.Mvvm.ViewModel.Platform.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="LogoFX.Client.Mvvm.ViewModel.Shared, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModel.Shared.1.0.4\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\LogoFX.Client.Mvvm.ViewModel.Shared.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="LogoFX.Core, Version=1.0.7.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Core.1.0.7\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch\LogoFX.Core.dll</HintPath>
       <Private>True</Private>
@@ -260,9 +256,9 @@
       <Project>{5270f84d-8ff4-4756-83b0-78dd9777643d}</Project>
       <Name>Samples.Specifications.Client.Presentation.Shell</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Samples.Specifications.Client.SC.Launcher.Shared\Samples.Specifications.Client.SC.Launcher.Shared.csproj">
+    <ProjectReference Include="..\Samples.Specifications.Client.SC.Launcher.Shared\Samples.Specifications.Client.Launcher.Shared.csproj">
       <Project>{99d98150-0e31-4394-817d-047d4637636f}</Project>
-      <Name>Samples.Specifications.Client.SC.Launcher.Shared</Name>
+      <Name>Samples.Specifications.Client.Launcher.Shared</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
