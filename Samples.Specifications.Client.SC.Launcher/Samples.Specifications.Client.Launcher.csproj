@@ -257,7 +257,7 @@
       <Name>Samples.Specifications.Client.Presentation.Shell</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Client.SC.Launcher.Shared\Samples.Specifications.Client.Launcher.Shared.csproj">
-      <Project>{99d98150-0e31-4394-817d-047d4637636f}</Project>
+      <Project>{99D98150-0E31-4394-817D-047D4637636F}</Project>
       <Name>Samples.Specifications.Client.Launcher.Shared</Name>
     </ProjectReference>
   </ItemGroup>
