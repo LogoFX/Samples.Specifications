@@ -167,6 +167,10 @@
     <Compile Include="StartClientApplicationService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Samples.Client.Model.Contracts\Samples.Client.Model.Contracts.csproj">
+      <Project>{CDD78501-3C82-4060-8202-D1AD54C581CA}</Project>
+      <Name>Samples.Client.Model.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Client.Presentation.Shell\Samples.Specifications.Client.Presentation.Shell.csproj">
       <Project>{5270F84D-8FF4-4756-83B0-78DD9777643D}</Project>
       <Name>Samples.Specifications.Client.Presentation.Shell</Name>
