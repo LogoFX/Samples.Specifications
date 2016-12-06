@@ -168,7 +168,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Samples.Client.Model.Contracts\Samples.Client.Model.Contracts.csproj">
-      <Project>{CDD78501-3C82-4060-8202-D1AD54C581CA}</Project>
+      <Project>{536D34E4-A409-4567-B7C6-58F50206740E}</Project>
       <Name>Samples.Client.Model.Contracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Client.Presentation.Shell\Samples.Specifications.Client.Presentation.Shell.csproj">

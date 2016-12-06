@@ -23,7 +23,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithFake|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\Bin\TestsWithFake\Infra\</OutputPath>
+    <OutputPath>..\..\Bin\TestsWithFake\Infra\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>

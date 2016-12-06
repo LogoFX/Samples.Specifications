@@ -287,6 +287,10 @@
       <Project>{AF68283B-5283-4DEF-8DA0-6FB6CA85C1BD}</Project>
       <Name>Samples.Specifications.Client.Data.Fake.ProviderBuilders</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Samples.Specifications.Client.Launcher.Shared\Samples.Specifications.Client.Launcher.Shared.csproj">
+      <Project>{99d98150-0e31-4394-817d-047d4637636f}</Project>
+      <Name>Samples.Specifications.Client.Launcher.Shared</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Common\Samples.Specifications.Client.Presentation.Shell\Samples.Specifications.Client.Presentation.Shell.csproj">
       <Project>{5270F84D-8FF4-4756-83B0-78DD9777643D}</Project>
       <Name>Samples.Specifications.Client.Presentation.Shell</Name>
@@ -294,10 +298,6 @@
     <ProjectReference Include="..\..\Common\Samples.Specifications.Client.Tests.Integration.Infra.Core\Samples.Specifications.Client.Tests.Integration.Infra.Core.csproj">
       <Project>{207D3FBC-1EEC-43EA-BAED-E3C14F793119}</Project>
       <Name>Samples.Specifications.Client.Tests.Integration.Infra.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Samples.Specifications.Client.Launcher.Shared\Samples.Specifications.Client.Launcher.Shared.csproj">
-      <Project>{99D98150-0E31-4394-817D-047D4637636F}</Project>
-      <Name>Samples.Specifications.Client.Launcher.Shared</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
