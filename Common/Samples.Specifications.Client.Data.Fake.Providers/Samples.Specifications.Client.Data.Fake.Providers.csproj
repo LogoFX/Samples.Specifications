@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -122,25 +122,25 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Samples.Specifications.Client.Data.Fake.Containers\Samples.Specifications.Client.Data.Fake.Containers.csproj">
-      <Project>{064BD680-2955-4CEC-A56B-B48891EC6AA1}</Project>
-      <Name>Samples.Specifications.Client.Data.Fake.Containers</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Samples.Specifications.Client.Data.Fake.ProviderBuilders\Samples.Specifications.Client.Data.Fake.ProviderBuilders.csproj">
-      <Project>{AF68283B-5283-4DEF-8DA0-6FB6CA85C1BD}</Project>
-      <Name>Samples.Specifications.Client.Data.Fake.ProviderBuilders</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Samples.Client.Data.Contracts.Dto\Samples.Client.Data.Contracts.Dto.csproj">
-      <Project>{8A567338-89FB-49AA-80FE-B47AE861D6A7}</Project>
+      <Project>{CD0CE0AC-568C-4C78-A70C-0865D38D84F7}</Project>
       <Name>Samples.Client.Data.Contracts.Dto</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samples.Client.Data.Contracts.Providers\Samples.Client.Data.Contracts.Providers.csproj">
-      <Project>{D2432BC9-C269-47CA-85AC-7B1F79BDD2B7}</Project>
+      <Project>{4ADC03FA-37C2-4DBD-B0C2-A645116C3130}</Project>
       <Name>Samples.Client.Data.Contracts.Providers</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
+    <ProjectReference Include="..\Samples.Specifications.Client.Data.Fake.Containers\Samples.Specifications.Client.Data.Fake.Containers.csproj">
+      <Project>{10E21AAA-998D-4B09-9728-2B66B13B29ED}</Project>
+      <Name>Samples.Specifications.Client.Data.Fake.Containers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samples.Specifications.Client.Data.Fake.ProviderBuilders\Samples.Specifications.Client.Data.Fake.ProviderBuilders.csproj">
+      <Project>{B69DF3AB-45B8-4C86-9AC5-A5ED1A61E341}</Project>
+      <Name>Samples.Specifications.Client.Data.Fake.ProviderBuilders</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

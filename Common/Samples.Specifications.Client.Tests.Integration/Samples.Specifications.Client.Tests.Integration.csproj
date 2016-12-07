@@ -139,7 +139,7 @@
       <Name>Samples.Specifications.Client.Tests.Integration.Infra</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Tests.Steps\Samples.Specifications.Tests.Steps.csproj">
-      <Project>{DE972164-E8D0-4601-B3BE-B36AD22D7581}</Project>
+      <Project>{0B8DF28B-E521-4178-9AF5-49EEB2CDEDF7}</Project>
       <Name>Samples.Specifications.Tests.Steps</Name>
     </ProjectReference>
   </ItemGroup>
