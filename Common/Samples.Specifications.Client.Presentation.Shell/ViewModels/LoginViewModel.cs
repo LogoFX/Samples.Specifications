@@ -55,7 +55,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
 
                                catch (Exception ex)
                                {
-                                   LoginFailureCause = "Failed to log in";
+                                   LoginFailureCause = "Failed to log in: " + ex.Message;
                                }
 
                                finally

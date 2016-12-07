@@ -41,7 +41,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TestsWithFake|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\TestsWithFake\</OutputPath>
+    <OutputPath>..\..\bin\TestsWithFake\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -87,7 +87,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Samples.Client.Model.Contracts\Samples.Client.Model.Contracts.csproj">
-      <Project>{cdd78501-3c82-4060-8202-d1ad54c581ca}</Project>
+      <Project>{536D34E4-A409-4567-B7C6-58F50206740E}</Project>
       <Name>Samples.Client.Model.Contracts</Name>
     </ProjectReference>
   </ItemGroup>

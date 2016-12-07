@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -289,11 +289,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Samples.Client.Model.Contracts\Samples.Client.Model.Contracts.csproj">
-      <Project>{cdd78501-3c82-4060-8202-d1ad54c581ca}</Project>
+      <Project>{536D34E4-A409-4567-B7C6-58F50206740E}</Project>
       <Name>Samples.Client.Model.Contracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samples.Client.Model.Shared\Samples.Client.Model.Shared.csproj">
-      <Project>{41680F4B-C248-4184-BB78-E2B778A4690D}</Project>
+      <Project>{49724A56-9FA9-44C4-B731-1E414EE598BC}</Project>
       <Name>Samples.Client.Model.Shared</Name>
     </ProjectReference>
   </ItemGroup>
