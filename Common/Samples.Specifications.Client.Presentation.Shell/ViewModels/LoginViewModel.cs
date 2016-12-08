@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Windows;
 using System.Windows.Input;
 using JetBrains.Annotations;
 using LogoFX.Client.Mvvm.Commanding;
@@ -45,11 +46,6 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
                            .When(() => !string.IsNullOrWhiteSpace(UserName) && !string.IsNullOrWhiteSpace(Password))
                            .Do(async () =>
                            {
-                               if (Password != "1234")
-                               {
-                                   Debugger.Break();
-                               }
-
                                LoginFailureCause = null;
 
                                try
