@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TestsWithFake|AnyCPU'">
+    <OutputPath>bin\TestsWithFake\</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="BootstrapperExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
