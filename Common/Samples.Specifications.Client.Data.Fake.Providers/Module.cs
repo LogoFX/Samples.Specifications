@@ -55,7 +55,8 @@ namespace Samples.Specifications.Client.Data.Fake.Providers
         private static void RegisterBuilders(IIocContainerRegistrator iocContainer)
         {
             iocContainer.RegisterInstance(WarehouseProviderBuilder.CreateBuilder()); 
-            iocContainer.RegisterInstance(LoginProviderBuilder.CreateBuilder());           
+            iocContainer.RegisterInstance(LoginProviderBuilder.CreateBuilder());
+            iocContainer.RegisterInstance(EventsProviderBuilder.CreateBuilder());
         }
 
         private static void RegisterProviders(IIocContainerRegistrator iocContainer)
