@@ -12,7 +12,8 @@ namespace Samples.Specifications.Tests.EndToEnd.Infra.Providers
         {
             base.OnRegisterProviders(iocContainer);
             RegisterAllBuilders(iocContainer, LoginProviderBuilder.CreateBuilder);
-            RegisterAllBuilders(iocContainer, WarehouseProviderBuilder.CreateBuilder);            
+            RegisterAllBuilders(iocContainer, WarehouseProviderBuilder.CreateBuilder);
+            RegisterAllBuilders(iocContainer, EventsProviderBuilder.CreateBuilder);
         }
     }
 }
