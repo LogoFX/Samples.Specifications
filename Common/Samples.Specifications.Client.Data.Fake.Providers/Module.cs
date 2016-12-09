@@ -54,16 +54,16 @@ namespace Samples.Specifications.Client.Data.Fake.Providers
 
         private static void RegisterBuilders(IIocContainerRegistrator iocContainer)
         {
-            iocContainer.RegisterInstance(WarehouseProviderBuilder.CreateBuilder()); 
-            iocContainer.RegisterInstance(LoginProviderBuilder.CreateBuilder());
+            iocContainer.RegisterInstance(WarehouseProviderBuilder.CreateBuilder());
             iocContainer.RegisterInstance(EventsProviderBuilder.CreateBuilder());
+            iocContainer.RegisterInstance(LoginProviderBuilder.CreateBuilder());
         }
 
         private static void RegisterProviders(IIocContainerRegistrator iocContainer)
         {
             iocContainer.RegisterSingleton<IWarehouseProvider, FakeWarehouseProvider>();
-            iocContainer.RegisterSingleton<ILoginProvider, FakeLoginProvider>();
             iocContainer.RegisterSingleton<IEventsProvider, FakeEventsProvider>();
+            iocContainer.RegisterSingleton<ILoginProvider, FakeLoginProvider>();
         }
     }
 }

@@ -12,6 +12,7 @@ namespace Samples.Specifications.Client.Data.Real.Providers
         {
             iocContainer.RegisterSingleton<ILoginProvider, LoginProvider>();
             iocContainer.RegisterSingleton<IWarehouseProvider, WarehouseProvider>();
+            iocContainer.RegisterSingleton<IEventsProvider, EventsProvider>();
         }
     }
 }
