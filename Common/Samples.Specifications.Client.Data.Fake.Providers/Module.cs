@@ -30,13 +30,41 @@ namespace Samples.Specifications.Client.Data.Fake.Providers
         private static IWarehouseContainer InitializeWarehouseContainer()
         {
             var warehouseContainer = new WarehouseContainer();
-            warehouseContainer.UpdateWarehouseItems(new []
+            warehouseContainer.UpdateWarehouseItems(new[]
             {
                 new WarehouseItemDto
                 {
                     Kind = "PC",
                     Price = 25.43,
                     Quantity = 8
+                },
+
+                new WarehouseItemDto
+                {
+                    Kind = "Acme",
+                    Price = 10,
+                    Quantity = 10
+                },
+
+                new WarehouseItemDto
+                {
+                    Kind = "Bacme",
+                    Price = 20,
+                    Quantity = 3
+                },
+
+                new WarehouseItemDto
+                {
+                    Kind = "Exceed",
+                    Price = 0.4,
+                    Quantity = 100
+                },
+
+                new WarehouseItemDto
+                {
+                    Kind = "Acme2",
+                    Price = 1,
+                    Quantity = 10
                 }
             });
             return warehouseContainer;
