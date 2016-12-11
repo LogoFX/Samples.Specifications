@@ -134,7 +134,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\SC\Samples.Specifications.Client.Tests.Integration.Infra.Shared\Samples.Specifications.Client.Tests.Integration.Infra.Shared.csproj">
+    <ProjectReference Include="..\..\Unity\Samples.Specifications.Client.Tests.Integration.Infra.Shared\Samples.Specifications.Client.Tests.Integration.Infra.Shared.csproj">
       <Project>{91c8cbdf-1ee7-497c-964f-14ad1ad1d9d5}</Project>
       <Name>Samples.Specifications.Client.Tests.Integration.Infra.Shared</Name>
     </ProjectReference>
