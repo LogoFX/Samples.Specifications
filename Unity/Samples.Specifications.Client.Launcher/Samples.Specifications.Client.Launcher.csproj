@@ -240,10 +240,6 @@
       <Project>{5270f84d-8ff4-4756-83b0-78dd9777643d}</Project>
       <Name>Samples.Specifications.Client.Presentation.Shell</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Samples.Specifications.Client.Presentation.Shared\Samples.Specifications.Client.Presentation.Shared.csproj">
-      <Project>{a4245326-bb01-4b7a-b4de-6ebca9c8094e}</Project>
-      <Name>Samples.Specifications.Client.Presentation.Shared</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">

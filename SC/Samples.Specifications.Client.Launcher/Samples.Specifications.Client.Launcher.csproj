@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -248,17 +248,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Samples.Specifications.Client.Launcher.Shared.SC\Samples.Specifications.Client.Launcher.Shared.csproj">
+    <ProjectReference Include="..\Samples.Specifications.Client.Launcher.Shared\Samples.Specifications.Client.Launcher.Shared.csproj">
       <Project>{8aa2f275-8129-42a6-bb6f-1b417b96f4ab}</Project>
       <Name>Samples.Specifications.Client.Launcher.Shared</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Samples.Specifications.Client.Presentation.Shared\Samples.Specifications.Client.Presentation.Shared.csproj">
-      <Project>{a4245326-bb01-4b7a-b4de-6ebca9c8094e}</Project>
-      <Name>Samples.Specifications.Client.Presentation.Shared</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Samples.Specifications.Client.Presentation.Shell\Samples.Specifications.Client.Presentation.Shell.csproj">
-      <Project>{5270f84d-8ff4-4756-83b0-78dd9777643d}</Project>
-      <Name>Samples.Specifications.Client.Presentation.Shell</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
