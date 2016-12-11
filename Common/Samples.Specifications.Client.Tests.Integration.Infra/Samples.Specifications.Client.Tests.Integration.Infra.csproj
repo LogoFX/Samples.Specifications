@@ -192,13 +192,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\SC\Samples.Specifications.Client.Tests.Integration.Infra.Shared\Samples.Specifications.Client.Tests.Integration.Infra.Shared.csproj">
+      <Project>{91C8CBDF-1EE7-497C-964F-14AD1AD1D9D5}</Project>
+      <Name>Samples.Specifications.Client.Tests.Integration.Infra.Shared</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Client.Presentation.Shell\Samples.Specifications.Client.Presentation.Shell.csproj">
       <Project>{5270F84D-8FF4-4756-83B0-78DD9777643D}</Project>
       <Name>Samples.Specifications.Client.Presentation.Shell</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Unity\Samples.Specifications.Client.Tests.Integration.Infra.Shared\Samples.Specifications.Client.Tests.Integration.Infra.Shared.csproj">
-      <Project>{91C8CBDF-1EE7-497C-964F-14AD1AD1D9D5}</Project>
-      <Name>Samples.Specifications.Client.Tests.Integration.Infra.Shared</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
