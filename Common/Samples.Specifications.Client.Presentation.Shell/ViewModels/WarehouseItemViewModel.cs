@@ -1,11 +1,13 @@
-﻿using JetBrains.Annotations;
-using LogoFX.Client.Mvvm.ViewModel;
+﻿using System.Threading.Tasks;
+using JetBrains.Annotations;
+using LogoFX.Client.Mvvm.ViewModel.Extensions;
 using Samples.Client.Model.Contracts;
+using Solid.Practices.Scheduling;
 
 namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
 {
     [UsedImplicitly]
-    public class WarehouseItemViewModel : /*Editable*/ObjectViewModel<IWarehouseItem>
+    public class WarehouseItemViewModel : EditableObjectViewModel<IWarehouseItem>
     {
         public WarehouseItemViewModel(IWarehouseItem model) 
             : base(model)
@@ -13,14 +15,9 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             IsEnabled = model != null;
         }
 
-        //public bool IsEnabled
-        //{
-        //    get { return Model != null; }
-        //}
-
-        //protected override Task<bool> SaveMethod(IWarehouseItem model)
-        //{
-        //    return TaskRunner.RunAsync(() => true);
-        //}
+        protected override Task<bool> SaveMethod(IWarehouseItem model)
+        {
+            return TaskRunner.RunAsync(() => true);
+        }
     }
 }

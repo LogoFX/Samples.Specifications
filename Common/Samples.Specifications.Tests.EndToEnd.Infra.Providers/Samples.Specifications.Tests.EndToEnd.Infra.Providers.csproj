@@ -124,11 +124,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Samples.Client.Data.Contracts.Providers\Samples.Client.Data.Contracts.Providers.csproj">
-      <Project>{4ADC03FA-37C2-4DBD-B0C2-A645116C3130}</Project>
+      <Project>{4adc03fa-37c2-4dbd-b0c2-a645116c3130}</Project>
       <Name>Samples.Client.Data.Contracts.Providers</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Client.Data.Fake.ProviderBuilders\Samples.Specifications.Client.Data.Fake.ProviderBuilders.csproj">
-      <Project>{B69DF3AB-45B8-4C86-9AC5-A5ED1A61E341}</Project>
+      <Project>{b69df3ab-45b8-4c86-9ac5-a5ed1a61e341}</Project>
       <Name>Samples.Specifications.Client.Data.Fake.ProviderBuilders</Name>
     </ProjectReference>
   </ItemGroup>

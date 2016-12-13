@@ -232,6 +232,10 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Common\Samples.Specifications.Client.Presentation.Shared\Samples.Specifications.Client.Presentation.Shared.csproj">
+      <Project>{a4245326-bb01-4b7a-b4de-6ebca9c8094e}</Project>
+      <Name>Samples.Specifications.Client.Presentation.Shared</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Client.Launcher.Shared\Samples.Specifications.Client.Launcher.Shared.csproj">
       <Project>{99D98150-0E31-4394-817D-047D4637636F}</Project>
       <Name>Samples.Specifications.Client.Launcher.Shared</Name>
