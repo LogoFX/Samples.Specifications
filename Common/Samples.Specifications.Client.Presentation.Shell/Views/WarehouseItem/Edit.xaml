@@ -37,7 +37,8 @@
                    Grid.Column="0"
                    VerticalAlignment="Center"
                    Text="Price" />
-        <TextBox Grid.Row="1"
+        <TextBox AutomationProperties.AutomationId="WarehouseItemPriceTextBox"
+                 Grid.Row="1"
                  Grid.Column="1"
                  Margin="5,0,0,0"
                  VerticalAlignment="Center"

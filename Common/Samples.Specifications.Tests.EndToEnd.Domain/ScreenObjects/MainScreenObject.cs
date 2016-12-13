@@ -51,16 +51,17 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
         public void EditWarehouseItem(string kind, string fieldName, string fieldValue)
         {           
             var match = GetRowByKind(kind);
+            var shell = StructureHelper.GetShell();
             try
             {
-                var cell = match.Cells[fieldName];
-                cell.Click();
-                cell.Enter(fieldValue);                
-                Keyboard.Instance.PressSpecialKey(KeyboardInput.SpecialKeys.RETURN);                              
+                match.Select();
+                var priceTextBox = shell.Get<TextBox>(SearchCriteria.ByAutomationId("WarehouseItemPriceTextBox"));
+                priceTextBox.Click();
+                priceTextBox.Enter(fieldValue);                
             }
-            catch (Exception)
+            catch (Exception err)
             {                
-                throw new InvalidOperationException($"Column {fieldName} cannot be found");
+                throw new InvalidOperationException($"Column {fieldName} cannot be found", err);
             }                        
         }
 
