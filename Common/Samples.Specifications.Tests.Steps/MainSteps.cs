@@ -48,7 +48,17 @@ namespace Samples.Specifications.Tests.Steps
 
         public void WhenIDeleteItem(string kind)
         {
-            _mainScreenObject.DeleteItem(kind);
+            _mainScreenObject.DeleteWarehouseItem(kind);
+        }
+
+        public void WhenIAddData(WarehouseItemAssertionTestData[] warehouseItems)
+        {
+            warehouseItems.Should().HaveCount(1);
+
+            foreach (var warehouseItem in warehouseItems)
+            {
+                _mainScreenObject.AddWarehouseItem(warehouseItem);
+            }
         }
     }
 }

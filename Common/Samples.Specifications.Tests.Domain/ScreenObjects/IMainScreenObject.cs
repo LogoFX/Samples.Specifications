@@ -7,8 +7,9 @@ namespace Samples.Specifications.Tests.Domain.ScreenObjects
     {
         IEnumerable<WarehouseItemAssertionTestData> GetWarehouseItems();
         WarehouseItemAssertionTestData GetWarehouseItemByKind(string kind);
-        void EditWarehouseItem(string kind, string fieldName, string fieldValue);
         bool IsActive();
-        void DeleteItem(string kind);
+        void EditWarehouseItem(string kind, string fieldName, string fieldValue);
+        void AddWarehouseItem(WarehouseItemAssertionTestData warehouseItemData);
+        void DeleteWarehouseItem(string kind);
     }
 }

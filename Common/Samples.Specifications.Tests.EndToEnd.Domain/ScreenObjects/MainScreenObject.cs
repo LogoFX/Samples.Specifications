@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using Samples.Specifications.Tests.Data;
 using Samples.Specifications.Tests.Domain.ScreenObjects;
-using TestStack.White.InputDevices;
 using TestStack.White.UIItems;
 using TestStack.White.UIItems.Finders;
-using TestStack.White.WindowsAPI;
 
 namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
 {
@@ -52,19 +51,20 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
         public void EditWarehouseItem(string kind, string fieldName, string fieldValue)
         {           
             var match = GetRowByKind(kind);
-            var shell = StructureHelper.GetShell();
             try
             {
                 match.Focus();
                 Task.Delay(1000).Wait();
                 match.Cells[0].Click();
-                var priceTextBox = shell.Get<TextBox>(SearchCriteria.ByAutomationId("WarehouseItemPriceTextBox"));
-                priceTextBox.Enter(fieldValue);
             }
             catch (Exception err)
-            {                
-                throw new InvalidOperationException($"Column {fieldName} cannot be found", err);
-            }                        
+            {
+                throw new InvalidOperationException($"Item {kind} cannot be found", err);
+            }
+
+            var shell = StructureHelper.GetShell();
+            var priceTextBox = shell.Get<TextBox>(SearchCriteria.ByAutomationId("WarehouseItemPriceTextBox"));
+            priceTextBox.Enter(fieldValue);
         }
 
         public bool IsActive()
@@ -73,10 +73,42 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
             return true;
         }
 
-        public void DeleteItem(string kind)
+        public void DeleteWarehouseItem(string kind)
         {
             var match = GetRowByKind(kind);
+            try
+            {
+                match.Focus();
+                Task.Delay(1000).Wait();
+                match.Cells[0].Click();
+            }
+            catch (Exception err)
+            {
+                throw new InvalidOperationException($"Item {kind} cannot be found", err);
+            }
+
             var shell = StructureHelper.GetShell();
+            var deleteButton = shell.Get<Button>(SearchCriteria.ByAutomationId("WarehouseItemDeleteButton"));
+            deleteButton.Click();
+        }
+
+        public void AddWarehouseItem(WarehouseItemAssertionTestData warehouseItemData)
+        {
+            var shell = StructureHelper.GetShell();
+
+            var deleteButton = shell.Get<Button>(SearchCriteria.ByAutomationId("WarehouseItemNewButton"));
+            deleteButton.Click();
+
+            var kindTextBox = shell.Get<TextBox>(SearchCriteria.ByAutomationId("WarehouseItemKindTextBox"));
+            var priceTextBox = shell.Get<TextBox>(SearchCriteria.ByAutomationId("WarehouseItemPriceTextBox"));
+            var quantityTextBox = shell.Get<TextBox>(SearchCriteria.ByAutomationId("WarehouseItemQuantityTextBox"));
+
+            kindTextBox.Enter(warehouseItemData.Kind);
+            priceTextBox.Enter(warehouseItemData.Price.ToString(CultureInfo.InvariantCulture));
+            quantityTextBox.Enter(warehouseItemData.Quantity.ToString(CultureInfo.InvariantCulture));
+
+            var applyButton = shell.Get<Button>(SearchCriteria.ByAutomationId("WarehouseItemApplyButton"));
+            applyButton.Click();
         }
     }
 }

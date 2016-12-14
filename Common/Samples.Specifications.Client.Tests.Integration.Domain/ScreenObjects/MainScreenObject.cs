@@ -22,7 +22,12 @@ namespace Samples.Specifications.Client.Tests.Integration.Domain.ScreenObjects
             return main.IsActive;
         }
 
-        public void DeleteItem(string kind)
+        public void AddWarehouseItem(WarehouseItemAssertionTestData warehouseItemData)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void DeleteWarehouseItem(string kind)
         {
             throw new System.NotImplementedException();
         }

@@ -42,8 +42,9 @@
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
-                
-                <Button Grid.Column="0"
+
+                <Button AutomationProperties.AutomationId="WarehouseItemNewButton" 
+                        Grid.Column="0"
                         Content="New"
                         Width="100"
                         Height="24"
@@ -55,7 +56,7 @@
                     </i:Interaction.Triggers>
                 </Button>
 
-                <Button AutomationProperties.AutomationId="WarehouseIt" 
+                <Button AutomationProperties.AutomationId="WarehouseItemDeleteButton" 
                         Grid.Column="1"
                         Content="Delete"
                         Width="100"
@@ -63,19 +64,20 @@
                         VerticalAlignment="Center">
                     <i:Interaction.Triggers>
                         <i:EventTrigger EventName="Click">
-                            <commanding:ExecuteCommandAction Command="{Binding Path=NewCommand, Mode=OneTime}" />
+                            <commanding:ExecuteCommandAction Command="{Binding Path=DeleteCommand, Mode=OneTime}" />
                         </i:EventTrigger>
                     </i:Interaction.Triggers>
                 </Button>
 
-                <Button Grid.Column="3"
+                <Button AutomationProperties.AutomationId="WarehouseItemApplyButton" 
+                        Grid.Column="3"
                         Content="Apply"
                         Width="100"
                         Height="24"
                         VerticalAlignment="Center">
                     <i:Interaction.Triggers>
                         <i:EventTrigger EventName="Click">
-                            <commanding:ExecuteCommandAction Command="{Binding Path=DeleteCommand, Mode=OneTime}" />
+                            <commanding:ExecuteCommandAction Command="{Binding Path=ApplyCommand, Mode=OneTime}" />
                         </i:EventTrigger>
                     </i:Interaction.Triggers>
                 </Button>

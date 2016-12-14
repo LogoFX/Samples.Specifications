@@ -177,12 +177,12 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Delete item price")]
+        [Xunit.FactAttribute(DisplayName="Delete warehouse item")]
         [Xunit.TraitAttribute("FeatureTitle", "ViewWarehouseContents")]
-        [Xunit.TraitAttribute("Description", "Delete item price")]
-        public virtual void DeleteItemPrice()
+        [Xunit.TraitAttribute("Description", "Delete warehouse item")]
+        public virtual void DeleteWarehouseItem()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete item price", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete warehouse item", ((string[])(null)));
 #line 36
 this.ScenarioSetup(scenarioInfo);
 #line hidden
@@ -234,6 +234,77 @@ this.ScenarioSetup(scenarioInfo);
                         "29676.5"});
 #line 48
  testRunner.Then("I expect to see the following data on the screen:", ((string)(null)), table5, "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Create new warehouse item")]
+        [Xunit.TraitAttribute("FeatureTitle", "ViewWarehouseContents")]
+        [Xunit.TraitAttribute("Description", "Create new warehouse item")]
+        public virtual void CreateNewWarehouseItem()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create new warehouse item", ((string[])(null)));
+#line 53
+this.ScenarioSetup(scenarioInfo);
+#line hidden
+            TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Kind",
+                        "Price",
+                        "Quantity"});
+            table6.AddRow(new string[] {
+                        "Oven",
+                        "34.95",
+                        "20"});
+            table6.AddRow(new string[] {
+                        "TV",
+                        "346.95",
+                        "50"});
+#line 54
+ testRunner.Given("warehouse contains the following items:", ((string)(null)), table6, "Given ");
+#line 58
+ testRunner.And("I am able to log in successfully with username \'Admin\' and password \'1234\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 59
+ testRunner.When("I open the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 60
+ testRunner.And("I set the username to \"Admin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 61
+ testRunner.And("I set the password to \"1234\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 62
+ testRunner.And("I log in to the system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Kind",
+                        "Price",
+                        "Quantity"});
+            table7.AddRow(new string[] {
+                        "PC",
+                        "423.95",
+                        "70"});
+#line 63
+ testRunner.And("I add data:", ((string)(null)), table7, "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Kind",
+                        "Price",
+                        "Quantity",
+                        "Total Cost"});
+            table8.AddRow(new string[] {
+                        "Oven",
+                        "34.95",
+                        "20",
+                        "699"});
+            table8.AddRow(new string[] {
+                        "TV",
+                        "346.95",
+                        "50",
+                        "17347.5"});
+            table8.AddRow(new string[] {
+                        "PC",
+                        "423.95",
+                        "70",
+                        "29676.5"});
+#line 66
+ testRunner.Then("I expect to see the following data on the screen:", ((string)(null)), table8, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
