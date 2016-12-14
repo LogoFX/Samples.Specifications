@@ -37,6 +37,7 @@
             <Grid Grid.Row="1" IsEnabled="{Binding Path=ActiveWarehouseItem.IsEnabled}">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="Auto" />
@@ -54,19 +55,32 @@
                     </i:Interaction.Triggers>
                 </Button>
 
-                <Button Grid.Column="2"
+                <Button AutomationProperties.AutomationId="WarehouseIt" 
+                        Grid.Column="1"
+                        Content="Delete"
+                        Width="100"
+                        Height="24"
+                        VerticalAlignment="Center">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <commanding:ExecuteCommandAction Command="{Binding Path=NewCommand, Mode=OneTime}" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Button>
+
+                <Button Grid.Column="3"
                         Content="Apply"
                         Width="100"
                         Height="24"
                         VerticalAlignment="Center">
                     <i:Interaction.Triggers>
                         <i:EventTrigger EventName="Click">
-                            <commanding:ExecuteCommandAction Command="{Binding Path=ApplyCommand, Mode=OneTime}" />
+                            <commanding:ExecuteCommandAction Command="{Binding Path=DeleteCommand, Mode=OneTime}" />
                         </i:EventTrigger>
                     </i:Interaction.Triggers>
                 </Button>
 
-                <Button Grid.Column="3"
+                <Button Grid.Column="4"
                         Margin="5,0,0,0"
                         Content="Discard"
                         Width="100"

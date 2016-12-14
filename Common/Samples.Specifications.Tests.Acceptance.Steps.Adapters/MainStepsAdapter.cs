@@ -34,5 +34,11 @@ namespace Samples.Specifications.Tests.Acceptance.Steps.Adapters
         {
             MainSteps.ThenTotalCostOfItemIs(kind, expectedTotalCost);
         }
+
+        [When(@"I delete ""(.*)"" item")]
+        public void WhenIDeleteItem(string kind)
+        {
+            MainSteps.WhenIDeleteItem(kind);
+        }
     }
 }

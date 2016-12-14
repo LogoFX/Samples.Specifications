@@ -22,6 +22,11 @@ namespace Samples.Specifications.Client.Tests.Integration.Domain.ScreenObjects
             return main.IsActive;
         }
 
+        public void DeleteItem(string kind)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public IEnumerable<WarehouseItemAssertionTestData> GetWarehouseItems()
         {
             var main = StructureHelper.GetMain();

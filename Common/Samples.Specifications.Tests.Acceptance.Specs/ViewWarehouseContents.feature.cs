@@ -177,6 +177,67 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
+        [Xunit.FactAttribute(DisplayName="Delete item price")]
+        [Xunit.TraitAttribute("FeatureTitle", "ViewWarehouseContents")]
+        [Xunit.TraitAttribute("Description", "Delete item price")]
+        public virtual void DeleteItemPrice()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete item price", ((string[])(null)));
+#line 36
+this.ScenarioSetup(scenarioInfo);
+#line hidden
+            TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Kind",
+                        "Price",
+                        "Quantity"});
+            table4.AddRow(new string[] {
+                        "Oven",
+                        "34.95",
+                        "20"});
+            table4.AddRow(new string[] {
+                        "TV",
+                        "346.95",
+                        "50"});
+            table4.AddRow(new string[] {
+                        "PC",
+                        "423.95",
+                        "70"});
+#line 37
+ testRunner.Given("warehouse contains the following items:", ((string)(null)), table4, "Given ");
+#line 42
+ testRunner.And("I am able to log in successfully with username \'Admin\' and password \'1234\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 43
+ testRunner.When("I open the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 44
+ testRunner.And("I set the username to \"Admin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 45
+ testRunner.And("I set the password to \"1234\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 46
+ testRunner.And("I log in to the system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 47
+ testRunner.And("I delete \"TV\" item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Kind",
+                        "Price",
+                        "Quantity",
+                        "Total Cost"});
+            table5.AddRow(new string[] {
+                        "Oven",
+                        "34.95",
+                        "20",
+                        "699"});
+            table5.AddRow(new string[] {
+                        "PC",
+                        "423.95",
+                        "70",
+                        "29676.5"});
+#line 48
+ testRunner.Then("I expect to see the following data on the screen:", ((string)(null)), table5, "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
         [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
         [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
         public class FixtureData : System.IDisposable

@@ -35,8 +35,25 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
                            .When(() => true)
                            .Do(async () =>
                            {
-                               await NewwarehouseItem();
+                               await NewWarehouseItem();
                            }));
+            }
+        }
+
+        private ICommand _deleteCommand;
+
+        public ICommand DeleteCommand
+        {
+            get
+            {
+                return _deleteCommand ??
+                       (_deleteCommand = ActionCommand
+                           .When(() => WarehouseItems != null && WarehouseItems.WarehouseItems.SelectedItem != null)
+                           .Do(() =>
+                           {
+                           })
+                           .RequeryOnPropertyChanged(this, () => WarehouseItems)
+                           .RequeryOnPropertyChanged(WarehouseItems.WarehouseItems, () => WarehouseItems.WarehouseItems.SelectedItem));
             }
         }
 
@@ -112,7 +129,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             return _viewModelCreatorService.CreateViewModel<EventsViewModel>();
         }
 
-        private async Task NewwarehouseItem()
+        private async Task NewWarehouseItem()
         {
             Debug.Assert(!IsBusy);
 
@@ -135,7 +152,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             base.OnInitialize();
 
             await _dataService.GetWarehouseItemsAsync();
-            await NewwarehouseItem();
+            await NewWarehouseItem();
         }
     }
 }

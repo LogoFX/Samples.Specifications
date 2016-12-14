@@ -45,5 +45,10 @@ namespace Samples.Specifications.Tests.Steps
             var isActive = _mainScreenObject.IsActive();
             isActive.Should().BeTrue();
         }
+
+        public void WhenIDeleteItem(string kind)
+        {
+            _mainScreenObject.DeleteItem(kind);
+        }
     }
 }

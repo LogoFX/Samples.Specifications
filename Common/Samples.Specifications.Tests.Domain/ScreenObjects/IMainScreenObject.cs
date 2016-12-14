@@ -9,5 +9,6 @@ namespace Samples.Specifications.Tests.Domain.ScreenObjects
         WarehouseItemAssertionTestData GetWarehouseItemByKind(string kind);
         void EditWarehouseItem(string kind, string fieldName, string fieldValue);
         bool IsActive();
+        void DeleteItem(string kind);
     }
 }

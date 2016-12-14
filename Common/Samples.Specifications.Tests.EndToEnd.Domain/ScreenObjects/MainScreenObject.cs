@@ -55,13 +55,11 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
             var shell = StructureHelper.GetShell();
             try
             {
-                //Task.Delay(5000).Wait();
                 match.Focus();
+                Task.Delay(1000).Wait();
                 match.Cells[0].Click();
-                //Task.Delay(5000).Wait();
                 var priceTextBox = shell.Get<TextBox>(SearchCriteria.ByAutomationId("WarehouseItemPriceTextBox"));
-                priceTextBox.Click();
-                priceTextBox.Enter(fieldValue);                
+                priceTextBox.Enter(fieldValue);
             }
             catch (Exception err)
             {                
@@ -73,6 +71,12 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
         {
             //for nows
             return true;
+        }
+
+        public void DeleteItem(string kind)
+        {
+            var match = GetRowByKind(kind);
+            var shell = StructureHelper.GetShell();
         }
     }
 }
