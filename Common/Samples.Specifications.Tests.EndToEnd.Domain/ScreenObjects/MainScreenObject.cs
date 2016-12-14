@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Samples.Specifications.Tests.Data;
 using Samples.Specifications.Tests.Domain.ScreenObjects;
 using TestStack.White.InputDevices;
@@ -54,7 +55,10 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
             var shell = StructureHelper.GetShell();
             try
             {
-                match.Select();
+                //Task.Delay(5000).Wait();
+                match.Focus();
+                match.Cells[0].Click();
+                //Task.Delay(5000).Wait();
                 var priceTextBox = shell.Get<TextBox>(SearchCriteria.ByAutomationId("WarehouseItemPriceTextBox"));
                 priceTextBox.Click();
                 priceTextBox.Enter(fieldValue);                
