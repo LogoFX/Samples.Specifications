@@ -281,7 +281,7 @@ this.ScenarioSetup(scenarioInfo);
                         "423.95",
                         "70"});
 #line 63
- testRunner.And("I add data:", ((string)(null)), table7, "And ");
+ testRunner.And("I create a new warehouse item with the following data:", ((string)(null)), table7, "And ");
 #line hidden
             TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
                         "Kind",

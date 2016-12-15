@@ -41,11 +41,11 @@ namespace Samples.Specifications.Tests.Acceptance.Steps.Adapters
             MainSteps.WhenIDeleteItem(kind);
         }
 
-        [When(@"I add data:")]
-        public void WhenIAddData(Table table)
+        [When(@"I create a new warehouse item with the following data:")]
+        public void WhenICreateANewWarehouseItemWithTheFollowingData(Table table)
         {
             var warehouseItems = table.CreateSet<WarehouseItemAssertionTestData>();
-            MainSteps.WhenIAddData(warehouseItems.ToArray());
+            MainSteps.WhenICreateANewWarehouseItemWithTheFollowingData(warehouseItems.ToArray());
         }
     }
 }

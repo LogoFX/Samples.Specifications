@@ -51,7 +51,7 @@ namespace Samples.Specifications.Tests.Steps
             _mainScreenObject.DeleteWarehouseItem(kind);
         }
 
-        public void WhenIAddData(WarehouseItemAssertionTestData[] warehouseItems)
+        public void WhenICreateANewWarehouseItemWithTheFollowingData(WarehouseItemAssertionTestData[] warehouseItems)
         {
             warehouseItems.Should().HaveCount(1);
 

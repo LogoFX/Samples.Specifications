@@ -60,7 +60,7 @@ Scenario: Create new warehouse item
 	And I set the username to "Admin"
 	And I set the password to "1234"
 	And I log in to the system	
-	And I add data:
+	And I create a new warehouse item with the following data:
 	| Kind | Price  | Quantity |
 	| PC   | 423.95 | 70       |	
 	Then I expect to see the following data on the screen:
