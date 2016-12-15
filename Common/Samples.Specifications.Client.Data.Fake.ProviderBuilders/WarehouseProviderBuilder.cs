@@ -35,7 +35,13 @@ namespace Samples.Specifications.Client.Data.Fake.ProviderBuilders
                 .AddMethodCallWithResultAsync(t => t.GetWarehouseItems(),
                     r => r.Complete(GetWarehouseItems))
                 .AddMethodCallWithResultAsync<Guid, bool>(t => t.DeleteWarehouseItem(It.IsAny<Guid>()),
-                    (r, id) => r.Complete(DeleteWarehouseItem(id)));
+                    (r, id) => r.Complete(DeleteWarehouseItem(id)))
+                .AddMethodCallAsync<WarehouseItemDto>(t => t.SaveWarehouseItem(It.IsAny<WarehouseItemDto>()),
+                    (r, dto) =>
+                    {
+                        SaveWarehouseItem(dto);
+                        return r.Complete();
+                    });
             return setup;
         }
 
@@ -52,6 +58,11 @@ namespace Samples.Specifications.Client.Data.Fake.ProviderBuilders
                 return false;
             }
             return _warehouseItemsStorage.Remove(dto);
+        }
+
+        private void SaveWarehouseItem(WarehouseItemDto dto)
+        {
+            _warehouseItemsStorage.Add(dto);
         }
     }
 }

@@ -11,6 +11,8 @@ namespace Samples.Client.Model.Contracts
 
         Task<IWarehouseItem> NewWarehouseItemAsync();
 
+        Task SaveWarehouseItemAsync(IWarehouseItem item);
+
         Task DeleteWarehouseItemAsync(IWarehouseItem item);
 
         void StartEventMonitoring();

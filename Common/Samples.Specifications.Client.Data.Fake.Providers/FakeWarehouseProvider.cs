@@ -41,5 +41,12 @@ namespace Samples.Specifications.Client.Data.Fake.Providers
             var retVal = await service.DeleteWarehouseItem(id);
             return retVal;
         }
+
+        async Task IWarehouseProvider.SaveWarehouseItem(WarehouseItemDto dto)
+        {
+            await Task.Delay(_random.Next(2000));
+            var service = GetService(() => _warehouseProviderBuilder, b => b);
+            await service.SaveWarehouseItem(dto);
+        }
     }
 }

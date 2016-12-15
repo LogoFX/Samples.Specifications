@@ -47,5 +47,10 @@ namespace Samples.Specifications.Client.Data.Real.Providers
         {
             throw new NotImplementedException();
         }
+
+        public Task SaveWarehouseItem(WarehouseItemDto dto)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

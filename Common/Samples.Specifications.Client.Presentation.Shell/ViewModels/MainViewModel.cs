@@ -59,8 +59,9 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             {
                 return _applyCommand ??
                        (_applyCommand = ActionCommand
-                           .When(() => true)
-                           .Do(() => { }));
+                           .When(() => ActiveWarehouseItem != null && ActiveWarehouseItem.IsNew)
+                           .Do(Apply)
+                           .RequeryOnPropertyChanged(this, () => ActiveWarehouseItem));
             }
         }
 
@@ -152,6 +153,24 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             try
             {
                 await _dataService.DeleteWarehouseItemAsync(ActiveWarehouseItem.Model);
+            }
+
+            finally
+            {
+                IsBusy = false;
+            }
+        }
+
+        private async void Apply()
+        {
+            Debug.Assert(!IsBusy);
+
+            IsBusy = true;
+
+            try
+            {
+                await _dataService.SaveWarehouseItemAsync(ActiveWarehouseItem.Model);
+                await _dataService.GetWarehouseItemsAsync();
             }
 
             finally
