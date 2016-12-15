@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Attest.Fake.Core;
 using Attest.Fake.Setup.Contracts;
 using LogoFX.Client.Data.Fake.ProviderBuilders;
 using Samples.Client.Data.Contracts.Dto;
@@ -30,13 +33,25 @@ namespace Samples.Specifications.Client.Data.Fake.ProviderBuilders
         {
             var setup = serviceCallTemplate
                 .AddMethodCallWithResultAsync(t => t.GetWarehouseItems(),
-                    r => r.Complete(GetWarehouseItems));
+                    r => r.Complete(GetWarehouseItems))
+                .AddMethodCallWithResultAsync<Guid, bool>(t => t.DeleteWarehouseItem(It.IsAny<Guid>()),
+                    (r, id) => r.Complete(DeleteWarehouseItem(id)));
             return setup;
         }
 
         private IEnumerable<WarehouseItemDto> GetWarehouseItems()
         {
             return _warehouseItemsStorage;
+        }
+
+        private bool DeleteWarehouseItem(Guid id)
+        {
+            var dto = _warehouseItemsStorage.SingleOrDefault(x => x.Id == id);
+            if (dto == null)
+            {
+                return false;
+            }
+            return _warehouseItemsStorage.Remove(dto);
         }
     }
 }

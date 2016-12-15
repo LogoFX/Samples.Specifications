@@ -77,9 +77,10 @@ namespace Samples.Client.Model
             return new WarehouseItem("", 0d, 1);
         }
 
-        Task IDataService.DeleteWarehouseItemAsync()
+        async Task IDataService.DeleteWarehouseItemAsync(IWarehouseItem item)
         {
-            throw new NotImplementedException();
+            await _warehouseProvider.DeleteWarehouseItem(item.Id);
+            _warehouseItems.Remove(item);
         }
 
         void IDataService.StartEventMonitoring()

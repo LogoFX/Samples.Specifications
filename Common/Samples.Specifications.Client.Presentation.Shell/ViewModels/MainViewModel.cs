@@ -51,6 +51,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
                            .When(() => WarehouseItems != null && WarehouseItems.WarehouseItems.SelectedItem != null)
                            .Do(() =>
                            {
+                               DeleteSelectedItem();
                            })
                            .RequeryOnPropertyChanged(this, () => WarehouseItems)
                            .RequeryOnPropertyChanged(WarehouseItems.WarehouseItems, () => WarehouseItems.WarehouseItems.SelectedItem));
@@ -139,6 +140,23 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             {
                 var warehouseItem = await _dataService.NewWarehouseItemAsync();
                 ActiveWarehouseItem = new WarehouseItemViewModel(warehouseItem);                
+            }
+
+            finally
+            {
+                IsBusy = false;
+            }
+        }
+
+        private async void DeleteSelectedItem()
+        {
+            Debug.Assert(!IsBusy);
+
+            IsBusy = true;
+
+            try
+            {
+                await _dataService.DeleteWarehouseItemAsync(ActiveWarehouseItem.Model);
             }
 
             finally

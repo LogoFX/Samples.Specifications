@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Samples.Client.Data.Contracts.Dto;
 using Samples.Client.Data.Contracts.Providers;
@@ -40,6 +41,11 @@ namespace Samples.Specifications.Client.Data.Real.Providers
                     Quantity = 10
                 },
             });           
+        }
+
+        public Task<bool> DeleteWarehouseItem(Guid id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

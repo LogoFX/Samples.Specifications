@@ -1,9 +1,6 @@
-using System;
-using LogoFX.Client.Mvvm.Model.Contracts;
-
 namespace Samples.Client.Model.Contracts
 {
-    public interface IWarehouseItem : IAppModel, IEditableModel
+    public interface IWarehouseItem : IAppModel
     {
         string Kind { get; }   
         double Price { get; set; }
