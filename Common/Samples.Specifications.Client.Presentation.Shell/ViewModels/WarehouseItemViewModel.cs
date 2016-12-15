@@ -15,6 +15,23 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             IsEnabled = model != null;
         }
 
+        private bool _isNew;
+
+        public bool IsNew
+        {
+            get { return _isNew; }
+            set
+            {
+                if (_isNew == value)
+                {
+                    return;
+                }
+
+                _isNew = value;
+                NotifyOfPropertyChange();
+            }
+        }
+
         protected override Task<bool> SaveMethod(IWarehouseItem model)
         {
             return TaskRunner.RunAsync(() => true);

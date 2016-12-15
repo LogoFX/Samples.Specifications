@@ -33,10 +33,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
                 return _newCommand ??
                        (_newCommand = ActionCommand
                            .When(() => true)
-                           .Do(async () =>
-                           {
-                               await NewWarehouseItem();
-                           }));
+                           .Do(NewWarehouseItem));
             }
         }
 
@@ -48,13 +45,9 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             {
                 return _deleteCommand ??
                        (_deleteCommand = ActionCommand
-                           .When(() => WarehouseItems != null && WarehouseItems.WarehouseItems.SelectedItem != null)
-                           .Do(() =>
-                           {
-                               DeleteSelectedItem();
-                           })
-                           .RequeryOnPropertyChanged(this, () => WarehouseItems)
-                           .RequeryOnPropertyChanged(WarehouseItems.WarehouseItems, () => WarehouseItems.WarehouseItems.SelectedItem));
+                           .When(() => ActiveWarehouseItem != null && !ActiveWarehouseItem.IsNew)
+                           .Do(DeleteSelectedItem)
+                           .RequeryOnPropertyChanged(this, () => ActiveWarehouseItem));
             }
         }
 
@@ -130,7 +123,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             return _viewModelCreatorService.CreateViewModel<EventsViewModel>();
         }
 
-        private async Task NewWarehouseItem()
+        private async void NewWarehouseItem()
         {
             Debug.Assert(!IsBusy);
 
@@ -139,7 +132,9 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             try
             {
                 var warehouseItem = await _dataService.NewWarehouseItemAsync();
-                ActiveWarehouseItem = new WarehouseItemViewModel(warehouseItem);                
+                var newItem = _viewModelCreatorService.CreateViewModel<IWarehouseItem, WarehouseItemViewModel>(warehouseItem);
+                newItem.IsNew = true;
+                ActiveWarehouseItem = newItem;
             }
 
             finally
@@ -170,7 +165,6 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             base.OnInitialize();
 
             await _dataService.GetWarehouseItemsAsync();
-            await NewWarehouseItem();
         }
     }
 }
