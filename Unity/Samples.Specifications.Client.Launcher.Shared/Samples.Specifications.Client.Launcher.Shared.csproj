@@ -34,6 +34,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TestsWithFake|AnyCPU'">
     <OutputPath>bin\TestsWithFake\</OutputPath>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithReal|AnyCPU'">
+    <OutputPath>bin\DebugWithReal\</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="BootstrapperExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

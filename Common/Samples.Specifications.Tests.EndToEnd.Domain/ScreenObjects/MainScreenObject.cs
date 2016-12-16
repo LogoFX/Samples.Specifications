@@ -104,8 +104,8 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
             var quantityTextBox = shell.Get<TextBox>(SearchCriteria.ByAutomationId("WarehouseItemQuantityTextBox"));
 
             kindTextBox.Enter(warehouseItemData.Kind);
-            priceTextBox.Enter(warehouseItemData.Price.ToString(CultureInfo.InvariantCulture));
-            quantityTextBox.Enter(warehouseItemData.Quantity.ToString(CultureInfo.InvariantCulture));
+            priceTextBox.BulkText = warehouseItemData.Price.ToString(CultureInfo.CurrentCulture);
+            quantityTextBox.BulkText = warehouseItemData.Quantity.ToString(CultureInfo.CurrentCulture);
 
             var applyButton = shell.Get<Button>(SearchCriteria.ByAutomationId("WarehouseItemApplyButton"));
             applyButton.Click();
