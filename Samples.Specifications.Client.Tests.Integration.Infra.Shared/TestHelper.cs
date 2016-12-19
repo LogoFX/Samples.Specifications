@@ -1,4 +1,5 @@
-﻿using Samples.Client.Model.Shared;
+﻿using Caliburn.Micro;
+using Samples.Client.Model.Shared;
 
 namespace Samples.Specifications.Client.Tests.Integration.Infra.Shared
 {
@@ -12,7 +13,7 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra.Shared
         public static void AfterTeardown()
         {
             UserContext.Current = null;                        
-            LogoFX.Client.Testing.Shared.Caliburn.Micro.TestHelper.Teardown();
+            AssemblySource.Instance.Clear();            
         }
     }
 }
