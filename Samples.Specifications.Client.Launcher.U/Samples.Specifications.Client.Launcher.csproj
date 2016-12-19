@@ -126,14 +126,6 @@
       <HintPath>..\packages\LogoFX.Client.Core.1.0.8\lib\net45\LogoFX.Client.Core.Platform.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="LogoFX.Client.Mvvm.View, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Mvvm.View.Core.1.0.5\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\LogoFX.Client.Mvvm.View.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="LogoFX.Client.Mvvm.View.Platform, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Mvvm.View.1.0.5\lib\net45\LogoFX.Client.Mvvm.View.Platform.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="LogoFX.Client.Mvvm.ViewModel.Shared, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModel.Shared.1.0.4\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\LogoFX.Client.Mvvm.ViewModel.Shared.dll</HintPath>
       <Private>True</Private>
