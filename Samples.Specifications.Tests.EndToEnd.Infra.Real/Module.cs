@@ -1,7 +1,7 @@
 ﻿using LogoFX.Client.Testing.Contracts;
-using LogoFX.Client.Testing.EndToEnd.White;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
+using StartApplicationService = LogoFX.Client.Testing.EndToEnd.White.StartApplicationService;
 
 namespace Samples.Specifications.Tests.EndToEnd.Infra.Real
 {
