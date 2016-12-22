@@ -126,7 +126,7 @@
       <Name>Samples.Specifications.Client.Data.Fake.ProviderBuilders</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Tests.Data\Samples.Specifications.Tests.Data.csproj">
-      <Project>{27BBAC7D-16A9-44AD-B35E-42F73D0CE4F5}</Project>
+      <Project>{B10551FD-6D71-43EE-BD1C-D6C2C26D66BA}</Project>
       <Name>Samples.Specifications.Tests.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Tests.Domain\Samples.Specifications.Tests.Domain.csproj">

@@ -189,10 +189,6 @@
       <Project>{207D3FBC-1EEC-43EA-BAED-E3C14F793119}</Project>
       <Name>Samples.Specifications.Client.Tests.Integration.Infra.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Samples.Specifications.Tests.Data\Samples.Specifications.Tests.Data.csproj">
-      <Project>{27BBAC7D-16A9-44AD-B35E-42F73D0CE4F5}</Project>
-      <Name>Samples.Specifications.Tests.Data</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Tests.Domain\Samples.Specifications.Tests.Domain.csproj">
       <Project>{E08E7AE2-C849-47AD-99F2-B8A05307B06A}</Project>
       <Name>Samples.Specifications.Tests.Domain</Name>
