@@ -93,8 +93,6 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Solid.Practices.Composition, Version=1.1.7.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Solid.Practices.Composition.Core.1.1.7\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\Solid.Practices.Composition.dll</HintPath>
       <Private>True</Private>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Attest.Fake.Core;
 using Attest.Fake.Setup.Contracts;
 using LogoFX.Client.Data.Fake.ProviderBuilders;
+using Moq;
 using Samples.Client.Data.Contracts.Providers;
 
 namespace Samples.Specifications.Client.Data.Fake.ProviderBuilders
