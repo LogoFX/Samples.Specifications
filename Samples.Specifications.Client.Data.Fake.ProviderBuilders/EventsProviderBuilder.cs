@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
-using Attest.Fake.Core;
 using Attest.Fake.Setup.Contracts;
 using LogoFX.Client.Data.Fake.ProviderBuilders;
-using Moq;
 using Samples.Client.Data.Contracts.Dto;
 using Samples.Client.Data.Contracts.Providers;
+using It = Moq.It;
 
 namespace Samples.Specifications.Client.Data.Fake.ProviderBuilders
 {
