@@ -5,7 +5,7 @@ using Samples.Specifications.Client.Data.Fake.ProviderBuilders;
 using Samples.Specifications.Client.Presentation.Shell.ViewModels;
 using Samples.Specifications.Client.Tests.Integration.Infra.Core;
 
-namespace Samples.Specifications.Client.Tests.Integration.Infra.Shared
+namespace Samples.Specifications.Client.Tests.Integration.Infra
 {
     public class StartApplicationService : StartApplicationServiceBase
     {
@@ -38,8 +38,7 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra.Shared
         {
             var shell = (ShellViewModel)rootObject;
             StructureHelper.SetRootObject(shell);
-            ScreenExtensions.TryActivate(shell);
-            ScreenExtensions.TryActivate(StructureHelper.GetLogin());
+            ScreenExtensions.TryActivate(shell);            
         }
     }
 }

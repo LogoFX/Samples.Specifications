@@ -3,7 +3,7 @@ using LogoFX.Client.Bootstrapping.Adapters.Unity;
 using Samples.Specifications.Client.Launcher.Shared;
 using Samples.Specifications.Client.Presentation.Shell.ViewModels;
 
-namespace Samples.Specifications.Client.Tests.Integration.Infra.Shared
+namespace Samples.Specifications.Client.Tests.Integration.Infra
 {
     public class TestBootstrapper : TestBootstrapperContainerBase<UnityContainerAdapter>
         .WithRootObject<ShellViewModel>
