@@ -144,6 +144,10 @@
       <Project>{5270f84d-8ff4-4756-83b0-78dd9777643d}</Project>
       <Name>Samples.Specifications.Client.Presentation.Shell</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Samples.Specifications.Client.Tests.Integration.Infra.S\Samples.Specifications.Client.Tests.Integration.Infra.csproj">
+      <Project>{CBF93BCE-066F-4A39-A4D2-408524F49490}</Project>
+      <Name>Samples.Specifications.Client.Tests.Integration.Infra</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Tests.Steps\Samples.Specifications.Tests.Steps.csproj">
       <Project>{0B8DF28B-E521-4178-9AF5-49EEB2CDEDF7}</Project>
       <Name>Samples.Specifications.Tests.Steps</Name>
