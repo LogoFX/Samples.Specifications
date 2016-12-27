@@ -1,5 +1,6 @@
 using Caliburn.Micro;
 using LogoFX.Client.Testing.Integration.xUnit;
+using LogoFX.Client.Testing.Shared;
 using Samples.Specifications.Client.Presentation.Shell.ViewModels;
 
 namespace Samples.Specifications.Client.Tests.Integration.Infra
