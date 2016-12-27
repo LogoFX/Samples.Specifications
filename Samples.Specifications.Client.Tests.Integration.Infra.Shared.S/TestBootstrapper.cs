@@ -17,7 +17,6 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra.Shared
             })
         {
             this.UseResolver().UseViewModelCreatorService().UseViewModelFactory();
-
         }
 
         public override string[] Prefixes
