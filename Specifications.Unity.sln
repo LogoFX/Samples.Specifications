@@ -363,17 +363,13 @@ Global
 		{34318E61-A027-4C23-93F8-D825DC08D914}.TestsWithReal|Any CPU.ActiveCfg = TestsWithReal|Any CPU
 		{34318E61-A027-4C23-93F8-D825DC08D914}.TestsWithReal|Any CPU.Build.0 = TestsWithReal|Any CPU
 		{CBF93BCE-066F-4A39-A4D2-408524F49490}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
-		{CBF93BCE-066F-4A39-A4D2-408524F49490}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{CBF93BCE-066F-4A39-A4D2-408524F49490}.DebugWithReal|Any CPU.ActiveCfg = DebugWithReal|Any CPU
-		{CBF93BCE-066F-4A39-A4D2-408524F49490}.DebugWithReal|Any CPU.Build.0 = DebugWithReal|Any CPU
 		{CBF93BCE-066F-4A39-A4D2-408524F49490}.IntegrationWithFake|Any CPU.ActiveCfg = IntegrationWithFake|Any CPU
 		{CBF93BCE-066F-4A39-A4D2-408524F49490}.IntegrationWithFake|Any CPU.Build.0 = IntegrationWithFake|Any CPU
 		{CBF93BCE-066F-4A39-A4D2-408524F49490}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBF93BCE-066F-4A39-A4D2-408524F49490}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CBF93BCE-066F-4A39-A4D2-408524F49490}.TestsWithFake|Any CPU.ActiveCfg = TestsWithFake|Any CPU
-		{CBF93BCE-066F-4A39-A4D2-408524F49490}.TestsWithFake|Any CPU.Build.0 = TestsWithFake|Any CPU
 		{CBF93BCE-066F-4A39-A4D2-408524F49490}.TestsWithReal|Any CPU.ActiveCfg = TestsWithReal|Any CPU
-		{CBF93BCE-066F-4A39-A4D2-408524F49490}.TestsWithReal|Any CPU.Build.0 = TestsWithReal|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
