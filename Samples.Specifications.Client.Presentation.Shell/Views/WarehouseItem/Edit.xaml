@@ -6,6 +6,7 @@
              xmlns:viewModels="clr-namespace:Samples.Specifications.Client.Presentation.Shell.ViewModels"
              xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
              xmlns:actions="clr-namespace:LogoFX.Client.Mvvm.View.Interactivity.Actions;assembly=LogoFX.Client.Mvvm.View.Platform"
+             xmlns:behaviors="clr-namespace:Samples.Specifications.Client.Presentation.Shared.Behaviors;assembly=Samples.Specifications.Client.Presentation.Shared"
              mc:Ignorable="d" 
              d:DataContext="{d:DesignInstance viewModels:WarehouseItemViewModel}"
              d:DesignHeight="300" 
@@ -39,6 +40,9 @@
                     <actions:SetFocusAction />
                 </i:EventTrigger>
             </i:Interaction.Triggers>
+            <i:Interaction.Behaviors>
+                <behaviors:NextControlOnReturnBehavior />
+            </i:Interaction.Behaviors>
         </TextBox>
 
         <!--Price-->
@@ -51,7 +55,11 @@
                  Grid.Column="1"
                  Margin="5,0,0,0"
                  VerticalAlignment="Center"
-                 Text="{Binding Path=Model.Price, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                 Text="{Binding Path=Model.Price, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+            <i:Interaction.Behaviors>
+                <behaviors:NextControlOnReturnBehavior />
+            </i:Interaction.Behaviors>
+        </TextBox>
 
         <!--Quantity-->
         <TextBlock Grid.Row="2"
@@ -63,7 +71,11 @@
                  Grid.Column="1"
                  Margin="5,0,0,0"
                  VerticalAlignment="Center"
-                 Text="{Binding Path=Model.Quantity, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                 Text="{Binding Path=Model.Quantity, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+            <i:Interaction.Behaviors>
+                <behaviors:NextControlOnReturnBehavior />
+            </i:Interaction.Behaviors>
+        </TextBox>
 
         <!--TotalCost-->
         <TextBlock Grid.Row="3"
@@ -74,7 +86,9 @@
                  Grid.Column="1"
                  Margin="5,0,0,0"
                  VerticalAlignment="Center"
+                 Focusable="False"
                  IsReadOnly="True"
-                 Text="{Binding Path=Model.TotalCost, Mode=OneWay}" />
+                 Text="{Binding Path=Model.TotalCost, Mode=OneWay}">
+        </TextBox>
     </Grid>
 </UserControl>
