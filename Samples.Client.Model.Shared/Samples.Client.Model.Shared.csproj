@@ -12,8 +12,6 @@
     <AssemblyName>Samples.Client.Model.Shared</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
-    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -53,16 +51,19 @@
     <Compile Include="UserContext.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="LogoFX.Client.Core, Version=1.0.7.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Client.Core.Core.1.0.7\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch\LogoFX.Client.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="LogoFX.Client.Mvvm.Model, Version=1.0.10.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Mvvm.Model.1.0.10\lib\portable-net45+wpa8+win8+uap10.0+MonoAndroid+MonoTouch\LogoFX.Client.Mvvm.Model.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Client.Mvvm.Model.1.0.10\lib\net45\LogoFX.Client.Mvvm.Model.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="LogoFX.Client.Mvvm.Model.Contracts, Version=1.0.10.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Mvvm.Model.1.0.10\lib\portable-net45+wpa8+win8+uap10.0+MonoAndroid+MonoTouch\LogoFX.Client.Mvvm.Model.Contracts.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Client.Mvvm.Model.1.0.10\lib\net45\LogoFX.Client.Mvvm.Model.Contracts.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="LogoFX.Core, Version=1.0.7.0, Culture=neutral, processorArchitecture=MSIL">
@@ -73,11 +74,9 @@
       <HintPath>..\packages\Solid.Patterns.Memento.1.0.5\lib\portable-net45+wpa8+win8\Solid.Patterns.Memento.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

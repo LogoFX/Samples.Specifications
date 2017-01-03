@@ -12,8 +12,6 @@
     <AssemblyName>Samples.Client.Model</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
-    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -52,25 +50,6 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <!-- A reference to the entire .NET Framework is automatically included -->
-    <ProjectReference Include="..\Samples.Client.Data.Contracts.Dto\Samples.Client.Data.Contracts.Dto.csproj">
-      <Project>{8A567338-89FB-49AA-80FE-B47AE861D6A7}</Project>
-      <Name>Samples.Client.Data.Contracts.Dto</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Samples.Client.Data.Contracts.Providers\Samples.Client.Data.Contracts.Providers.csproj">
-      <Project>{D2432BC9-C269-47CA-85AC-7B1F79BDD2B7}</Project>
-      <Name>Samples.Client.Data.Contracts.Providers</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Samples.Client.Model.Contracts\Samples.Client.Model.Contracts.csproj">
-      <Project>{536D34E4-A409-4567-B7C6-58F50206740E}</Project>
-      <Name>Samples.Client.Model.Contracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Samples.Client.Model.Shared\Samples.Client.Model.Shared.csproj">
-      <Project>{49724A56-9FA9-44C4-B731-1E414EE598BC}</Project>
-      <Name>Samples.Client.Model.Shared</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="AppModel.cs" />
     <Compile Include="DataService.cs" />
     <Compile Include="LoginService.cs" />
@@ -85,12 +64,16 @@
     <Compile Include="WarehouseItem.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="AutoMapper, Version=4.2.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
-      <HintPath>..\packages\AutoMapper.4.2.1\lib\portable-net45+win+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10\AutoMapper.dll</HintPath>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=5.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.5.1.1\lib\net45\AutoMapper.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="JetBrains.Annotations.PCL328, Version=10.2.1.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
-      <HintPath>..\packages\JetBrains.Annotations.10.2.1\lib\portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\JetBrains.Annotations.PCL328.dll</HintPath>
+    <Reference Include="JetBrains.Annotations, Version=10.2.1.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <HintPath>..\packages\JetBrains.Annotations.10.2.1\lib\net\JetBrains.Annotations.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="LogoFX.Client.Core, Version=1.0.7.0, Culture=neutral, processorArchitecture=MSIL">
@@ -98,11 +81,11 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="LogoFX.Client.Mvvm.Model, Version=1.0.10.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Mvvm.Model.1.0.10\lib\portable-net45+wpa8+win8+uap10.0+MonoAndroid+MonoTouch\LogoFX.Client.Mvvm.Model.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Client.Mvvm.Model.1.0.10\lib\net45\LogoFX.Client.Mvvm.Model.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="LogoFX.Client.Mvvm.Model.Contracts, Version=1.0.10.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Mvvm.Model.1.0.10\lib\portable-net45+wpa8+win8+uap10.0+MonoAndroid+MonoTouch\LogoFX.Client.Mvvm.Model.Contracts.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Client.Mvvm.Model.1.0.10\lib\net45\LogoFX.Client.Mvvm.Model.Contracts.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="LogoFX.Core, Version=1.0.7.0, Culture=neutral, processorArchitecture=MSIL">
@@ -129,12 +112,27 @@
       <HintPath>..\packages\Solid.Practices.Scheduling.1.0.7\lib\portable-net45+wpa8+win8\Solid.Practices.Scheduling.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
-    <None Include="packages.config" />
+    <ProjectReference Include="..\Samples.Client.Data.Contracts.Dto\Samples.Client.Data.Contracts.Dto.csproj">
+      <Project>{8A567338-89FB-49AA-80FE-B47AE861D6A7}</Project>
+      <Name>Samples.Client.Data.Contracts.Dto</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samples.Client.Data.Contracts.Providers\Samples.Client.Data.Contracts.Providers.csproj">
+      <Project>{D2432BC9-C269-47CA-85AC-7B1F79BDD2B7}</Project>
+      <Name>Samples.Client.Data.Contracts.Providers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samples.Client.Model.Contracts\Samples.Client.Model.Contracts.csproj">
+      <Project>{536D34E4-A409-4567-B7C6-58F50206740E}</Project>
+      <Name>Samples.Client.Model.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samples.Client.Model.Shared\Samples.Client.Model.Shared.csproj">
+      <Project>{49724A56-9FA9-44C4-B731-1E414EE598BC}</Project>
+      <Name>Samples.Client.Model.Shared</Name>
+    </ProjectReference>
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
