@@ -4,6 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:viewModels="clr-namespace:Samples.Specifications.Client.Presentation.Shell.ViewModels"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:actions="clr-namespace:LogoFX.Client.Mvvm.View.Interactivity.Actions;assembly=LogoFX.Client.Mvvm.View.Platform"
              mc:Ignorable="d" 
              d:DataContext="{d:DesignInstance viewModels:WarehouseItemViewModel}"
              d:DesignHeight="300" 
@@ -31,7 +33,13 @@
                  Grid.Column="1"
                  Margin="5,0,0,0"
                  VerticalAlignment="Center"
-                 Text="{Binding Path=Model.Kind, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                 Text="{Binding Path=Model.Kind, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="Loaded">
+                    <actions:SetFocusAction />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBox>
 
         <!--Price-->
         <TextBlock Grid.Row="1"
