@@ -88,7 +88,7 @@
                  VerticalAlignment="Center"
                  Focusable="False"
                  IsReadOnly="True"
-                 Text="{Binding Path=Model.TotalCost, Mode=OneWay}">
+                 Text="{Binding Path=Model.IsDirty, Mode=OneWay}">
         </TextBox>
     </Grid>
 </UserControl>

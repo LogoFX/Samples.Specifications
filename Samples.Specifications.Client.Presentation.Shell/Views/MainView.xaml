@@ -90,7 +90,7 @@
                         VerticalAlignment="Center">
                     <i:Interaction.Triggers>
                         <i:EventTrigger EventName="Click">
-                            <commanding:ExecuteCommandAction Command="{Binding Path=DiscardCommand, Mode=OneTime}" />
+                            <commanding:ExecuteCommandAction Command="{Binding Path=ActiveWarehouseItem.CancelChangesCommand, Mode=OneWay}" />
                         </i:EventTrigger>
                     </i:Interaction.Triggers>
                 </Button>

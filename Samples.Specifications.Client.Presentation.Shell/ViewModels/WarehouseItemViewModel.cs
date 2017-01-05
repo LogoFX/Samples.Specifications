@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.ComponentModel;
+using System.Threading.Tasks;
 using JetBrains.Annotations;
 using LogoFX.Client.Mvvm.ViewModel.Extensions;
 using Samples.Client.Model.Contracts;
@@ -12,7 +13,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         public WarehouseItemViewModel(IWarehouseItem model) 
             : base(model)
         {
-            IsEnabled = model != null;
+            IsEnabled = model != null;                        
         }
 
         private bool _isNew;

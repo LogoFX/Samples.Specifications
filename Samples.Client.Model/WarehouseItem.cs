@@ -42,7 +42,7 @@ namespace Samples.Client.Model
             get { return _price;}
             set
             {
-                if (value == _price)
+                if (Math.Abs(value - _price) < double.Epsilon)
                 {
                     return;
                 }
@@ -54,6 +54,7 @@ namespace Samples.Client.Model
         }
 
         private int _quantity;
+
         public int Quantity
         {
             get { return _quantity; }
