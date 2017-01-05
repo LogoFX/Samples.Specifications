@@ -25,7 +25,12 @@ namespace Samples.Specifications.Client.Data.Fake.ProviderBuilders
         public void WithUser(string username, string password)
         {
             _users.Add(new Tuple<string, string>(username, password));            
-        }        
+        }
+
+        public void WithSuccessfulLogin(string username)
+        {
+            _isLoginAttemptSuccessfulCollection[username] = true;
+        }
 
         protected override IServiceCall<ILoginProvider> CreateServiceCall(IHaveNoMethods<ILoginProvider> serviceCallTemplate)
         {
@@ -38,11 +43,6 @@ namespace Samples.Specifications.Client.Data.Fake.ProviderBuilders
                                    : r.Throw(new Exception("Unable to login"))
                                : r.Throw(new Exception("Login not found.")));
             return setup;
-        }
-
-        public void WithSuccessfulLogin(string username)
-        {
-            _isLoginAttemptSuccessfulCollection[username] = true;
         }
     }
 }

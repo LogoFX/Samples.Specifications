@@ -9,31 +9,31 @@ namespace Samples.Specifications.Client.Tests.Integration
         [Fact]
         public void LoginScreenIsDisplayedFirst()
         {
-            var GeneralSteps = Resolver.Resolve<GeneralSteps>();
-            GeneralSteps.WhenIOpenTheApplication();
+            var generalSteps = Resolver.Resolve<GeneralSteps>();
+            generalSteps.WhenIOpenTheApplication();
 
-            var LoginSteps = Resolver.Resolve<LoginSteps>();
-            LoginSteps.ThenTheLoginScreenIsDisplayed();
+            var loginSteps = Resolver.Resolve<LoginSteps>();
+            loginSteps.ThenTheLoginScreenIsDisplayed();
         }
 
         [Fact]
         public void NavigateToTheMainScreenWhenTheLoginIsSuccessful()
         {
-            var GivenLoginSteps = Resolver.Resolve<GivenLoginSteps>();
+            var givenLoginSteps = Resolver.Resolve<GivenLoginSteps>();
             var userName = "Admin";
             var password = "1234";
-            GivenLoginSteps.SetupAuthenticatedUserWithCredentials(userName, password);
-            GivenLoginSteps.SetupLoginSuccessfullyWithUsername(userName);
+            givenLoginSteps.SetupAuthenticatedUserWithCredentials(userName, password);
+            givenLoginSteps.SetupLoginSuccessfullyWithUsername(userName);
 
-            var GeneralSteps = Resolver.Resolve<GeneralSteps>();
-            GeneralSteps.WhenIOpenTheApplication();
-            var LoginSteps = Resolver.Resolve<LoginSteps>();
-            LoginSteps.WhenISetTheUsernameTo(userName);
-            LoginSteps.WhenISetThePasswordTo(password);
-            LoginSteps.WhenILogInToTheSystem();
+            var generalSteps = Resolver.Resolve<GeneralSteps>();
+            generalSteps.WhenIOpenTheApplication();
+            var loginSteps = Resolver.Resolve<LoginSteps>();
+            loginSteps.WhenISetTheUsernameTo(userName);
+            loginSteps.WhenISetThePasswordTo(password);
+            loginSteps.WhenILogInToTheSystem();
 
-            var MainSteps = Resolver.Resolve<MainSteps>();
-            MainSteps.ThenApplicationNavigatesToTheMainScreen();
+            var mainSteps = Resolver.Resolve<MainSteps>();
+            mainSteps.ThenApplicationNavigatesToTheMainScreen();
         }
     }
 }

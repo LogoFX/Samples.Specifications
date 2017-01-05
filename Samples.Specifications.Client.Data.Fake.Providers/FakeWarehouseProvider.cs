@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading;
 using System.Threading.Tasks;
 using Attest.Fake.Builders;
 using JetBrains.Annotations;
@@ -8,7 +7,6 @@ using Samples.Client.Data.Contracts.Dto;
 using Samples.Client.Data.Contracts.Providers;
 using Samples.Specifications.Client.Data.Fake.Containers;
 using Samples.Specifications.Client.Data.Fake.ProviderBuilders;
-using Solid.Practices.Scheduling;
 
 namespace Samples.Specifications.Client.Data.Fake.Providers
 {

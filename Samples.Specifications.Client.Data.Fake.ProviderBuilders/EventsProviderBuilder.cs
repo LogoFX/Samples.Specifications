@@ -22,6 +22,16 @@ namespace Samples.Specifications.Client.Data.Fake.ProviderBuilders
             _timer = new Timer(OnTimer, null, 1000, 1000);
         }
 
+        ~EventsProviderBuilder()
+        {
+            var timer = _timer;
+            if (timer != null)
+            {
+                timer.Dispose();
+                _timer = null;
+            }
+        }
+
         private void OnTimer(object state)
         {
             if (_rnd.NextDouble() < 0.7)

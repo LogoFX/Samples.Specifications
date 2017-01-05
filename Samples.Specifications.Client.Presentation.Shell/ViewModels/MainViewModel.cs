@@ -1,7 +1,5 @@
 using System.Diagnostics;
-using System.Threading.Tasks;
 using System.Windows.Input;
-using Caliburn.Micro;
 using JetBrains.Annotations;
 using LogoFX.Client.Mvvm.Commanding;
 using LogoFX.Client.Mvvm.ViewModel.Extensions;
