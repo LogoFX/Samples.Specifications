@@ -121,7 +121,9 @@
     <Compile Include="Behaviors\NextControlOnReturnBehavior.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Converters\" />
+  </ItemGroup>
   <ItemGroup>
     <Page Include="Themes\LogoFX\LogoFX.Dark.xaml">
       <SubType>Designer</SubType>

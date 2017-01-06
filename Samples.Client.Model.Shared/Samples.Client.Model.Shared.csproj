@@ -76,6 +76,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -87,6 +88,8 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserContext.cs" />
+    <Compile Include="Validation\DoublePositiveValidation.cs" />
+    <Compile Include="Validation\NumberValidation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

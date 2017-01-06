@@ -11,11 +11,19 @@
              d:DataContext="{d:DesignInstance viewModels:WarehouseItemViewModel}"
              d:DesignHeight="300" 
              d:DesignWidth="300">
+    
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+    </UserControl.Resources>
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="32" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="32" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="32" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="32" />
         </Grid.RowDefinitions>
         
@@ -46,28 +54,28 @@
         </TextBox>
 
         <!--Price-->
-        <TextBlock Grid.Row="1"
+        <TextBlock Grid.Row="2"
                    Grid.Column="0"
                    VerticalAlignment="Center"
                    Text="Price" />
         <TextBox AutomationProperties.AutomationId="WarehouseItemPriceTextBox"
-                 Grid.Row="1"
+                 Grid.Row="2"
                  Grid.Column="1"
                  Margin="5,0,0,0"
                  VerticalAlignment="Center"
-                 Text="{Binding Path=Model.Price, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                 Text="{Binding Path=Price, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, ValidatesOnNotifyDataErrors=True}">
             <i:Interaction.Behaviors>
                 <behaviors:NextControlOnReturnBehavior />
             </i:Interaction.Behaviors>
         </TextBox>
 
         <!--Quantity-->
-        <TextBlock Grid.Row="2"
+        <TextBlock Grid.Row="4"
                    Grid.Column="0"
                    VerticalAlignment="Center"
                    Text="Quantity" />
         <TextBox AutomationProperties.AutomationId="WarehouseItemQuantityTextBox"
-                 Grid.Row="2"
+                 Grid.Row="4"
                  Grid.Column="1"
                  Margin="5,0,0,0"
                  VerticalAlignment="Center"
@@ -78,11 +86,11 @@
         </TextBox>
 
         <!--TotalCost-->
-        <TextBlock Grid.Row="3"
+        <TextBlock Grid.Row="6"
                    Grid.Column="0"
                    VerticalAlignment="Center"
                    Text="Total Cost" />
-        <TextBox Grid.Row="3"
+        <TextBox Grid.Row="6"
                  Grid.Column="1"
                  Margin="5,0,0,0"
                  VerticalAlignment="Center"

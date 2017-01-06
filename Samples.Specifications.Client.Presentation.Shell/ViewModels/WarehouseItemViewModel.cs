@@ -32,6 +32,13 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             }
         }
 
+        [ShouldDisplayErrorInfo(true)]
+        public double Price
+        {
+            get { return Model.Price; }
+            set { Model.Price = value; }
+        }
+
         protected override Task<bool> SaveMethod(IWarehouseItem model)
         {
             return TaskRunner.RunAsync(() => true);

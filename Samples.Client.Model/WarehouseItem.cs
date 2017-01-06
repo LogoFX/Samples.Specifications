@@ -1,6 +1,7 @@
 ﻿using System;
 using JetBrains.Annotations;
 using Samples.Client.Model.Contracts;
+using Samples.Client.Model.Shared.Validation;
 
 namespace Samples.Client.Model
 {
@@ -37,6 +38,8 @@ namespace Samples.Client.Model
         }
 
         private double _price;
+
+        [DoublePositiveValidation(ErrorMessage = "Price must be positive.")]
         public double Price
         {
             get { return _price;}
