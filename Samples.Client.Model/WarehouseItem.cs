@@ -21,6 +21,7 @@ namespace Samples.Client.Model
 
         private string _kind;
 
+        [StringValidation(IsNulOrEmptyAllowed = false, MaxLength = 63)]
         public string Kind
         {
             get { return _kind; }
@@ -58,6 +59,7 @@ namespace Samples.Client.Model
 
         private int _quantity;
 
+        [NumberValidation(Minimum = 0, ErrorMessage = "Quantity must be positive.")]
         public int Quantity
         {
             get { return _quantity; }

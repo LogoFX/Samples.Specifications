@@ -90,6 +90,7 @@
     <Compile Include="UserContext.cs" />
     <Compile Include="Validation\DoublePositiveValidation.cs" />
     <Compile Include="Validation\NumberValidation.cs" />
+    <Compile Include="Validation\StringValidationAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
