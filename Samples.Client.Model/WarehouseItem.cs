@@ -76,9 +76,21 @@ namespace Samples.Client.Model
             }
         }
 
+        [Obsolete("Remove after EditableModel fixed.")]
         public override string Error
         {
-            get { return base.Error?.Trim(); }
+            get
+            {
+                var error = base.Error;
+
+                if (string.IsNullOrEmpty(error))
+                {
+                    return error;
+                }
+
+
+                return error.Replace(Environment.NewLine, string.Empty);
+            }
         }
 
         public double TotalCost
