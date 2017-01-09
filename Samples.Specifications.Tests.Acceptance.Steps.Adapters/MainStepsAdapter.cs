@@ -47,5 +47,11 @@ namespace Samples.Specifications.Tests.Acceptance.Steps.Adapters
             var warehouseItems = table.CreateSet<WarehouseItemAssertionTestData>();
             MainSteps.WhenICreateANewWarehouseItemWithTheFollowingData(warehouseItems.ToArray());
         }
+
+        [Then(@"Error message is displayed with the following text ""(.*)""")]
+        public void ThenErrorMessageIsDisplayedWithTheFollowingText(string p0)
+        {
+            ScenarioContext.Current.Pending();
+        }
     }
 }
