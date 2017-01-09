@@ -399,6 +399,51 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
+        [Xunit.FactAttribute(DisplayName="Display error for incorrect Kind value")]
+        [Xunit.TraitAttribute("FeatureTitle", "ViewWarehouseContents")]
+        [Xunit.TraitAttribute("Description", "Display error for incorrect Kind value")]
+        public virtual void DisplayErrorForIncorrectKindValue()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display error for incorrect Kind value", ((string[])(null)));
+#line 100
+this.ScenarioSetup(scenarioInfo);
+#line hidden
+            TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Kind",
+                        "Price",
+                        "Quantity"});
+            table11.AddRow(new string[] {
+                        "Oven",
+                        "34.95",
+                        "20"});
+            table11.AddRow(new string[] {
+                        "TV",
+                        "346.95",
+                        "50"});
+            table11.AddRow(new string[] {
+                        "PC",
+                        "423.95",
+                        "70"});
+#line 101
+ testRunner.Given("warehouse contains the following items:", ((string)(null)), table11, "Given ");
+#line 106
+ testRunner.And("I am able to log in successfully with username \'Admin\' and password \'1234\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 107
+ testRunner.When("I open the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 108
+ testRunner.And("I set the username to \"Admin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 109
+ testRunner.And("I set the password to \"1234\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 110
+ testRunner.And("I log in to the system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 111
+ testRunner.And("I set the Kind for \"TV\" item to \"\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 112
+ testRunner.Then("Error message is displayed with the following text \"Kind should not be empty.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
         [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
         [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
         public class FixtureData : System.IDisposable

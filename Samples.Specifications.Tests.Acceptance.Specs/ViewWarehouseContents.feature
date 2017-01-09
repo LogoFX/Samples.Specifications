@@ -96,3 +96,17 @@ Scenario: Display error for incorrect Quantity value
 	And I log in to the system	
 	And I set the Quantity for "TV" item to -10
 	Then Error message is displayed with the following text "Quantity must be positive."
+
+Scenario: Display error for incorrect Kind value
+	Given warehouse contains the following items:
+	| Kind | Price  | Quantity |
+	| Oven | 34.95  | 20       |
+	| TV   | 346.95 | 50       |
+	| PC   | 423.95 | 70       |	
+	And I am able to log in successfully with username 'Admin' and password '1234'
+	When I open the application
+	And I set the username to "Admin"
+	And I set the password to "1234"
+	And I log in to the system	
+	And I set the Kind for "TV" item to ""
+	Then Error message is displayed with the following text "Kind should not be empty."

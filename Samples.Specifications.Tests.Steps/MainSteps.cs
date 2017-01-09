@@ -25,6 +25,11 @@ namespace Samples.Specifications.Tests.Steps
             _mainScreenObject.EditWarehouseItem(kind, newQuantity: newQuantity);
         }
 
+        public void WhenISetTheKindForItemTo(string kind, string newKind)
+        {
+            _mainScreenObject.EditWarehouseItem(kind, newKind: newKind);
+        }
+
         public void ThenIExpectToSeeTheFollowingDataOnTheScreen(WarehouseItemAssertionTestData[] warehouseItems)
         {
             var actualWarehouseItems = _mainScreenObject.GetWarehouseItems().ToArray();

@@ -28,6 +28,12 @@ namespace Samples.Specifications.Tests.Acceptance.Steps.Adapters
             MainSteps.WhenISetTheQuantityForItemTo(kind, newQuantity);
         }
 
+        [When(@"I set the Kind for ""(.*)"" item to ""(.*)""")]
+        public void WhenISetTheKindForItemTo(string kind, string newKind)
+        {
+            MainSteps.WhenISetTheKindForItemTo(kind, newKind);
+        }
+
         [Then(@"I expect to see the following data on the screen:")]
         public void ThenIExpectToSeeTheFollowingDataOnTheScreen(Table table)
         {
