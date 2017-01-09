@@ -60,16 +60,22 @@ namespace Samples.Specifications.Client.Tests.Integration.Domain.ScreenObjects
                     }).Single();
         }
 
-        public void EditWarehouseItem(string kind, string fieldName, string fieldValue)
+        public void EditWarehouseItem(string kind, string newKind, double? newPrice, int? newQuantity)
         {
             var main = StructureHelper.GetMain();
             var itemViewModel =
                 main.WarehouseItems.WarehouseItems
                     .OfType<WarehouseItemViewModel>().Single(t => t.Model.Kind == kind);
-            if (fieldName == "Price")
+
+            if (newPrice != null)
             {
-                itemViewModel.Model.Price = double.Parse(fieldValue);
-            }            
+                itemViewModel.Model.Price = newPrice.Value;
+            }
+
+            if (newQuantity != null)
+            {
+                itemViewModel.Model.Quantity = newQuantity.Value;
+            }
         }
 
         public string GetErrorMessage()

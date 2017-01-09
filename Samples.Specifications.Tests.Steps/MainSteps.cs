@@ -17,7 +17,12 @@ namespace Samples.Specifications.Tests.Steps
 
         public void WhenISetThePriceForItemTo(string kind, int newPrice)
         {
-            _mainScreenObject.EditWarehouseItem(kind, "Price", newPrice.ToString());
+            _mainScreenObject.EditWarehouseItem(kind, newPrice: newPrice);
+        }
+
+        public void WhenISetTheQuantityForItemTo(string kind, int newQuantity)
+        {
+            _mainScreenObject.EditWarehouseItem(kind, newQuantity: newQuantity);
         }
 
         public void ThenIExpectToSeeTheFollowingDataOnTheScreen(WarehouseItemAssertionTestData[] warehouseItems)

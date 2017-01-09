@@ -55,7 +55,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
             };
         }
 
-        public void EditWarehouseItem(string kind, string fieldName, string fieldValue)
+        public void EditWarehouseItem(string kind, string newKind, double? newPrice, int? newQuantity)
         {           
             var match = GetRowByKind(kind);
             try
@@ -68,8 +68,24 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
             }
 
             var shell = StructureHelper.GetShell();
-            var priceTextBox = shell.Get<TextBox>(SearchCriteria.ByAutomationId("WarehouseItemPriceTextBox"));
-            priceTextBox.Enter(fieldValue);
+
+            if (newKind != null)
+            {
+                var kindTextBox = shell.Get<TextBox>(SearchCriteria.ByAutomationId("WarehouseItemKindTextBox"));
+                kindTextBox.Enter(newKind);
+            }
+
+            if (newPrice != null)
+            {
+                var priceTextBox = shell.Get<TextBox>(SearchCriteria.ByAutomationId("WarehouseItemPriceTextBox"));
+                priceTextBox.Enter(newPrice.ToString());
+            }
+
+            if (newQuantity != null)
+            {
+                var quantityTextBox = shell.Get<TextBox>(SearchCriteria.ByAutomationId("WarehouseItemQuantityTextBox"));
+                quantityTextBox.Enter(newQuantity.ToString());
+            }
         }
 
         public bool IsActive()

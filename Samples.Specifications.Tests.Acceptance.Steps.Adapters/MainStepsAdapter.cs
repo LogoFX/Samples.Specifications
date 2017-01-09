@@ -22,6 +22,12 @@ namespace Samples.Specifications.Tests.Acceptance.Steps.Adapters
             MainSteps.WhenISetThePriceForItemTo(kind, newPrice);
         }
 
+        [When(@"I set the Quantity for ""(.*)"" item to (.*)")]
+        public void WhenISetTheQuantityForItemTo(string kind, int newQuantity)
+        {
+            MainSteps.WhenISetTheQuantityForItemTo(kind, newQuantity);
+        }
+
         [Then(@"I expect to see the following data on the screen:")]
         public void ThenIExpectToSeeTheFollowingDataOnTheScreen(Table table)
         {

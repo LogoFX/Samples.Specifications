@@ -354,6 +354,51 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
+        [Xunit.FactAttribute(DisplayName="Display error for incorrect Quantity value")]
+        [Xunit.TraitAttribute("FeatureTitle", "ViewWarehouseContents")]
+        [Xunit.TraitAttribute("Description", "Display error for incorrect Quantity value")]
+        public virtual void DisplayErrorForIncorrectQuantityValue()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display error for incorrect Quantity value", ((string[])(null)));
+#line 86
+this.ScenarioSetup(scenarioInfo);
+#line hidden
+            TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Kind",
+                        "Price",
+                        "Quantity"});
+            table10.AddRow(new string[] {
+                        "Oven",
+                        "34.95",
+                        "20"});
+            table10.AddRow(new string[] {
+                        "TV",
+                        "346.95",
+                        "50"});
+            table10.AddRow(new string[] {
+                        "PC",
+                        "423.95",
+                        "70"});
+#line 87
+ testRunner.Given("warehouse contains the following items:", ((string)(null)), table10, "Given ");
+#line 92
+ testRunner.And("I am able to log in successfully with username \'Admin\' and password \'1234\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 93
+ testRunner.When("I open the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 94
+ testRunner.And("I set the username to \"Admin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 95
+ testRunner.And("I set the password to \"1234\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 96
+ testRunner.And("I log in to the system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 97
+ testRunner.And("I set the Quantity for \"TV\" item to -10", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 98
+ testRunner.Then("Error message is displayed with the following text \"Quantity must be positive.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
         [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
         [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
         public class FixtureData : System.IDisposable
