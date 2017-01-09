@@ -37,6 +37,13 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
             return match;
         }
 
+        private void SelectRow(ListViewRow row)
+        {
+            row.Focus();
+            Task.Delay(1000).Wait();
+            row.Cells[0].Click();
+        }
+
         private static WarehouseItemAssertionTestData CreateWarehouseItemAssertionTestData(ListViewRow t)
         {
             return new WarehouseItemAssertionTestData
@@ -53,9 +60,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
             var match = GetRowByKind(kind);
             try
             {
-                match.Focus();
-                Task.Delay(1000).Wait();
-                match.Cells[0].Click();
+                SelectRow(match);
             }
             catch (Exception err)
             {
@@ -109,6 +114,29 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
 
             var applyButton = shell.Get<Button>(SearchCriteria.ByAutomationId("WarehouseItemApplyButton"));
             applyButton.Click();
+        }
+
+        public string GetErrorMessage()
+        {
+            var shell = StructureHelper.GetShell();
+
+            var dataGrid = shell.Get<ListView>(SearchCriteria.ByAutomationId("WarehouseItemsDataGrid"));
+            var selectedRow = dataGrid.SelectedRows.FirstOrDefault();
+            var index = dataGrid.Rows.IndexOf(selectedRow);
+            if (index == 0)
+            {
+                ++index;
+            }
+            else
+            {
+                index = 0;
+            }
+
+            SelectRow(dataGrid.Rows[index]);
+            SelectRow(selectedRow);
+
+            var errorTextBlock = shell.Get<Label>(SearchCriteria.ByAutomationId("WarehouseItemErrorTextBlock"));
+            return errorTextBlock.Text;
         }
     }
 }

@@ -49,9 +49,9 @@ namespace Samples.Specifications.Tests.Acceptance.Steps.Adapters
         }
 
         [Then(@"Error message is displayed with the following text ""(.*)""")]
-        public void ThenErrorMessageIsDisplayedWithTheFollowingText(string p0)
+        public void ThenErrorMessageIsDisplayedWithTheFollowingText(string expectedErrorMessage)
         {
-            ScenarioContext.Current.Pending();
+            MainSteps.ThenErrorMessageIsDisplayedWithTheFollowingText(expectedErrorMessage);
         }
     }
 }

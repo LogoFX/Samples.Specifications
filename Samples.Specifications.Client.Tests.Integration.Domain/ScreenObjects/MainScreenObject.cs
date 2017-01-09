@@ -71,5 +71,10 @@ namespace Samples.Specifications.Client.Tests.Integration.Domain.ScreenObjects
                 itemViewModel.Model.Price = double.Parse(fieldValue);
             }            
         }
+
+        public string GetErrorMessage()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

@@ -60,5 +60,11 @@ namespace Samples.Specifications.Tests.Steps
                 _mainScreenObject.AddWarehouseItem(warehouseItem);
             }
         }
+
+        public void ThenErrorMessageIsDisplayedWithTheFollowingText(string expectedErrorMessage)
+        {
+            var actualErrorMessage = _mainScreenObject.GetErrorMessage();
+            actualErrorMessage.Should().Be(expectedErrorMessage);
+        }
     }
 }
