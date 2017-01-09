@@ -76,6 +76,11 @@ namespace Samples.Client.Model
             }
         }
 
+        public override string Error
+        {
+            get { return base.Error?.Trim(); }
+        }
+
         public double TotalCost
         {
             get { return _quantity*_price; }
