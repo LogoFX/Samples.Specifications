@@ -14,6 +14,7 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra
             iocContainer.RegisterSingleton<IStartApplicationService, StartApplicationService>();
             iocContainer.RegisterInstance(LoginProviderBuilder.CreateBuilder());
             iocContainer.RegisterInstance(WarehouseProviderBuilder.CreateBuilder());
+            iocContainer.RegisterInstance(EventsProviderBuilder.CreateBuilder());
         }
     }
 }
