@@ -4,7 +4,6 @@ using Samples.Client.Data.Contracts.Dto;
 #if FAKE
 using LogoFX.Client.Testing.Contracts;
 using Samples.Specifications.Client.Data.Fake.ProviderBuilders;
-
 #endif
 
 #if REAL
