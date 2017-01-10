@@ -29,13 +29,7 @@ namespace Samples.Client.Model
             get { return _kind; }
             set
             {                
-                if (_kind == value)
-                {
-                    return;
-                }
-                MakeDirty();
-                _kind = value;                
-                NotifyOfPropertyChange();
+                SetProperty(ref _kind, value);
             }
         }
 
@@ -47,13 +41,7 @@ namespace Samples.Client.Model
             get { return _price;}
             set
             {
-                if (Math.Abs(value - _price) < double.Epsilon)
-                {
-                    return;
-                }
-                MakeDirty();
-                _price = value;                
-                NotifyOfPropertyChange();
+                SetProperty(ref _price, value);
                 NotifyOfPropertyChange(() => TotalCost);
             }
         }
@@ -65,14 +53,8 @@ namespace Samples.Client.Model
         {
             get { return _quantity; }
             set
-            {
-                if (value == _quantity)
-                {
-                    return;
-                }
-                MakeDirty();
-                _quantity = value;                
-                NotifyOfPropertyChange();
+            {                
+                SetProperty(ref _quantity, value);
                 NotifyOfPropertyChange(() => TotalCost);
             }
         }        
