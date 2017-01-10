@@ -10,6 +10,8 @@
     <Grid>
         <DataGrid AutomationProperties.AutomationId="WarehouseItemsDataGrid" 
                   ItemsSource="{Binding Path=WarehouseItems, Mode=OneWay}"
+                  SelectionUnit="FullRow"
+                  SelectionMode="Single"
                   IsReadOnly="True"
                   AutoGenerateColumns="False">
             <DataGrid.RowStyle>

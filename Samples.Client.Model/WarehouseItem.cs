@@ -16,7 +16,9 @@ namespace Samples.Client.Model
             Id = Guid.NewGuid();
             Kind = kind;
             Price = price;
-            Quantity = quantity;            
+            Quantity = quantity;
+            
+            CommitChanges();           
         }
 
         private string _kind;

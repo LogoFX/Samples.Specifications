@@ -9,7 +9,6 @@ namespace Samples.Client.Model.Mappers
         internal static IWarehouseItem MapToWarehouseItem(WarehouseItemDto warehouseItemDto)
         {
             var item = Mapper.Map<WarehouseItem>(warehouseItemDto);
-            item.ClearDirty();
             return item;
         }
 
