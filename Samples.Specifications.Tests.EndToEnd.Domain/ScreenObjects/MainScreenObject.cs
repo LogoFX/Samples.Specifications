@@ -117,9 +117,6 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
         {
             var shell = StructureHelper.GetShell();
 
-            var deleteButton = shell.Get<Button>(SearchCriteria.ByAutomationId("WarehouseItemNewButton"));
-            deleteButton.Click();
-
             var kindTextBox = shell.Get<TextBox>(SearchCriteria.ByAutomationId("WarehouseItemKindTextBox"));
             var priceTextBox = shell.Get<TextBox>(SearchCriteria.ByAutomationId("WarehouseItemPriceTextBox"));
             var quantityTextBox = shell.Get<TextBox>(SearchCriteria.ByAutomationId("WarehouseItemQuantityTextBox"));

@@ -74,7 +74,7 @@ namespace Samples.Client.Model
         async Task<IWarehouseItem> IDataService.NewWarehouseItemAsync()
         {
             await Task.Delay(1000);
-            return new WarehouseItem("", 0d, 1);
+            return new WarehouseItem("New Kind", 0d, 1);
         }
 
         async Task IDataService.SaveWarehouseItemAsync(IWarehouseItem item)
