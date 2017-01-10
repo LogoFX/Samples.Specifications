@@ -52,8 +52,8 @@ namespace Samples.Client.Model
                 {
                     return;
                 }
-                _price = value;
                 MakeDirty();
+                _price = value;                
                 NotifyOfPropertyChange();
                 NotifyOfPropertyChange(() => TotalCost);
             }
@@ -71,8 +71,8 @@ namespace Samples.Client.Model
                 {
                     return;
                 }
-                _quantity = value;
                 MakeDirty();
+                _quantity = value;                
                 NotifyOfPropertyChange();
                 NotifyOfPropertyChange(() => TotalCost);
             }
