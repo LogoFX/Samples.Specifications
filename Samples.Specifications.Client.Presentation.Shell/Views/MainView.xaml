@@ -29,12 +29,11 @@
             </Grid.RowDefinitions>
 
             <ContentControl Grid.Row="0"
-                            IsEnabled="{Binding Path=ActiveWarehouseItem.IsEnabled}"
                             cal:View.Model="{Binding Path=ActiveWarehouseItem, Mode=OneWay}"                            
                             cal:View.Context="Edit" />
             
             <ContentControl Grid.Row="1"
-                            cal:View.Model="{Binding WarehouseItems, Mode=OneTime}" />     
+                            cal:View.Model="{Binding Path=WarehouseItems, Mode=OneTime}" />     
         </Grid>
 
         <GridSplitter Grid.Column="1"

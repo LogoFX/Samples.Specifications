@@ -20,12 +20,9 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
     [UsedImplicitly]
     public class NewWarehouseItemViewModel : WarehouseItemViewModelBase
     {
-        private readonly IDataService _dataService;
-
         public NewWarehouseItemViewModel(IWarehouseItem model, IDataService dataService)
             : base(model, dataService)
         {
-            _dataService = dataService;
         }
     }
 
