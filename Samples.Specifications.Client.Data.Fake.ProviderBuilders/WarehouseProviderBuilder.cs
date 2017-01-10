@@ -62,7 +62,16 @@ namespace Samples.Specifications.Client.Data.Fake.ProviderBuilders
 
         private void SaveWarehouseItem(WarehouseItemDto dto)
         {
-            _warehouseItemsStorage.Add(dto);
+            var oldDto = _warehouseItemsStorage.SingleOrDefault(x => x.Id == dto.Id);
+            if (oldDto == null)
+            {
+                _warehouseItemsStorage.Add(dto);
+                return;
+            }
+
+            oldDto.Kind = dto.Kind;
+            oldDto.Price = dto.Price;
+            oldDto.Quantity = dto.Quantity;
         }
     }
 }

@@ -1,8 +1,6 @@
 ﻿using System.Diagnostics;
 using System.Threading.Tasks;
-using System.Windows.Input;
 using JetBrains.Annotations;
-using LogoFX.Client.Mvvm.Commanding;
 using LogoFX.Client.Mvvm.ViewModel.Extensions;
 using Samples.Client.Model.Contracts;
 
