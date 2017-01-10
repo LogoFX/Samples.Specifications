@@ -28,14 +28,13 @@ namespace Samples.Client.Model
         {
             get { return _kind; }
             set
-            {
+            {                
                 if (_kind == value)
                 {
                     return;
                 }
-
-                _kind = value;
                 MakeDirty();
+                _kind = value;                
                 NotifyOfPropertyChange();
             }
         }
@@ -76,24 +75,7 @@ namespace Samples.Client.Model
                 NotifyOfPropertyChange();
                 NotifyOfPropertyChange(() => TotalCost);
             }
-        }
-
-        [Obsolete("Remove after EditableModel fixed.")]
-        public override string Error
-        {
-            get
-            {
-                var error = base.Error;
-
-                if (string.IsNullOrEmpty(error))
-                {
-                    return error;
-                }
-
-
-                return error.Replace(Environment.NewLine, string.Empty);
-            }
-        }
+        }        
 
         public double TotalCost
         {
