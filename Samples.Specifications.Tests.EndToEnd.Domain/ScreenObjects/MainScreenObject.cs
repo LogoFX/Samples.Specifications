@@ -131,22 +131,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
 
         public string GetErrorMessage()
         {
-            var shell = StructureHelper.GetShell();
-
-            var dataGrid = shell.Get<ListView>(SearchCriteria.ByAutomationId("WarehouseItemsDataGrid"));
-            var selectedRow = dataGrid.SelectedRows.FirstOrDefault();
-            var index = dataGrid.Rows.IndexOf(selectedRow);
-            if (index == 0)
-            {
-                ++index;
-            }
-            else
-            {
-                index = 0;
-            }
-
-            SelectRow(dataGrid.Rows[index]);
-            SelectRow(selectedRow);
+            var shell = StructureHelper.GetShell();            
 
             var errorTextBlock = shell.Get<Label>(SearchCriteria.ByAutomationId("WarehouseItemErrorTextBlock"));
             return errorTextBlock.Text;

@@ -18,8 +18,15 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
         public void SetUsername(string username)
         {
             var loginScreen = GetLoginScreen();
-            var userNameTextBox = loginScreen.Get<TextBox>("Login_UserName");
-            userNameTextBox.Enter(username);            
+            for (int i = 0; i < 3; i++)
+            {
+                var userNameTextBox = loginScreen.Get<TextBox>("Login_UserName");
+                userNameTextBox.Enter(username);
+                if (userNameTextBox.Text == username)
+                {
+                    break;
+                }
+            }            
         }
 
         public void SetPassword(string password)
