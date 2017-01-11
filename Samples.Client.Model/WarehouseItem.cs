@@ -14,11 +14,9 @@ namespace Samples.Client.Model
             int quantity)
         {
             Id = Guid.NewGuid();
-            Kind = kind;
-            Price = price;
-            Quantity = quantity;
-            
-            CommitChanges();           
+            _kind = kind;
+            _price = price;
+            _quantity = quantity;                       
         }
 
         private string _kind;
@@ -28,15 +26,8 @@ namespace Samples.Client.Model
         {
             get { return _kind; }
             set
-            {
-                if (_kind == value)
-                {
-                    return;
-                }
-
-                _kind = value;
-                MakeDirty();
-                NotifyOfPropertyChange();
+            {                
+                SetProperty(ref _kind, value);
             }
         }
 
@@ -48,13 +39,7 @@ namespace Samples.Client.Model
             get { return _price;}
             set
             {
-                if (Math.Abs(value - _price) < double.Epsilon)
-                {
-                    return;
-                }
-                _price = value;
-                MakeDirty();
-                NotifyOfPropertyChange();
+                SetProperty(ref _price, value);
                 NotifyOfPropertyChange(() => TotalCost);
             }
         }
@@ -66,34 +51,11 @@ namespace Samples.Client.Model
         {
             get { return _quantity; }
             set
-            {
-                if (value == _quantity)
-                {
-                    return;
-                }
-                _quantity = value;
-                MakeDirty();
-                NotifyOfPropertyChange();
+            {                
+                SetProperty(ref _quantity, value);
                 NotifyOfPropertyChange(() => TotalCost);
             }
-        }
-
-        [Obsolete("Remove after EditableModel fixed.")]
-        public override string Error
-        {
-            get
-            {
-                var error = base.Error;
-
-                if (string.IsNullOrEmpty(error))
-                {
-                    return error;
-                }
-
-
-                return error.Replace(Environment.NewLine, string.Empty);
-            }
-        }
+        }        
 
         public double TotalCost
         {
