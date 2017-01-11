@@ -35,5 +35,11 @@ namespace Samples.Specifications.Client.Tests.Integration.Domain.ScreenObjects
             var loginViewModel = StructureHelper.GetLogin();
             loginViewModel.LoginCommand.Execute(null);
         }
+
+        public string GetErrorMessage()
+        {
+            var loginViewModel = StructureHelper.GetLogin();
+            return loginViewModel.LoginFailureCause;
+        }
     }
 }

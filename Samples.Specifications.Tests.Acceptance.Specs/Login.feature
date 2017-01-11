@@ -21,4 +21,4 @@ Scenario: Remain at the login screen when the login fails
 	And I set the username to "Admin"
 	And I set the password to "wrong password"
 	And I log in to the system
-	Then Login error message is displayed with the following text "Authentication for user 'Domain\Admin' has failed"
+	Then Login error message is displayed with the following text "Failed to log in: Unable to login"

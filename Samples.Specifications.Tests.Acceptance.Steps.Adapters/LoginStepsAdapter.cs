@@ -46,7 +46,7 @@ namespace Samples.Specifications.Tests.Acceptance.Steps.Adapters
         [Then(@"Login error message is displayed with the following text ""(.*)""")]
         public void ThenLoginErrorMessageIsDisplayedWithTheFollowingText(string errorMessage)
         {
-            ScenarioContext.Current.Pending();
+            LoginSteps.ThenLoginErrorMessageIsDisplayedWithTheFollowingText(errorMessage);
         }
     }
 }

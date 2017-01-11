@@ -131,8 +131,8 @@ this.ScenarioSetup(scenarioInfo);
 #line 23
  testRunner.And("I log in to the system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 24
- testRunner.Then("Login error message is displayed with the following text \"Authentication for user" +
-                    " \'Domain\\Admin\' has failed\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("Login error message is displayed with the following text \"Failed to log in: Unabl" +
+                    "e to login\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

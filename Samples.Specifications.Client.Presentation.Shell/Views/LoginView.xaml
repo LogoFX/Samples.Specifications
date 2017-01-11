@@ -98,8 +98,9 @@
                   Content="Save Password"
                   VerticalAlignment="Center"
                   IsChecked="{Binding Path=SavePassword, Mode=TwoWay}" />
-        
-        <TextBlock Grid.Row="3"
+
+        <TextBlock AutomationProperties.AutomationId="Login_FailureTextBlock"
+                   Grid.Row="3"
                    Grid.Column="0"
                    Grid.ColumnSpan="2"
                    VerticalAlignment="Center"

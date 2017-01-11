@@ -35,5 +35,12 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
             var loginScreen = application.GetWindowEx("Login View");
             return loginScreen;
         }
+
+        public string GetErrorMessage()
+        {
+            var loginScreen = GetLoginScreen();
+            var errorLabel = loginScreen.Get<Label>(SearchCriteria.ByAutomationId("Login_FailureTextBlock"));
+            return errorLabel.Text;
+        }
     }
 }

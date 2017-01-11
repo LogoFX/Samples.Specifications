@@ -1,4 +1,5 @@
-﻿using Samples.Specifications.Tests.Domain.ScreenObjects;
+﻿using FluentAssertions;
+using Samples.Specifications.Tests.Domain.ScreenObjects;
 
 namespace Samples.Specifications.Tests.Steps
 {
@@ -29,6 +30,12 @@ namespace Samples.Specifications.Tests.Steps
         public void ThenTheLoginScreenIsDisplayed()
         {
            
+        }
+
+        public void ThenLoginErrorMessageIsDisplayedWithTheFollowingText(string errorMessage)
+        {
+            var actualErrorMessage = _loginScreenObject.GetErrorMessage();
+            actualErrorMessage.Should().Be(errorMessage);
         }
     }
 }
