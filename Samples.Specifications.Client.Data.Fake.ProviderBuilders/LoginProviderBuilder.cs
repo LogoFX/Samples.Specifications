@@ -33,7 +33,7 @@ namespace Samples.Specifications.Client.Data.Fake.ProviderBuilders
                     (r, login, password) => _users.ContainsKey(login)
                         ? _users[login] == password
                             ? r.Complete()
-                            : r.Throw(new Exception("Unable to login"))
+                            : r.Throw(new Exception("Unable to login."))
                         : r.Throw(new Exception("Login not found.")));
             return setup;
         }
