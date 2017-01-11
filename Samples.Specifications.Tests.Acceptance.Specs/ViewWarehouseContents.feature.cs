@@ -100,13 +100,13 @@ this.ScenarioSetup(scenarioInfo);
 #line 7
  testRunner.Given("warehouse contains the following items:", ((string)(null)), table1, "Given ");
 #line 12
- testRunner.And("I am able to log in successfully with username \'Admin\' and password \'1234\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I am able to log in successfully with username \'Admin\' and password \'pass\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 13
  testRunner.When("I open the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 14
  testRunner.And("I set the username to \"Admin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 15
- testRunner.And("I set the password to \"1234\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I set the password to \"pass\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 16
  testRunner.And("I log in to the system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -160,13 +160,13 @@ this.ScenarioSetup(scenarioInfo);
 #line 24
  testRunner.Given("warehouse contains the following items:", ((string)(null)), table3, "Given ");
 #line 28
- testRunner.And("I am able to log in successfully with username \'Admin\' and password \'1234\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I am able to log in successfully with username \'Admin\' and password \'pass\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 29
  testRunner.When("I open the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 30
  testRunner.And("I set the username to \"Admin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 31
- testRunner.And("I set the password to \"1234\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I set the password to \"pass\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 32
  testRunner.And("I log in to the system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 33
@@ -205,13 +205,13 @@ this.ScenarioSetup(scenarioInfo);
 #line 37
  testRunner.Given("warehouse contains the following items:", ((string)(null)), table4, "Given ");
 #line 42
- testRunner.And("I am able to log in successfully with username \'Admin\' and password \'1234\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I am able to log in successfully with username \'Admin\' and password \'pass\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 43
  testRunner.When("I open the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 44
  testRunner.And("I set the username to \"Admin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 45
- testRunner.And("I set the password to \"1234\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I set the password to \"pass\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 46
  testRunner.And("I log in to the system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 47
@@ -262,13 +262,13 @@ this.ScenarioSetup(scenarioInfo);
 #line 54
  testRunner.Given("warehouse contains the following items:", ((string)(null)), table6, "Given ");
 #line 58
- testRunner.And("I am able to log in successfully with username \'Admin\' and password \'1234\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I am able to log in successfully with username \'Admin\' and password \'pass\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 59
  testRunner.When("I open the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 60
  testRunner.And("I set the username to \"Admin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 61
- testRunner.And("I set the password to \"1234\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I set the password to \"pass\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 62
  testRunner.And("I log in to the system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -337,13 +337,13 @@ this.ScenarioSetup(scenarioInfo);
 #line 73
  testRunner.Given("warehouse contains the following items:", ((string)(null)), table9, "Given ");
 #line 78
- testRunner.And("I am able to log in successfully with username \'Admin\' and password \'1234\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I am able to log in successfully with username \'Admin\' and password \'pass\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 79
  testRunner.When("I open the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 80
  testRunner.And("I set the username to \"Admin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 81
- testRunner.And("I set the password to \"1234\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I set the password to \"pass\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 82
  testRunner.And("I log in to the system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 83
@@ -382,13 +382,13 @@ this.ScenarioSetup(scenarioInfo);
 #line 87
  testRunner.Given("warehouse contains the following items:", ((string)(null)), table10, "Given ");
 #line 92
- testRunner.And("I am able to log in successfully with username \'Admin\' and password \'1234\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I am able to log in successfully with username \'Admin\' and password \'pass\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 93
  testRunner.When("I open the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 94
  testRunner.And("I set the username to \"Admin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 95
- testRunner.And("I set the password to \"1234\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I set the password to \"pass\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 96
  testRunner.And("I log in to the system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 97
@@ -427,13 +427,13 @@ this.ScenarioSetup(scenarioInfo);
 #line 101
  testRunner.Given("warehouse contains the following items:", ((string)(null)), table11, "Given ");
 #line 106
- testRunner.And("I am able to log in successfully with username \'Admin\' and password \'1234\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I am able to log in successfully with username \'Admin\' and password \'pass\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 107
  testRunner.When("I open the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 108
  testRunner.And("I set the username to \"Admin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 109
- testRunner.And("I set the password to \"1234\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I set the password to \"pass\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 110
  testRunner.And("I log in to the system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 111

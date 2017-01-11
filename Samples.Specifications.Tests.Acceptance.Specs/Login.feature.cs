@@ -97,17 +97,42 @@ this.ScenarioSetup(scenarioInfo);
 #line 10
 this.ScenarioSetup(scenarioInfo);
 #line 11
- testRunner.Given("I am able to log in successfully with username \'Admin\' and password \'1234\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I am able to log in successfully with username \'Admin\' and password \'pass\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 12
  testRunner.When("I open the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 13
  testRunner.And("I set the username to \"Admin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 14
- testRunner.And("I set the password to \"1234\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I set the password to \"pass\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 15
  testRunner.And("I log in to the system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 16
  testRunner.Then("Application navigates to the main screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Remain at the login screen when the login fails")]
+        [Xunit.TraitAttribute("FeatureTitle", "Login")]
+        [Xunit.TraitAttribute("Description", "Remain at the login screen when the login fails")]
+        public virtual void RemainAtTheLoginScreenWhenTheLoginFails()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Remain at the login screen when the login fails", ((string[])(null)));
+#line 18
+this.ScenarioSetup(scenarioInfo);
+#line 19
+ testRunner.Given("I am able to log in successfully with username \'Admin\' and password \'pass\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 20
+ testRunner.When("I open the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 21
+ testRunner.And("I set the username to \"Admin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 22
+ testRunner.And("I set the password to \"wrong password\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 23
+ testRunner.And("I log in to the system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 24
+ testRunner.Then("Login error message is displayed with the following text \"Authentication for user" +
+                    " \'Domain\\Admin\' has failed\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

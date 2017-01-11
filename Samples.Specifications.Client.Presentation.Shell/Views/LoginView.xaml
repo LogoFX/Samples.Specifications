@@ -86,7 +86,7 @@
                 Background="Transparent"
                 BorderBrush="Black"
                 BorderThickness="1"
-                ToolTip="Password: '1234'">
+                ToolTip="Password: 'pass'">
             <TextBlock VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        Text="?" />

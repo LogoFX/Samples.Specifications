@@ -17,7 +17,7 @@ namespace Samples.Specifications.Tests.Acceptance.Steps.Adapters
         public void GivenIAmAbleToLogInSuccessfullyWithUsernameAndPassword(string userName, string password)
         {
             GivenLoginSteps.SetupAuthenticatedUserWithCredentials(userName, password);
-            GivenLoginSteps.SetupLoginSuccessfullyWithUsername(userName);
+            //GivenLoginSteps.SetupLoginSuccessfullyWithUsername(userName);
         }
 
     }
