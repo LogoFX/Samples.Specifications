@@ -1,5 +1,4 @@
 using System;
-using System.Diagnostics;
 using System.Windows.Input;
 using JetBrains.Annotations;
 using LogoFX.Client.Mvvm.Commanding;
@@ -129,9 +128,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         }
 
         private async void NewWarehouseItem()
-        {
-            Debug.Assert(!IsBusy);
-
+        {            
             IsBusy = true;
 
             try
@@ -148,9 +145,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         }
 
         private async void DeleteSelectedItem()
-        {
-            Debug.Assert(!IsBusy);
-
+        {            
             IsBusy = true;
 
             try
@@ -167,9 +162,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         }
 
         private async void Apply()
-        {
-            Debug.Assert(!IsBusy);
-
+        {            
             IsBusy = true;
 
             try
@@ -187,7 +180,6 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         protected override async void OnInitialize()
         {
             base.OnInitialize();
-
             await _dataService.GetWarehouseItemsAsync();
         }
     }

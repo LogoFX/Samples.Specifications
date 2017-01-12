@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Windows.Threading;
 using JetBrains.Annotations;
+using LogoFX.Client.Core;
 using LogoFX.Core;
 using Samples.Client.Data.Contracts.Providers;
 using Samples.Client.Model.Contracts;
 using Samples.Client.Model.Mappers;
-using System.Windows.Threading;
-using Caliburn.Micro;
 
 namespace Samples.Client.Model
 {
     [UsedImplicitly]
-    internal sealed class DataService : PropertyChangedBase, IDataService
+    internal sealed class DataService : NotifyPropertyChangedBase<DataService>, IDataService
     {
         private readonly IWarehouseProvider _warehouseProvider;
         private readonly IEventsProvider _eventsProvider;

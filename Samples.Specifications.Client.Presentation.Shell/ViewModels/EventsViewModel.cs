@@ -10,8 +10,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
 {
     public sealed class EventsViewModel : BusyScreen
     {
-        private readonly IDataService _dataService;
-        private IEnumerable _events;
+        private readonly IDataService _dataService;        
 
         public EventsViewModel(IDataService dataService)
         {
@@ -56,7 +55,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
                            .Do(() =>
                            {
                                _dataService.StartEventMonitoring();
-                           })
+                           })                           
                            .RequeryOnPropertyChanged(this, () => _dataService.EventMonitoringStarted));
             }
         }
@@ -78,6 +77,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             }
         }
 
+        private IEnumerable _events;
         public IEnumerable Events
         {
             get { return _events ?? (_events = CreateEvents()); }
