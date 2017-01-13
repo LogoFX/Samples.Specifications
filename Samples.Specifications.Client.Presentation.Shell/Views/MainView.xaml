@@ -5,8 +5,6 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:cal="http://www.caliburnproject.org"
              xmlns:viewModels="clr-namespace:Samples.Specifications.Client.Presentation.Shell.ViewModels"
-             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
-             xmlns:commanding="clr-namespace:LogoFX.Client.Mvvm.Commanding;assembly=LogoFX.Client.Mvvm.Commanding.Platform"
              mc:Ignorable="d" 
              d:DataContext="{d:DesignInstance viewModels:MainViewModel}"
              d:DesignHeight="300" d:DesignWidth="300">
@@ -29,8 +27,7 @@
             </Grid.RowDefinitions>
 
             <ContentControl Grid.Row="0"
-                            cal:View.Model="{Binding Path=ActiveWarehouseItem, Mode=OneWay}"                            
-                            cal:View.Context="Edit" />
+                            cal:View.Model="{Binding Path=ActiveWarehouseItem, Mode=OneWay}"/>
             
             <ContentControl Grid.Row="1"
                             cal:View.Model="{Binding Path=WarehouseItems, Mode=OneTime}" />     

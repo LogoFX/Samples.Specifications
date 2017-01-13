@@ -42,7 +42,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             {
                 return _deleteCommand ??
                        (_deleteCommand = ActionCommand
-                           .When(() => ActiveWarehouseItem is WarehouseItemViewModel)
+                           .When(() => ActiveWarehouseItem is ExistingWarehouseItemViewModel)
                            .Do(DeleteSelectedItem)
                            .RequeryOnPropertyChanged(this, () => ActiveWarehouseItem));
             }
@@ -113,7 +113,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
 
         private void WarehouseItems_SelectionChanged(object sender, System.EventArgs e)
         {
-            ActiveWarehouseItem = (WarehouseItemViewModel) WarehouseItems.WarehouseItems.SelectedItem;
+            ActiveWarehouseItem = (ExistingWarehouseItemViewModel) WarehouseItems.WarehouseItems.SelectedItem;
         }
 
         private EventsViewModel _events;

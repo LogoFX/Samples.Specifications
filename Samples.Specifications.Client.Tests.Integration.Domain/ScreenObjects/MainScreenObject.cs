@@ -35,7 +35,7 @@ namespace Samples.Specifications.Client.Tests.Integration.Domain.ScreenObjects
         public IEnumerable<WarehouseItemAssertionTestData> GetWarehouseItems()
         {
             var main = StructureHelper.GetMain();
-            return main.WarehouseItems.WarehouseItems.OfType<WarehouseItemViewModel>()
+            return main.WarehouseItems.WarehouseItems.OfType<ExistingWarehouseItemViewModel>()
                 .Select(t => new WarehouseItemAssertionTestData
                 {
                     Kind = t.Model.Kind,
@@ -49,7 +49,7 @@ namespace Samples.Specifications.Client.Tests.Integration.Domain.ScreenObjects
         {
             var main = StructureHelper.GetMain();
             return
-                main.WarehouseItems.WarehouseItems.OfType<WarehouseItemViewModel>()
+                main.WarehouseItems.WarehouseItems.OfType<ExistingWarehouseItemViewModel>()
                     .Where(t => t.Model.Kind == kind)
                     .Select(t => new WarehouseItemAssertionTestData
                     {
@@ -65,7 +65,7 @@ namespace Samples.Specifications.Client.Tests.Integration.Domain.ScreenObjects
             var main = StructureHelper.GetMain();
             var itemViewModel =
                 main.WarehouseItems.WarehouseItems
-                    .OfType<WarehouseItemViewModel>().Single(t => t.Model.Kind == kind);
+                    .OfType<ExistingWarehouseItemViewModel>().Single(t => t.Model.Kind == kind);
 
             if (newPrice != null)
             {

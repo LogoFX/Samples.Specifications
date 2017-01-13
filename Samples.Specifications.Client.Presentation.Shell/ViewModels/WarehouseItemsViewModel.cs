@@ -32,7 +32,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             {
                 FactoryMethod = o =>
                 {
-                    var viewModel = _viewModelCreatorService.CreateViewModel<IWarehouseItem, WarehouseItemViewModel>((IWarehouseItem) o);
+                    var viewModel = _viewModelCreatorService.CreateViewModel<IWarehouseItem, ExistingWarehouseItemViewModel>((IWarehouseItem) o);
                     return viewModel;
                 }
             }.WithSource(_dataService.WarehouseItems);
