@@ -48,9 +48,9 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             }
         }
 
-        private WarehouseItemViewModelBase _activeWarehouseItem;
+        private EditableObjectViewModel<IWarehouseItem> _activeWarehouseItem;
 
-        public WarehouseItemViewModelBase ActiveWarehouseItem
+        public EditableObjectViewModel<IWarehouseItem> ActiveWarehouseItem
         {
             get { return _activeWarehouseItem; }
             set
