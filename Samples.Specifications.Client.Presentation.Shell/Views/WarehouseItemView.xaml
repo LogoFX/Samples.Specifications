@@ -88,8 +88,7 @@
                  VerticalAlignment="Center"
                  Focusable="False"
                  IsReadOnly="True"
-                 Text="{Binding Path=Model.TotalCost, Mode=OneWay}">
-        </TextBox>
+                 Text="{Binding Path=Model.TotalCost, Mode=OneWay}" />
 
         <!--Error Info-->
         <TextBlock AutomationProperties.AutomationId="WarehouseItemErrorTextBlock"
@@ -100,3 +99,4 @@
                    Text="{Binding Path=Model.Error, Mode=OneWay}" />
     </Grid>
 </UserControl>
+

@@ -42,15 +42,15 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             {
                 return _deleteCommand ??
                        (_deleteCommand = ActionCommand
-                           .When(() => ActiveWarehouseItem is ExistingWarehouseItemViewModel)
+                           .When(() => ActiveWarehouseItem?.Item.Model.IsNew == false)
                            .Do(DeleteSelectedItem)
                            .RequeryOnPropertyChanged(this, () => ActiveWarehouseItem));
             }
         }
 
-        private EditableObjectViewModel<IWarehouseItem> _activeWarehouseItem;
+        private WarehouseItemContainerViewModel _activeWarehouseItem;
 
-        public EditableObjectViewModel<IWarehouseItem> ActiveWarehouseItem
+        public WarehouseItemContainerViewModel ActiveWarehouseItem
         {
             get { return _activeWarehouseItem; }
             set
@@ -111,9 +111,12 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             return warehouseItemsViewModel;
         }
 
-        private void WarehouseItems_SelectionChanged(object sender, System.EventArgs e)
+        private void WarehouseItems_SelectionChanged(object sender, EventArgs e)
         {
-            ActiveWarehouseItem = (ExistingWarehouseItemViewModel) WarehouseItems.WarehouseItems.SelectedItem;
+            var selectedItem = WarehouseItems.WarehouseItems.SelectedItem;
+            ActiveWarehouseItem = selectedItem == null ? null :
+                _viewModelCreatorService.CreateViewModel<IWarehouseItem, WarehouseItemContainerViewModel>(
+                    ((WarehouseItemViewModel) WarehouseItems.WarehouseItems.SelectedItem).Model);
         }
 
         private EventsViewModel _events;
@@ -134,7 +137,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             try
             {
                 var warehouseItem = await _dataService.NewWarehouseItemAsync();
-                var newItem = _viewModelCreatorService.CreateViewModel<IWarehouseItem, NewWarehouseItemViewModel>(warehouseItem);
+                var newItem = _viewModelCreatorService.CreateViewModel<IWarehouseItem, WarehouseItemContainerViewModel>(warehouseItem);
                 ActiveWarehouseItem = newItem;
             }
 
@@ -150,7 +153,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
 
             try
             {
-                await _dataService.DeleteWarehouseItemAsync(ActiveWarehouseItem.Model);
+                await _dataService.DeleteWarehouseItemAsync(ActiveWarehouseItem?.Item.Model);
             }
 
             finally
