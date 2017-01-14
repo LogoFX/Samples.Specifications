@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Windows.Input;
 using JetBrains.Annotations;
 using LogoFX.Client.Mvvm.Commanding;
@@ -14,19 +15,21 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
     {
         private readonly IViewModelCreatorService _viewModelCreatorService;
         private readonly IDataService _dataService;
+        private readonly IMessageService _messageService;
 
         public MainViewModel(
             IViewModelCreatorService viewModelCreatorService,
-            IDataService dataService)
+            IDataService dataService,
+            IMessageService messageService)
         {
             _viewModelCreatorService = viewModelCreatorService;
             _dataService = dataService;
+            _messageService = messageService;
 
             NewWarehouseItem();
         }
 
         private ICommand _newCommand;
-
         public ICommand NewCommand
         {
             get
@@ -36,7 +39,6 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         }
 
         private ICommand _deleteCommand;
-
         public ICommand DeleteCommand
         {
             get
@@ -50,7 +52,6 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         }
 
         private WarehouseItemContainerViewModel _activeWarehouseItem;
-
         public WarehouseItemContainerViewModel ActiveWarehouseItem
         {
             get { return _activeWarehouseItem; }
@@ -124,13 +125,8 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         private EventsViewModel _events;
         public EventsViewModel Events
         {
-            get { return _events ?? (_events = CreateEvents()); }
-        }
-
-        private EventsViewModel CreateEvents()
-        {
-            return _viewModelCreatorService.CreateViewModel<EventsViewModel>();
-        }
+            get { return _events ?? (_events = _viewModelCreatorService.CreateViewModel<EventsViewModel>()); }
+        }        
 
         private async void NewWarehouseItem()
         {            
@@ -166,26 +162,23 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             NewWarehouseItem();
         }
 
-        private async void Apply()
-        {            
-            IsBusy = true;
-
-            try
-            {
-                await _dataService.SaveWarehouseItemAsync(ActiveWarehouseItem.Model);
-                await _dataService.GetWarehouseItemsAsync();
-            }
-
-            finally
-            {
-                IsBusy = false;
-            }
-        }
-
         protected override async void OnInitialize()
         {
             base.OnInitialize();
             await _dataService.GetWarehouseItemsAsync();
         }
+
+        public override void CanClose(Action<bool> callback)
+        {
+            if (_dataService.WarehouseItems.Any(t => t.IsDirty))
+            {
+                _messageService.ShowError(new Exception("some text"));
+                callback(false);
+            }
+            else
+            {
+                callback(true);
+            }
+        }        
     }
 }

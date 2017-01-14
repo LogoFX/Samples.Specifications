@@ -18,7 +18,6 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         }
 
         private ICommand _clearCommand;
-
         public ICommand ClearCommand
         {
             get
@@ -44,7 +43,6 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         }
 
         private ICommand _startCommand;
-
         public ICommand StartCommand
         {
             get
@@ -61,7 +59,6 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         }
 
         private ICommand _stopCommand;
-
         public ICommand StopCommand
         {
             get
