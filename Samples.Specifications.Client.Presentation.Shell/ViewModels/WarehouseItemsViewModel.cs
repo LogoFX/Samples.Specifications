@@ -21,7 +21,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         }
 
         private WrappingCollection.WithSelection _warehouseItems;
-        public WrappingCollection.WithSelection WarehouseItems
+        public WrappingCollection.WithSelection Items
         {
             get { return _warehouseItems ?? (_warehouseItems = CreateWarehouseItems()); }
         }

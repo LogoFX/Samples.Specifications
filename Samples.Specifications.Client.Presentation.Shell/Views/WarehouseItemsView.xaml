@@ -9,7 +9,7 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
         <DataGrid AutomationProperties.AutomationId="WarehouseItemsDataGrid" 
-                  ItemsSource="{Binding Path=WarehouseItems, Mode=OneWay}"
+                  ItemsSource="{Binding Path=Items, Mode=OneWay}"
                   SelectionUnit="FullRow"
                   SelectionMode="Single"
                   IsReadOnly="True"

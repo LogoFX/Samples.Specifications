@@ -22,8 +22,7 @@ namespace Samples.Specifications.Client.Tests.Integration
             var givenLoginSteps = Resolver.Resolve<GivenLoginSteps>();
             var userName = "Admin";
             var password = "pass";
-            givenLoginSteps.SetupAuthenticatedUserWithCredentials(userName, password);
-            //givenLoginSteps.SetupLoginSuccessfullyWithUsername(userName);
+            givenLoginSteps.SetupAuthenticatedUserWithCredentials(userName, password);            
 
             var generalSteps = Resolver.Resolve<GeneralSteps>();
             generalSteps.WhenIOpenTheApplication();

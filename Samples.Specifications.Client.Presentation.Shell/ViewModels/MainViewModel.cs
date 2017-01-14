@@ -4,6 +4,7 @@ using JetBrains.Annotations;
 using LogoFX.Client.Mvvm.Commanding;
 using LogoFX.Client.Mvvm.ViewModel.Extensions;
 using LogoFX.Client.Mvvm.ViewModel.Services;
+using LogoFX.Core;
 using Samples.Client.Model.Contracts;
 
 namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
@@ -107,16 +108,17 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         private WarehouseItemsViewModel CreateWarehouseItems()
         {
             var warehouseItemsViewModel = _viewModelCreatorService.CreateViewModel<WarehouseItemsViewModel>();
-            warehouseItemsViewModel.WarehouseItems.SelectionChanged += WarehouseItems_SelectionChanged;
+            EventHandler strongHandler = WarehouseItemsSelectionChanged;
+            warehouseItemsViewModel.Items.SelectionChanged += WeakDelegate.From(strongHandler);
             return warehouseItemsViewModel;
         }
 
-        private void WarehouseItems_SelectionChanged(object sender, EventArgs e)
+        private void WarehouseItemsSelectionChanged(object sender, EventArgs e)
         {
-            var selectedItem = WarehouseItems.WarehouseItems.SelectedItem;
+            var selectedItem = WarehouseItems.Items.SelectedItem;
             ActiveWarehouseItem = selectedItem == null ? null :
                 _viewModelCreatorService.CreateViewModel<IWarehouseItem, WarehouseItemContainerViewModel>(
-                    ((WarehouseItemViewModel) WarehouseItems.WarehouseItems.SelectedItem).Model);
+                    ((WarehouseItemViewModel) WarehouseItems.Items.SelectedItem).Model);
         }
 
         private EventsViewModel _events;
