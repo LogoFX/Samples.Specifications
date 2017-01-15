@@ -1,7 +1,7 @@
 ﻿namespace Samples.Specifications.Tests.Domain.ScreenObjects
 {
-    public interface IShellScreenObject
+    public interface IExitScreenObject
     {
-        void Close();
+        bool IsDisplayed();
     }
 }

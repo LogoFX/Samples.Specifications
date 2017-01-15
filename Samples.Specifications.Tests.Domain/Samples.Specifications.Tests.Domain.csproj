@@ -37,6 +37,7 @@
   <ItemGroup>
     <Compile Include="IStartClientApplicationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScreenObjects\IExitScreenObject.cs" />
     <Compile Include="ScreenObjects\ILoginScreenObject.cs" />
     <Compile Include="ScreenObjects\IMainScreenObject.cs" />
     <Compile Include="ScreenObjects\IShellScreenObject.cs" />

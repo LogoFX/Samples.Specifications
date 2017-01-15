@@ -13,6 +13,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain
             iocContainer.RegisterSingleton<ILoginScreenObject, LoginScreenObject>();
             iocContainer.RegisterSingleton<IShellScreenObject, ShellScreenObject>();
             iocContainer.RegisterSingleton<IMainScreenObject, MainScreenObject>();
+            iocContainer.RegisterSingleton<IExitScreenObject, ExitScreenObject>();
             iocContainer.RegisterSingleton<IStartClientApplicationService, StartClientApplicationService>();
             iocContainer.RegisterSingleton<IExecutableContainer, ExecutableContainer>();
         }

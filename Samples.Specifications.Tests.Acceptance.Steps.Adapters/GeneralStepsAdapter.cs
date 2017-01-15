@@ -22,8 +22,7 @@ namespace Samples.Specifications.Tests.Acceptance.Steps.Adapters
         [When(@"I close the application")]
         public void WhenICloseTheApplication()
         {
-            ScenarioContext.Current.Pending();
+            GeneralSteps.WhenICloseTheApplication();
         }
-
     }
 }

@@ -20,7 +20,7 @@ namespace Samples.Specifications.Client.Presentation.Shell
 
         public MessageResult ShowError(Exception error, string caption = "")
         {
-            MessageBox.Show("Error");
+            MessageBox.Show("Error", "Exit options");
             return MessageResult.OK;            
         }
     }

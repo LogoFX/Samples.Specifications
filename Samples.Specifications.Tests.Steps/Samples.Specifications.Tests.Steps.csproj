@@ -59,6 +59,7 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ExitSteps.cs" />
     <Compile Include="GeneralSteps.cs" />
     <Compile Include="GivenLoginSteps.cs" />
     <Compile Include="GivenMainSteps.cs" />
