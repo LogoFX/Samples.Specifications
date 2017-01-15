@@ -2,8 +2,7 @@
 using LogoFX.Client.Mvvm.Model.Contracts;
 
 namespace Samples.Client.Model.Contracts
-{
-    //TODO: add IsNew for storing this info in the model itself
+{    
     public interface IAppModel : IModel<Guid>, IEditableModel
     {
         /// <summary>

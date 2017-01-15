@@ -11,14 +11,12 @@ namespace Samples.Client.Model
         public WarehouseItem(
             string kind, 
             double price, 
-            int quantity,
-            bool isNew = false)
+            int quantity)
         {
             Id = Guid.NewGuid();
             _kind = kind;
             _price = price;
-            _quantity = quantity;
-            IsNew = isNew;
+            _quantity = quantity;            
         }
 
         private string _kind;

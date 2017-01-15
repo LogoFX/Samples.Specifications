@@ -74,7 +74,10 @@ namespace Samples.Client.Model
         async Task<IWarehouseItem> IDataService.NewWarehouseItemAsync()
         {
             await Task.Delay(1000);
-            return new WarehouseItem("New Kind", 0d, 1, isNew:true);
+            return new WarehouseItem("New Kind", 0d, 1)
+            {
+                IsNew = true
+            };
         }
 
         async Task IDataService.SaveWarehouseItemAsync(IWarehouseItem item)
@@ -101,8 +104,7 @@ namespace Samples.Client.Model
             _timer.Stop();
             NotifyOfPropertyChange(() => EventMonitoringStarted);
         }
-
-        //TODO: consider moving to prvdr
+        
         async Task IDataService.ClearEventsAsync()
         {
             await Task.Delay(400);
