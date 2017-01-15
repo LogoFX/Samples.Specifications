@@ -8,8 +8,8 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
         public bool IsDisplayed()
         {
             var application = ApplicationContext.Application;
-            var exitWindow = application.GetWindowEx("Exit options");
-            return exitWindow.Visible;
+            var exitWindow = application?.GetWindowEx("Exit options");
+            return exitWindow?.Visible ?? false;
         }
     }
 }

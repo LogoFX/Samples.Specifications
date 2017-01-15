@@ -16,7 +16,14 @@ namespace Samples.Specifications.Tests.Acceptance.Steps.Adapters
         [Then(@"the exit appication options are displayed")]
         public void ThenTheExitAppicationOptionsAreDisplayed()
         {
-            ExitSteps.ThenTheExitAppicationOptionsAreDisplayed();
+            ExitSteps.ThenTheExitAppicationOptionsDisplayStatusIs(true);
         }
+
+        [Then(@"the exit appication options are not displayed")]
+        public void ThenTheExitAppicationOptionsAreNotDisplayed()
+        {
+            ExitSteps.ThenTheExitAppicationOptionsDisplayStatusIs(false);
+        }
+
     }
 }

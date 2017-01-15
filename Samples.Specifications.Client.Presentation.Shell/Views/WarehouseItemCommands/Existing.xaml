@@ -44,6 +44,7 @@
         </Button>
 
         <Button Grid.Column="2"
+                AutomationProperties.AutomationId="DiscardChanges"
                     Margin="5,0,0,0"
                     Content="Discard"
                     Width="100"

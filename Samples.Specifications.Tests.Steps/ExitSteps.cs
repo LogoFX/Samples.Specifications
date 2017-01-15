@@ -12,10 +12,10 @@ namespace Samples.Specifications.Tests.Steps
             _exitScreenObject = exitScreenObject;
         }
 
-        public void ThenTheExitAppicationOptionsAreDisplayed()
+        public void ThenTheExitAppicationOptionsDisplayStatusIs(bool status)
         {
             var isDisplayed = _exitScreenObject.IsDisplayed();
-            isDisplayed.Should().BeTrue();
+            isDisplayed.Should().Be(status);
         }
     }
 }

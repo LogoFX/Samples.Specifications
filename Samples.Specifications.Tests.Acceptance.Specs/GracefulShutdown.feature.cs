@@ -119,6 +119,55 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
+        [Xunit.FactAttribute(DisplayName="Don\'t display exit application options if there are no unsaved changes")]
+        [Xunit.TraitAttribute("FeatureTitle", "GracefulShutdown")]
+        [Xunit.TraitAttribute("Description", "Don\'t display exit application options if there are no unsaved changes")]
+        public virtual void DonTDisplayExitApplicationOptionsIfThereAreNoUnsavedChanges()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Don\'t display exit application options if there are no unsaved changes", ((string[])(null)));
+#line 21
+this.ScenarioSetup(scenarioInfo);
+#line hidden
+            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Kind",
+                        "Price",
+                        "Quantity"});
+            table2.AddRow(new string[] {
+                        "Oven",
+                        "34.95",
+                        "20"});
+            table2.AddRow(new string[] {
+                        "TV",
+                        "346.95",
+                        "50"});
+            table2.AddRow(new string[] {
+                        "PC",
+                        "423.95",
+                        "70"});
+#line 22
+ testRunner.Given("warehouse contains the following items:", ((string)(null)), table2, "Given ");
+#line 27
+ testRunner.And("I am able to log in successfully with username \'Admin\' and password \'pass\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 28
+ testRunner.When("I open the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 29
+ testRunner.And("I set the username to \"Admin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 30
+ testRunner.And("I set the password to \"pass\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 31
+ testRunner.And("I log in to the system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 32
+ testRunner.And("I set the Price for \"TV\" item to 350", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 33
+ testRunner.And("I discard the changes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 34
+ testRunner.And("I close the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 35
+ testRunner.Then("the exit appication options are not displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
         [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
         [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
         public class FixtureData : System.IDisposable

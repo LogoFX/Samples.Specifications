@@ -12,5 +12,6 @@ namespace Samples.Specifications.Tests.Domain.ScreenObjects
         void AddWarehouseItem(WarehouseItemAssertionTestData warehouseItemData);
         void DeleteWarehouseItem(string kind);
         string GetErrorMessage();
+        void DiscardChanges();
     }
 }

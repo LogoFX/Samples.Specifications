@@ -34,6 +34,12 @@ namespace Samples.Specifications.Tests.Acceptance.Steps.Adapters
             MainSteps.WhenISetTheKindForItemTo(kind, newKind);
         }
 
+        [When(@"I discard the changes")]
+        public void WhenIDiscardTheChanges()
+        {
+            MainSteps.WhenIDiscardTheChanges();
+        }
+
         [Then(@"I expect to see the following data on the screen:")]
         public void ThenIExpectToSeeTheFollowingDataOnTheScreen(Table table)
         {

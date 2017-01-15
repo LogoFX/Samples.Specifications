@@ -136,5 +136,12 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
             var errorTextBlock = shell.Get<Label>(SearchCriteria.ByAutomationId("WarehouseItemErrorTextBlock"));
             return errorTextBlock.Text;
         }
+
+        public void DiscardChanges()
+        {
+            var shell = StructureHelper.GetShell();
+            var discardControl = shell.Get<Button>(SearchCriteria.ByAutomationId("DiscardChanges"));
+            discardControl.Click();
+        }
     }
 }

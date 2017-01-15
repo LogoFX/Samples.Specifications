@@ -82,5 +82,10 @@ namespace Samples.Specifications.Client.Tests.Integration.Domain.ScreenObjects
         {
             throw new System.NotImplementedException();
         }
+
+        public void DiscardChanges()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

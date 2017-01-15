@@ -76,5 +76,10 @@ namespace Samples.Specifications.Tests.Steps
             var actualErrorMessage = _mainScreenObject.GetErrorMessage();
             actualErrorMessage.Should().Be(expectedErrorMessage);
         }
+
+        public void WhenIDiscardTheChanges()
+        {
+            _mainScreenObject.DiscardChanges();
+        }
     }
 }
