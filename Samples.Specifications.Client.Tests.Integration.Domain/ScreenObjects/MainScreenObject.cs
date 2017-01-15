@@ -7,7 +7,7 @@ using Samples.Specifications.Tests.Domain.ScreenObjects;
 
 namespace Samples.Specifications.Client.Tests.Integration.Domain.ScreenObjects
 {
-    public class MainScreenObject : IMainScreenObject
+    class MainScreenObject : IMainScreenObject
     {
         public StructureHelper StructureHelper { get; }
 

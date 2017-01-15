@@ -173,6 +173,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScreenObjects\LoginScreenObject.cs" />
     <Compile Include="ScreenObjects\MainScreenObject.cs" />
+    <Compile Include="ScreenObjects\ShellScreenObject.cs" />
     <Compile Include="StartClientApplicationService.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -12,6 +12,7 @@ namespace Samples.Specifications.Client.Tests.Integration.Domain
         {
             iocContainer.RegisterSingleton<ILoginScreenObject, LoginScreenObject>();
             iocContainer.RegisterSingleton<IMainScreenObject, MainScreenObject>();
+            iocContainer.RegisterSingleton<IShellScreenObject, ShellScreenObject>();
             iocContainer.RegisterSingleton<IStartClientApplicationService, StartClientApplicationService>();
         }
     }

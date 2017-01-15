@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="Samples.Specifications.Client.Presentation.Shell.Views.ExitOptionsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:viewModels="clr-namespace:Samples.Specifications.Client.Presentation.Shell.ViewModels"
+             xmlns:shared="clr-namespace:LogoFX.Client.Mvvm.ViewModel.Shared;assembly=LogoFX.Client.Mvvm.ViewModel.Shared"
+             mc:Ignorable="d" 
+             d:DataContext="{d:DesignInstance viewModels:ExitOptionsViewModel}"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <StackPanel Orientation="Horizontal">
+        <Button Content="Save and Exit" Command="{Binding Path=CloseCommand}" CommandParameter="{x:Static shared:MessageResult.Yes}">
+            
+        </Button>
+        <Button Content="Exit without saving">
+            
+        </Button>
+        </StackPanel>
+</UserControl>

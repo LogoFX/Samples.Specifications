@@ -1,10 +1,12 @@
 using System;
 using System.Linq;
 using System.Windows.Input;
+using Caliburn.Micro;
 using JetBrains.Annotations;
 using LogoFX.Client.Mvvm.Commanding;
 using LogoFX.Client.Mvvm.ViewModel.Extensions;
 using LogoFX.Client.Mvvm.ViewModel.Services;
+using LogoFX.Client.Mvvm.ViewModel.Shared;
 using LogoFX.Core;
 using Samples.Client.Model.Contracts;
 
@@ -15,16 +17,16 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
     {
         private readonly IViewModelCreatorService _viewModelCreatorService;
         private readonly IDataService _dataService;
-        private readonly IMessageService _messageService;
+        private readonly IWindowManager _windowManager;
 
         public MainViewModel(
             IViewModelCreatorService viewModelCreatorService,
-            IDataService dataService,
-            IMessageService messageService)
+            IDataService dataService,            
+            IWindowManager windowManager)
         {
             _viewModelCreatorService = viewModelCreatorService;
             _dataService = dataService;
-            _messageService = messageService;
+            _windowManager = windowManager;
 
             NewWarehouseItem();
         }
@@ -168,12 +170,34 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             await _dataService.GetWarehouseItemsAsync();
         }
 
-        public override void CanClose(Action<bool> callback)
+        public override async void CanClose(Action<bool> callback)
         {
             if (_dataService.WarehouseItems.Any(t => t.IsDirty))
             {
-                _messageService.ShowError(new Exception("some text"));
-                callback(true);
+                var exitOptionsViewModel = _viewModelCreatorService.CreateViewModel<ExitOptionsViewModel>();
+                _windowManager.ShowDialog(exitOptionsViewModel);
+                var result = exitOptionsViewModel.Result;
+                if (result == MessageResult.Yes)
+                {
+                    foreach (var warehouseItem in _dataService.WarehouseItems.Where(t => t.IsDirty && t.CanCommitChanges))
+                    {                        
+                        await _dataService.SaveWarehouseItemAsync(warehouseItem);
+                        warehouseItem.CommitChanges();
+                    }
+                    callback(true);
+                }
+                else if (result == MessageResult.No)
+                {
+                    foreach (var warehouseItem in _dataService.WarehouseItems.Where(t => t.IsDirty && t.CanCancelChanges))
+                    {
+                        warehouseItem.CancelChanges();                        
+                    }
+                    callback(true);
+                }
+                else if (result == MessageResult.Cancel)
+                {
+                    callback(false);
+                }                
             }
             else
             {
