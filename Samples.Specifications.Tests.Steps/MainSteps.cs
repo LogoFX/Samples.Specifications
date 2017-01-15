@@ -80,6 +80,6 @@ namespace Samples.Specifications.Tests.Steps
         public void WhenIDiscardTheChanges()
         {
             _mainScreenObject.DiscardChanges();
-        }
+        }        
     }
 }

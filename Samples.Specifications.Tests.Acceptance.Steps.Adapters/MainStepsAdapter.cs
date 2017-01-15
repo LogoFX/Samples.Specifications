@@ -11,7 +11,8 @@ namespace Samples.Specifications.Tests.Acceptance.Steps.Adapters
     {
         public MainSteps MainSteps { get; set; }
 
-        public MainStepsAdapter(MainSteps mainSteps)
+        public MainStepsAdapter(
+            MainSteps mainSteps)
         {
             MainSteps = mainSteps;
         }
@@ -70,6 +71,6 @@ namespace Samples.Specifications.Tests.Acceptance.Steps.Adapters
         public void ThenErrorMessageIsDisplayedWithTheFollowingText(string expectedErrorMessage)
         {
             MainSteps.ThenErrorMessageIsDisplayedWithTheFollowingText(expectedErrorMessage);
-        }
+        }        
     }
 }

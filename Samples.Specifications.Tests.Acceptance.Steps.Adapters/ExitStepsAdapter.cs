@@ -13,17 +13,22 @@ namespace Samples.Specifications.Tests.Acceptance.Steps.Adapters
             ExitSteps = exitSteps;
         }
 
-        [Then(@"the exit appication options are displayed")]
+        [When(@"I select save with changes option")]
+        public void WhenISelectSaveWithChangesOption()
+        {
+            //nothing
+        }
+
+        [Then(@"the exit application options are displayed")]
         public void ThenTheExitAppicationOptionsAreDisplayed()
         {
-            ExitSteps.ThenTheExitAppicationOptionsDisplayStatusIs(true);
+            ExitSteps.ThenTheExitApplicationOptionsDisplayStatusIs(true);
         }
 
-        [Then(@"the exit appication options are not displayed")]
+        [Then(@"the exit application options are not displayed")]
         public void ThenTheExitAppicationOptionsAreNotDisplayed()
         {
-            ExitSteps.ThenTheExitAppicationOptionsDisplayStatusIs(false);
+            ExitSteps.ThenTheExitApplicationOptionsDisplayStatusIs(false);
         }
-
     }
 }

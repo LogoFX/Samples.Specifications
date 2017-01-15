@@ -173,7 +173,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             if (_dataService.WarehouseItems.Any(t => t.IsDirty))
             {
                 _messageService.ShowError(new Exception("some text"));
-                callback(false);
+                callback(true);
             }
             else
             {
