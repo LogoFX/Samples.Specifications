@@ -183,7 +183,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
                     {                        
                         await _dataService.SaveWarehouseItemAsync(warehouseItem);
                         warehouseItem.CommitChanges();
-                    }
+                    }                    
                     callback(true);
                 }
                 else if (result == MessageResult.No)

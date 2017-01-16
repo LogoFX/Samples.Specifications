@@ -9,6 +9,6 @@ namespace Samples.Client.Data.Contracts.Providers
     {
         Task<IEnumerable<WarehouseItemDto>> GetWarehouseItems();
         Task<bool> DeleteWarehouseItem(Guid id);
-        Task SaveWarehouseItem(WarehouseItemDto dto);        
+        void SaveWarehouseItem(WarehouseItemDto dto);        
     }
 }

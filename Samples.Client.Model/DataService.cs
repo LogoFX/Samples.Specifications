@@ -83,7 +83,7 @@ namespace Samples.Client.Model
         async Task IDataService.SaveWarehouseItemAsync(IWarehouseItem item)
         {
             var dto = WarehouseMapper.MapToWarehouseDto(item);
-            await _warehouseProvider.SaveWarehouseItem(dto);
+            await ServiceRunner.RunAsync(() => _warehouseProvider.SaveWarehouseItem(dto));            
         }
 
         async Task IDataService.DeleteWarehouseItemAsync(IWarehouseItem item)
