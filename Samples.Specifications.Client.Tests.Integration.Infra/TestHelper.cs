@@ -5,11 +5,6 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra
 {
     public static class TestHelper
     {
-        public static void BeforeTeardown()
-        {
-            //TODO:
-        }
-
         public static void AfterTeardown()
         {
             UserContext.Current = null;                        

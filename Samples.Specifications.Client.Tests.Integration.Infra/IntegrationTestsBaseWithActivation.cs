@@ -12,13 +12,7 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra
             ScreenExtensions.TryActivate(rootObject);
             return rootObject;
         }        
-
-        protected override void OnBeforeTeardown()
-        {
-            base.OnBeforeTeardown();
-            TestHelper.BeforeTeardown();
-        }
-
+        
         protected override void OnAfterTeardown()
         {
             base.OnAfterTeardown();
