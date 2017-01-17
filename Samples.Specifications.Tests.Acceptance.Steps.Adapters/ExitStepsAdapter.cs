@@ -25,6 +25,12 @@ namespace Samples.Specifications.Tests.Acceptance.Steps.Adapters
             ExitSteps.WhenISelectExitWithoutSaveOption();
         }
 
+        [When(@"I select cancel option")]
+        public void WhenISelectCancelOption()
+        {
+            ExitSteps.WhenISelectCancelOption();
+        }
+
         [Then(@"the exit application options are displayed")]
         public void ThenTheExitAppicationOptionsAreDisplayed()
         {

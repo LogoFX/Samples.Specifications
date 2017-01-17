@@ -95,5 +95,11 @@ namespace Samples.Specifications.Tests.Acceptance.Steps.Adapters
         {
             WarehouseSteps.ThenTheChangesAreDiscarded();
         }
+
+        [Then(@"the changes are intact")]
+        public void ThenTheChangesAreIntact()
+        {
+            WarehouseSteps.ThenTheChangesAreIntact();
+        }
     }
 }

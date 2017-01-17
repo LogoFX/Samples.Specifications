@@ -270,6 +270,57 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
+        [Xunit.FactAttribute(DisplayName="Keep changed item data if cancel option is selected")]
+        [Xunit.TraitAttribute("FeatureTitle", "GracefulShutdown")]
+        [Xunit.TraitAttribute("Description", "Keep changed item data if cancel option is selected")]
+        public virtual void KeepChangedItemDataIfCancelOptionIsSelected()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Keep changed item data if cancel option is selected", ((string[])(null)));
+#line 71
+this.ScenarioSetup(scenarioInfo);
+#line hidden
+            TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Kind",
+                        "Price",
+                        "Quantity"});
+            table5.AddRow(new string[] {
+                        "Oven",
+                        "34.95",
+                        "20"});
+            table5.AddRow(new string[] {
+                        "TV",
+                        "346.95",
+                        "50"});
+            table5.AddRow(new string[] {
+                        "PC",
+                        "423.95",
+                        "70"});
+#line 72
+ testRunner.Given("warehouse contains the following items:", ((string)(null)), table5, "Given ");
+#line 77
+ testRunner.And("I am able to log in successfully with username \'Admin\' and password \'pass\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 78
+ testRunner.When("I open the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 79
+ testRunner.And("I set the username to \"Admin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 80
+ testRunner.And("I set the password to \"pass\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 81
+ testRunner.And("I log in to the system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 82
+ testRunner.And("I set the Quantity for \"TV\" item to 51", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 83
+ testRunner.And("I close the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 84
+ testRunner.And("I select cancel option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 85
+ testRunner.Then("the Quantity for \"TV\" item is 51", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 86
+ testRunner.And("the changes are intact", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
         [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
         [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
         public class FixtureData : System.IDisposable

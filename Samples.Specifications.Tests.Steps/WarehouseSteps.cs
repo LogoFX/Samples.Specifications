@@ -78,12 +78,17 @@ namespace Samples.Specifications.Tests.Steps
 
         public void ThenTheChangesAreSaved()
         {
-            ThenTheChangesControlsAreDisabled();
+            ThenTheChangesControlsStatusIs(false);
         }
 
         public void ThenTheChangesAreDiscarded()
         {
-            ThenTheChangesControlsAreDisabled();
+            ThenTheChangesControlsStatusIs(false);
+        }
+
+        public void ThenTheChangesAreIntact()
+        {
+            ThenTheChangesControlsStatusIs(true);
         }
 
         public void ThenThePriceForItemIs(string kind, double price)
@@ -96,13 +101,13 @@ namespace Samples.Specifications.Tests.Steps
         {
             var row = _warehouseScreenObject.GetWarehouseItemByKind(kind);
             row.Quantity.Should().Be(quantity);
-        }
+        }                
 
-        private void ThenTheChangesControlsAreDisabled()
+        private void ThenTheChangesControlsStatusIs(bool status)
         {
             var statuses = _warehouseScreenObject.AreStatusIndicatorsEnabled();
-            statuses.Item1.Should().BeFalse();
-            statuses.Item1.Should().BeFalse();
-        }        
+            statuses.Item1.Should().Be(status);
+            statuses.Item1.Should().Be(status);
+        }
     }
 }

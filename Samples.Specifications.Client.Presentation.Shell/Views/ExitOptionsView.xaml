@@ -17,5 +17,9 @@
                 Command="{Binding Path=CloseCommand}" CommandParameter="{x:Static shared:MessageResult.No}">
             
         </Button>
-        </StackPanel>
+        <Button Content="Cancel" AutomationProperties.AutomationId="ExitCancel"
+                Command="{Binding Path=CloseCommand}" CommandParameter="{x:Static shared:MessageResult.Cancel}">
+
+        </Button>
+    </StackPanel>
 </UserControl>

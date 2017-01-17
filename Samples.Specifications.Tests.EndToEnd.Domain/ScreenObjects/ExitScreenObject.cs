@@ -18,8 +18,8 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
             var application = ApplicationContext.Application;
             var exitWindow = application?.GetWindowEx("Exit options");
 
-            var exitWithChangesControl = exitWindow?.Get<Button>("ExitWithSave");
-            exitWithChangesControl?.Click();
+            var exitControl = exitWindow?.Get<Button>("ExitWithSave");
+            exitControl?.Click();
         }
 
         public void ExitWithoutSave()
@@ -27,8 +27,17 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
             var application = ApplicationContext.Application;
             var exitWindow = application?.GetWindowEx("Exit options");
 
-            var exitWithChangesControl = exitWindow?.Get<Button>("ExitWithoutSave");
-            exitWithChangesControl?.Click();
+            var exitControl = exitWindow?.Get<Button>("ExitWithoutSave");
+            exitControl?.Click();
+        }
+
+        public void Cancel()
+        {
+            var application = ApplicationContext.Application;
+            var exitWindow = application?.GetWindowEx("Exit options");
+
+            var exitControl = exitWindow?.Get<Button>("ExitCancel");
+            exitControl?.Click();
         }
     }
 }

@@ -5,5 +5,6 @@
         bool IsDisplayed();
         void ExitWithSave();
         void ExitWithoutSave();
+        void Cancel();
     }
 }

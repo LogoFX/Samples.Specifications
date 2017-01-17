@@ -27,5 +27,10 @@ namespace Samples.Specifications.Tests.Steps
         {
             _exitScreenObject.ExitWithoutSave();
         }
+
+        public void WhenISelectCancelOption()
+        {
+            _exitScreenObject.Cancel();
+        }
     }
 }
