@@ -40,6 +40,7 @@
     <Compile Include="ScreenObjects\IExitScreenObject.cs" />
     <Compile Include="ScreenObjects\ILoginScreenObject.cs" />
     <Compile Include="ScreenObjects\IMainScreenObject.cs" />
+    <Compile Include="ScreenObjects\IWarehouseScreenObject.cs" />
     <Compile Include="ScreenObjects\IShellScreenObject.cs" />
   </ItemGroup>
   <ItemGroup>

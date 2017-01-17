@@ -11,8 +11,9 @@ namespace Samples.Specifications.Client.Tests.Integration.Domain
         public void RegisterModule(IIocContainerRegistrator iocContainer)
         {
             iocContainer.RegisterSingleton<ILoginScreenObject, LoginScreenObject>();
-            iocContainer.RegisterSingleton<IMainScreenObject, MainScreenObject>();
+            iocContainer.RegisterSingleton<IWarehouseScreenObject, WarehouseScreenObject>();
             iocContainer.RegisterSingleton<IShellScreenObject, ShellScreenObject>();
+            iocContainer.RegisterSingleton<IMainScreenObject, MainScreenObject>();
             iocContainer.RegisterSingleton<IStartClientApplicationService, StartClientApplicationService>();
         }
     }

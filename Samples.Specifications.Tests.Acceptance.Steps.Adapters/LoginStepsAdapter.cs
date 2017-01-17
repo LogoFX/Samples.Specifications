@@ -35,13 +35,7 @@ namespace Samples.Specifications.Tests.Acceptance.Steps.Adapters
         public void ThenTheLoginScreenIsDisplayed()
         {
             LoginSteps.ThenTheLoginScreenIsDisplayed();            
-        }
-
-        [Then(@"Application navigates to the main screen")]
-        public void ThenApplicationNavigatesToTheMainScreen()
-        {
-            //for readability reasons
-        }
+        }        
 
         [Then(@"Login error message is displayed with the following text ""(.*)""")]
         public void ThenLoginErrorMessageIsDisplayedWithTheFollowingText(string errorMessage)

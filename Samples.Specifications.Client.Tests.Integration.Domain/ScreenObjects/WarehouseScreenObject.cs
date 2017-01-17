@@ -8,20 +8,14 @@ using Samples.Specifications.Tests.Domain.ScreenObjects;
 
 namespace Samples.Specifications.Client.Tests.Integration.Domain.ScreenObjects
 {
-    class MainScreenObject : IMainScreenObject
+    class WarehouseScreenObject : IWarehouseScreenObject
     {
         public StructureHelper StructureHelper { get; }
 
-        public MainScreenObject(StructureHelper structureHelper)
+        public WarehouseScreenObject(StructureHelper structureHelper)
         {
             StructureHelper = structureHelper;
-        }
-
-        public bool IsActive()
-        {
-            var main = StructureHelper.GetMain();
-            return main.IsActive;
-        }
+        }       
 
         public void AddWarehouseItem(WarehouseItemAssertionTestData warehouseItemData)
         {
@@ -92,6 +86,22 @@ namespace Samples.Specifications.Client.Tests.Integration.Domain.ScreenObjects
         public Tuple<bool, bool> AreStatusIndicatorsEnabled()
         {
             throw new System.NotImplementedException();
+        }
+    }
+
+    class MainScreenObject : IMainScreenObject
+    {
+        public StructureHelper StructureHelper { get; set; }
+
+        public MainScreenObject(StructureHelper structureHelper)
+        {
+            StructureHelper = structureHelper;
+        }
+
+        public bool IsActive()
+        {
+            var main = StructureHelper.GetMain();
+            return main.IsActive;
         }
     }
 }
