@@ -18,5 +18,11 @@ namespace Samples.Specifications.Tests.Acceptance.Steps.Adapters
         {
             WarehouseSteps.ThenTheStoredPriceForItemIs(kind, price);
         }
+
+        [Then(@"the changes are saved")]
+        public void ThenTheChangesAreSaved()
+        {
+            WarehouseSteps.ThenTheChangesAreSaved();
+        }
     }
 }

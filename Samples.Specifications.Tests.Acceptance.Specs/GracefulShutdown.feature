@@ -34,7 +34,6 @@ Scenario: Don't display exit application options if there are no unsaved changes
 	And I close the application
 	Then the exit application options are not displayed
 
-@ignore
 Scenario: Save changed item data if save with changes option is selected
 	Given warehouse contains the following items:
 	| Kind | Price  | Quantity |
@@ -49,4 +48,4 @@ Scenario: Save changed item data if save with changes option is selected
 	And I set the Price for "TV" item to 350	
 	And I close the application
 	And I select save with changes option
-	Then the stored Price for "TV" item is 350
+	Then the changes are saved

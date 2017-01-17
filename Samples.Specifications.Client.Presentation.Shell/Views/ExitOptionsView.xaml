@@ -9,7 +9,8 @@
              d:DataContext="{d:DesignInstance viewModels:ExitOptionsViewModel}"
              d:DesignHeight="300" d:DesignWidth="300">
     <StackPanel Orientation="Horizontal">
-        <Button Content="Save and Exit" Command="{Binding Path=CloseCommand}" CommandParameter="{x:Static shared:MessageResult.Yes}">
+        <Button Content="Save and Exit" AutomationProperties.AutomationId="ExitWithChanges"
+                Command="{Binding Path=CloseCommand}" CommandParameter="{x:Static shared:MessageResult.Yes}">
             
         </Button>
         <Button Content="Exit without saving">

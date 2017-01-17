@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Caliburn.Micro;
 using JetBrains.Annotations;
@@ -183,7 +184,10 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
                     {                        
                         await _dataService.SaveWarehouseItemAsync(warehouseItem);
                         warehouseItem.CommitChanges();
-                    }                    
+                    }
+                    //Added for testability purposes only
+                    //The UI test engine has to query controls and perform several actions
+                    await Task.Delay(1000);
                     callback(true);
                 }
                 else if (result == MessageResult.No)

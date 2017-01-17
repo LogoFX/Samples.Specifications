@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Samples.Specifications.Tests.Data;
 
 namespace Samples.Specifications.Tests.Domain.ScreenObjects
@@ -13,5 +14,6 @@ namespace Samples.Specifications.Tests.Domain.ScreenObjects
         void DeleteWarehouseItem(string kind);
         string GetErrorMessage();
         void DiscardChanges();
+        Tuple<bool, bool> AreStatusIndicatorsEnabled();
     }
 }

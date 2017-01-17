@@ -143,5 +143,22 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
             var discardControl = shell.Get<Button>(SearchCriteria.ByAutomationId("DiscardChanges"));
             discardControl.Click();
         }
+
+        public Tuple<bool, bool> AreStatusIndicatorsEnabled()
+        {
+            var shell = StructureHelper.GetShell();
+
+            //The apply and discard changes controls don't refresh their state
+            //unless the containing control is clicked
+            //or app is minimized and then restored
+            //The following two lines make sure the containing control is clicked
+            var warehouseItemsContainer = shell.Get(SearchCriteria.ByAutomationId("WarehouseItemsContainer"));
+            warehouseItemsContainer.Click();
+            var applyControl = shell.Get<Button>(SearchCriteria.ByAutomationId("WarehouseItemApplyButton"));
+            var isApplyEnabled = applyControl.Enabled;
+            var discardControl = shell.Get<Button>(SearchCriteria.ByAutomationId("DiscardChanges"));
+            var isDiscardEnabled = discardControl.Enabled;
+            return new Tuple<bool, bool>(isApplyEnabled, isDiscardEnabled);
+        }
     }
 }

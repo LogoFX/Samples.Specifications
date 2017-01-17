@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Samples.Specifications.Client.Presentation.Shell.ViewModels;
 using Samples.Specifications.Client.Tests.Integration.Infra.Core;
@@ -84,6 +85,11 @@ namespace Samples.Specifications.Client.Tests.Integration.Domain.ScreenObjects
         }
 
         public void DiscardChanges()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Tuple<bool, bool> AreStatusIndicatorsEnabled()
         {
             throw new System.NotImplementedException();
         }

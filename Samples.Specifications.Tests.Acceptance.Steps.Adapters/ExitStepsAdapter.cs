@@ -16,7 +16,7 @@ namespace Samples.Specifications.Tests.Acceptance.Steps.Adapters
         [When(@"I select save with changes option")]
         public void WhenISelectSaveWithChangesOption()
         {
-            //nothing
+            ExitSteps.WhenISelectExitWithChangesOption();
         }
 
         [Then(@"the exit application options are displayed")]

@@ -3,5 +3,6 @@
     public interface IExitScreenObject
     {
         bool IsDisplayed();
+        void ExitWithChanges();
     }
 }

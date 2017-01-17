@@ -17,5 +17,10 @@ namespace Samples.Specifications.Tests.Steps
             var isDisplayed = _exitScreenObject.IsDisplayed();
             isDisplayed.Should().Be(status);
         }
+
+        public void WhenISelectExitWithChangesOption()
+        {
+            _exitScreenObject.ExitWithChanges();            
+        }
     }
 }
