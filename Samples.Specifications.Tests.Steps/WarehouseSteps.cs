@@ -78,15 +78,31 @@ namespace Samples.Specifications.Tests.Steps
 
         public void ThenTheChangesAreSaved()
         {
-            var statuses = _warehouseScreenObject.AreStatusIndicatorsEnabled();
-            statuses.Item1.Should().BeFalse();
-            statuses.Item1.Should().BeFalse();
+            ThenTheChangesControlsAreDisabled();
         }
 
-        public void ThenThePriceForItemIs(string kind, int price)
+        public void ThenTheChangesAreDiscarded()
+        {
+            ThenTheChangesControlsAreDisabled();
+        }
+
+        public void ThenThePriceForItemIs(string kind, double price)
         {
             var row = _warehouseScreenObject.GetWarehouseItemByKind(kind);
             row.Price.Should().Be(price);
         }
+
+        public void ThenTheQuantityForItemIs(string kind, int quantity)
+        {
+            var row = _warehouseScreenObject.GetWarehouseItemByKind(kind);
+            row.Quantity.Should().Be(quantity);
+        }
+
+        private void ThenTheChangesControlsAreDisabled()
+        {
+            var statuses = _warehouseScreenObject.AreStatusIndicatorsEnabled();
+            statuses.Item1.Should().BeFalse();
+            statuses.Item1.Should().BeFalse();
+        }        
     }
 }

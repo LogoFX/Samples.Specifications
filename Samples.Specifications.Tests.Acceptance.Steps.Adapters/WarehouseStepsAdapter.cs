@@ -78,10 +78,22 @@ namespace Samples.Specifications.Tests.Acceptance.Steps.Adapters
             WarehouseSteps.ThenThePriceForItemIs(kind, price);
         }
 
+        [Then(@"the Quantity for ""(.*)"" item is (.*)")]
+        public void ThenTheQuantityForItemIs(string kind, int quantity)
+        {
+            WarehouseSteps.ThenTheQuantityForItemIs(kind, quantity);
+        }
+
         [Then(@"the changes are saved")]
         public void ThenTheChangesAreSaved()
         {
             WarehouseSteps.ThenTheChangesAreSaved();
+        }
+
+        [Then(@"the changes are discarded")]
+        public void ThenTheChangesAreDiscarded()
+        {
+            WarehouseSteps.ThenTheChangesAreDiscarded();
         }
     }
 }

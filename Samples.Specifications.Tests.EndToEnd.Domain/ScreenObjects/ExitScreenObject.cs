@@ -13,12 +13,21 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
             return exitWindow?.Visible ?? false;
         }
 
-        public void ExitWithChanges()
+        public void ExitWithSave()
         {
             var application = ApplicationContext.Application;
             var exitWindow = application?.GetWindowEx("Exit options");
 
-            var exitWithChangesControl = exitWindow?.Get<Button>("ExitWithChanges");
+            var exitWithChangesControl = exitWindow?.Get<Button>("ExitWithSave");
+            exitWithChangesControl?.Click();
+        }
+
+        public void ExitWithoutSave()
+        {
+            var application = ApplicationContext.Application;
+            var exitWindow = application?.GetWindowEx("Exit options");
+
+            var exitWithChangesControl = exitWindow?.Get<Button>("ExitWithoutSave");
             exitWithChangesControl?.Click();
         }
     }

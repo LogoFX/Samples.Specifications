@@ -142,6 +142,7 @@
     <Compile Include="RetryHelper.cs" />
     <Compile Include="ScreenObjects\ExitScreenObject.cs" />
     <Compile Include="ScreenObjects\LoginScreenObject.cs" />
+    <Compile Include="ScreenObjects\MainScreenObject.cs" />
     <Compile Include="ScreenObjects\WarehouseScreenObject.cs" />
     <Compile Include="ScreenObjects\ShellScreenObject.cs" />
     <Compile Include="StartClientApplicationService.cs" />

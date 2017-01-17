@@ -168,12 +168,12 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Save changed item data if save with changes option is selected")]
+        [Xunit.FactAttribute(DisplayName="Save changed item data if exit with save option is selected")]
         [Xunit.TraitAttribute("FeatureTitle", "GracefulShutdown")]
-        [Xunit.TraitAttribute("Description", "Save changed item data if save with changes option is selected")]
-        public virtual void SaveChangedItemDataIfSaveWithChangesOptionIsSelected()
+        [Xunit.TraitAttribute("Description", "Save changed item data if exit with save option is selected")]
+        public virtual void SaveChangedItemDataIfExitWithSaveOptionIsSelected()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Save changed item data if save with changes option is selected", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Save changed item data if exit with save option is selected", ((string[])(null)));
 #line 37
 this.ScenarioSetup(scenarioInfo);
 #line hidden
@@ -206,15 +206,66 @@ this.ScenarioSetup(scenarioInfo);
 #line 47
  testRunner.And("I log in to the system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 48
- testRunner.And("I set the Price for \"TV\" item to 350", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I set the Quantity for \"TV\" item to 51", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 49
  testRunner.And("I close the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 50
- testRunner.And("I select save with changes option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I select exit with save option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 51
- testRunner.Then("the Price for \"TV\" item is 350", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the Quantity for \"TV\" item is 51", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 52
  testRunner.And("the changes are saved", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Discard changed item data if exit without save option is selected")]
+        [Xunit.TraitAttribute("FeatureTitle", "GracefulShutdown")]
+        [Xunit.TraitAttribute("Description", "Discard changed item data if exit without save option is selected")]
+        public virtual void DiscardChangedItemDataIfExitWithoutSaveOptionIsSelected()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Discard changed item data if exit without save option is selected", ((string[])(null)));
+#line 54
+this.ScenarioSetup(scenarioInfo);
+#line hidden
+            TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Kind",
+                        "Price",
+                        "Quantity"});
+            table4.AddRow(new string[] {
+                        "Oven",
+                        "34.95",
+                        "20"});
+            table4.AddRow(new string[] {
+                        "TV",
+                        "346.95",
+                        "50"});
+            table4.AddRow(new string[] {
+                        "PC",
+                        "423.95",
+                        "70"});
+#line 55
+ testRunner.Given("warehouse contains the following items:", ((string)(null)), table4, "Given ");
+#line 60
+ testRunner.And("I am able to log in successfully with username \'Admin\' and password \'pass\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 61
+ testRunner.When("I open the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 62
+ testRunner.And("I set the username to \"Admin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 63
+ testRunner.And("I set the password to \"pass\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 64
+ testRunner.And("I log in to the system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 65
+ testRunner.And("I set the Quantity for \"TV\" item to 51", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 66
+ testRunner.And("I close the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 67
+ testRunner.And("I select exit without save option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 68
+ testRunner.Then("the Quantity for \"TV\" item is 50", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 69
+ testRunner.And("the changes are discarded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

@@ -18,9 +18,14 @@ namespace Samples.Specifications.Tests.Steps
             isDisplayed.Should().Be(status);
         }
 
-        public void WhenISelectExitWithChangesOption()
+        public void WhenISelectExitWithSaveOption()
         {
-            _exitScreenObject.ExitWithChanges();            
+            _exitScreenObject.ExitWithSave();            
+        }
+
+        public void WhenISelectExitWithoutSaveOption()
+        {
+            _exitScreenObject.ExitWithoutSave();
         }
     }
 }
