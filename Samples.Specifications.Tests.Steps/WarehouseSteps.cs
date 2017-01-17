@@ -1,33 +1,15 @@
-﻿#if FAKE
-using System.Linq;
-using FluentAssertions;
-using Samples.Specifications.Client.Data.Fake.ProviderBuilders;
+﻿using FluentAssertions;
 using Samples.Specifications.Tests.Domain.ScreenObjects;
-
-#endif
 
 namespace Samples.Specifications.Tests.Steps
 {
     public class WarehouseSteps
     {
-        private readonly WarehouseProviderBuilder _warehouseProviderBuilder;
         private readonly IMainScreenObject _mainScreenObject;
 
-        public WarehouseSteps(
-            WarehouseProviderBuilder warehouseProviderBuilder,
-            IMainScreenObject mainScreenObject)
+        public WarehouseSteps(IMainScreenObject mainScreenObject)
         {
-            _warehouseProviderBuilder = warehouseProviderBuilder;
             _mainScreenObject = mainScreenObject;
-        }
-
-        public async void ThenTheStoredPriceForItemIs(string kind, int price)
-        {
-#if FAKE
-            var items = await _warehouseProviderBuilder.GetService().GetWarehouseItems();
-            var item = items.Single(t => t.Kind == kind);
-            item.Price.Should().Be(price);
-#endif
         }
 
         public void ThenTheChangesAreSaved()
@@ -35,6 +17,12 @@ namespace Samples.Specifications.Tests.Steps
             var statuses = _mainScreenObject.AreStatusIndicatorsEnabled();
             statuses.Item1.Should().BeFalse();
             statuses.Item1.Should().BeFalse();
+        }
+
+        public void ThenThePriceForItemIs(string kind, int price)
+        {
+            var row = _mainScreenObject.GetWarehouseItemByKind(kind);
+            row.Price.Should().Be(price);
         }
     }
 }

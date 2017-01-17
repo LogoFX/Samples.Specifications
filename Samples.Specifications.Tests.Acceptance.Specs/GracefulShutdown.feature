@@ -48,4 +48,5 @@ Scenario: Save changed item data if save with changes option is selected
 	And I set the Price for "TV" item to 350	
 	And I close the application
 	And I select save with changes option
-	Then the changes are saved
+	Then the Price for "TV" item is 350
+	And the changes are saved

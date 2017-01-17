@@ -13,10 +13,10 @@ namespace Samples.Specifications.Tests.Acceptance.Steps.Adapters
             WarehouseSteps = warehouseSteps;
         }
 
-        [Then(@"the stored Price for ""(.*)"" item is (.*)")]
-        public void ThenTheStoredPriceForItemIs(string kind, int price)
+        [Then(@"the Price for ""(.*)"" item is (.*)")]
+        public void ThenThePriceForItemIs(string kind, int price)
         {
-            WarehouseSteps.ThenTheStoredPriceForItemIs(kind, price);
+            WarehouseSteps.ThenThePriceForItemIs(kind, price);
         }
 
         [Then(@"the changes are saved")]
