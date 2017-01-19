@@ -6,20 +6,26 @@
              xmlns:viewModels="clr-namespace:Samples.Specifications.Client.Presentation.Shell.ViewModels"
              xmlns:shared="clr-namespace:LogoFX.Client.Mvvm.ViewModel.Shared;assembly=LogoFX.Client.Mvvm.ViewModel.Shared"
              mc:Ignorable="d" 
+             Width="300"
+             Height="100"
              d:DataContext="{d:DesignInstance viewModels:ExitOptionsViewModel}"
              d:DesignHeight="300" d:DesignWidth="300">
     <StackPanel Orientation="Horizontal">
         <Button Content="Save and Exit" AutomationProperties.AutomationId="ExitWithSave"
-                Command="{Binding Path=CloseCommand}" CommandParameter="{x:Static shared:MessageResult.Yes}">
-            
+                Command="{Binding Path=CloseCommand}" CommandParameter="{x:Static shared:MessageResult.Yes}"
+                Width="Auto"
+                Height="20"
+                Margin="10">
         </Button>
         <Button Content="Exit without saving" AutomationProperties.AutomationId="ExitWithoutSave"
-                Command="{Binding Path=CloseCommand}" CommandParameter="{x:Static shared:MessageResult.No}">
-            
-        </Button>
+                Command="{Binding CloseCommand}" CommandParameter="{x:Static shared:MessageResult.No}"
+                Width="Auto"
+                Height="20"
+                Margin="10,40"/>
         <Button Content="Cancel" AutomationProperties.AutomationId="ExitCancel"
-                Command="{Binding Path=CloseCommand}" CommandParameter="{x:Static shared:MessageResult.Cancel}">
-
-        </Button>
+                Command="{Binding CloseCommand}" CommandParameter="{x:Static shared:MessageResult.Cancel}"
+                Width="Auto"
+                Height="20"
+                Margin="10,40"/>
     </StackPanel>
 </UserControl>
