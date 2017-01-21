@@ -12,6 +12,13 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
 {
     class WarehouseScreenObject : IWarehouseScreenObject
     {
+        public StructureHelper StructureHelper { get; set; }
+
+        public WarehouseScreenObject(StructureHelper structureHelper)
+        {
+            StructureHelper = structureHelper;
+        }
+
         public IEnumerable<WarehouseItemAssertionTestData> GetWarehouseItems()
         {
             var shell = StructureHelper.GetShell();

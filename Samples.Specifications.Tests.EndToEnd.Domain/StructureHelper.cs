@@ -5,9 +5,9 @@ using TestStack.White.UIItems.WindowItems;
 
 namespace Samples.Specifications.Tests.EndToEnd.Domain
 {
-    static class StructureHelper
+    class StructureHelper
     {
-        internal static Window GetShell()
+        internal Window GetShell()
         {
             var application = ApplicationContext.Application;
             var shellScreen =

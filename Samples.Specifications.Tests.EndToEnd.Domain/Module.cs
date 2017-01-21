@@ -17,6 +17,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain
             iocContainer.RegisterSingleton<IExitScreenObject, ExitScreenObject>();
             iocContainer.RegisterSingleton<IStartClientApplicationService, StartClientApplicationService>();
             iocContainer.RegisterSingleton<IExecutableContainer, ExecutableContainer>();
+            iocContainer.RegisterSingleton<StructureHelper, StructureHelper>();
         }
     }
 }
