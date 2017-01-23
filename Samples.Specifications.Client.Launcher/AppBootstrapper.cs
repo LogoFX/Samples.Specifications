@@ -1,12 +1,12 @@
 ﻿using LogoFX.Client.Bootstrapping;
-using LogoFX.Client.Bootstrapping.Adapters.Unity;
+using LogoFX.Client.Bootstrapping.Adapters.SimpleContainer;
 using Samples.Specifications.Client.Presentation.Shell.ViewModels;
 
 namespace Samples.Specifications.Client.Launcher
 {
-    public class AppBootstrapper : BootstrapperContainerBase<UnityContainerAdapter>.WithRootObject<ShellViewModel>
+    public class AppBootstrapper : BootstrapperContainerBase<ExtendedSimpleContainerAdapter>.WithRootObject<ShellViewModel>
     {
-        public AppBootstrapper(UnityContainerAdapter containerAdapter) 
+        public AppBootstrapper(ExtendedSimpleContainerAdapter containerAdapter) 
             : base(containerAdapter)
         {
         }              

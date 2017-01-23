@@ -1,7 +1,7 @@
 ﻿using LogoFX.Client.Bootstrapping;
-using LogoFX.Client.Bootstrapping.Adapters.Unity;
+using LogoFX.Client.Bootstrapping.Adapters.SimpleContainer;
 using LogoFX.Client.Mvvm.ViewModel.Services;
-using LogoFX.Client.Mvvm.ViewModelFactory.Unity;
+using LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer;
 
 namespace Samples.Specifications.Client.Launcher
 {
@@ -9,7 +9,7 @@ namespace Samples.Specifications.Client.Launcher
     {
         public App()
         {            
-            var bootstrapper = new AppBootstrapper(new UnityContainerAdapter());
+            var bootstrapper = new AppBootstrapper(new ExtendedSimpleContainerAdapter());
             bootstrapper.UseResolver().UseViewModelCreatorService().UseViewModelFactory().Initialize();            
         }
     }

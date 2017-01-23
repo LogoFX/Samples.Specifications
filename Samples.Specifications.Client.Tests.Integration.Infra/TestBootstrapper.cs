@@ -1,16 +1,16 @@
 ﻿using LogoFX.Client.Bootstrapping;
-using LogoFX.Client.Bootstrapping.Adapters.Unity;
+using LogoFX.Client.Bootstrapping.Adapters.SimpleContainer;
 using LogoFX.Client.Mvvm.ViewModel.Services;
-using LogoFX.Client.Mvvm.ViewModelFactory.Unity;
+using LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer;
 using Samples.Specifications.Client.Presentation.Shell.ViewModels;
 
 namespace Samples.Specifications.Client.Tests.Integration.Infra
 {
-    public class TestBootstrapper : TestBootstrapperContainerBase<UnityContainerAdapter>
+    public class TestBootstrapper : TestBootstrapperContainerBase<ExtendedSimpleContainerAdapter>
         .WithRootObject<ShellViewModel>
     {
         public TestBootstrapper() :
-            base(new UnityContainerAdapter(), new BootstrapperCreationOptions
+            base(new ExtendedSimpleContainerAdapter(), new BootstrapperCreationOptions
             {
                 UseApplication = false,
                 ReuseCompositionInformation = true

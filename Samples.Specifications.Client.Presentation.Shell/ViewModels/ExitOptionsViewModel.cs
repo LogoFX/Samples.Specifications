@@ -5,7 +5,7 @@ using LogoFX.Client.Mvvm.ViewModel.Shared;
 
 namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
 {
-    class ExitOptionsViewModel : Screen
+    public class ExitOptionsViewModel : Screen
     {
         public ExitOptionsViewModel()
         {
