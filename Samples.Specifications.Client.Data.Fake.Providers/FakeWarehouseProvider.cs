@@ -24,19 +24,19 @@ namespace Samples.Specifications.Client.Data.Fake.Providers
             _warehouseProviderBuilder.WithWarehouseItems(warehouseContainer.WarehouseItems);
         }
 
-        async Task<IEnumerable<WarehouseItemDto>> IWarehouseProvider.GetWarehouseItems()
+        IEnumerable<WarehouseItemDto> IWarehouseProvider.GetWarehouseItems()
         {
-            await Task.Delay(_random.Next(2000));
+            Task.Delay(_random.Next(2000));
             var service = GetService(() => _warehouseProviderBuilder, b => b);
-            var warehouseItems = await service.GetWarehouseItems();
+            var warehouseItems = service.GetWarehouseItems();
             return warehouseItems;
         }
 
-        async Task<bool> IWarehouseProvider.DeleteWarehouseItem(Guid id)
+        bool IWarehouseProvider.DeleteWarehouseItem(Guid id)
         {
-            await Task.Delay(_random.Next(2000));
+            Task.Delay(_random.Next(2000));
             var service = GetService(() => _warehouseProviderBuilder, b => b);
-            var retVal = await service.DeleteWarehouseItem(id);
+            var retVal = service.DeleteWarehouseItem(id);
             return retVal;
         }
 

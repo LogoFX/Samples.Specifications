@@ -36,29 +36,36 @@ namespace Samples.Client.Model
 
         private async void OnTimer(object sender, EventArgs e)
         {
-            var events = (await _eventsProvider.GetLastEvents(_lastEvenTime))
-                .Select(EventMapper.MapToEvent)
-                .ToList();
+            await ServiceRunner.RunAsync(() =>
+             {
+                 var events = (_eventsProvider.GetLastEvents(_lastEvenTime))
+                     .Select(EventMapper.MapToEvent)
+                     .ToList();
 
-            if (events.Count == 0)
-            {
-                return;
-            }
+                 if (events.Count == 0)
+                 {
+                     return;
+                 }
 
-            var max = events.Max(x => x.Time);
-            if (max > _lastEvenTime)
-            {
-                _lastEvenTime = max;
-            }
+                 var max = events.Max(x => x.Time);
+                 if (max > _lastEvenTime)
+                 {
+                     _lastEvenTime = max;
+                 }
 
-            _events.AddRange(events);
+                 _events.AddRange(events);
+             });
         }
 
         private async Task GetWarehouseItemsInternal()
         {
-            var warehouseItems = (await _warehouseProvider.GetWarehouseItems()).Select(WarehouseMapper.MapToWarehouseItem);
-            _warehouseItems.Clear();
-            _warehouseItems.AddRange(warehouseItems);
+            await ServiceRunner.RunAsync(() =>
+            {
+                var warehouseItems = _warehouseProvider.GetWarehouseItems().Select(WarehouseMapper.MapToWarehouseItem);
+                _warehouseItems.Clear();
+                _warehouseItems.AddRange(warehouseItems);
+            });
+            
         }
 
         IEnumerable<IWarehouseItem> IDataService.WarehouseItems
@@ -88,8 +95,11 @@ namespace Samples.Client.Model
 
         async Task IDataService.DeleteWarehouseItemAsync(IWarehouseItem item)
         {
-            await _warehouseProvider.DeleteWarehouseItem(item.Id);
-            _warehouseItems.Remove(item);
+            await ServiceRunner.RunAsync(() =>
+             {
+                 _warehouseProvider.DeleteWarehouseItem(item.Id);
+                 _warehouseItems.Remove(item);
+             });
         }
 
         void IDataService.StartEventMonitoring()

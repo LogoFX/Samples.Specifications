@@ -29,7 +29,7 @@ namespace Samples.Specifications.Client.Data.Fake.ProviderBuilders
         protected override IServiceCall<ILoginProvider> CreateServiceCall(IHaveNoMethods<ILoginProvider> serviceCallTemplate)
         {
             var setup = serviceCallTemplate
-               .AddMethodCallAsync<string, string>(t => t.Login(It.IsAny<string>(), It.IsAny<string>()),
+               .AddMethodCall<string, string>(t => t.Login(It.IsAny<string>(), It.IsAny<string>()),
                     (r, login, password) => _users.ContainsKey(login)
                         ? _users[login] == password
                             ? r.Complete()

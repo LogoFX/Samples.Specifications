@@ -32,9 +32,9 @@ namespace Samples.Specifications.Client.Data.Fake.ProviderBuilders
         protected override IServiceCall<IWarehouseProvider> CreateServiceCall(IHaveNoMethods<IWarehouseProvider> serviceCallTemplate)
         {
             var setup = serviceCallTemplate
-                .AddMethodCallWithResultAsync(t => t.GetWarehouseItems(),
+                .AddMethodCallWithResult(t => t.GetWarehouseItems(),
                     r => r.Complete(GetWarehouseItems))
-                .AddMethodCallWithResultAsync<Guid, bool>(t => t.DeleteWarehouseItem(It.IsAny<Guid>()),
+                .AddMethodCallWithResult<Guid, bool>(t => t.DeleteWarehouseItem(It.IsAny<Guid>()),
                     (r, id) => r.Complete(DeleteWarehouseItem(id)))
                 .AddMethodCall<WarehouseItemDto>(t => t.SaveWarehouseItem(It.IsAny<WarehouseItemDto>()),
                     (r, dto) =>

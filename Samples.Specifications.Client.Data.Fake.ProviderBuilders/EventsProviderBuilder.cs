@@ -49,7 +49,7 @@ namespace Samples.Specifications.Client.Data.Fake.ProviderBuilders
         protected override IServiceCall<IEventsProvider> CreateServiceCall(IHaveNoMethods<IEventsProvider> serviceCallTemplate)
         {
             var setup = serviceCallTemplate
-                .AddMethodCallWithResultAsync<DateTime, IEnumerable<EventDto>>(
+                .AddMethodCallWithResult<DateTime, IEnumerable<EventDto>>(
                     t => t.GetLastEvents(It.IsAny<DateTime>()),
                     (r, lastEventTime) => r.Complete(_events.Where(x => x.Time >= lastEventTime)));
             return setup;

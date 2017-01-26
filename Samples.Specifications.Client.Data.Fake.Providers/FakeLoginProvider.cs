@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using Attest.Fake.Builders;
+﻿using Attest.Fake.Builders;
 using JetBrains.Annotations;
 using Samples.Client.Data.Contracts.Providers;
 using Samples.Specifications.Client.Data.Fake.Containers;
@@ -23,10 +22,10 @@ namespace Samples.Specifications.Client.Data.Fake.Providers
             }            
         }
 
-        async Task ILoginProvider.Login(string username, string password)
+        void ILoginProvider.Login(string username, string password)
         {
             var service = GetService(() => _loginProviderBuilder, b => b);
-            await service.Login(username, password);
+            service.Login(username, password);
         }
     }
 }
