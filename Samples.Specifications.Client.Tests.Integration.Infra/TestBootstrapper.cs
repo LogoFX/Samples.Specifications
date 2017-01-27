@@ -1,22 +1,25 @@
 ﻿using LogoFX.Client.Bootstrapping;
 using LogoFX.Client.Bootstrapping.Adapters.SimpleContainer;
-using LogoFX.Client.Mvvm.ViewModel.Services;
-using LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer;
+using LogoFX.Practices.IoC;
+using Samples.Specifications.Client.Launcher.Shared;
 using Samples.Specifications.Client.Presentation.Shell.ViewModels;
 
 namespace Samples.Specifications.Client.Tests.Integration.Infra
 {
-    public class TestBootstrapper : TestBootstrapperContainerBase<ExtendedSimpleContainerAdapter>
+   public class TestBootstrapper : TestBootstrapperContainerBase<ExtendedSimpleContainerAdapter,
+        ExtendedSimpleContainer>
         .WithRootObject<ShellViewModel>
     {
         public TestBootstrapper() :
-            base(new ExtendedSimpleContainerAdapter(), new BootstrapperCreationOptions
+            base(new ExtendedSimpleContainer(), c => new ExtendedSimpleContainerAdapter(c), new BootstrapperCreationOptions
             {
                 UseApplication = false,
                 ReuseCompositionInformation = true
             })
-        {			
-            this.UseResolver().UseViewModelCreatorService().UseViewModelFactory();
+        {
+            this.UseResolver();
+            this.UseShared();
+            this.Initialize();
         }
 
         public override string[] Prefixes
