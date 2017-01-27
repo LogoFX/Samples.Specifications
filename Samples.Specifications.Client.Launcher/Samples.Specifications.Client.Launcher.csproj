@@ -101,8 +101,8 @@
       <HintPath>..\packages\LogoFX.Bootstrapping.1.6.0\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\LogoFX.Bootstrapping.Middleware.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="LogoFX.Client.Bootstrapping, Version=1.6.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Bootstrapping.Core.1.6.4\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\LogoFX.Client.Bootstrapping.dll</HintPath>
+    <Reference Include="LogoFX.Client.Bootstrapping, Version=1.6.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Client.Bootstrapping.Core.1.6.5\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\LogoFX.Client.Bootstrapping.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="LogoFX.Client.Bootstrapping.Adapters.Contracts, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
@@ -113,16 +113,16 @@
       <HintPath>..\packages\LogoFX.Client.Bootstrapping.Adapters.SimpleContainer.1.1.1\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\LogoFX.Client.Bootstrapping.Adapters.SimpleContainer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="LogoFX.Client.Bootstrapping.Platform, Version=1.6.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Bootstrapping.1.6.4\lib\net45\LogoFX.Client.Bootstrapping.Platform.dll</HintPath>
+    <Reference Include="LogoFX.Client.Bootstrapping.Platform, Version=1.6.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Client.Bootstrapping.1.6.6\lib\net45\LogoFX.Client.Bootstrapping.Platform.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="LogoFX.Client.Core, Version=1.0.7.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Core.Core.1.0.7\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch\LogoFX.Client.Core.dll</HintPath>
+    <Reference Include="LogoFX.Client.Core, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Client.Core.Core.1.1.0\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\LogoFX.Client.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="LogoFX.Client.Core.Platform, Version=1.0.8.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Core.1.0.8\lib\net45\LogoFX.Client.Core.Platform.dll</HintPath>
+    <Reference Include="LogoFX.Client.Core.Platform, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Client.Core.1.1.0\lib\net45\LogoFX.Client.Core.Platform.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="LogoFX.Core, Version=1.0.7.0, Culture=neutral, processorArchitecture=MSIL">
@@ -147,24 +147,24 @@
       <HintPath>..\packages\Solid.Extensibility.1.1.0\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\Solid.Extensibility.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Solid.Practices.Composition, Version=1.1.6.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Solid.Practices.Composition.Core.1.1.6\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\Solid.Practices.Composition.dll</HintPath>
+    <Reference Include="Solid.Practices.Composition, Version=1.1.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Practices.Composition.Core.1.1.7\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\Solid.Practices.Composition.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Solid.Practices.Composition.Client.Platform, Version=1.1.6.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Solid.Practices.Composition.Client.1.1.6\lib\net45\Solid.Practices.Composition.Client.Platform.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Solid.Practices.Composition.Container, Version=1.1.6.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Solid.Practices.Composition.Core.1.1.6\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\Solid.Practices.Composition.Container.dll</HintPath>
+    <Reference Include="Solid.Practices.Composition.Container, Version=1.1.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Practices.Composition.Core.1.1.7\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\Solid.Practices.Composition.Container.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Solid.Practices.Composition.Contracts, Version=1.1.6.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Solid.Practices.Composition.Core.1.1.6\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\Solid.Practices.Composition.Contracts.dll</HintPath>
+    <Reference Include="Solid.Practices.Composition.Contracts, Version=1.1.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Practices.Composition.Core.1.1.7\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\Solid.Practices.Composition.Contracts.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Solid.Practices.Composition.Platform, Version=1.1.6.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Solid.Practices.Composition.1.1.6\lib\net45\Solid.Practices.Composition.Platform.dll</HintPath>
+    <Reference Include="Solid.Practices.Composition.Platform, Version=1.1.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Practices.Composition.1.1.7\lib\net45\Solid.Practices.Composition.Platform.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Solid.Practices.IoC, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
