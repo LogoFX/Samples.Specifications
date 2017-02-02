@@ -1,24 +1,25 @@
 using System;
 using System.Collections.Generic;
-using BoDi;
 using Solid.Practices.IoC;
 
-namespace Samples.Specifications.Tests.EndToEnd.Infra.Launcher
+// ReSharper disable once CheckNamespace - copied from 
+// https://github.com/godrose/Solid/tree/master/Solid.IoC.Adapters.ObjectContainer
+namespace Solid.IoC.Adapters.ObjectContainer
 {
     /// <summary>
-    /// Represents a container adapter for <see cref="IObjectContainer"/>
+    /// Represents a container adapter for <see cref="BoDi.ObjectContainer"/>
     /// </summary>
     /// <seealso cref="IIocContainer" />    
     /// <seealso cref="IIocContainerAdapter" />    
-    public class ObjectContainerAdapter : IIocContainer, IIocContainerAdapter<IObjectContainer>
+    public class ObjectContainerAdapter : IIocContainer, IIocContainerAdapter<BoDi.ObjectContainer>
     {
-        private readonly IObjectContainer _objectContainer;
+        private readonly BoDi.ObjectContainer _objectContainer;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ObjectContainerAdapter"/> class.
         /// </summary>
         /// <param name="objectContainer">The object container.</param>
-        public ObjectContainerAdapter(IObjectContainer objectContainer)
+        public ObjectContainerAdapter(BoDi.ObjectContainer objectContainer)
         {
             _objectContainer = objectContainer;
         }
@@ -126,7 +127,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Infra.Launcher
         /// <exception cref="System.NotImplementedException"></exception>
         public void RegisterHandler<TService>(Func<TService> handler) where TService : class
         {
-            throw new NotImplementedException();
+            _objectContainer.RegisterFactoryAs(handler);
         }
 
         /// <summary>
@@ -147,7 +148,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Infra.Launcher
         /// <exception cref="System.NotImplementedException"></exception>
         public void RegisterSingleton(Type serviceType, Type implementationType)
         {
-            throw new NotImplementedException();
+            _objectContainer.RegisterTypeAs(implementationType, serviceType);
         }
 
         /// <summary>

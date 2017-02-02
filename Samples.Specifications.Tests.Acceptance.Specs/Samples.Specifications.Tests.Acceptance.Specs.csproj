@@ -64,6 +64,10 @@
     <OutputPath>..\Bin\TestsWithFake\Infra\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Solid.Practices.IoC, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Practices.IoC.1.1.1\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\Solid.Practices.IoC.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -103,6 +107,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GracefulShutdown.feature</DependentUpon>
     </Compile>
+    <Compile Include="LifecycleHook.cs" />
     <Compile Include="Login.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -144,6 +149,10 @@
     <ProjectReference Include="..\Samples.Specifications.Tests.Acceptance.Steps.Adapters\Samples.Specifications.Tests.Acceptance.Steps.Adapters.csproj">
       <Project>{cbe2f355-1f23-4a58-a6ae-ba7be542f76c}</Project>
       <Name>Samples.Specifications.Tests.Acceptance.Steps.Adapters</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samples.Specifications.Tests.EndToEnd.Infra.Launcher\Samples.Specifications.Tests.EndToEnd.Infra.Launcher.csproj">
+      <Project>{3FC45A34-C028-4F72-B8A7-7B8BF15C5BB8}</Project>
+      <Name>Samples.Specifications.Tests.EndToEnd.Infra.Launcher</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
