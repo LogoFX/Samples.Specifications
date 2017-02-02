@@ -25,7 +25,7 @@ namespace Samples.Specifications.Tests.Acceptance.Specs
         [AfterScenario]
         public void AfterScenario()
         {
-            
+            _iocContainer.Teardown();
         }
     }
 }

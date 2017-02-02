@@ -1,7 +1,5 @@
 ﻿using LogoFX.Bootstrapping;
-using LogoFX.Client.Testing.EndToEnd.SpecFlow;
 using Solid.Practices.IoC;
-using TechTalk.SpecFlow;
 
 namespace Samples.Specifications.Tests.EndToEnd.Infra.Launcher
 {
@@ -9,7 +7,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Infra.Launcher
     /// Represents SpecFlow bridge which performs the required registrations
     /// for screen objects and application services
     /// </summary>    
-    class Startup : EndToEndTestsBase
+    class Startup
     {
         private readonly IIocContainer _iocContainer;
 
