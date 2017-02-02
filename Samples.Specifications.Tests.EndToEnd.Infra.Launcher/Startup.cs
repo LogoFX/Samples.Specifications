@@ -1,12 +1,9 @@
-﻿using LogoFX.Bootstrapping;
+﻿using System;
+using LogoFX.Bootstrapping;
 using Solid.Practices.IoC;
 
 namespace Samples.Specifications.Tests.EndToEnd.Infra.Launcher
-{
-    /// <summary>
-    /// Represents SpecFlow bridge which performs the required registrations
-    /// for screen objects and application services
-    /// </summary>    
+{    
     class Startup
     {
         private readonly IIocContainer _iocContainer;
@@ -16,11 +13,12 @@ namespace Samples.Specifications.Tests.EndToEnd.Infra.Launcher
             _iocContainer = iocContainer;                   
         }
 
-        public void Initialize()
+        public void Initialize(Action beforeInitialize)
         {
             var bootstrapper =
                 new Bootstrapper(_iocContainer)
-                    .Use(new RegisterCompositionModulesMiddleware<Bootstrapper>());                    
+                    .Use(new RegisterCompositionModulesMiddleware<Bootstrapper>());
+            beforeInitialize();                 
             bootstrapper.Initialize();
         }
     }

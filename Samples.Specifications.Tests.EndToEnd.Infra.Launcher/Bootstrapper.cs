@@ -22,8 +22,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Infra.Launcher
 
         public Bootstrapper(IIocContainerRegistrator registrator)
         {
-            Registrator = registrator;         
-            PlatformProvider.Current = new NetPlatformProvider();
+            Registrator = registrator;     
         }
 
         /// <summary>

@@ -1,3 +1,4 @@
+using System;
 using Samples.Specifications.Tests.Domain;
 using Solid.Practices.IoC;
 
@@ -5,9 +6,9 @@ namespace Samples.Specifications.Tests.EndToEnd.Infra.Launcher
 {
     public static class Extensions
     {
-        public static void Initialize(this IIocContainer iocContainer)
+        public static void Initialize(this IIocContainer iocContainer, Action beforeInitialize)
         {
-            new Startup(iocContainer).Initialize();
+            new Startup(iocContainer).Initialize(beforeInitialize);
         }
 
         public static void Setup(this IIocContainer iocContainer)

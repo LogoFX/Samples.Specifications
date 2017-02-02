@@ -1,6 +1,7 @@
 ﻿using BoDi;
 using Samples.Specifications.Tests.EndToEnd.Infra.Launcher;
 using Solid.IoC.Adapters.ObjectContainer;
+using Solid.Practices.Composition;
 using Solid.Practices.IoC;
 using TechTalk.SpecFlow;
 
@@ -19,7 +20,7 @@ namespace Samples.Specifications.Tests.Acceptance.Specs
         [BeforeScenario]
         public void BeforeScenario()
         {
-            _iocContainer.Initialize();
+            _iocContainer.Initialize(() => PlatformProvider.Current = new NetPlatformProvider());
         }
 
         [AfterScenario]
