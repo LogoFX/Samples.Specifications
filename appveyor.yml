@@ -6,7 +6,7 @@ before_build:
 build:
   verbosity: minimal
   
- notifications:
+notifications:
 - provider: Email
   to:
   - gennady.verdel@logoui.co.il
