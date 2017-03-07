@@ -97,10 +97,6 @@
       <HintPath>..\packages\LogoFX.Practices.IoC.1.0.9\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\LogoFX.Practices.IoC.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="LogoFX.Practices.IoC.Middleware, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Practices.IoC.Middleware.1.1.2\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\LogoFX.Practices.IoC.Middleware.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="LogoFX.Practices.IoC.Modularity, Version=1.0.9.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Practices.IoC.1.0.9\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\LogoFX.Practices.IoC.Modularity.dll</HintPath>
       <Private>True</Private>
