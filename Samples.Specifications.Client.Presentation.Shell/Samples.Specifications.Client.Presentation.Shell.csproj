@@ -245,7 +245,7 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Converters\BoolToCommandsContextConverter.cs" />
+    <Compile Include="Converters\BooleanToCommandsContextConverter.cs" />
     <Compile Include="ViewModels\EventsViewModel.cs" />
     <Compile Include="ViewModels\EventViewModel.cs" />
     <Compile Include="ViewModels\ExitOptionsViewModel.cs" />

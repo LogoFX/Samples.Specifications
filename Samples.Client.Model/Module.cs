@@ -11,6 +11,7 @@ namespace Samples.Client.Model
         public void RegisterModule(IIocContainerRegistrator iocContainer)
         {                        
             iocContainer.RegisterSingleton<ILoginService, LoginService>();
+            iocContainer.RegisterSingleton<IDataService, DataService>();
         }
     }
 }
