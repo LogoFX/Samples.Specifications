@@ -1,4 +1,5 @@
-﻿using FluentAssertions;
+﻿using System.Threading.Tasks;
+using FluentAssertions;
 using Samples.Specifications.Tests.Domain.ScreenObjects;
 
 namespace Samples.Specifications.Tests.Steps
@@ -34,6 +35,7 @@ namespace Samples.Specifications.Tests.Steps
 
         public void ThenLoginErrorMessageIsDisplayedWithTheFollowingText(string errorMessage)
         {
+            Task.Delay(2000);
             var actualErrorMessage = _loginScreenObject.GetErrorMessage();
             actualErrorMessage.Should().Be(errorMessage);
         }
