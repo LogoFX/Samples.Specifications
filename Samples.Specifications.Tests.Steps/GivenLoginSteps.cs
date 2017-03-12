@@ -4,7 +4,7 @@ using Samples.Specifications.Client.Data.Fake.ProviderBuilders;
 #endif
 
 #if REAL
-
+using Samples.Client.Data.Contracts.Dto;
 #endif
 
 namespace Samples.Specifications.Tests.Steps
@@ -31,7 +31,14 @@ namespace Samples.Specifications.Tests.Steps
 #endif
 
 #if REAL
-            //put here real Setup
+            using (var storage = new Storage())
+            {
+                storage.Store(new UserDto
+                {
+                    Login = username,
+                    Password = password
+                });
+            }
 #endif
         }
     }

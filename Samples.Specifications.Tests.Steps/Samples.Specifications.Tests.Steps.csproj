@@ -50,7 +50,8 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TestsWithReal|AnyCPU'">
-    <OutputPath>bin\TestsWithReal\</OutputPath>
+    <OutputPath>..\Bin\TestsWithReal\</OutputPath>
+    <DefineConstants>REAL</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'IntegrationWithFake|AnyCPU'">
     <OutputPath>..\bin\IntegrationWithFake\</OutputPath>
@@ -67,6 +68,7 @@
     <Compile Include="MainSteps.cs" />
     <Compile Include="Module.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Storage.cs" />
     <Compile Include="WarehouseSteps.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -103,6 +105,10 @@
     </Reference>
     <Reference Include="LogoFX.Client.Testing.Contracts, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Client.Tests.Contracts.1.0.5\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\LogoFX.Client.Testing.Contracts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NDatabase3, Version=3.8.0.32480, Culture=neutral, PublicKeyToken=31d8e3cda240c056, processorArchitecture=MSIL">
+      <HintPath>..\packages\NDatabase.3.8.0\lib\mono\NDatabase3.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Solid.Patterns.Visitor, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">

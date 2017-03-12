@@ -22,7 +22,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'IntegrationWithFake|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\IntegrationWithFake\</OutputPath>
+    <OutputPath>..\Bin\TestsWithReal\Infra\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -45,7 +45,7 @@
     <OutputPath>bin\DebugWithReal\</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TestsWithReal|AnyCPU'">
-    <OutputPath>bin\TestsWithReal\</OutputPath>
+    <OutputPath>..\Bin\TestsWithReal\Infra\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Attest.Fake.Builders, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">

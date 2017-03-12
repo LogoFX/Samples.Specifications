@@ -37,6 +37,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithReal|AnyCPU'">
     <OutputPath>bin\DebugWithReal\</OutputPath>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TestsWithReal|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Bin\TestsWithReal\</OutputPath>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="BootstrapperExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
