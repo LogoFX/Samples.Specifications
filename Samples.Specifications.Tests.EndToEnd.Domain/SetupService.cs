@@ -1,4 +1,5 @@
-﻿using LogoFX.Client.Testing.EndToEnd.White;
+﻿using System.IO;
+using LogoFX.Client.Testing.EndToEnd.White;
 using Samples.Specifications.Tests.Domain;
 
 namespace Samples.Specifications.Tests.EndToEnd.Domain
@@ -7,7 +8,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain
     {
         public void Setup()
         {
-            
+            File.Delete("objects.ndb");
         }
     }
 

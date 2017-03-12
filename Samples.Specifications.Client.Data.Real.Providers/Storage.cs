@@ -19,7 +19,7 @@ namespace Samples.Specifications.Client.Data.Real.Providers
         {
             try
             {
-                _db = OdbFactory.Open("objects.ndb");
+                _db = OdbFactory.Open(".\\Infra\\objects.ndb");
             }
 
             catch (Exception err)

@@ -182,6 +182,10 @@
       <Project>{cbe2f355-1f23-4a58-a6ae-ba7be542f76c}</Project>
       <Name>Samples.Specifications.Tests.Acceptance.Steps.Adapters</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Samples.Specifications.Tests.Domain\Samples.Specifications.Tests.Domain.csproj">
+      <Project>{34318E61-A027-4C23-93F8-D825DC08D914}</Project>
+      <Name>Samples.Specifications.Tests.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Tests.EndToEnd.Infra.Launcher\Samples.Specifications.Tests.EndToEnd.Infra.Launcher.csproj">
       <Project>{3FC45A34-C028-4F72-B8A7-7B8BF15C5BB8}</Project>
       <Name>Samples.Specifications.Tests.EndToEnd.Infra.Launcher</Name>

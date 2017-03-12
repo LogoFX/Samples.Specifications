@@ -34,7 +34,13 @@ namespace Samples.Specifications.Tests.Steps
 #endif
 
 #if REAL
-    //put here real Setup
+            using (var storage = new Storage())
+            {
+                foreach (var warehouseItem in warehouseItems)
+                {
+                    storage.Store(warehouseItem);
+                }
+            }
 #endif
         }
     }
