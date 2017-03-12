@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Samples.Client.Model.Shared.Validation
 {
@@ -6,13 +7,18 @@ namespace Samples.Client.Model.Shared.Validation
     {
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
-            var number = (double)value;
-
-            if (number < 0.0)
+            try
             {
-                return new ValidationResult(ErrorMessage);
+                var number = (double) value;
+                if (number < 0.0)
+                {
+                    return new ValidationResult(ErrorMessage);
+                }
             }
-
+            catch (Exception)
+            {
+                return new ValidationResult("Number is invalid");
+            }
             return ValidationResult.Success;
         }
     }

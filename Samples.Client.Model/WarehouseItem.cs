@@ -46,7 +46,7 @@ namespace Samples.Client.Model
 
         private int _quantity;
 
-        [NumberValidation(Minimum = 0, ErrorMessage = "Quantity must be positive.")]
+        [NumberValidation(Minimum = 1, ErrorMessage = "Quantity must be positive.")]
         public int Quantity
         {
             get { return _quantity; }
