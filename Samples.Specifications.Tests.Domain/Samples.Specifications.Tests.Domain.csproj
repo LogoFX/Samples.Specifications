@@ -29,7 +29,7 @@
     <OutputPath>bin\TestsWithFake\</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TestsWithReal|AnyCPU'">
-    <OutputPath>..\Bin\TestsWithReal\</OutputPath>
+    <OutputPath>bin\TestsWithReal\</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'IntegrationWithFake|AnyCPU'">
     <OutputPath>bin\IntegrationWithFake\</OutputPath>
