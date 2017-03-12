@@ -106,8 +106,8 @@ namespace Samples.Specifications.Tests.Steps
         private void ThenTheChangesControlsStatusIs(bool status)
         {
             var statuses = _warehouseScreenObject.AreStatusIndicatorsEnabled();
-            statuses.Item1.Should().Be(status);
-            statuses.Item1.Should().Be(status);
+            statuses.IsApplyEnabled.Should().Be(status);
+            statuses.IsDiscardEnabled.Should().Be(status);
         }
     }
 }

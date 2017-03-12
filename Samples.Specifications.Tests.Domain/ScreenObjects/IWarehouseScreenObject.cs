@@ -13,6 +13,6 @@ namespace Samples.Specifications.Tests.Domain.ScreenObjects
         void DeleteWarehouseItem(string kind);
         string GetErrorMessage();
         void DiscardChanges();
-        Tuple<bool, bool> AreStatusIndicatorsEnabled();
+        ControlStatusAssertionData AreStatusIndicatorsEnabled();
     }
 }

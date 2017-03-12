@@ -151,7 +151,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
             discardControl.Click();
         }
 
-        public Tuple<bool, bool> AreStatusIndicatorsEnabled()
+        public ControlStatusAssertionData AreStatusIndicatorsEnabled()
         {
             var shell = StructureHelper.GetShell();
 
@@ -165,7 +165,11 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
             var isApplyEnabled = applyControl.Enabled;
             var discardControl = shell.Get<Button>(SearchCriteria.ByAutomationId("DiscardChanges"));
             var isDiscardEnabled = discardControl.Enabled;
-            return new Tuple<bool, bool>(isApplyEnabled, isDiscardEnabled);
+            return new ControlStatusAssertionData
+            {
+                IsApplyEnabled = isApplyEnabled,
+                IsDiscardEnabled = isDiscardEnabled
+            };
         }
     }
 }
