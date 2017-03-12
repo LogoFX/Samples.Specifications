@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Samples.Specifications.Client.Presentation.Shell.ViewModels;
 using Samples.Specifications.Client.Tests.Integration.Infra.Core;

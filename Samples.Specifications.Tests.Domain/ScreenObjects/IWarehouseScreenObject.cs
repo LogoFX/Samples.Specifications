@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Samples.Specifications.Tests.Data;
 
 namespace Samples.Specifications.Tests.Domain.ScreenObjects
