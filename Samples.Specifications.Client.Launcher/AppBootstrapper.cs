@@ -1,16 +1,14 @@
 ﻿using LogoFX.Client.Bootstrapping;
 using LogoFX.Client.Bootstrapping.Adapters.SimpleContainer;
-using LogoFX.Practices.IoC;
 using Samples.Specifications.Client.Presentation.Shell.ViewModels;
 
 namespace Samples.Specifications.Client.Launcher
 {
-    public sealed class AppBootstrapper : BootstrapperContainerBase<ExtendedSimpleContainerAdapter,
-        ExtendedSimpleContainer>
+    public sealed class AppBootstrapper : BootstrapperContainerBase<ExtendedSimpleContainerAdapter>
         .WithRootObject<ShellViewModel>
     {
         public AppBootstrapper()
-            : base(new ExtendedSimpleContainer(), c => new ExtendedSimpleContainerAdapter(c))
+            : base(new ExtendedSimpleContainerAdapter())
         {
         }              
     }

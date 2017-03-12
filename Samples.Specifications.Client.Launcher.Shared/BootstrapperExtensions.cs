@@ -2,7 +2,6 @@
 using LogoFX.Client.Bootstrapping.Adapters.SimpleContainer;
 using LogoFX.Client.Mvvm.ViewModel.Services;
 using LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer;
-using LogoFX.Practices.IoC;
 using Solid.Bootstrapping;
 
 namespace Samples.Specifications.Client.Launcher.Shared
@@ -10,7 +9,7 @@ namespace Samples.Specifications.Client.Launcher.Shared
     public static class BootstrapperExtensions
     {
         public static IInitializable UseShared(
-            this IBootstrapperWithContainer<ExtendedSimpleContainerAdapter, ExtendedSimpleContainer> bootstrapper)             
+            this IBootstrapperWithContainerAdapter<ExtendedSimpleContainerAdapter> bootstrapper)             
         {
             return bootstrapper
                 .UseViewModelCreatorService()
