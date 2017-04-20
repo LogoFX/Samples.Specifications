@@ -14,7 +14,7 @@ namespace Samples.Specifications.Server.Host.Services
         public DbSet<WarehouseItem> Books { get; set; }
     }
 
-    public interface IBookRepository
+    public interface IWarehouseRepository
     {
         WarehouseItem Add(WarehouseItem warehouseItem);
         IEnumerable<WarehouseItem> GetAll();
@@ -23,7 +23,7 @@ namespace Samples.Specifications.Server.Host.Services
         void Update(WarehouseItem warehouseItem);
     }
 
-    public class InMemoryBookRepository : IBookRepository
+    public class InMemoryWarehouseRepository : IWarehouseRepository
     {
         public WarehouseItem Add(WarehouseItem warehouseItem)
         {

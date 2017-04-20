@@ -9,14 +9,14 @@ namespace Samples.Specifications.Client.Data.Real.Providers
     {
         public void Login(string username, string password)
         {
-            using (var storage = new Storage())
-            {
-                var users = storage.Get<UserDto>();
-                if (users.Any(t => t.Login == username && t.Password == password) == false)
-                {
-                    throw new Exception("Unable to login.");
-                }
-            }
+            //using (var storage = new Storage())
+            //{
+            //    var users = storage.Get<UserDto>();
+            //    if (users.Any(t => t.Login == username && t.Password == password) == false)
+            //    {
+            //        throw new Exception("Unable to login.");
+            //    }
+            //}
         }
     }
 }
