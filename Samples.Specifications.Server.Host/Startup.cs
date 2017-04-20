@@ -26,6 +26,7 @@ namespace Samples.Specifications.Server.Host
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<WarehouseContext>(s => s.UseInMemoryDatabase());
+            services.AddTransient<IBookRepository, InMemoryBookRepository>();
             // Add framework services.
             services.AddMvc();
         }
