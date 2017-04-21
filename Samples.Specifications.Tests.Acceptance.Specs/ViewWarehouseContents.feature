@@ -13,8 +13,7 @@ Scenario: Display warehouse items
 	When I open the application
 	And I set the username to "Admin"
 	And I set the password to "pass"
-	And I log in to the system
-	And I wait for 5 seconds
+	And I log in to the system	
 	Then I expect to see the following data on the screen:
 	| Kind | Price	| Quantity	| Total Cost	|
 	| Oven | 34.95	| 20		| 699			|
