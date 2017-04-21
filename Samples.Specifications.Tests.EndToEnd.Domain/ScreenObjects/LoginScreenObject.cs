@@ -50,6 +50,10 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
         {
             var application = ApplicationContext.Application;
             var loginScreen = application.GetWindowEx("Login View");
+            if (loginScreen.Visible == false || loginScreen.Enabled == false)
+            {
+                throw new Exception();
+            }
             return loginScreen;
         }
 
