@@ -1,4 +1,5 @@
-﻿using LogoFX.Client.Testing.EndToEnd.White;
+﻿using System;
+using LogoFX.Client.Testing.EndToEnd.White;
 using Samples.Specifications.Tests.Domain.ScreenObjects;
 using TestStack.White.UIItems;
 using TestStack.White.UIItems.Finders;
@@ -12,7 +13,16 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
         {
             var loginScreen = GetLoginScreen();
             var loginButton = loginScreen.Get<Button>("Login_SignIn");
-            loginButton.Click();                        
+            loginButton.Click();
+            Action waitUntilNotBusy = () =>
+            {
+                var isBusy = loginScreen.Get<Label>("Login_Busy");
+                if (isBusy.Text == "True")
+                {
+                    throw new Exception();
+                }
+            };
+            waitUntilNotBusy.Execute();
         }
 
         public void SetUsername(string username)

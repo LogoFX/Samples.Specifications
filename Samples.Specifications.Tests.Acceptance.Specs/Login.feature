@@ -12,8 +12,7 @@ Scenario: Navigate to the main screen when the login is successful
 	When I open the application
 	And I set the username to "Admin"
 	And I set the password to "pass"
-	And I log in to the system
-	And I wait for 5 seconds
+	And I log in to the system	
 	Then Application navigates to the main screen
 
 Scenario: Remain at the login screen when the login fails (wrong password)
@@ -21,8 +20,7 @@ Scenario: Remain at the login screen when the login fails (wrong password)
 	When I open the application
 	And I set the username to "Admin"
 	And I set the password to "wrong password"
-	And I log in to the system
-	And I wait for 5 seconds
+	And I log in to the system	
 	Then Login error message is displayed with the following text "Failed to log in: Unable to login."
 
 Scenario: Remain at the login screen when the login fails (wrong username)
@@ -30,6 +28,5 @@ Scenario: Remain at the login screen when the login fails (wrong username)
 	When I open the application
 	And I set the username to "Wrong Username"
 	And I set the password to "pass"
-	And I log in to the system
-	And I wait for 5 seconds
+	And I log in to the system	
 	Then Login error message is displayed with the following text "Failed to log in: Login not found."

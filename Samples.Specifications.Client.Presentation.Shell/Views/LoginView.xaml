@@ -113,6 +113,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="25" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             
@@ -127,8 +128,10 @@
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
             </Button>
-
-            <Button Grid.Column="2"
+            <TextBlock Grid.Column="2"
+                       AutomationProperties.AutomationId="Login_Busy"
+                        Text="{Binding Path=IsBusy, Mode=OneWay}" />
+            <Button Grid.Column="3"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Stretch"
                     Content="Cancel">

@@ -30,9 +30,15 @@ namespace Samples.Specifications.Client.Data.Real.Providers
                 throw new Exception("Unable to login.");
             }
 
-            if (response.Data?.Any(t => t.Login == username && t.Password == password) == false)
+            var matchingUser = response.Data?.SingleOrDefault(t => t.Login == username);
+            if (matchingUser == null)
             {
                 throw new Exception("Login not found.");
+            }
+
+            if (matchingUser.Password != password)
+            {
+                throw new Exception("Unable to login.");
             }
 
             //using (var storage = new Storage())
