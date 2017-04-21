@@ -8,11 +8,11 @@ using Samples.Specifications.Server.Storage.MongoDb.Models;
 
 namespace Samples.Specifications.Server.Storage.MongoDb.Services
 {
-    public class MongoDbRepository : IWarehouseRepository
+    public class MongoDbWarehouseRepository : IWarehouseRepository
     {
         readonly MongoDatabase _db;
 
-        public MongoDbRepository()
+        public MongoDbWarehouseRepository()
         {
             var client = new MongoClient("mongodb://localhost:27017");
             var server = client.GetServer();
