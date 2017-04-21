@@ -1,4 +1,5 @@
-﻿using System.Threading;
+﻿using System;
+using System.Threading;
 using Samples.Specifications.Tests.Domain;
 using Samples.Specifications.Tests.Domain.ScreenObjects;
 
@@ -29,7 +30,7 @@ namespace Samples.Specifications.Tests.Steps
 
         public void WaitFor(int seconds)
         {
-            Thread.Sleep(seconds);
+            Thread.Sleep(TimeSpan.FromSeconds(seconds));
         }
     }
 }

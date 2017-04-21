@@ -20,10 +20,19 @@ namespace Samples.Specifications.Client.Data.Real.Providers
         {
             //TODO: very naive ))
             var restRequest = new RestRequest("api/user", Method.GET) { RequestFormat = DataFormat.Json };
-            var response = _client.Execute<List<UserDto>>(restRequest);
+            IRestResponse<List<UserDto>> response;
+            try
+            {
+                response = _client.Execute<List<UserDto>>(restRequest);                
+            }
+            catch (Exception e)
+            {                
+                throw new Exception("Unable to login.");
+            }
+
             if (response.Data?.Any(t => t.Login == username && t.Password == password) == false)
             {
-                throw new Exception("Unable to login.");
+                throw new Exception("Login not found.");
             }
 
             //using (var storage = new Storage())
