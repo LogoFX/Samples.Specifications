@@ -109,6 +109,8 @@ this.ScenarioSetup(scenarioInfo);
  testRunner.And("I set the password to \"pass\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 16
  testRunner.And("I log in to the system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 17
+ testRunner.And("I wait for 5 seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "Kind",
@@ -130,7 +132,7 @@ this.ScenarioSetup(scenarioInfo);
                         "423.95",
                         "70",
                         "29676.5"});
-#line 17
+#line 18
  testRunner.Then("I expect to see the following data on the screen:", ((string)(null)), table2, "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -142,7 +144,7 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void DeleteWarehouseItem()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete warehouse item", ((string[])(null)));
-#line 23
+#line 24
 this.ScenarioSetup(scenarioInfo);
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
@@ -161,19 +163,19 @@ this.ScenarioSetup(scenarioInfo);
                         "PC",
                         "423.95",
                         "70"});
-#line 24
+#line 25
  testRunner.Given("warehouse contains the following items:", ((string)(null)), table3, "Given ");
-#line 29
- testRunner.And("I am able to log in successfully with username \'Admin\' and password \'pass\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 30
- testRunner.When("I open the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I am able to log in successfully with username \'Admin\' and password \'pass\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 31
- testRunner.And("I set the username to \"Admin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I open the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 32
- testRunner.And("I set the password to \"pass\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I set the username to \"Admin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 33
- testRunner.And("I log in to the system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I set the password to \"pass\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 34
+ testRunner.And("I log in to the system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 35
  testRunner.And("I delete \"TV\" item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
@@ -191,7 +193,7 @@ this.ScenarioSetup(scenarioInfo);
                         "423.95",
                         "70",
                         "29676.5"});
-#line 35
+#line 36
  testRunner.Then("I expect to see the following data on the screen:", ((string)(null)), table4, "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -203,7 +205,7 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void CreateNewWarehouseItem()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create new warehouse item", ((string[])(null)));
-#line 40
+#line 41
 this.ScenarioSetup(scenarioInfo);
 #line hidden
             TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
@@ -218,17 +220,17 @@ this.ScenarioSetup(scenarioInfo);
                         "TV",
                         "346.95",
                         "50"});
-#line 41
+#line 42
  testRunner.Given("warehouse contains the following items:", ((string)(null)), table5, "Given ");
-#line 45
- testRunner.And("I am able to log in successfully with username \'Admin\' and password \'pass\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 46
- testRunner.When("I open the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I am able to log in successfully with username \'Admin\' and password \'pass\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 47
- testRunner.And("I set the username to \"Admin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I open the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 48
- testRunner.And("I set the password to \"pass\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I set the username to \"Admin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 49
+ testRunner.And("I set the password to \"pass\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 50
  testRunner.And("I log in to the system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
@@ -239,7 +241,7 @@ this.ScenarioSetup(scenarioInfo);
                         "PC",
                         "423.95",
                         "70"});
-#line 50
+#line 51
  testRunner.And("I create a new warehouse item with the following data:", ((string)(null)), table6, "And ");
 #line hidden
             TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
@@ -262,7 +264,7 @@ this.ScenarioSetup(scenarioInfo);
                         "423.95",
                         "70",
                         "29676.5"});
-#line 53
+#line 54
  testRunner.Then("I expect to see the following data on the screen:", ((string)(null)), table7, "Then ");
 #line hidden
             this.ScenarioCleanup();

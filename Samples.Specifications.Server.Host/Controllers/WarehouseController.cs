@@ -18,16 +18,7 @@ namespace Samples.Specifications.Server.Host.Controllers
         [HttpGet]
         public IEnumerable<WarehouseItem> Get()
         {
-            return _warehouseRepository.GetAll();
-            //return new[]
-            //{
-            //    new WarehouseItem
-            //    {
-            //        Kind = "TV",
-            //        Price = 50,
-            //        Quantity = 4
-            //    }
-            //};
+            return _warehouseRepository.GetAll();            
         }
         
         [HttpGet("{id}")]

@@ -13,4 +13,13 @@ namespace Samples.Specifications.Server.Storage.MongoDb.Models
         [BsonElement("Quantity")]
         public int Quantity { get; set; }        
     }
+
+    public class MongoUser
+    {
+        public ObjectId Id { get; set; }
+        [BsonElement("Login")]
+        public string Login { get; set; }
+        [BsonElement("Password")]
+        public string Password { get; set; }
+    }
 }

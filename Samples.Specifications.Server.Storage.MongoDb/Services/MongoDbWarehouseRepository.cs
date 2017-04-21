@@ -16,7 +16,7 @@ namespace Samples.Specifications.Server.Storage.MongoDb.Services
         {
             var client = new MongoClient("mongodb://localhost:27017");
             var server = client.GetServer();
-            _db = server.GetDatabase("WarehouseDB");
+            _db = server.GetDatabase("SamplesDB");
         }
 
         public WarehouseItem Add(WarehouseItem warehouseItem)

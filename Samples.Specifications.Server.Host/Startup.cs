@@ -29,6 +29,7 @@ namespace Samples.Specifications.Server.Host
         {
             services.AddDbContext<WarehouseContext>(s => s.UseInMemoryDatabase());
             services.AddTransient<IWarehouseRepository, MongoDbWarehouseRepository>();
+            services.AddTransient<IUserRepository, MongoDbUserRepository>();
             // Add framework services.
             services.AddMvc();
         }

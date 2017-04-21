@@ -24,5 +24,11 @@ namespace Samples.Specifications.Tests.Acceptance.Steps.Adapters
         {
             GeneralSteps.WhenICloseTheApplication();
         }
+
+        [When(@"I wait for (.*) seconds")]
+        public void WhenIWaitForSeconds(int seconds)
+        {
+            GeneralSteps.WaitFor(seconds);
+        }
     }
 }

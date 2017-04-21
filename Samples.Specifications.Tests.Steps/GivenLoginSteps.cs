@@ -4,7 +4,7 @@ using Samples.Specifications.Client.Data.Fake.ProviderBuilders;
 #endif
 
 #if REAL
-using Samples.Client.Data.Contracts.Dto;
+using Samples.Specifications.Tests.Steps.Helpers;
 #endif
 
 namespace Samples.Specifications.Tests.Steps
@@ -31,14 +31,19 @@ namespace Samples.Specifications.Tests.Steps
 #endif
 
 #if REAL
-            using (var storage = new Storage())
-            {
-                storage.Store(new UserDto
-                {
-                    Login = username,
-                    Password = password
-                });
-            }
+            var repository = new DbSetupHelper();
+            //TODO: should be executed once and for all collections - not here of course
+            repository.ClearUsers();
+            repository.AddUser(username, password);
+
+            //using (var storage = new Storage())
+            //{
+            //    storage.Store(new UserDto
+            //    {
+            //        Login = username,
+            //        Password = password
+            //    });
+            //}
 #endif
         }
     }

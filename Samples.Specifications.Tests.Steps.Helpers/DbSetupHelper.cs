@@ -16,6 +16,15 @@ namespace Samples.Specifications.Tests.Steps.Helpers
         public int Quantity { get; set; }
     }
 
+    public class MongoUser
+    {
+        public ObjectId Id { get; set; }
+        [BsonElement("Login")]
+        public string Login { get; set; }
+        [BsonElement("Password")]
+        public string Password { get; set; }        
+    }
+
     public class DbSetupHelper
     {
         private readonly IMongoDatabase _db;
@@ -23,10 +32,10 @@ namespace Samples.Specifications.Tests.Steps.Helpers
         public DbSetupHelper()
         {
             var client = new MongoClient("mongodb://localhost:27017");       
-            _db = client.GetDatabase("WarehouseDB");                       
+            _db = client.GetDatabase("SamplesDB");                       
         }
 
-        public void Add(WarehouseItemDto warehouseItem)
+        public void AddWarehouseItem(WarehouseItemDto warehouseItem)
         {
             _db.GetCollection<MongoWarehouseItem>("WarehouseItems").InsertOne(new MongoWarehouseItem
             {
@@ -37,9 +46,24 @@ namespace Samples.Specifications.Tests.Steps.Helpers
             });            
         }
 
-        public void Clear()
+        public void AddUser(string login, string password)
+        {
+            _db.GetCollection<MongoUser>("Users").InsertOne(new MongoUser
+            {
+                Id = new ObjectId(),
+                Login = login,
+                Password = password,                
+            });
+        }
+
+        public void ClearUsers()
+        {            
+            _db.DropCollection("Users");
+        }
+
+        public void ClearWarehouseItems()
         {
             _db.DropCollection("WarehouseItems");
-        }     
+        }  
     }
 }

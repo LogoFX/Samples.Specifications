@@ -35,10 +35,11 @@ namespace Samples.Specifications.Tests.Steps
 
 #if REAL
             var repository = new DbSetupHelper();
-            repository.Clear();
+            //TODO: should be executed once and for all collections - not here of course
+            repository.ClearWarehouseItems();
             foreach (var warehouseItemDto in warehouseItems)
             {
-                repository.Add(warehouseItemDto);
+                repository.AddWarehouseItem(warehouseItemDto);
             }
 
             //using (var storage = new Storage())
