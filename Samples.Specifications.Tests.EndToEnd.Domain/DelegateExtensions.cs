@@ -7,24 +7,24 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain
     {
         public static void Execute(this Action action)            
         {
-            Execute<Exception>(action, 4, TimeSpan.FromSeconds(2));
+            Execute<Exception>(action, 20, TimeSpan.FromMilliseconds(200));
         }
 
         public static void Execute<TException>(this Action action)
             where TException : Exception
         {
-            Execute<TException>(action, 4, TimeSpan.FromSeconds(2));
+            Execute<TException>(action, 20, TimeSpan.FromMilliseconds(200));
         }
 
         public static TResult ExecuteWithResult<TException, TResult>(this Func<TResult> func)
             where TException : Exception
         {
-            return ExecuteWithResult<TException, TResult>(func, 4, TimeSpan.FromSeconds(2));
+            return ExecuteWithResult<TException, TResult>(func, 20, TimeSpan.FromMilliseconds(200));
         }
 
         public static TResult ExecuteWithResult<TResult>(this Func<TResult> func)            
         {
-            return ExecuteWithResult<Exception, TResult>(func, 4, TimeSpan.FromSeconds(2));
+            return ExecuteWithResult<Exception, TResult>(func, 20, TimeSpan.FromMilliseconds(200));
         }
 
         public static void Execute<TException>(this Action action, int numberOfRetries, TimeSpan waitingInterval)
