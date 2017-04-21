@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Samples.Specifications.Tests.Steps</RootNamespace>
     <AssemblyName>Samples.Specifications.Tests.Steps</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DebugWithReal|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -153,6 +154,10 @@
     <ProjectReference Include="..\Samples.Specifications.Tests.Domain\Samples.Specifications.Tests.Domain.csproj">
       <Project>{34318E61-A027-4C23-93F8-D825DC08D914}</Project>
       <Name>Samples.Specifications.Tests.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samples.Specifications.Tests.Steps.Helpers\Samples.Specifications.Tests.Steps.Helpers.csproj">
+      <Project>{695F7796-E668-49B8-93A7-58F4B8A2C3AA}</Project>
+      <Name>Samples.Specifications.Tests.Steps.Helpers</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

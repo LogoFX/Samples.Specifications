@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Threading;
 using FluentAssertions;
 using Samples.Specifications.Tests.Data;
 using Samples.Specifications.Tests.Domain.ScreenObjects;
@@ -32,6 +33,7 @@ namespace Samples.Specifications.Tests.Steps
 
         public void ThenIExpectToSeeTheFollowingDataOnTheScreen(WarehouseItemAssertionTestData[] warehouseItems)
         {
+            Thread.Sleep(2000);
             var actualWarehouseItems = _warehouseScreenObject.GetWarehouseItems().ToArray();
             for (int i = 0; i < Math.Max(warehouseItems.Length, actualWarehouseItems.Length); i++)
             {

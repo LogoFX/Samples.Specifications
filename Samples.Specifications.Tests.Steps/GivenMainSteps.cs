@@ -7,7 +7,7 @@ using Samples.Specifications.Client.Data.Fake.ProviderBuilders;
 #endif
 
 #if REAL
-
+using Samples.Specifications.Tests.Steps.Helpers;
 #endif
 
 namespace Samples.Specifications.Tests.Steps
@@ -34,13 +34,20 @@ namespace Samples.Specifications.Tests.Steps
 #endif
 
 #if REAL
-            using (var storage = new Storage())
+            var repository = new DbSetupHelper();
+            repository.Clear();
+            foreach (var warehouseItemDto in warehouseItems)
             {
-                foreach (var warehouseItem in warehouseItems)
-                {
-                    storage.Store(warehouseItem);
-                }
+                repository.Add(warehouseItemDto);
             }
+
+            //using (var storage = new Storage())
+            //{
+            //    foreach (var warehouseItem in warehouseItems)
+            //    {
+            //        storage.Store(warehouseItem);
+            //    }
+            //}
 #endif
         }
     }
