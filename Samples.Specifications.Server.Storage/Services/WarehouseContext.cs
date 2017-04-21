@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Samples.Specifications.Server.Host.Models;
+using Samples.Specifications.Server.Storage.Contracts.Models;
 
 namespace Samples.Specifications.Server.Storage.Services
 {

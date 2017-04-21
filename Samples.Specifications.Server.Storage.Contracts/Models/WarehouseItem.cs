@@ -1,4 +1,4 @@
-﻿namespace Samples.Specifications.Server.Host.Models
+﻿namespace Samples.Specifications.Server.Storage.Contracts.Models
 {
     public class WarehouseItem
     {

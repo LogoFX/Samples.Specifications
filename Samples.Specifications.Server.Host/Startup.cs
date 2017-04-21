@@ -5,6 +5,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Samples.Specifications.Server.Storage;
+using Samples.Specifications.Server.Storage.Contracts;
+using Samples.Specifications.Server.Storage.MongoDb.Services;
 using Samples.Specifications.Server.Storage.Services;
 
 namespace Samples.Specifications.Server.Host
@@ -27,7 +29,7 @@ namespace Samples.Specifications.Server.Host
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<WarehouseContext>(s => s.UseInMemoryDatabase());
-            services.AddTransient<IWarehouseRepository, InMemoryWarehouseRepository>();
+            services.AddTransient<IWarehouseRepository, MongoDbRepository>();
             // Add framework services.
             services.AddMvc();
         }

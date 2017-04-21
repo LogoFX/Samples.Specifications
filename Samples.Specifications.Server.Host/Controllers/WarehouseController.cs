@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using Samples.Specifications.Server.Host.Models;
-using Samples.Specifications.Server.Storage;
+using Samples.Specifications.Server.Storage.Contracts;
+using Samples.Specifications.Server.Storage.Contracts.Models;
 
 namespace Samples.Specifications.Server.Host.Controllers
 {
@@ -18,16 +18,16 @@ namespace Samples.Specifications.Server.Host.Controllers
         [HttpGet]
         public IEnumerable<WarehouseItem> Get()
         {
-            //return _warehouseRepository.GetAll();
-            return new[]
-            {
-                new WarehouseItem
-                {
-                    Kind = "TV",
-                    Price = 50,
-                    Quantity = 4
-                }
-            };
+            return _warehouseRepository.GetAll();
+            //return new[]
+            //{
+            //    new WarehouseItem
+            //    {
+            //        Kind = "TV",
+            //        Price = 50,
+            //        Quantity = 4
+            //    }
+            //};
         }
         
         [HttpGet("{id}")]

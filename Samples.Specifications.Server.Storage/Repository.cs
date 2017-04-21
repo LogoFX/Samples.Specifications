@@ -1,20 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Samples.Specifications.Server.Host.Models;
+using Samples.Specifications.Server.Storage.Contracts;
+using Samples.Specifications.Server.Storage.Contracts.Models;
 using Samples.Specifications.Server.Storage.Services;
 
 namespace Samples.Specifications.Server.Storage
-{
-    public interface IWarehouseRepository
-    {
-        WarehouseItem Add(WarehouseItem warehouseItem);
-        IEnumerable<WarehouseItem> GetAll();
-        WarehouseItem GetById(int id);
-        void Delete(WarehouseItem warehouseItem);
-        void Update(WarehouseItem warehouseItem);
-    }
-
+{    
     public class InMemoryWarehouseRepository : IWarehouseRepository
     {
         private readonly WarehouseContext _context;
@@ -43,7 +35,6 @@ namespace Samples.Specifications.Server.Storage
         {
             return _context.WarehouseItems.ToList();
         }
-
 
         public WarehouseItem GetById(int id)
         {
