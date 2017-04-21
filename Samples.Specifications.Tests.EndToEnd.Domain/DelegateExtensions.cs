@@ -67,5 +67,10 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain
             }
             return default(TResult);
         }
+
+        public static TResult ExecuteWithResult<TResult>(this Func<TResult> func, int numberOfRetries, TimeSpan waitingInterval)
+        {
+            return ExecuteWithResult<Exception, TResult>(func, numberOfRetries, waitingInterval);
+        }
     }
 }

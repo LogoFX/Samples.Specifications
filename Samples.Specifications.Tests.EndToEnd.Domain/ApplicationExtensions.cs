@@ -14,7 +14,15 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain
                 return null;
             }
             app.WaitWhileBusy();
-            return RetryHelper.ExecuteWithRetry(() => app.GetWindows().SingleOrDefault(x => x.Title == title), 3,
+            return DelegateExtensions.ExecuteWithResult(() =>
+                {
+                    var loginWindow = app.GetWindows().SingleOrDefault(x => x.Title == title);
+                    if (loginWindow.Visible == false || loginWindow.Enabled == false)
+                    {
+                        throw new Exception();
+                    }
+                    return loginWindow;
+                }, 3,
                 TimeSpan.FromSeconds(5));            
         }
     }
