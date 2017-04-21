@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Net;
 using RestSharp;
 using Samples.Client.Data.Contracts.Dto;
 using Samples.Client.Data.Contracts.Providers;
@@ -31,34 +30,6 @@ namespace Samples.Specifications.Client.Data.Real.Providers
         public void SaveWarehouseItem(WarehouseItemDto dto)
         {
             throw new NotImplementedException();
-        }
-
-        class ResponseBase
-        {
-            internal Exception Error { get; set; }
-        }
-
-        class WarehouseItemsResponse : ResponseBase
-        {
-            public WarehouseItemDto[] WarehouseItems { get; set; }
-        }
-
-        private T GetResponse<T>(RestRequest restRequest) where T : new()
-        {
-            T response = default(T);
-            var restResponse = _client.Execute<T>(restRequest);            
-            if (restResponse.ContentLength > 0)
-            {
-                response = restResponse.Data;
-                if (response != null && restResponse.StatusCode != HttpStatusCode.OK)
-                {                    
-                    if (restResponse.ErrorMessage == null)
-                    {
-                        //response.Error = restResponse.ErrorException ?? new Exception(restResponse.Content);
-                    }
-                }
-            }
-            return response;
         }
     }
 }

@@ -22,6 +22,11 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain
             return ExecuteWithResult<TException, TResult>(func, 4, TimeSpan.FromSeconds(2));
         }
 
+        public static TResult ExecuteWithResult<TResult>(this Func<TResult> func)            
+        {
+            return ExecuteWithResult<Exception, TResult>(func, 4, TimeSpan.FromSeconds(2));
+        }
+
         public static void Execute<TException>(this Action action, int numberOfRetries, TimeSpan waitingInterval)
             where TException : Exception
         {
