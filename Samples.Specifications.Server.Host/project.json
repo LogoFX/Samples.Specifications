@@ -19,7 +19,8 @@
     "Microsoft.EntityFrameworkCore.InMemory": "1.0.1",
     "Samples.Specifications.Server.Storage.Contracts": "1.0.0-*",    
     "Samples.Specifications.Server.Storage.MongoDb": "1.0.0-*",
-    "Samples.Specifications.Server.Storage.InMemory": "1.0.0-*"  },
+    "Samples.Specifications.Server.Storage.InMemory": "1.0.0-*",
+    "AutoMapper": "5.2.0"  },
   "tools": {
     "Microsoft.AspNetCore.Server.IISIntegration.Tools": "1.0.0-preview2-final"
   },

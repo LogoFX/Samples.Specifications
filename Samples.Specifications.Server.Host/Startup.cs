@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Samples.Specifications.Server.Host.Mappers;
 using Samples.Specifications.Server.Storage.Contracts;
 using Samples.Specifications.Server.Storage.InMemory.Services;
 using Samples.Specifications.Server.Storage.MongoDb.Services;
@@ -20,6 +22,7 @@ namespace Samples.Specifications.Server.Host
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
             Configuration = builder.Build();
+            Mapper.Initialize(x => x.AddProfile<MappingProfile>());
         }
 
         public IConfigurationRoot Configuration { get; }

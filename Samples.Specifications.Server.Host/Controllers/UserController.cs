@@ -2,6 +2,7 @@
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Samples.Specifications.Server.Host.Data;
+using Samples.Specifications.Server.Host.Mappers;
 using Samples.Specifications.Server.Storage.Contracts;
 
 namespace Samples.Specifications.Server.Host.Controllers
@@ -19,11 +20,7 @@ namespace Samples.Specifications.Server.Host.Controllers
         [HttpGet]
         public IEnumerable<UserDto> Get()
         {
-            return _userRepository.GetAll().Select(t => new UserDto
-            {
-                Login = t.Login,
-                Password = t.Password
-            });
+            return _userRepository.GetAll().Select(UserMapper.MapToUserDto);
         }
     }
 }
