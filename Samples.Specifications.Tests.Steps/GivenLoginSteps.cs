@@ -31,7 +31,7 @@ namespace Samples.Specifications.Tests.Steps
 #endif
 
 #if REAL
-            var repository = new DbSetupHelper();
+            var repository = new MongoDbSetupHelper();
             //TODO: should be executed once and for all collections - not here of course
             repository.ClearUsers();
             repository.AddUser(username, password);

@@ -28,11 +28,11 @@ namespace Samples.Specifications.Tests.Steps.Helpers
         public string Password { get; set; }        
     }
 
-    public class DbSetupHelper
+    public class MongoDbSetupHelper : ISetupHelper
     {
         private readonly IMongoDatabase _db;
 
-        public DbSetupHelper()
+        public MongoDbSetupHelper()
         {
             var client = new MongoClient("mongodb://localhost:27017");       
             _db = client.GetDatabase("SamplesDB");                       

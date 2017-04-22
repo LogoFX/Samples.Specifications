@@ -67,7 +67,6 @@
     <Compile Include="MainSteps.cs" />
     <Compile Include="Module.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Storage.cs" />
     <Compile Include="WarehouseSteps.cs" />
   </ItemGroup>
   <ItemGroup>
