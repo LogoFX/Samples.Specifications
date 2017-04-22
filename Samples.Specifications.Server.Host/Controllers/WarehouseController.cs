@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Samples.Specifications.Server.Domain.Models;
+using Samples.Specifications.Server.Host.Data;
 using Samples.Specifications.Server.Storage.Contracts;
 
 namespace Samples.Specifications.Server.Host.Controllers
@@ -17,21 +19,40 @@ namespace Samples.Specifications.Server.Host.Controllers
         }
         
         [HttpGet]
-        public IEnumerable<WarehouseItem> Get()
+        public IEnumerable<WarehouseItemDto> Get()
         {
-            return _warehouseRepository.GetAll();            
+            return _warehouseRepository.GetAll().Select(t => 
+            new WarehouseItemDto
+            {
+                Id = t.Id,
+                Kind = t.Kind,
+                Price = t.Price,
+                Quantity = t.Quantity
+            });            
         }               
         
         [HttpPost]
-        public void Post([FromBody]WarehouseItem warehouseItem)
+        public void Post([FromBody]WarehouseItemDto warehouseItem)
         {
-            _warehouseRepository.Add(warehouseItem);
+            _warehouseRepository.Add(new WarehouseItem
+            {
+                Id = warehouseItem.Id,
+                Kind = warehouseItem.Kind,
+                Price = warehouseItem.Price,
+                Quantity = warehouseItem.Quantity
+            });
         }
         
         [HttpPut("{id}")]
-        public IActionResult Put(Guid id, [FromBody]WarehouseItem warehouseItem)
+        public IActionResult Put(Guid id, [FromBody]WarehouseItemDto warehouseItem)
         {
-            _warehouseRepository.Update(warehouseItem);
+            _warehouseRepository.Update(new WarehouseItem
+            {
+                Id = warehouseItem.Id,
+                Kind = warehouseItem.Kind,
+                Price = warehouseItem.Price,
+                Quantity = warehouseItem.Quantity
+            });
             return Ok();
         }
         
