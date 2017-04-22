@@ -24,23 +24,7 @@ namespace Samples.Specifications.Tests.Steps.Helpers
                     Password = password
                 });
             }
-        }
-
-        public void ClearUsers()
-        {
-            using (var storage = new Storage())
-            {
-                storage.RemoveAll<UserDto>();
-            }
-        }
-
-        public void ClearWarehouseItems()
-        {
-            using (var storage = new Storage())
-            {
-                storage.RemoveAll<WarehouseItemDto>();
-            }
-        }
+        }        
 
         public void Initialize()
         {

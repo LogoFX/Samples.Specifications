@@ -59,17 +59,7 @@ namespace Samples.Specifications.Tests.Steps.Helpers
                 Login = login,
                 Password = password,                
             });
-        }
-
-        public void ClearUsers()
-        {            
-            _db.DropCollection("Users");
-        }
-
-        public void ClearWarehouseItems()
-        {
-            _db.DropCollection("WarehouseItems");
-        }
+        }       
 
         public void Initialize()
         {

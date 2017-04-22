@@ -6,8 +6,6 @@ namespace Samples.Specifications.Tests.Steps.Helpers
     {
         void AddWarehouseItem(WarehouseItemDto warehouseItem);
         void AddUser(string login, string password);
-        void ClearUsers();
-        void ClearWarehouseItems();
         void Initialize();
     }
 }

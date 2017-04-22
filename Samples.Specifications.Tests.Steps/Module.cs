@@ -1,7 +1,4 @@
-﻿#if REAL
-using Samples.Specifications.Tests.Steps.Helpers;
-#endif
-using Solid.Practices.IoC;
+﻿using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
 
 namespace Samples.Specifications.Tests.Steps
@@ -15,9 +12,6 @@ namespace Samples.Specifications.Tests.Steps
             iocContainer.RegisterSingleton<LoginSteps, LoginSteps>();            
             iocContainer.RegisterSingleton<MainSteps, MainSteps>();
             iocContainer.RegisterSingleton<ExitSteps, ExitSteps>();
-#if REAL
-            iocContainer.RegisterSingleton<ISetupHelper, MongoDbSetupHelper>();
-#endif
         }
     }
 }
