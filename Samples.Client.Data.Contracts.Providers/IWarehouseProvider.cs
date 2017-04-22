@@ -8,6 +8,7 @@ namespace Samples.Client.Data.Contracts.Providers
     {
         IEnumerable<WarehouseItemDto> GetWarehouseItems();
         bool DeleteWarehouseItem(Guid id);
-        void SaveWarehouseItem(WarehouseItemDto dto);        
+        void UpdateWarehouseItem(WarehouseItemDto dto);
+        void CreateWarehouseItem(WarehouseItemDto dto);
     }
 }

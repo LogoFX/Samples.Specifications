@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Samples.Specifications.Server.Storage.Contracts;
 using Samples.Specifications.Server.Storage.Contracts.Models;
@@ -19,26 +20,20 @@ namespace Samples.Specifications.Server.Host.Controllers
         public IEnumerable<WarehouseItem> Get()
         {
             return _warehouseRepository.GetAll();            
-        }
-        
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
+        }               
         
         [HttpPost]
-        public void Post([FromBody]string value)
+        public void Post([FromBody]WarehouseItem warehouseItem)
         {
         }
         
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+        public void Put(Guid id, [FromBody]WarehouseItem warehouseItem)
         {
         }
         
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public void Delete(Guid id)
         {
         }
     }

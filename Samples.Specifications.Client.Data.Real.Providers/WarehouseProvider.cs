@@ -27,7 +27,14 @@ namespace Samples.Specifications.Client.Data.Real.Providers
             throw new NotImplementedException();
         }
 
-        public void SaveWarehouseItem(WarehouseItemDto dto)
+        public void UpdateWarehouseItem(WarehouseItemDto dto)
+        {
+            var restRequest = new RestRequest($"api/warehouse/{dto.Id}", Method.PUT) { RequestFormat = DataFormat.Json };            
+            restRequest.AddBody(dto);
+            var response = _client.Execute(restRequest);            
+        }
+
+        public void CreateWarehouseItem(WarehouseItemDto dto)
         {
             throw new NotImplementedException();
         }
