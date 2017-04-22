@@ -37,6 +37,8 @@ namespace Samples.Specifications.Server.Host.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(Guid id)
         {
+            var item = _warehouseRepository.GetById(id);
+            _warehouseRepository.Delete(item);
             return Ok();
         }
     }

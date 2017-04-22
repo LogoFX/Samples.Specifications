@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using MongoDB.Bson;
 using MongoDB.Driver;
+using MongoDB.Driver.Builders;
 using Samples.Specifications.Server.Storage.Contracts;
 using Samples.Specifications.Server.Storage.Contracts.Models;
 using Samples.Specifications.Server.Storage.MongoDb.Models;
@@ -21,7 +23,7 @@ namespace Samples.Specifications.Server.Storage.MongoDb.Services
 
         public WarehouseItem Add(WarehouseItem warehouseItem)
         {
-            _db.GetCollection<MongoWarehouseItem>("WarehouseItems").Save(new MongoWarehouseItem
+            GetCollection().Save(new MongoWarehouseItem
             {
                 Id = new ObjectId(),
                 Kind = warehouseItem.Kind,
@@ -33,28 +35,51 @@ namespace Samples.Specifications.Server.Storage.MongoDb.Services
 
         public IEnumerable<WarehouseItem> GetAll()
         {
-            var rows = _db.GetCollection<MongoWarehouseItem>("WarehouseItems").FindAll().ToArray();
+            var rows = GetCollection().FindAll().ToArray();
             return rows.Select(t => new WarehouseItem
             {
                 Kind = t.Kind,
                 Price = t.Price,
-                Quantity = t.Quantity
+                Quantity = t.Quantity,
+                Id = t.ActualId
             });
         }
 
-        public WarehouseItem GetById(int id)
+        public WarehouseItem GetById(Guid id)
         {
-            throw new System.NotImplementedException();
+            var item = GetByIdInternal(id);
+            return new WarehouseItem
+            {
+                Id = item.ActualId,
+                Kind = item.Kind,
+                Price = item.Price,
+                Quantity = item.Quantity
+            };
         }
 
         public void Delete(WarehouseItem warehouseItem)
         {
-            throw new System.NotImplementedException();
+            var collection = GetCollection();
+            var query = Query<MongoWarehouseItem>.EQ(e => e.ActualId, warehouseItem.Id);
+            collection.Remove(query);
         }
 
         public void Update(WarehouseItem warehouseItem)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
+        }
+
+        private MongoCollection<MongoWarehouseItem> GetCollection()
+        {
+            return _db.GetCollection<MongoWarehouseItem>("WarehouseItems");
+        }
+
+        private MongoWarehouseItem GetByIdInternal(Guid id)
+        {
+            var collection = GetCollection();
+            var query = Query<MongoWarehouseItem>.EQ(e => e.ActualId, id);
+            var rows = collection.Find(query);
+            return rows.SingleOrDefault();
         }
     }
 }

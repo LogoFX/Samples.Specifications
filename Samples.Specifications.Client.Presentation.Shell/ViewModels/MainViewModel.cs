@@ -155,6 +155,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             try
             {
                 await _dataService.DeleteWarehouseItemAsync(ActiveWarehouseItem?.Item.Model);
+                await _dataService.GetWarehouseItemsAsync();
             }
 
             finally

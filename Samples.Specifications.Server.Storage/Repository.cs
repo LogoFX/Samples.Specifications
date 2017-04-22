@@ -30,15 +30,14 @@ namespace Samples.Specifications.Server.Storage
             _context.SaveChanges();
         }
 
-
         public IEnumerable<WarehouseItem> GetAll()
         {
             return _context.WarehouseItems.ToList();
         }
 
-        public WarehouseItem GetById(int id)
+        public WarehouseItem GetById(Guid id)
         {
-            throw new NotImplementedException();
+            return _context.WarehouseItems.SingleOrDefault(t => t.Id == id);
         }
 
         public void Update(WarehouseItem warehouseItem)

@@ -1,4 +1,5 @@
-﻿using MongoDB.Bson;
+﻿using System;
+using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
 namespace Samples.Specifications.Server.Storage.MongoDb.Models
@@ -11,7 +12,9 @@ namespace Samples.Specifications.Server.Storage.MongoDb.Models
         [BsonElement("Price")]
         public double Price { get; set; }
         [BsonElement("Quantity")]
-        public int Quantity { get; set; }        
+        public int Quantity { get; set; }
+        [BsonElement("ActualId")]
+        public Guid ActualId { get; set; }
     }
 
     public class MongoUser

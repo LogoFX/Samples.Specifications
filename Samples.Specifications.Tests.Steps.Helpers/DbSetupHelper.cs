@@ -1,4 +1,5 @@
-﻿using MongoDB.Bson;
+﻿using System;
+using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Driver;
 using Samples.Client.Data.Contracts.Dto;
@@ -14,6 +15,8 @@ namespace Samples.Specifications.Tests.Steps.Helpers
         public double Price { get; set; }
         [BsonElement("Quantity")]
         public int Quantity { get; set; }
+        [BsonElement("ActualId")]
+        public Guid ActualId { get; set; }
     }
 
     public class MongoUser
@@ -40,6 +43,7 @@ namespace Samples.Specifications.Tests.Steps.Helpers
             _db.GetCollection<MongoWarehouseItem>("WarehouseItems").InsertOne(new MongoWarehouseItem
             {
                 Id = new ObjectId(),
+                ActualId = warehouseItem.Id,
                 Kind = warehouseItem.Kind,
                 Price = warehouseItem.Price,
                 Quantity = warehouseItem.Quantity

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Samples.Specifications.Server.Storage.Contracts.Models;
 
 namespace Samples.Specifications.Server.Storage.Contracts
@@ -7,7 +8,7 @@ namespace Samples.Specifications.Server.Storage.Contracts
     {
         WarehouseItem Add(WarehouseItem warehouseItem);
         IEnumerable<WarehouseItem> GetAll();
-        WarehouseItem GetById(int id);
+        WarehouseItem GetById(Guid id);
         void Delete(WarehouseItem warehouseItem);
         void Update(WarehouseItem warehouseItem);
     }
