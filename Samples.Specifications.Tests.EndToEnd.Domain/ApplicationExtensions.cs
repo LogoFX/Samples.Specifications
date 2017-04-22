@@ -14,12 +14,16 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain
                 return null;
             }
             app.WaitWhileBusy();
-            var loginWindow = app.GetWindows().SingleOrDefault(x => x.Title == title);
-            if (loginWindow?.Visible == false || loginWindow?.Enabled == false)
+            Func<Window> getWindow = () =>
             {
-                throw new Exception();
-            }
-            return loginWindow;
+                var window = app.GetWindows().SingleOrDefault(x => x.Title == title);
+                if (window == null || window.Visible == false || window.Enabled == false)
+                {
+                    throw new Exception();
+                }
+                return window;
+            };
+            return getWindow.ExecuteWithResult();            
         }
     }
 }
