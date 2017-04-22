@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Samples.Specifications.Server.Storage.Contracts.Models;
+using Samples.Specifications.Server.Domain.Models;
 
 namespace Samples.Specifications.Server.Storage.Contracts
 {

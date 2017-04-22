@@ -1,4 +1,4 @@
-﻿namespace Samples.Specifications.Server.Storage.Contracts.Models
+﻿namespace Samples.Specifications.Server.Domain.Models
 {
     public class User
     {

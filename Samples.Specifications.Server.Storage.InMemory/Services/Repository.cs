@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Samples.Specifications.Server.Domain.Models;
 using Samples.Specifications.Server.Storage.Contracts;
-using Samples.Specifications.Server.Storage.Contracts.Models;
-using Samples.Specifications.Server.Storage.Services;
 
-namespace Samples.Specifications.Server.Storage
+namespace Samples.Specifications.Server.Storage.InMemory.Services
 {    
     public class InMemoryWarehouseRepository : IWarehouseRepository
     {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Samples.Specifications.Server.Storage.Contracts.Models;
+using Samples.Specifications.Server.Domain.Models;
 
-namespace Samples.Specifications.Server.Storage.Services
+namespace Samples.Specifications.Server.Storage.InMemory.Services
 {
     public class WarehouseContext : DbContext
     {

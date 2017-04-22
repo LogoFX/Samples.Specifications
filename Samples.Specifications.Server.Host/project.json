@@ -17,9 +17,9 @@
     "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
     "Microsoft.EntityFrameworkCore": "1.0.1",
     "Microsoft.EntityFrameworkCore.InMemory": "1.0.1",
-    "Samples.Specifications.Server.Storage.Contracts": "1.0.0-*",
-    "Samples.Specifications.Server.Storage": "1.0.0-*",
-    "Samples.Specifications.Server.Storage.MongoDb": "1.0.0-*"  },
+    "Samples.Specifications.Server.Storage.Contracts": "1.0.0-*",    
+    "Samples.Specifications.Server.Storage.MongoDb": "1.0.0-*",
+    "Samples.Specifications.Server.Storage.InMemory": "1.0.0-*"  },
   "tools": {
     "Microsoft.AspNetCore.Server.IISIntegration.Tools": "1.0.0-preview2-final"
   },

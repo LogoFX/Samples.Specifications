@@ -5,8 +5,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Samples.Specifications.Server.Storage.Contracts;
+using Samples.Specifications.Server.Storage.InMemory.Services;
 using Samples.Specifications.Server.Storage.MongoDb.Services;
-using Samples.Specifications.Server.Storage.Services;
 
 namespace Samples.Specifications.Server.Host
 {

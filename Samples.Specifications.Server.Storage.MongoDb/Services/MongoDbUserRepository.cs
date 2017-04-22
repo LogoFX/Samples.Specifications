@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using MongoDB.Driver;
+using Samples.Specifications.Server.Domain.Models;
 using Samples.Specifications.Server.Storage.Contracts;
-using Samples.Specifications.Server.Storage.Contracts.Models;
 using MongoUser = Samples.Specifications.Server.Storage.MongoDb.Models.MongoUser;
 
 namespace Samples.Specifications.Server.Storage.MongoDb.Services

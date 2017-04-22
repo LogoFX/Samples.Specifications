@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
+using Samples.Specifications.Server.Domain.Models;
 using Samples.Specifications.Server.Storage.Contracts;
-using Samples.Specifications.Server.Storage.Contracts.Models;
 
 namespace Samples.Specifications.Server.Host.Controllers
 {

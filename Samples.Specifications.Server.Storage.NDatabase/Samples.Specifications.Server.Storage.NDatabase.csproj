@@ -29,10 +29,22 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TestsWithReal|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\TestsWithReal\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="NDatabase3, Version=3.8.0.13, Culture=neutral, PublicKeyToken=31d8e3cda240c056, processorArchitecture=MSIL">
       <HintPath>..\packages\NDatabase.3.8.0\lib\net45\NDatabase3.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="Samples.Specifications.Server.Domain">
+      <HintPath>..\Samples.Specifications.Server.Domain\bin\TestsWithReal\netstandard1.6\Samples.Specifications.Server.Domain.dll</HintPath>
     </Reference>
     <Reference Include="Samples.Specifications.Server.Storage.Contracts">
       <HintPath>..\Samples.Specifications.Server.Storage.Contracts\bin\TestsWithReal\netstandard1.6\Samples.Specifications.Server.Storage.Contracts.dll</HintPath>
