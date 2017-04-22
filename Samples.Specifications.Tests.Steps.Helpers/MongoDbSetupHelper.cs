@@ -32,11 +32,12 @@ namespace Samples.Specifications.Tests.Steps.Helpers
     {
         private readonly MongoClient _client;
         private readonly IMongoDatabase _db;
+        private const string DbName = "SamplesDB";
 
         public MongoDbSetupHelper()
         {
             _client = new MongoClient("mongodb://localhost:27017");       
-            _db = _client.GetDatabase("SamplesDB");                       
+            _db = _client.GetDatabase(DbName);                       
         }
 
         public void AddWarehouseItem(WarehouseItemDto warehouseItem)
@@ -63,7 +64,7 @@ namespace Samples.Specifications.Tests.Steps.Helpers
 
         public void Initialize()
         {
-            _client.DropDatabase("SamplesDB");
+            _client.DropDatabase(DbName);
         }
     }
 }
