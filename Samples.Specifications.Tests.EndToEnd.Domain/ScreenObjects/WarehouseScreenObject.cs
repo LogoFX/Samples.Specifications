@@ -134,6 +134,17 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
 
             var applyButton = shell.Get<Button>(SearchCriteria.ByAutomationId("WarehouseItemApplyButton"));
             applyButton.Click();
+
+            //wait until save is finished
+            //Action waitUntilNotBusy = () =>
+            //{                
+            //    var isBusy = shell.Get<ProgressBar>("Login_Busy");
+            //    if (isBusy.Visible)
+            //    {
+            //        throw new Exception();
+            //    }
+            //};
+            //waitUntilNotBusy.Execute();
         }
 
         public string GetErrorMessage()

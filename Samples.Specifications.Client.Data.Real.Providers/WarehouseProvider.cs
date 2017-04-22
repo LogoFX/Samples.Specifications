@@ -40,7 +40,9 @@ namespace Samples.Specifications.Client.Data.Real.Providers
 
         public void CreateWarehouseItem(WarehouseItemDto dto)
         {
-            throw new NotImplementedException();
+            var restRequest = new RestRequest($"api/warehouse", Method.POST) { RequestFormat = DataFormat.Json };
+            restRequest.AddBody(dto);
+            var response = _client.Execute(restRequest);            
         }
     }
 }

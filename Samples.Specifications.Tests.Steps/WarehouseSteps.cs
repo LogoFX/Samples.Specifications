@@ -56,9 +56,7 @@ namespace Samples.Specifications.Tests.Steps
         }
 
         public void WhenICreateANewWarehouseItemWithTheFollowingData(WarehouseItemAssertionTestData[] warehouseItems)
-        {
-            warehouseItems.Should().HaveCount(1);
-
+        {            
             foreach (var warehouseItem in warehouseItems)
             {
                 _warehouseScreenObject.AddWarehouseItem(warehouseItem);

@@ -25,6 +25,7 @@ namespace Samples.Specifications.Server.Host.Controllers
         [HttpPost]
         public void Post([FromBody]WarehouseItem warehouseItem)
         {
+            _warehouseRepository.Add(warehouseItem);
         }
         
         [HttpPut("{id}")]
