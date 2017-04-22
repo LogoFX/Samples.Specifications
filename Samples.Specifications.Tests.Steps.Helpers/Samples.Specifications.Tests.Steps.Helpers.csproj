@@ -31,7 +31,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TestsWithReal|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\TestsWithReal\</OutputPath>
+    <OutputPath>..\Bin\TestsWithReal\Infra\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>

@@ -30,12 +30,13 @@ namespace Samples.Specifications.Tests.Steps.Helpers
 
     public class MongoDbSetupHelper : ISetupHelper
     {
+        private readonly MongoClient _client;
         private readonly IMongoDatabase _db;
 
         public MongoDbSetupHelper()
         {
-            var client = new MongoClient("mongodb://localhost:27017");       
-            _db = client.GetDatabase("SamplesDB");                       
+            _client = new MongoClient("mongodb://localhost:27017");       
+            _db = _client.GetDatabase("SamplesDB");                       
         }
 
         public void AddWarehouseItem(WarehouseItemDto warehouseItem)
@@ -68,6 +69,11 @@ namespace Samples.Specifications.Tests.Steps.Helpers
         public void ClearWarehouseItems()
         {
             _db.DropCollection("WarehouseItems");
-        }  
+        }
+
+        public void Initialize()
+        {
+            _client.DropDatabase("SamplesDB");
+        }
     }
 }

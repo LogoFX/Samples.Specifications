@@ -1,4 +1,5 @@
-﻿using Samples.Client.Data.Contracts.Dto;
+﻿using System.IO;
+using Samples.Client.Data.Contracts.Dto;
 using Samples.Specifications.Server.Storage.NDatabase;
 
 namespace Samples.Specifications.Tests.Steps.Helpers
@@ -39,6 +40,11 @@ namespace Samples.Specifications.Tests.Steps.Helpers
             {
                 storage.RemoveAll<WarehouseItemDto>();
             }
+        }
+
+        public void Initialize()
+        {
+            File.Delete("objects.ndb");
         }
     }    
 }

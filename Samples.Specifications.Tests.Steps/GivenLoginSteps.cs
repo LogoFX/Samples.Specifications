@@ -22,6 +22,15 @@ namespace Samples.Specifications.Tests.Steps
             _loginProviderBuilder = loginProviderBuilder;
         }
 #endif
+#if REAL
+        private readonly ISetupHelper _setupHelper;
+
+        public GivenLoginSteps(ISetupHelper setupHelper)
+        {
+            _setupHelper = setupHelper;
+        }
+
+#endif
 
         public void SetupAuthenticatedUserWithCredentials(string username, string password)
         {
@@ -30,20 +39,8 @@ namespace Samples.Specifications.Tests.Steps
             _builderRegistrationService.RegisterBuilder(_loginProviderBuilder);
 #endif
 
-#if REAL
-            var repository = new MongoDbSetupHelper();
-            //TODO: should be executed once and for all collections - not here of course
-            repository.ClearUsers();
-            repository.AddUser(username, password);
-
-            //using (var storage = new Storage())
-            //{
-            //    storage.Store(new UserDto
-            //    {
-            //        Login = username,
-            //        Password = password
-            //    });
-            //}
+#if REAL                        
+            _setupHelper.AddUser(username, password);            
 #endif
         }
     }

@@ -26,6 +26,16 @@ namespace Samples.Specifications.Tests.Steps
             _warehouseProviderBuilder = warehouseProviderBuilder;
         }
 #endif
+
+#if REAL
+        private readonly ISetupHelper _setupHelper;
+
+        public GivenMainSteps(ISetupHelper setupHelper)
+        {
+            _setupHelper = setupHelper;
+        }
+
+#endif
         public void SetupWarehouseItems(IEnumerable<WarehouseItemDto> warehouseItems)
         {
 #if FAKE
@@ -33,22 +43,11 @@ namespace Samples.Specifications.Tests.Steps
             _builderRegistrationService.RegisterBuilder(_warehouseProviderBuilder);
 #endif
 
-#if REAL
-            var repository = new MongoDbSetupHelper();
-            //TODO: should be executed once and for all collections - not here of course
-            repository.ClearWarehouseItems();
+#if REAL                        
             foreach (var warehouseItemDto in warehouseItems)
             {
-                repository.AddWarehouseItem(warehouseItemDto);
-            }
-
-            //using (var storage = new Storage())
-            //{
-            //    foreach (var warehouseItem in warehouseItems)
-            //    {
-            //        storage.Store(warehouseItem);
-            //    }
-            //}
+                _setupHelper.AddWarehouseItem(warehouseItemDto);
+            }            
 #endif
         }
     }

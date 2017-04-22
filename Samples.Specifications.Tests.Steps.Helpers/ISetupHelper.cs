@@ -8,5 +8,6 @@ namespace Samples.Specifications.Tests.Steps.Helpers
         void AddUser(string login, string password);
         void ClearUsers();
         void ClearWarehouseItems();
+        void Initialize();
     }
 }
