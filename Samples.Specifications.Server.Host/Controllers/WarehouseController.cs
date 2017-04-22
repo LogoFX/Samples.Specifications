@@ -31,6 +31,7 @@ namespace Samples.Specifications.Server.Host.Controllers
         [HttpPut("{id}")]
         public IActionResult Put(Guid id, [FromBody]WarehouseItem warehouseItem)
         {
+            _warehouseRepository.Update(warehouseItem);
             return Ok();
         }
         

@@ -66,7 +66,18 @@ namespace Samples.Specifications.Server.Storage.MongoDb.Services
 
         public void Update(WarehouseItem warehouseItem)
         {
-            throw new NotImplementedException();
+            var collection = GetCollection();
+            var query = Query<MongoWarehouseItem>.EQ(e => e.ActualId, warehouseItem.Id);
+            var oldItem = GetByIdInternal(warehouseItem.Id);
+            var operation = Update<MongoWarehouseItem>.Replace(new MongoWarehouseItem
+            {
+                ActualId = warehouseItem.Id,
+                Id = oldItem.Id,
+                Kind = warehouseItem.Kind,
+                Price = warehouseItem.Price,
+                Quantity = warehouseItem.Quantity
+            });
+            collection.Update(query, operation);
         }
 
         private MongoCollection<MongoWarehouseItem> GetCollection()
