@@ -5,7 +5,7 @@ using MongoDB.Bson;
 using MongoDB.Driver;
 using MongoDB.Driver.Builders;
 using Samples.Specifications.Server.Domain.Models;
-using Samples.Specifications.Server.Storage.Contracts;
+using Samples.Specifications.Server.Domain.Services.Storage;
 using Samples.Specifications.Server.Storage.MongoDb.Models;
 
 namespace Samples.Specifications.Server.Storage.MongoDb.Services

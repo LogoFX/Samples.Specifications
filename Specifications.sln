@@ -99,8 +99,6 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Samples.Specifications.Serv
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Samples.Specifications.Server.Storage.MongoDb", "Samples.Specifications.Server.Storage.MongoDb\Samples.Specifications.Server.Storage.MongoDb.xproj", "{CB89C7B0-7C4B-4633-AF29-709DEADBB53B}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Samples.Specifications.Server.Storage.Contracts", "Samples.Specifications.Server.Storage.Contracts\Samples.Specifications.Server.Storage.Contracts.xproj", "{4211537E-9207-42D0-9304-B88BE9FD81C6}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Tests.Steps.Helpers", "Samples.Specifications.Tests.Steps.Helpers\Samples.Specifications.Tests.Steps.Helpers.csproj", "{695F7796-E668-49B8-93A7-58F4B8A2C3AA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Server.Storage.NDatabase", "Samples.Specifications.Server.Storage.NDatabase\Samples.Specifications.Server.Storage.NDatabase.csproj", "{9D464AA8-217A-4077-AFEE-8F99B49F8DC5}"
@@ -486,19 +484,6 @@ Global
 		{CB89C7B0-7C4B-4633-AF29-709DEADBB53B}.TestsWithFake|Any CPU.ActiveCfg = Debug|Any CPU
 		{CB89C7B0-7C4B-4633-AF29-709DEADBB53B}.TestsWithReal|Any CPU.ActiveCfg = TestsWithReal|Any CPU
 		{CB89C7B0-7C4B-4633-AF29-709DEADBB53B}.TestsWithReal|Any CPU.Build.0 = TestsWithReal|Any CPU
-		{4211537E-9207-42D0-9304-B88BE9FD81C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4211537E-9207-42D0-9304-B88BE9FD81C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4211537E-9207-42D0-9304-B88BE9FD81C6}.DebugWithFake|Any CPU.ActiveCfg = Debug|Any CPU
-		{4211537E-9207-42D0-9304-B88BE9FD81C6}.DebugWithFake|Any CPU.Build.0 = Debug|Any CPU
-		{4211537E-9207-42D0-9304-B88BE9FD81C6}.DebugWithReal|Any CPU.ActiveCfg = Debug|Any CPU
-		{4211537E-9207-42D0-9304-B88BE9FD81C6}.DebugWithReal|Any CPU.Build.0 = Debug|Any CPU
-		{4211537E-9207-42D0-9304-B88BE9FD81C6}.IntegrationWithFake|Any CPU.ActiveCfg = Debug|Any CPU
-		{4211537E-9207-42D0-9304-B88BE9FD81C6}.IntegrationWithFake|Any CPU.Build.0 = Debug|Any CPU
-		{4211537E-9207-42D0-9304-B88BE9FD81C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4211537E-9207-42D0-9304-B88BE9FD81C6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4211537E-9207-42D0-9304-B88BE9FD81C6}.TestsWithFake|Any CPU.ActiveCfg = Debug|Any CPU
-		{4211537E-9207-42D0-9304-B88BE9FD81C6}.TestsWithReal|Any CPU.ActiveCfg = TestsWithReal|Any CPU
-		{4211537E-9207-42D0-9304-B88BE9FD81C6}.TestsWithReal|Any CPU.Build.0 = TestsWithReal|Any CPU
 		{695F7796-E668-49B8-93A7-58F4B8A2C3AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{695F7796-E668-49B8-93A7-58F4B8A2C3AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{695F7796-E668-49B8-93A7-58F4B8A2C3AA}.DebugWithFake|Any CPU.ActiveCfg = Debug|Any CPU
@@ -605,7 +590,6 @@ Global
 		{DBD9B580-1FC7-48EF-99D8-F50D22DE2736} = {DB76F33D-308E-48EF-8660-FF4AA7760616}
 		{89837650-CE67-4F96-8EBB-8993F2323787} = {DBD9B580-1FC7-48EF-99D8-F50D22DE2736}
 		{CB89C7B0-7C4B-4633-AF29-709DEADBB53B} = {DBD9B580-1FC7-48EF-99D8-F50D22DE2736}
-		{4211537E-9207-42D0-9304-B88BE9FD81C6} = {DBD9B580-1FC7-48EF-99D8-F50D22DE2736}
 		{695F7796-E668-49B8-93A7-58F4B8A2C3AA} = {66E31A07-598B-4745-BE60-6B550F11F970}
 		{9D464AA8-217A-4077-AFEE-8F99B49F8DC5} = {DBD9B580-1FC7-48EF-99D8-F50D22DE2736}
 		{B1868C64-BBA8-4565-BD5C-D963AA39B729} = {DBD9B580-1FC7-48EF-99D8-F50D22DE2736}

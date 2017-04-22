@@ -46,9 +46,6 @@
     <Reference Include="Samples.Specifications.Server.Domain">
       <HintPath>..\Samples.Specifications.Server.Domain\bin\TestsWithReal\netstandard1.6\Samples.Specifications.Server.Domain.dll</HintPath>
     </Reference>
-    <Reference Include="Samples.Specifications.Server.Storage.Contracts">
-      <HintPath>..\Samples.Specifications.Server.Storage.Contracts\bin\TestsWithReal\netstandard1.6\Samples.Specifications.Server.Storage.Contracts.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

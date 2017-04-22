@@ -5,8 +5,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Samples.Specifications.Server.Domain.Services.Storage;
 using Samples.Specifications.Server.Host.Mappers;
-using Samples.Specifications.Server.Storage.Contracts;
 using Samples.Specifications.Server.Storage.InMemory.Services;
 using Samples.Specifications.Server.Storage.MongoDb.Services;
 

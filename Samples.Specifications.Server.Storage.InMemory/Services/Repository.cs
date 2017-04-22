@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Samples.Specifications.Server.Domain.Models;
-using Samples.Specifications.Server.Storage.Contracts;
+using Samples.Specifications.Server.Domain.Services.Storage;
 
 namespace Samples.Specifications.Server.Storage.InMemory.Services
 {    
