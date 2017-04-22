@@ -28,13 +28,15 @@ namespace Samples.Specifications.Server.Host.Controllers
         }
         
         [HttpPut("{id}")]
-        public void Put(Guid id, [FromBody]WarehouseItem warehouseItem)
+        public IActionResult Put(Guid id, [FromBody]WarehouseItem warehouseItem)
         {
+            return Ok();
         }
         
         [HttpDelete("{id}")]
-        public void Delete(Guid id)
+        public IActionResult Delete(Guid id)
         {
+            return Ok();
         }
     }
 }

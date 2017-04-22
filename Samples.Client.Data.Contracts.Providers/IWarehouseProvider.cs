@@ -8,7 +8,7 @@ namespace Samples.Client.Data.Contracts.Providers
     {
         IEnumerable<WarehouseItemDto> GetWarehouseItems();
         bool DeleteWarehouseItem(Guid id);
-        void UpdateWarehouseItem(WarehouseItemDto dto);
+        bool UpdateWarehouseItem(WarehouseItemDto dto);
         void CreateWarehouseItem(WarehouseItemDto dto);
     }
 }
