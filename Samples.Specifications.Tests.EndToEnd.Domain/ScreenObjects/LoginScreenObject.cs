@@ -13,16 +13,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
         {
             var loginScreen = GetLoginScreen();
             var loginButton = loginScreen.Get<Button>("Login_SignIn");
-            loginButton.Click();
-            //Action waitUntilNotBusy = () =>
-            //{
-            //    var isBusy = loginScreen.Get<Label>("Login_Busy");
-            //    if (isBusy.Text == "True")
-            //    {
-            //        throw new Exception();
-            //    }
-            //};
-            //waitUntilNotBusy.Execute();
+            loginButton.Click();            
         }
 
         public void SetUsername(string username)

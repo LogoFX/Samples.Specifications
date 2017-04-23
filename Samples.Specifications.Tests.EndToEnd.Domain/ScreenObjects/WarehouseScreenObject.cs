@@ -96,8 +96,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
         }
 
         public bool IsActive()
-        {
-            //for nows
+        {            
             return true;
         }
 
@@ -133,18 +132,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
             quantityTextBox.BulkText = warehouseItemData.Quantity.ToString(CultureInfo.CurrentCulture);
 
             var applyButton = shell.Get<Button>(SearchCriteria.ByAutomationId("WarehouseItemApplyButton"));
-            applyButton.Click();
-
-            //wait until save is finished
-            //Action waitUntilNotBusy = () =>
-            //{                
-            //    var isBusy = shell.Get<ProgressBar>("Login_Busy");
-            //    if (isBusy.Visible)
-            //    {
-            //        throw new Exception();
-            //    }
-            //};
-            //waitUntilNotBusy.Execute();
+            applyButton.Click();            
         }
 
         public string GetErrorMessage()
