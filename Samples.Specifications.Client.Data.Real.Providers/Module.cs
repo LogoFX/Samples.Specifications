@@ -1,5 +1,4 @@
-﻿using System;
-using System.Configuration;
+﻿using System.Configuration;
 using JetBrains.Annotations;
 using RestSharp;
 using Samples.Client.Data.Contracts.Providers;
@@ -20,21 +19,13 @@ namespace Samples.Specifications.Client.Data.Real.Providers
         }
 
         private string RetrieveEndpoint()
-        {
-            Configuration config = null;
-            string exeConfigPath = GetType().Assembly.Location;
-            try
-            {
-                config = ConfigurationManager.OpenExeConfiguration(exeConfigPath);
-            }
-            catch (Exception ex)
-            {
-                //handle errror here.. means DLL has no sattelite configuration file.
-            }
-            return config != null ? GetAppSetting(config, "ServerEndpoint") : string.Empty;
+        {            
+            var exeConfigPath = GetType().Assembly.Location;
+            var config = ConfigurationManager.OpenExeConfiguration(exeConfigPath);
+            return GetAppSetting(config, "ServerEndpoint");
         }
 
-        string GetAppSetting(Configuration config, string key)
+        private string GetAppSetting(Configuration config, string key)
         {
             var element = config.AppSettings.Settings[key];
             var value = element?.Value;
