@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Net;
 using RestSharp;
 using Samples.Client.Data.Contracts.Dto;
@@ -12,9 +11,9 @@ namespace Samples.Specifications.Client.Data.Real.Providers
     {
         private readonly RestClient _client;
 
-        public WarehouseProvider()
+        public WarehouseProvider(RestClient client)
         {
-            _client = new RestClient(ConfigurationManager.AppSettings.Get("ServerEndpoint"));
+            _client = client;
         }
 
         public IEnumerable<WarehouseItemDto> GetWarehouseItems()
