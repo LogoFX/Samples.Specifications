@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using RestSharp;
 using Samples.Client.Data.Contracts.Dto;
@@ -8,12 +9,12 @@ using Samples.Client.Data.Contracts.Providers;
 namespace Samples.Specifications.Client.Data.Real.Providers
 {
     class LoginProvider : ILoginProvider
-    {
+    {        
         private readonly RestClient _client;
 
         public LoginProvider()
-        {
-            _client = new RestClient("http://localhost:32064");
+        {            
+            _client = new RestClient(ConfigurationManager.AppSettings.Get("ServerEndpoint"));
         }
 
         public void Login(string username, string password)
