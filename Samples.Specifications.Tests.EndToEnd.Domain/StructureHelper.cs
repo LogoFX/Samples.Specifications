@@ -11,7 +11,8 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain
         {
             var application = ApplicationContext.Application;
             var shellScreen =
-                application.GetWindow(SearchCriteria.ByAutomationId("Shell_Window"), InitializeOption.NoCache);
+                DelegateExtensions.ExecuteWithResult(
+                    () => application.GetWindow(SearchCriteria.ByAutomationId("Shell_Window"), InitializeOption.NoCache));                
             return shellScreen;
         }
     }

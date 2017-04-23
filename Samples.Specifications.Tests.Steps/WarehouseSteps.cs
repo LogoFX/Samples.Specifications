@@ -31,7 +31,7 @@ namespace Samples.Specifications.Tests.Steps
         }
 
         public void ThenIExpectToSeeTheFollowingDataOnTheScreen(WarehouseItemAssertionTestData[] warehouseItems)
-        {
+        {            
             var actualWarehouseItems = _warehouseScreenObject.GetWarehouseItems().ToArray();
             for (int i = 0; i < Math.Max(warehouseItems.Length, actualWarehouseItems.Length); i++)
             {
@@ -56,9 +56,7 @@ namespace Samples.Specifications.Tests.Steps
         }
 
         public void WhenICreateANewWarehouseItemWithTheFollowingData(WarehouseItemAssertionTestData[] warehouseItems)
-        {
-            warehouseItems.Should().HaveCount(1);
-
+        {            
             foreach (var warehouseItem in warehouseItems)
             {
                 _warehouseScreenObject.AddWarehouseItem(warehouseItem);

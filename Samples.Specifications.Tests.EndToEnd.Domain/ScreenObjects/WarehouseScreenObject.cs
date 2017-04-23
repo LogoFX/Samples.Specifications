@@ -96,8 +96,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
         }
 
         public bool IsActive()
-        {
-            //for nows
+        {            
             return true;
         }
 
@@ -133,7 +132,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
             quantityTextBox.BulkText = warehouseItemData.Quantity.ToString(CultureInfo.CurrentCulture);
 
             var applyButton = shell.Get<Button>(SearchCriteria.ByAutomationId("WarehouseItemApplyButton"));
-            applyButton.Click();
+            applyButton.Click();            
         }
 
         public string GetErrorMessage()

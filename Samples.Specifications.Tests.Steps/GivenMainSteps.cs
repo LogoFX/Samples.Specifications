@@ -7,7 +7,7 @@ using Samples.Specifications.Client.Data.Fake.ProviderBuilders;
 #endif
 
 #if REAL
-
+using Samples.Specifications.Tests.Steps.Helpers;
 #endif
 
 namespace Samples.Specifications.Tests.Steps
@@ -26,6 +26,16 @@ namespace Samples.Specifications.Tests.Steps
             _warehouseProviderBuilder = warehouseProviderBuilder;
         }
 #endif
+
+#if REAL
+        private readonly ISetupHelper _setupHelper;
+
+        public GivenMainSteps(ISetupHelper setupHelper)
+        {
+            _setupHelper = setupHelper;
+        }
+
+#endif
         public void SetupWarehouseItems(IEnumerable<WarehouseItemDto> warehouseItems)
         {
 #if FAKE
@@ -33,14 +43,11 @@ namespace Samples.Specifications.Tests.Steps
             _builderRegistrationService.RegisterBuilder(_warehouseProviderBuilder);
 #endif
 
-#if REAL
-            using (var storage = new Storage())
+#if REAL                        
+            foreach (var warehouseItemDto in warehouseItems)
             {
-                foreach (var warehouseItem in warehouseItems)
-                {
-                    storage.Store(warehouseItem);
-                }
-            }
+                _setupHelper.AddWarehouseItem(warehouseItemDto);
+            }            
 #endif
         }
     }

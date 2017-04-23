@@ -40,12 +40,20 @@ namespace Samples.Specifications.Client.Data.Fake.Providers
             return retVal;
         }
 
-        void IWarehouseProvider.SaveWarehouseItem(WarehouseItemDto dto)
+        bool IWarehouseProvider.UpdateWarehouseItem(WarehouseItemDto dto)
         {
             var delayTask = Task.Delay(_random.Next(2000));
             delayTask.Wait();
             var service = GetService(() => _warehouseProviderBuilder, b => b);
-            service.SaveWarehouseItem(dto);
+            return service.UpdateWarehouseItem(dto);
+        }
+
+        void IWarehouseProvider.CreateWarehouseItem(WarehouseItemDto dto)
+        {
+            var delayTask = Task.Delay(_random.Next(2000));
+            delayTask.Wait();
+            var service = GetService(() => _warehouseProviderBuilder, b => b);
+            service.CreateWarehouseItem(dto);
         }
     }
 }

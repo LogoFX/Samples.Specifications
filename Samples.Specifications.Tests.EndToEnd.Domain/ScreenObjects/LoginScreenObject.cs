@@ -1,4 +1,5 @@
-﻿using LogoFX.Client.Testing.EndToEnd.White;
+﻿using System;
+using LogoFX.Client.Testing.EndToEnd.White;
 using Samples.Specifications.Tests.Domain.ScreenObjects;
 using TestStack.White.UIItems;
 using TestStack.White.UIItems.Finders;
@@ -12,7 +13,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
         {
             var loginScreen = GetLoginScreen();
             var loginButton = loginScreen.Get<Button>("Login_SignIn");
-            loginButton.Click();                        
+            loginButton.Click();            
         }
 
         public void SetUsername(string username)
@@ -40,6 +41,10 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
         {
             var application = ApplicationContext.Application;
             var loginScreen = application.GetWindowEx("Login View");
+            if (loginScreen.Visible == false || loginScreen.Enabled == false)
+            {
+                throw new Exception();
+            }
             return loginScreen;
         }
 

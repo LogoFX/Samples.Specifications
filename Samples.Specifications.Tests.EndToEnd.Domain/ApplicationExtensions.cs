@@ -14,8 +14,16 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain
                 return null;
             }
             app.WaitWhileBusy();
-            return RetryHelper.ExecuteWithRetry(() => app.GetWindows().SingleOrDefault(x => x.Title == title), 3,
-                TimeSpan.FromSeconds(5));            
+            Func<Window> getWindow = () =>
+            {
+                var window = app.GetWindows().SingleOrDefault(x => x.Title == title);
+                if (window == null || window.Visible == false || window.Enabled == false)
+                {
+                    throw new Exception();
+                }
+                return window;
+            };
+            return getWindow.ExecuteWithResult();            
         }
     }
 }

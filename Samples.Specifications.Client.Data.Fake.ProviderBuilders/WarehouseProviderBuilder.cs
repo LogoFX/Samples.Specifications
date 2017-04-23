@@ -36,7 +36,13 @@ namespace Samples.Specifications.Client.Data.Fake.ProviderBuilders
                     r => r.Complete(GetWarehouseItems))
                 .AddMethodCallWithResult<Guid, bool>(t => t.DeleteWarehouseItem(It.IsAny<Guid>()),
                     (r, id) => r.Complete(DeleteWarehouseItem(id)))
-                .AddMethodCall<WarehouseItemDto>(t => t.SaveWarehouseItem(It.IsAny<WarehouseItemDto>()),
+                .AddMethodCallWithResult<WarehouseItemDto, bool>(t => t.UpdateWarehouseItem(It.IsAny<WarehouseItemDto>()),
+                    (r, dto) => r.Complete(k =>
+                    {
+                        SaveWarehouseItem(dto);
+                        return true;
+                    }))
+                    .AddMethodCall<WarehouseItemDto>(t => t.CreateWarehouseItem(It.IsAny<WarehouseItemDto>()),
                     (r, dto) =>
                     {
                         SaveWarehouseItem(dto);

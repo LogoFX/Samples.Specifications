@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Net;
+using RestSharp;
 using Samples.Client.Data.Contracts.Dto;
 using Samples.Client.Data.Contracts.Providers;
 
@@ -8,22 +9,40 @@ namespace Samples.Specifications.Client.Data.Real.Providers
 {
     class WarehouseProvider : IWarehouseProvider
     {
+        private readonly RestClient _client;
+
+        public WarehouseProvider(RestClient client)
+        {
+            _client = client;
+        }
+
         public IEnumerable<WarehouseItemDto> GetWarehouseItems()
         {
-            using (var storage = new Storage())
-            {
-                return storage.Get<WarehouseItemDto>().ToArray();
-            }                      
+            var restRequest = new RestRequest("api/warehouse", Method.GET) { RequestFormat = DataFormat.Json };
+            var response = _client.Execute<List<WarehouseItemDto>>(restRequest);            
+            return response.Data;            
         }
 
         public bool DeleteWarehouseItem(Guid id)
         {
-            throw new NotImplementedException();
+            var restRequest = new RestRequest($"api/warehouse/{id}", Method.DELETE) { RequestFormat = DataFormat.Json };
+            var response = _client.Execute(restRequest);
+            return response.StatusCode == HttpStatusCode.OK;
         }
 
-        public void SaveWarehouseItem(WarehouseItemDto dto)
+        public bool UpdateWarehouseItem(WarehouseItemDto dto)
         {
-            throw new NotImplementedException();
+            var restRequest = new RestRequest($"api/warehouse/{dto.Id}", Method.PUT) { RequestFormat = DataFormat.Json };            
+            restRequest.AddBody(dto);
+            var response = _client.Execute(restRequest);
+            return response.StatusCode == HttpStatusCode.OK;
+        }
+
+        public void CreateWarehouseItem(WarehouseItemDto dto)
+        {
+            var restRequest = new RestRequest("api/warehouse", Method.POST) { RequestFormat = DataFormat.Json };
+            restRequest.AddBody(dto);
+            var response = _client.Execute(restRequest);            
         }
     }
 }

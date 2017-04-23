@@ -22,7 +22,7 @@ namespace Samples.Specifications.Tests.Acceptance.Steps.Adapters
         [When(@"I log in to the system")]
         public void WhenILogInToTheSystem()
         {
-            LoginSteps.WhenILogInToTheSystem();
+            LoginSteps.WhenILogInToTheSystem();            
         }
 
         [When(@"I set the password to ""(.*)""")]
