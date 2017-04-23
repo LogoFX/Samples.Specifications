@@ -12,11 +12,10 @@ namespace Samples.Specifications.Server.Storage.MongoDb.Services
 {
     public class MongoDbWarehouseRepository : IWarehouseRepository
     {
-        readonly MongoDatabase _db;
+        private readonly MongoDatabase _db;
 
-        public MongoDbWarehouseRepository()
-        {
-            var client = new MongoClient("mongodb://localhost:27017");
+        public MongoDbWarehouseRepository(MongoClient client)
+        {            
             var server = client.GetServer();
             _db = server.GetDatabase("SamplesDB");
         }

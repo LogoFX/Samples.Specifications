@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using MongoDB.Driver;
 using Samples.Specifications.Server.Domain.Services.Storage;
 using Samples.Specifications.Server.Host.Mappers;
 using Samples.Specifications.Server.Storage.InMemory.Services;
@@ -33,6 +34,7 @@ namespace Samples.Specifications.Server.Host
             services.AddDbContext<WarehouseContext>(s => s.UseInMemoryDatabase());
             services.AddTransient<IWarehouseRepository, MongoDbWarehouseRepository>();
             services.AddTransient<IUserRepository, MongoDbUserRepository>();
+            services.AddTransient(r => new MongoClient(Configuration["MongoDbEndpoint"]));
             // Add framework services.
             services.AddMvc();
         }

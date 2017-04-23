@@ -9,11 +9,10 @@ namespace Samples.Specifications.Server.Storage.MongoDb.Services
 {
     public class MongoDbUserRepository : IUserRepository
     {
-        readonly MongoDatabase _db;
+        private readonly MongoDatabase _db;
 
-        public MongoDbUserRepository()
-        {
-            var client = new MongoClient("mongodb://localhost:27017");
+        public MongoDbUserRepository(MongoClient client)
+        {                        
             var server = client.GetServer();
             _db = server.GetDatabase("SamplesDB");
         }
