@@ -89,7 +89,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ISetupHelper.cs" />
     <Compile Include="Module.cs" />
     <Compile Include="MongoDbSetupHelper.cs" />
     <Compile Include="NDatabaseSetupHelper.cs" />
@@ -103,6 +102,10 @@
     <ProjectReference Include="..\Samples.Specifications.Server.Storage.NDatabase\Samples.Specifications.Server.Storage.NDatabase.csproj">
       <Project>{9d464aa8-217a-4077-afee-8f99b49f8dc5}</Project>
       <Name>Samples.Specifications.Server.Storage.NDatabase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samples.Specifications.Tests.Steps.Helpers.Contracts\Samples.Specifications.Tests.Steps.Helpers.Contracts.csproj">
+      <Project>{632814bc-4f54-461f-8217-58c3a666ba6f}</Project>
+      <Name>Samples.Specifications.Tests.Steps.Helpers.Contracts</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
