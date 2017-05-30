@@ -15,7 +15,7 @@ namespace Samples.Specifications.Client.Data.Real.Providers
             iocContainer.RegisterSingleton<ILoginProvider, LoginProvider>();
             iocContainer.RegisterSingleton<IWarehouseProvider, WarehouseProvider>();
             iocContainer.RegisterSingleton<IEventsProvider, EventsProvider>();
-            iocContainer.RegisterHandler<RestClient>(() => new RestClient(RetrieveEndpoint()));
+            iocContainer.RegisterSingleton<RestClient>(() => new RestClient(RetrieveEndpoint()));
         }
 
         private string RetrieveEndpoint()
