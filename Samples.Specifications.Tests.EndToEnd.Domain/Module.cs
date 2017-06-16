@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using Samples.Specifications.Tests.Domain;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
 

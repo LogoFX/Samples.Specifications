@@ -1,6 +1,5 @@
-﻿using Samples.Specifications.Client.Tests.Integration.Domain.ScreenObjects;
+﻿using System.Reflection;
 using Samples.Specifications.Tests.Domain;
-using Samples.Specifications.Tests.Domain.ScreenObjects;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
 
@@ -10,10 +9,8 @@ namespace Samples.Specifications.Client.Tests.Integration.Domain
     {
         public void RegisterModule(IIocContainerRegistrator iocContainer)
         {
-            iocContainer.RegisterSingleton<ILoginScreenObject, LoginScreenObject>();
-            iocContainer.RegisterSingleton<IWarehouseScreenObject, WarehouseScreenObject>();
-            iocContainer.RegisterSingleton<IShellScreenObject, ShellScreenObject>();
-            iocContainer.RegisterSingleton<IMainScreenObject, MainScreenObject>();
+            iocContainer.RegisterAutomagically(Assembly.LoadFrom("Samples.Specifications.Tests.Domain.dll"),
+                Assembly.GetExecutingAssembly());
             iocContainer.RegisterSingleton<IStartClientApplicationService, StartClientApplicationService>();
         }
     }

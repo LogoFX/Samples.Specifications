@@ -2,7 +2,7 @@
 using System.Reflection;
 using Solid.Practices.IoC;
 
-namespace Samples.Specifications.Tests.EndToEnd.Domain
+namespace Samples.Specifications.Tests.Domain
 {
     public static class ContainerRegistratorExtensions
     {
@@ -12,11 +12,15 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain
             Assembly implementationsAssembly)
         {
             var contracts =
-                contractsAssembly.DefinedTypes.Where(t => t.IsInterface).ToArray();
+                contractsAssembly.DefinedTypes.Where(t => t.IsInterface).Select(t => t.AsType()).ToArray();
             var implementations =
                 implementationsAssembly.DefinedTypes.Where(
                     t => t.IsInterface == false)
                     .ToArray();
+            var separators = new[] {'.'};
+            var contractsEnding = contractsAssembly.GetName().Name.Split(separators).Last();
+            var implementationsEnding = string.Join(separators[0].ToString(),
+                implementationsAssembly.GetName().Name.Split(separators).Reverse().Take(2).Reverse());
             foreach (var contract in contracts)
             {
                 var contractName = contract.Name;
@@ -24,7 +28,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain
                     implementations.FirstOrDefault(
                         t =>
                             contractName == "I" + t.Name &&
-                            contract.Namespace == t.Namespace.Replace("EndToEnd.Domain", "Domain"));
+                            contract.Namespace == t.Namespace.Replace(implementationsEnding, contractsEnding))?.AsType();
                 if (implementation != null)
                 {
                     @object.RegisterSingleton(contract, implementation);

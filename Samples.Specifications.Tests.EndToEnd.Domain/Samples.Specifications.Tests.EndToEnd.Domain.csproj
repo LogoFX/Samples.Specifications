@@ -132,7 +132,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationExtensions.cs" />
-    <Compile Include="ContainerRegistratorExtensions.cs" />
     <Compile Include="DelegateExtensions.cs" />
     <Compile Include="ExecutableContainer.cs" />
     <Compile Include="Module.cs" />
