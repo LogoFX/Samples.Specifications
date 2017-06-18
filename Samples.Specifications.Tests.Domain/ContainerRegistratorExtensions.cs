@@ -29,23 +29,6 @@ namespace Samples.Specifications.Tests.Domain
                     @object.RegisterSingleton(match, implementationInfo.Value.AsType());
                 }
             }
-            //var separators = new[] {'.'};
-            //var contractsEnding = contractsAssembly.GetName().Name.Split(separators).Last();
-            //var implementationsEnding = string.Join(separators[0].ToString(),
-            //    implementationsAssembly.GetName().Name.Split(separators).Reverse().Take(2).Reverse());
-            //foreach (var contract in contracts)
-            //{
-            //    var contractName = contract.Name;
-            //    var implementation =
-            //        implementations.FirstOrDefault(
-            //            t =>
-            //                contractName == "I" + t.Name &&
-            //                contract.Namespace == t.Namespace.Replace(implementationsEnding, contractsEnding))?.AsType();
-            //    if (implementation != null)
-            //    {
-            //        @object.RegisterSingleton(contract, implementation);
-            //    }
-            //}
         }
     }
 }

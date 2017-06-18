@@ -23,7 +23,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain
                 }
                 return window;
             };
-            return getWindow.ExecuteWithResult();            
+            return getWindow.ExecuteWithResult(5, TimeSpan.FromMilliseconds(500));            
         }
     }
 }
