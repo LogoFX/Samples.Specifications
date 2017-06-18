@@ -17,6 +17,6 @@ notifications:
   on_build_status_changed: true
  
  install:
- - set PATH=C:\Program Files (x86)\MSBuild\15.0\Bin;%PATH%
+ - ps: set PATH=C:\Program Files (x86)\MSBuild\15.0\Bin;%PATH%
   
   
