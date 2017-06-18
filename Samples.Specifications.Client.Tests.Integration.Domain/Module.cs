@@ -11,7 +11,6 @@ namespace Samples.Specifications.Client.Tests.Integration.Domain
         {
             iocContainer.RegisterAutomagically(Assembly.LoadFrom("Samples.Specifications.Tests.Domain.dll"),
                 Assembly.GetExecutingAssembly());
-            iocContainer.RegisterSingleton<IStartClientApplicationService, StartClientApplicationService>();
         }
     }
 }

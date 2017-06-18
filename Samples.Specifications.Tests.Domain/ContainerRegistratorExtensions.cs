@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Reflection;
 using Solid.Practices.IoC;
 
@@ -17,23 +18,34 @@ namespace Samples.Specifications.Tests.Domain
                 implementationsAssembly.DefinedTypes.Where(
                     t => t.IsInterface == false)
                     .ToArray();
-            var separators = new[] {'.'};
-            var contractsEnding = contractsAssembly.GetName().Name.Split(separators).Last();
-            var implementationsEnding = string.Join(separators[0].ToString(),
-                implementationsAssembly.GetName().Name.Split(separators).Reverse().Take(2).Reverse());
-            foreach (var contract in contracts)
+            var contractsInfo = contracts.ToDictionary(t => t.Name, t => t);
+            var implementationsInfo = implementations.Where(t => t.Name.StartsWith("<>") == false)
+                .ToDictionary(t => t.Name, t => t);
+            foreach (var implementationInfo in implementationsInfo)
             {
-                var contractName = contract.Name;
-                var implementation =
-                    implementations.FirstOrDefault(
-                        t =>
-                            contractName == "I" + t.Name &&
-                            contract.Namespace == t.Namespace.Replace(implementationsEnding, contractsEnding))?.AsType();
-                if (implementation != null)
+                contractsInfo.TryGetValue("I" + implementationInfo.Key, out Type match);
+                if (match != null)
                 {
-                    @object.RegisterSingleton(contract, implementation);
+                    @object.RegisterSingleton(match, implementationInfo.Value.AsType());
                 }
             }
+            //var separators = new[] {'.'};
+            //var contractsEnding = contractsAssembly.GetName().Name.Split(separators).Last();
+            //var implementationsEnding = string.Join(separators[0].ToString(),
+            //    implementationsAssembly.GetName().Name.Split(separators).Reverse().Take(2).Reverse());
+            //foreach (var contract in contracts)
+            //{
+            //    var contractName = contract.Name;
+            //    var implementation =
+            //        implementations.FirstOrDefault(
+            //            t =>
+            //                contractName == "I" + t.Name &&
+            //                contract.Namespace == t.Namespace.Replace(implementationsEnding, contractsEnding))?.AsType();
+            //    if (implementation != null)
+            //    {
+            //        @object.RegisterSingleton(contract, implementation);
+            //    }
+            //}
         }
     }
 }
