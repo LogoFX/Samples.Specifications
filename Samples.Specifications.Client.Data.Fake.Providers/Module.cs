@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using JetBrains.Annotations;
 using Samples.Client.Data.Contracts.Dto;
 using Samples.Specifications.Client.Data.Fake.Containers;
-using Samples.Specifications.Client.Data.Fake.ProviderBuilders;
 using Solid.Practices.Composition;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
@@ -34,7 +34,7 @@ namespace Samples.Specifications.Client.Data.Fake.Providers
             var matchingFakeProvidersTypes = fakeProvidersAssemblies.SelectMany(k => k.DefinedTypes
                 .Where(t => t.IsInterface == false && t.IsAbstract == false && t.Name.EndsWith(providerEnding))
                 .Select(t => t.AsType())).ToArray();
-            var typeMatches = new Dictionary<Type, Type>();
+            var fakeTypeMatches = new Dictionary<Type, Type>();
             foreach (var type in matchingFakeProvidersTypes)
             {
                 var matchingProviderContractType =
@@ -42,14 +42,36 @@ namespace Samples.Specifications.Client.Data.Fake.Providers
                         t => t.Name == "I" + type.Name.Replace(fakePrefix, string.Empty));
                 if (matchingProviderContractType != null)
                 {
-                    typeMatches.Add(matchingProviderContractType, type);
+                    fakeTypeMatches.Add(matchingProviderContractType, type);
                 }
             }
-            foreach (var typeMatch in typeMatches)
+
+            var buildersAssemblies = allAssemblies.Where(t => t.GetName().Name.EndsWith(BuildersAssemblyEnding));
+            var matchingBuildersTypes = buildersAssemblies.SelectMany(k => k.DefinedTypes
+                .Where(t => t.IsInterface == false && t.IsAbstract == false && t.Name.EndsWith(builderEnding))
+                .Select(t => t.AsType())).ToArray();
+            var builderTypeMatches = new Dictionary<Type, Type>();
+            foreach (var type in matchingBuildersTypes)
+            {
+                var matchingProviderType =
+                    matchingProvidersContractsTypes.FirstOrDefault(
+                        t => t.Name == "I" + type.Name.Replace(builderEnding, string.Empty));
+                if (matchingProviderType != null)
+                {
+                    builderTypeMatches.Add(type, matchingProviderType);
+                }
+            }            
+            
+            foreach (var typeMatch in fakeTypeMatches)
             {
                 iocContainer.RegisterSingleton(typeMatch.Key, typeMatch.Value);
             }
-            RegisterBuilders(iocContainer);                
+            const string methodName = "CreateBuilder";
+            foreach (var typeMatch in builderTypeMatches)
+            {
+                var instance = typeMatch.Key.GetRuntimeMethod(methodName, new Type[] { }).Invoke(null, null);
+                iocContainer.RegisterInstance(typeMatch.Key, instance);
+            }                        
         }
 
         private static void RegisterDataContainers(IIocContainerRegistrator iocContainer)
@@ -111,13 +133,6 @@ namespace Samples.Specifications.Client.Data.Fake.Providers
                 new Tuple<string, string>("Admin", "pass") 
             });
             return userContainer;
-        }
-
-        private static void RegisterBuilders(IIocContainerRegistrator iocContainer)
-        {
-            iocContainer.RegisterInstance(WarehouseProviderBuilder.CreateBuilder());
-            iocContainer.RegisterInstance(EventsProviderBuilder.CreateBuilder());
-            iocContainer.RegisterInstance(LoginProviderBuilder.CreateBuilder());
         }
 
         public class ProvidersAssemblySourceProvider : AssemblySourceProviderBase
