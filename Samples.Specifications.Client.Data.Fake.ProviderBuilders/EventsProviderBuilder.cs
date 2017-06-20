@@ -9,7 +9,7 @@ using Attest.Fake.Core;
 
 namespace Samples.Specifications.Client.Data.Fake.ProviderBuilders
 {    
-    public sealed class EventsProviderBuilder : FakeBuilderBase<IEventsProvider>
+    public sealed class EventsProviderBuilder : FakeBuilderBase<IEventsProvider>, IFakeProviderBuilder
     {
         private readonly List<EventDto> _events = new List<EventDto>();
 
@@ -29,6 +29,11 @@ namespace Samples.Specifications.Client.Data.Fake.ProviderBuilders
                 timer.Dispose();
                 _timer = null;
             }
+        }
+
+        object IFakeProviderBuilder.Build()
+        {
+            return GetService();
         }
 
         private void OnTimer(object state)
