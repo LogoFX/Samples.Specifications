@@ -23,8 +23,7 @@ namespace Samples.Specifications.Tests.Domain
                 .ToDictionary(t => t.Name, t => t);
             foreach (var implementationInfo in implementationsInfo)
             {
-                Type match;
-                contractsInfo.TryGetValue("I" + implementationInfo.Key, out match);
+                contractsInfo.TryGetValue("I" + implementationInfo.Key, out Type match);
                 if (match != null)
                 {
                     @object.RegisterSingleton(match, implementationInfo.Value.AsType());
