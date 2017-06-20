@@ -80,7 +80,5 @@ namespace Samples.Specifications.Tests.EndToEnd.Infra.Providers
                 return new[] {ProvidersAssemblyEnding, BuildersAssemblyEnding};
             }
         }
-    }
-
-    
+    }    
 }
