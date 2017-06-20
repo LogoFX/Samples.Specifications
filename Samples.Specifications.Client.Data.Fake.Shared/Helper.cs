@@ -9,6 +9,7 @@ namespace Samples.Specifications.Client.Data.Fake.Shared
 {
     public static class Helper
     {
+        //TODO: Refactor
         private const string ProvidersAssemblyEnding = "Contracts.Providers";
         private const string FakeProvidersAssemblyEnding = "Fake.Providers";
         private const string BuildersAssemblyEnding = "Fake.ProviderBuilders";
