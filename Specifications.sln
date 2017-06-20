@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.6
+VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{719AD31A-1447-494B-93D5-897FCA9E0CCF}"
 EndProject
@@ -108,6 +108,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Samples.Specifications.Server.Domain", "Samples.Specifications.Server.Domain\Samples.Specifications.Server.Domain.csproj", "{34A63C12-097F-44AB-BE74-7D3811B70D30}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Tests.Steps.Helpers.Contracts", "Samples.Specifications.Tests.Steps.Helpers.Contracts\Samples.Specifications.Tests.Steps.Helpers.Contracts.csproj", "{632814BC-4F54-461F-8217-58C3A666BA6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Client.Data.Fake.Shared", "Samples.Specifications.Client.Data.Fake.Shared\Samples.Specifications.Client.Data.Fake.Shared.csproj", "{D4027017-55E4-42B2-ABE2-AE0574B59AD5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -545,6 +547,20 @@ Global
 		{632814BC-4F54-461F-8217-58C3A666BA6F}.TestsWithFake|Any CPU.Build.0 = TestsWithReal|Any CPU
 		{632814BC-4F54-461F-8217-58C3A666BA6F}.TestsWithReal|Any CPU.ActiveCfg = Release|Any CPU
 		{632814BC-4F54-461F-8217-58C3A666BA6F}.TestsWithReal|Any CPU.Build.0 = Release|Any CPU
+		{D4027017-55E4-42B2-ABE2-AE0574B59AD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4027017-55E4-42B2-ABE2-AE0574B59AD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4027017-55E4-42B2-ABE2-AE0574B59AD5}.DebugWithFake|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4027017-55E4-42B2-ABE2-AE0574B59AD5}.DebugWithFake|Any CPU.Build.0 = Debug|Any CPU
+		{D4027017-55E4-42B2-ABE2-AE0574B59AD5}.DebugWithReal|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4027017-55E4-42B2-ABE2-AE0574B59AD5}.DebugWithReal|Any CPU.Build.0 = Debug|Any CPU
+		{D4027017-55E4-42B2-ABE2-AE0574B59AD5}.IntegrationWithFake|Any CPU.ActiveCfg = Release|Any CPU
+		{D4027017-55E4-42B2-ABE2-AE0574B59AD5}.IntegrationWithFake|Any CPU.Build.0 = Release|Any CPU
+		{D4027017-55E4-42B2-ABE2-AE0574B59AD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4027017-55E4-42B2-ABE2-AE0574B59AD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4027017-55E4-42B2-ABE2-AE0574B59AD5}.TestsWithFake|Any CPU.ActiveCfg = Release|Any CPU
+		{D4027017-55E4-42B2-ABE2-AE0574B59AD5}.TestsWithFake|Any CPU.Build.0 = Release|Any CPU
+		{D4027017-55E4-42B2-ABE2-AE0574B59AD5}.TestsWithReal|Any CPU.ActiveCfg = Release|Any CPU
+		{D4027017-55E4-42B2-ABE2-AE0574B59AD5}.TestsWithReal|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -601,5 +617,6 @@ Global
 		{B1868C64-BBA8-4565-BD5C-D963AA39B729} = {DBD9B580-1FC7-48EF-99D8-F50D22DE2736}
 		{34A63C12-097F-44AB-BE74-7D3811B70D30} = {DBD9B580-1FC7-48EF-99D8-F50D22DE2736}
 		{632814BC-4F54-461F-8217-58C3A666BA6F} = {66E31A07-598B-4745-BE60-6B550F11F970}
+		{D4027017-55E4-42B2-ABE2-AE0574B59AD5} = {901D5FC5-7C6D-4200-B66B-440486E0BE5F}
 	EndGlobalSection
 EndGlobal

@@ -267,6 +267,10 @@
       <Project>{B69DF3AB-45B8-4C86-9AC5-A5ED1A61E341}</Project>
       <Name>Samples.Specifications.Client.Data.Fake.ProviderBuilders</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Samples.Specifications.Client.Data.Fake.Shared\Samples.Specifications.Client.Data.Fake.Shared.csproj">
+      <Project>{D4027017-55E4-42B2-ABE2-AE0574B59AD5}</Project>
+      <Name>Samples.Specifications.Client.Data.Fake.Shared</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Client.Launcher.Shared\Samples.Specifications.Client.Launcher.Shared.csproj">
       <Project>{99d98150-0e31-4394-817d-047d4637636f}</Project>
       <Name>Samples.Specifications.Client.Launcher.Shared</Name>
