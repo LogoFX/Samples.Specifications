@@ -1,4 +1,6 @@
 ﻿using System.Reflection;
+using LogoFX.Client.Testing.Contracts;
+using LogoFX.Client.Testing.EndToEnd.White;
 using Samples.Specifications.Tests.Domain;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
@@ -13,6 +15,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain
                 Assembly.GetExecutingAssembly());
             iocContainer.RegisterSingleton<IExecutableContainer, ExecutableContainer>();
             iocContainer.RegisterSingleton<StructureHelper, StructureHelper>();
+            iocContainer.RegisterSingleton<IStartApplicationHelper, StartApplicationHelper>();
         }
     }
 }
