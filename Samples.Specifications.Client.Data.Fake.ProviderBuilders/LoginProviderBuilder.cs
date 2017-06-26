@@ -7,7 +7,7 @@ using Attest.Fake.Core;
 
 namespace Samples.Specifications.Client.Data.Fake.ProviderBuilders
 {    
-    public class LoginProviderBuilder : FakeBuilderBase<ILoginProvider>, IFakeProviderBuilder
+    public class LoginProviderBuilder : FakeBuilderBase<ILoginProvider>
     {        
         private readonly Dictionary<string, string> _users = new Dictionary<string, string>();
         
@@ -36,16 +36,6 @@ namespace Samples.Specifications.Client.Data.Fake.ProviderBuilders
                             : r.Throw(new Exception("Unable to login."))
                         : r.Throw(new Exception("Login not found.")));
             return setup;
-        }
-
-        object IFakeProviderBuilder.Build()
-        {
-            return GetService();
-        }
-    }
-
-    public interface IFakeProviderBuilder
-    {
-        object Build();
-    }
+        }        
+    }    
 }

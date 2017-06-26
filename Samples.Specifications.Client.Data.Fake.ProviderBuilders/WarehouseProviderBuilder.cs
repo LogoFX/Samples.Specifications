@@ -9,7 +9,7 @@ using Attest.Fake.Core;
 
 namespace Samples.Specifications.Client.Data.Fake.ProviderBuilders
 {    
-    public class WarehouseProviderBuilder : FakeBuilderBase<IWarehouseProvider>, IFakeProviderBuilder
+    public class WarehouseProviderBuilder : FakeBuilderBase<IWarehouseProvider>
     {
         private readonly List<WarehouseItemDto> _warehouseItemsStorage = new List<WarehouseItemDto>();
 
@@ -78,11 +78,6 @@ namespace Samples.Specifications.Client.Data.Fake.ProviderBuilders
             oldDto.Kind = dto.Kind;
             oldDto.Price = dto.Price;
             oldDto.Quantity = dto.Quantity;
-        }
-        
-        object IFakeProviderBuilder.Build()
-        {
-            return GetService();
-        }
+        }               
     }
 }
