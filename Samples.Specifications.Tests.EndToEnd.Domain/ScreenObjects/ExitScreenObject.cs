@@ -1,6 +1,8 @@
-﻿using LogoFX.Client.Testing.EndToEnd.White;
+﻿using System;
+using LogoFX.Client.Testing.EndToEnd.White;
 using Samples.Specifications.Tests.Domain.ScreenObjects;
 using TestStack.White.UIItems;
+using TestStack.White.UIItems.WindowItems;
 
 namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
 {
@@ -9,7 +11,14 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
         public bool IsDisplayed()
         {
             var application = ApplicationContext.Application;
-            var exitWindow = application?.GetWindowEx("Exit options");
+            Window exitWindow = null;
+            try
+            {
+                exitWindow = application?.GetWindowEx("Exit options");
+            }
+            catch (Exception e)
+            {
+            }
             return exitWindow?.Visible ?? false;
         }
 
