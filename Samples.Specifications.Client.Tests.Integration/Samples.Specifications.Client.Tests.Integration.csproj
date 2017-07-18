@@ -99,16 +99,14 @@
     <Reference Include="Microsoft.Win32.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Win32.Primitives.4.3.0\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
     </Reference>
-    <Reference Include="Solid.Bootstrapping, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Solid.Bootstrapping.1.1.1\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\Solid.Bootstrapping.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Solid.Bootstrapping, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Bootstrapping.1.2.0-rc2\lib\net45\Solid.Bootstrapping.dll</HintPath>
     </Reference>
-    <Reference Include="Solid.Practices.IoC, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Solid.Practices.IoC.1.1.2\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\Solid.Practices.IoC.dll</HintPath>
+    <Reference Include="Solid.Practices.IoC, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Practices.IoC.1.2.0-rc3\lib\net45\Solid.Practices.IoC.dll</HintPath>
     </Reference>
-    <Reference Include="Solid.Practices.Scheduling, Version=1.0.7.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Solid.Practices.Scheduling.1.0.7\lib\portable-net45+wpa8+win8\Solid.Practices.Scheduling.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Solid.Practices.Scheduling, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Practices.Scheduling.1.2.0-rc2\lib\net45\Solid.Practices.Scheduling.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.AppContext, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">

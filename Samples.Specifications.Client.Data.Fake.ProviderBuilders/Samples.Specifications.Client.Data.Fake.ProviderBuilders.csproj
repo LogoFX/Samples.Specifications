@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Samples.Specifications.Client.Data.Fake.ProviderBuilders</RootNamespace>
-    <AssemblyName>Samples.Specifications.Client.Data.Fake.ProviderBuilders</AssemblyName>    
+    <AssemblyName>Samples.Specifications.Client.Data.Fake.ProviderBuilders</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -79,13 +79,11 @@
       <HintPath>..\packages\LogoFX.Client.Data.Fake.ProviderBuilders.1.0.5\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\LogoFX.Client.Data.Fake.ProviderBuilders.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Solid.Patterns.Visitor, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Solid.Patterns.Visitor.1.0.5\lib\portable-net45+wpa8+win8\Solid.Patterns.Visitor.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Solid.Patterns.Visitor, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Patterns.Visitor.1.2.0-rc2\lib\net45\Solid.Patterns.Visitor.dll</HintPath>
     </Reference>
-    <Reference Include="Solid.Practices.Scheduling, Version=1.0.7.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Solid.Practices.Scheduling.1.0.7\lib\portable-net45+wpa8+win8\Solid.Practices.Scheduling.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Solid.Practices.Scheduling, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Practices.Scheduling.1.2.0-rc2\lib\net45\Solid.Practices.Scheduling.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
