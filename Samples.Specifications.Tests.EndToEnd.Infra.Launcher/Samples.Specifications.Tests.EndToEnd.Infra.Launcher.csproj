@@ -70,13 +70,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="LogoFX.Bootstrapping, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Bootstrapping.1.6.0\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\LogoFX.Bootstrapping.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="LogoFX.Bootstrapping, Version=1.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Bootstrapping.1.7.0-rc1\lib\net45\LogoFX.Bootstrapping.dll</HintPath>
     </Reference>
-    <Reference Include="LogoFX.Bootstrapping.Middleware, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Bootstrapping.1.6.0\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\LogoFX.Bootstrapping.Middleware.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="LogoFX.Bootstrapping.Middleware, Version=1.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Bootstrapping.1.7.0-rc1\lib\net45\LogoFX.Bootstrapping.Middleware.dll</HintPath>
     </Reference>
     <Reference Include="Solid.Bootstrapping, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Solid.Bootstrapping.1.2.0-rc2\lib\net45\Solid.Bootstrapping.dll</HintPath>
