@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.3</TargetFramework>
+    <AssemblyName>Samples.Specifications.Tests.Data</AssemblyName>
+    <RootNamespace>Samples.Specifications.Tests.Data</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\Samples.Specifications.Tests.Data\ControlStatusAssertionData.cs" Link="ControlStatusAssertionData.cs" />
+    <Compile Include="..\Samples.Specifications.Tests.Data\WarehouseItemAssertionTestData.cs" Link="WarehouseItemAssertionTestData.cs" />
+  </ItemGroup>
+
+</Project>
