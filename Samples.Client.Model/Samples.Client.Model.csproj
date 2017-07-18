@@ -96,7 +96,7 @@
       <HintPath>..\packages\LogoFX.Client.Mvvm.Model.1.1.0-rc1\lib\net45\LogoFX.Client.Mvvm.Model.Contracts.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Core, Version=1.0.8.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Core.1.0.8-rc1\lib\net45\LogoFX.Core.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Core.1.0.8-rc2\lib\net45\LogoFX.Core.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Practices.IoC, Version=1.0.11.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Practices.IoC.1.0.11-rc1\lib\net45\LogoFX.Practices.IoC.dll</HintPath>
