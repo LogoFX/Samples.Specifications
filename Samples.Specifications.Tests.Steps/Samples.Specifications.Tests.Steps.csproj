@@ -131,13 +131,13 @@
       <Project>{B69DF3AB-45B8-4C86-9AC5-A5ED1A61E341}</Project>
       <Name>Samples.Specifications.Client.Data.Fake.ProviderBuilders</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Samples.Specifications.Tests.Data\Samples.Specifications.Tests.Data.csproj">
-      <Project>{B10551FD-6D71-43EE-BD1C-D6C2C26D66BA}</Project>
-      <Name>Samples.Specifications.Tests.Data</Name>
+    <ProjectReference Include="..\Samples.Specifications.Tests.Data.NETStandard13\Samples.Specifications.Tests.Data.NETStandard13.csproj">
+      <Project>{9818a049-14e2-4777-9b46-32f614d1459e}</Project>
+      <Name>Samples.Specifications.Tests.Data.NETStandard13</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Samples.Specifications.Tests.Domain\Samples.Specifications.Tests.Domain.csproj">
-      <Project>{34318E61-A027-4C23-93F8-D825DC08D914}</Project>
-      <Name>Samples.Specifications.Tests.Domain</Name>
+    <ProjectReference Include="..\Samples.Specifications.Tests.Domain.NETStandard13\Samples.Specifications.Tests.Domain.NETStandard13.csproj">
+      <Project>{5c9f6a07-1778-480b-bbe3-5e3100a71673}</Project>
+      <Name>Samples.Specifications.Tests.Domain.NETStandard13</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Tests.Steps.Helpers.Contracts\Samples.Specifications.Tests.Steps.Helpers.Contracts.csproj">
       <Project>{632814bc-4f54-461f-8217-58c3a666ba6f}</Project>
