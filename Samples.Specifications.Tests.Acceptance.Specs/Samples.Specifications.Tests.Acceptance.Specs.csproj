@@ -64,11 +64,20 @@
     <OutputPath>..\Bin\TestsWithFake\Infra\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Attest.Fake.Builders, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Attest.Fake.Builders.1.2.0-rc2\lib\net45\Attest.Fake.Builders.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.Client.Testing.Contracts, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Client.Tests.Contracts.1.1.0-rc2\lib\net45\LogoFX.Client.Testing.Contracts.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Win32.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Win32.Primitives.4.3.0\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Solid.Patterns.Builder, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Patterns.Builder.1.2.0-rc2\lib\net45\Solid.Patterns.Builder.dll</HintPath>
     </Reference>
     <Reference Include="Solid.Practices.Composition, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Solid.Practices.Composition.Core.1.2.0-rc2\lib\net45\Solid.Practices.Composition.dll</HintPath>

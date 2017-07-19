@@ -50,7 +50,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Attest.Fake.Builders, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Attest.Fake.Builders.1.2.0-rc1\lib\net45\Attest.Fake.Builders.dll</HintPath>
+      <HintPath>..\packages\Attest.Fake.Builders.1.2.0-rc2\lib\net45\Attest.Fake.Builders.dll</HintPath>
     </Reference>
     <Reference Include="Attest.Fake.Core, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Attest.Fake.Core.1.2.0-rc1\lib\net45\Attest.Fake.Core.dll</HintPath>
@@ -101,10 +101,13 @@
       <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModel.1.1.0-rc1\lib\net45\LogoFX.Client.Mvvm.ViewModel.Platform.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Testing.Contracts, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Tests.Contracts.1.1.0-rc1\lib\net45\LogoFX.Client.Testing.Contracts.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Client.Tests.Contracts.1.1.0-rc2\lib\net45\LogoFX.Client.Testing.Contracts.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Core, Version=1.0.8.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Core.1.0.8-rc2\lib\net45\LogoFX.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Solid.Patterns.Builder, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Patterns.Builder.1.2.0-rc2\lib\net45\Solid.Patterns.Builder.dll</HintPath>
     </Reference>
     <Reference Include="Solid.Patterns.Memento, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Solid.Patterns.Memento.1.2.0-rc2\lib\net45\Solid.Patterns.Memento.dll</HintPath>

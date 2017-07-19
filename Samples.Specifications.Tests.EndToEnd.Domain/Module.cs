@@ -15,7 +15,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain
                 Assembly.GetExecutingAssembly());
             iocContainer.RegisterSingleton<IExecutableContainer, ExecutableContainer>();
             iocContainer.RegisterSingleton<StructureHelper, StructureHelper>();
-            iocContainer.RegisterSingleton<IStartApplicationHelper, StartApplicationHelper>();
+            iocContainer.RegisterSingleton<IApplicationFacade, ApplicationFacade>();
         }
     }
 }
