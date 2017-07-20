@@ -113,7 +113,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Clie
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Samples.Specifications.Tests.Domain.NETStandard13", "Samples.Specifications.Tests.Domain.NETStandard13\Samples.Specifications.Tests.Domain.NETStandard13.csproj", "{5C9F6A07-1778-480B-BBE3-5E3100A71673}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Tests.Data.NETStandard13", "Samples.Specifications.Tests.Data.NETStandard13\Samples.Specifications.Tests.Data.NETStandard13.csproj", "{9818A049-14E2-4777-9B46-32F614D1459E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Samples.Specifications.Tests.Data.NETStandard13", "Samples.Specifications.Tests.Data.NETStandard13\Samples.Specifications.Tests.Data.NETStandard13.csproj", "{9818A049-14E2-4777-9B46-32F614D1459E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -457,8 +457,8 @@ Global
 		{99D98150-0E31-4394-817D-047D4637636F}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{99D98150-0E31-4394-817D-047D4637636F}.DebugWithReal|Any CPU.ActiveCfg = DebugWithReal|Any CPU
 		{99D98150-0E31-4394-817D-047D4637636F}.DebugWithReal|Any CPU.Build.0 = DebugWithReal|Any CPU
-		{99D98150-0E31-4394-817D-047D4637636F}.IntegrationWithFake|Any CPU.ActiveCfg = DebugWithReal|Any CPU
-		{99D98150-0E31-4394-817D-047D4637636F}.IntegrationWithFake|Any CPU.Build.0 = DebugWithReal|Any CPU
+		{99D98150-0E31-4394-817D-047D4637636F}.IntegrationWithFake|Any CPU.ActiveCfg = IntegrationWithFake|Any CPU
+		{99D98150-0E31-4394-817D-047D4637636F}.IntegrationWithFake|Any CPU.Build.0 = IntegrationWithFake|Any CPU
 		{99D98150-0E31-4394-817D-047D4637636F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99D98150-0E31-4394-817D-047D4637636F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{99D98150-0E31-4394-817D-047D4637636F}.TestsWithFake|Any CPU.ActiveCfg = TestsWithFake|Any CPU

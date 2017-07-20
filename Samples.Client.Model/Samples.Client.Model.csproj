@@ -51,7 +51,7 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'IntegrationWithFake|AnyCPU'">
-    <OutputPath>..\bin\IntegrationWithFake\</OutputPath>
+    <OutputPath>..\Bin\IntegrationWithFake\</OutputPath>
     <DefineConstants>
     </DefineConstants>
     <DebugType>full</DebugType>
