@@ -132,22 +132,22 @@
       <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModel.1.1.0-rc1\lib\net45\LogoFX.Client.Mvvm.ViewModel.Platform.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Mvvm.ViewModel.Services, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModel.Services.Core.1.2.0-rc1\lib\net45\LogoFX.Client.Mvvm.ViewModel.Services.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModel.Services.Core.1.2.0-rc3\lib\net45\LogoFX.Client.Mvvm.ViewModel.Services.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Mvvm.ViewModel.Services.Middleware, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModel.Services.Core.1.2.0-rc1\lib\net45\LogoFX.Client.Mvvm.ViewModel.Services.Middleware.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModel.Services.Core.1.2.0-rc3\lib\net45\LogoFX.Client.Mvvm.ViewModel.Services.Middleware.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Mvvm.ViewModel.Shared, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModel.Shared.1.1.0-rc1\lib\net45\LogoFX.Client.Mvvm.ViewModel.Shared.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Mvvm.ViewModelFactory, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModelFactory.1.2.0-rc1\lib\net45\LogoFX.Client.Mvvm.ViewModelFactory.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModelFactory.1.2.0-rc2\lib\net45\LogoFX.Client.Mvvm.ViewModelFactory.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Core, Version=1.0.8.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Core.1.0.8-rc2\lib\net45\LogoFX.Core.dll</HintPath>
     </Reference>
     <Reference Include="Solid.Bootstrapping, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Solid.Bootstrapping.1.2.0-rc2\lib\net45\Solid.Bootstrapping.dll</HintPath>
+      <HintPath>..\packages\Solid.Bootstrapping.1.2.0-rc3\lib\net45\Solid.Bootstrapping.dll</HintPath>
     </Reference>
     <Reference Include="Solid.Extensibility, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Solid.Extensibility.1.2.0-rc2\lib\net45\Solid.Extensibility.dll</HintPath>

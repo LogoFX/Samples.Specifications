@@ -47,7 +47,7 @@
       <HintPath>..\packages\Attest.Fake.Core.1.2.0-rc1\lib\net45\Attest.Fake.Core.dll</HintPath>
     </Reference>
     <Reference Include="Attest.Fake.Registration, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Attest.Fake.Registration.1.2.0-rc2\lib\net45\Attest.Fake.Registration.dll</HintPath>
+      <HintPath>..\packages\Attest.Fake.Registration.1.2.0-rc3\lib\net45\Attest.Fake.Registration.dll</HintPath>
     </Reference>
     <Reference Include="Attest.Fake.Setup, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Attest.Fake.Setup.1.2.0-rc2\lib\net45\Attest.Fake.Setup.dll</HintPath>
@@ -56,10 +56,10 @@
       <HintPath>..\packages\Attest.Fake.Setup.1.2.0-rc2\lib\net45\Attest.Fake.Setup.Contracts.dll</HintPath>
     </Reference>
     <Reference Include="Attest.Testing.Core, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Attest.Tests.Core.1.4.0-rc2\lib\net45\Attest.Testing.Core.dll</HintPath>
+      <HintPath>..\packages\Attest.Tests.Core.1.4.0-rc4\lib\net45\Attest.Testing.Core.dll</HintPath>
     </Reference>
     <Reference Include="Attest.Testing.xUnit, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Attest.Tests.xUnit.1.4.0-rc2\lib\net45\Attest.Testing.xUnit.dll</HintPath>
+      <HintPath>..\packages\Attest.Tests.xUnit.1.4.0-rc4\lib\net45\Attest.Testing.xUnit.dll</HintPath>
     </Reference>
     <Reference Include="Caliburn.Micro, Version=3.0.3.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
       <HintPath>..\packages\Caliburn.Micro.Core.3.1.0\lib\net45\Caliburn.Micro.dll</HintPath>
@@ -71,13 +71,13 @@
       <HintPath>..\packages\Caliburn.Micro.3.1.0\lib\net45\Caliburn.Micro.Platform.Core.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Bootstrapping, Version=1.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Bootstrapping.1.7.0-rc1\lib\net45\LogoFX.Bootstrapping.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Bootstrapping.1.7.0-rc2\lib\net45\LogoFX.Bootstrapping.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Bootstrapping.Middleware, Version=1.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Bootstrapping.1.7.0-rc1\lib\net45\LogoFX.Bootstrapping.Middleware.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Bootstrapping.1.7.0-rc2\lib\net45\LogoFX.Bootstrapping.Middleware.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Bootstrapping, Version=1.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Bootstrapping.Core.1.7.0-rc1\lib\net45\LogoFX.Client.Bootstrapping.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Client.Bootstrapping.Core.1.7.0-rc2\lib\net45\LogoFX.Client.Bootstrapping.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Bootstrapping.Adapters.Contracts, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Client.Bootstrapping.Adapters.Contracts.1.1.0-rc1\lib\net45\LogoFX.Client.Bootstrapping.Adapters.Contracts.dll</HintPath>
@@ -86,7 +86,7 @@
       <HintPath>..\packages\LogoFX.Client.Bootstrapping.Adapters.SimpleContainer.1.2.0-rc1\lib\net45\LogoFX.Client.Bootstrapping.Adapters.SimpleContainer.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Bootstrapping.Testing, Version=1.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Bootstrapping.Testing.1.7.0-rc1\lib\net45\LogoFX.Client.Bootstrapping.Testing.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Client.Bootstrapping.Testing.1.7.0-rc2\lib\net45\LogoFX.Client.Bootstrapping.Testing.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Core, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Client.Core.Core.1.2.0-rc1\lib\net45\LogoFX.Client.Core.dll</HintPath>
@@ -110,28 +110,28 @@
       <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModel.Core.1.1.0-rc1\lib\net45\LogoFX.Client.Mvvm.ViewModel.Contracts.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Mvvm.ViewModel.Services, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModel.Services.Core.1.2.0-rc1\lib\net45\LogoFX.Client.Mvvm.ViewModel.Services.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModel.Services.Core.1.2.0-rc3\lib\net45\LogoFX.Client.Mvvm.ViewModel.Services.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Mvvm.ViewModel.Services.Middleware, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModel.Services.Core.1.2.0-rc1\lib\net45\LogoFX.Client.Mvvm.ViewModel.Services.Middleware.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModel.Services.Core.1.2.0-rc3\lib\net45\LogoFX.Client.Mvvm.ViewModel.Services.Middleware.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Mvvm.ViewModelFactory, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModelFactory.1.2.0-rc1\lib\net45\LogoFX.Client.Mvvm.ViewModelFactory.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModelFactory.1.2.0-rc2\lib\net45\LogoFX.Client.Mvvm.ViewModelFactory.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer.1.2.0-rc1\lib\net45\LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer.1.2.0-rc2\lib\net45\LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Testing.Contracts, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Tests.Contracts.1.1.0-rc2\lib\net45\LogoFX.Client.Testing.Contracts.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Client.Tests.Contracts.1.1.0-rc3\lib\net45\LogoFX.Client.Testing.Contracts.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Testing.Infra, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Client.Tests.Shared.1.2.0-rc1\lib\net45\LogoFX.Client.Testing.Infra.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Testing.Integration, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Tests.Integration.1.1.0-rc1\lib\net45\LogoFX.Client.Testing.Integration.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Client.Tests.Integration.1.1.0-rc2\lib\net45\LogoFX.Client.Testing.Integration.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Testing.Integration.xUnit, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Testing.Integration.xUnit.1.4.0-rc1\lib\net45\LogoFX.Client.Testing.Integration.xUnit.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Client.Testing.Integration.xUnit.1.4.0-rc3\lib\net45\LogoFX.Client.Testing.Integration.xUnit.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Testing.Shared, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Client.Tests.Shared.1.2.0-rc1\lib\net45\LogoFX.Client.Testing.Shared.dll</HintPath>
@@ -146,7 +146,7 @@
       <HintPath>..\packages\LogoFX.Practices.IoC.1.0.11-rc1\lib\net45\LogoFX.Practices.IoC.Modularity.dll</HintPath>
     </Reference>
     <Reference Include="Solid.Bootstrapping, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Solid.Bootstrapping.1.2.0-rc2\lib\net45\Solid.Bootstrapping.dll</HintPath>
+      <HintPath>..\packages\Solid.Bootstrapping.1.2.0-rc3\lib\net45\Solid.Bootstrapping.dll</HintPath>
     </Reference>
     <Reference Include="Solid.Extensibility, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Solid.Extensibility.1.2.0-rc2\lib\net45\Solid.Extensibility.dll</HintPath>

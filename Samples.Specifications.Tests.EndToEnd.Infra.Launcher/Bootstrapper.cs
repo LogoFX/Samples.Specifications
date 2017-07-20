@@ -13,7 +13,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Infra.Launcher
     public class Bootstrapper : IInitializable, 
         IExtensible<Bootstrapper>,         
         ICompositionModulesProvider,
-        IHaveContainerRegistrator        
+        IHaveRegistrator        
     {
         private readonly
             List<IMiddleware<Bootstrapper>>

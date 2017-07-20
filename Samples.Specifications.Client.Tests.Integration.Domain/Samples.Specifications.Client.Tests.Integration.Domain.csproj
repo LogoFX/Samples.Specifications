@@ -101,7 +101,7 @@
       <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModel.1.1.0-rc1\lib\net45\LogoFX.Client.Mvvm.ViewModel.Platform.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Testing.Contracts, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Tests.Contracts.1.1.0-rc2\lib\net45\LogoFX.Client.Testing.Contracts.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Client.Tests.Contracts.1.1.0-rc3\lib\net45\LogoFX.Client.Testing.Contracts.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Core, Version=1.0.8.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Core.1.0.8-rc2\lib\net45\LogoFX.Core.dll</HintPath>

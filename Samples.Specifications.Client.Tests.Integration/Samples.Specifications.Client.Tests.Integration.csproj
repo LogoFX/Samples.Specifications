@@ -59,13 +59,13 @@
       <HintPath>..\packages\Attest.Fake.Core.1.2.0-rc1\lib\net45\Attest.Fake.Core.dll</HintPath>
     </Reference>
     <Reference Include="Attest.Fake.Registration, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Attest.Fake.Registration.1.2.0-rc2\lib\net45\Attest.Fake.Registration.dll</HintPath>
+      <HintPath>..\packages\Attest.Fake.Registration.1.2.0-rc3\lib\net45\Attest.Fake.Registration.dll</HintPath>
     </Reference>
     <Reference Include="Attest.Testing.Core, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Attest.Tests.Core.1.4.0-rc2\lib\net45\Attest.Testing.Core.dll</HintPath>
+      <HintPath>..\packages\Attest.Tests.Core.1.4.0-rc4\lib\net45\Attest.Testing.Core.dll</HintPath>
     </Reference>
     <Reference Include="Attest.Testing.xUnit, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Attest.Tests.xUnit.1.4.0-rc2\lib\net45\Attest.Testing.xUnit.dll</HintPath>
+      <HintPath>..\packages\Attest.Tests.xUnit.1.4.0-rc4\lib\net45\Attest.Testing.xUnit.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Core, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Client.Core.Core.1.2.0-rc1\lib\net45\LogoFX.Client.Core.dll</HintPath>
@@ -77,13 +77,13 @@
       <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModel.Shared.1.1.0-rc1\lib\net45\LogoFX.Client.Mvvm.ViewModel.Shared.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Testing.Contracts, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Tests.Contracts.1.1.0-rc2\lib\net45\LogoFX.Client.Testing.Contracts.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Client.Tests.Contracts.1.1.0-rc3\lib\net45\LogoFX.Client.Testing.Contracts.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Testing.Infra, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Client.Tests.Shared.1.2.0-rc1\lib\net45\LogoFX.Client.Testing.Infra.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Testing.Integration.xUnit, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Testing.Integration.xUnit.1.4.0-rc1\lib\net45\LogoFX.Client.Testing.Integration.xUnit.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Client.Testing.Integration.xUnit.1.4.0-rc3\lib\net45\LogoFX.Client.Testing.Integration.xUnit.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Testing.Shared, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Client.Tests.Shared.1.2.0-rc1\lib\net45\LogoFX.Client.Testing.Shared.dll</HintPath>
@@ -92,7 +92,7 @@
       <HintPath>..\packages\Microsoft.Win32.Primitives.4.3.0\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="Solid.Bootstrapping, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Solid.Bootstrapping.1.2.0-rc2\lib\net45\Solid.Bootstrapping.dll</HintPath>
+      <HintPath>..\packages\Solid.Bootstrapping.1.2.0-rc3\lib\net45\Solid.Bootstrapping.dll</HintPath>
     </Reference>
     <Reference Include="Solid.Patterns.Builder, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Solid.Patterns.Builder.1.2.0-rc2\lib\net45\Solid.Patterns.Builder.dll</HintPath>
