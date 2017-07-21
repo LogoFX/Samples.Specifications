@@ -5,18 +5,18 @@ using Solid.Practices.Modularity;
 
 namespace Samples.Specifications.Tests.Steps
 {
-    class Module : ICompositionModule<IIocContainerRegistrator>
+    class Module : ICompositionModule<IDependencyRegistrator>
     {
-        public void RegisterModule(IIocContainerRegistrator iocContainer)
+        public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
         {
-            RegisterStepsAutomagically(iocContainer, Assembly.GetExecutingAssembly());
+            RegisterStepsAutomagically(dependencyRegistrator, Assembly.GetExecutingAssembly());
         }
 
-        private static void RegisterStepsAutomagically(IIocContainerRegistrator iocContainer, Assembly assembly)
+        private static void RegisterStepsAutomagically(IDependencyRegistrator dependencyRegistrator, Assembly assembly)
         {
             foreach (var type in assembly.DefinedTypes.Where(t => t.Name.EndsWith("Steps")))
             {
-                iocContainer.RegisterSingleton(type, type);
+                dependencyRegistrator.RegisterSingleton(type, type);
             }
         }
     }

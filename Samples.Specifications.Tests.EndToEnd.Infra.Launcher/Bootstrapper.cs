@@ -20,9 +20,9 @@ namespace Samples.Specifications.Tests.EndToEnd.Infra.Launcher
             _middlewares =
                 new List<IMiddleware<Bootstrapper>>();
 
-        public Bootstrapper(IIocContainerRegistrator registrator)
+        public Bootstrapper(IDependencyRegistrator dependencyRegistrator)
         {
-            Registrator = registrator;     
+            Registrator = dependencyRegistrator;     
         }
 
         /// <summary>
@@ -33,7 +33,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Infra.Launcher
         /// </value>
         public IEnumerable<ICompositionModule> Modules { get; private set; } = new ICompositionModule[] { };
 
-        public IIocContainerRegistrator Registrator { get; }
+        public IDependencyRegistrator Registrator { get; }
 
         private void InitializeCompositionModules()
         {

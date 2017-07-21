@@ -9,20 +9,20 @@ using Solid.Practices.Modularity;
 namespace Samples.Specifications.Client.Data.Fake.Providers
 {
     [UsedImplicitly]
-    class Module : ICompositionModule<IIocContainerRegistrator>
+    class Module : ICompositionModule<IDependencyRegistrator>
     {              
-        public void RegisterModule(IIocContainerRegistrator iocContainer)
+        public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
         {
-            RegisterDataContainers(iocContainer);
-            Helper.RegisterBuildersAndFakeProviders(iocContainer);                     
+            RegisterDataContainers(dependencyRegistrator);
+            Helper.RegisterBuildersAndFakeProviders(dependencyRegistrator);                     
         }
 
-        private static void RegisterDataContainers(IIocContainerRegistrator iocContainer)
+        private static void RegisterDataContainers(IDependencyRegistrator dependencyRegistrator)
         {
             var warehouseContainer = InitializeWarehouseContainer();
             var userContainer = InitializeUserContainer();
-            iocContainer.RegisterInstance(warehouseContainer);
-            iocContainer.RegisterInstance(userContainer);            
+            dependencyRegistrator.RegisterInstance(warehouseContainer);
+            dependencyRegistrator.RegisterInstance(userContainer);            
         }
 
         private static IWarehouseContainer InitializeWarehouseContainer()

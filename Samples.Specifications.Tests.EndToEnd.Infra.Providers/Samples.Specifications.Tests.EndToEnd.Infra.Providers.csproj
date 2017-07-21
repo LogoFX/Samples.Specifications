@@ -64,7 +64,7 @@
       <HintPath>..\packages\Attest.Fake.Core.1.2.0-rc1\lib\net45\Attest.Fake.Core.dll</HintPath>
     </Reference>
     <Reference Include="Attest.Fake.Registration, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Attest.Fake.Registration.1.2.0-rc3\lib\net45\Attest.Fake.Registration.dll</HintPath>
+      <HintPath>..\packages\Attest.Fake.Registration.1.2.0-rc4\lib\net45\Attest.Fake.Registration.dll</HintPath>
     </Reference>
     <Reference Include="Attest.Fake.Setup, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Attest.Fake.Setup.1.2.0-rc2\lib\net45\Attest.Fake.Setup.dll</HintPath>
@@ -76,23 +76,23 @@
       <HintPath>..\packages\JetBrains.Annotations.10.4.0\lib\net\JetBrains.Annotations.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Bootstrapping, Version=1.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Bootstrapping.1.7.0-rc2\lib\net45\LogoFX.Bootstrapping.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Bootstrapping.1.7.0-rc3\lib\net45\LogoFX.Bootstrapping.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Bootstrapping.Middleware, Version=1.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Bootstrapping.1.7.0-rc2\lib\net45\LogoFX.Bootstrapping.Middleware.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Bootstrapping.1.7.0-rc3\lib\net45\LogoFX.Bootstrapping.Middleware.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Testing.Contracts, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Client.Tests.Contracts.1.1.0-rc3\lib\net45\LogoFX.Client.Testing.Contracts.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Testing.EndToEnd, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Tests.EndToEnd.1.2.0-rc3\lib\net45\LogoFX.Client.Testing.EndToEnd.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Client.Tests.EndToEnd.1.2.0-rc4\lib\net45\LogoFX.Client.Testing.EndToEnd.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Solid.Bootstrapping, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Solid.Bootstrapping.1.2.0-rc3\lib\net45\Solid.Bootstrapping.dll</HintPath>
+      <HintPath>..\packages\Solid.Bootstrapping.1.2.0-rc4\lib\net45\Solid.Bootstrapping.dll</HintPath>
     </Reference>
     <Reference Include="Solid.Extensibility, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Solid.Extensibility.1.2.0-rc2\lib\net45\Solid.Extensibility.dll</HintPath>
@@ -113,13 +113,13 @@
       <HintPath>..\packages\Solid.Practices.Composition.Core.1.2.0-rc2\lib\net45\Solid.Practices.Composition.Contracts.dll</HintPath>
     </Reference>
     <Reference Include="Solid.Practices.IoC, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Solid.Practices.IoC.1.2.0-rc3\lib\net45\Solid.Practices.IoC.dll</HintPath>
+      <HintPath>..\packages\Solid.Practices.IoC.1.2.0-rc4\lib\net45\Solid.Practices.IoC.dll</HintPath>
     </Reference>
     <Reference Include="Solid.Practices.Middleware, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Solid.Practices.Middleware.1.2.0-rc2\lib\net45\Solid.Practices.Middleware.dll</HintPath>
     </Reference>
     <Reference Include="Solid.Practices.Modularity, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Solid.Practices.Modularity.1.2.0-rc2\lib\net45\Solid.Practices.Modularity.dll</HintPath>
+      <HintPath>..\packages\Solid.Practices.Modularity.1.2.0-rc3\lib\net45\Solid.Practices.Modularity.dll</HintPath>
     </Reference>
     <Reference Include="Solid.Practices.Scheduling, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Solid.Practices.Scheduling.1.2.0-rc2\lib\net45\Solid.Practices.Scheduling.dll</HintPath>

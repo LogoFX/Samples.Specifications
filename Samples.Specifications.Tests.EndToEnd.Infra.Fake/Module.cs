@@ -7,13 +7,13 @@ using Solid.Practices.Modularity;
 
 namespace Samples.Specifications.Tests.EndToEnd.Infra.Fake
 {
-    class Module : ICompositionModule<IIocContainerRegistrator>
+    class Module : ICompositionModule<IDependencyRegistrator>
     {                
-        public void RegisterModule(IIocContainerRegistrator iocContainer)
+        public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
         {
-            iocContainer.RegisterSingleton<IStartApplicationService, StartApplicationService.WithFakeProviders>();
-            iocContainer.RegisterSingleton<IBuilderRegistrationService, BuilderRegistrationService>();
-            Helper.RegisterBuilders(iocContainer);
+            dependencyRegistrator.RegisterSingleton<IStartApplicationService, StartApplicationService.WithFakeProviders>();
+            dependencyRegistrator.RegisterSingleton<IBuilderRegistrationService, BuilderRegistrationService>();
+            Helper.RegisterBuilders(dependencyRegistrator);
         }        
     }
 }

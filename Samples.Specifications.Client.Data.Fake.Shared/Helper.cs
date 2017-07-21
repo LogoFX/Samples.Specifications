@@ -18,7 +18,7 @@ namespace Samples.Specifications.Client.Data.Fake.Shared
         private const string ProviderEnding = "Provider";
         private const string FakePrefix = "Fake";
 
-        public static void RegisterBuilders(IIocContainerRegistrator iocContainer)
+        public static void RegisterBuilders(IDependencyRegistrator dependencyRegistrator)
         {            
             var assembliesProvider = new BuildersAssemblySourceProvider(PlatformProvider.Current.GetRootPath());
             var allAssemblies = assembliesProvider.Assemblies.ToArray();
@@ -29,11 +29,11 @@ namespace Samples.Specifications.Client.Data.Fake.Shared
             foreach (var type in matchingBuildersTypes)
             {
                 var instance = CreateInstanceImpl(type);
-                iocContainer.RegisterInstance(type, instance);
+                dependencyRegistrator.RegisterInstance(type, instance);
             }
         }
 
-        public static void RegisterBuildersAndFakeProviders(IIocContainerRegistrator iocContainer)
+        public static void RegisterBuildersAndFakeProviders(IDependencyRegistrator dependencyRegistrator)
         {            
             var assembliesProvider = new ProvidersAssemblySourceProvider(PlatformProvider.Current.GetRootPath());
             var allAssemblies = assembliesProvider.Assemblies.ToArray();
@@ -75,13 +75,13 @@ namespace Samples.Specifications.Client.Data.Fake.Shared
 
             foreach (var typeMatch in fakeTypeMatches)
             {
-                iocContainer.RegisterSingleton(typeMatch.Key, typeMatch.Value);
+                dependencyRegistrator.RegisterSingleton(typeMatch.Key, typeMatch.Value);
             }
             
             foreach (var typeMatch in builderTypeMatches)
             {
                 var instance = CreateInstanceImpl(typeMatch.Key);
-                iocContainer.RegisterInstance(typeMatch.Key, instance);
+                dependencyRegistrator.RegisterInstance(typeMatch.Key, instance);
             }
         }
 
