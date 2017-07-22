@@ -128,16 +128,6 @@
       <HintPath>..\packages\Solid.Practices.Modularity.1.2.0-rc3\lib\net45\Solid.Practices.Modularity.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Samples.Client.Model.Contracts\Samples.Client.Model.Contracts.csproj">
-      <Project>{536d34e4-a409-4567-b7c6-58f50206740e}</Project>
-      <Name>Samples.Client.Model.Contracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Samples.Client.Model.Shared\Samples.Client.Model.Shared.csproj">
-      <Project>{49724A56-9FA9-44C4-B731-1E414EE598BC}</Project>
-      <Name>Samples.Client.Model.Shared</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
