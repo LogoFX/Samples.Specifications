@@ -59,7 +59,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Attest.Fake.Builders, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Attest.Fake.Builders.1.2.0-rc2\lib\net45\Attest.Fake.Builders.dll</HintPath>
+      <HintPath>..\packages\Attest.Fake.Builders.1.2.0-rc3\lib\net45\Attest.Fake.Builders.dll</HintPath>
     </Reference>
     <Reference Include="Attest.Fake.Core, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Attest.Fake.Core.1.2.0-rc1\lib\net45\Attest.Fake.Core.dll</HintPath>
