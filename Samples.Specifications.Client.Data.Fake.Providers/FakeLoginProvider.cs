@@ -9,22 +9,20 @@ namespace Samples.Specifications.Client.Data.Fake.Providers
     [UsedImplicitly]
     class FakeLoginProvider : FakeProviderBase<LoginProviderBuilder, ILoginProvider>, ILoginProvider
     {
-        private readonly LoginProviderBuilder _loginProviderBuilder;
-
         public FakeLoginProvider(
             LoginProviderBuilder loginProviderBuilder,
             IUserContainer userContainer)
+            :base(loginProviderBuilder)
         {
-            _loginProviderBuilder = loginProviderBuilder;
             foreach (var user in userContainer.Users)
             {
-                _loginProviderBuilder.WithUser(user.Item1, user.Item2);
-            }            
+                loginProviderBuilder.WithUser(user.Item1, user.Item2);
+            }
         }
 
         void ILoginProvider.Login(string username, string password)
         {
-            var service = GetService(() => _loginProviderBuilder, b => b);
+            var service = GetService();
             service.Login(username, password);
         }
     }
