@@ -6,9 +6,6 @@
     <RootNamespace>Samples.Specifications.Tests.Domain</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>    
-  </ItemGroup>
-
   <ItemGroup>
     <Folder Include="ScreenObjects\" />
   </ItemGroup>
@@ -18,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Samples.Specifications.Tests.Data.NETStandard13\Samples.Specifications.Tests.Data.NETStandard13.csproj" />
+    <ProjectReference Include="..\Samples.Specifications.Tests.Data\Samples.Specifications.Tests.Data.csproj" />
   </ItemGroup>
 
 </Project>

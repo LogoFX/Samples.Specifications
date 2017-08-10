@@ -132,9 +132,9 @@
       <Project>{B69DF3AB-45B8-4C86-9AC5-A5ED1A61E341}</Project>
       <Name>Samples.Specifications.Client.Data.Fake.ProviderBuilders</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Samples.Specifications.Tests.Data.NETStandard13\Samples.Specifications.Tests.Data.NETStandard13.csproj">
-      <Project>{9818a049-14e2-4777-9b46-32f614d1459e}</Project>
-      <Name>Samples.Specifications.Tests.Data.NETStandard13</Name>
+    <ProjectReference Include="..\Samples.Specifications.Tests.Data\Samples.Specifications.Tests.Data.csproj">
+      <Project>{1677d87b-7e7b-436e-8e71-e98a242b89b4}</Project>
+      <Name>Samples.Specifications.Tests.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Tests.Domain\Samples.Specifications.Tests.Domain.csproj">
       <Project>{59b69827-8fd3-4881-8bdc-420e71e14e34}</Project>
