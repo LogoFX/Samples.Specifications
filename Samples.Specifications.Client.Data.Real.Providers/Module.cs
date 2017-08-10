@@ -8,14 +8,14 @@ using Solid.Practices.Modularity;
 namespace Samples.Specifications.Client.Data.Real.Providers
 {    
     [UsedImplicitly]
-    class Module : ICompositionModule<IIocContainerRegistrator>
+    class Module : ICompositionModule<IDependencyRegistrator>
     {
-        public void RegisterModule(IIocContainerRegistrator iocContainer)
+        public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
         {
-            iocContainer.RegisterSingleton<ILoginProvider, LoginProvider>();
-            iocContainer.RegisterSingleton<IWarehouseProvider, WarehouseProvider>();
-            iocContainer.RegisterSingleton<IEventsProvider, EventsProvider>();
-            iocContainer.RegisterSingleton(() => new RestClient(RetrieveEndpoint()));
+            dependencyRegistrator.RegisterSingleton<ILoginProvider, LoginProvider>();
+            dependencyRegistrator.RegisterSingleton<IWarehouseProvider, WarehouseProvider>();
+            dependencyRegistrator.RegisterSingleton<IEventsProvider, EventsProvider>();
+            dependencyRegistrator.RegisterSingleton(() => new RestClient(RetrieveEndpoint()));
         }
 
         private string RetrieveEndpoint()

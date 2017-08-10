@@ -57,8 +57,8 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -87,7 +87,7 @@
       <Name>Samples.Client.Data.Contracts.Dto</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Tests.Data\Samples.Specifications.Tests.Data.csproj">
-      <Project>{b10551fd-6d71-43ee-bd1c-d6c2c26d66ba}</Project>
+      <Project>{1677d87b-7e7b-436e-8e71-e98a242b89b4}</Project>
       <Name>Samples.Specifications.Tests.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Tests.Steps\Samples.Specifications.Tests.Steps.csproj">
@@ -96,6 +96,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>

@@ -1,5 +1,4 @@
-﻿using System;
-using LogoFX.Bootstrapping;
+﻿using LogoFX.Bootstrapping;
 using Solid.Practices.IoC;
 
 namespace Samples.Specifications.Tests.EndToEnd.Infra.Launcher
@@ -13,12 +12,11 @@ namespace Samples.Specifications.Tests.EndToEnd.Infra.Launcher
             _iocContainer = iocContainer;                   
         }
 
-        public void Initialize(Action beforeInitialize)
+        public void Initialize()
         {
             var bootstrapper =
                 new Bootstrapper(_iocContainer)
-                    .Use(new RegisterCompositionModulesMiddleware<Bootstrapper>());
-            beforeInitialize();                 
+                    .Use(new RegisterCompositionModulesMiddleware<Bootstrapper>());            
             bootstrapper.Initialize();
         }
     }

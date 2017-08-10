@@ -11,16 +11,14 @@ namespace Samples.Specifications.Client.Data.Fake.Providers
     [UsedImplicitly]
     class FakeEventsProvider : FakeProviderBase<EventsProviderBuilder, IEventsProvider>, IEventsProvider
     {
-        private readonly EventsProviderBuilder _eventsProviderBuilder;
-
         public FakeEventsProvider(EventsProviderBuilder eventsProviderBuilder)
+            :base(eventsProviderBuilder)
         {
-            _eventsProviderBuilder = eventsProviderBuilder;
         }
 
         IEnumerable<EventDto> IEventsProvider.GetLastEvents(DateTime lastEventTime)
         {
-            var service = GetService(() => _eventsProviderBuilder, b => b);
+            var service = GetService();
             return service.GetLastEvents(lastEventTime);
         }
     }

@@ -3,11 +3,11 @@ using Solid.Practices.Modularity;
 
 namespace Samples.Specifications.Tests.Steps.Helpers
 {
-    class Module : ICompositionModule<IIocContainerRegistrator>
+    class Module : ICompositionModule<IDependencyRegistrator>
     {
-        public void RegisterModule(IIocContainerRegistrator iocContainer)
+        public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
         {
-            iocContainer.RegisterSingleton<ISetupHelper, MongoDbSetupHelper>();
+            dependencyRegistrator.RegisterSingleton<ISetupHelper, MongoDbSetupHelper>();
         }
     }
 }

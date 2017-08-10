@@ -8,7 +8,7 @@ namespace Samples.Specifications.Tests.Domain
     public static class ContainerRegistratorExtensions
     {
         public static void RegisterAutomagically(
-            this IIocContainerRegistrator @object,
+            this IDependencyRegistrator @object,
             Assembly contractsAssembly,
             Assembly implementationsAssembly)
         {

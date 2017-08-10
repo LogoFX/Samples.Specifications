@@ -10,8 +10,6 @@
     <RootNamespace>Samples.Specifications.Client.Data.Fake.Providers</RootNamespace>
     <AssemblyName>Samples.Specifications.Client.Data.Fake.Providers</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -96,58 +94,53 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Attest.Fake.Builders, Version=1.1.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Attest.Fake.Builders.1.1.3-rc-1\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\Attest.Fake.Builders.dll</HintPath>
+    <Reference Include="Attest.Fake.Builders, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Attest.Fake.Builders.1.2.0\lib\net45\Attest.Fake.Builders.dll</HintPath>
     </Reference>
-    <Reference Include="Attest.Fake.Core, Version=1.0.9.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Attest.Fake.Core.1.0.9\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\Attest.Fake.Core.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Attest.Fake.Core, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Attest.Fake.Core.1.2.0\lib\net45\Attest.Fake.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Attest.Fake.Setup, Version=1.1.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Attest.Fake.Setup.1.1.3\lib\portable-net45+wpa8+win8\Attest.Fake.Setup.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Attest.Fake.Setup, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Attest.Fake.Setup.1.2.0\lib\net45\Attest.Fake.Setup.dll</HintPath>
     </Reference>
-    <Reference Include="Attest.Fake.Setup.Contracts, Version=1.1.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Attest.Fake.Setup.1.1.3\lib\portable-net45+wpa8+win8\Attest.Fake.Setup.Contracts.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Attest.Fake.Setup.Contracts, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Attest.Fake.Setup.1.2.0\lib\net45\Attest.Fake.Setup.Contracts.dll</HintPath>
     </Reference>
-    <Reference Include="JetBrains.Annotations">
-      <HintPath>..\packages\JetBrains.Annotations.10.2.1\lib\net\JetBrains.Annotations.dll</HintPath>
+    <Reference Include="JetBrains.Annotations, Version=11.0.0.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <HintPath>..\packages\JetBrains.Annotations.11.0.0\lib\net20\JetBrains.Annotations.dll</HintPath>
     </Reference>
-    <Reference Include="LogoFX.Client.Data.Fake.ProviderBuilders, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Data.Fake.ProviderBuilders.1.0.5\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\LogoFX.Client.Data.Fake.ProviderBuilders.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="LogoFX.Client.Data.Fake.ProviderBuilders, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Client.Data.Fake.ProviderBuilders.1.1.0\lib\net45\LogoFX.Client.Data.Fake.ProviderBuilders.dll</HintPath>
     </Reference>
-    <Reference Include="Solid.Patterns.Visitor, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Solid.Patterns.Visitor.1.0.5\lib\portable-net45+wpa8+win8\Solid.Patterns.Visitor.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Solid.Patterns.Builder, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Patterns.Builder.1.2.0\lib\net45\Solid.Patterns.Builder.dll</HintPath>
     </Reference>
-    <Reference Include="Solid.Practices.Composition, Version=1.1.7.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Solid.Practices.Composition.Core.1.1.7\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\Solid.Practices.Composition.dll</HintPath>
+    <Reference Include="Solid.Patterns.Visitor, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Patterns.Visitor.1.2.0\lib\net45\Solid.Patterns.Visitor.dll</HintPath>
     </Reference>
-    <Reference Include="Solid.Practices.Composition.Container, Version=1.1.7.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Solid.Practices.Composition.Core.1.1.7\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\Solid.Practices.Composition.Container.dll</HintPath>
+    <Reference Include="Solid.Practices.Composition, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Practices.Composition.Core.1.2.0\lib\net45\Solid.Practices.Composition.dll</HintPath>
     </Reference>
-    <Reference Include="Solid.Practices.Composition.Contracts, Version=1.1.7.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Solid.Practices.Composition.Core.1.1.7\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\Solid.Practices.Composition.Contracts.dll</HintPath>
+    <Reference Include="Solid.Practices.Composition.Container, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Practices.Composition.Core.1.2.0\lib\net45\Solid.Practices.Composition.Container.dll</HintPath>
     </Reference>
-    <Reference Include="Solid.Practices.IoC, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Solid.Practices.IoC.1.1.2\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\Solid.Practices.IoC.dll</HintPath>
+    <Reference Include="Solid.Practices.Composition.Contracts, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Practices.Composition.Core.1.2.0\lib\net45\Solid.Practices.Composition.Contracts.dll</HintPath>
     </Reference>
-    <Reference Include="Solid.Practices.Middleware, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Solid.Practices.Middleware.1.1.1\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\Solid.Practices.Middleware.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Solid.Practices.IoC, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Practices.IoC.1.2.0\lib\net45\Solid.Practices.IoC.dll</HintPath>
     </Reference>
-    <Reference Include="Solid.Practices.Modularity, Version=1.1.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Solid.Practices.Modularity.1.1.3\lib\portable-net45+wpa8+win8+MonoAndroid+MonoTouch+uap10.0\Solid.Practices.Modularity.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Solid.Practices.Middleware, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Practices.Middleware.1.2.0\lib\net45\Solid.Practices.Middleware.dll</HintPath>
     </Reference>
-    <Reference Include="Solid.Practices.Scheduling, Version=1.0.7.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Solid.Practices.Scheduling.1.0.7\lib\portable-net45+wpa8+win8\Solid.Practices.Scheduling.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Solid.Practices.Modularity, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Practices.Modularity.1.2.0\lib\net45\Solid.Practices.Modularity.dll</HintPath>
+    </Reference>
+    <Reference Include="Solid.Practices.Scheduling, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Practices.Scheduling.1.2.0\lib\net45\Solid.Practices.Scheduling.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

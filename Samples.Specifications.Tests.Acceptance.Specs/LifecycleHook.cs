@@ -16,12 +16,18 @@ namespace Samples.Specifications.Tests.Acceptance.Specs
         public LifecycleHook(ObjectContainer objectContainer)
         {
             _iocContainer = new ObjectContainerAdapter(objectContainer);
-        }        
+        }
+
+        [BeforeTestRun]
+        public static void BeforeAllScenarios()
+        {
+            PlatformProvider.Current = new NetPlatformProvider();
+        }
 
         [BeforeScenario]
         public void BeforeScenario()
         {
-            _iocContainer.Initialize(() => PlatformProvider.Current = new NetPlatformProvider());
+            _iocContainer.Initialize();
             var setupService = _iocContainer.Resolve<ISetupService>();
             setupService.Setup();
         }

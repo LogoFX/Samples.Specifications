@@ -6,13 +6,13 @@ using Solid.Practices.Modularity;
 
 namespace Samples.Specifications.Client.Tests.Integration.Infra
 {
-    class Module : ICompositionModule<IIocContainerRegistrator>
+    class Module : ICompositionModule<IDependencyRegistrator>
     {
-        public void RegisterModule(IIocContainerRegistrator iocContainer)
+        public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
         {
-            iocContainer.RegisterSingleton<IBuilderRegistrationService, BuilderRegistrationService>();
-            iocContainer.RegisterSingleton<IStartApplicationService, StartApplicationService>();
-            Helper.RegisterBuilders(iocContainer);
+            dependencyRegistrator.RegisterSingleton<IBuilderRegistrationService, BuilderRegistrationService>();
+            dependencyRegistrator.RegisterSingleton<IStartApplicationService, StartApplicationService>();
+            Helper.RegisterBuilders(dependencyRegistrator);
         }
     }
 }
