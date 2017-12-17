@@ -56,10 +56,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Attest.Fake.Core, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Attest.Fake.Core.1.2.1-rc1\lib\net45\Attest.Fake.Core.dll</HintPath>
+      <HintPath>..\packages\Attest.Fake.Core.1.2.1-rc2\lib\netstandard2.0\Attest.Fake.Core.dll</HintPath>
     </Reference>
     <Reference Include="Attest.Fake.Moq, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Attest.Fake.Moq.1.2.1-rc1\lib\net45\Attest.Fake.Moq.dll</HintPath>
+      <HintPath>..\packages\Attest.Fake.Moq.1.2.1-rc2\lib\netstandard2.0\Attest.Fake.Moq.dll</HintPath>
     </Reference>
     <Reference Include="Castle.Core, Version=4.1.1.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
       <HintPath>..\packages\Castle.Core.4.1.1\lib\net45\Castle.Core.dll</HintPath>
@@ -71,13 +71,13 @@
       <HintPath>..\packages\Moq.4.7.99\lib\net45\Moq.dll</HintPath>
     </Reference>
     <Reference Include="Solid.Practices.IoC, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Solid.Practices.IoC.1.2.1-rc1\lib\net45\Solid.Practices.IoC.dll</HintPath>
+      <HintPath>..\packages\Solid.Practices.IoC.1.2.1-rc2\lib\netstandard2.0\Solid.Practices.IoC.dll</HintPath>
     </Reference>
     <Reference Include="Solid.Practices.Middleware, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Solid.Practices.Middleware.1.2.1-rc1\lib\net45\Solid.Practices.Middleware.dll</HintPath>
+      <HintPath>..\packages\Solid.Practices.Middleware.1.2.1-rc2\lib\netstandard2.0\Solid.Practices.Middleware.dll</HintPath>
     </Reference>
     <Reference Include="Solid.Practices.Modularity, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Solid.Practices.Modularity.1.2.1-rc1\lib\net45\Solid.Practices.Modularity.dll</HintPath>
+      <HintPath>..\packages\Solid.Practices.Modularity.1.2.1-rc2\lib\netstandard2.0\Solid.Practices.Modularity.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
