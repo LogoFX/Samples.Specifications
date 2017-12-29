@@ -100,10 +100,10 @@
       <HintPath>..\packages\LogoFX.Core.1.1.1-rc2\lib\netstandard2.0\LogoFX.Core.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Practices.IoC, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Practices.IoC.1.1.1-rc1\lib\net45\LogoFX.Practices.IoC.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Practices.IoC.1.1.1-rc2\lib\netstandard2.0\LogoFX.Practices.IoC.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Practices.IoC.Modularity, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Practices.IoC.1.1.1-rc1\lib\net45\LogoFX.Practices.IoC.Modularity.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Practices.IoC.1.1.1-rc2\lib\netstandard2.0\LogoFX.Practices.IoC.Modularity.dll</HintPath>
     </Reference>
     <Reference Include="Solid.Patterns.Memento, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Solid.Patterns.Memento.1.2.1-rc2\lib\netstandard2.0\Solid.Patterns.Memento.dll</HintPath>
