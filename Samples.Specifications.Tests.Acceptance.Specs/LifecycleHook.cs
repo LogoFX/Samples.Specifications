@@ -21,7 +21,7 @@ namespace Samples.Specifications.Tests.Acceptance.Specs
         [BeforeTestRun]
         public static void BeforeAllScenarios()
         {
-            PlatformProvider.Current = new NetPlatformProvider();
+            PlatformProvider.Current = new NetStandardPlatformProvider();
         }
 
         [BeforeScenario]
