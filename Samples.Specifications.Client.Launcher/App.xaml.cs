@@ -1,4 +1,5 @@
 ﻿using LogoFX.Client.Bootstrapping;
+using LogoFX.Client.Mvvm.Commanding;
 using Samples.Specifications.Client.Launcher.Shared;
 
 namespace Samples.Specifications.Client.Launcher
@@ -8,8 +9,11 @@ namespace Samples.Specifications.Client.Launcher
         public App()
         {            
             var bootstrapper = new AppBootstrapper();
-            bootstrapper.UseResolver();
-            bootstrapper.UseShared().Initialize();
+            bootstrapper
+                .UseResolver()
+                .UseCommanding()
+                .UseShared()
+                .Initialize();            
         }
     }
 }
