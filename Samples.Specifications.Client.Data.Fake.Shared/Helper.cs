@@ -18,7 +18,7 @@ namespace Samples.Specifications.Client.Data.Fake.Shared
         private const string ProviderEnding = "Provider";
         private const string FakePrefix = "Fake";
 
-        public static void RegisterBuilders(IDependencyRegistrator dependencyRegistrator)
+        public static void RegisterBuilders(this IDependencyRegistrator dependencyRegistrator)
         {            
             var assembliesProvider = new BuildersAssemblySourceProvider(PlatformProvider.Current.GetRootPath());
             var allAssemblies = assembliesProvider.Assemblies.ToArray();
@@ -33,7 +33,7 @@ namespace Samples.Specifications.Client.Data.Fake.Shared
             }
         }
 
-        public static void RegisterBuildersAndFakeProviders(IDependencyRegistrator dependencyRegistrator)
+        public static void RegisterBuildersAndFakeProviders(this IDependencyRegistrator dependencyRegistrator)
         {            
             var assembliesProvider = new ProvidersAssemblySourceProvider(PlatformProvider.Current.GetRootPath());
             var allAssemblies = assembliesProvider.Assemblies.ToArray();

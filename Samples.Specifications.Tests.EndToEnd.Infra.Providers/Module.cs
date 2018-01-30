@@ -24,13 +24,13 @@ namespace Samples.Specifications.Tests.EndToEnd.Infra.Providers
             }            
         }
 
-        private void RegisterAllBuildersInternal(IDependencyRegistrator dependencyRegistrator,
+        private static void RegisterAllBuildersInternal(IDependencyRegistrator dependencyRegistrator,
             IBuilder builderInstance, Type builderType, Type providerType)
         {
             var builders = BuildersCollectionContext.GetBuilders(builderType).OfType<IBuilder>().ToArray();
             if (builders.Length == 0)
             {
-                RegistrationHelper.RegisterBuilder(dependencyRegistrator,providerType, builderInstance);                
+                RegistrationHelper.RegisterBuilder(dependencyRegistrator, providerType, builderInstance);                
             }
             else
             {

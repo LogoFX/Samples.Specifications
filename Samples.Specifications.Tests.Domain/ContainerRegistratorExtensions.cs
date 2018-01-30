@@ -7,8 +7,8 @@ namespace Samples.Specifications.Tests.Domain
 {
     public static class ContainerRegistratorExtensions
     {
-        public static void RegisterAutomagically(
-            this IDependencyRegistrator @object,
+        public static IDependencyRegistrator RegisterAutomagically(
+            this IDependencyRegistrator dependencyRegistrator,
             Assembly contractsAssembly,
             Assembly implementationsAssembly)
         {
@@ -26,9 +26,10 @@ namespace Samples.Specifications.Tests.Domain
                 contractsInfo.TryGetValue("I" + implementationInfo.Key, out Type match);
                 if (match != null)
                 {
-                    @object.RegisterSingleton(match, implementationInfo.Value.AsType());
+                    dependencyRegistrator.RegisterSingleton(match, implementationInfo.Value.AsType());
                 }
             }
+            return dependencyRegistrator;
         }
     }
 }

@@ -11,9 +11,10 @@ namespace Samples.Specifications.Tests.EndToEnd.Infra.Fake
     {                
         public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
         {
-            dependencyRegistrator.RegisterSingleton<IStartApplicationService, StartApplicationService.WithFakeProviders>();
-            dependencyRegistrator.RegisterSingleton<IBuilderRegistrationService, BuilderRegistrationService>();
-            Helper.RegisterBuilders(dependencyRegistrator);
+            dependencyRegistrator
+                .AddSingleton<IStartApplicationService, StartApplicationService.WithFakeProviders>()
+                .AddSingleton<IBuilderRegistrationService, BuilderRegistrationService>()
+                .RegisterBuilders();                        
         }        
     }
 }

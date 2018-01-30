@@ -13,16 +13,10 @@ namespace Samples.Specifications.Client.Data.Fake.Providers
     {              
         public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
         {
-            RegisterDataContainers(dependencyRegistrator);
-            Helper.RegisterBuildersAndFakeProviders(dependencyRegistrator);                     
-        }
-
-        private static void RegisterDataContainers(IDependencyRegistrator dependencyRegistrator)
-        {
-            var warehouseContainer = InitializeWarehouseContainer();
-            var userContainer = InitializeUserContainer();
-            dependencyRegistrator.RegisterInstance(warehouseContainer);
-            dependencyRegistrator.RegisterInstance(userContainer);            
+            dependencyRegistrator
+                .AddInstance(InitializeWarehouseContainer())
+                .AddInstance(InitializeUserContainer())
+                .RegisterBuildersAndFakeProviders();                               
         }
 
         private static IWarehouseContainer InitializeWarehouseContainer()

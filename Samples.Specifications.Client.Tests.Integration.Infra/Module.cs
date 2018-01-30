@@ -9,10 +9,11 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra
     class Module : ICompositionModule<IDependencyRegistrator>
     {
         public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
-        {
-            dependencyRegistrator.RegisterSingleton<IBuilderRegistrationService, BuilderRegistrationService>();
-            dependencyRegistrator.RegisterSingleton<IStartApplicationService, StartApplicationService>();
-            Helper.RegisterBuilders(dependencyRegistrator);
+        {           
+            dependencyRegistrator
+                .AddSingleton<IBuilderRegistrationService, BuilderRegistrationService>()
+                .AddSingleton<IStartApplicationService, StartApplicationService>()
+                .RegisterBuilders();
         }
     }
 }

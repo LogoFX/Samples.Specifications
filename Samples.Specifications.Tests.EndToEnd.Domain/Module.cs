@@ -11,11 +11,13 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain
     {
         public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
         {            
-            dependencyRegistrator.RegisterAutomagically(Assembly.LoadFrom("Samples.Specifications.Tests.Domain.dll"),
-                Assembly.GetExecutingAssembly());
-            dependencyRegistrator.RegisterSingleton<IExecutableContainer, ExecutableContainer>();
-            dependencyRegistrator.RegisterSingleton<StructureHelper, StructureHelper>();
-            dependencyRegistrator.RegisterSingleton<IApplicationFacade, ApplicationFacade>();
+            dependencyRegistrator
+                .RegisterAutomagically(
+                Assembly.LoadFrom("Samples.Specifications.Tests.Domain.dll"),
+                Assembly.GetExecutingAssembly())
+                .AddSingleton<IExecutableContainer, ExecutableContainer>()
+                .AddSingleton<StructureHelper, StructureHelper>()
+                .AddSingleton<IApplicationFacade, ApplicationFacade>();            
         }
     }
 }

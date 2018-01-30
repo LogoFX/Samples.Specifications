@@ -9,9 +9,10 @@ namespace Samples.Client.Model
     class Module : ICompositionModule<IDependencyRegistrator>
     {
         public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
-        {                        
-            dependencyRegistrator.RegisterSingleton<ILoginService, LoginService>();
-            dependencyRegistrator.RegisterSingleton<IDataService, DataService>();
+        {
+            dependencyRegistrator
+                .AddSingleton<ILoginService, LoginService>()
+                .AddSingleton<IDataService, DataService>();
         }
     }
 }
