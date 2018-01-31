@@ -26,6 +26,7 @@ namespace Samples.Specifications.Client.Data.Fake.Providers
             {
                 new WarehouseItemDto
                 {
+                    Id = Guid.NewGuid(),
                     Kind = "PC",
                     Price = 25.43,
                     Quantity = 8
@@ -33,6 +34,7 @@ namespace Samples.Specifications.Client.Data.Fake.Providers
 
                 new WarehouseItemDto
                 {
+                    Id = Guid.NewGuid(),
                     Kind = "Acme",
                     Price = 10,
                     Quantity = 10
@@ -40,6 +42,7 @@ namespace Samples.Specifications.Client.Data.Fake.Providers
 
                 new WarehouseItemDto
                 {
+                    Id = Guid.NewGuid(),
                     Kind = "Bacme",
                     Price = 20,
                     Quantity = 3
@@ -47,6 +50,7 @@ namespace Samples.Specifications.Client.Data.Fake.Providers
 
                 new WarehouseItemDto
                 {
+                    Id = Guid.NewGuid(),
                     Kind = "Exceed",
                     Price = 0.4,
                     Quantity = 100
@@ -54,6 +58,7 @@ namespace Samples.Specifications.Client.Data.Fake.Providers
 
                 new WarehouseItemDto
                 {
+                    Id = Guid.NewGuid(),
                     Kind = "Acme2",
                     Price = 1,
                     Quantity = 10
