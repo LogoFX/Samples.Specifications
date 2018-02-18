@@ -71,11 +71,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Samples.Client.Data.Contracts.Dto\Samples.Client.Data.Contracts.Dto.csproj">
-      <Project>{cd0ce0ac-568c-4c78-a70c-0865d38d84f7}</Project>
+      <Project>{4e61c08a-446e-4656-b983-687916b9b7fc}</Project>
       <Name>Samples.Client.Data.Contracts.Dto</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samples.Client.Data.Contracts.Providers\Samples.Client.Data.Contracts.Providers.csproj">
-      <Project>{4adc03fa-37c2-4dbd-b0c2-a645116c3130}</Project>
+      <Project>{d613c92e-ec59-48cf-8c40-d42bf5ddc0cd}</Project>
       <Name>Samples.Client.Data.Contracts.Providers</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Client.Data.Fake.Containers\Samples.Specifications.Client.Data.Fake.Containers.csproj">
@@ -142,6 +142,9 @@
     <Reference Include="Solid.Practices.Scheduling, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Solid.Practices.Scheduling.1.2.1-rc2\lib\netstandard2.0\Solid.Practices.Scheduling.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -56,7 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Samples.Client.Data.Contracts.Dto\Samples.Client.Data.Contracts.Dto.csproj">
-      <Project>{CD0CE0AC-568C-4C78-A70C-0865D38D84F7}</Project>
+      <Project>{4e61c08a-446e-4656-b983-687916b9b7fc}</Project>
       <Name>Samples.Client.Data.Contracts.Dto</Name>
     </ProjectReference>
   </ItemGroup>

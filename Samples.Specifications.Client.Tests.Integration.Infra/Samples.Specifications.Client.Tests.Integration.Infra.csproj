@@ -220,7 +220,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Samples.Client.Data.Contracts.Providers\Samples.Client.Data.Contracts.Providers.csproj">
-      <Project>{d2432bc9-c269-47ca-85ac-7b1f79bdd2b7}</Project>
+      <Project>{d613c92e-ec59-48cf-8c40-d42bf5ddc0cd}</Project>
       <Name>Samples.Client.Data.Contracts.Providers</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samples.Client.Model.Contracts\Samples.Client.Model.Contracts.csproj">

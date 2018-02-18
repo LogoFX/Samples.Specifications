@@ -125,10 +125,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Samples.Client.Data.Contracts.Providers\Samples.Client.Data.Contracts.Providers.csproj">
-      <Project>{4adc03fa-37c2-4dbd-b0c2-a645116c3130}</Project>
-      <Name>Samples.Client.Data.Contracts.Providers</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Client.Data.Fake.Shared\Samples.Specifications.Client.Data.Fake.Shared.csproj">
       <Project>{D4027017-55E4-42B2-ABE2-AE0574B59AD5}</Project>
       <Name>Samples.Specifications.Client.Data.Fake.Shared</Name>
