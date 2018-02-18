@@ -100,7 +100,7 @@
       <Name>Samples.Specifications.Server.Storage.NDatabase</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Tests.Steps.Helpers.Contracts\Samples.Specifications.Tests.Steps.Helpers.Contracts.csproj">
-      <Project>{632814bc-4f54-461f-8217-58c3a666ba6f}</Project>
+      <Project>{80c26b46-70f2-42a4-939b-d6b289600ab6}</Project>
       <Name>Samples.Specifications.Tests.Steps.Helpers.Contracts</Name>
     </ProjectReference>
   </ItemGroup>

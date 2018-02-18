@@ -148,10 +148,6 @@
       <Project>{59b69827-8fd3-4881-8bdc-420e71e14e34}</Project>
       <Name>Samples.Specifications.Tests.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Samples.Specifications.Tests.Steps.Helpers.Contracts\Samples.Specifications.Tests.Steps.Helpers.Contracts.csproj">
-      <Project>{632814bc-4f54-461f-8217-58c3a666ba6f}</Project>
-      <Name>Samples.Specifications.Tests.Steps.Helpers.Contracts</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
