@@ -91,7 +91,7 @@
       <Name>Samples.Specifications.Tests.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Tests.Steps\Samples.Specifications.Tests.Steps.csproj">
-      <Project>{0B8DF28B-E521-4178-9AF5-49EEB2CDEDF7}</Project>
+      <Project>{f699e04d-89f3-4d19-b7c7-d5339b7c12ff}</Project>
       <Name>Samples.Specifications.Tests.Steps</Name>
     </ProjectReference>
   </ItemGroup>

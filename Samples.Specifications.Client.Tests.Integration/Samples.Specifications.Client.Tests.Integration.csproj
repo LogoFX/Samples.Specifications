@@ -67,6 +67,9 @@
     <Reference Include="Attest.Testing.xUnit, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Attest.Tests.xUnit.1.4.1-rc2\lib\netstandard2.0\Attest.Testing.xUnit.dll</HintPath>
     </Reference>
+    <Reference Include="FluentAssertions, Version=5.1.1.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentAssertions.5.1.1\lib\net45\FluentAssertions.dll</HintPath>
+    </Reference>
     <Reference Include="LogoFX.Client.Core, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Client.Core.Core.1.2.1-rc2\lib\netstandard2.0\LogoFX.Client.Core.dll</HintPath>
     </Reference>
@@ -146,6 +149,10 @@
     <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
     </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.3.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
@@ -186,7 +193,7 @@
       <Name>Samples.Specifications.Client.Tests.Integration.Infra</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Tests.Steps\Samples.Specifications.Tests.Steps.csproj">
-      <Project>{0B8DF28B-E521-4178-9AF5-49EEB2CDEDF7}</Project>
+      <Project>{f699e04d-89f3-4d19-b7c7-d5339b7c12ff}</Project>
       <Name>Samples.Specifications.Tests.Steps</Name>
     </ProjectReference>
   </ItemGroup>
