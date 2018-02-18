@@ -81,6 +81,9 @@
     <Reference Include="LogoFX.Bootstrapping.Middleware, Version=1.7.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Bootstrapping.1.7.1-rc4\lib\netstandard2.0\LogoFX.Bootstrapping.Middleware.dll</HintPath>
     </Reference>
+    <Reference Include="LogoFX.Client.Data.Fake.ProviderBuilders, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Client.Data.Fake.ProviderBuilders.1.1.1-rc2\lib\netstandard2.0\LogoFX.Client.Data.Fake.ProviderBuilders.dll</HintPath>
+    </Reference>
     <Reference Include="LogoFX.Client.Testing.Contracts, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Client.Tests.Contracts.1.1.1-rc2\lib\netstandard2.0\LogoFX.Client.Testing.Contracts.dll</HintPath>
     </Reference>
