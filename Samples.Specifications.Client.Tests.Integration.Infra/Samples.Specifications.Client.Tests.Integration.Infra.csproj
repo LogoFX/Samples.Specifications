@@ -220,7 +220,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Samples.Client.Data.Contracts.Providers\Samples.Client.Data.Contracts.Providers.csproj">
-      <Project>{d2432bc9-c269-47ca-85ac-7b1f79bdd2b7}</Project>
+      <Project>{d613c92e-ec59-48cf-8c40-d42bf5ddc0cd}</Project>
       <Name>Samples.Client.Data.Contracts.Providers</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samples.Client.Model.Contracts\Samples.Client.Model.Contracts.csproj">
@@ -232,11 +232,11 @@
       <Name>Samples.Client.Model.Shared</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Client.Data.Fake.ProviderBuilders\Samples.Specifications.Client.Data.Fake.ProviderBuilders.csproj">
-      <Project>{B69DF3AB-45B8-4C86-9AC5-A5ED1A61E341}</Project>
+      <Project>{eaa56688-87c5-4b87-bcd8-5f8fc0c30a2f}</Project>
       <Name>Samples.Specifications.Client.Data.Fake.ProviderBuilders</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Client.Data.Fake.Shared\Samples.Specifications.Client.Data.Fake.Shared.csproj">
-      <Project>{D4027017-55E4-42B2-ABE2-AE0574B59AD5}</Project>
+      <Project>{82f76a12-e6ae-4339-8b0d-a8066b83420a}</Project>
       <Name>Samples.Specifications.Client.Data.Fake.Shared</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Client.Launcher.Shared\Samples.Specifications.Client.Launcher.Shared.csproj">

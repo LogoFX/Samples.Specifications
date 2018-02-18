@@ -81,6 +81,9 @@
     <Reference Include="LogoFX.Bootstrapping.Middleware, Version=1.7.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Bootstrapping.1.7.1-rc4\lib\netstandard2.0\LogoFX.Bootstrapping.Middleware.dll</HintPath>
     </Reference>
+    <Reference Include="LogoFX.Client.Data.Fake.ProviderBuilders, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Client.Data.Fake.ProviderBuilders.1.1.1-rc2\lib\netstandard2.0\LogoFX.Client.Data.Fake.ProviderBuilders.dll</HintPath>
+    </Reference>
     <Reference Include="LogoFX.Client.Testing.Contracts, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Client.Tests.Contracts.1.1.1-rc2\lib\netstandard2.0\LogoFX.Client.Testing.Contracts.dll</HintPath>
     </Reference>
@@ -125,12 +128,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Samples.Client.Data.Contracts.Providers\Samples.Client.Data.Contracts.Providers.csproj">
-      <Project>{4adc03fa-37c2-4dbd-b0c2-a645116c3130}</Project>
-      <Name>Samples.Client.Data.Contracts.Providers</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Client.Data.Fake.Shared\Samples.Specifications.Client.Data.Fake.Shared.csproj">
-      <Project>{D4027017-55E4-42B2-ABE2-AE0574B59AD5}</Project>
+      <Project>{82f76a12-e6ae-4339-8b0d-a8066b83420a}</Project>
       <Name>Samples.Specifications.Client.Data.Fake.Shared</Name>
     </ProjectReference>
   </ItemGroup>

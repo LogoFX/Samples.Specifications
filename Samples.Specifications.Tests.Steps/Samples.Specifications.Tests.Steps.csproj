@@ -121,15 +121,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Samples.Client.Data.Contracts.Dto\Samples.Client.Data.Contracts.Dto.csproj">
-      <Project>{CD0CE0AC-568C-4C78-A70C-0865D38D84F7}</Project>
+      <Project>{4e61c08a-446e-4656-b983-687916b9b7fc}</Project>
       <Name>Samples.Client.Data.Contracts.Dto</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samples.Client.Data.Contracts.Providers\Samples.Client.Data.Contracts.Providers.csproj">
-      <Project>{4adc03fa-37c2-4dbd-b0c2-a645116c3130}</Project>
+      <Project>{d613c92e-ec59-48cf-8c40-d42bf5ddc0cd}</Project>
       <Name>Samples.Client.Data.Contracts.Providers</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Client.Data.Fake.ProviderBuilders\Samples.Specifications.Client.Data.Fake.ProviderBuilders.csproj">
-      <Project>{B69DF3AB-45B8-4C86-9AC5-A5ED1A61E341}</Project>
+      <Project>{eaa56688-87c5-4b87-bcd8-5f8fc0c30a2f}</Project>
       <Name>Samples.Specifications.Client.Data.Fake.ProviderBuilders</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Tests.Data\Samples.Specifications.Tests.Data.csproj">

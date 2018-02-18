@@ -124,12 +124,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Samples.Specifications.Client.Data.Fake.ProviderBuilders\Samples.Specifications.Client.Data.Fake.ProviderBuilders.csproj">
-      <Project>{B69DF3AB-45B8-4C86-9AC5-A5ED1A61E341}</Project>
-      <Name>Samples.Specifications.Client.Data.Fake.ProviderBuilders</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Client.Data.Fake.Shared\Samples.Specifications.Client.Data.Fake.Shared.csproj">
-      <Project>{D4027017-55E4-42B2-ABE2-AE0574B59AD5}</Project>
+      <Project>{82f76a12-e6ae-4339-8b0d-a8066b83420a}</Project>
       <Name>Samples.Specifications.Client.Data.Fake.Shared</Name>
     </ProjectReference>
   </ItemGroup>
