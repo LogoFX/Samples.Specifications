@@ -15,17 +15,9 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra
                 ReuseCompositionInformation = true
             })
         {
-            this.UseResolver();
-            this.UseShared();
-            this.Initialize();
+            this.UseResolver().UseShared().Initialize();            
         }
 
-        public override string[] Prefixes
-        {
-            get
-            {
-                return new[] { "Samples.Specifications.Client.Presentation", "Samples.Client.Model", "Samples.Specifications.Client.Data", "Samples.Specifications.Client.Tests", "Samples.Client.Tests", "Samples.Specifications.Tests.Steps" };
-            }
-        }
+        public override string[] Prefixes => new[] { "Samples.Specifications.Client.Presentation", "Samples.Client.Model", "Samples.Specifications.Client.Data", "Samples.Specifications.Client.Tests", "Samples.Client.Tests", "Samples.Specifications.Tests.Steps" };
     }
 }

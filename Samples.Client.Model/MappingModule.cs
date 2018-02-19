@@ -9,7 +9,7 @@ namespace Samples.Client.Model
     class MappingModule : IPlainCompositionModule
     {
         public void RegisterModule()
-        {
+        {            
             Mapper.Initialize(x => x.AddProfile<MappingProfile>());
         }
     }

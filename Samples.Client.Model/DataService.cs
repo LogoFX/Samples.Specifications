@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Windows.Threading;
+using System.Timers;
 using JetBrains.Annotations;
 using LogoFX.Client.Core;
 using LogoFX.Core;
@@ -19,7 +19,7 @@ namespace Samples.Client.Model
         private readonly IEventsProvider _eventsProvider;
         private readonly RangeObservableCollection<IWarehouseItem> _warehouseItems = new RangeObservableCollection<IWarehouseItem>();
 
-        private readonly DispatcherTimer _timer;
+        private readonly Timer _timer;
         private DateTime _lastEvenTime;
         private readonly RangeObservableCollection<IEvent> _events =
             new RangeObservableCollection<IEvent>();
@@ -29,33 +29,34 @@ namespace Samples.Client.Model
             _warehouseProvider = warehouseProvider;
             _eventsProvider = eventsProvider;
 
-            _timer = new DispatcherTimer();
-            _timer.Interval = TimeSpan.FromMilliseconds(1000);
-            _timer.Tick += OnTimer;
+            _timer = new Timer();
+            _timer.Interval = 1000;
+            _timer.Elapsed += TimerOnElapsed;
+            _timer.Start();
         }
 
-        private async void OnTimer(object sender, EventArgs e)
+        private async void TimerOnElapsed(object sender, ElapsedEventArgs elapsedEventArgs)
         {
             await ServiceRunner.RunAsync(() =>
-             {
-                 var events = (_eventsProvider.GetLastEvents(_lastEvenTime))
-                     .Select(EventMapper.MapToEvent)
-                     .ToList();
+            {
+                var events = (_eventsProvider.GetLastEvents(_lastEvenTime))
+                    .Select(EventMapper.MapToEvent)
+                    .ToList();
 
-                 if (events.Count == 0)
-                 {
-                     return;
-                 }
+                if (events.Count == 0)
+                {
+                    return;
+                }
 
-                 var max = events.Max(x => x.Time);
-                 if (max > _lastEvenTime)
-                 {
-                     _lastEvenTime = max;
-                 }
+                var max = events.Max(x => x.Time);
+                if (max > _lastEvenTime)
+                {
+                    _lastEvenTime = max;
+                }
 
-                 _events.AddRange(events);
-             });
-        }
+                _events.AddRange(events);
+            });
+        }       
 
         private async Task GetWarehouseItemsInternal()
         {
@@ -129,14 +130,8 @@ namespace Samples.Client.Model
             await Task.Delay(300);
         }
 
-        IEnumerable<IEvent> IDataService.Events
-        {
-            get { return _events; }
-        }
+        IEnumerable<IEvent> IDataService.Events => _events;
 
-        public bool EventMonitoringStarted
-        {
-            get { return _timer.IsEnabled; }
-        }
+        public bool EventMonitoringStarted => _timer.Enabled;
     }
 }
