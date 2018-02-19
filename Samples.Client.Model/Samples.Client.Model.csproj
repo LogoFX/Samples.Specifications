@@ -31,7 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithFake|AnyCPU'">
-    <OutputPath>..\bin\DebugWithFake\</OutputPath>
+    <OutputPath>..\Bin\DebugWithFake\</OutputPath>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
     <DefineConstants>
@@ -144,11 +144,11 @@
       <Name>Samples.Client.Data.Contracts.Providers</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samples.Client.Model.Contracts\Samples.Client.Model.Contracts.csproj">
-      <Project>{536D34E4-A409-4567-B7C6-58F50206740E}</Project>
+      <Project>{848aeeae-e52f-4aa4-888c-c9a6d9005f01}</Project>
       <Name>Samples.Client.Model.Contracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samples.Client.Model.Shared\Samples.Client.Model.Shared.csproj">
-      <Project>{49724A56-9FA9-44C4-B731-1E414EE598BC}</Project>
+      <Project>{c68f2be4-0d91-4854-b937-f903edfa266a}</Project>
       <Name>Samples.Client.Model.Shared</Name>
     </ProjectReference>
   </ItemGroup>

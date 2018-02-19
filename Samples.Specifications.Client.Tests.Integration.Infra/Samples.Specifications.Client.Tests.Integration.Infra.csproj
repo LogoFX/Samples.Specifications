@@ -223,14 +223,6 @@
       <Project>{d613c92e-ec59-48cf-8c40-d42bf5ddc0cd}</Project>
       <Name>Samples.Client.Data.Contracts.Providers</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Samples.Client.Model.Contracts\Samples.Client.Model.Contracts.csproj">
-      <Project>{536D34E4-A409-4567-B7C6-58F50206740E}</Project>
-      <Name>Samples.Client.Model.Contracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Samples.Client.Model.Shared\Samples.Client.Model.Shared.csproj">
-      <Project>{49724A56-9FA9-44C4-B731-1E414EE598BC}</Project>
-      <Name>Samples.Client.Model.Shared</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Client.Data.Fake.ProviderBuilders\Samples.Specifications.Client.Data.Fake.ProviderBuilders.csproj">
       <Project>{eaa56688-87c5-4b87-bcd8-5f8fc0c30a2f}</Project>
       <Name>Samples.Specifications.Client.Data.Fake.ProviderBuilders</Name>
