@@ -24,11 +24,8 @@ namespace Samples.Client.Model
         [StringValidation(IsNulOrEmptyAllowed = false, MaxLength = 63)]
         public string Kind
         {
-            get { return _kind; }
-            set
-            {                
-                SetProperty(ref _kind, value);
-            }
+            get => _kind;
+            set => SetProperty(ref _kind, value);
         }
 
         private double _price;
@@ -36,7 +33,7 @@ namespace Samples.Client.Model
         [DoublePositiveValidation(ErrorMessage = "Price must be positive.")]
         public double Price
         {
-            get { return _price;}
+            get => _price;
             set
             {
                 SetProperty(ref _price, value);
@@ -49,7 +46,7 @@ namespace Samples.Client.Model
         [NumberValidation(Minimum = 1, ErrorMessage = "Quantity must be positive.")]
         public int Quantity
         {
-            get { return _quantity; }
+            get => _quantity;
             set
             {                
                 SetProperty(ref _quantity, value);
@@ -57,9 +54,6 @@ namespace Samples.Client.Model
             }
         }        
 
-        public double TotalCost
-        {
-            get { return _quantity*_price; }
-        }
+        public double TotalCost => _quantity*_price;
     }
 }

@@ -75,10 +75,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         }
 
         private IEnumerable _events;
-        public IEnumerable Events
-        {
-            get { return _events ?? (_events = CreateEvents()); }
-        }
+        public IEnumerable Events => _events ?? (_events = CreateEvents());
 
         private IEnumerable CreateEvents()
         {
