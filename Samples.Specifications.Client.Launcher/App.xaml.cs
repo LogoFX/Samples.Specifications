@@ -1,6 +1,4 @@
-﻿using System.IO;
-using System.Reflection;
-using LogoFX.Client.Bootstrapping;
+﻿using LogoFX.Client.Bootstrapping;
 using LogoFX.Client.Mvvm.Commanding;
 using Samples.Specifications.Client.Launcher.Shared;
 
