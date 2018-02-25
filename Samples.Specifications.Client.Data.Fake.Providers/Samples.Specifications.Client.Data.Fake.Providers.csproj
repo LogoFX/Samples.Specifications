@@ -109,8 +109,8 @@
     <Reference Include="Attest.Fake.Setup.Contracts, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Attest.Fake.Setup.1.2.1-rc2\lib\netstandard2.0\Attest.Fake.Setup.Contracts.dll</HintPath>
     </Reference>
-    <Reference Include="JetBrains.Annotations, Version=11.0.0.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
-      <HintPath>..\packages\JetBrains.Annotations.11.0.0\lib\net20\JetBrains.Annotations.dll</HintPath>
+    <Reference Include="JetBrains.Annotations, Version=11.1.0.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <HintPath>..\packages\JetBrains.Annotations.11.1.0\lib\net20\JetBrains.Annotations.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Data.Fake.ProviderBuilders, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Client.Data.Fake.ProviderBuilders.1.1.1-rc2\lib\netstandard2.0\LogoFX.Client.Data.Fake.ProviderBuilders.dll</HintPath>

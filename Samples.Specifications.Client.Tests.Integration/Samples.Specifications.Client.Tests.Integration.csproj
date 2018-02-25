@@ -67,8 +67,8 @@
     <Reference Include="Attest.Testing.xUnit, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Attest.Tests.xUnit.1.4.1-rc2\lib\netstandard2.0\Attest.Testing.xUnit.dll</HintPath>
     </Reference>
-    <Reference Include="FluentAssertions, Version=5.1.1.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
-      <HintPath>..\packages\FluentAssertions.5.1.1\lib\net45\FluentAssertions.dll</HintPath>
+    <Reference Include="FluentAssertions, Version=5.1.2.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentAssertions.5.1.2\lib\net45\FluentAssertions.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Core, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Client.Core.Core.1.2.1-rc2\lib\netstandard2.0\LogoFX.Client.Core.dll</HintPath>

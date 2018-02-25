@@ -73,8 +73,8 @@
     <Reference Include="AutoMapper, Version=6.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
       <HintPath>..\packages\AutoMapper.6.1.1\lib\net45\AutoMapper.dll</HintPath>
     </Reference>
-    <Reference Include="FluentAssertions, Version=5.1.1.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
-      <HintPath>..\packages\FluentAssertions.5.1.1\lib\net45\FluentAssertions.dll</HintPath>
+    <Reference Include="FluentAssertions, Version=5.1.2.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentAssertions.5.1.2\lib\net45\FluentAssertions.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Bootstrapping, Version=1.7.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Bootstrapping.1.7.1-rc4\lib\netstandard2.0\LogoFX.Bootstrapping.dll</HintPath>
