@@ -11,8 +11,8 @@ Scenario: Display warehouse items
 	| PC   | 423.95 | 70       |	
 	And I am able to log in successfully with username 'Admin' and password 'pass'
 	When I open the application
-	And I set the username to "Admin"
-	And I set the password to "pass"
+	And I set the username to 'Admin'
+	And I set the password to 'pass'
 	And I log in to the system	
 	Then I expect to see the following data on the screen:
 	| Kind | Price	| Quantity	| Total Cost	|
@@ -28,8 +28,8 @@ Scenario: Delete warehouse item
 	| PC   | 423.95 | 70       |	
 	And I am able to log in successfully with username 'Admin' and password 'pass'
 	When I open the application
-	And I set the username to "Admin"
-	And I set the password to "pass"
+	And I set the username to 'Admin'
+	And I set the password to 'pass'
 	And I log in to the system	
 	And I delete "TV" item
 	Then I expect to see the following data on the screen:
@@ -44,8 +44,8 @@ Scenario: Create new warehouse item
 	| TV   | 346.95 | 50       |
 	And I am able to log in successfully with username 'Admin' and password 'pass'
 	When I open the application
-	And I set the username to "Admin"
-	And I set the password to "pass"
+	And I set the username to 'Admin'
+	And I set the password to 'pass'
 	And I log in to the system	
 	And I create a new warehouse item with the following data:
 	| Kind | Price  | Quantity |

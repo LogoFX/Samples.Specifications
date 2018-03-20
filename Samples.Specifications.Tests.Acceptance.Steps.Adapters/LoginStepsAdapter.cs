@@ -13,7 +13,7 @@ namespace Samples.Specifications.Tests.Acceptance.Steps.Adapters
             LoginSteps = loginSteps;
         }
 
-        [When(@"I set the username to ""(.*)""")]
+        [When(@"I set the username to '(.*)'")]
         public void WhenISetTheUsernameTo(string username)
         {
             LoginSteps.WhenISetTheUsernameTo(username);
@@ -25,7 +25,7 @@ namespace Samples.Specifications.Tests.Acceptance.Steps.Adapters
             LoginSteps.WhenILogInToTheSystem();            
         }
 
-        [When(@"I set the password to ""(.*)""")]
+        [When(@"I set the password to '(.*)'")]
         public void WhenISetThePasswordTo(string password)
         {
             LoginSteps.WhenISetThePasswordTo(password);
@@ -37,7 +37,7 @@ namespace Samples.Specifications.Tests.Acceptance.Steps.Adapters
             LoginSteps.ThenTheLoginScreenIsDisplayed();            
         }        
 
-        [Then(@"Login error message is displayed with the following text ""(.*)""")]
+        [Then(@"Login error message is displayed with the following text '(.*)'")]
         public void ThenLoginErrorMessageIsDisplayedWithTheFollowingText(string errorMessage)
         {
             LoginSteps.ThenLoginErrorMessageIsDisplayedWithTheFollowingText(errorMessage);

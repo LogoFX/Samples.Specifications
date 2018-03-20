@@ -16,19 +16,19 @@ namespace Samples.Specifications.Tests.Acceptance.Steps.Adapters
             WarehouseSteps = warehouseSteps;
         }
 
-        [When(@"I set the Price for ""(.*)"" item to (.*)")]
+        [When(@"I set the Price for '(.*)' item to (.*)")]
         public void WhenISetThePriceForItemTo(string kind, int newPrice)
         {
             WarehouseSteps.WhenISetThePriceForItemTo(kind, newPrice);
         }
 
-        [When(@"I set the Quantity for ""(.*)"" item to (.*)")]
+        [When(@"I set the Quantity for '(.*)' item to (.*)")]
         public void WhenISetTheQuantityForItemTo(string kind, int newQuantity)
         {
             WarehouseSteps.WhenISetTheQuantityForItemTo(kind, newQuantity);
         }
 
-        [When(@"I set the Kind for ""(.*)"" item to ""(.*)""")]
+        [When(@"I set the Kind for '(.*)' item to ""(.*)""")]
         public void WhenISetTheKindForItemTo(string kind, string newKind)
         {
             WarehouseSteps.WhenISetTheKindForItemTo(kind, newKind);
@@ -66,7 +66,7 @@ namespace Samples.Specifications.Tests.Acceptance.Steps.Adapters
             WarehouseSteps.WhenICreateANewWarehouseItemWithTheFollowingData(warehouseItems.ToArray());
         }
 
-        [Then(@"Error message is displayed with the following text ""(.*)""")]
+        [Then(@"Error message is displayed with the following text '(.*)'")]
         public void ThenErrorMessageIsDisplayedWithTheFollowingText(string expectedErrorMessage)
         {
             WarehouseSteps.ThenErrorMessageIsDisplayedWithTheFollowingText(expectedErrorMessage);
