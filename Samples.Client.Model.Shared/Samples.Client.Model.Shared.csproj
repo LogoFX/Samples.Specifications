@@ -95,9 +95,6 @@
     <Compile Include="Validation\StringValidationAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Samples.Client.Model.Contracts\Samples.Client.Model.Contracts.csproj">
       <Project>{536D34E4-A409-4567-B7C6-58F50206740E}</Project>
       <Name>Samples.Client.Model.Contracts</Name>
