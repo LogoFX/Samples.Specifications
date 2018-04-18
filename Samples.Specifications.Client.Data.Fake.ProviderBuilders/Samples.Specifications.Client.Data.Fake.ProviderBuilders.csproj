@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>Samples.Specifications.Client.Data.Fake.ProviderBuilders</AssemblyName>
     <RootNamespace>Samples.Specifications.Client.Data.Fake.ProviderBuilders</RootNamespace>
-    <Configurations>Debug;Release;DebugWithFake;TestsWithFake</Configurations>
+    <Configurations>Debug;Release;DebugWithFake;EndToEndWithFake</Configurations>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -15,8 +15,8 @@
     <OutputPath>..\Bin\DebugWithFake\</OutputPath>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TestsWithFake|AnyCPU'">
-    <OutputPath>..\Bin\TestsWithFake\</OutputPath>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EndToEndWithFake|AnyCPU'">
+    <OutputPath>..\Bin\EndToEndWithFake\</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>

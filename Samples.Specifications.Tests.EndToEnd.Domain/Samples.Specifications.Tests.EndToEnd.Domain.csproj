@@ -39,17 +39,17 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TestsWithReal|AnyCPU'">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'EndToEndWithReal|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\Bin\TestsWithReal\Infra\</OutputPath>
+    <OutputPath>..\Bin\EndToEndWithReal\Infra\</OutputPath>
     <DefineConstants>TRACE;DEBUG;REAL</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TestsWithFake|AnyCPU'">
-    <OutputPath>..\Bin\TestsWithFake\Infra\</OutputPath>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'EndToEndWithFake|AnyCPU' ">
+    <OutputPath>..\Bin\EndToEndWithFake\Infra\</OutputPath>
     <DefineConstants>DEBUG;FAKE</DefineConstants>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>

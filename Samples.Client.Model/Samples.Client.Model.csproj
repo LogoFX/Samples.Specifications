@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>Samples.Client.Model</AssemblyName>
     <RootNamespace>Samples.Client.Model</RootNamespace>
-    <Configurations>Debug;Release;DebugWithFake;DebugWithReal;IntegrationWithFake;TestsWithFake;TestsWithReal</Configurations>
+    <Configurations>Debug;Release;DebugWithFake;DebugWithReal;IntegrationWithFake;EndToEndWithFake;EndToEndWithReal</Configurations>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -19,16 +19,16 @@
     <OutputPath>..\Bin\IntegrationWithFake\</OutputPath>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TestsWithFake|AnyCPU'">
-    <OutputPath>..\Bin\TestsWithFake\</OutputPath>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EndToEndWithFake|AnyCPU'">
+    <OutputPath>..\Bin\EndToEndWithFake\</OutputPath>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugWithReal|AnyCPU'">
     <OutputPath>..\Bin\DebugWithReal\</OutputPath>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TestsWithReal|AnyCPU'">
-    <OutputPath>..\Bin\TestsWithReal\</OutputPath>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EndToEndWithReal|AnyCPU'">
+    <OutputPath>..\Bin\EndToEndWithReal\</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
