@@ -1,4 +1,4 @@
-configuration: TestsWithFake
+configuration: EndToEndWithFake
 
 before_build:
 - nuget restore
