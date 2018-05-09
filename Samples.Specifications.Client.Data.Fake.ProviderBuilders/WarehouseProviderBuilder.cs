@@ -39,15 +39,11 @@ namespace Samples.Specifications.Client.Data.Fake.ProviderBuilders
                 .AddMethodCallWithResult<WarehouseItemDto, bool>(t => t.UpdateWarehouseItem(It.IsAny<WarehouseItemDto>()),
                     (r, dto) => r.Complete(k =>
                     {
-                        SaveWarehouseItem(dto);
+                        SaveWarehouseItem(k);
                         return true;
                     }))
                     .AddMethodCall<WarehouseItemDto>(t => t.CreateWarehouseItem(It.IsAny<WarehouseItemDto>()),
-                    (r, dto) =>
-                    {
-                        SaveWarehouseItem(dto);
-                        return r.Complete();
-                    });
+                    (r, dto) => r.Complete(SaveWarehouseItem));
             return setup;
         }
 
