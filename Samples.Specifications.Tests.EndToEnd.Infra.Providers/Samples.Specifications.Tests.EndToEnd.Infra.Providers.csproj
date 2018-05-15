@@ -76,10 +76,10 @@
       <HintPath>..\packages\JetBrains.Annotations.11.1.0\lib\net20\JetBrains.Annotations.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Bootstrapping, Version=1.7.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Bootstrapping.1.7.1-rc4\lib\netstandard2.0\LogoFX.Bootstrapping.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Bootstrapping.1.7.1-rc5\lib\netstandard2.0\LogoFX.Bootstrapping.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Bootstrapping.Middleware, Version=1.7.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Bootstrapping.1.7.1-rc4\lib\netstandard2.0\LogoFX.Bootstrapping.Middleware.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Bootstrapping.1.7.1-rc5\lib\netstandard2.0\LogoFX.Bootstrapping.Middleware.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Data.Fake.ProviderBuilders, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Client.Data.Fake.ProviderBuilders.1.1.1-rc2\lib\netstandard2.0\LogoFX.Client.Data.Fake.ProviderBuilders.dll</HintPath>
@@ -106,13 +106,13 @@
       <HintPath>..\packages\Solid.Patterns.Visitor.1.2.1-rc2\lib\netstandard2.0\Solid.Patterns.Visitor.dll</HintPath>
     </Reference>
     <Reference Include="Solid.Practices.Composition, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Solid.Practices.Composition.Core.1.2.1-rc4\lib\netstandard2.0\Solid.Practices.Composition.dll</HintPath>
+      <HintPath>..\packages\Solid.Practices.Composition.Core.1.2.1-rc5\lib\netstandard2.0\Solid.Practices.Composition.dll</HintPath>
     </Reference>
     <Reference Include="Solid.Practices.Composition.Container, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Solid.Practices.Composition.Core.1.2.1-rc4\lib\netstandard2.0\Solid.Practices.Composition.Container.dll</HintPath>
+      <HintPath>..\packages\Solid.Practices.Composition.Core.1.2.1-rc5\lib\netstandard2.0\Solid.Practices.Composition.Container.dll</HintPath>
     </Reference>
     <Reference Include="Solid.Practices.Composition.Contracts, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Solid.Practices.Composition.Core.1.2.1-rc4\lib\netstandard2.0\Solid.Practices.Composition.Contracts.dll</HintPath>
+      <HintPath>..\packages\Solid.Practices.Composition.Core.1.2.1-rc5\lib\netstandard2.0\Solid.Practices.Composition.Contracts.dll</HintPath>
     </Reference>
     <Reference Include="Solid.Practices.IoC, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Solid.Practices.IoC.1.2.1-rc4\lib\netstandard2.0\Solid.Practices.IoC.dll</HintPath>
