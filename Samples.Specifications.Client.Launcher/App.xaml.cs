@@ -7,13 +7,15 @@ namespace Samples.Specifications.Client.Launcher
     partial class App
     {
         public App()
-        {            
+        {
+            
             var bootstrapper = new AppBootstrapper();
-            bootstrapper
+            var init = bootstrapper
                 .UseResolver()
                 .UseCommanding()
-                .UseShared()
-                .Initialize();            
+                .UseShared();
+
+                init.Initialize();            
         }
     }
 }

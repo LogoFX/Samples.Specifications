@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Solid.Bootstrapping;
 using Solid.Extensibility;
 using Solid.Practices.Composition;
+using Solid.Practices.Composition.Container;
 using Solid.Practices.Composition.Contracts;
 using Solid.Practices.IoC;
 using Solid.Practices.Middleware;
@@ -38,8 +40,18 @@ namespace Samples.Specifications.Tests.EndToEnd.Infra.Launcher
         private void InitializeCompositionModules()
         {
             var compositionManager = new CompositionManager();
-            compositionManager.Initialize(".", new string[] {});
-            Modules = compositionManager.Modules.ToArray();            
+            try
+            {
+                compositionManager.Initialize(".", new string[] { });
+            }
+            catch (AggregateAssemblyInspectionException)
+            {
+
+            }
+            finally
+            {
+                Modules = compositionManager.Modules.ToArray();
+            }                        
         }
 
         /// <summary>
