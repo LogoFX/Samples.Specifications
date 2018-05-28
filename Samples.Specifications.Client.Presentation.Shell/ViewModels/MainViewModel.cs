@@ -14,7 +14,7 @@ using Samples.Client.Model.Contracts;
 namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
 {
     [UsedImplicitly]
-    public class MainViewModel : BusyScreen
+    public class MainViewModel : BusyScreen, IDisposable
     {
         private readonly IViewModelCreatorService _viewModelCreatorService;
         private readonly IDataService _dataService;
@@ -32,10 +32,12 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             NewWarehouseItem();
         }
 
-        private ICommand _newCommand;
-        public ICommand NewCommand => _newCommand ?? (_newCommand = ActionCommand.Do(NewWarehouseItem));
+        private IActionCommand _newCommand;
 
-        private ICommand _deleteCommand;
+        public ICommand NewCommand =>
+            _newCommand ?? (_newCommand = ActionCommand.When(() => true).Do(NewWarehouseItem));
+
+        private IActionCommand _deleteCommand;
         public ICommand DeleteCommand
         {
             get
@@ -202,6 +204,13 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             //Added for testability purposes only
             //The UI test engine has to query controls and perform several actions
             await Task.Delay(1000);
+        }
+
+        public void Dispose()
+        {
+            _deleteCommand?.Dispose();
+            _newCommand?.Dispose();
+            _activeWarehouseItem?.Dispose();
         }
     }
 }

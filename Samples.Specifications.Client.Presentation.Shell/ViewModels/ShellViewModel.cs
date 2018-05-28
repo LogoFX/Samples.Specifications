@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows.Threading;
@@ -15,7 +16,7 @@ using Solid.Practices.Scheduling;
 namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
 {
     [UsedImplicitly]
-    public class ShellViewModel : Conductor<INotifyPropertyChanged>.Collection.OneActive
+    public class ShellViewModel : Conductor<INotifyPropertyChanged>.Collection.OneActive, IDisposable
     {
         private readonly IWindowManager _windowManager;
         private readonly IViewModelCreatorService _viewModelCreatorService;                        
@@ -118,6 +119,14 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         protected virtual void OnLoggedInSuccessfully(object sender, EventArgs eventArgs)
         {
             ActivateItem(MainViewModel);
+        }
+
+        public void Dispose()
+        {
+            foreach (var item in Items.OfType<IDisposable>())
+            {
+                item.Dispose();
+            }
         }
     }
 }

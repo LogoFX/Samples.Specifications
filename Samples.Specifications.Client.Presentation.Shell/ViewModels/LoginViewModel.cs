@@ -9,7 +9,7 @@ using Samples.Specifications.Client.Presentation.Shell.Properties;
 namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
 {   
     [UsedImplicitly]
-    public sealed class LoginViewModel : BusyScreen
+    public sealed class LoginViewModel : BusyScreen, IDisposable
     {
         private readonly ILoginService _loginService;
 
@@ -33,8 +33,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
 
         public event EventHandler LoggedInSuccessfully;
 
-        private ICommand _loginCommand;
-
+        private IActionCommand _loginCommand;
         public ICommand LoginCommand
         {
             get
@@ -67,14 +66,13 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             }
         }
 
-        private ICommand _cancelCommand;
-
+        private IActionCommand _cancelCommand;
         public ICommand LoginCancelCommand
         {
             get
             {
                 return _cancelCommand ??
-                       (_cancelCommand = ActionCommand
+                       (_cancelCommand = ActionCommand.When(() => true)
                            .Do(() =>
                            {
                                TryClose();
@@ -83,7 +81,6 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         }
 
         private bool _savePassword;
-
         public bool SavePassword
         {
             get => _savePassword;
@@ -100,7 +97,6 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         }
 
         private string _loginFailureCause;
-
         public string LoginFailureCause
         {
             get => _loginFailureCause;
@@ -118,7 +114,6 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         public bool IsLoginFailureTextVisible => string.IsNullOrWhiteSpace(LoginFailureCause) == false;
 
         private string _userName;
-
         public string UserName
         {
             get => _userName;
@@ -130,7 +125,6 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         }
        
         private string _password = string.Empty;
-
         public string Password
         {
             get => _password;
@@ -164,6 +158,21 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             {
                 LoggedInSuccessfully(this, new EventArgs());
             }
-        }        
+        }
+
+        protected override void OnDeactivate(bool close)
+        {
+            base.OnDeactivate(close);
+            if (close)
+            {
+                Dispose();
+            }
+        }
+
+        public void Dispose()
+        {
+            _cancelCommand.Dispose();
+            _loginCommand.Dispose();
+        }
     }
 }

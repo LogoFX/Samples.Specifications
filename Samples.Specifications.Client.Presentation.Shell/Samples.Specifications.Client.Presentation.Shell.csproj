@@ -237,6 +237,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="ViewModels\ShellViewModel.cs" />
+    <Compile Include="ViewModels\WarehouseItemCommandsViewModel.cs" />
     <Compile Include="ViewModels\WarehouseItemContainerViewModel.cs" />
     <Compile Include="ViewModels\WarehouseItemsViewModel.cs" />
     <Compile Include="ViewModels\WarehouseItemViewModel.cs" />

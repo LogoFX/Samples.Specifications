@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.ComponentModel;
 using System.Windows.Input;
 using LogoFX.Client.Mvvm.Commanding;
@@ -8,7 +9,7 @@ using Samples.Client.Model.Contracts;
 
 namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
 {
-    public sealed class EventsViewModel : BusyScreen
+    public sealed class EventsViewModel : BusyScreen, IDisposable
     {
         private readonly IDataService _dataService;        
 
@@ -17,7 +18,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             _dataService = dataService;
         }
 
-        private ICommand _clearCommand;
+        private IActionCommand _clearCommand;
         public ICommand ClearCommand
         {
             get
@@ -42,7 +43,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             }
         }
 
-        private ICommand _startCommand;
+        private IActionCommand _startCommand;
         public ICommand StartCommand
         {
             get
@@ -58,7 +59,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             }
         }
 
-        private ICommand _stopCommand;
+        private IActionCommand _stopCommand;
         public ICommand StopCommand
         {
             get
@@ -89,6 +90,13 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             view.SortDescriptions.Add(new SortDescription("Time", ListSortDirection.Descending));
 
             return view;
+        }
+
+        public void Dispose()
+        {
+            _clearCommand?.Dispose();
+            _startCommand?.Dispose();
+            _stopCommand?.Dispose();
         }
     }
 }

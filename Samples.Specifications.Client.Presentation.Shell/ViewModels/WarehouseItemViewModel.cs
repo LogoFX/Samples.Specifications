@@ -1,5 +1,4 @@
-﻿using Caliburn.Micro;
-using LogoFX.Client.Mvvm.ViewModel;
+﻿using LogoFX.Client.Mvvm.ViewModel;
 using Samples.Client.Model.Contracts;
 
 namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
@@ -11,11 +10,6 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         {
         }
 
-        
-    }
-
-    public class WarehouseItemCommandsViewModel : PropertyChangedBase
-    {
         
     }
 }
