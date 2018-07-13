@@ -10,6 +10,8 @@ namespace Samples.Specifications.Client.Launcher
         public AppBootstrapper()
             : base(new ExtendedSimpleContainerAdapter())
         {
-        }              
+        }
+
+        public override string[] Prefixes => new[] {"Samples.Specifications.Client", "Samples.Client"};
     }
 }

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Solid.Bootstrapping;
 using Solid.Extensibility;
@@ -35,6 +34,8 @@ namespace Samples.Specifications.Tests.EndToEnd.Infra.Launcher
         /// </value>
         public IEnumerable<ICompositionModule> Modules { get; private set; } = new ICompositionModule[] { };
 
+        public string[] Prefixes { get; } = { "Samples.Specifications.Tests" };
+
         public IDependencyRegistrator Registrator { get; }
 
         private void InitializeCompositionModules()
@@ -42,9 +43,12 @@ namespace Samples.Specifications.Tests.EndToEnd.Infra.Launcher
             var compositionManager = new CompositionManager();
             try
             {
-                compositionManager.Initialize(".", new string[] { });
+                compositionManager.Initialize(".", Prefixes);
             }
-            catch (AggregateAssemblyInspectionException)
+#pragma warning disable 168 
+            //Used for debug
+            catch (AggregateAssemblyInspectionException ex)
+#pragma warning restore 168
             {
 
             }
