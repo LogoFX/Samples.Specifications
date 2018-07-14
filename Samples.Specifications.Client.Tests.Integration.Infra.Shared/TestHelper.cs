@@ -1,7 +1,7 @@
 ﻿using Caliburn.Micro;
 using Samples.Client.Model.Shared;
 
-namespace Samples.Specifications.Client.Tests.Integration.Infra
+namespace Samples.Specifications.Client.Tests.Integration.Infra.Shared
 {
     public static class TestHelper
     {

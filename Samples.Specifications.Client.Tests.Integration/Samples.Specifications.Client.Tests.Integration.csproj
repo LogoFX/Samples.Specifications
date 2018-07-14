@@ -190,6 +190,10 @@
       <Project>{5270f84d-8ff4-4756-83b0-78dd9777643d}</Project>
       <Name>Samples.Specifications.Client.Presentation.Shell</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Samples.Specifications.Client.Tests.Integration.Infra.Shared\Samples.Specifications.Client.Tests.Integration.Infra.Shared.csproj">
+      <Project>{06cbecee-b066-42d5-8df6-47da317b2180}</Project>
+      <Name>Samples.Specifications.Client.Tests.Integration.Infra.Shared</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Client.Tests.Integration.Infra\Samples.Specifications.Client.Tests.Integration.Infra.csproj">
       <Project>{CBF93BCE-066F-4A39-A4D2-408524F49490}</Project>
       <Name>Samples.Specifications.Client.Tests.Integration.Infra</Name>
