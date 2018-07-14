@@ -34,7 +34,10 @@ namespace Samples.Specifications.Tests.EndToEnd.Infra.Launcher
         /// </value>
         public IEnumerable<ICompositionModule> Modules { get; private set; } = new ICompositionModule[] { };
 
-        public string[] Prefixes { get; } = { "Samples.Specifications.Tests" };
+        public string[] Prefixes { get; } =
+        {
+            "Samples.Specifications.Tests", "Samples.Specifications.Client.Tests", "Samples.Specifications.Tests.Steps"
+        };
 
         public IDependencyRegistrator Registrator { get; }
 

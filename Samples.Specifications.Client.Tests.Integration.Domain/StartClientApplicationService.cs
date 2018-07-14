@@ -16,5 +16,5 @@ namespace Samples.Specifications.Client.Tests.Integration.Domain
         {
             _startApplicationService.StartApplication(string.Empty);
         }
-    }
+    }    
 }
