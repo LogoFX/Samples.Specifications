@@ -36,7 +36,8 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra.Fake
             ScreenExtensions.TryActivate(shell);
         }
 
-        class BootstrapperBridge : IntegrationTestsBase<ShellViewModel, TestBootstrapper>.WithExplicitRootObjectCreation
+        class BootstrapperBridge : IntegrationTestsBase<ShellViewModel, TestBootstrapper.SpecBased>.
+            WithExplicitRootObjectCreation
         {
 
         }

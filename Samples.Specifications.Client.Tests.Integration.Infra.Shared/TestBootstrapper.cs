@@ -5,7 +5,7 @@ using Samples.Specifications.Client.Presentation.Shell.ViewModels;
 
 namespace Samples.Specifications.Client.Tests.Integration.Infra.Shared
 {
-   public class TestBootstrapper : TestBootstrapperContainerBase<ExtendedSimpleContainerAdapter>
+    public class TestBootstrapper : TestBootstrapperContainerBase<ExtendedSimpleContainerAdapter>
         .WithRootObject<ShellViewModel>
     {
         public TestBootstrapper() :
@@ -15,16 +15,22 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra.Shared
                 ReuseCompositionInformation = true
             })
         {
-            this.UseResolver().UseShared().Initialize();            
+            this.UseResolver().UseShared().Initialize();
         }
 
         public override string[] Prefixes => new[]
         {
-            "Samples.Specifications.Client.Presentation", "Samples.Client.Model", "Samples.Specifications.Client.Data"
-            //TODO: The following lines are used for manually written integration tests
-            //It seems better to have dedicated bootstrapper for manual and spec-powered cases
-            //,
-            //"Samples.Specifications.Client.Tests", "Samples.Client.Tests", "Samples.Specifications.Tests.Steps"
+            "Samples.Specifications.Client.Presentation", "Samples.Client.Model", "Samples.Specifications.Client.Data",
+            "Samples.Specifications.Client.Tests", "Samples.Client.Tests", "Samples.Specifications.Tests.Steps"
         };
+
+        public class SpecBased : TestBootstrapper
+        {
+            public override string[] Prefixes => new[]
+            {
+                "Samples.Specifications.Client.Presentation", "Samples.Client.Model",
+                "Samples.Specifications.Client.Data"
+            };
+        }
     }
 }
