@@ -16,14 +16,21 @@ namespace Samples.Specifications.Client.Tests.Integration.Domain
         public void Setup()
         {
             _setupHelper.Initialize();
+            SetupCore();
         }
 #endif
 
 #if FAKE        
         public void Setup()
-        {            
+        {      
+            SetupCore();
         }
 #endif
+
+        private static void SetupCore()
+        {
+            LogoFX.Client.Testing.Shared.TestHelper.Setup();
+        }
     }
 
     class TeardownService : ITeardownService

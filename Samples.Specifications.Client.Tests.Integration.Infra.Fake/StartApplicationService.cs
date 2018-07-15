@@ -24,7 +24,6 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra.Fake
             //TODO: Strictly speaking this is not an appropriate place
             //for root object initialization - need to rethink the whole initialization process
             //for integration tests which MUST initialize their root object after the arrange step
-            // ReSharper disable once UnusedVariable - used to invoke bootstrapper initialization
             var bootstrapperBridge = new BootstrapperBridge();
             bootstrapperBridge.InitializeRootObject();
         }
