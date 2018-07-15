@@ -9,7 +9,7 @@ using Solid.Practices.IoC;
 using Solid.Practices.Middleware;
 using Solid.Practices.Modularity;
 
-namespace Samples.Specifications.Tests.EndToEnd.Infra.Launcher
+namespace Samples.Specifications.Tests.Infra.Launcher
 {
     public class Bootstrapper : IInitializable, 
         IExtensible<Bootstrapper>,         

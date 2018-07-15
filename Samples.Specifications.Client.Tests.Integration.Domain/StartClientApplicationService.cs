@@ -13,7 +13,7 @@ namespace Samples.Specifications.Client.Tests.Integration.Domain
         }
 
         public void StartApplication()
-        {
+        {            
             _startApplicationService.StartApplication(string.Empty);
         }
     }    

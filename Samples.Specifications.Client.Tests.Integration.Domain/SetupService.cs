@@ -1,4 +1,5 @@
-﻿using Samples.Specifications.Tests.Domain;
+﻿using Samples.Specifications.Client.Tests.Integration.Infra.Shared;
+using Samples.Specifications.Tests.Domain;
 
 namespace Samples.Specifications.Client.Tests.Integration.Domain
 {
@@ -29,7 +30,7 @@ namespace Samples.Specifications.Client.Tests.Integration.Domain
     {
         public void Teardown()
         {
-            
+            TestHelper.AfterTeardown();
         }
     }
 }

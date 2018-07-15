@@ -1,7 +1,7 @@
 ﻿using LogoFX.Bootstrapping;
 using Solid.Practices.IoC;
 
-namespace Samples.Specifications.Tests.EndToEnd.Infra.Launcher
+namespace Samples.Specifications.Tests.Infra.Launcher
 {    
     class Startup
     {
