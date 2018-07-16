@@ -1,5 +1,4 @@
-﻿using Caliburn.Micro;
-using LogoFX.Client.Testing.EndToEnd.FakeData.Shared;
+﻿using LogoFX.Client.Testing.EndToEnd.FakeData.Shared;
 using LogoFX.Client.Testing.Integration;
 using LogoFX.Client.Testing.Integration.SpecFlow;
 using Samples.Specifications.Client.Presentation.Shell.ViewModels;
@@ -31,9 +30,7 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra.Fake
         protected override void OnStart(object rootObject)
         {
             base.OnStart(rootObject);
-            var shell = (ShellViewModel)rootObject;
-            _structureHelper.SetRootObject(shell);
-            ScreenExtensions.TryActivate(shell);
+            RootObjectHelper.InitializeRootObject(_structureHelper, rootObject);
         }
 
         class BootstrapperBridge : IntegrationTestsBase<ShellViewModel, TestBootstrapper.SpecBased>.
