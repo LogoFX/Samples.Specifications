@@ -12,6 +12,9 @@ namespace Samples.Specifications.Client.Launcher
         {
         }
 
-        public override string[] Prefixes => new[] {"Samples.Specifications.Client", "Samples.Client"};
+        public override string[] Prefixes => new[]
+        {
+            "Samples.Specifications.Client.Presentation", "Samples.Client.Model", "Samples.Specifications.Client.Data"
+        };
     }
 }

@@ -1,9 +1,8 @@
-using Caliburn.Micro;
 using LogoFX.Client.Testing.Contracts;
 using LogoFX.Client.Testing.Integration;
 using Samples.Specifications.Client.Data.Fake.ProviderBuilders;
-using Samples.Specifications.Client.Presentation.Shell.ViewModels;
 using Samples.Specifications.Client.Tests.Integration.Infra.Core;
+using Samples.Specifications.Client.Tests.Integration.Infra.Shared;
 
 namespace Samples.Specifications.Client.Tests.Integration.Infra
 {
@@ -40,9 +39,7 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra
 
         protected override void OnStart(object rootObject)
         {
-            var shell = (ShellViewModel)rootObject;
-            StructureHelper.SetRootObject(shell);
-            ScreenExtensions.TryActivate(shell);            
+            RootObjectHelper.InitializeRootObject(StructureHelper, rootObject);
         }
     }
 }

@@ -9,7 +9,7 @@ using Solid.Practices.IoC;
 using Solid.Practices.Middleware;
 using Solid.Practices.Modularity;
 
-namespace Samples.Specifications.Tests.EndToEnd.Infra.Launcher
+namespace Samples.Specifications.Tests.Infra.Launcher
 {
     public class Bootstrapper : IInitializable, 
         IExtensible<Bootstrapper>,         
@@ -34,7 +34,10 @@ namespace Samples.Specifications.Tests.EndToEnd.Infra.Launcher
         /// </value>
         public IEnumerable<ICompositionModule> Modules { get; private set; } = new ICompositionModule[] { };
 
-        public string[] Prefixes { get; } = { "Samples.Specifications.Tests" };
+        public string[] Prefixes { get; } =
+        {
+            "Samples.Specifications.Tests", "Samples.Specifications.Client.Tests", "Samples.Specifications.Tests.Steps"
+        };
 
         public IDependencyRegistrator Registrator { get; }
 
