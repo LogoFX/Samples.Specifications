@@ -8,7 +8,7 @@ using Samples.Specifications.Client.Data.Fake.Shared;
 using Solid.Patterns.Builder;
 using Solid.Practices.IoC;
 
-namespace Samples.Specifications.Client.Data.Fake.ContextBased
+namespace Samples.Specifications.Client.Data.Fake.Providers.ContextBased
 {    
     [UsedImplicitly]
     public class Module : ProvidersModuleBase
