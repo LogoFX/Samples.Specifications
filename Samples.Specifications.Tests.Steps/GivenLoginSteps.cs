@@ -1,5 +1,5 @@
 ﻿#if FAKE
-using LogoFX.Client.Testing.Contracts;
+using Attest.Testing.Contracts;
 using Samples.Specifications.Client.Data.Fake.ProviderBuilders;
 #endif
 

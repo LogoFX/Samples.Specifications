@@ -1,4 +1,4 @@
-﻿using LogoFX.Client.Testing.EndToEnd.FakeData.Shared;
+﻿using Attest.Testing.Core.FakeData.Shared;
 using LogoFX.Client.Testing.Integration;
 using LogoFX.Client.Testing.Integration.SpecFlow;
 using Samples.Specifications.Client.Presentation.Shell.ViewModels;

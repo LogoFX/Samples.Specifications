@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
 using Attest.Fake.Registration;
+using Attest.Testing.Core.FakeData.Modularity;
+using Attest.Testing.Core.FakeData.Shared;
 using JetBrains.Annotations;
-using LogoFX.Client.Testing.EndToEnd.FakeData.Modularity;
-using LogoFX.Client.Testing.EndToEnd.FakeData.Shared;
 using Samples.Specifications.Client.Data.Fake.Shared;
 using Solid.Patterns.Builder;
 using Solid.Practices.IoC;

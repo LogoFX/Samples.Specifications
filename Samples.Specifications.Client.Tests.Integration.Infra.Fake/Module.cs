@@ -1,5 +1,6 @@
-﻿using LogoFX.Client.Testing.Contracts;
-using LogoFX.Client.Testing.EndToEnd.FakeData;
+﻿using Attest.Testing.Contracts;
+using Attest.Testing.Core.FakeData;
+using LogoFX.Client.Testing.Contracts;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
 
