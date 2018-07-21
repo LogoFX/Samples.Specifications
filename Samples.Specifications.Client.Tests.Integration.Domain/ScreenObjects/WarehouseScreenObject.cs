@@ -54,6 +54,8 @@ namespace Samples.Specifications.Client.Tests.Integration.Domain.ScreenObjects
                     }).Single();
         }
 
+        private int _temporaryHashCode;
+
         public void EditWarehouseItem(string kind, string newKind, double? newPrice, int? newQuantity)
         {
             var main = StructureHelper.GetMain();
@@ -61,6 +63,12 @@ namespace Samples.Specifications.Client.Tests.Integration.Domain.ScreenObjects
                 main.WarehouseItems.Items
                     .OfType<WarehouseItemViewModel>().Single(t => t.Model.Kind == kind);
 
+            _temporaryHashCode = itemViewModel.GetHashCode();
+            if (newKind != null)
+            {
+                itemViewModel.Model.Kind = newKind;
+            }
+            
             if (newPrice != null)
             {
                 itemViewModel.Model.Price = newPrice.Value;
@@ -74,7 +82,10 @@ namespace Samples.Specifications.Client.Tests.Integration.Domain.ScreenObjects
 
         public string GetErrorMessage()
         {
-            throw new System.NotImplementedException();
+            var main = StructureHelper.GetMain();
+            var match = main.WarehouseItems.Items.OfType<WarehouseItemViewModel>()
+                .Single(t => t.GetHashCode() == _temporaryHashCode);
+            return match.Model.Error;
         }
 
         public void DiscardChanges()

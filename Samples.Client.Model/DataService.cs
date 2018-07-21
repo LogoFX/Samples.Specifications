@@ -39,7 +39,7 @@ namespace Samples.Client.Model
         {
             await ServiceRunner.RunAsync(() =>
             {
-                var events = (_eventsProvider.GetLastEvents(_lastEvenTime))
+                var events = _eventsProvider.GetLastEvents(_lastEvenTime).ToArray()
                     .Select(EventMapper.MapToEvent)
                     .ToList();
 
@@ -76,13 +76,13 @@ namespace Samples.Client.Model
             await ServiceRunner.RunAsync(GetWarehouseItemsInternal);
         }
 
-        async Task<IWarehouseItem> IDataService.NewWarehouseItemAsync()
+        Task<IWarehouseItem> IDataService.NewWarehouseItemAsync()
         {
-            await Task.Delay(1000);
-            return new WarehouseItem("New Kind", 0d, 1)
-            {
-                IsNew = true
-            };
+            return ServiceRunner.RunWithResultAsync<IWarehouseItem>(() =>
+                new WarehouseItem("New Kind", 0d, 1)
+                {
+                    IsNew = true
+                });
         }
 
         async Task IDataService.SaveWarehouseItemAsync(IWarehouseItem item)
@@ -121,10 +121,8 @@ namespace Samples.Client.Model
         }
         
         async Task IDataService.ClearEventsAsync()
-        {
-            await Task.Delay(400);
-            _events.Clear();
-            await Task.Delay(300);
+        {     
+            await ServiceRunner.RunAsync(() => _events.Clear());            
         }
 
         IEnumerable<IEvent> IDataService.Events => _events;

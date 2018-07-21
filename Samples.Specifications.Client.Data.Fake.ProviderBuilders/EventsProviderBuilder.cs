@@ -38,7 +38,7 @@ namespace Samples.Specifications.Client.Data.Fake.ProviderBuilders
                 return;
             }
 
-            WithEvent(string.Format("Sample Message #{0}", _rnd.Next(1, 100)));
+            WithEvent($"Sample Message #{_rnd.Next(1, 100)}");
         }
 
         public static EventsProviderBuilder CreateBuilder()
@@ -46,7 +46,8 @@ namespace Samples.Specifications.Client.Data.Fake.ProviderBuilders
             return new EventsProviderBuilder();
         }
 
-        protected override IServiceCall<IEventsProvider> CreateServiceCall(IHaveNoMethods<IEventsProvider> serviceCallTemplate)
+        protected override IServiceCall<IEventsProvider> CreateServiceCall(
+            IHaveNoMethods<IEventsProvider> serviceCallTemplate)
         {
             var setup = serviceCallTemplate
                 .AddMethodCallWithResult<DateTime, IEnumerable<EventDto>>(

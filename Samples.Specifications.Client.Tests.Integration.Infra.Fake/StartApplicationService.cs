@@ -25,6 +25,13 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra.Fake
             //for integration tests which MUST initialize their root object after the arrange step
             var bootstrapperBridge = new BootstrapperBridge();
             bootstrapperBridge.InitializeRootObject();
+            //TODO: the same-thread functionality must be set after the bootstrapper init is finished
+            SetupCore();
+        }
+
+        private static void SetupCore()
+        {
+            LogoFX.Client.Testing.Shared.TestHelper.Setup();
         }
 
         protected override void OnStart(object rootObject)
