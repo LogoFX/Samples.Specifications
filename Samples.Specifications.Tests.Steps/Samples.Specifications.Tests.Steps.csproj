@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>Samples.Specifications.Tests.Steps</AssemblyName>
     <RootNamespace>Samples.Specifications.Tests.Steps</RootNamespace>
-    <Configurations>Debug;Release;EndToEndWithFake;IntegrationWithFake</Configurations>
+    <Configurations>Debug;Release;EndToEndWithFake;IntegrationWithFake;EndToEndWithReal</Configurations>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -13,7 +13,12 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EndToEndWithFake|AnyCPU'">
     <OutputPath>..\Bin\EndToEndWithFake\Infra\</OutputPath>
-    <DefineConstants>TRACE;FAKE;NETSTANDARD2_0</DefineConstants>
+    <DefineConstants>TRACE;FAKE;NETSTANDARD2_0;</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EndToEndWithReal|AnyCPU'">
+    <OutputPath>..\Bin\EndToEndWithReal\Infra\</OutputPath>
+    <DefineConstants>TRACE;REAL;NETSTANDARD2_0;</DefineConstants>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IntegrationWithFake|AnyCPU'">
@@ -34,6 +39,7 @@
     <ProjectReference Include="..\Samples.Specifications.Client.Data.Fake.ProviderBuilders\Samples.Specifications.Client.Data.Fake.ProviderBuilders.csproj" />
     <ProjectReference Include="..\Samples.Specifications.Tests.Data\Samples.Specifications.Tests.Data.csproj" />
     <ProjectReference Include="..\Samples.Specifications.Tests.Domain\Samples.Specifications.Tests.Domain.csproj" />
+    <ProjectReference Include="..\Samples.Specifications.Tests.Steps.Helpers.Contracts\Samples.Specifications.Tests.Steps.Helpers.Contracts.csproj" />
   </ItemGroup>
 
 </Project>

@@ -34,9 +34,9 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
 
         private ListViewRow GetRowByKind(string kind)
         {
-            var shell = StructureHelper.GetShell();
-            var dataGrid = shell.Get<ListView>(SearchCriteria.ByAutomationId("WarehouseItemsDataGrid"));
-            var match = dataGrid.Rows.Find(t => t.Cells["Kind"].Text == kind);
+            var shell = StructureHelper.GetShell();            
+            var dataGrid = DelegateExtensions.ExecuteWithResult(() => shell.Get<ListView>(SearchCriteria.ByAutomationId("WarehouseItemsDataGrid")));
+            var match = DelegateExtensions.ExecuteWithResult(() =>  dataGrid.Rows.Find(t => t.Cells["Kind"].Text == kind));
             if (match == null)
             {
                 throw new InvalidOperationException($"Warehouse item {kind} cannot be found");

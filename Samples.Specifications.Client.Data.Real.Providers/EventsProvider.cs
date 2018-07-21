@@ -9,7 +9,7 @@ namespace Samples.Specifications.Client.Data.Real.Providers
     {
         public IEnumerable<EventDto> GetLastEvents(DateTime lastEventTime)
         {
-            throw new NotImplementedException();
+            return new EventDto[] { };
         }
     }
 }
