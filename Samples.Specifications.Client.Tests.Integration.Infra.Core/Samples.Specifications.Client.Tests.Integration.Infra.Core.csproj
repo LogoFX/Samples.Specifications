@@ -65,10 +65,10 @@
       <HintPath>..\packages\LogoFX.Client.Mvvm.Commanding.Core.1.1.1-rc4\lib\netstandard2.0\LogoFX.Client.Mvvm.Commanding.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Mvvm.Model, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Mvvm.Model.1.1.1-rc4\lib\netstandard2.0\LogoFX.Client.Mvvm.Model.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Client.Mvvm.Model.1.1.1-rc5\lib\netstandard2.0\LogoFX.Client.Mvvm.Model.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Mvvm.Model.Contracts, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Mvvm.Model.1.1.1-rc4\lib\netstandard2.0\LogoFX.Client.Mvvm.Model.Contracts.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Client.Mvvm.Model.1.1.1-rc5\lib\netstandard2.0\LogoFX.Client.Mvvm.Model.Contracts.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Mvvm.ViewModel, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModel.Core.1.1.1-rc4\lib\netstandard2.0\LogoFX.Client.Mvvm.ViewModel.dll</HintPath>
