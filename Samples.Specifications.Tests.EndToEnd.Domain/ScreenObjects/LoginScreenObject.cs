@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading.Tasks;
 using LogoFX.Client.Testing.EndToEnd.White;
 using Samples.Specifications.Tests.Domain.ScreenObjects;
 using TestStack.White.UIItems;
@@ -52,9 +51,9 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
         public string GetErrorMessage()
         {
             var loginScreen = GetLoginScreen();
-            Task.Delay(3000);
             var errorLabel = DelegateExtensions.ExecuteWithResult(() =>
-                loginScreen.Get<Label>(SearchCriteria.ByAutomationId("Login_FailureTextBlock")));
+                    loginScreen.Get<Label>(SearchCriteria.ByAutomationId("Login_FailureTextBlock")), r => r.Text,
+                new[] {null, string.Empty});
             return errorLabel.Text;
         }
     }

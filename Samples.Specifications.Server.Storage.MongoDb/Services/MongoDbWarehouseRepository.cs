@@ -25,6 +25,7 @@ namespace Samples.Specifications.Server.Storage.MongoDb.Services
             GetCollection().Save(new MongoWarehouseItem
             {
                 Id = new ObjectId(),
+                ActualId = Guid.NewGuid(),
                 Kind = warehouseItem.Kind,
                 Price = warehouseItem.Price,
                 Quantity = warehouseItem.Quantity

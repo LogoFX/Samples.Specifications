@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Threading;
 
 namespace Samples.Specifications.Tests.EndToEnd.Domain
@@ -16,15 +17,15 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain
             Execute<TException>(action, 20, TimeSpan.FromMilliseconds(200));
         }
 
-        public static TResult ExecuteWithResult<TException, TResult>(this Func<TResult> func)
+        public static TResult ExecuteWithResult<TException, TResult>(this Func<TResult> func, Func<TResult, string> valueExtractor = null, string[] unacceptedValues = null)
             where TException : Exception
         {
-            return ExecuteWithResult<TException, TResult>(func, 20, TimeSpan.FromMilliseconds(200));
+            return ExecuteWithResult<TException, TResult>(func, 20, TimeSpan.FromMilliseconds(200), valueExtractor, unacceptedValues);
         }
 
-        public static TResult ExecuteWithResult<TResult>(this Func<TResult> func)            
+        public static TResult ExecuteWithResult<TResult>(this Func<TResult> func, Func<TResult, string> valueExtractor = null, string[] unacceptedValues = null)            
         {
-            return ExecuteWithResult<Exception, TResult>(func, 20, TimeSpan.FromMilliseconds(200));
+            return ExecuteWithResult<Exception, TResult>(func, 20, TimeSpan.FromMilliseconds(200), valueExtractor, unacceptedValues);
         }
 
         public static void Execute<TException>(this Action action, int numberOfRetries, TimeSpan waitingInterval)
@@ -50,7 +51,12 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain
             }
         }
 
-        public static TResult ExecuteWithResult<TException, TResult>(this Func<TResult> func, int numberOfRetries, TimeSpan waitingInterval)
+        public static TResult ExecuteWithResult<TException, TResult>(
+            this Func<TResult> func, 
+            int numberOfRetries, 
+            TimeSpan waitingInterval,
+            Func<TResult, string> valueExtractor = null, 
+            string[] unacceptedValues = null)
             where TException : Exception
         {
             TException lastException = null;
@@ -58,7 +64,16 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain
             {
                 try
                 {
-                    return func();
+                    var result = func();
+                    if (valueExtractor != null && unacceptedValues != null)
+                    {
+                        var value = valueExtractor(result);
+                        if (unacceptedValues.Contains(value))
+                        {
+                            throw new Exception($"Unaccepted value {value}");
+                        }
+                    }                   
+                    return result;
                 }
                 catch (TException ex)
                 {
