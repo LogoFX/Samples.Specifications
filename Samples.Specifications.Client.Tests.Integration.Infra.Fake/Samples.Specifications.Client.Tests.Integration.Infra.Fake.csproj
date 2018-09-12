@@ -54,7 +54,7 @@
       <HintPath>..\packages\Attest.Tests.Core.1.4.1-rc4\lib\netstandard2.0\Attest.Testing.Core.dll</HintPath>
     </Reference>
     <Reference Include="Attest.Testing.SpecFlow, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Attest.Tests.SpecFlow.1.4.1-rc4\lib\net461\Attest.Testing.SpecFlow.dll</HintPath>
+      <HintPath>..\packages\Attest.Tests.SpecFlow.1.4.1-rc5\lib\net461\Attest.Testing.SpecFlow.dll</HintPath>
     </Reference>
     <Reference Include="Caliburn.Micro, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Caliburn.Micro.Core.4.0.0-alpha.1\lib\netstandard1.0\Caliburn.Micro.dll</HintPath>
