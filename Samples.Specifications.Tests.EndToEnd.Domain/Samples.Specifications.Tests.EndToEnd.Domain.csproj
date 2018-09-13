@@ -158,9 +158,9 @@
       <Project>{59b69827-8fd3-4881-8bdc-420e71e14e34}</Project>
       <Name>Samples.Specifications.Tests.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Samples.Specifications.Tests.Steps.Helpers.Contracts\Samples.Specifications.Tests.Steps.Helpers.Contracts.csproj">
-      <Project>{80c26b46-70f2-42a4-939b-d6b289600ab6}</Project>
-      <Name>Samples.Specifications.Tests.Steps.Helpers.Contracts</Name>
+    <ProjectReference Include="..\Samples.Specifications.Tests.Steps.Real.Helpers.Contracts\Samples.Specifications.Tests.Steps.Real.Helpers.Contracts.csproj">
+      <Project>{06e87711-16c9-4c80-a9fa-967334f1ac7f}</Project>
+      <Name>Samples.Specifications.Tests.Steps.Real.Helpers.Contracts</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

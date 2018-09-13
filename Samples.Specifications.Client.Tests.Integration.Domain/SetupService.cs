@@ -1,5 +1,8 @@
 ﻿using Samples.Specifications.Client.Tests.Integration.Infra.Shared;
 using Samples.Specifications.Tests.Domain;
+#if REAL
+using Samples.Specifications.Tests.Steps.Helpers;
+#endif
 
 namespace Samples.Specifications.Client.Tests.Integration.Domain
 {
@@ -16,7 +19,7 @@ namespace Samples.Specifications.Client.Tests.Integration.Domain
         public void Setup()
         {
             _setupHelper.Initialize();
-            SetupCore();
+            //SetupCore();
         }
 #endif
 

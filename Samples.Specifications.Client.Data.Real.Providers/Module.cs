@@ -2,6 +2,7 @@
 using JetBrains.Annotations;
 using RestSharp;
 using Samples.Client.Data.Contracts.Providers;
+using Samples.Specifications.Client.Data.Real.Providers.Properties;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
 
@@ -19,10 +20,12 @@ namespace Samples.Specifications.Client.Data.Real.Providers
         }
 
         private string RetrieveEndpoint()
-        {            
-            var exeConfigPath = GetType().Assembly.Location;
-            var config = ConfigurationManager.OpenExeConfiguration(exeConfigPath);
-            return GetAppSetting(config, "ServerEndpoint");
+        {
+            return Settings.Default.ServerEndpoint;
+            //TODO: This doesn't work in case of Integration Tests - The runner doesn't copy the .config file to the temporary folder
+            //var exeConfigPath = GetType().Assembly.Location;
+            //var config = ConfigurationManager.OpenExeConfiguration(exeConfigPath);
+            //return GetAppSetting(config, "ServerEndpoint");
         }
 
         private string GetAppSetting(Configuration config, string key)

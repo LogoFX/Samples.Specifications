@@ -106,6 +106,10 @@
       <Project>{1677d87b-7e7b-436e-8e71-e98a242b89b4}</Project>
       <Name>Samples.Specifications.Tests.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Samples.Specifications.Tests.Steps.Contracts\Samples.Specifications.Tests.Steps.Contracts.csproj">
+      <Project>{c8285510-f319-4047-81df-9db97588074c}</Project>
+      <Name>Samples.Specifications.Tests.Steps.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Tests.Steps\Samples.Specifications.Tests.Steps.csproj">
       <Project>{f699e04d-89f3-4d19-b7c7-d5339b7c12ff}</Project>
       <Name>Samples.Specifications.Tests.Steps</Name>

@@ -10,9 +10,9 @@ namespace Samples.Specifications.Tests.Acceptance.Steps.Adapters
     [Binding]
     class GivenMainStepsAdapter
     {
-        public GivenMainSteps GivenMainSteps { get; set; }
+        public IGivenMainSteps GivenMainSteps { get; set; }
 
-        public GivenMainStepsAdapter(GivenMainSteps givenMainSteps)
+        public GivenMainStepsAdapter(IGivenMainSteps givenMainSteps)
         {
             GivenMainSteps = givenMainSteps;
         }
