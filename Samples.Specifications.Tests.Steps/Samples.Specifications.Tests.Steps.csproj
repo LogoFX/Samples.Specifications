@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>Samples.Specifications.Tests.Steps</AssemblyName>
     <RootNamespace>Samples.Specifications.Tests.Steps</RootNamespace>
-    <Configurations>Debug;Release;EndToEndWithFake;IntegrationWithFake;EndToEndWithReal</Configurations>
+    <Configurations>Debug;Release;EndToEndWithFake;IntegrationWithFake;EndToEndWithReal;IntegrationWithReal</Configurations>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -24,6 +24,11 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IntegrationWithFake|AnyCPU'">
     <OutputPath>..\Bin\IntegrationWithFake\</OutputPath>
     <DefineConstants>TRACE;FAKE;NETSTANDARD2_0;INTEGRATIONWITHFAKE</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IntegrationWithReal|AnyCPU'">
+    <OutputPath>..\Bin\IntegrationWithReal\</OutputPath>
+    <DefineConstants>TRACE;REAL</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>

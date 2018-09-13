@@ -50,6 +50,15 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'EndToEndWithReal|AnyCPU' ">
     <OutputPath>bin\EndToEndWithReal\</OutputPath>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'IntegrationWithReal|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Bin\IntegrationWithReal\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;FAKE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Attest.Fake.Builders, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Attest.Fake.Builders.1.2.1-rc3\lib\netstandard2.0\Attest.Fake.Builders.dll</HintPath>

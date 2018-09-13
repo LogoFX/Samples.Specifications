@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DDDE5F07-3DAF-4CE9-A1B8-12B40144B892}</ProjectGuid>
+    <ProjectGuid>{07D7CD03-B8C3-4775-9AF4-50D1AD1BEAB1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Samples.Specifications.Client.Tests.Integration.Infra.Fake</RootNamespace>
-    <AssemblyName>Samples.Specifications.Client.Tests.Integration.Infra.Fake</AssemblyName>
+    <RootNamespace>Samples.Specifications.Client.Tests.Integration.Infra.Real</RootNamespace>
+    <AssemblyName>Samples.Specifications.Client.Tests.Integration.Infra.Real</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
@@ -31,23 +32,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'IntegrationWithFake|AnyCPU'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\Bin\IntegrationWithFake\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'IntegrationWithReal|AnyCPU'">
-    <DebugSymbols>true</DebugSymbols>
     <OutputPath>..\Bin\IntegrationWithReal\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Attest.Fake.Core, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
@@ -86,8 +72,8 @@
     <Reference Include="LogoFX.Client.Bootstrapping.Adapters.Contracts, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Client.Bootstrapping.Adapters.Contracts.1.1.1-rc2\lib\netstandard2.0\LogoFX.Client.Bootstrapping.Adapters.Contracts.dll</HintPath>
     </Reference>
-    <Reference Include="LogoFX.Client.Bootstrapping.Adapters.SimpleContainer, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Bootstrapping.Adapters.SimpleContainer.1.2.1-rc2\lib\netstandard2.0\LogoFX.Client.Bootstrapping.Adapters.SimpleContainer.dll</HintPath>
+    <Reference Include="LogoFX.Client.Bootstrapping.Platform, Version=1.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Client.Bootstrapping.1.7.1-rc6\lib\net461\LogoFX.Client.Bootstrapping.Platform.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Bootstrapping.Testing, Version=1.7.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Client.Bootstrapping.Testing.1.7.1-rc5\lib\net461\LogoFX.Client.Bootstrapping.Testing.dll</HintPath>
@@ -112,15 +98,6 @@
     </Reference>
     <Reference Include="LogoFX.Client.Testing.Shared, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Client.Tests.Shared.1.2.1-rc2\lib\netstandard2.0\LogoFX.Client.Testing.Shared.dll</HintPath>
-    </Reference>
-    <Reference Include="LogoFX.Core, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Core.1.1.1-rc3\lib\netstandard2.0\LogoFX.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="LogoFX.Practices.IoC, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Practices.IoC.1.1.1-rc2\lib\netstandard2.0\LogoFX.Practices.IoC.dll</HintPath>
-    </Reference>
-    <Reference Include="LogoFX.Practices.IoC.Modularity, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Practices.IoC.1.1.1-rc2\lib\netstandard2.0\LogoFX.Practices.IoC.Modularity.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -163,8 +140,10 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    <Reference Include="System.ValueTuple, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.3.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Caliburn.Micro.4.0.0-alpha.1\lib\net45\System.Windows.Interactivity.dll</HintPath>
@@ -189,20 +168,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Samples.Client.Model.Contracts\Samples.Client.Model.Contracts.csproj">
-      <Project>{848AEEAE-E52F-4AA4-888C-C9A6D9005F01}</Project>
-      <Name>Samples.Client.Model.Contracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Samples.Client.Model.Shared\Samples.Client.Model.Shared.csproj">
-      <Project>{C68F2BE4-0D91-4854-B937-F903EDFA266A}</Project>
-      <Name>Samples.Client.Model.Shared</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Samples.Specifications.Client.Launcher.Shared\Samples.Specifications.Client.Launcher.Shared.csproj">
-      <Project>{99D98150-0E31-4394-817D-047D4637636F}</Project>
-      <Name>Samples.Specifications.Client.Launcher.Shared</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Client.Presentation.Shell\Samples.Specifications.Client.Presentation.Shell.csproj">
-      <Project>{5270f84d-8ff4-4756-83b0-78dd9777643d}</Project>
+      <Project>{5270F84D-8FF4-4756-83B0-78DD9777643D}</Project>
       <Name>Samples.Specifications.Client.Presentation.Shell</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Client.Tests.Integration.Infra.Core\Samples.Specifications.Client.Tests.Integration.Infra.Core.csproj">
@@ -210,7 +177,7 @@
       <Name>Samples.Specifications.Client.Tests.Integration.Infra.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Client.Tests.Integration.Infra.Shared\Samples.Specifications.Client.Tests.Integration.Infra.Shared.csproj">
-      <Project>{06cbecee-b066-42d5-8df6-47da317b2180}</Project>
+      <Project>{06CBECEE-B066-42D5-8DF6-47DA317B2180}</Project>
       <Name>Samples.Specifications.Client.Tests.Integration.Infra.Shared</Name>
     </ProjectReference>
   </ItemGroup>
