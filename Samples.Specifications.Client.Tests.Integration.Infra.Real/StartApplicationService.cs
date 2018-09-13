@@ -15,15 +15,14 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra.Real
             _structureHelper = structureHelper;
         }
 
-        protected override void RegisterFakes()
+        protected override void Setup()
         {
-            base.RegisterFakes();            
+            base.Setup();            
             //TODO: Strictly speaking this is not an appropriate place
             //for root object initialization - need to rethink the whole initialization process
             //for integration tests which MUST initialize their root object after the arrange step
             var bootstrapperBridge = new BootstrapperBridge();
-            bootstrapperBridge.InitializeRootObject();
-            //TODO: the same-thread functionality must be set after the bootstrapper init is finished
+            bootstrapperBridge.InitializeRootObject();            
             SetupCore();
         }
 

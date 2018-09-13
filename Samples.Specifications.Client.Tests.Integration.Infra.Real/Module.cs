@@ -1,11 +1,8 @@
-﻿using Attest.Testing.Contracts;
-using Attest.Testing.Core.FakeData;
-using LogoFX.Client.Testing.Contracts;
-using Samples.Specifications.Client.Tests.Integration.Infra.Real;
+﻿using LogoFX.Client.Testing.Contracts;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
 
-namespace Samples.Specifications.Client.Tests.Integration.Infra.Fake
+namespace Samples.Specifications.Client.Tests.Integration.Infra.Real
 {
     class Module : ICompositionModule<IDependencyRegistrator>
     {
