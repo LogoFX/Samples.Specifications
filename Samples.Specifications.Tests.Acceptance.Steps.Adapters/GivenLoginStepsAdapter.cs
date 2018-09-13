@@ -6,9 +6,9 @@ namespace Samples.Specifications.Tests.Acceptance.Steps.Adapters
     [Binding]
     class GivenLoginStepsAdapter
     {
-        public GivenLoginSteps GivenLoginSteps { get; set; }
+        public IGivenLoginSteps GivenLoginSteps { get; set; }
 
-        public GivenLoginStepsAdapter(GivenLoginSteps givenLoginSteps)
+        public GivenLoginStepsAdapter(IGivenLoginSteps givenLoginSteps)
         {
             GivenLoginSteps = givenLoginSteps;
         }

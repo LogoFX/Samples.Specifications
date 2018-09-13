@@ -1,7 +1,7 @@
-﻿using System.Configuration;
-using JetBrains.Annotations;
+﻿using JetBrains.Annotations;
 using RestSharp;
 using Samples.Client.Data.Contracts.Providers;
+using Samples.Specifications.Client.Data.Real.Providers.Properties;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
 
@@ -12,26 +12,10 @@ namespace Samples.Specifications.Client.Data.Real.Providers
     {
         public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
         {
-            dependencyRegistrator.RegisterSingleton<ILoginProvider, LoginProvider>();
-            dependencyRegistrator.RegisterSingleton<IWarehouseProvider, WarehouseProvider>();
-            dependencyRegistrator.RegisterSingleton<IEventsProvider, EventsProvider>();
-            dependencyRegistrator.RegisterSingleton(() => new RestClient(RetrieveEndpoint()));
-        }
-
-        private string RetrieveEndpoint()
-        {            
-            var exeConfigPath = GetType().Assembly.Location;
-            var config = ConfigurationManager.OpenExeConfiguration(exeConfigPath);
-            return GetAppSetting(config, "ServerEndpoint");
-        }
-
-        private string GetAppSetting(Configuration config, string key)
-        {
-            var element = config.AppSettings.Settings[key];
-            var value = element?.Value;
-            return string.IsNullOrEmpty(value) ? string.Empty : value;
-        }
+            dependencyRegistrator.AddSingleton<ILoginProvider, LoginProvider>()
+                .AddSingleton<IWarehouseProvider, WarehouseProvider>()
+                .AddSingleton<IEventsProvider, EventsProvider>()
+                .AddSingleton(() => new RestClient(Settings.Default.ServerEndpoint));
+        }             
     }
-
-
 }

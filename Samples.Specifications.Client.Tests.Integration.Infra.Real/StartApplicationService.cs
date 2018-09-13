@@ -1,11 +1,10 @@
-﻿using Attest.Testing.Core.FakeData.Shared;
-using LogoFX.Client.Testing.Integration;
+﻿using LogoFX.Client.Testing.Integration;
 using LogoFX.Client.Testing.Integration.SpecFlow;
 using Samples.Specifications.Client.Presentation.Shell.ViewModels;
 using Samples.Specifications.Client.Tests.Integration.Infra.Core;
 using Samples.Specifications.Client.Tests.Integration.Infra.Shared;
 
-namespace Samples.Specifications.Client.Tests.Integration.Infra.Fake
+namespace Samples.Specifications.Client.Tests.Integration.Infra.Real
 {
     class StartApplicationService : StartApplicationServiceBase
     {
@@ -18,8 +17,7 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra.Fake
 
         protected override void Setup()
         {
-            base.Setup();
-            BuildersCollectionContext.SerializeBuilders();
+            base.Setup();            
             //TODO: Strictly speaking this is not an appropriate place
             //for root object initialization - need to rethink the whole initialization process
             //for integration tests which MUST initialize their root object after the arrange step
