@@ -5,7 +5,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain
         string Path { get; }
     }
 
-    class ExecutableContainer : IExecutableContainer
+    internal sealed class ExecutableContainer : IExecutableContainer
     {
         public string Path => "Samples.Specifications.Client.Launcher.exe";
     }
