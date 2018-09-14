@@ -7,7 +7,7 @@ using Samples.Client.Data.Contracts.Providers;
 
 namespace Samples.Specifications.Client.Data.Real.Providers
 {
-    class WarehouseProvider : IWarehouseProvider
+    internal sealed class WarehouseProvider : IWarehouseProvider
     {
         private readonly RestClient _client;
 

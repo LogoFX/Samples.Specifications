@@ -5,8 +5,8 @@ using Solid.Practices.Modularity;
 
 namespace Samples.Specifications.Client.Data.Fake.ProviderBuilders.Setup
 {    
-    [UsedImplicitly]    
-    class Module : IPlainCompositionModule
+    [UsedImplicitly]
+    internal sealed class Module : IPlainCompositionModule
     {
         public void RegisterModule()
         {

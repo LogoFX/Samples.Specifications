@@ -7,7 +7,7 @@ using Samples.Client.Model.Contracts;
 namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
 {
     [UsedImplicitly]
-    public class WarehouseItemsViewModel : PropertyChangedBase
+    public sealed class WarehouseItemsViewModel : PropertyChangedBase
     {
         private readonly IDataService _dataService;
         private readonly IViewModelCreatorService _viewModelCreatorService;
@@ -29,7 +29,9 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             {
                 FactoryMethod = o =>
                 {
-                    var viewModel = _viewModelCreatorService.CreateViewModel<IWarehouseItem, WarehouseItemViewModel>((IWarehouseItem) o);
+                    var viewModel =
+                        _viewModelCreatorService.CreateViewModel<IWarehouseItem, WarehouseItemViewModel>(
+                            (IWarehouseItem) o);
                     return viewModel;
                 }
             }.WithSource(_dataService.WarehouseItems);

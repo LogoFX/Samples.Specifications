@@ -2,7 +2,7 @@
 
 namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
 {
-    public class WarehouseItemCommandsViewModel : PropertyChangedBase
+    public sealed class WarehouseItemCommandsViewModel : PropertyChangedBase
     {
         
     }

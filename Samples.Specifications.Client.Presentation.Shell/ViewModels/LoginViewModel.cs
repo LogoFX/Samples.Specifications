@@ -18,15 +18,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         {
             SavePassword = Settings.Default.SavePassword;
             UserName = Settings.Default.SavedUsername;
-            if (SavePassword)
-            {
-                Password = Settings.Default.SavedPassword;
-            }
-            else
-            {
-                Password = string.Empty;
-            }
-
+            Password = SavePassword ? Settings.Default.SavedPassword : string.Empty;
             _loginService = loginService;
             DisplayName = "Login View";
         }
@@ -142,22 +134,10 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         {
             Settings.Default.SavePassword = SavePassword;
             Settings.Default.SavedUsername = UserName;
-
-            if (SavePassword)
-            {
-                Settings.Default.SavedPassword = Password;
-            }
-            else
-            {
-                Settings.Default.SavedPassword = string.Empty;
-            }
+            Settings.Default.SavedPassword = SavePassword ? Password : string.Empty;
 
             TryClose(true);
-
-            if (LoggedInSuccessfully != null)
-            {
-                LoggedInSuccessfully(this, new EventArgs());
-            }
+            LoggedInSuccessfully?.Invoke(this, new EventArgs());
         }
 
         protected override void OnDeactivate(bool close)

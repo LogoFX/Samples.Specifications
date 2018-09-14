@@ -8,14 +8,11 @@ namespace Samples.Specifications.Client.Data.Fake.Containers
         IEnumerable<WarehouseItemDto> WarehouseItems { get; }
     }
 
-    public class WarehouseContainer : IWarehouseContainer
+    public sealed class WarehouseContainer : IWarehouseContainer
     {
         private readonly List<WarehouseItemDto> _warehouseItems = new List<WarehouseItemDto>();
 
-        public IEnumerable<WarehouseItemDto> WarehouseItems
-        {
-            get { return _warehouseItems; }
-        }
+        public IEnumerable<WarehouseItemDto> WarehouseItems => _warehouseItems;
 
         public void UpdateWarehouseItems(IEnumerable<WarehouseItemDto> warehouseItems)
         {

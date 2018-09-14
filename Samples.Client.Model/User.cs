@@ -2,7 +2,7 @@
 
 namespace Samples.Client.Model
 {
-    class User : AppModel, IUser
+    internal sealed class User : AppModel, IUser
     {
         public User(string username)
         {
