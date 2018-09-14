@@ -7,7 +7,7 @@ using TestStack.White.UIItems.WindowItems;
 
 namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
 {
-    internal class LoginScreenObject : ILoginScreenObject
+    class LoginScreenObject : ILoginScreenObject
     {
         public void Login()
         {

@@ -9,7 +9,7 @@ using Samples.Specifications.Client.Data.Fake.ProviderBuilders;
 namespace Samples.Specifications.Client.Data.Fake.Providers
 {
     [UsedImplicitly]
-    internal sealed class FakeEventsProvider : FakeProviderBase<EventsProviderBuilder, IEventsProvider>, IEventsProvider
+    class FakeEventsProvider : FakeProviderBase<EventsProviderBuilder, IEventsProvider>, IEventsProvider
     {
         public FakeEventsProvider(EventsProviderBuilder eventsProviderBuilder)
             :base(eventsProviderBuilder)

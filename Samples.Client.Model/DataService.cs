@@ -29,7 +29,8 @@ namespace Samples.Client.Model
             _warehouseProvider = warehouseProvider;
             _eventsProvider = eventsProvider;
 
-            _timer = new Timer {Interval = 1000};
+            _timer = new Timer();
+            _timer.Interval = 1000;
             _timer.Elapsed += TimerOnElapsed;
             _timer.Start();
         }

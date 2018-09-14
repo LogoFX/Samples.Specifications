@@ -4,7 +4,7 @@ using Samples.Specifications.Server.Storage.NDatabase;
 
 namespace Samples.Specifications.Tests.Steps.Helpers
 {
-    public sealed class NDatabaseSetupHelper : ISetupHelper
+    public class NDatabaseSetupHelper : ISetupHelper
     {
         public void AddWarehouseItem(WarehouseItemDto warehouseItem)
         {

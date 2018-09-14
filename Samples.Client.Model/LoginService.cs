@@ -7,7 +7,7 @@ using Samples.Client.Model.Shared;
 namespace Samples.Client.Model
 {
     [UsedImplicitly]
-    internal sealed class LoginService : ILoginService
+    class LoginService : ILoginService
     {
         private readonly ILoginProvider _loginProvider;
 

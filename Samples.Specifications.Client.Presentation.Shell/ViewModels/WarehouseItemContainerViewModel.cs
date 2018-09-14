@@ -5,7 +5,7 @@ using Samples.Client.Model.Contracts;
 
 namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
 {
-    public sealed class WarehouseItemContainerViewModel : EditableObjectViewModel<IWarehouseItem>
+    public class WarehouseItemContainerViewModel : EditableObjectViewModel<IWarehouseItem>
     {
         private readonly IWarehouseItem _model;
         private readonly IViewModelCreatorService _viewModelCreatorService;
@@ -24,14 +24,12 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
 
         private WarehouseItemCommandsViewModel _commands;
         public WarehouseItemCommandsViewModel Commands => _commands ??
-                                                          (_commands = _viewModelCreatorService
-                                                              .CreateViewModel<WarehouseItemCommandsViewModel>());
+                                                          (_commands = _viewModelCreatorService.CreateViewModel<WarehouseItemCommandsViewModel>());
 
         private WarehouseItemViewModel _item;
         public WarehouseItemViewModel Item => _item ??
                                               (_item =
-                                                  _viewModelCreatorService
-                                                      .CreateViewModel<IWarehouseItem, WarehouseItemViewModel>(_model));
+                                                  _viewModelCreatorService.CreateViewModel<IWarehouseItem, WarehouseItemViewModel>(_model));
 
         protected override async Task<bool> SaveMethod(IWarehouseItem model)
         {

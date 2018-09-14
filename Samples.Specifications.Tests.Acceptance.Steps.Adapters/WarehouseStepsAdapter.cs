@@ -7,7 +7,7 @@ using TechTalk.SpecFlow.Assist;
 namespace Samples.Specifications.Tests.Acceptance.Steps.Adapters
 {
     [Binding]
-    internal sealed class WarehouseStepsAdapter
+    class WarehouseStepsAdapter
     {
         public WarehouseSteps WarehouseSteps { get; set; }
 

@@ -6,7 +6,7 @@ using Samples.Specifications.Tests.Steps.Helpers;
 
 namespace Samples.Specifications.Client.Tests.Integration.Domain
 {
-    internal sealed class SetupService : ISetupService
+    class SetupService : ISetupService
     {
 #if REAL
         private readonly ISetupHelper _setupHelper;
@@ -36,7 +36,7 @@ namespace Samples.Specifications.Client.Tests.Integration.Domain
         //}
     }
 
-    internal sealed class TeardownService : ITeardownService
+    class TeardownService : ITeardownService
     {
         public void Teardown()
         {

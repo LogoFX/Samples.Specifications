@@ -11,7 +11,7 @@ using Solid.Practices.IoC;
 namespace Samples.Specifications.Client.Data.Fake.Providers.ContextBased
 {    
     [UsedImplicitly]
-    internal sealed class Module : ProvidersModuleBase
+    public class Module : ProvidersModuleBase
     {       
         protected override void OnRegisterProviders(IDependencyRegistrator dependencyRegistrator)
         {

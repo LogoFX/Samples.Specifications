@@ -5,12 +5,11 @@ using Solid.Practices.Modularity;
 
 namespace Samples.Specifications.Tests.EndToEnd.Infra.Real
 {
-    internal sealed class Module : ICompositionModule<IDependencyRegistrator>
+    class Module : ICompositionModule<IDependencyRegistrator>
     {
         public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
         {
-            dependencyRegistrator
-                .RegisterSingleton<IStartApplicationService, StartApplicationService.WithRealProviders>();
+            dependencyRegistrator.RegisterSingleton<IStartApplicationService, StartApplicationService.WithRealProviders>();
         }
     }
 }

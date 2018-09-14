@@ -4,7 +4,7 @@ using System.Windows.Data;
 
 namespace Samples.Specifications.Client.Presentation.Shell.Converters
 {
-    public sealed class BooleanToCommandsContextConverter : IValueConverter
+    public class BooleanToCommandsContextConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {

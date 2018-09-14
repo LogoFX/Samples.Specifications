@@ -3,7 +3,7 @@ using Samples.Specifications.Tests.Domain.ScreenObjects;
 
 namespace Samples.Specifications.Tests.Steps
 {
-    public sealed class LoginSteps
+    public class LoginSteps
     {
         private readonly ILoginScreenObject _loginScreenObject;
 

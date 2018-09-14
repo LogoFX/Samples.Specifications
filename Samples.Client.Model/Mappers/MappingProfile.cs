@@ -5,7 +5,7 @@ using Samples.Client.Model.Contracts;
 
 namespace Samples.Client.Model.Mappers
 {
-    internal sealed class MappingProfile : Profile
+    class MappingProfile : Profile
     {
         public MappingProfile()
         {

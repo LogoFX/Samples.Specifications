@@ -4,7 +4,7 @@ using Samples.Specifications.Tests.Domain;
 
 namespace Samples.Specifications.Tests.EndToEnd.Domain
 {
-    internal sealed class StartClientApplicationService : IStartClientApplicationService
+    class StartClientApplicationService : IStartClientApplicationService
     {        
         private readonly IStartApplicationService _startApplicationService;
         private readonly IExecutableContainer _executableContainer;

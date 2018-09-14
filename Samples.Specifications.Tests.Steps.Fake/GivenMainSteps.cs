@@ -5,7 +5,7 @@ using Samples.Specifications.Client.Data.Fake.ProviderBuilders;
 
 namespace Samples.Specifications.Tests.Steps
 {
-    internal sealed class GivenMainSteps : IGivenMainSteps
+    public class GivenMainSteps : IGivenMainSteps
     {
         private readonly IBuilderRegistrationService _builderRegistrationService;
         private readonly WarehouseProviderBuilder _warehouseProviderBuilder;

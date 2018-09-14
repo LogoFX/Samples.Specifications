@@ -4,7 +4,7 @@ using Samples.Client.Model.Contracts;
 
 namespace Samples.Client.Model.Mappers
 {
-    internal static class WarehouseMapper
+    static class WarehouseMapper
     {
         internal static IWarehouseItem MapToWarehouseItem(WarehouseItemDto warehouseItemDto)
         {

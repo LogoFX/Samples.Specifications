@@ -14,7 +14,7 @@ using Samples.Client.Model.Contracts;
 namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
 {
     [UsedImplicitly]
-    public sealed class MainViewModel : BusyScreen, IDisposable
+    public class MainViewModel : BusyScreen, IDisposable
     {
         private readonly IViewModelCreatorService _viewModelCreatorService;
         private readonly IDataService _dataService;
@@ -33,6 +33,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         }
 
         private IActionCommand _newCommand;
+
         public ICommand NewCommand =>
             _newCommand ?? (_newCommand = ActionCommand.When(() => true).Do(NewWarehouseItem));
 

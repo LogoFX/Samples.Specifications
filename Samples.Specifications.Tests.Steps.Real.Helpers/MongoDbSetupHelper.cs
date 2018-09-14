@@ -6,7 +6,7 @@ using Samples.Client.Data.Contracts.Dto;
 
 namespace Samples.Specifications.Tests.Steps.Helpers
 {
-    public sealed class MongoWarehouseItem
+    public class MongoWarehouseItem
     {
         public ObjectId Id { get; set; }
         [BsonElement("Kind")]
@@ -19,7 +19,7 @@ namespace Samples.Specifications.Tests.Steps.Helpers
         public Guid ActualId { get; set; }
     }
 
-    public sealed class MongoUser
+    public class MongoUser
     {
         public ObjectId Id { get; set; }
         [BsonElement("Login")]
@@ -28,7 +28,7 @@ namespace Samples.Specifications.Tests.Steps.Helpers
         public string Password { get; set; }        
     }
 
-    public sealed class MongoDbSetupHelper : ISetupHelper
+    public class MongoDbSetupHelper : ISetupHelper
     {
         private readonly MongoClient _client;
         private readonly IMongoDatabase _db;

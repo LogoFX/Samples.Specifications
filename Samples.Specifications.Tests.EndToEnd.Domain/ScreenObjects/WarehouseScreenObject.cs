@@ -10,7 +10,7 @@ using TestStack.White.UIItems.Finders;
 
 namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
 {
-    internal class WarehouseScreenObject : IWarehouseScreenObject
+    class WarehouseScreenObject : IWarehouseScreenObject
     {
         public StructureHelper StructureHelper { get; set; }
 

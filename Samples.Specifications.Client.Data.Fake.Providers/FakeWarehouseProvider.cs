@@ -11,7 +11,7 @@ using Samples.Specifications.Client.Data.Fake.ProviderBuilders;
 namespace Samples.Specifications.Client.Data.Fake.Providers
 {
     [UsedImplicitly]
-    internal sealed class FakeWarehouseProvider : FakeProviderBase<WarehouseProviderBuilder, IWarehouseProvider>, IWarehouseProvider
+    class FakeWarehouseProvider : FakeProviderBase<WarehouseProviderBuilder, IWarehouseProvider>, IWarehouseProvider
     {
         private readonly Random _random = new Random();
 

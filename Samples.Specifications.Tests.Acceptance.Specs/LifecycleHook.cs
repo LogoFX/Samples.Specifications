@@ -9,7 +9,7 @@ using TechTalk.SpecFlow;
 namespace Samples.Specifications.Tests.Acceptance.Specs
 {
     [Binding]
-    internal sealed class LifecycleHook
+    sealed class LifecycleHook
     {
         private readonly IIocContainer _iocContainer;
 

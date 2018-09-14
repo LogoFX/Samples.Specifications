@@ -3,7 +3,7 @@ using Samples.Specifications.Tests.Domain.ScreenObjects;
 
 namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
 {
-    internal class MainScreenObject : IMainScreenObject
+    class MainScreenObject : IMainScreenObject
     {
         public bool IsActive()
         {

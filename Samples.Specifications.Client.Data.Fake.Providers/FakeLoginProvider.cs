@@ -7,7 +7,7 @@ using Samples.Specifications.Client.Data.Fake.ProviderBuilders;
 namespace Samples.Specifications.Client.Data.Fake.Providers
 {
     [UsedImplicitly]
-    internal sealed class FakeLoginProvider : FakeProviderBase<LoginProviderBuilder, ILoginProvider>, ILoginProvider
+    class FakeLoginProvider : FakeProviderBase<LoginProviderBuilder, ILoginProvider>, ILoginProvider
     {
         public FakeLoginProvider(
             LoginProviderBuilder loginProviderBuilder,

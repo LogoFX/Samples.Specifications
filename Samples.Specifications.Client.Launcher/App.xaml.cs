@@ -12,8 +12,7 @@ namespace Samples.Specifications.Client.Launcher
             bootstrapper
                 .UseResolver()
                 .UseCommanding()
-                .UseShared()
-                .Initialize();
+                .UseShared().Initialize();            
         }
     }
 }

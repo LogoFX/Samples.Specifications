@@ -6,7 +6,7 @@ using Samples.Specifications.Tests.Domain.ScreenObjects;
 
 namespace Samples.Specifications.Tests.Steps
 {
-    public sealed class WarehouseSteps
+    public class WarehouseSteps
     {
         private readonly IWarehouseScreenObject _warehouseScreenObject;
 

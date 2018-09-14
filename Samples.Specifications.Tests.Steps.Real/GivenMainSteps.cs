@@ -4,7 +4,7 @@ using Samples.Specifications.Tests.Steps.Helpers;
 
 namespace Samples.Specifications.Tests.Steps
 {
-    internal sealed class GivenMainSteps : IGivenMainSteps
+    public class GivenMainSteps : IGivenMainSteps
     {
         private readonly ISetupHelper _setupHelper;
 

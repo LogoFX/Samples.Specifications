@@ -5,7 +5,7 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra.Core
     /// <summary>
     /// Represents structure helper which provides easier API for accessing different parts of application
     /// </summary>
-    public sealed class StructureHelper
+    public class StructureHelper
     {
         private ShellViewModel _rootObject;
 

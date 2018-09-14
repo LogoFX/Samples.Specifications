@@ -8,7 +8,7 @@ using Solid.Practices.Modularity;
 namespace Samples.Specifications.Client.Data.Real.Providers
 {    
     [UsedImplicitly]
-    internal sealed class Module : ICompositionModule<IDependencyRegistrator>
+    class Module : ICompositionModule<IDependencyRegistrator>
     {
         public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
         {

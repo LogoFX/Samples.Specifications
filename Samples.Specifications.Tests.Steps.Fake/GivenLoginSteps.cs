@@ -3,7 +3,7 @@ using Samples.Specifications.Client.Data.Fake.ProviderBuilders;
 
 namespace Samples.Specifications.Tests.Steps
 {
-    internal sealed class GivenLoginSteps : IGivenLoginSteps
+    public class GivenLoginSteps : IGivenLoginSteps
     {
         private readonly IBuilderRegistrationService _builderRegistrationService;
         private readonly LoginProviderBuilder _loginProviderBuilder;

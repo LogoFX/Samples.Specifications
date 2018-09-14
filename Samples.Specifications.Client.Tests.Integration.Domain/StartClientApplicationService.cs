@@ -3,7 +3,7 @@ using Samples.Specifications.Tests.Domain;
 
 namespace Samples.Specifications.Client.Tests.Integration.Domain
 {
-    internal sealed class StartClientApplicationService : IStartClientApplicationService
+    class StartClientApplicationService : IStartClientApplicationService
     {
         private readonly IStartApplicationService _startApplicationService;
 

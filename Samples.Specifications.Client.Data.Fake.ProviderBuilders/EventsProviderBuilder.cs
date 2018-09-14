@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Attest.Fake.Core;
 using Attest.Fake.Setup.Contracts;
 using LogoFX.Client.Data.Fake.ProviderBuilders;
 using Samples.Client.Data.Contracts.Dto;
 using Samples.Client.Data.Contracts.Providers;
+using Attest.Fake.Core;
 
 namespace Samples.Specifications.Client.Data.Fake.ProviderBuilders
 {    

@@ -16,7 +16,7 @@ using Solid.Practices.Scheduling;
 namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
 {
     [UsedImplicitly]
-    public sealed class ShellViewModel : Conductor<INotifyPropertyChanged>.Collection.OneActive, IDisposable
+    public class ShellViewModel : Conductor<INotifyPropertyChanged>.Collection.OneActive, IDisposable
     {
         private readonly IWindowManager _windowManager;
         private readonly IViewModelCreatorService _viewModelCreatorService;                        
@@ -33,6 +33,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         }
 
         private ICommand _closeCommand;
+
         public ICommand CloseCommand
         {
             get
@@ -47,6 +48,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         }
         
         private bool _isBusy;
+
         public bool IsBusy
         {
             get => _isBusy;
@@ -114,7 +116,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             base.OnDeactivate(close);
         }
 
-        private void OnLoggedInSuccessfully(object sender, EventArgs eventArgs)
+        protected virtual void OnLoggedInSuccessfully(object sender, EventArgs eventArgs)
         {
             ActivateItem(MainViewModel);
         }

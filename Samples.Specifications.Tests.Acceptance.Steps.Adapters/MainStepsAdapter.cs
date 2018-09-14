@@ -4,7 +4,7 @@ using TechTalk.SpecFlow;
 namespace Samples.Specifications.Tests.Acceptance.Steps.Adapters
 {
     [Binding]
-    internal sealed class MainStepsAdapter
+    class MainStepsAdapter
     {
         public MainSteps MainSteps { get; set; }
 

@@ -2,7 +2,7 @@
 
 namespace Samples.Client.Model.Shared.Validation
 {
-    public sealed class NumberValidation : ValidationAttribute
+    public class NumberValidation : ValidationAttribute
     {
         public NumberValidation()
         {

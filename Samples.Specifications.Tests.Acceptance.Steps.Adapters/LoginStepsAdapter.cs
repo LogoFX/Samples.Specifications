@@ -4,7 +4,7 @@ using TechTalk.SpecFlow;
 namespace Samples.Specifications.Tests.Acceptance.Steps.Adapters
 {
     [Binding]
-    internal sealed class LoginStepsAdapter
+    public sealed class LoginStepsAdapter
     {
         private LoginSteps LoginSteps { get; set; }
 
