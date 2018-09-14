@@ -11,7 +11,7 @@ using Solid.Practices.Modularity;
 
 namespace Samples.Specifications.Tests.Infra.Launcher
 {
-    public class Bootstrapper : IInitializable, 
+    public sealed class Bootstrapper : IInitializable, 
         IExtensible<Bootstrapper>,         
         ICompositionModulesProvider,
         IHaveRegistrator        

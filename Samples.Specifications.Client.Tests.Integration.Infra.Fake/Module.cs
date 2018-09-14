@@ -6,7 +6,7 @@ using Solid.Practices.Modularity;
 
 namespace Samples.Specifications.Client.Tests.Integration.Infra.Fake
 {
-    class Module : ICompositionModule<IDependencyRegistrator>
+    internal sealed class Module : ICompositionModule<IDependencyRegistrator>
     {
         public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
         {
