@@ -5,7 +5,7 @@ using Samples.Specifications.Tests.Domain.ScreenObjects;
 
 namespace Samples.Specifications.Tests.Steps
 {
-    public class GeneralSteps
+    public sealed class GeneralSteps
     {
         private readonly IStartClientApplicationService _startClientApplicationService;
         private readonly IShellScreenObject _shellScreenObject;

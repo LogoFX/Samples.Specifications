@@ -8,7 +8,7 @@ using TechTalk.SpecFlow.Assist;
 namespace Samples.Specifications.Tests.Acceptance.Steps.Adapters
 {
     [Binding]
-    class GivenMainStepsAdapter
+    internal sealed class GivenMainStepsAdapter
     {
         public IGivenMainSteps GivenMainSteps { get; set; }
 

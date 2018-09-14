@@ -1,6 +1,6 @@
 ﻿namespace Samples.Specifications.Tests.Data
 {
-    public class WarehouseItemAssertionTestData
+    public sealed class WarehouseItemAssertionTestData
     {        
         public string Kind { get; set; }
         public double Price { get; set; }
