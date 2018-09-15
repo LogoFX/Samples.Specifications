@@ -2,7 +2,7 @@
 
 namespace Samples.Specifications.Tests.Steps
 {
-    public class GivenLoginSteps : IGivenLoginSteps
+    internal sealed class GivenLoginSteps : IGivenLoginSteps
     {
         private readonly ISetupHelper _setupHelper;
 

@@ -4,7 +4,7 @@ using TechTalk.SpecFlow;
 namespace Samples.Specifications.Tests.Acceptance.Steps.Adapters
 {
     [Binding]
-    class ExitStepsAdapter
+    internal sealed class ExitStepsAdapter
     {
         public ExitSteps ExitSteps { get; set; }
 
