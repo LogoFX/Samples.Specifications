@@ -7,7 +7,7 @@ using Solid.Practices.Modularity;
 
 namespace Samples.Specifications.Tests.EndToEnd.Domain
 {
-    class Module : ICompositionModule<IDependencyRegistrator>
+    internal sealed class Module : ICompositionModule<IDependencyRegistrator>
     {
         public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
         {            

@@ -5,7 +5,7 @@ using TestStack.White.UIItems.WindowItems;
 
 namespace Samples.Specifications.Tests.EndToEnd.Domain
 {
-    class StructureHelper
+    internal class StructureHelper
     {
         internal Window GetShell()
         {
