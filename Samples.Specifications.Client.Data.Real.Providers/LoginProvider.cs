@@ -7,7 +7,7 @@ using Samples.Client.Data.Contracts.Providers;
 
 namespace Samples.Specifications.Client.Data.Real.Providers
 {
-    class LoginProvider : ILoginProvider
+    internal sealed class LoginProvider : ILoginProvider
     {        
         private readonly RestClient _client;
 

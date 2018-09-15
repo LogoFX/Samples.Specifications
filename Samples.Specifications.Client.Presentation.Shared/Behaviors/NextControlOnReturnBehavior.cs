@@ -5,7 +5,7 @@ using System.Windows.Interactivity;
 
 namespace Samples.Specifications.Client.Presentation.Shared.Behaviors
 {
-    public class NextControlOnReturnBehavior : Behavior<TextBox>
+    public sealed class NextControlOnReturnBehavior : Behavior<TextBox>
     {
         protected override void OnAttached()
         {
@@ -26,9 +26,8 @@ namespace Samples.Specifications.Client.Presentation.Shared.Behaviors
             if (e.Key == Key.Enter)
             {
                 TraversalRequest tRequest = new TraversalRequest(FocusNavigationDirection.Next);
-                UIElement keyboardFocus = Keyboard.FocusedElement as UIElement;
 
-                if (keyboardFocus != null)
+                if (Keyboard.FocusedElement is UIElement keyboardFocus)
                 {
                     keyboardFocus.MoveFocus(tRequest);
                 }

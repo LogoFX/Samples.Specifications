@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Samples.Client.Model.Shared.Validation
 {
-    public class DoublePositiveValidation : ValidationAttribute
+    public sealed class DoublePositiveValidation : ValidationAttribute
     {
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {

@@ -4,7 +4,7 @@ using Solid.Practices.Scheduling;
 
 namespace Samples.Client.Model
 {
-    abstract class ServiceBase
+    internal abstract class ServiceBase
     {
         private readonly TaskFactory _taskFactory = TaskFactoryFactory.CreateTaskFactory();
 

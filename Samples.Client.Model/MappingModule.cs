@@ -6,7 +6,7 @@ using Solid.Practices.Modularity;
 namespace Samples.Client.Model
 {   
     [UsedImplicitly]
-    class MappingModule : IPlainCompositionModule
+    internal sealed class MappingModule : IPlainCompositionModule
     {
         public void RegisterModule()
         {            
