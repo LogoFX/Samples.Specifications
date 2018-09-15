@@ -2,8 +2,8 @@
 using Solid.Practices.IoC;
 
 namespace Samples.Specifications.Tests.Infra.Launcher
-{    
-    class Startup
+{
+    internal sealed class Startup
     {
         private readonly IIocContainer _iocContainer;
 

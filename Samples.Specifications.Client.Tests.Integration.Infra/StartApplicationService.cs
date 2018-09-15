@@ -6,7 +6,7 @@ using Samples.Specifications.Client.Tests.Integration.Infra.Shared;
 
 namespace Samples.Specifications.Client.Tests.Integration.Infra
 {
-    public class StartApplicationService : StartApplicationServiceBase
+    public sealed class StartApplicationService : StartApplicationServiceBase
     {
         public StructureHelper StructureHelper { get; set; }
         private readonly IBuilderRegistrationService _builderRegistrationService;
