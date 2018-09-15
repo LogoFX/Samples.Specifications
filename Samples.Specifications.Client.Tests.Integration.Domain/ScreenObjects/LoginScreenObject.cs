@@ -3,7 +3,7 @@ using Samples.Specifications.Tests.Domain.ScreenObjects;
 
 namespace Samples.Specifications.Client.Tests.Integration.Domain.ScreenObjects
 {
-    class LoginScreenObject : ILoginScreenObject
+    internal sealed class LoginScreenObject : ILoginScreenObject
     {
         public StructureHelper StructureHelper { get; }
 
