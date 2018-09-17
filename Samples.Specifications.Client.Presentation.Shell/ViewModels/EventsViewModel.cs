@@ -19,61 +19,35 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         }
 
         private IActionCommand _clearCommand;
-        public ICommand ClearCommand
-        {
-            get
+        public ICommand ClearCommand =>
+            CommandFactory.GetCommand(ref _clearCommand, () => true, async () =>
             {
-                return _clearCommand ??
-                       (_clearCommand = ActionCommand
-                           .When(() => true)
-                           .Do(async () =>
-                           {
-                               IsBusy = true;
+                IsBusy = true;
 
-                               try
-                               {
-                                   await _dataService.ClearEventsAsync();
-                               }
+                try
+                {
+                    await _dataService.ClearEventsAsync();
+                }
 
-                               finally
-                               {
-                                   IsBusy = false;
-                               }
-                           }));
-            }
-        }
+                finally
+                {
+                    IsBusy = false;
+                }
+            });        
 
         private IActionCommand _startCommand;
-        public ICommand StartCommand
-        {
-            get
-            {
-                return _startCommand ??
-                       (_startCommand = ActionCommand
-                           .When(() => !_dataService.EventMonitoringStarted)
-                           .Do(() =>
-                           {
-                               _dataService.StartEventMonitoring();
-                           })                           
-                           .RequeryOnPropertyChanged(this, () => _dataService.EventMonitoringStarted));
-            }
-        }
+        public ICommand StartCommand =>
+            CommandFactory.GetCommand(ref _startCommand,
+                    () => !_dataService.EventMonitoringStarted,
+                    () => _dataService.StartEventMonitoring())
+                .RequeryOnPropertyChanged(this, () => _dataService.EventMonitoringStarted);    
 
         private IActionCommand _stopCommand;
-        public ICommand StopCommand
-        {
-            get
-            {
-                return _stopCommand ??
-                       (_stopCommand = ActionCommand
-                           .When(() => _dataService.EventMonitoringStarted)
-                           .Do(() =>
-                           {
-                               _dataService.StopEventMonitoring();
-                           })
-                           .RequeryOnPropertyChanged(this, () => _dataService.EventMonitoringStarted));
-            }
-        }
+        public ICommand StopCommand =>
+            CommandFactory.GetCommand(ref _stopCommand,
+                    () => _dataService.EventMonitoringStarted,
+                    () => _dataService.StopEventMonitoring())
+                .RequeryOnPropertyChanged(this, () => _dataService.EventMonitoringStarted);
 
         private IEnumerable _events;
         public IEnumerable Events => _events ?? (_events = CreateEvents());

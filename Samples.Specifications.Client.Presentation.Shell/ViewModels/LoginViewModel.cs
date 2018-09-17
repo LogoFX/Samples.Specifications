@@ -26,51 +26,36 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         public event EventHandler LoggedInSuccessfully;
 
         private IActionCommand _loginCommand;
-        public ICommand LoginCommand
-        {
-            get
-            {
-                return _loginCommand ??
-                       (_loginCommand = ActionCommand
-                           .When(() => !string.IsNullOrWhiteSpace(UserName) && !string.IsNullOrWhiteSpace(Password))
-                           .Do(async () =>
-                           {
-                               LoginFailureCause = null;
+        public ICommand LoginCommand =>
+            CommandFactory.GetCommand(ref _loginCommand,
+                () => !string.IsNullOrWhiteSpace(UserName) && !string.IsNullOrWhiteSpace(Password),
+                async () =>
+                {
+                    LoginFailureCause = null;
 
-                               try
-                               {
-                                   IsBusy = true;
-                                   await _loginService.LoginAsync(UserName, Password);
-                                   OnLoginSuccess();
-                               }
+                    try
+                    {
+                        IsBusy = true;
+                        await _loginService.LoginAsync(UserName, Password);
+                        OnLoginSuccess();
+                    }
 
-                               catch (Exception ex)
-                               {
-                                   LoginFailureCause = "Failed to log in: " + ex.Message;
-                               }
+                    catch (Exception ex)
+                    {
+                        LoginFailureCause = "Failed to log in: " + ex.Message;
+                    }
 
-                               finally
-                               {
-                                   Password = string.Empty;
-                                   IsBusy = false;
-                               }
-                           }));
-            }
-        }
+                    finally
+                    {
+                        Password = string.Empty;
+                        IsBusy = false;
+                    }
+                });
+
 
         private IActionCommand _cancelCommand;
-        public ICommand LoginCancelCommand
-        {
-            get
-            {
-                return _cancelCommand ??
-                       (_cancelCommand = ActionCommand.When(() => true)
-                           .Do(() =>
-                           {
-                               TryClose();
-                           }));
-            }
-        }
+        public ICommand LoginCancelCommand =>
+            CommandFactory.GetCommand(ref _cancelCommand, () => true, () => TryClose());
 
         private bool _savePassword;
         public bool SavePassword

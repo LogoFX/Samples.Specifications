@@ -34,20 +34,14 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
 
         private IActionCommand _newCommand;
         public ICommand NewCommand =>
-            _newCommand ?? (_newCommand = ActionCommand.When(() => true).Do(NewWarehouseItem));
+            CommandFactory.GetCommand(ref _newCommand, () => true, NewWarehouseItem);
 
         private IActionCommand _deleteCommand;
         public ICommand DeleteCommand
-        {
-            get
-            {
-                return _deleteCommand ??
-                       (_deleteCommand = ActionCommand
-                           .When(() => ActiveWarehouseItem?.Item.Model.IsNew == false)
-                           .Do(DeleteSelectedItem)
-                           .RequeryOnPropertyChanged(this, () => ActiveWarehouseItem));
-            }
-        }
+            => CommandFactory
+                .GetCommand(ref _deleteCommand, () => ActiveWarehouseItem?.Item.Model.IsNew == false,
+                    DeleteSelectedItem)
+                .RequeryOnPropertyChanged(this, () => ActiveWarehouseItem);        
 
         private WarehouseItemContainerViewModel _activeWarehouseItem;
         public WarehouseItemContainerViewModel ActiveWarehouseItem

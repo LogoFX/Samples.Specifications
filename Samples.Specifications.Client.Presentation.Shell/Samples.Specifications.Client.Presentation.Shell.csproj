@@ -220,6 +220,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Converters\BooleanToCommandsContextConverter.cs" />
+    <Compile Include="ViewModels\CommandFactory.cs" />
     <Compile Include="ViewModels\EventsViewModel.cs" />
     <Compile Include="ViewModels\EventViewModel.cs" />
     <Compile Include="ViewModels\ExitOptionsViewModel.cs" />

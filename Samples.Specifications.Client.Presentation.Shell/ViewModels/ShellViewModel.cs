@@ -32,19 +32,9 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             LoginViewModel.LoggedInSuccessfully += WeakDelegate.From(strongHandler);            
         }
 
-        private ICommand _closeCommand;
-        public ICommand CloseCommand
-        {
-            get
-            {
-                return _closeCommand ??
-                       (_closeCommand = ActionCommand
-                           .Do(() =>
-                           {
-                               TryClose();
-                           }));
-            }
-        }
+        private IActionCommand _closeCommand;
+        public ICommand CloseCommand =>
+            CommandFactory.GetCommand(ref _closeCommand, () => true, () => TryClose());        
         
         private bool _isBusy;
         public bool IsBusy
@@ -121,6 +111,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
 
         public void Dispose()
         {
+            _closeCommand?.Dispose();
             foreach (var item in Items.OfType<IDisposable>())
             {
                 item.Dispose();
