@@ -20,7 +20,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="LogoFX.Client.Data.Fake.ProviderBuilders" Version="1.1.1-rc2" />
+    <PackageReference Include="Attest.Fake.Builders" Version="1.2.1-rc4" />
   </ItemGroup>
 
   <ItemGroup>

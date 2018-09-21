@@ -75,10 +75,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Attest.Fake.Builders, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Attest.Fake.Builders.1.2.1-rc3\lib\netstandard2.0\Attest.Fake.Builders.dll</HintPath>
+      <HintPath>..\packages\Attest.Fake.Builders.1.2.1-rc4\lib\netstandard2.0\Attest.Fake.Builders.dll</HintPath>
     </Reference>
     <Reference Include="Attest.Fake.Core, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Attest.Fake.Core.1.2.1-rc3\lib\netstandard2.0\Attest.Fake.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Attest.Fake.Setup, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Attest.Fake.Setup.1.2.1-rc3\lib\netstandard2.0\Attest.Fake.Setup.dll</HintPath>
+    </Reference>
+    <Reference Include="Attest.Fake.Setup.Contracts, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Attest.Fake.Setup.1.2.1-rc3\lib\netstandard2.0\Attest.Fake.Setup.Contracts.dll</HintPath>
     </Reference>
     <Reference Include="FluentAssertions, Version=5.4.1.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
       <HintPath>..\packages\FluentAssertions.5.4.1\lib\net45\FluentAssertions.dll</HintPath>
@@ -107,6 +113,9 @@
     <Reference Include="Solid.Patterns.Builder, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Solid.Patterns.Builder.1.2.1-rc3\lib\netstandard2.0\Solid.Patterns.Builder.dll</HintPath>
     </Reference>
+    <Reference Include="Solid.Patterns.Visitor, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Patterns.Visitor.1.2.1-rc3\lib\netstandard2.0\Solid.Patterns.Visitor.dll</HintPath>
+    </Reference>
     <Reference Include="Solid.Practices.Composition, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Solid.Practices.Composition.Core.1.2.1-rc8\lib\netstandard2.0\Solid.Practices.Composition.dll</HintPath>
     </Reference>
@@ -124,6 +133,9 @@
     </Reference>
     <Reference Include="Solid.Practices.Modularity, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Solid.Practices.Modularity.1.2.1-rc3\lib\netstandard2.0\Solid.Practices.Modularity.dll</HintPath>
+    </Reference>
+    <Reference Include="Solid.Practices.Scheduling, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Practices.Scheduling.1.2.1-rc3\lib\netstandard2.0\Solid.Practices.Scheduling.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.AppContext, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
