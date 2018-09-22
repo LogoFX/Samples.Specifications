@@ -1,5 +1,4 @@
 ﻿using BoDi;
-using LogoFX.Client.Testing.Contracts;
 using Samples.Specifications.Tests.Infra.Launcher;
 using Solid.IoC.Adapters.ObjectContainer;
 using Solid.Practices.Composition;
@@ -28,8 +27,7 @@ namespace Samples.Specifications.Tests.Acceptance.Specs
         public void BeforeScenario()
         {
             _iocContainer.Initialize();
-            var setupService = _iocContainer.Resolve<ISetupService>();
-            setupService.Setup();
+            _iocContainer.Setup();            
         }
 
         [AfterScenario]
