@@ -91,7 +91,7 @@
       <HintPath>..\packages\LogoFX.Client.Tests.Integration.1.1.1-rc4\lib\netstandard2.0\LogoFX.Client.Testing.Integration.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Testing.Integration.SpecFlow, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Tests.Integration.SpecFlow.1.4.1-rc4\lib\net461\LogoFX.Client.Testing.Integration.SpecFlow.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Client.Tests.Integration.SpecFlow.1.4.1-rc5\lib\net461\LogoFX.Client.Testing.Integration.SpecFlow.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Testing.Shared, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Client.Tests.Shared.1.2.1-rc2\lib\netstandard2.0\LogoFX.Client.Testing.Shared.dll</HintPath>
