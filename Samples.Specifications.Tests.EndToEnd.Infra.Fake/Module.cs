@@ -15,6 +15,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Infra.Fake
             dependencyRegistrator
                 .AddSingleton<IStartApplicationService, StartApplicationService.WithFakeProviders>()
                 .AddSingleton<IBuilderRegistrationService, BuilderRegistrationService>()
+                .AddSingleton<ISetupService, SetupService>()
                 .RegisterBuilders();                        
         }        
     }

@@ -124,10 +124,21 @@
   <ItemGroup>
     <Compile Include="Module.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SetupService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Samples.Specifications.Tests.Domain\Samples.Specifications.Tests.Domain.csproj">
+      <Project>{59b69827-8fd3-4881-8bdc-420e71e14e34}</Project>
+      <Name>Samples.Specifications.Tests.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samples.Specifications.Tests.Steps.Real.Helpers.Contracts\Samples.Specifications.Tests.Steps.Real.Helpers.Contracts.csproj">
+      <Project>{06E87711-16C9-4C80-A9FA-967334F1AC7F}</Project>
+      <Name>Samples.Specifications.Tests.Steps.Real.Helpers.Contracts</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

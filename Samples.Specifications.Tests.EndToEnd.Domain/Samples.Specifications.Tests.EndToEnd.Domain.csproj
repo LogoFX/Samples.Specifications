@@ -153,9 +153,9 @@
     <Compile Include="ScreenObjects\MainScreenObject.cs" />
     <Compile Include="ScreenObjects\WarehouseScreenObject.cs" />
     <Compile Include="ScreenObjects\ShellScreenObject.cs" />
-    <Compile Include="SetupService.cs" />
     <Compile Include="StartClientApplicationService.cs" />
     <Compile Include="StructureHelper.cs" />
+    <Compile Include="TeardownService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

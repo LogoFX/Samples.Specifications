@@ -17,7 +17,8 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain
                 Assembly.GetExecutingAssembly())
                 .AddSingleton<IExecutableContainer, ExecutableContainer>()
                 .AddSingleton<StructureHelper, StructureHelper>()
-                .AddSingleton<IApplicationFacade, ApplicationFacade>();            
+                .AddSingleton<IApplicationFacade, ApplicationFacade>()
+                .AddSingleton<ITeardownService, TeardownService>();
         }
     }
 }

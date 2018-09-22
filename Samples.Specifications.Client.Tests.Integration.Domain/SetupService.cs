@@ -1,5 +1,6 @@
-﻿using Samples.Specifications.Client.Tests.Integration.Infra.Shared;
-using Samples.Specifications.Tests.Domain;
+﻿using LogoFX.Client.Testing.Contracts;
+using Samples.Specifications.Client.Tests.Integration.Infra.Shared;
+
 #if REAL
 using Samples.Specifications.Tests.Steps.Helpers;
 #endif

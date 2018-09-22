@@ -1,5 +1,5 @@
 ﻿using BoDi;
-using Samples.Specifications.Tests.Domain;
+using LogoFX.Client.Testing.Contracts;
 using Samples.Specifications.Tests.Infra.Launcher;
 using Solid.IoC.Adapters.ObjectContainer;
 using Solid.Practices.Composition;

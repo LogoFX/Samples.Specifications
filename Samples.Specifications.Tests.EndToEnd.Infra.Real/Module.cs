@@ -10,7 +10,8 @@ namespace Samples.Specifications.Tests.EndToEnd.Infra.Real
         public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
         {
             dependencyRegistrator
-                .RegisterSingleton<IStartApplicationService, StartApplicationService.WithRealProviders>();
+                .AddSingleton<IStartApplicationService, StartApplicationService.WithRealProviders>()
+                .AddSingleton<ISetupService, SetupService>();
         }
     }
 }
