@@ -20,7 +20,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
 
         private IActionCommand _clearCommand;
         public ICommand ClearCommand =>
-            CommandFactory.GetCommand(ref _clearCommand, () => true, async () =>
+            CommandFactory.GetCommand(ref _clearCommand, async () =>
             {
                 IsBusy = true;
 
@@ -38,15 +38,17 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         private IActionCommand _startCommand;
         public ICommand StartCommand =>
             CommandFactory.GetCommand(ref _startCommand,
-                    () => !_dataService.EventMonitoringStarted,
-                    () => _dataService.StartEventMonitoring())
+                    () => _dataService.StartEventMonitoring(),
+                    () => !_dataService.EventMonitoringStarted
+                    )
                 .RequeryOnPropertyChanged(this, () => _dataService.EventMonitoringStarted);    
 
         private IActionCommand _stopCommand;
         public ICommand StopCommand =>
             CommandFactory.GetCommand(ref _stopCommand,
-                    () => _dataService.EventMonitoringStarted,
-                    () => _dataService.StopEventMonitoring())
+                    () => _dataService.StopEventMonitoring(),
+                    () => _dataService.EventMonitoringStarted
+                    )
                 .RequeryOnPropertyChanged(this, () => _dataService.EventMonitoringStarted);
 
         private IEnumerable _events;

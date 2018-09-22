@@ -84,13 +84,13 @@
       <HintPath>..\packages\Caliburn.Micro.4.0.0-alpha.1\lib\net45\Caliburn.Micro.Platform.Core.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Bootstrapping, Version=1.7.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Bootstrapping.1.7.1-rc6\lib\netstandard2.0\LogoFX.Bootstrapping.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Bootstrapping.1.7.1-rc7\lib\netstandard2.0\LogoFX.Bootstrapping.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Bootstrapping.Middleware, Version=1.7.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Bootstrapping.1.7.1-rc6\lib\netstandard2.0\LogoFX.Bootstrapping.Middleware.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Bootstrapping.1.7.1-rc7\lib\netstandard2.0\LogoFX.Bootstrapping.Middleware.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Bootstrapping, Version=1.7.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Bootstrapping.Core.1.7.1-rc4\lib\netstandard2.0\LogoFX.Client.Bootstrapping.dll</HintPath>
+      <HintPath>..\packages\LogoFX.Client.Bootstrapping.Core.1.7.1-rc5\lib\netstandard2.0\LogoFX.Client.Bootstrapping.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Bootstrapping.Adapters.Contracts, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Client.Bootstrapping.Adapters.Contracts.1.1.1-rc2\lib\netstandard2.0\LogoFX.Client.Bootstrapping.Adapters.Contracts.dll</HintPath>

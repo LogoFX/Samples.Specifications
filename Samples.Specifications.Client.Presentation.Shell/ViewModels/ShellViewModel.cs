@@ -34,7 +34,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
 
         private IActionCommand _closeCommand;
         public ICommand CloseCommand =>
-            CommandFactory.GetCommand(ref _closeCommand, () => true, () => TryClose());        
+            CommandFactory.GetCommand(ref _closeCommand, () => TryClose(), () => true);        
         
         private bool _isBusy;
         public bool IsBusy

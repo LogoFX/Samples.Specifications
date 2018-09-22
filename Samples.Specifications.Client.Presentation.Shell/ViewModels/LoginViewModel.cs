@@ -27,8 +27,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
 
         private IActionCommand _loginCommand;
         public ICommand LoginCommand =>
-            CommandFactory.GetCommand(ref _loginCommand,
-                () => !string.IsNullOrWhiteSpace(UserName) && !string.IsNullOrWhiteSpace(Password),
+            CommandFactory.GetCommand(ref _loginCommand,                
                 async () =>
                 {
                     LoginFailureCause = null;
@@ -50,12 +49,12 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
                         Password = string.Empty;
                         IsBusy = false;
                     }
-                });
-
+                }, 
+                () => !string.IsNullOrWhiteSpace(UserName) && !string.IsNullOrWhiteSpace(Password));
 
         private IActionCommand _cancelCommand;
         public ICommand LoginCancelCommand =>
-            CommandFactory.GetCommand(ref _cancelCommand, () => true, () => TryClose());
+            CommandFactory.GetCommand(ref _cancelCommand, () => TryClose());
 
         private bool _savePassword;
         public bool SavePassword

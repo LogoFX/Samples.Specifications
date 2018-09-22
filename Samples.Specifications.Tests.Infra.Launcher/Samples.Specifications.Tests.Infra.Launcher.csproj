@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="LogoFX.Bootstrapping" Version="1.7.1-rc6" />
+    <PackageReference Include="LogoFX.Bootstrapping" Version="1.7.1-rc7" />
     <PackageReference Include="LogoFX.Client.Tests.Contracts" Version="1.1.1-rc3" />
     <PackageReference Include="Solid.Bootstrapping" Version="1.2.1-rc4" />
     <PackageReference Include="Solid.Extensibility" Version="1.2.1-rc3" />
