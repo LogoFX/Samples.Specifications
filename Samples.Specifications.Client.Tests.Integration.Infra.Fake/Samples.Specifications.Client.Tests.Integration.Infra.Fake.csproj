@@ -194,6 +194,7 @@
   <ItemGroup>
     <Compile Include="Module.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SetupService.cs" />
     <Compile Include="StartApplicationService.cs" />
   </ItemGroup>
   <ItemGroup>

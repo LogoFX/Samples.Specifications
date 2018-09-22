@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using LogoFX.Client.Testing.Contracts;
 using Samples.Specifications.Tests.Domain;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
@@ -9,8 +10,11 @@ namespace Samples.Specifications.Client.Tests.Integration.Domain
     {
         public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
         {
-            dependencyRegistrator.RegisterAutomagically(Assembly.LoadFrom("Samples.Specifications.Tests.Domain.dll"),
-                Assembly.GetExecutingAssembly());
+            dependencyRegistrator
+                .RegisterAutomagically(
+                Assembly.LoadFrom("Samples.Specifications.Tests.Domain.dll"),
+                Assembly.GetExecutingAssembly())
+                .AddSingleton<ITeardownService, TeardownService>();
         }
     }
 }

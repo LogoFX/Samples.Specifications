@@ -8,7 +8,9 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra.Real
     {
         public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
         {
-            dependencyRegistrator.AddSingleton<IStartApplicationService, StartApplicationService>();
+            dependencyRegistrator
+                .AddSingleton<IStartApplicationService, StartApplicationService>()
+                .AddSingleton<ISetupService, SetupService>();
         }
     }
 }
