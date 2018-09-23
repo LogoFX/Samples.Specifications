@@ -13,22 +13,22 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EndToEndWithFake|AnyCPU'">
     <OutputPath>..\Bin\EndToEndWithFake\Infra\</OutputPath>
-    <DefineConstants>TRACE;FAKE;NETSTANDARD2_0;</DefineConstants>
+    <DefineConstants>TRACE;NETSTANDARD2_0;</DefineConstants>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EndToEndWithReal|AnyCPU'">
     <OutputPath>..\Bin\EndToEndWithReal\Infra\</OutputPath>
-    <DefineConstants>TRACE;REAL;NETSTANDARD2_0;</DefineConstants>
+    <DefineConstants>TRACE;NETSTANDARD2_0;</DefineConstants>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IntegrationWithFake|AnyCPU'">
     <OutputPath>..\Bin\IntegrationWithFake\</OutputPath>
-    <DefineConstants>TRACE;FAKE;NETSTANDARD2_0;INTEGRATIONWITHFAKE</DefineConstants>
+    <DefineConstants>TRACE;NETSTANDARD2_0;</DefineConstants>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IntegrationWithReal|AnyCPU'">
     <OutputPath>..\Bin\IntegrationWithReal\</OutputPath>
-    <DefineConstants>TRACE;REAL</DefineConstants>
+    <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>
