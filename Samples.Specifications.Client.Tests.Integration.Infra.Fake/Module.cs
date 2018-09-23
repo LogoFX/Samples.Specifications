@@ -1,11 +1,13 @@
 ﻿using Attest.Testing.Contracts;
 using Attest.Testing.Core.FakeData;
+using JetBrains.Annotations;
 using LogoFX.Client.Testing.Contracts;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
 
 namespace Samples.Specifications.Client.Tests.Integration.Infra.Fake
 {
+    [UsedImplicitly]
     internal sealed class Module : ICompositionModule<IDependencyRegistrator>
     {
         public void RegisterModule(IDependencyRegistrator dependencyRegistrator)

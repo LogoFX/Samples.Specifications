@@ -1,5 +1,6 @@
 ﻿using Attest.Testing.Contracts;
 using Attest.Testing.Core.FakeData;
+using JetBrains.Annotations;
 using LogoFX.Client.Testing.Contracts;
 using LogoFX.Client.Testing.EndToEnd;
 using Samples.Specifications.Client.Data.Fake.Shared;
@@ -8,6 +9,7 @@ using Solid.Practices.Modularity;
 
 namespace Samples.Specifications.Tests.EndToEnd.Infra.Fake
 {
+    [UsedImplicitly]
     internal sealed class Module : ICompositionModule<IDependencyRegistrator>
     {                
         public void RegisterModule(IDependencyRegistrator dependencyRegistrator)

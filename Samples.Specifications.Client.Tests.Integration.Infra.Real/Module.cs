@@ -1,10 +1,12 @@
-﻿using LogoFX.Client.Testing.Contracts;
+﻿using JetBrains.Annotations;
+using LogoFX.Client.Testing.Contracts;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
 
 namespace Samples.Specifications.Client.Tests.Integration.Infra.Real
 {
-    class Module : ICompositionModule<IDependencyRegistrator>
+    [UsedImplicitly]
+    internal sealed class Module : ICompositionModule<IDependencyRegistrator>
     {
         public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
         {

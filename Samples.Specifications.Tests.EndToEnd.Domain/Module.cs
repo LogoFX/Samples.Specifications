@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using JetBrains.Annotations;
 using LogoFX.Client.Testing.Contracts;
 using LogoFX.Client.Testing.EndToEnd.White;
 using Samples.Specifications.Tests.Domain;
@@ -7,6 +8,7 @@ using Solid.Practices.Modularity;
 
 namespace Samples.Specifications.Tests.EndToEnd.Domain
 {
+    [UsedImplicitly]
     internal sealed class Module : ICompositionModule<IDependencyRegistrator>
     {
         public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
