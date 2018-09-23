@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{07D7CD03-B8C3-4775-9AF4-50D1AD1BEAB1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Samples.Specifications.Client.Tests.Integration.Infra.Real</RootNamespace>
+    <AssemblyName>Samples.Specifications.Client.Tests.Integration.Infra.Real</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'IntegrationWithReal|AnyCPU'">
+    <OutputPath>..\Bin\IntegrationWithReal\</OutputPath>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Attest.Fake.Core, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Attest.Fake.Core.1.2.1-rc3\lib\netstandard2.0\Attest.Fake.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Attest.Fake.Registration, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Attest.Fake.Registration.1.2.1-rc3\lib\netstandard2.0\Attest.Fake.Registration.dll</HintPath>
+    </Reference>
+    <Reference Include="Attest.Fake.Setup, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Attest.Fake.Setup.1.2.1-rc3\lib\netstandard2.0\Attest.Fake.Setup.dll</HintPath>
+    </Reference>
+    <Reference Include="Attest.Fake.Setup.Contracts, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Attest.Fake.Setup.1.2.1-rc3\lib\netstandard2.0\Attest.Fake.Setup.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Attest.Testing.Contracts, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Attest.Testing.Contracts.1.4.1-rc1\lib\netstandard2.0\Attest.Testing.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Attest.Testing.Core, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Attest.Tests.Core.1.4.1-rc4\lib\netstandard2.0\Attest.Testing.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Attest.Testing.SpecFlow, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Attest.Tests.SpecFlow.1.4.1-rc5\lib\net461\Attest.Testing.SpecFlow.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.Annotations, Version=2018.2.1.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <HintPath>..\packages\JetBrains.Annotations.2018.2.1\lib\net20\JetBrains.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.Bootstrapping, Version=1.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Bootstrapping.1.7.1-rc7\lib\netstandard2.0\LogoFX.Bootstrapping.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.Bootstrapping.Middleware, Version=1.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Bootstrapping.1.7.1-rc7\lib\netstandard2.0\LogoFX.Bootstrapping.Middleware.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.Client.Bootstrapping, Version=1.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Client.Bootstrapping.Core.1.7.1-rc5\lib\netstandard2.0\LogoFX.Client.Bootstrapping.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.Client.Bootstrapping.Adapters.Contracts, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Client.Bootstrapping.Adapters.Contracts.1.1.1-rc2\lib\netstandard2.0\LogoFX.Client.Bootstrapping.Adapters.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.Client.Core, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Client.Core.Core.1.2.1-rc3\lib\netstandard2.0\LogoFX.Client.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.Client.Core.Platform, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Client.Core.1.2.1-rc4\lib\net461\LogoFX.Client.Core.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.Client.Testing.Contracts, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Client.Tests.Contracts.1.1.1-rc3\lib\netstandard2.0\LogoFX.Client.Testing.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.Client.Testing.Infra, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Client.Tests.Shared.1.2.1-rc2\lib\netstandard2.0\LogoFX.Client.Testing.Infra.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.Client.Testing.Integration, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Client.Tests.Integration.1.1.1-rc4\lib\netstandard2.0\LogoFX.Client.Testing.Integration.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.Client.Testing.Integration.SpecFlow, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Client.Tests.Integration.SpecFlow.1.4.1-rc5\lib\net461\LogoFX.Client.Testing.Integration.SpecFlow.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.Client.Testing.Shared, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LogoFX.Client.Tests.Shared.1.2.1-rc2\lib\netstandard2.0\LogoFX.Client.Testing.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Solid.Bootstrapping, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Bootstrapping.1.2.1-rc4\lib\netstandard2.0\Solid.Bootstrapping.dll</HintPath>
+    </Reference>
+    <Reference Include="Solid.Extensibility, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Extensibility.1.2.1-rc3\lib\netstandard2.0\Solid.Extensibility.dll</HintPath>
+    </Reference>
+    <Reference Include="Solid.Patterns.Builder, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Patterns.Builder.1.2.1-rc3\lib\netstandard2.0\Solid.Patterns.Builder.dll</HintPath>
+    </Reference>
+    <Reference Include="Solid.Patterns.Visitor, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Patterns.Visitor.1.2.1-rc3\lib\netstandard2.0\Solid.Patterns.Visitor.dll</HintPath>
+    </Reference>
+    <Reference Include="Solid.Practices.Composition, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Practices.Composition.Core.1.2.1-rc8\lib\netstandard2.0\Solid.Practices.Composition.dll</HintPath>
+    </Reference>
+    <Reference Include="Solid.Practices.Composition.Client, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Practices.Composition.Client.1.2.1-rc4\lib\netstandard2.0\Solid.Practices.Composition.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Solid.Practices.Composition.Container, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Practices.Composition.Core.1.2.1-rc8\lib\netstandard2.0\Solid.Practices.Composition.Container.dll</HintPath>
+    </Reference>
+    <Reference Include="Solid.Practices.Composition.Contracts, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Practices.Composition.Core.1.2.1-rc8\lib\netstandard2.0\Solid.Practices.Composition.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Solid.Practices.Composition.Platform, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Practices.Composition.1.2.1-rc4\lib\net461\Solid.Practices.Composition.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Solid.Practices.IoC, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Practices.IoC.1.2.1-rc5\lib\netstandard2.0\Solid.Practices.IoC.dll</HintPath>
+    </Reference>
+    <Reference Include="Solid.Practices.Middleware, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Practices.Middleware.1.2.1-rc3\lib\netstandard2.0\Solid.Practices.Middleware.dll</HintPath>
+    </Reference>
+    <Reference Include="Solid.Practices.Modularity, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Practices.Modularity.1.2.1-rc3\lib\netstandard2.0\Solid.Practices.Modularity.dll</HintPath>
+    </Reference>
+    <Reference Include="Solid.Practices.Scheduling, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Solid.Practices.Scheduling.1.2.1-rc3\lib\netstandard2.0\Solid.Practices.Scheduling.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ValueTuple, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.3.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TechTalk.SpecFlow, Version=2.4.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpecFlow.2.4.0\lib\net45\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Module.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SetupService.cs" />
+    <Compile Include="StartApplicationService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Samples.Specifications.Client.Presentation.Shell\Samples.Specifications.Client.Presentation.Shell.csproj">
+      <Project>{5270F84D-8FF4-4756-83B0-78DD9777643D}</Project>
+      <Name>Samples.Specifications.Client.Presentation.Shell</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samples.Specifications.Client.Tests.Integration.Infra.Core\Samples.Specifications.Client.Tests.Integration.Infra.Core.csproj">
+      <Project>{207D3FBC-1EEC-43EA-BAED-E3C14F793119}</Project>
+      <Name>Samples.Specifications.Client.Tests.Integration.Infra.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samples.Specifications.Client.Tests.Integration.Infra.Shared\Samples.Specifications.Client.Tests.Integration.Infra.Shared.csproj">
+      <Project>{06CBECEE-B066-42D5-8DF6-47DA317B2180}</Project>
+      <Name>Samples.Specifications.Client.Tests.Integration.Infra.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samples.Specifications.Tests.Steps.Real.Helpers.Contracts\Samples.Specifications.Tests.Steps.Real.Helpers.Contracts.csproj">
+      <Project>{06E87711-16C9-4C80-A9FA-967334F1AC7F}</Project>
+      <Name>Samples.Specifications.Tests.Steps.Real.Helpers.Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\SpecFlow.2.4.0\build\SpecFlow.targets" Condition="Exists('..\packages\SpecFlow.2.4.0\build\SpecFlow.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\SpecFlow.2.4.0\build\SpecFlow.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecFlow.2.4.0\build\SpecFlow.targets'))" />
+  </Target>
+</Project>
