@@ -14,7 +14,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
             Window exitWindow = null;
             try
             {
-                exitWindow = application?.GetWindowEx("Exit options");
+                exitWindow = application?.GetWindowByTitle("Exit options");
             }
             catch (Exception e)
             {
@@ -25,7 +25,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
         public void ExitWithSave()
         {
             var application = ApplicationContext.Application;
-            var exitWindow = application?.GetWindowEx("Exit options");
+            var exitWindow = application?.GetWindowByTitle("Exit options");
 
             var exitControl = exitWindow?.Get<Button>("ExitWithSave");
             exitControl?.Click();
@@ -34,7 +34,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
         public void ExitWithoutSave()
         {
             var application = ApplicationContext.Application;
-            var exitWindow = application?.GetWindowEx("Exit options");
+            var exitWindow = application?.GetWindowByTitle("Exit options");
 
             var exitControl = exitWindow?.Get<Button>("ExitWithoutSave");
             exitControl?.Click();
@@ -43,7 +43,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
         public void Cancel()
         {
             var application = ApplicationContext.Application;
-            var exitWindow = application?.GetWindowEx("Exit options");
+            var exitWindow = application?.GetWindowByTitle("Exit options");
 
             var exitControl = exitWindow?.Get<Button>("ExitCancel");
             exitControl?.Click();

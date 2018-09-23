@@ -81,9 +81,6 @@
     <Reference Include="Attest.Testing.Core, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Attest.Tests.Core.1.4.1-rc4\lib\netstandard2.0\Attest.Testing.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Attest.Testing.SpecFlow, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Attest.Tests.SpecFlow.1.4.1-rc5\lib\net461\Attest.Testing.SpecFlow.dll</HintPath>
-    </Reference>
     <Reference Include="Caliburn.Micro, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Client.Mvvm.ViewModel.Extensions.Core.1.2.1-rc7\lib\netstandard2.0\Caliburn.Micro.dll</HintPath>
     </Reference>
@@ -149,9 +146,6 @@
     </Reference>
     <Reference Include="LogoFX.Client.Testing.Infra, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Client.Tests.Shared.1.2.1-rc2\lib\netstandard2.0\LogoFX.Client.Testing.Infra.dll</HintPath>
-    </Reference>
-    <Reference Include="LogoFX.Client.Testing.Integration.SpecFlow, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogoFX.Client.Tests.Integration.SpecFlow.1.4.1-rc5\lib\net461\LogoFX.Client.Testing.Integration.SpecFlow.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.Client.Testing.Shared, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Client.Tests.Shared.1.2.1-rc2\lib\netstandard2.0\LogoFX.Client.Testing.Shared.dll</HintPath>

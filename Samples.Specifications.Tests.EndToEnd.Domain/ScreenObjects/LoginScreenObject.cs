@@ -40,7 +40,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
         private Window GetLoginScreen()
         {
             var application = ApplicationContext.Application;
-            var loginScreen = application.GetWindowEx("Login View");
+            var loginScreen = application.GetWindowByTitle("Login View");
             if (loginScreen.Visible == false || loginScreen.Enabled == false)
             {
                 throw new Exception();
