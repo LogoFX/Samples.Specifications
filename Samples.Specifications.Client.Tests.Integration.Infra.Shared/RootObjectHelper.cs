@@ -6,7 +6,7 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra.Shared
 {
     public static class RootObjectHelper
     {
-        public static void InitializeRootObject(StructureHelper structureHelper, object rootObject)
+        public static void ActivateRootObject(StructureHelper structureHelper, object rootObject)
         {
             var shell = (ShellViewModel)rootObject;
             structureHelper.SetRootObject(shell);

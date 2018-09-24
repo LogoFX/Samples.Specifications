@@ -12,7 +12,8 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra.Fake
     {
         public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
         {
-            dependencyRegistrator.AddSingleton<IStartApplicationService, StartApplicationService>()
+            dependencyRegistrator
+                .AddSingleton<IStartApplicationService, StartApplicationService>()
                 .AddSingleton<IBuilderRegistrationService, BuilderRegistrationService>()
                 .AddSingleton<ISetupService, SetupService>();
         }

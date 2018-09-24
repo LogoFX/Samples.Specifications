@@ -22,23 +22,18 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra.Shared
             //for integration tests which MUST initialize their root object after the arrange step
             var bootstrapperBridge = new BootstrapperBridge();
             bootstrapperBridge.InitializeRootObject();
-            SetupCore();
+            LogoFX.Client.Testing.Shared.TestHelper.Setup();
         }
 
         protected virtual void OnArrange()
         {
             
-        }
-
-        private static void SetupCore()
-        {
-            LogoFX.Client.Testing.Shared.TestHelper.Setup();
-        }
+        }        
 
         protected override void OnStart(object rootObject)
         {
             base.OnStart(rootObject);
-            RootObjectHelper.InitializeRootObject(_structureHelper, rootObject);
+            RootObjectHelper.ActivateRootObject(_structureHelper, rootObject);
         }
 
         private sealed class BootstrapperBridge : IntegrationTestsBase<ShellViewModel, TestBootstrapper.SpecBased>.
