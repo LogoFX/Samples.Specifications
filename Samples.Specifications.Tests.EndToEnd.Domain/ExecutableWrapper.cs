@@ -1,11 +1,11 @@
 namespace Samples.Specifications.Tests.EndToEnd.Domain
 {
-    internal interface IExecutableContainer
+    internal interface IExecutableWrapper
     {
         string Path { get; }
     }
 
-    internal sealed class ExecutableContainer : IExecutableContainer
+    internal sealed class ExecutableWrapper : IExecutableWrapper
     {
         public string Path => "Samples.Specifications.Client.Launcher.exe";
     }

@@ -75,7 +75,7 @@
   <ItemGroup>
     <Compile Include="ApplicationExtensions.cs" />
     <Compile Include="DelegateExtensions.cs" />
-    <Compile Include="ExecutableContainer.cs" />
+    <Compile Include="ExecutableWrapper.cs" />
     <Compile Include="Module.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScreenObjects\ExitScreenObject.cs" />

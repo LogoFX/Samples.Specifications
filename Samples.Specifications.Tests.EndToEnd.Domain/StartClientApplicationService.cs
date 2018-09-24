@@ -7,21 +7,21 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain
     internal sealed class StartClientApplicationService : IStartClientApplicationService
     {        
         private readonly IStartApplicationService _startApplicationService;
-        private readonly IExecutableContainer _executableContainer;
+        private readonly IExecutableWrapper _executableWrapper;
 
         public StartClientApplicationService(
             IStartApplicationService startApplicationService,
-            IExecutableContainer executableContainer)
+            IExecutableWrapper executableWrapper)
         {
             _startApplicationService = startApplicationService;
-            _executableContainer = executableContainer;
+            _executableWrapper = executableWrapper;
         }
 
         public void StartApplication()
         {
             var testDirectory = Directory.GetCurrentDirectory();
             var applicationDirectory = Directory.GetParent(testDirectory).FullName;
-            var applicationPath = Path.Combine(applicationDirectory, _executableContainer.Path);
+            var applicationPath = Path.Combine(applicationDirectory, _executableWrapper.Path);
             Directory.SetCurrentDirectory(applicationDirectory);
             _startApplicationService.StartApplication(applicationPath);
             Directory.SetCurrentDirectory(testDirectory);
