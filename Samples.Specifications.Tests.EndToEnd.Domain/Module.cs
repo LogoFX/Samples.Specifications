@@ -17,7 +17,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain
                 .RegisterAutomagically(
                 Assembly.LoadFrom("Samples.Specifications.Tests.Domain.dll"),
                 Assembly.GetExecutingAssembly())
-                .AddSingleton<IExecutableWrapper, ExecutableWrapper>()
+                .AddSingleton<IApplicationPathWrapper, ApplicationPathWrapper>()
                 .AddSingleton<StructureHelper, StructureHelper>()
                 .AddSingleton<IApplicationFacade, ApplicationFacade>()
                 .AddSingleton<ITeardownService, TeardownService>();
