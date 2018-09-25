@@ -7,11 +7,11 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain
     internal sealed class StartClientApplicationService : IStartClientApplicationService
     {        
         private readonly IStartApplicationService _startApplicationService;
-        private readonly ApplicationPathWrapper _applicationPathWrapper;
+        private readonly IApplicationPathWrapper _applicationPathWrapper;
 
         public StartClientApplicationService(
             IStartApplicationService startApplicationService,
-            ApplicationPathWrapper applicationPathWrapper)
+            IApplicationPathWrapper applicationPathWrapper)
         {
             _startApplicationService = startApplicationService;
             _applicationPathWrapper = applicationPathWrapper;
