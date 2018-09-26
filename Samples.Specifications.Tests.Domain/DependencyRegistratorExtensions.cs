@@ -5,7 +5,7 @@ using Solid.Practices.IoC;
 
 namespace Samples.Specifications.Tests.Domain
 {
-    public static class ContainerRegistratorExtensions
+    public static class DependencyRegistratorExtensions
     {
         public static IDependencyRegistrator RegisterAutomagically(
             this IDependencyRegistrator dependencyRegistrator,
