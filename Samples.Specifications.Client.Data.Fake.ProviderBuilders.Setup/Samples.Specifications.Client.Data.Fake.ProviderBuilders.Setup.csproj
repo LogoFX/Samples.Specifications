@@ -79,7 +79,7 @@
       <Version>2018.2.1</Version>
     </PackageReference>
     <PackageReference Include="Solid.Practices.Modularity">
-      <Version>1.2.1-rc3</Version>
+      <Version>1.2.1-rc4</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

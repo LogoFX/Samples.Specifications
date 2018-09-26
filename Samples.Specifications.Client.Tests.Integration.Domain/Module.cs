@@ -1,7 +1,6 @@
 ﻿using System.Reflection;
 using JetBrains.Annotations;
 using LogoFX.Client.Testing.Contracts;
-using Samples.Specifications.Tests.Domain;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
 

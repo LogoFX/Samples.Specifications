@@ -1,6 +1,5 @@
 ﻿using System.Reflection;
 using JetBrains.Annotations;
-using Samples.Specifications.Tests.Domain;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
 

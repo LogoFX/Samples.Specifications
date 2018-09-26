@@ -11,10 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Solid.Practices.IoC" Version="1.2.1-rc5" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Samples.Specifications.Tests.Data\Samples.Specifications.Tests.Data.csproj" />
   </ItemGroup>
 
