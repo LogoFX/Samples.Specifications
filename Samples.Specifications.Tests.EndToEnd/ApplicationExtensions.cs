@@ -3,7 +3,7 @@ using System.Linq;
 using TestStack.White;
 using TestStack.White.UIItems.WindowItems;
 
-namespace Samples.Specifications.Tests.EndToEnd.Domain
+namespace Samples.Specifications.Tests.EndToEnd
 {
     public static class ApplicationExtensions
     {

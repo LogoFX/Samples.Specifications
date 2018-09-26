@@ -3,7 +3,7 @@ using TestStack.White.Factory;
 using TestStack.White.UIItems.Finders;
 using TestStack.White.UIItems.WindowItems;
 
-namespace Samples.Specifications.Tests.EndToEnd.Domain
+namespace Samples.Specifications.Tests.EndToEnd
 {
     internal class StructureHelper
     {

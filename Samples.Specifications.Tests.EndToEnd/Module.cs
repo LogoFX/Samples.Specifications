@@ -5,7 +5,7 @@ using LogoFX.Client.Testing.EndToEnd.White;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
 
-namespace Samples.Specifications.Tests.EndToEnd.Domain
+namespace Samples.Specifications.Tests.EndToEnd
 {
     [UsedImplicitly]
     internal sealed class Module : ICompositionModule<IDependencyRegistrator>

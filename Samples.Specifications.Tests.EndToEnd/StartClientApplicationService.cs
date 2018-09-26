@@ -2,7 +2,7 @@
 using LogoFX.Client.Testing.Contracts;
 using Samples.Specifications.Tests.Contracts;
 
-namespace Samples.Specifications.Tests.EndToEnd.Domain
+namespace Samples.Specifications.Tests.EndToEnd
 {
     internal sealed class StartClientApplicationService : IStartClientApplicationService
     {        

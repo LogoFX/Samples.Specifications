@@ -8,7 +8,7 @@ using Samples.Specifications.Tests.Data;
 using TestStack.White.UIItems;
 using TestStack.White.UIItems.Finders;
 
-namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
+namespace Samples.Specifications.Tests.EndToEnd.ScreenObjects
 {
     internal class WarehouseScreenObject : IWarehouseScreenObject
     {

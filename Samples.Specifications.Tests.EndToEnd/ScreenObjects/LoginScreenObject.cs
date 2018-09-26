@@ -5,7 +5,7 @@ using TestStack.White.UIItems;
 using TestStack.White.UIItems.Finders;
 using TestStack.White.UIItems.WindowItems;
 
-namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
+namespace Samples.Specifications.Tests.EndToEnd.ScreenObjects
 {
     internal class LoginScreenObject : ILoginScreenObject
     {

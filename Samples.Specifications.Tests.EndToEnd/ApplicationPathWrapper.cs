@@ -1,4 +1,4 @@
-namespace Samples.Specifications.Tests.EndToEnd.Domain
+namespace Samples.Specifications.Tests.EndToEnd
 {
     internal interface IApplicationPathWrapper
     {

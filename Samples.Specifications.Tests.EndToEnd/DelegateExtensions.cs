@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using System.Threading;
 
-namespace Samples.Specifications.Tests.EndToEnd.Domain
+namespace Samples.Specifications.Tests.EndToEnd
 {
     public static class DelegateExtensions
     {
