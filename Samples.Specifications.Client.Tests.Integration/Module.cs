@@ -4,7 +4,7 @@ using LogoFX.Client.Testing.Contracts;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
 
-namespace Samples.Specifications.Client.Tests.Integration.Domain
+namespace Samples.Specifications.Client.Tests.Integration
 {
     [UsedImplicitly]
     internal sealed class Module : ICompositionModule<IDependencyRegistrator>

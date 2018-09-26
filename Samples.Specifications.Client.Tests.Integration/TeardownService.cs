@@ -1,7 +1,7 @@
 ﻿using LogoFX.Client.Testing.Contracts;
 using Samples.Specifications.Client.Tests.Integration.Infra.Shared;
 
-namespace Samples.Specifications.Client.Tests.Integration.Domain
+namespace Samples.Specifications.Client.Tests.Integration
 {
     internal sealed class TeardownService : ITeardownService
     {

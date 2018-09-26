@@ -1,7 +1,7 @@
 ﻿using Samples.Specifications.Client.Tests.Integration.Infra.Core;
 using Samples.Specifications.Tests.Contracts.ScreenObjects;
 
-namespace Samples.Specifications.Client.Tests.Integration.Domain.ScreenObjects
+namespace Samples.Specifications.Client.Tests.Integration.ScreenObjects
 {
     internal sealed class LoginScreenObject : ILoginScreenObject
     {
