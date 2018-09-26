@@ -8,7 +8,8 @@ namespace Samples.Specifications.Tests.Steps
         private readonly IBuilderRegistrationService _builderRegistrationService;
         private readonly LoginProviderBuilder _loginProviderBuilder;
 
-        public GivenLoginSteps(IBuilderRegistrationService builderRegistrationService, 
+        public GivenLoginSteps(
+            IBuilderRegistrationService builderRegistrationService, 
             LoginProviderBuilder loginProviderBuilder)
         {
             _builderRegistrationService = builderRegistrationService;

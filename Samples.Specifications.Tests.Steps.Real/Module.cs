@@ -1,4 +1,6 @@
-﻿using JetBrains.Annotations;
+﻿using System.Reflection;
+using JetBrains.Annotations;
+using Samples.Specifications.Tests.Domain;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
 
@@ -9,8 +11,10 @@ namespace Samples.Specifications.Tests.Steps
     {
         public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
         {
-            dependencyRegistrator.AddSingleton<IGivenLoginSteps, GivenLoginSteps>()
-                .AddSingleton<IGivenMainSteps, GivenMainSteps>();
+            dependencyRegistrator
+                .RegisterAutomagically(
+                    Assembly.LoadFrom("Samples.Specifications.Tests.Steps.Contracts.dll"),
+                    Assembly.GetExecutingAssembly());
         }       
     }
 }
