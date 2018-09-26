@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Samples.Specifications.Tests.Data;
 
-namespace Samples.Specifications.Tests.Domain.ScreenObjects
+namespace Samples.Specifications.Tests.Contracts.ScreenObjects
 {
     public interface IWarehouseScreenObject
     {

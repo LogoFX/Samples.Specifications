@@ -90,13 +90,13 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Samples.Specifications.Tests.Contracts\Samples.Specifications.Tests.Contracts.csproj">
+      <Project>{5FD6C592-4F6B-4D1A-95E7-46038C91DA23}</Project>
+      <Name>Samples.Specifications.Tests.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Tests.Data\Samples.Specifications.Tests.Data.csproj">
       <Project>{1677d87b-7e7b-436e-8e71-e98a242b89b4}</Project>
       <Name>Samples.Specifications.Tests.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Samples.Specifications.Tests.Domain\Samples.Specifications.Tests.Domain.csproj">
-      <Project>{59b69827-8fd3-4881-8bdc-420e71e14e34}</Project>
-      <Name>Samples.Specifications.Tests.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

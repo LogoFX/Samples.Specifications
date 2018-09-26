@@ -70,10 +70,6 @@
       <Project>{82f76a12-e6ae-4339-8b0d-a8066b83420a}</Project>
       <Name>Samples.Specifications.Client.Data.Fake.Shared</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Samples.Specifications.Tests.Domain\Samples.Specifications.Tests.Domain.csproj">
-      <Project>{59b69827-8fd3-4881-8bdc-420e71e14e34}</Project>
-      <Name>Samples.Specifications.Tests.Domain</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Attest.Fake.Builders">

@@ -1,6 +1,6 @@
 ﻿using System.IO;
 using LogoFX.Client.Testing.Contracts;
-using Samples.Specifications.Tests.Domain;
+using Samples.Specifications.Tests.Contracts;
 
 namespace Samples.Specifications.Tests.EndToEnd.Domain
 {

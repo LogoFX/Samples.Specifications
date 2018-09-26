@@ -1,6 +1,6 @@
-﻿using JetBrains.Annotations;
+﻿using System.Reflection;
+using JetBrains.Annotations;
 using RestSharp;
-using Samples.Client.Data.Contracts.Providers;
 using Samples.Specifications.Client.Data.Real.Providers.Properties;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
@@ -12,9 +12,10 @@ namespace Samples.Specifications.Client.Data.Real.Providers
     {
         public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
         {
-            dependencyRegistrator.AddSingleton<ILoginProvider, LoginProvider>()
-                .AddSingleton<IWarehouseProvider, WarehouseProvider>()
-                .AddSingleton<IEventsProvider, EventsProvider>()
+            dependencyRegistrator
+                .RegisterAutomagically(
+                    Assembly.LoadFrom("Samples.Specifications.Client.Data.Contracts.Providers.dll"),
+                    Assembly.GetExecutingAssembly())
                 .AddSingleton(() => new RestClient(Settings.Default.ServerEndpoint));
         }             
     }

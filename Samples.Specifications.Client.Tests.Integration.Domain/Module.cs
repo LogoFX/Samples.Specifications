@@ -13,7 +13,7 @@ namespace Samples.Specifications.Client.Tests.Integration.Domain
         {
             dependencyRegistrator
                 .RegisterAutomagically(
-                Assembly.LoadFrom("Samples.Specifications.Tests.Domain.dll"),
+                Assembly.LoadFrom("Samples.Specifications.Tests.Contracts.dll"),
                 Assembly.GetExecutingAssembly())
                 .AddSingleton<ITeardownService, TeardownService>();
         }

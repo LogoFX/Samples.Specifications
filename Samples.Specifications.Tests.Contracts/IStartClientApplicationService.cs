@@ -1,4 +1,4 @@
-﻿namespace Samples.Specifications.Tests.Domain
+﻿namespace Samples.Specifications.Tests.Contracts
 {
     public interface IStartClientApplicationService
     {

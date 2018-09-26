@@ -40,8 +40,8 @@
   <ItemGroup>
     <ProjectReference Include="..\Samples.Client.Data.Contracts.Dto\Samples.Client.Data.Contracts.Dto.csproj" />
     <ProjectReference Include="..\Samples.Client.Data.Contracts.Providers\Samples.Client.Data.Contracts.Providers.csproj" />
+    <ProjectReference Include="..\Samples.Specifications.Tests.Contracts\Samples.Specifications.Tests.Contracts.csproj" />
     <ProjectReference Include="..\Samples.Specifications.Tests.Data\Samples.Specifications.Tests.Data.csproj" />
-    <ProjectReference Include="..\Samples.Specifications.Tests.Domain\Samples.Specifications.Tests.Domain.csproj" />
     <ProjectReference Include="..\Samples.Specifications.Tests.Steps.Contracts\Samples.Specifications.Tests.Steps.Contracts.csproj" />
   </ItemGroup>
 

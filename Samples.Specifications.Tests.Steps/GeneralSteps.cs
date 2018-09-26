@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
-using Samples.Specifications.Tests.Domain;
-using Samples.Specifications.Tests.Domain.ScreenObjects;
+using Samples.Specifications.Tests.Contracts;
+using Samples.Specifications.Tests.Contracts.ScreenObjects;
 
 namespace Samples.Specifications.Tests.Steps
 {

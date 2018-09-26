@@ -2,8 +2,8 @@
 using System.Linq;
 using Samples.Specifications.Client.Presentation.Shell.ViewModels;
 using Samples.Specifications.Client.Tests.Integration.Infra.Core;
+using Samples.Specifications.Tests.Contracts.ScreenObjects;
 using Samples.Specifications.Tests.Data;
-using Samples.Specifications.Tests.Domain.ScreenObjects;
 
 namespace Samples.Specifications.Client.Tests.Integration.Domain.ScreenObjects
 {

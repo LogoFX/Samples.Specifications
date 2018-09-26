@@ -26,7 +26,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Samples.Specifications.Client.Data.Fake.ProviderBuilders\Samples.Specifications.Client.Data.Fake.ProviderBuilders.csproj" />
-    <ProjectReference Include="..\Samples.Specifications.Tests.Domain\Samples.Specifications.Tests.Domain.csproj" />
     <ProjectReference Include="..\Samples.Specifications.Tests.Steps.Contracts\Samples.Specifications.Tests.Steps.Contracts.csproj" />
   </ItemGroup>
 

@@ -1,5 +1,5 @@
 using System;
-using Samples.Specifications.Tests.Domain.ScreenObjects;
+using Samples.Specifications.Tests.Contracts.ScreenObjects;
 
 namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
 {

@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
+using Samples.Specifications.Tests.Contracts.ScreenObjects;
 using Samples.Specifications.Tests.Data;
-using Samples.Specifications.Tests.Domain.ScreenObjects;
 using TestStack.White.UIItems;
 using TestStack.White.UIItems.Finders;
 
