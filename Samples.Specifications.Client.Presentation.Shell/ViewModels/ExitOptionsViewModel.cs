@@ -7,8 +7,11 @@ using LogoFX.Client.Mvvm.ViewModel.Shared;
 namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
 {
     public class ExitOptionsViewModel : Screen, IDisposable
-    {        
-        public override string DisplayName => "Exit options";
+    {
+        public ExitOptionsViewModel()
+        {
+            DisplayName = "Exit options";
+        }
 
         public MessageResult Result { get; private set; }
 
