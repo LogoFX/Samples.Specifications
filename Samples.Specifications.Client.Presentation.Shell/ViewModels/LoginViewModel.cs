@@ -19,9 +19,10 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
             SavePassword = Settings.Default.SavePassword;
             UserName = Settings.Default.SavedUsername;
             Password = SavePassword ? Settings.Default.SavedPassword : string.Empty;
-            _loginService = loginService;
-            DisplayName = "Login View";
+            _loginService = loginService;            
         }
+
+        public override string DisplayName => "Login View";
 
         public event EventHandler LoggedInSuccessfully;
 
