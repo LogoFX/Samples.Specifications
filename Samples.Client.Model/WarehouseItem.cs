@@ -1,11 +1,9 @@
 ﻿using System;
-using JetBrains.Annotations;
 using Samples.Client.Model.Contracts;
 using Samples.Client.Model.Shared.Validation;
 
 namespace Samples.Client.Model
-{
-    [UsedImplicitly]
+{    
     internal sealed class WarehouseItem : AppModel, IWarehouseItem
     {
         public WarehouseItem(
