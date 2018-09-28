@@ -116,7 +116,7 @@
       <Version>2018.2.1</Version>
     </PackageReference>
     <PackageReference Include="RestSharp">
-      <Version>106.1.0</Version>
+      <Version>106.4.2</Version>
     </PackageReference>
     <PackageReference Include="Solid.Practices.Modularity">
       <Version>1.2.1-rc4</Version>
