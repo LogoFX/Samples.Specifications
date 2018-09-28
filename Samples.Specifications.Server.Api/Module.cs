@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using System.Reflection;
 using AutoMapper;
+using JetBrains.Annotations;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.PlatformAbstractions;
 using Samples.Specifications.Server.Api.Mappers;
@@ -9,7 +10,8 @@ using Swashbuckle.AspNetCore.Swagger;
 
 namespace Samples.Specifications.Server.Api
 {
-    class Module : ICompositionModule<IServiceCollection>
+    [UsedImplicitly]
+    internal sealed class Module : ICompositionModule<IServiceCollection>
     {
         public void RegisterModule(IServiceCollection dependencyRegistrator)
         {

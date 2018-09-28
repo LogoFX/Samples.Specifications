@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using JetBrains.Annotations;
+using Microsoft.Extensions.DependencyInjection;
 using MongoDB.Driver;
 using Samples.Specifications.Server.Domain.Services.Storage;
 using Samples.Specifications.Server.Storage.MongoDb.Services;
@@ -6,7 +7,8 @@ using Solid.Practices.Modularity;
 
 namespace Samples.Specifications.Server.Storage.MongoDb
 {
-    class Module : ICompositionModule<IServiceCollection>
+    [UsedImplicitly]
+    internal sealed class Module : ICompositionModule<IServiceCollection>
     {
         public void RegisterModule(IServiceCollection dependencyRegistrator)
         {
