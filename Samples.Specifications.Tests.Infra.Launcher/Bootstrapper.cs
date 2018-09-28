@@ -26,12 +26,7 @@ namespace Samples.Specifications.Tests.Infra.Launcher
             Registrator = dependencyRegistrator;     
         }
 
-        /// <summary>
-        /// Gets the list of modules that were discovered during bootstrapper configuration.
-        /// </summary>
-        /// <value>
-        /// The list of modules.
-        /// </value>
+        /// <inheritdoc />       
         public IEnumerable<ICompositionModule> Modules { get; private set; } = new ICompositionModule[] { };
 
         public string[] Prefixes { get; } =
@@ -61,11 +56,7 @@ namespace Samples.Specifications.Tests.Infra.Launcher
             }                        
         }
 
-        /// <summary>
-        /// Extends the functionality by using the specified middleware.
-        /// </summary>
-        /// <param name="middleware">The middleware.</param>
-        /// <returns></returns>
+        /// <inheritdoc />       
         public Bootstrapper Use(
             IMiddleware<Bootstrapper> middleware)
         {
