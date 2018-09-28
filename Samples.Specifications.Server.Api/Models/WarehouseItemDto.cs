@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Samples.Specifications.Server.Host.Data
+namespace Samples.Specifications.Server.Api.Models
 {    
     public sealed class WarehouseItemDto
     {

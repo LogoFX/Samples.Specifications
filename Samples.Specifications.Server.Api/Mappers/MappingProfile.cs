@@ -1,9 +1,9 @@
 ﻿using System;
 using AutoMapper;
+using Samples.Specifications.Server.Api.Models;
 using Samples.Specifications.Server.Domain.Models;
-using Samples.Specifications.Server.Host.Data;
 
-namespace Samples.Specifications.Server.Host.Mappers
+namespace Samples.Specifications.Server.Api.Mappers
 {
     class MappingProfile : Profile
     {

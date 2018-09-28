@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Samples.Specifications.Server.Host.Controllers
+namespace Samples.Specifications.Server.Api.Controllers
 {
     [Route("api/[controller]")]
     public class ValuesController : Controller
