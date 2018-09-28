@@ -1,12 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>Samples.Specifications.Tests.Data</AssemblyName>
-    <RootNamespace>Samples.Specifications.Tests.Data</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>   
   </PropertyGroup>
 
-  <ItemGroup>   
-  </ItemGroup>
+  <PropertyGroup>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
 
 </Project>
