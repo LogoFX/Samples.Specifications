@@ -16,16 +16,19 @@ namespace Samples.Specifications.Client.Data.Fake.Providers.ContextBased
         protected override void OnRegisterProviders(IDependencyRegistrator dependencyRegistrator)
         {
             base.OnRegisterProviders(dependencyRegistrator);            
-            var typeMatches = Helper.FindProviderMatches();            
-            foreach (var typeMatch in typeMatches)
+            var matchingTypesMap = Helper.FindMatchingTypes();            
+            foreach (var matchingBuilderType in matchingTypesMap)
             {
-                var instance = Helper.CreateInstance(typeMatch.Key);
-                RegisterAllBuildersInternal(dependencyRegistrator, (IBuilder)instance, typeMatch.Key, typeMatch.Value);
+                var builderInstance = Helper.CreateInstance(matchingBuilderType.Key);
+                RegisterAllBuildersInternal(dependencyRegistrator, (IBuilder)builderInstance, matchingBuilderType.Key, matchingBuilderType.Value);
             }            
         }
 
-        private static void RegisterAllBuildersInternal(IDependencyRegistrator dependencyRegistrator,
-            IBuilder builderInstance, Type builderType, Type providerType)
+        private static void RegisterAllBuildersInternal(
+            IDependencyRegistrator dependencyRegistrator,
+            IBuilder builderInstance, 
+            Type builderType,
+            Type providerType)
         {
             var builders = BuildersCollectionContext.GetBuilders(builderType).OfType<IBuilder>().ToArray();
             if (builders.Length == 0)

@@ -85,7 +85,7 @@ namespace Samples.Specifications.Client.Data.Fake.Shared
             }
         }
 
-        public static Dictionary<Type, Type> FindProviderMatches()
+        public static Dictionary<Type, Type> FindMatchingTypes()
         {           
             var assembliesProvider = new ProvidersAssemblySourceProvider(PlatformProvider.Current.GetRootPath());
             var allAssemblies = assembliesProvider.Assemblies.ToArray();
@@ -98,14 +98,14 @@ namespace Samples.Specifications.Client.Data.Fake.Shared
                 .Where(t => t.IsInterface == false && t.IsAbstract == false && t.Name.EndsWith(BuilderEnding))
                 .Select(t => t.AsType())).ToArray();
             var typeMatches = new Dictionary<Type, Type>();
-            foreach (var type in matchingBuildersTypes)
+            foreach (var matchingBuilderType in matchingBuildersTypes)
             {
                 var matchingProviderType =
                     matchingProvidersTypes.FirstOrDefault(
-                        t => t.Name == "I" + type.Name.Replace(BuilderEnding, string.Empty));
+                        t => t.Name == "I" + matchingBuilderType.Name.Replace(BuilderEnding, string.Empty));
                 if (matchingProviderType != null)
                 {
-                    typeMatches.Add(type, matchingProviderType);
+                    typeMatches.Add(matchingBuilderType, matchingProviderType);
                 }
             }
             return typeMatches;
