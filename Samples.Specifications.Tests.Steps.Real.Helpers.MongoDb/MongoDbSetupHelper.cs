@@ -35,9 +35,9 @@ namespace Samples.Specifications.Tests.Steps.Real.Helpers
         private readonly IMongoDatabase _db;
         private const string DbName = "SamplesDB";
 
-        public MongoDbSetupHelper()
+        public MongoDbSetupHelper(MongoClient client)
         {
-            _client = new MongoClient("mongodb://localhost:27017");       
+            _client = client;       
             _db = _client.GetDatabase(DbName);                       
         }
 
