@@ -1,30 +1,37 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using MongoDB.Driver;
 using Samples.Specifications.Server.Domain.Models;
 using Samples.Specifications.Server.Domain.Services.Storage;
+using Samples.Specifications.Server.Storage.MongoDb.Models;
 using MongoUser = Samples.Specifications.Server.Storage.MongoDb.Models.MongoUser;
 
 namespace Samples.Specifications.Server.Storage.MongoDb.Services
 {
     public class MongoDbUserRepository : IUserRepository
     {
-        private readonly MongoDatabase _db;
+        private readonly IMongoDatabase _db;
+        private const string DbName = "SamplesDB";
 
         public MongoDbUserRepository(MongoClient client)
-        {                        
-            var server = client.GetServer();
-            _db = server.GetDatabase("SamplesDB");
+        {                                    
+            _db = client.GetDatabase(DbName);
         }
 
-        public IEnumerable<User> GetAll()
+        public async Task<IEnumerable<User>> GetAll()
         {
-            var rows = _db.GetCollection<MongoUser>("Users").FindAll().ToArray();
+            var rows = await GetCollection().Find(new FilterDefinitionBuilder<MongoUser>().Empty).ToListAsync();
             return rows.Select(t => new User
             {
                 Login = t.Login,
                 Password = t.Password
             });
+        }
+
+        private IMongoCollection<MongoUser> GetCollection()
+        {
+            return _db.GetCollection<MongoUser>("Users");
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Samples.Specifications.Server.Api.Mappers;
 using Samples.Specifications.Server.Api.Models;
@@ -19,9 +20,10 @@ namespace Samples.Specifications.Server.Api.Controllers
         }
         
         [HttpGet]
-        public IEnumerable<WarehouseItemDto> Get()
+        public async Task<IEnumerable<WarehouseItemDto>> Get()
         {
-            return _warehouseRepository.GetAll().Select(WarehouseMapper.MapToWarehouseItemDto);            
+            var warehouseItems = await _warehouseRepository.GetAll();
+            return warehouseItems.Select(WarehouseMapper.MapToWarehouseItemDto);            
         }               
         
         [HttpPost]
@@ -31,16 +33,16 @@ namespace Samples.Specifications.Server.Api.Controllers
         }
         
         [HttpPut("{id}")]
-        public IActionResult Put(Guid id, [FromBody]WarehouseItemDto warehouseItem)
+        public async Task<IActionResult> Put(Guid id, [FromBody]WarehouseItemDto warehouseItem)
         {
-            _warehouseRepository.Update(WarehouseMapper.MapToWarehouseItem(warehouseItem));
+            await _warehouseRepository.Update(WarehouseMapper.MapToWarehouseItem(warehouseItem));
             return Ok();
         }
         
         [HttpDelete("{id}")]
-        public IActionResult Delete(Guid id)
+        public async Task<IActionResult> Delete(Guid id)
         {
-            var item = _warehouseRepository.GetById(id);
+            var item = await _warehouseRepository.GetById(id);
             _warehouseRepository.Delete(item);
             return Ok();
         }

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Samples.Specifications.Server.Api.Mappers;
 using Samples.Specifications.Server.Api.Models;
@@ -18,9 +19,10 @@ namespace Samples.Specifications.Server.Api.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<UserDto> Get()
+        public async Task<IEnumerable<UserDto>> Get()
         {
-            return _userRepository.GetAll().Select(UserMapper.MapToUserDto);
+            var users = await _userRepository.GetAll();
+            return users.Select(UserMapper.MapToUserDto);
         }
     }
 }

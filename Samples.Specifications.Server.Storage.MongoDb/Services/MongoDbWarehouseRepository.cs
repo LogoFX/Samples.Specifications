@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using MongoDB.Bson;
 using MongoDB.Driver;
-using MongoDB.Driver.Builders;
 using Samples.Specifications.Server.Domain.Models;
 using Samples.Specifications.Server.Domain.Services.Storage;
 using Samples.Specifications.Server.Storage.MongoDb.Models;
@@ -12,17 +12,17 @@ namespace Samples.Specifications.Server.Storage.MongoDb.Services
 {
     public class MongoDbWarehouseRepository : IWarehouseRepository
     {
-        private readonly MongoDatabase _db;
+        private readonly IMongoDatabase _db;
+        private const string DbName = "SamplesDB";
 
         public MongoDbWarehouseRepository(MongoClient client)
         {            
-            var server = client.GetServer();
-            _db = server.GetDatabase("SamplesDB");
+            _db = client.GetDatabase(DbName);                        
         }
 
         public WarehouseItem Add(WarehouseItem warehouseItem)
         {
-            GetCollection().Save(new MongoWarehouseItem
+            GetCollection().InsertOne(new MongoWarehouseItem
             {
                 Id = new ObjectId(),
                 ActualId = Guid.NewGuid(),
@@ -33,9 +33,9 @@ namespace Samples.Specifications.Server.Storage.MongoDb.Services
             return warehouseItem;
         }
 
-        public IEnumerable<WarehouseItem> GetAll()
+        public async Task<IEnumerable<WarehouseItem>> GetAll()
         {
-            var rows = GetCollection().FindAll().ToArray();
+            var rows = await GetCollection().Find(new FilterDefinitionBuilder<MongoWarehouseItem>().Empty).ToListAsync();
             return rows.Select(t => new WarehouseItem
             {
                 Kind = t.Kind,
@@ -45,9 +45,9 @@ namespace Samples.Specifications.Server.Storage.MongoDb.Services
             });
         }
 
-        public WarehouseItem GetById(Guid id)
+        public async Task<WarehouseItem> GetById(Guid id)
         {
-            var item = GetByIdInternal(id);
+            var item = await GetByIdInternal(id);
             return new WarehouseItem
             {
                 Id = item.ActualId,
@@ -60,37 +60,34 @@ namespace Samples.Specifications.Server.Storage.MongoDb.Services
         public void Delete(WarehouseItem warehouseItem)
         {
             var collection = GetCollection();
-            var query = Query<MongoWarehouseItem>.EQ(e => e.ActualId, warehouseItem.Id);
-            collection.Remove(query);
+            collection.DeleteOne(Builders<MongoWarehouseItem>.Filter.Where(r => r.ActualId == warehouseItem.Id));
         }
 
-        public void Update(WarehouseItem warehouseItem)
+        public async Task Update(WarehouseItem warehouseItem)
         {
             var collection = GetCollection();
-            var query = Query<MongoWarehouseItem>.EQ(e => e.ActualId, warehouseItem.Id);
-            var oldItem = GetByIdInternal(warehouseItem.Id);
-            var operation = Update<MongoWarehouseItem>.Replace(new MongoWarehouseItem
-            {
-                ActualId = warehouseItem.Id,
-                Id = oldItem.Id,
-                Kind = warehouseItem.Kind,
-                Price = warehouseItem.Price,
-                Quantity = warehouseItem.Quantity
-            });
-            collection.Update(query, operation);
+            var oldItem = await GetByIdInternal(warehouseItem.Id);
+            collection.FindOneAndReplace(Builders<MongoWarehouseItem>.Filter.Where(r => r.ActualId == warehouseItem.Id),
+                new MongoWarehouseItem
+                {
+                    ActualId = warehouseItem.Id,
+                    Id = oldItem.Id,
+                    Kind = warehouseItem.Kind,
+                    Price = warehouseItem.Price,
+                    Quantity = warehouseItem.Quantity
+                });            
         }
 
-        private MongoCollection<MongoWarehouseItem> GetCollection()
+        private IMongoCollection<MongoWarehouseItem> GetCollection()
         {
             return _db.GetCollection<MongoWarehouseItem>("WarehouseItems");
         }
 
-        private MongoWarehouseItem GetByIdInternal(Guid id)
+        private async Task<MongoWarehouseItem> GetByIdInternal(Guid id)
         {
             var collection = GetCollection();
-            var query = Query<MongoWarehouseItem>.EQ(e => e.ActualId, id);
-            var rows = collection.Find(query);
-            return rows.SingleOrDefault();
+            var cursor = await collection.FindAsync(Builders<MongoWarehouseItem>.Filter.Where(r => r.ActualId == id));
+            return cursor.SingleOrDefault();
         }
     }
 }

@@ -12,10 +12,10 @@ namespace Samples.Specifications.Server.Storage.MongoDb
     {
         public void RegisterModule(IServiceCollection dependencyRegistrator)
         {
-            dependencyRegistrator.AddTransient<IWarehouseRepository, MongoDbWarehouseRepository>();
-            dependencyRegistrator.AddTransient<IUserRepository, MongoDbUserRepository>();
-            //TODO: put into configuration
-            dependencyRegistrator.AddTransient(r => new MongoClient("mongodb://localhost:27017"));
+            dependencyRegistrator.AddTransient<IWarehouseRepository, MongoDbWarehouseRepository>()
+                .AddTransient<IUserRepository, MongoDbUserRepository>()
+                //TODO: put into configuration
+                .AddTransient(r => new MongoClient("mongodb://localhost:27017"));
         }
     }
 }
