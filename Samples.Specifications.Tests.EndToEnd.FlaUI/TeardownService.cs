@@ -2,7 +2,7 @@
 
 namespace Samples.Specifications.Tests.EndToEnd
 {
-    class TeardownService : ITeardownService
+    internal sealed class TeardownService : ITeardownService
     {
         public void Teardown()
         {

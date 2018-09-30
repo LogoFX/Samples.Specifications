@@ -4,7 +4,7 @@ using FlaUI.UIA3;
 
 namespace Samples.Specifications.Tests.EndToEnd
 {
-    class StructureHelper
+    internal sealed class StructureHelper
     {
         internal Window GetShell()
         {
