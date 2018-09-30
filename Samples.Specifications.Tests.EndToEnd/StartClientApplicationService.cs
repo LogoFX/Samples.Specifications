@@ -25,9 +25,10 @@ namespace Samples.Specifications.Tests.EndToEnd
             //as Solid.Composition uses Directory.GetCurrentDirectory() internally
             //to locate the root folder
             //In Fake case it also allows correct builder serialization location
-            var testDirectory = Directory.GetCurrentDirectory();
-            var applicationDirectory = Directory.GetParent(testDirectory).FullName;
-            var applicationPath = Path.Combine(applicationDirectory, _applicationPathWrapper.Path);
+            var testDirectory = Directory.GetCurrentDirectory();            
+            var applicationPath = Path.Combine(testDirectory, _applicationPathWrapper.RelativePath,
+                _applicationPathWrapper.Executable);
+            var applicationDirectory = Path.GetDirectoryName(applicationPath);
             Directory.SetCurrentDirectory(applicationDirectory);
             _startApplicationService.StartApplication(applicationPath);
             Directory.SetCurrentDirectory(testDirectory);
