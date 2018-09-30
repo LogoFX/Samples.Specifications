@@ -15,7 +15,7 @@ namespace Samples.Specifications.Server.Storage.MongoDb
             dependencyRegistrator.AddTransient<IWarehouseRepository, MongoDbWarehouseRepository>()
                 .AddTransient<IUserRepository, MongoDbUserRepository>()
                 //TODO: put into configuration
-                .AddTransient(r => new MongoClient("mongodb://localhost:27017"));
+                .AddTransient<IMongoClient>(r => new MongoClient("mongodb://localhost:27017"));
         }
     }
 }

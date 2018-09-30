@@ -5,7 +5,6 @@ using MongoDB.Driver;
 using Samples.Specifications.Server.Domain.Models;
 using Samples.Specifications.Server.Domain.Services.Storage;
 using Samples.Specifications.Server.Storage.MongoDb.Models;
-using MongoUser = Samples.Specifications.Server.Storage.MongoDb.Models.MongoUser;
 
 namespace Samples.Specifications.Server.Storage.MongoDb.Services
 {
@@ -14,7 +13,7 @@ namespace Samples.Specifications.Server.Storage.MongoDb.Services
         private readonly IMongoDatabase _db;
         private const string DbName = "SamplesDB";
 
-        public MongoDbUserRepository(MongoClient client)
+        public MongoDbUserRepository(IMongoClient client)
         {                                    
             _db = client.GetDatabase(DbName);
         }

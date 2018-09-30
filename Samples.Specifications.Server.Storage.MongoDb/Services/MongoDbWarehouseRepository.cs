@@ -15,7 +15,7 @@ namespace Samples.Specifications.Server.Storage.MongoDb.Services
         private readonly IMongoDatabase _db;
         private const string DbName = "SamplesDB";
 
-        public MongoDbWarehouseRepository(MongoClient client)
+        public MongoDbWarehouseRepository(IMongoClient client)
         {            
             _db = client.GetDatabase(DbName);                        
         }

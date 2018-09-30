@@ -14,7 +14,7 @@ namespace Samples.Specifications.Tests.Steps.Real.Helpers
             dependencyRegistrator
                 .AddSingleton<ISetupHelper, MongoDbSetupHelper>()
                 //TODO: put into configuration
-                .AddTransient(() => new MongoClient("mongodb://localhost:27017"));
+                .AddTransient<IMongoClient>(() => new MongoClient("mongodb://localhost:27017"));
         }
     }
 }

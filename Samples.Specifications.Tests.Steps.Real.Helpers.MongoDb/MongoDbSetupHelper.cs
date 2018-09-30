@@ -31,11 +31,11 @@ namespace Samples.Specifications.Tests.Steps.Real.Helpers
 
     public sealed class MongoDbSetupHelper : ISetupHelper
     {
-        private readonly MongoClient _client;
+        private readonly IMongoClient _client;
         private readonly IMongoDatabase _db;
         private const string DbName = "SamplesDB";
 
-        public MongoDbSetupHelper(MongoClient client)
+        public MongoDbSetupHelper(IMongoClient client)
         {
             _client = client;       
             _db = _client.GetDatabase(DbName);                       
