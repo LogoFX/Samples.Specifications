@@ -27,9 +27,10 @@ namespace Samples.Specifications.Server.Api.Controllers
         }               
         
         [HttpPost]
-        public void Post([FromBody]WarehouseItemDto warehouseItem)
+        public async Task<IActionResult> Post([FromBody]WarehouseItemDto warehouseItem)
         {
-            _warehouseRepository.Add(WarehouseMapper.MapToWarehouseItem(warehouseItem));
+            await _warehouseRepository.Add(WarehouseMapper.MapToWarehouseItem(warehouseItem));
+            return Ok();
         }
         
         [HttpPut("{id}")]
@@ -43,7 +44,7 @@ namespace Samples.Specifications.Server.Api.Controllers
         public async Task<IActionResult> Delete(Guid id)
         {
             var item = await _warehouseRepository.GetById(id);
-            _warehouseRepository.Delete(item);
+            await _warehouseRepository.Delete(item);
             return Ok();
         }
     }

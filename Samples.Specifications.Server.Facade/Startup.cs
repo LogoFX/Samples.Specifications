@@ -20,8 +20,7 @@ namespace Samples.Specifications.Server.Facade
                     new Bootstrapper(services)
                         .UseCompositionModules<BootstrapperBase, IServiceCollection>()
                         .Use(new RegisterCoreMiddleware<BootstrapperBase>())
-                        .Use(new RegisterControllersMiddleware<BootstrapperBase>())
-                ;
+                        .Use(new RegisterControllersMiddleware<BootstrapperBase>());
             bootstrapper.Initialize();
         }
 
@@ -37,13 +36,15 @@ namespace Samples.Specifications.Server.Facade
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection().UseCors("AllowAny");
-
-            app.UseSwagger()
+            app
+                .UseHttpsRedirection()
+                .UseCors("AllowAny")
+                .UseSwagger()
                 .UseSwaggerUI(c =>
                 {
                     c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-                }).UseMvc();
+                })
+                .UseMvc();
         }
     }    
 }

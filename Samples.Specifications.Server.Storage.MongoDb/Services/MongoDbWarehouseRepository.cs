@@ -20,9 +20,9 @@ namespace Samples.Specifications.Server.Storage.MongoDb.Services
             _db = client.GetDatabase(DbName);                        
         }
 
-        public WarehouseItem Add(WarehouseItem warehouseItem)
+        public async Task<WarehouseItem> Add(WarehouseItem warehouseItem)
         {
-            GetCollection().InsertOne(new MongoWarehouseItem
+            await GetCollection().InsertOneAsync(new MongoWarehouseItem
             {
                 Id = new ObjectId(),
                 ActualId = Guid.NewGuid(),
@@ -57,10 +57,10 @@ namespace Samples.Specifications.Server.Storage.MongoDb.Services
             };
         }
 
-        public void Delete(WarehouseItem warehouseItem)
+        public async Task Delete(WarehouseItem warehouseItem)
         {
             var collection = GetCollection();
-            collection.DeleteOne(Builders<MongoWarehouseItem>.Filter.Where(r => r.ActualId == warehouseItem.Id));
+            await collection.DeleteOneAsync(Builders<MongoWarehouseItem>.Filter.Where(r => r.ActualId == warehouseItem.Id));
         }
 
         public async Task Update(WarehouseItem warehouseItem)

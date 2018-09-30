@@ -12,7 +12,8 @@ namespace Samples.Specifications.Server.Facade
         {
             dependencyRegistrator.AddCors(options =>
                     options.AddPolicy("AllowAny",
-                        builder => builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin())).AddMvc()
+                        builder => builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin()))
+                        .AddMvc()
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
     }
