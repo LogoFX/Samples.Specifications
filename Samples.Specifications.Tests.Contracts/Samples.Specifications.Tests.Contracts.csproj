@@ -1,17 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>Samples.Specifications.Tests.Contracts</AssemblyName>
-    <RootNamespace>Samples.Specifications.Tests.Contracts</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>   
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="ScreenObjects\" />
-  </ItemGroup>
-
+  <PropertyGroup>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+  
   <ItemGroup>
     <ProjectReference Include="..\Samples.Specifications.Tests.Data\Samples.Specifications.Tests.Data.csproj" />
   </ItemGroup>
-
+  
 </Project>
