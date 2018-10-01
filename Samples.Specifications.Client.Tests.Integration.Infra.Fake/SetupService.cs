@@ -1,4 +1,4 @@
-﻿using LogoFX.Client.Testing.Contracts;
+﻿using Attest.Testing.Contracts;
 
 namespace Samples.Specifications.Client.Tests.Integration.Infra.Fake
 {
