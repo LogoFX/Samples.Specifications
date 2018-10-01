@@ -2,7 +2,6 @@
 using Attest.Testing.Contracts;
 using JetBrains.Annotations;
 using LogoFX.Client.Testing.Contracts;
-using LogoFX.Client.Testing.EndToEnd;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
 
