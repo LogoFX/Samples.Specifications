@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading;
-using Samples.Specifications.Tests.Contracts;
+using LogoFX.Client.Testing.Contracts;
 using Samples.Specifications.Tests.Contracts.ScreenObjects;
 
 namespace Samples.Specifications.Tests.Steps

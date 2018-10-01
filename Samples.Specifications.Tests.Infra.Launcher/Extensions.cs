@@ -1,4 +1,4 @@
-using LogoFX.Client.Testing.Contracts;
+using Attest.Testing.Contracts;
 using Solid.Practices.IoC;
 
 namespace Samples.Specifications.Tests.Infra.Launcher

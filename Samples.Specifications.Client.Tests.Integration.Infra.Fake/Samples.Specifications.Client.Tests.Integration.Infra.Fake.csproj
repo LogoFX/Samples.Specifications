@@ -96,5 +96,22 @@
       <Name>Samples.Specifications.Client.Tests.Integration.Infra.Shared</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Attest.Testing.Contracts">
+      <Version>1.4.1-rc2</Version>
+    </PackageReference>
+    <PackageReference Include="Attest.Tests.Core">
+      <Version>1.4.1-rc4</Version>
+    </PackageReference>
+    <PackageReference Include="JetBrains.Annotations">
+      <Version>2018.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="LogoFX.Client.Tests.Contracts">
+      <Version>1.1.1-rc4</Version>
+    </PackageReference>
+    <PackageReference Include="Solid.Practices.Modularity">
+      <Version>1.2.1-rc4</Version>
+    </PackageReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

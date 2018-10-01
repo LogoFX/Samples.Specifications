@@ -1,4 +1,4 @@
-﻿using LogoFX.Client.Testing.Contracts;
+﻿using Attest.Testing.Contracts;
 using Samples.Specifications.Client.Tests.Integration.Infra.Shared;
 
 namespace Samples.Specifications.Client.Tests.Integration

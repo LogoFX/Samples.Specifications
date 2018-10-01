@@ -1,4 +1,5 @@
-﻿using JetBrains.Annotations;
+﻿using Attest.Testing.Contracts;
+using JetBrains.Annotations;
 using LogoFX.Client.Testing.Contracts;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
