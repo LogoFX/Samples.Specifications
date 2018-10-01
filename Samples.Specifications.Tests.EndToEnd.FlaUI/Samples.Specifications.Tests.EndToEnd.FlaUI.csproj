@@ -61,7 +61,6 @@
     <Compile Include="ApplicationContext.cs" />
     <Compile Include="ApplicationExtensions.cs" />
     <Compile Include="ApplicationFacade.cs" />
-    <Compile Include="ApplicationPathInfo.cs" />
     <Compile Include="DelegateExtensions.cs" />
     <Compile Include="Module.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

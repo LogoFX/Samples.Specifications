@@ -16,11 +16,9 @@ namespace Samples.Specifications.Tests.EndToEnd
             dependencyRegistrator                
                 .RegisterAutomagically(
                 Assembly.LoadFrom("Samples.Specifications.Tests.Contracts.dll"),
-                Assembly.GetExecutingAssembly())
-                .AddSingleton<IApplicationPathInfo, ApplicationPathInfo>()
+                Assembly.GetExecutingAssembly())                
                 .AddSingleton<StructureHelper, StructureHelper>()
-                .AddSingleton<IApplicationFacade, ApplicationFacade>()
-                .AddSingleton<IStartClientApplicationService, StartClientApplicationService>()
+                .AddSingleton<IApplicationFacade, ApplicationFacade>()                
                 .AddSingleton<ITeardownService, TeardownService>();
         }
     }
