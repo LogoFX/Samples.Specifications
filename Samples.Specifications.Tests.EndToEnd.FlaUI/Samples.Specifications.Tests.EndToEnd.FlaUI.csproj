@@ -61,7 +61,6 @@
     <Compile Include="ApplicationContext.cs" />
     <Compile Include="ApplicationExtensions.cs" />
     <Compile Include="ApplicationFacade.cs" />
-    <Compile Include="DelegateExtensions.cs" />
     <Compile Include="Module.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScreenObjects\ExitScreenObject.cs" />
@@ -100,6 +99,10 @@
     <ProjectReference Include="..\Samples.Specifications.Tests.Data\Samples.Specifications.Tests.Data.csproj">
       <Project>{1677D87B-7E7B-436E-8E71-E98A242B89B4}</Project>
       <Name>Samples.Specifications.Tests.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samples.Specifications.Tests.EndToEnd\Samples.Specifications.Tests.EndToEnd.csproj">
+      <Project>{6a61e744-1ce0-49e8-9e71-5bbd05083b31}</Project>
+      <Name>Samples.Specifications.Tests.EndToEnd</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
