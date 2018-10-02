@@ -1,5 +1,5 @@
-﻿using JetBrains.Annotations;
-using Samples.Client.Model.Contracts;
+﻿using System.Reflection;
+using JetBrains.Annotations;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
 
@@ -11,8 +11,8 @@ namespace Samples.Client.Model
         public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
         {
             dependencyRegistrator
-                .AddSingleton<ILoginService, LoginService>()
-                .AddSingleton<IDataService, DataService>();
+                .RegisterAutomagically(Assembly.LoadFrom("Samples.Client.Model.Contracts.dll"),
+                    Assembly.GetExecutingAssembly());
         }
     }
 }

@@ -1,11 +1,11 @@
 ﻿using System;
 using AutoMapper;
 using Samples.Specifications.Server.Api.Models;
-using Samples.Specifications.Server.Domain.Models;
+using Samples.Specifications.Server.Domain.Entities;
 
 namespace Samples.Specifications.Server.Api.Mappers
 {
-    class MappingProfile : Profile
+    internal class MappingProfile : Profile
     {
         public MappingProfile()
         {

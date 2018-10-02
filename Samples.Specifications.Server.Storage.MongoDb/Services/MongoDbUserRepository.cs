@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MongoDB.Driver;
-using Samples.Specifications.Server.Domain.Models;
+using Samples.Specifications.Server.Domain.Entities;
 using Samples.Specifications.Server.Domain.Services.Storage;
 using Samples.Specifications.Server.Storage.MongoDb.Models;
 

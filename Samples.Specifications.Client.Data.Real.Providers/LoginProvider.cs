@@ -16,7 +16,7 @@ namespace Samples.Specifications.Client.Data.Real.Providers
             _client = client;
         }
 
-        public void Login(string username, string password)
+        void ILoginProvider.Login(string username, string password)
         {
             //TODO: very naive ))
             var restRequest = new RestRequest("api/user", Method.GET) { RequestFormat = DataFormat.Json };

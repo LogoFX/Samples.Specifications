@@ -1,10 +1,10 @@
 using AutoMapper;
 using Samples.Specifications.Server.Api.Models;
-using Samples.Specifications.Server.Domain.Models;
+using Samples.Specifications.Server.Domain.Entities;
 
 namespace Samples.Specifications.Server.Api.Mappers
 {
-    static class UserMapper
+    internal static class UserMapper
     {
         internal static User MapToUser(UserDto userDto)
         {

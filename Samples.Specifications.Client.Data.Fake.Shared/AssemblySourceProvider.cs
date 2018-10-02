@@ -2,9 +2,9 @@
 
 namespace Samples.Specifications.Client.Data.Fake.Shared
 {
-    public class BuildersAssemblySourceProvider : AssemblySourceProviderBase
+    internal sealed class BuildersAssemblySourceProvider : AssemblySourceProviderBase
     {
-        public BuildersAssemblySourceProvider(string rootPath) : base(rootPath)
+        internal BuildersAssemblySourceProvider(string rootPath) : base(rootPath)
         {
         }
 
@@ -14,7 +14,7 @@ namespace Samples.Specifications.Client.Data.Fake.Shared
         }
     }
 
-    public class ProvidersAssemblySourceProvider : AssemblySourceProviderBase
+    internal sealed class ProvidersAssemblySourceProvider : AssemblySourceProviderBase
     {
         public ProvidersAssemblySourceProvider(string rootPath) : base(rootPath)
         {

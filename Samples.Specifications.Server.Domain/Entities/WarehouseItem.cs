@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Samples.Specifications.Server.Domain.Models
+namespace Samples.Specifications.Server.Domain.Entities
 {
     public class WarehouseItem
     {
