@@ -16,11 +16,14 @@ namespace Samples.Specifications.Client.Data.Fake.Providers.ContextBased
         protected override void OnRegisterProviders(IDependencyRegistrator dependencyRegistrator)
         {
             base.OnRegisterProviders(dependencyRegistrator);            
-            var matchingTypesMap = Helper.FindMatchingTypes();            
-            foreach (var matchingBuilderType in matchingTypesMap)
+            var matches = ConventionsHelper.FindContractToBuilderMatches();            
+            foreach (var match in matches)
             {
-                var builderInstance = Helper.CreateInstance(matchingBuilderType.Key);
-                RegisterAllBuildersInternal(dependencyRegistrator, (IBuilder)builderInstance, matchingBuilderType.Key, matchingBuilderType.Value);
+                var contractType = match.Key;
+                var builderType = match.Value;                
+                var builderInstance = BuilderFactory.CreateBuilderInstance(builderType);
+                RegisterAllBuildersInternal(dependencyRegistrator, (IBuilder) builderInstance, builderType,
+                    contractType);
             }            
         }
 
@@ -28,18 +31,18 @@ namespace Samples.Specifications.Client.Data.Fake.Providers.ContextBased
             IDependencyRegistrator dependencyRegistrator,
             IBuilder builderInstance, 
             Type builderType,
-            Type providerType)
+            Type contractType)
         {
             var builders = BuildersCollectionContext.GetBuilders(builderType).OfType<IBuilder>().ToArray();
             if (builders.Length == 0)
             {
-                RegistrationHelper.RegisterBuilder(dependencyRegistrator, providerType, builderInstance);                
+                RegistrationHelper.RegisterBuilder(dependencyRegistrator, contractType, builderInstance);                
             }
             else
             {
                 foreach (var builder in builders)
                 {
-                    RegistrationHelper.RegisterBuilder(dependencyRegistrator, providerType, builder);
+                    RegistrationHelper.RegisterBuilder(dependencyRegistrator, contractType, builder);
                 }
             }
         }        
