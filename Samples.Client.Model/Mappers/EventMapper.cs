@@ -6,9 +6,6 @@ namespace Samples.Client.Model.Mappers
 {
     internal static class EventMapper
     {
-        public static IEvent MapToEvent(EventDto eventDto)
-        {
-            return Mapper.Map<Event>(eventDto);
-        }
+        public static IEvent MapToEvent(EventDto eventDto) => Mapper.Map<Event>(eventDto);
     }
 }

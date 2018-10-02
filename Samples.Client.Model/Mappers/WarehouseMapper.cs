@@ -6,15 +6,10 @@ namespace Samples.Client.Model.Mappers
 {
     internal static class WarehouseMapper
     {
-        internal static IWarehouseItem MapToWarehouseItem(WarehouseItemDto warehouseItemDto)
-        {
-            var item = Mapper.Map<WarehouseItem>(warehouseItemDto);
-            return item;
-        }
+        internal static IWarehouseItem MapToWarehouseItem(WarehouseItemDto warehouseItemDto) =>
+            Mapper.Map<WarehouseItem>(warehouseItemDto);
 
-        internal static WarehouseItemDto MapToWarehouseDto(IWarehouseItem warehouseItem)
-        {
-            return Mapper.Map<WarehouseItemDto>(warehouseItem);
-        }
+        internal static WarehouseItemDto MapToWarehouseDto(IWarehouseItem warehouseItem) =>
+            Mapper.Map<WarehouseItemDto>(warehouseItem);
     }
 }

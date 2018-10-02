@@ -16,18 +16,13 @@ namespace Samples.Client.Model
             _loginProvider = loginProvider;
         }
 
-        public async Task LoginAsync(string username, string password)
-        {
+        public async Task LoginAsync(string username, string password) =>
             await ServiceRunner.RunAsync(() => LoginInternal(username, password));
-        }
 
-        private async Task LoginInternal(string username, string password)
+        private async Task LoginInternal(string username, string password) => await ServiceRunner.RunAsync(() =>
         {
-            await ServiceRunner.RunAsync(() =>
-            {
-                _loginProvider.Login(username, password);
-                UserContext.Current = new User(username);
-            });
-        }
+            _loginProvider.Login(username, password);
+            UserContext.Current = new User(username);
+        });
     }
 }

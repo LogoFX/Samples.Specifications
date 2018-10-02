@@ -18,7 +18,6 @@ namespace Samples.Client.Model
         }
 
         private string _kind;
-
         [StringValidation(IsNulOrEmptyAllowed = false, MaxLength = 63)]
         public string Kind
         {
@@ -27,7 +26,6 @@ namespace Samples.Client.Model
         }
 
         private double _price;
-
         [DoublePositiveValidation(ErrorMessage = "Price must be positive.")]
         public double Price
         {
@@ -40,7 +38,6 @@ namespace Samples.Client.Model
         }
 
         private int _quantity;
-
         [NumberValidation(Minimum = 1, ErrorMessage = "Quantity must be positive.")]
         public int Quantity
         {
