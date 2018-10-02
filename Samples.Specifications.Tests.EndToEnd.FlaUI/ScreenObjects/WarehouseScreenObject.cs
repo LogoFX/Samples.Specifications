@@ -8,7 +8,7 @@ using Samples.Specifications.Tests.Data;
 
 namespace Samples.Specifications.Tests.EndToEnd.ScreenObjects
 {
-    class WarehouseScreenObject : IWarehouseScreenObject
+    internal sealed class WarehouseScreenObject : IWarehouseScreenObject
     {
         public StructureHelper StructureHelper { get; set; }
 

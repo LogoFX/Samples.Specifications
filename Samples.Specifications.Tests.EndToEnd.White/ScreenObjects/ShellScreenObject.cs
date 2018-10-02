@@ -2,7 +2,7 @@
 
 namespace Samples.Specifications.Tests.EndToEnd.ScreenObjects
 {
-    internal class ShellScreenObject : IShellScreenObject
+    internal sealed class ShellScreenObject : IShellScreenObject
     {
         public StructureHelper StructureHelper { get; set; }
 

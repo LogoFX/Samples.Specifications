@@ -11,7 +11,7 @@ using Solid.Practices.Modularity;
 
 namespace Samples.Specifications.Tests.Infra.Launcher
 {
-    public sealed class Bootstrapper : IInitializable, 
+    internal sealed class Bootstrapper : IInitializable, 
         IExtensible<Bootstrapper>,         
         ICompositionModulesProvider,
         IHaveRegistrator        
@@ -25,8 +25,7 @@ namespace Samples.Specifications.Tests.Infra.Launcher
         {
             Registrator = dependencyRegistrator;     
         }
-
-        /// <inheritdoc />       
+            
         public IEnumerable<ICompositionModule> Modules { get; private set; } = new ICompositionModule[] { };
 
         public string[] Prefixes { get; } =
@@ -55,8 +54,7 @@ namespace Samples.Specifications.Tests.Infra.Launcher
                 Modules = compositionManager.Modules.ToArray();
             }                        
         }
-
-        /// <inheritdoc />       
+              
         public Bootstrapper Use(
             IMiddleware<Bootstrapper> middleware)
         {

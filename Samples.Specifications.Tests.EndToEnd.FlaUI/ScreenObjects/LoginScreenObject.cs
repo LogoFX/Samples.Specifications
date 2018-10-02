@@ -3,7 +3,7 @@ using Samples.Specifications.Tests.Contracts.ScreenObjects;
 
 namespace Samples.Specifications.Tests.EndToEnd.ScreenObjects
 {
-    class LoginScreenObject : ILoginScreenObject
+    internal sealed class LoginScreenObject : ILoginScreenObject
     {
         public void Login()
         {

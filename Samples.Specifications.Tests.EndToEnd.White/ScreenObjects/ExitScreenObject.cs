@@ -6,7 +6,7 @@ using TestStack.White.UIItems.WindowItems;
 
 namespace Samples.Specifications.Tests.EndToEnd.ScreenObjects
 {
-    internal class ExitScreenObject : IExitScreenObject
+    internal sealed class ExitScreenObject : IExitScreenObject
     {
         public bool IsDisplayed()
         {

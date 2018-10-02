@@ -4,7 +4,7 @@ using Samples.Specifications.Tests.Contracts.ScreenObjects;
 
 namespace Samples.Specifications.Tests.EndToEnd.ScreenObjects
 {
-    class ExitScreenObject : IExitScreenObject
+    internal sealed class ExitScreenObject : IExitScreenObject
     {
         public bool IsDisplayed()
         {

@@ -3,9 +3,8 @@ using LogoFX.Client.Testing.Contracts;
 
 namespace Samples.Specifications.Tests.EndToEnd
 {
-    public class ApplicationFacade : IApplicationFacade
-    {
-        /// <inheritdoc />        
+    internal sealed class ApplicationFacade : IApplicationFacade
+    {           
         public void Start(string startupPath)
         {
             ApplicationContext.Application = Application.Launch(startupPath);
