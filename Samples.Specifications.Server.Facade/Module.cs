@@ -13,7 +13,7 @@ namespace Samples.Specifications.Server.Facade
             dependencyRegistrator.AddCors(options =>
                     options.AddPolicy("AllowAny",
                         builder => builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin()))
-                        .AddMvc()
+                .AddMvc()
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
     }

@@ -6,15 +6,8 @@ namespace Samples.Specifications.Server.Api.Mappers
 {
     internal static class UserMapper
     {
-        internal static User MapToUser(UserDto userDto)
-        {
-            var item = Mapper.Map<User>(userDto);
-            return item;
-        }
+        internal static User MapToUser(UserDto userDto) => Mapper.Map<User>(userDto);
 
-        internal static UserDto MapToUserDto(User user)
-        {
-            return Mapper.Map<UserDto>(user);
-        }
+        internal static UserDto MapToUserDto(User user) => Mapper.Map<UserDto>(user);
     }
 }

@@ -17,7 +17,7 @@ namespace Samples.Specifications.Server.Facade
             var configuration = GetCurrentConfiguration();
             return configuration == string.Empty
                 ? "."
-                : Path.Combine(new[] { "..", "bin","Server", configuration });
+                : Path.Combine(new[] {"..", "bin", "Server", configuration});
         }
 
         private static string GetCurrentConfiguration()
@@ -35,6 +35,6 @@ namespace Samples.Specifications.Server.Facade
                 ;
         }
 
-        public override string[] Prefixes => new[] { "Samples.Specifications" };
+        public override string[] Prefixes => new[] {"Samples.Specifications"};
     }
 }
