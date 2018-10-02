@@ -19,24 +19,26 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
     public sealed class ShellViewModel : Conductor<INotifyPropertyChanged>.Collection.OneActive, IDisposable
     {
         private readonly IWindowManager _windowManager;
-        private readonly IViewModelCreatorService _viewModelCreatorService;                        
+        private readonly IViewModelCreatorService _viewModelCreatorService;
 
         public ShellViewModel(
             IWindowManager windowManager,
             IViewModelCreatorService viewModelCreatorService)
         {
             _windowManager = windowManager;
-            _viewModelCreatorService = viewModelCreatorService;            
-            
+            _viewModelCreatorService = viewModelCreatorService;
+
             EventHandler strongHandler = OnLoggedInSuccessfully;
-            LoginViewModel.LoggedInSuccessfully += WeakDelegate.From(strongHandler);            
+            LoginViewModel.LoggedInSuccessfully += WeakDelegate.From(strongHandler);
         }
 
         private IActionCommand _closeCommand;
+
         public ICommand CloseCommand =>
-            CommandFactory.GetCommand(ref _closeCommand, () => TryClose(), () => true);        
-        
+            CommandFactory.GetCommand(ref _closeCommand, () => TryClose(), () => true);
+
         private bool _isBusy;
+
         public bool IsBusy
         {
             get => _isBusy;
@@ -70,9 +72,9 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
 
         public override string DisplayName
         {
-            get { return string.Empty; }
+            get => string.Empty;
             set { }
-        }        
+        }
 
         private async Task Close()
         {

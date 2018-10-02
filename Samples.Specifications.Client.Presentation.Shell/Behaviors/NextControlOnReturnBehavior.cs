@@ -10,14 +10,12 @@ namespace Samples.Specifications.Client.Presentation.Shell.Behaviors
         protected override void OnAttached()
         {
             base.OnAttached();
-
             AssociatedObject.KeyDown += OnKeyDown;
         }
 
         protected override void OnDetaching()
         {
             base.OnDetaching();
-
             AssociatedObject.KeyDown -= OnKeyDown;
         }
 

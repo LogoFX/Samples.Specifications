@@ -27,13 +27,8 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         {
             var wc = new WrappingCollection.WithSelection
             {
-                FactoryMethod = o =>
-                {
-                    var viewModel =
-                        _viewModelCreatorService.CreateViewModel<IWarehouseItem, WarehouseItemViewModel>(
-                            (IWarehouseItem) o);
-                    return viewModel;
-                }
+                FactoryMethod = o => _viewModelCreatorService.CreateViewModel<IWarehouseItem, WarehouseItemViewModel>(
+                    (IWarehouseItem) o)
             }.WithSource(_dataService.WarehouseItems);
 
             return wc;
