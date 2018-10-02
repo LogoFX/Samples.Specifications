@@ -5,17 +5,17 @@ namespace Samples.Specifications.Tests.Infra.Launcher
 {
     internal sealed class Startup
     {
-        private readonly IIocContainer _iocContainer;
+        private readonly IDependencyRegistrator _dependencyRegistrator;
 
-        public Startup(IIocContainer iocContainer)
+        public Startup(IDependencyRegistrator dependencyRegistrator)
         {
-            _iocContainer = iocContainer;                   
+            _dependencyRegistrator = dependencyRegistrator;                   
         }
 
         public void Initialize()
         {
             var bootstrapper =
-                new Bootstrapper(_iocContainer)
+                new Bootstrapper(_dependencyRegistrator)
                     .Use(new RegisterCompositionModulesMiddleware<Bootstrapper>());            
             bootstrapper.Initialize();
         }

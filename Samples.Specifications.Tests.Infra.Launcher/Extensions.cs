@@ -5,20 +5,20 @@ namespace Samples.Specifications.Tests.Infra.Launcher
 {
     public static class Extensions
     {
-        public static void Initialize(this IIocContainer iocContainer)
+        public static void Initialize(this IDependencyRegistrator dependencyRegistrator)
         {
-            new Startup(iocContainer).Initialize();
+            new Startup(dependencyRegistrator).Initialize();
         }
 
-        public static void Setup(this IIocContainer iocContainer)
+        public static void Setup(this IDependencyResolver dependencyResolver)
         {
-            var setupService = iocContainer.Resolve<ISetupService>();
+            var setupService = dependencyResolver.Resolve<ISetupService>();
             setupService.Setup();
         }
         
-        public static void Teardown(this IIocContainer iocContainer)
+        public static void Teardown(this IDependencyResolver dependencyResolver)
         {
-            var teardownService = iocContainer.Resolve<ITeardownService>();
+            var teardownService = dependencyResolver.Resolve<ITeardownService>();
             teardownService.Teardown();
         }
     }
