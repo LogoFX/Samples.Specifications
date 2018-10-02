@@ -19,7 +19,7 @@ namespace Samples.Specifications.Client.Data.Fake.Shared
             {
                 var contractType =
                     contractTypes.FirstOrDefault(
-                        t => t.Name == "I" + type.Name.Replace(Consts.FakePrefix, String.Empty));
+                        t => t.Name == "I" + type.Name.Replace(Consts.FakePrefix, string.Empty));
                 if (contractType != null)
                 {
                     contractToFakeMatches.Add(contractType, type);

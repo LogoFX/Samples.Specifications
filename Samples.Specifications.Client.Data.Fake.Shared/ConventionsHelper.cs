@@ -27,7 +27,7 @@ namespace Samples.Specifications.Client.Data.Fake.Shared
             {
                 var contractType =
                     contractTypes.FirstOrDefault(
-                        t => t.Name == "I" + builderType.Name.Replace(Consts.BuilderEnding, String.Empty));
+                        t => t.Name == "I" + builderType.Name.Replace(Consts.BuilderEnding, string.Empty));
                 if (contractType != null)
                 {
                     contractToBuilderMatches.Add(contractType, builderType);
