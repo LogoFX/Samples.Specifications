@@ -8,7 +8,7 @@ namespace Samples.Specifications.Tests.EndToEnd
 {
     public static class ApplicationExtensions
     {
-        public static Window GetWindowEx(this Application app, string title)
+        public static Window GetWindowByTitle(this Application app, string title)
         {
             //if (app.HasExited)
             //{
