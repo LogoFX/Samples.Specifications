@@ -8,10 +8,7 @@ namespace Samples.Specifications.Client.Data.Fake.Shared
         {
         }
 
-        protected override string[] ResolveNamespaces()
-        {
-            return new[] { Consts.BuildersAssemblyEnding };
-        }
+        protected override string[] ResolveNamespaces() => new[] { Consts.BuildersAssemblyEnding };
     }
 
     internal sealed class ProvidersAssemblySourceProvider : AssemblySourceProviderBase
@@ -20,9 +17,6 @@ namespace Samples.Specifications.Client.Data.Fake.Shared
         {
         }
 
-        protected override string[] ResolveNamespaces()
-        {
-            return new[] { Consts.ContractsAssemblyEnding, Consts.FakeAssemblyEnding, Consts.BuildersAssemblyEnding };
-        }
+        protected override string[] ResolveNamespaces() => new[] { Consts.ContractsAssemblyEnding, Consts.FakeAssemblyEnding, Consts.BuildersAssemblyEnding };
     }
 }

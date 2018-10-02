@@ -12,14 +12,11 @@ namespace Samples.Specifications.Client.Data.Fake.Providers
     internal sealed class FakeEventsProvider : FakeProviderBase<EventsProviderBuilder, IEventsProvider>, IEventsProvider
     {
         public FakeEventsProvider(EventsProviderBuilder eventsProviderBuilder)
-            :base(eventsProviderBuilder)
+            : base(eventsProviderBuilder)
         {
         }
 
-        IEnumerable<EventDto> IEventsProvider.GetLastEvents(DateTime lastEventTime)
-        {
-            var service = GetService();
-            return service.GetLastEvents(lastEventTime);
-        }
+        IEnumerable<EventDto> IEventsProvider.GetLastEvents(DateTime lastEventTime) =>
+            GetService().GetLastEvents(lastEventTime);
     }
 }

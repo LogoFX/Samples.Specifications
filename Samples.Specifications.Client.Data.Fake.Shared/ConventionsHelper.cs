@@ -36,17 +36,11 @@ namespace Samples.Specifications.Client.Data.Fake.Shared
             return contractToBuilderMatches;
         }
 
-        internal static Type[] FindContractTypes(this IEnumerable<Assembly> assemblies)
-        {
-            return assemblies.FindTypes(Consts.ContractsAssemblyEnding,
-                t => t.IsInterface && t.Name.EndsWith(Consts.ProviderEnding));
-        }
+        internal static Type[] FindContractTypes(this IEnumerable<Assembly> assemblies) => assemblies.FindTypes(Consts.ContractsAssemblyEnding,
+            t => t.IsInterface && t.Name.EndsWith(Consts.ProviderEnding));
 
-        internal static Type[] FindFakeTypes(this IEnumerable<Assembly> assemblies)
-        {
-            return assemblies.FindTypes(Consts.FakeAssemblyEnding,
-                t => t.IsInterface == false && t.IsAbstract == false && t.Name.EndsWith(Consts.ProviderEnding));
-        }
+        internal static Type[] FindFakeTypes(this IEnumerable<Assembly> assemblies) => assemblies.FindTypes(Consts.FakeAssemblyEnding,
+            t => t.IsInterface == false && t.IsAbstract == false && t.Name.EndsWith(Consts.ProviderEnding));
 
         internal static Type[] FindBuildersTypes(this IEnumerable<Assembly> allAssemblies)
         {
@@ -58,12 +52,8 @@ namespace Samples.Specifications.Client.Data.Fake.Shared
         }
 
         private static Type[] FindTypes(this IEnumerable<Assembly> assemblies, string assemblyEnding,
-            Func<TypeInfo, bool> criterion)
-        {
-            var fakeAssemblies = assemblies.Where(t => t.GetName().Name.EndsWith(assemblyEnding));
-            return fakeAssemblies.SelectMany(k => k.DefinedTypes
-                .Where(criterion)
-                .Select(t => t.AsType())).ToArray();
-        }
+            Func<TypeInfo, bool> criterion) => assemblies.Where(t => t.GetName().Name.EndsWith(assemblyEnding)).SelectMany(k => k.DefinedTypes
+            .Where(criterion)
+            .Select(t => t.AsType())).ToArray();
     }
 }

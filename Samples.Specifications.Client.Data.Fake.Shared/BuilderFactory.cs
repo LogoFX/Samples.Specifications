@@ -5,15 +5,10 @@ namespace Samples.Specifications.Client.Data.Fake.Shared
 {
     public static class BuilderFactory
     {
-        public static object CreateBuilderInstance(Type type)
-        {
-            return CreateBuilderInstanceImpl(type);
-        }
+        private const string MethodName = "CreateBuilder";
 
-        private static object CreateBuilderInstanceImpl(Type type)
-        {
-            const string methodName = "CreateBuilder";
-            return type.GetRuntimeMethod(methodName, new Type[] { }).Invoke(null, null);
-        }
+        public static object CreateBuilderInstance(Type type) => CreateBuilderInstanceImpl(type);
+
+        private static object CreateBuilderInstanceImpl(Type type) => type.GetRuntimeMethod(MethodName, new Type[] { }).Invoke(null, null);
     }
 }

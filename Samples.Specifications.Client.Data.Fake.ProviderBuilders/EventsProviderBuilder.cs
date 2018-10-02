@@ -41,10 +41,7 @@ namespace Samples.Specifications.Client.Data.Fake.ProviderBuilders
             WithEvent($"Sample Message #{_rnd.Next(1, 100)}");
         }
 
-        public static EventsProviderBuilder CreateBuilder()
-        {
-            return new EventsProviderBuilder();
-        }
+        public static EventsProviderBuilder CreateBuilder() => new EventsProviderBuilder();
 
         protected override IServiceCall<IEventsProvider> CreateServiceCall(
             IHaveNoMethods<IEventsProvider> serviceCallTemplate)

@@ -18,10 +18,7 @@ namespace Samples.Specifications.Client.Data.Fake.ProviderBuilders
             
         }
 
-        public static WarehouseProviderBuilder CreateBuilder()
-        {
-            return new WarehouseProviderBuilder();
-        }
+        public static WarehouseProviderBuilder CreateBuilder() => new WarehouseProviderBuilder();
 
         public void WithWarehouseItems(IEnumerable<WarehouseItemDto> warehouseItems)
         {

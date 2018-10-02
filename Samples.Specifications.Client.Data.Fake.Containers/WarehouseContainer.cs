@@ -11,7 +11,6 @@ namespace Samples.Specifications.Client.Data.Fake.Containers
     public sealed class WarehouseContainer : IWarehouseContainer
     {
         private readonly List<WarehouseItemDto> _warehouseItems = new List<WarehouseItemDto>();
-
         public IEnumerable<WarehouseItemDto> WarehouseItems => _warehouseItems;
 
         public void UpdateWarehouseItems(IEnumerable<WarehouseItemDto> warehouseItems)

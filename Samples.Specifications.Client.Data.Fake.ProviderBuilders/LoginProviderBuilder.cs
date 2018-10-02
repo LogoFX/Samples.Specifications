@@ -16,10 +16,7 @@ namespace Samples.Specifications.Client.Data.Fake.ProviderBuilders
 
         }
 
-        public static LoginProviderBuilder CreateBuilder()
-        {
-            return new LoginProviderBuilder();
-        }
+        public static LoginProviderBuilder CreateBuilder() => new LoginProviderBuilder();
 
         public void WithUser(string username, string password)
         {

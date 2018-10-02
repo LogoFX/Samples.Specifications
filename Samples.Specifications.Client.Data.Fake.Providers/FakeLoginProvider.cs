@@ -12,7 +12,7 @@ namespace Samples.Specifications.Client.Data.Fake.Providers
         public FakeLoginProvider(
             LoginProviderBuilder loginProviderBuilder,
             IUserContainer userContainer)
-            :base(loginProviderBuilder)
+            : base(loginProviderBuilder)
         {
             foreach (var user in userContainer.Users)
             {
@@ -20,10 +20,6 @@ namespace Samples.Specifications.Client.Data.Fake.Providers
             }
         }
 
-        void ILoginProvider.Login(string username, string password)
-        {
-            var service = GetService();
-            service.Login(username, password);
-        }
+        void ILoginProvider.Login(string username, string password) => GetService().Login(username, password);
     }
 }

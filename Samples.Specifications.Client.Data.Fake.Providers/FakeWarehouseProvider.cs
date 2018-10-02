@@ -11,48 +11,43 @@ using Samples.Specifications.Client.Data.Fake.ProviderBuilders;
 namespace Samples.Specifications.Client.Data.Fake.Providers
 {
     [UsedImplicitly]
-    internal sealed class FakeWarehouseProvider : FakeProviderBase<WarehouseProviderBuilder, IWarehouseProvider>, IWarehouseProvider
+    internal sealed class FakeWarehouseProvider : FakeProviderBase<WarehouseProviderBuilder, IWarehouseProvider>,
+        IWarehouseProvider
     {
         private readonly Random _random = new Random();
 
         public FakeWarehouseProvider(
             WarehouseProviderBuilder warehouseProviderBuilder,
             IWarehouseContainer warehouseContainer)
-            :base(warehouseProviderBuilder)
+            : base(warehouseProviderBuilder)
         {
             warehouseProviderBuilder.WithWarehouseItems(warehouseContainer.WarehouseItems);
         }
 
-        IEnumerable<WarehouseItemDto> IWarehouseProvider.GetWarehouseItems()
+        IEnumerable<WarehouseItemDto> IWarehouseProvider.GetWarehouseItems() => GetService(r =>
         {
             Task.Delay(_random.Next(2000));
-            var service = GetService();
-            var warehouseItems = service.GetWarehouseItems();
-            return warehouseItems;
-        }
+            return r;
+        }).GetWarehouseItems();
 
-        bool IWarehouseProvider.DeleteWarehouseItem(Guid id)
+        bool IWarehouseProvider.DeleteWarehouseItem(Guid id) => GetService(r =>
         {
             Task.Delay(_random.Next(2000));
-            var service = GetService();
-            var retVal = service.DeleteWarehouseItem(id);
-            return retVal;
-        }
+            return r;
+        }).DeleteWarehouseItem(id);
 
-        bool IWarehouseProvider.UpdateWarehouseItem(WarehouseItemDto dto)
+        bool IWarehouseProvider.UpdateWarehouseItem(WarehouseItemDto dto) => GetService(r =>
         {
             var delayTask = Task.Delay(_random.Next(2000));
             delayTask.Wait();
-            var service = GetService();
-            return service.UpdateWarehouseItem(dto);
-        }
+            return r;
+        }).UpdateWarehouseItem(dto);
 
-        void IWarehouseProvider.CreateWarehouseItem(WarehouseItemDto dto)
+        void IWarehouseProvider.CreateWarehouseItem(WarehouseItemDto dto) => GetService(r =>
         {
             var delayTask = Task.Delay(_random.Next(2000));
             delayTask.Wait();
-            var service = GetService();
-            service.CreateWarehouseItem(dto);
-        }
+            return r;
+        }).CreateWarehouseItem(dto);
     }
 }
