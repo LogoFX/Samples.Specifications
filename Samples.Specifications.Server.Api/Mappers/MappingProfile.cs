@@ -13,26 +13,17 @@ namespace Samples.Specifications.Server.Api.Mappers
             CreateUserMaps();
         }
 
-        private void CreateWarehouseMaps()
-        {
-            CreateDomainObjectMap<WarehouseItemDto, WarehouseItem>();
-        }
+        private void CreateWarehouseMaps() => CreateDomainObjectMap<WarehouseItemDto, WarehouseItem>();
 
-        private void CreateUserMaps()
-        {
-            CreateDomainObjectMap<UserDto, User>();
-        }
+        private void CreateUserMaps() => CreateDomainObjectMap<UserDto, User>();
 
         //TODO: put this piece of functionality into 
         //an external package, e.g. Model.Mapping.AutoMapper
-        private void CreateDomainObjectMap<TDto, TModel>()                    
-        {
-            CreateDomainObjectMap(typeof(TDto), typeof(TModel));
-        }
+        private void CreateDomainObjectMap<TDto, TModel>() => CreateDomainObjectMap(typeof(TDto), typeof(TModel));
 
         private void CreateDomainObjectMap(Type dtoType, Type modelType)
-        {            
-            CreateMap(dtoType, modelType);         
+        {
+            CreateMap(dtoType, modelType);
             CreateMap(modelType, dtoType);
         }
     }

@@ -19,10 +19,7 @@ namespace Samples.Specifications.Client.Data.Fake.Providers
         public FakeWarehouseProvider(
             WarehouseProviderBuilder warehouseProviderBuilder,
             IWarehouseContainer warehouseContainer)
-            : base(warehouseProviderBuilder)
-        {
-            warehouseProviderBuilder.WithWarehouseItems(warehouseContainer.WarehouseItems);
-        }
+            : base(warehouseProviderBuilder) => warehouseProviderBuilder.WithWarehouseItems(warehouseContainer.WarehouseItems);
 
         IEnumerable<WarehouseItemDto> IWarehouseProvider.GetWarehouseItems() => GetService(r =>
         {

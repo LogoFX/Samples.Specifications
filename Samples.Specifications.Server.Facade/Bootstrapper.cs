@@ -20,9 +20,7 @@ namespace Samples.Specifications.Server.Facade
                 : Path.Combine(new[] {"..", "bin", "Server", configuration});
         }
 
-        private static string GetCurrentConfiguration()
-        {
-            return
+        private static string GetCurrentConfiguration() =>
 #if RELEASE
         string.Empty
 #elif DEBUGWITHFAKE
@@ -30,10 +28,9 @@ namespace Samples.Specifications.Server.Facade
 #elif DEBUGWITHREAL
         "DebugWithReal"
 #else
-                "Debug"
+            "Debug"
 #endif
-                ;
-        }
+        ;
 
         public override string[] Prefixes => new[] {"Samples.Specifications"};
     }

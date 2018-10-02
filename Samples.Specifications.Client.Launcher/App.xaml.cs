@@ -6,14 +6,10 @@ namespace Samples.Specifications.Client.Launcher
 {
     partial class App
     {
-        public App()
-        {            
-            var bootstrapper = new AppBootstrapper();
-            bootstrapper
+        public App() => new AppBootstrapper()
                 .UseResolver()
                 .UseCommanding()
                 .UseShared()
                 .Initialize();
-        }
     }
 }

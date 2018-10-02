@@ -8,13 +8,10 @@ namespace Samples.Specifications.Server.Facade
     [UsedImplicitly]
     internal sealed class Module : ICompositionModule<IServiceCollection>
     {
-        public void RegisterModule(IServiceCollection dependencyRegistrator)
-        {
-            dependencyRegistrator.AddCors(options =>
-                    options.AddPolicy("AllowAny",
-                        builder => builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin()))
-                .AddMvc()
-                .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-        }
+        public void RegisterModule(IServiceCollection dependencyRegistrator) => dependencyRegistrator.AddCors(options =>
+                options.AddPolicy("AllowAny",
+                    builder => builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin()))
+            .AddMvc()
+            .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
     }
 }

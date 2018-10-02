@@ -13,10 +13,7 @@ namespace Samples.Specifications.Server.Api.Controllers
     {
         private readonly IUserRepository _userRepository;
 
-        public UserController(IUserRepository userRepository)
-        {
-            _userRepository = userRepository;
-        }
+        public UserController(IUserRepository userRepository) => _userRepository = userRepository;
 
         [HttpGet]
         public async Task<IEnumerable<UserDto>> Get()

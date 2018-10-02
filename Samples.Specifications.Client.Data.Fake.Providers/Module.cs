@@ -10,14 +10,11 @@ namespace Samples.Specifications.Client.Data.Fake.Providers
 {
     [UsedImplicitly]
     internal sealed class Module : ICompositionModule<IDependencyRegistrator>
-    {              
-        public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
-        {
-            dependencyRegistrator
-                .AddInstance(InitializeWarehouseContainer())
-                .AddInstance(InitializeUserContainer())
-                .RegisterBuildersAndFakeProviders();                               
-        }
+    {
+        public void RegisterModule(IDependencyRegistrator dependencyRegistrator) => dependencyRegistrator
+            .AddInstance(InitializeWarehouseContainer())
+            .AddInstance(InitializeUserContainer())
+            .RegisterBuildersAndFakeProviders();
 
         private static IWarehouseContainer InitializeWarehouseContainer()
         {
@@ -70,11 +67,11 @@ namespace Samples.Specifications.Client.Data.Fake.Providers
         private static IUserContainer InitializeUserContainer()
         {
             var userContainer = new UserContainer();
-            userContainer.UpdateUsers(new []
+            userContainer.UpdateUsers(new[]
             {
-                new Tuple<string, string>("Admin", "pass") 
+                new Tuple<string, string>("Admin", "pass")
             });
             return userContainer;
-        }        
+        }
     }
 }

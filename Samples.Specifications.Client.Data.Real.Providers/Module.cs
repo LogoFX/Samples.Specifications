@@ -10,14 +10,11 @@ namespace Samples.Specifications.Client.Data.Real.Providers
     [UsedImplicitly]
     internal sealed class Module : ICompositionModule<IDependencyRegistrator>
     {
-        public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
-        {
-            dependencyRegistrator
-                .RegisterAutomagically(
-                    Assembly.LoadFrom("Samples.Client.Data.Contracts.Providers.dll"),
-                    Assembly.GetExecutingAssembly())
-                    .AddSingleton<IRequestFactory, RestRequestFactory>()
-                .AddSingleton(() => new RestClient(Settings.Default.ServerEndpoint));
-        }             
+        public void RegisterModule(IDependencyRegistrator dependencyRegistrator) => dependencyRegistrator
+            .RegisterAutomagically(
+                Assembly.LoadFrom("Samples.Client.Data.Contracts.Providers.dll"),
+                Assembly.GetExecutingAssembly())
+            .AddSingleton<IRequestFactory, RestRequestFactory>()
+            .AddSingleton(() => new RestClient(Settings.Default.ServerEndpoint));
     }
 }

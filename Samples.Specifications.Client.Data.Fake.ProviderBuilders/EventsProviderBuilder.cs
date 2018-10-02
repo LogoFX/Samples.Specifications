@@ -16,10 +16,7 @@ namespace Samples.Specifications.Client.Data.Fake.ProviderBuilders
         private Timer _timer;
         private readonly Random _rnd = new Random();
 
-        private EventsProviderBuilder()
-        {
-            _timer = new Timer(OnTimer, null, 1000, 1000);
-        }
+        private EventsProviderBuilder() => _timer = new Timer(OnTimer, null, 1000, 1000);
 
         ~EventsProviderBuilder()
         {

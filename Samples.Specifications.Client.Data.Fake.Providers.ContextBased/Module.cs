@@ -15,9 +15,8 @@ namespace Samples.Specifications.Client.Data.Fake.Providers.ContextBased
     {       
         protected override void OnRegisterProviders(IDependencyRegistrator dependencyRegistrator)
         {
-            base.OnRegisterProviders(dependencyRegistrator);            
-            var matches = ConventionsHelper.FindContractToBuilderMatches();            
-            foreach (var match in matches)
+            base.OnRegisterProviders(dependencyRegistrator);                        
+            foreach (var match in ConventionsHelper.FindContractToBuilderMatches())
             {
                 var contractType = match.Key;
                 var builderType = match.Value;                

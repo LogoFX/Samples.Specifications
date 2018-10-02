@@ -15,10 +15,7 @@ namespace Samples.Specifications.Server.Storage.MongoDb.Services
         private readonly IMongoDatabase _db;
         private const string DbName = "SamplesDB";
 
-        public MongoDbWarehouseRepository(IMongoClient client)
-        {            
-            _db = client.GetDatabase(DbName);                        
-        }
+        public MongoDbWarehouseRepository(IMongoClient client) => _db = client.GetDatabase(DbName);
 
         public async Task<WarehouseItem> Add(WarehouseItem warehouseItem)
         {
@@ -35,7 +32,8 @@ namespace Samples.Specifications.Server.Storage.MongoDb.Services
 
         public async Task<IEnumerable<WarehouseItem>> GetAll()
         {
-            var rows = await GetCollection().Find(new FilterDefinitionBuilder<MongoWarehouseItem>().Empty).ToListAsync();
+            var rows = await GetCollection().Find(new FilterDefinitionBuilder<MongoWarehouseItem>().Empty)
+                .ToListAsync();
             return rows.Select(t => new WarehouseItem
             {
                 Kind = t.Kind,
@@ -60,7 +58,8 @@ namespace Samples.Specifications.Server.Storage.MongoDb.Services
         public async Task Delete(WarehouseItem warehouseItem)
         {
             var collection = GetCollection();
-            await collection.DeleteOneAsync(Builders<MongoWarehouseItem>.Filter.Where(r => r.ActualId == warehouseItem.Id));
+            await collection.DeleteOneAsync(
+                Builders<MongoWarehouseItem>.Filter.Where(r => r.ActualId == warehouseItem.Id));
         }
 
         public async Task Update(WarehouseItem warehouseItem)
@@ -75,13 +74,11 @@ namespace Samples.Specifications.Server.Storage.MongoDb.Services
                     Kind = warehouseItem.Kind,
                     Price = warehouseItem.Price,
                     Quantity = warehouseItem.Quantity
-                });            
+                });
         }
 
-        private IMongoCollection<MongoWarehouseItem> GetCollection()
-        {
-            return _db.GetCollection<MongoWarehouseItem>("WarehouseItems");
-        }
+        private IMongoCollection<MongoWarehouseItem> GetCollection() =>
+            _db.GetCollection<MongoWarehouseItem>("WarehouseItems");
 
         private async Task<MongoWarehouseItem> GetByIdInternal(Guid id)
         {

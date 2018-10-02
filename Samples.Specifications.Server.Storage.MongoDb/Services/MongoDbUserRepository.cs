@@ -13,10 +13,7 @@ namespace Samples.Specifications.Server.Storage.MongoDb.Services
         private readonly IMongoDatabase _db;
         private const string DbName = "SamplesDB";
 
-        public MongoDbUserRepository(IMongoClient client)
-        {                                    
-            _db = client.GetDatabase(DbName);
-        }
+        public MongoDbUserRepository(IMongoClient client) => _db = client.GetDatabase(DbName);
 
         public async Task<IEnumerable<User>> GetAll()
         {
@@ -28,9 +25,6 @@ namespace Samples.Specifications.Server.Storage.MongoDb.Services
             });
         }
 
-        private IMongoCollection<MongoUser> GetCollection()
-        {
-            return _db.GetCollection<MongoUser>("Users");
-        }
+        private IMongoCollection<MongoUser> GetCollection() => _db.GetCollection<MongoUser>("Users");
     }
 }

@@ -8,9 +8,6 @@ namespace Samples.Client.Model
     [UsedImplicitly]
     internal sealed class MappingModule : IPlainCompositionModule
     {
-        public void RegisterModule()
-        {            
-            Mapper.Initialize(x => x.AddProfile<MappingProfile>());
-        }
+        public void RegisterModule() => Mapper.Initialize(x => x.AddProfile<MappingProfile>());
     }
 }

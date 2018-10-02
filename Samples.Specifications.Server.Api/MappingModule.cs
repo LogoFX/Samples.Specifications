@@ -6,9 +6,6 @@ namespace Samples.Specifications.Server.Api
 {    
     internal sealed class MappingModule : IPlainCompositionModule
     {        
-        public void RegisterModule()
-        {
-            Mapper.Initialize(x => x.AddProfile<MappingProfile>());
-        }
+        public void RegisterModule() => Mapper.Initialize(x => x.AddProfile<MappingProfile>());
     }
 }

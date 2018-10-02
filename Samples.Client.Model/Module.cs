@@ -8,11 +8,8 @@ namespace Samples.Client.Model
     [UsedImplicitly]
     internal sealed class Module : ICompositionModule<IDependencyRegistrator>
     {
-        public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
-        {
-            dependencyRegistrator
-                .RegisterAutomagically(Assembly.LoadFrom("Samples.Client.Model.Contracts.dll"),
-                    Assembly.GetExecutingAssembly());
-        }
+        public void RegisterModule(IDependencyRegistrator dependencyRegistrator) => dependencyRegistrator
+            .RegisterAutomagically(Assembly.LoadFrom("Samples.Client.Model.Contracts.dll"),
+                Assembly.GetExecutingAssembly());
     }
 }

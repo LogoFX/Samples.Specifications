@@ -14,15 +14,10 @@ namespace Samples.Specifications.Server.Facade
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to bootstrap the services registration
-        public void ConfigureServices(IServiceCollection services)
-        {
-            var bootstrapper =
-                    new Bootstrapper(services)
-                        .UseCompositionModules<BootstrapperBase, IServiceCollection>()
-                        .Use(new RegisterCoreMiddleware<BootstrapperBase>())
-                        .Use(new RegisterControllersMiddleware<BootstrapperBase>());
-            bootstrapper.Initialize();
-        }
+        public void ConfigureServices(IServiceCollection services) => new Bootstrapper(services)
+            .UseCompositionModules<BootstrapperBase, IServiceCollection>()
+            .Use(new RegisterCoreMiddleware<BootstrapperBase>())
+            .Use(new RegisterControllersMiddleware<BootstrapperBase>()).Initialize();
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -46,5 +41,5 @@ namespace Samples.Specifications.Server.Facade
                 })
                 .UseMvc();
         }
-    }    
+    }
 }
