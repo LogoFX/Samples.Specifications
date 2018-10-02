@@ -7,10 +7,7 @@ namespace Samples.Specifications.Client.Tests.Integration.ScreenObjects
     {
         public StructureHelper StructureHelper { get; }
 
-        public LoginScreenObject(StructureHelper structureHelper)
-        {
-            StructureHelper = structureHelper;
-        }
+        public LoginScreenObject(StructureHelper structureHelper) => StructureHelper = structureHelper;
 
         public bool IsActive()
         {

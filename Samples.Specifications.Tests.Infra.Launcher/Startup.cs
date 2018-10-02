@@ -7,17 +7,9 @@ namespace Samples.Specifications.Tests.Infra.Launcher
     {
         private readonly IDependencyRegistrator _dependencyRegistrator;
 
-        public Startup(IDependencyRegistrator dependencyRegistrator)
-        {
-            _dependencyRegistrator = dependencyRegistrator;                   
-        }
+        public Startup(IDependencyRegistrator dependencyRegistrator) => _dependencyRegistrator = dependencyRegistrator;
 
-        public void Initialize()
-        {
-            var bootstrapper =
-                new Bootstrapper(_dependencyRegistrator)
-                    .Use(new RegisterCompositionModulesMiddleware<Bootstrapper>());            
-            bootstrapper.Initialize();
-        }
+        public void Initialize() => new Bootstrapper(_dependencyRegistrator)
+            .Use(new RegisterCompositionModulesMiddleware<Bootstrapper>()).Initialize();
     }
 }

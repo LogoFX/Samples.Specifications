@@ -13,33 +13,18 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra.Core
         /// Sets the root object which is the shell view model.
         /// </summary>
         /// <param name="rootObject">The root object.</param>
-        public void SetRootObject(ShellViewModel rootObject)
-        {
-            _rootObject = rootObject;
-        }
+        public void SetRootObject(ShellViewModel rootObject) => _rootObject = rootObject;
 
         /// <summary>
         /// Gets the shell view model.
         /// </summary>
         /// <returns>Shell view model</returns>
-        public ShellViewModel GetShell()
-        {
-            return GetShellInternal();
-        }
+        public ShellViewModel GetShell() => GetShellInternal();
 
-        public LoginViewModel GetLogin()
-        {
-            return GetShellInternal()?.LoginViewModel;
-        }
+        public LoginViewModel GetLogin() => GetShellInternal()?.LoginViewModel;
 
-        public MainViewModel GetMain()
-        {
-            return GetShellInternal()?.MainViewModel;
-        }
+        public MainViewModel GetMain() => GetShellInternal()?.MainViewModel;
 
-        private ShellViewModel GetShellInternal()
-        {
-            return _rootObject;
-        }
+        private ShellViewModel GetShellInternal() => _rootObject;
     }
 }

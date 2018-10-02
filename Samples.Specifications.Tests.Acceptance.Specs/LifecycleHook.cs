@@ -12,10 +12,7 @@ namespace Samples.Specifications.Tests.Acceptance.Specs
     {
         private readonly IIocContainer _iocContainer;
 
-        public LifecycleHook(ObjectContainer objectContainer)
-        {
-            _iocContainer = new ObjectContainerAdapter(objectContainer);
-        }
+        public LifecycleHook(ObjectContainer objectContainer) => _iocContainer = new ObjectContainerAdapter(objectContainer);
 
         [BeforeTestRun]
         public static void BeforeAllScenarios()

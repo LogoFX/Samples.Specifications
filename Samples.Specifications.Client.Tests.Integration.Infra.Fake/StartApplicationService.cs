@@ -11,9 +11,6 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra.Fake
         {     
         }
 
-        protected override void OnArrange()
-        {
-            BuildersCollectionContext.SerializeBuilders();
-        }
+        protected override void OnArrange() => BuildersCollectionContext.SerializeBuilders();
     }
 }

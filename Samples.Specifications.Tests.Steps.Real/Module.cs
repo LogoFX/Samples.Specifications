@@ -8,12 +8,9 @@ namespace Samples.Specifications.Tests.Steps
     [UsedImplicitly]
     internal sealed class Module : ICompositionModule<IDependencyRegistrator>
     {
-        public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
-        {
-            dependencyRegistrator
-                .RegisterAutomagically(
-                    Assembly.LoadFrom("Samples.Specifications.Tests.Steps.Contracts.dll"),
-                    Assembly.GetExecutingAssembly());
-        }       
+        public void RegisterModule(IDependencyRegistrator dependencyRegistrator) => dependencyRegistrator
+            .RegisterAutomagically(
+                Assembly.LoadFrom("Samples.Specifications.Tests.Steps.Contracts.dll"),
+                Assembly.GetExecutingAssembly());
     }
 }

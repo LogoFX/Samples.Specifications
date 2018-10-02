@@ -37,31 +37,27 @@ namespace Samples.Specifications.Tests.Steps.Real.Helpers
 
         public MongoDbSetupHelper(IMongoClient client)
         {
-            _client = client;       
-            _db = _client.GetDatabase(DbName);                       
+            _client = client;
+            _db = _client.GetDatabase(DbName);
         }
 
-        public void AddWarehouseItem(WarehouseItemDto warehouseItem)
-        {
-            _db.GetCollection<MongoWarehouseItem>("WarehouseItems").InsertOne(new MongoWarehouseItem
+        public void AddWarehouseItem(WarehouseItemDto warehouseItem) => _db
+            .GetCollection<MongoWarehouseItem>("WarehouseItems").InsertOne(new MongoWarehouseItem
             {
                 Id = new ObjectId(),
                 ActualId = warehouseItem.Id,
                 Kind = warehouseItem.Kind,
                 Price = warehouseItem.Price,
                 Quantity = warehouseItem.Quantity
-            });            
-        }
+            });
 
-        public void AddUser(string login, string password)
-        {
-            _db.GetCollection<MongoUser>("Users").InsertOne(new MongoUser
+        public void AddUser(string login, string password) => _db.GetCollection<MongoUser>("Users").InsertOne(
+            new MongoUser
             {
                 Id = new ObjectId(),
                 Login = login,
-                Password = password,                
+                Password = password,
             });
-        }       
 
         public void Initialize()
         {

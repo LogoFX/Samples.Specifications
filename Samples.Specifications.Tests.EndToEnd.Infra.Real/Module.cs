@@ -10,11 +10,8 @@ namespace Samples.Specifications.Tests.EndToEnd.Infra.Real
     [UsedImplicitly]
     internal sealed class Module : ICompositionModule<IDependencyRegistrator>
     {
-        public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
-        {
-            dependencyRegistrator
-                .AddSingleton<IStartApplicationService, StartApplicationService.WithRealProviders>()
-                .AddSingleton<ISetupService, SetupService>();
-        }
+        public void RegisterModule(IDependencyRegistrator dependencyRegistrator) => dependencyRegistrator
+            .AddSingleton<IStartApplicationService, StartApplicationService.WithRealProviders>()
+            .AddSingleton<ISetupService, SetupService>();
     }
 }

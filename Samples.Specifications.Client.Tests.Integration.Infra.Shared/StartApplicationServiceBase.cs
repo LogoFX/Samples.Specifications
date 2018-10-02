@@ -8,10 +8,7 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra.Shared
     {
         private readonly StructureHelper _structureHelper;
 
-        protected StartApplicationServiceBase(StructureHelper structureHelper)
-        {
-            _structureHelper = structureHelper;
-        }
+        protected StartApplicationServiceBase(StructureHelper structureHelper) => _structureHelper = structureHelper;
 
         protected override void Setup()
         {

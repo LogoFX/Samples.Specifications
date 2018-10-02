@@ -9,10 +9,7 @@ namespace Samples.Specifications.Tests.Steps
     [UsedImplicitly]
     internal sealed class Module : ICompositionModule<IDependencyRegistrator>
     {
-        public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
-        {
-            RegisterStepsAutomagically(dependencyRegistrator, Assembly.GetExecutingAssembly());
-        }
+        public void RegisterModule(IDependencyRegistrator dependencyRegistrator) => RegisterStepsAutomagically(dependencyRegistrator, Assembly.GetExecutingAssembly());
 
         private static void RegisterStepsAutomagically(IDependencyRegistrator dependencyRegistrator, Assembly assembly)
         {

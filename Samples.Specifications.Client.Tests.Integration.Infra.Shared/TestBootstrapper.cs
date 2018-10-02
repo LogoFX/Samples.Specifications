@@ -13,10 +13,7 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra.Shared
             {
                 UseApplication = false,
                 ReuseCompositionInformation = true
-            })
-        {
-            this.UseResolver().UseShared().Initialize();
-        }
+            }) => this.UseResolver().UseShared().Initialize();
 
         public override string[] Prefixes => new[]
         {

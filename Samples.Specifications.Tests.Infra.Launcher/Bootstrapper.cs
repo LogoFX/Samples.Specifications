@@ -21,12 +21,11 @@ namespace Samples.Specifications.Tests.Infra.Launcher
             _middlewares =
                 new List<IMiddleware<Bootstrapper>>();
 
-        public Bootstrapper(IDependencyRegistrator dependencyRegistrator)
-        {
-            Registrator = dependencyRegistrator;     
-        }
-            
+        public Bootstrapper(IDependencyRegistrator dependencyRegistrator) => Registrator = dependencyRegistrator;
+
         public IEnumerable<ICompositionModule> Modules { get; private set; } = new ICompositionModule[] { };
+
+        public string ModulesPath => ".";
 
         public string[] Prefixes { get; } =
         {
@@ -40,7 +39,7 @@ namespace Samples.Specifications.Tests.Infra.Launcher
             var compositionManager = new CompositionManager();
             try
             {
-                compositionManager.Initialize(".", Prefixes);
+                compositionManager.Initialize(ModulesPath, Prefixes);
             }
 #pragma warning disable 168 
             //Used for debug

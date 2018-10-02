@@ -7,14 +7,8 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra.Real
     {
         private readonly ISetupHelper _setupHelper;
 
-        public SetupService(ISetupHelper setupHelper)
-        {
-            _setupHelper = setupHelper;
-        }
+        public SetupService(ISetupHelper setupHelper) => _setupHelper = setupHelper;
 
-        public void Setup()
-        {
-            _setupHelper.Initialize();
-        }                 
+        public void Setup() => _setupHelper.Initialize();
     }
 }

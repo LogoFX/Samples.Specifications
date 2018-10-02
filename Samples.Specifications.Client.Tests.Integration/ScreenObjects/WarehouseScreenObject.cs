@@ -11,10 +11,7 @@ namespace Samples.Specifications.Client.Tests.Integration.ScreenObjects
     {
         public StructureHelper StructureHelper { get; }
 
-        public WarehouseScreenObject(StructureHelper structureHelper)
-        {
-            StructureHelper = structureHelper;
-        }       
+        public WarehouseScreenObject(StructureHelper structureHelper) => StructureHelper = structureHelper;
 
         public void AddWarehouseItem(WarehouseItemAssertionTestData warehouseItemData)
         {

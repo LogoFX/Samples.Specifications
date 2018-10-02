@@ -7,9 +7,7 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra.Core
     [UsedImplicitly]
     internal sealed class Module : ICompositionModule<IDependencyRegistrator>
     {
-        public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
-        {
+        public void RegisterModule(IDependencyRegistrator dependencyRegistrator) =>
             dependencyRegistrator.RegisterSingleton<StructureHelper, StructureHelper>();
-        }
     }
 }

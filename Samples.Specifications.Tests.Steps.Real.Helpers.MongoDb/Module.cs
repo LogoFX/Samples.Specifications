@@ -9,12 +9,9 @@ namespace Samples.Specifications.Tests.Steps.Real.Helpers
     [UsedImplicitly]
     internal sealed class Module : ICompositionModule<IDependencyRegistrator>
     {
-        public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
-        {
-            dependencyRegistrator
-                .AddSingleton<ISetupHelper, MongoDbSetupHelper>()
-                //TODO: put into configuration
-                .AddTransient<IMongoClient>(() => new MongoClient("mongodb://localhost:27017"));
-        }
+        public void RegisterModule(IDependencyRegistrator dependencyRegistrator) => dependencyRegistrator
+            .AddSingleton<ISetupHelper, MongoDbSetupHelper>()
+            //TODO: put into configuration
+            .AddTransient<IMongoClient>(() => new MongoClient("mongodb://localhost:27017"));
     }
 }

@@ -12,13 +12,10 @@ namespace Samples.Specifications.Tests.EndToEnd.Infra.Fake
     [UsedImplicitly]
     internal sealed class Module : ICompositionModule<IDependencyRegistrator>
     {                
-        public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
-        {
-            dependencyRegistrator
-                .AddSingleton<IStartApplicationService, StartApplicationService.WithFakeProviders>()
-                .AddSingleton<IBuilderRegistrationService, BuilderRegistrationService>()
-                .AddSingleton<ISetupService, SetupService>()
-                .RegisterBuilders();                        
-        }        
+        public void RegisterModule(IDependencyRegistrator dependencyRegistrator) => dependencyRegistrator
+            .AddSingleton<IStartApplicationService, StartApplicationService.WithFakeProviders>()
+            .AddSingleton<IBuilderRegistrationService, BuilderRegistrationService>()
+            .AddSingleton<ISetupService, SetupService>()
+            .RegisterBuilders();
     }
 }

@@ -14,10 +14,7 @@ namespace Samples.Specifications.Tests.EndToEnd.ScreenObjects
     {
         public StructureHelper StructureHelper { get; set; }
 
-        public WarehouseScreenObject(StructureHelper structureHelper)
-        {
-            StructureHelper = structureHelper;
-        }
+        public WarehouseScreenObject(StructureHelper structureHelper) => StructureHelper = structureHelper;
 
         public IEnumerable<WarehouseItemAssertionTestData> GetWarehouseItems()
         {

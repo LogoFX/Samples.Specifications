@@ -6,10 +6,7 @@ namespace Samples.Specifications.Tests.EndToEnd.ScreenObjects
     {
         public StructureHelper StructureHelper { get; set; }
 
-        public ShellScreenObject(StructureHelper structureHelper)
-        {
-            StructureHelper = structureHelper;
-        }
+        public ShellScreenObject(StructureHelper structureHelper) => StructureHelper = structureHelper;
 
         public void Close()
         {            

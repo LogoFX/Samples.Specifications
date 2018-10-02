@@ -12,9 +12,6 @@ namespace Samples.Specifications.Tests.EndToEnd.Infra.Real
             _setupHelper = setupHelper;
         }
 
-        public void Setup()
-        {
-            _setupHelper.Initialize();
-        }
+        public void Setup() => _setupHelper.Initialize();
     }
 }

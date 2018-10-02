@@ -10,15 +10,12 @@ namespace Samples.Specifications.Tests.EndToEnd
     [UsedImplicitly]
     internal sealed class Module : ICompositionModule<IDependencyRegistrator>
     {
-        public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
-        {            
-            dependencyRegistrator                
-                .RegisterAutomagically(
+        public void RegisterModule(IDependencyRegistrator dependencyRegistrator) => dependencyRegistrator                
+            .RegisterAutomagically(
                 Assembly.LoadFrom("Samples.Specifications.Tests.Contracts.dll"),
                 Assembly.GetExecutingAssembly())                
-                .AddSingleton<StructureHelper, StructureHelper>()
-                .AddSingleton<IApplicationFacade, ApplicationFacade>()                
-                .AddSingleton<ITeardownService, TeardownService>();
-        }
+            .AddSingleton<StructureHelper, StructureHelper>()
+            .AddSingleton<IApplicationFacade, ApplicationFacade>()                
+            .AddSingleton<ITeardownService, TeardownService>();
     }
 }

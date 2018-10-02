@@ -7,11 +7,8 @@ namespace Samples.Specifications.Tests.EndToEnd
 {
     internal sealed class Module : ICompositionModule<IDependencyRegistrator>
     {
-        public void RegisterModule(IDependencyRegistrator dependencyRegistrator)
-        {
-            dependencyRegistrator
-                .AddSingleton<IApplicationPathInfo, ApplicationPathInfo>()
-                .AddSingleton<IStartClientApplicationService, StartClientApplicationService>();
-        }
+        public void RegisterModule(IDependencyRegistrator dependencyRegistrator) => dependencyRegistrator
+            .AddSingleton<IApplicationPathInfo, ApplicationPathInfo>()
+            .AddSingleton<IStartClientApplicationService, StartClientApplicationService>();
     }
 }
