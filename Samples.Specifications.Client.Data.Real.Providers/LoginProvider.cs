@@ -8,18 +8,22 @@ using Samples.Client.Data.Contracts.Providers;
 namespace Samples.Specifications.Client.Data.Real.Providers
 {
     internal sealed class LoginProvider : ILoginProvider
-    {        
+    {
+        private readonly IRequestFactory _requestFactory;
         private readonly RestClient _client;
 
-        public LoginProvider(RestClient client)
+        public LoginProvider(
+            RestClient client, 
+            IRequestFactory requestFactory)
         {
+            _requestFactory = requestFactory;
             _client = client;
         }
 
         void ILoginProvider.Login(string username, string password)
         {
             //TODO: very naive ))
-            var restRequest = new RestRequest("api/user", Method.GET) { RequestFormat = DataFormat.Json };
+            var restRequest = _requestFactory.GetRequest("user", Method.GET);
             IRestResponse<List<UserDto>> response;
             try
             {

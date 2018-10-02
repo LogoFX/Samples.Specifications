@@ -90,6 +90,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="RestRequestFactory.cs" />
     <Compile Include="WarehouseProvider.cs" />
   </ItemGroup>
   <ItemGroup>

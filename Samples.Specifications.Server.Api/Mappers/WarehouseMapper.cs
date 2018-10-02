@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Samples.Specifications.Server.Api.Models;
+using Samples.Specifications.Server.Domain.Entities;
 
 namespace Samples.Specifications.Server.Api.Mappers
 {

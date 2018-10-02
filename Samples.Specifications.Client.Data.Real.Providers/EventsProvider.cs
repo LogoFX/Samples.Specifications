@@ -7,9 +7,6 @@ namespace Samples.Specifications.Client.Data.Real.Providers
 {
     internal sealed class EventsProvider : IEventsProvider
     {
-        IEnumerable<EventDto> IEventsProvider.GetLastEvents(DateTime lastEventTime)
-        {
-            return new EventDto[] { };
-        }
+        IEnumerable<EventDto> IEventsProvider.GetLastEvents(DateTime lastEventTime) => new EventDto[] { };
     }
 }

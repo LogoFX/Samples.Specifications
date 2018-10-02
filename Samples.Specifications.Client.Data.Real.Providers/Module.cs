@@ -16,6 +16,7 @@ namespace Samples.Specifications.Client.Data.Real.Providers
                 .RegisterAutomagically(
                     Assembly.LoadFrom("Samples.Client.Data.Contracts.Providers.dll"),
                     Assembly.GetExecutingAssembly())
+                    .AddSingleton<IRequestFactory, RestRequestFactory>()
                 .AddSingleton(() => new RestClient(Settings.Default.ServerEndpoint));
         }             
     }
