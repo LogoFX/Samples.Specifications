@@ -676,8 +676,8 @@ Global
 		{D12F36FC-FCBC-4941-9199-D44F6E1C2767}.DebugWithReal|Any CPU.ActiveCfg = Debug|Any CPU
 		{D12F36FC-FCBC-4941-9199-D44F6E1C2767}.EndToEndWithFake|Any CPU.ActiveCfg = EndToEndWithFake|Any CPU
 		{D12F36FC-FCBC-4941-9199-D44F6E1C2767}.EndToEndWithFake|Any CPU.Build.0 = EndToEndWithFake|Any CPU
-		{D12F36FC-FCBC-4941-9199-D44F6E1C2767}.EndToEndWithReal|Any CPU.ActiveCfg = EndToEndWithFake|Any CPU
-		{D12F36FC-FCBC-4941-9199-D44F6E1C2767}.EndToEndWithReal|Any CPU.Build.0 = EndToEndWithFake|Any CPU
+		{D12F36FC-FCBC-4941-9199-D44F6E1C2767}.EndToEndWithReal|Any CPU.ActiveCfg = EndToEndWithReal|Any CPU
+		{D12F36FC-FCBC-4941-9199-D44F6E1C2767}.EndToEndWithReal|Any CPU.Build.0 = EndToEndWithReal|Any CPU
 		{D12F36FC-FCBC-4941-9199-D44F6E1C2767}.IntegrationWithFake|Any CPU.ActiveCfg = EndToEndWithFake|Any CPU
 		{D12F36FC-FCBC-4941-9199-D44F6E1C2767}.IntegrationWithReal|Any CPU.ActiveCfg = Debug|Any CPU
 		{D12F36FC-FCBC-4941-9199-D44F6E1C2767}.Release|Any CPU.ActiveCfg = Release|Any CPU
