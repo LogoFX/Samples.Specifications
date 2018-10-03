@@ -14,9 +14,8 @@ namespace Samples.Specifications.Server.Api
         public void RegisterModule(IServiceCollection dependencyRegistrator) => dependencyRegistrator.AddSwaggerGen(c =>
         {
             c.SwaggerDoc("v1", new Info {Title = "My API", Version = "v1"});
-            var basePath = PlatformServices.Default.Application.ApplicationBasePath;
-            var xmlPath = Path.Combine(basePath, $"{Assembly.GetExecutingAssembly().GetName().Name}.xml");
-            c.IncludeXmlComments(xmlPath);
+            c.IncludeXmlComments(Path.Combine(PlatformServices.Default.Application.ApplicationBasePath,
+                $"{Assembly.GetExecutingAssembly().GetName().Name}.xml"));
         });
     }
 }
