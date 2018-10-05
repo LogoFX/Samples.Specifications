@@ -110,9 +110,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json">
-      <Version>11.0.2</Version>
-    </PackageReference>
     <PackageReference Include="SpecFlow">
       <Version>2.4.0</Version>
     </PackageReference>
