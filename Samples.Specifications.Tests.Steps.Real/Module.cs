@@ -10,7 +10,7 @@ namespace Samples.Specifications.Tests.Steps
     {
         public void RegisterModule(IDependencyRegistrator dependencyRegistrator) => dependencyRegistrator
             .RegisterAutomagically(
-                Assembly.LoadFrom("Samples.Specifications.Tests.Steps.Contracts.dll"),
+                Assembly.LoadFrom(AssemblyInfo.AssemblyName),
                 Assembly.GetExecutingAssembly());
     }
 }

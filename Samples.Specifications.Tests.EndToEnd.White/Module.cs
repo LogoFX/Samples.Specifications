@@ -3,6 +3,7 @@ using Attest.Testing.Contracts;
 using JetBrains.Annotations;
 using LogoFX.Client.Testing.Contracts;
 using LogoFX.Client.Testing.EndToEnd.White;
+using Samples.Specifications.Tests.Contracts;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
 
@@ -13,7 +14,7 @@ namespace Samples.Specifications.Tests.EndToEnd
     {
         public void RegisterModule(IDependencyRegistrator dependencyRegistrator) => dependencyRegistrator                
             .RegisterAutomagically(
-                Assembly.LoadFrom("Samples.Specifications.Tests.Contracts.dll"),
+                Assembly.LoadFrom(AssemblyInfo.AssemblyName),
                 Assembly.GetExecutingAssembly())               
             .AddSingleton<StructureHelper, StructureHelper>()
             .AddSingleton<IApplicationFacade, ApplicationFacade>()                
