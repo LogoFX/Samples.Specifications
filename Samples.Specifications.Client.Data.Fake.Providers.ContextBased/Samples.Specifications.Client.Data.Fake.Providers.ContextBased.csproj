@@ -72,6 +72,12 @@
     <PackageReference Include="Solid.Extensibility">
       <Version>1.2.1-rc3</Version>
     </PackageReference>
+    <PackageReference Include="Solid.Practices.IoC">
+      <Version>1.2.1-rc6</Version>
+    </PackageReference>
+    <PackageReference Include="Solid.Practices.Modularity">
+      <Version>1.2.1-rc4</Version>
+    </PackageReference>
     <PackageReference Include="System.Runtime">
       <Version>4.3.0</Version>
     </PackageReference>

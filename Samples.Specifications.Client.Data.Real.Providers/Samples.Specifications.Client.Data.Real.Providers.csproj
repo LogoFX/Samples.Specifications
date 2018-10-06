@@ -119,6 +119,9 @@
     <PackageReference Include="RestSharp">
       <Version>106.4.2</Version>
     </PackageReference>
+    <PackageReference Include="Solid.Practices.IoC">
+      <Version>1.2.1-rc6</Version>
+    </PackageReference>
     <PackageReference Include="Solid.Practices.Modularity">
       <Version>1.2.1-rc4</Version>
     </PackageReference>
