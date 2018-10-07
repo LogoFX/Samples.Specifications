@@ -44,7 +44,7 @@ namespace Samples.Specifications.Client.Data.Fake.Shared
             dependencyRegistrator.RegisterBuildersImpl(buildersTypes);
         }
 
-        internal static void RegisterBuildersImpl(this IDependencyRegistrator dependencyRegistrator, Type[] buildersTypes)
+        private static void RegisterBuildersImpl(this IDependencyRegistrator dependencyRegistrator, Type[] buildersTypes)
         {
             foreach (var type in buildersTypes)
             {
