@@ -22,7 +22,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="LogoFX.Client.Tests.EndToEnd" Version="1.2.1-rc6" />
+    <PackageReference Include="LogoFX.Client.Tests.EndToEnd" Version="1.2.1-rc7" />
     <PackageReference Include="Solid.Practices.IoC" Version="1.2.1-rc6" />
     <PackageReference Include="Solid.Practices.Modularity" Version="1.2.1-rc4" />
   </ItemGroup>
