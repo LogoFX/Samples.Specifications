@@ -14,7 +14,8 @@ namespace Samples.Specifications.Client.Data.Fake.Providers
         public void RegisterModule(IDependencyRegistrator dependencyRegistrator) => dependencyRegistrator
             .AddInstance(InitializeWarehouseContainer())
             .AddInstance(InitializeUserContainer())
-            .RegisterBuildersAndFakeProviders();
+            .RegisterBuilders()
+            .RegisterFakeProviders();
 
         private static IWarehouseContainer InitializeWarehouseContainer()
         {

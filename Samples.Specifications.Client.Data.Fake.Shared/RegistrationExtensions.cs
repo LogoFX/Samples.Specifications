@@ -8,9 +8,10 @@ namespace Samples.Specifications.Client.Data.Fake.Shared
 {
     public static class RegistrationExtensions
     {
-        public static void RegisterBuildersAndFakeProviders(this IDependencyRegistrator dependencyRegistrator)
+        public static void RegisterFakeProviders(this IDependencyRegistrator dependencyRegistrator)
         {
-            var assembliesProvider = new ProvidersAssemblySourceProvider(PlatformProvider.Current.GetRootPath());
+            var assembliesProvider = new CustomAssemblySourceProvider(PlatformProvider.Current.GetRootPath(),
+                new[] {Consts.ContractsAssemblyEnding, Consts.FakeAssemblyEnding});
             var allAssemblies = assembliesProvider.Assemblies.ToArray();
             var contractTypes = allAssemblies.FindContractTypes();
             var fakeTypes = allAssemblies.FindFakeTypes();
@@ -30,27 +31,20 @@ namespace Samples.Specifications.Client.Data.Fake.Shared
             {
                 dependencyRegistrator.RegisterSingleton(contractToFakeMatch.Key, contractToFakeMatch.Value);
             }
-
-            var contractToBuilderMatches =
-                allAssemblies.FindContractToBuilderMatchesImpl(contractTypes);
-            dependencyRegistrator.RegisterBuildersImpl(contractToBuilderMatches.Values.Select(k => k).ToArray());
         }
 
-        public static void RegisterBuilders(this IDependencyRegistrator dependencyRegistrator)
+        public static IDependencyRegistrator RegisterBuilders(this IDependencyRegistrator dependencyRegistrator)
         {
-            var assembliesProvider = new BuildersAssemblySourceProvider(PlatformProvider.Current.GetRootPath());
-            var allAssemblies = assembliesProvider.Assemblies.ToArray();
-            var buildersTypes = allAssemblies.FindBuildersTypes();
-            dependencyRegistrator.RegisterBuildersImpl(buildersTypes);
-        }
-
-        private static void RegisterBuildersImpl(this IDependencyRegistrator dependencyRegistrator, Type[] buildersTypes)
-        {
+            var assembliesProvider = new CustomAssemblySourceProvider(PlatformProvider.Current.GetRootPath(),
+                new[] {Consts.BuildersAssemblyEnding});
+            var assemblies = assembliesProvider.Assemblies.ToArray();
+            var buildersTypes = assemblies.FindBuildersTypes();
             foreach (var type in buildersTypes)
             {
                 var instance = BuilderFactory.CreateBuilderInstance(type);
                 dependencyRegistrator.RegisterInstance(type, instance);
             }
+            return dependencyRegistrator;
         }
     }
 }

@@ -1,22 +1,16 @@
 ﻿using Solid.Practices.Composition;
 
 namespace Samples.Specifications.Client.Data.Fake.Shared
-{
-    internal sealed class BuildersAssemblySourceProvider : AssemblySourceProviderBase
+{    
+    internal sealed class CustomAssemblySourceProvider : AssemblySourceProviderBase
     {
-        internal BuildersAssemblySourceProvider(string rootPath) : base(rootPath)
+        private readonly string[] _endings;
+
+        public CustomAssemblySourceProvider(string rootPath, string[] endings) : base(rootPath)
         {
+            _endings = endings;
         }
 
-        protected override string[] ResolveNamespaces() => new[] { Consts.BuildersAssemblyEnding };
-    }
-
-    internal sealed class ProvidersAssemblySourceProvider : AssemblySourceProviderBase
-    {
-        public ProvidersAssemblySourceProvider(string rootPath) : base(rootPath)
-        {
-        }
-
-        protected override string[] ResolveNamespaces() => new[] { Consts.ContractsAssemblyEnding, Consts.FakeAssemblyEnding, Consts.BuildersAssemblyEnding };
+        protected override string[] ResolveNamespaces() => _endings;
     }
 }
