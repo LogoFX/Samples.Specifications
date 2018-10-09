@@ -37,16 +37,16 @@ namespace Samples.Specifications.Client.Data.Fake.Shared
         }
 
         internal static Type[] FindContractTypes(this IEnumerable<Assembly> assemblies) => assemblies.FindTypes(Consts.ContractsAssemblyEnding,
-            t => t.IsInterface && t.Name.EndsWith(Consts.ProviderEnding));
+            t => t.InterfaceEndsWith(Consts.ProviderEnding));
 
         internal static Type[] FindFakeTypes(this IEnumerable<Assembly> assemblies) => assemblies.FindTypes(Consts.FakeAssemblyEnding,
-            t => t.IsInterface == false && t.IsAbstract == false && t.Name.EndsWith(Consts.ProviderEnding));
+            t => t.ClassEndsWith(Consts.ProviderEnding));
 
         internal static Type[] FindBuildersTypes(this IEnumerable<Assembly> allAssemblies)
         {
             var buildersAssemblies = allAssemblies.Where(t => t.GetName().Name.EndsWith(Consts.BuildersAssemblyEnding));
             var buildersTypes = buildersAssemblies.SelectMany(k => k.DefinedTypes
-                .Where(t => t.IsInterface == false && t.IsAbstract == false && t.Name.EndsWith(Consts.BuilderEnding))
+                .Where(t => t.ClassEndsWith(Consts.BuilderEnding))
                 .Select(t => t.AsType())).ToArray();
             return buildersTypes;
         }
