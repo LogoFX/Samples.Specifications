@@ -12,9 +12,9 @@ namespace Samples.Specifications.Tests.EndToEnd
         }
 
         public void Stop()
-        {
-            var application = ApplicationContext.Application;
-            application?.Dispose();
+        {            
+            ApplicationContext.Application?.Close();
+            ApplicationContext.Application?.Dispose();
         }
     }
 }
