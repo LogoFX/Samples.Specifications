@@ -4,7 +4,7 @@ using Samples.Specifications.Client.Tests.Integration.Infra.Core;
 
 namespace Samples.Specifications.Client.Tests.Integration.Infra.Shared
 {
-    public abstract class StartApplicationServiceBase : LogoFX.Client.Testing.Integration.StartApplicationServiceBase
+    public abstract class StartApplicationServiceBase : Attest.Testing.Integration.StartApplicationServiceBase
     {
         private readonly StructureHelper _structureHelper;
 

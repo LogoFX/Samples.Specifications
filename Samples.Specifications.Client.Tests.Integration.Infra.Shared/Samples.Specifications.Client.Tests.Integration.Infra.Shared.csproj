@@ -89,12 +89,6 @@
     <PackageReference Include="LogoFX.Client.Core">
       <Version>1.2.1-rc4</Version>
     </PackageReference>
-    <PackageReference Include="LogoFX.Client.Tests.Integration">
-      <Version>1.1.1-rc6</Version>
-    </PackageReference>
-    <PackageReference Include="LogoFX.Client.Tests.Integration.SpecFlow">
-      <Version>1.4.1-rc6</Version>
-    </PackageReference>
     <PackageReference Include="LogoFX.Client.Tests.Shared.Caliburn.Micro">
       <Version>1.1.0-rc2</Version>
     </PackageReference>
