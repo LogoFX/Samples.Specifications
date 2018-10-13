@@ -60,7 +60,6 @@
   <ItemGroup>
     <Compile Include="Module.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SetupService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

@@ -1,4 +1,5 @@
 ﻿using Attest.Testing.Contracts;
+using Attest.Testing.Core;
 using Attest.Testing.Core.FakeData;
 using Attest.Testing.EndToEnd;
 using JetBrains.Annotations;
@@ -14,7 +15,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Infra.Fake
         public void RegisterModule(IDependencyRegistrator dependencyRegistrator) => dependencyRegistrator
             .AddSingleton<IStartApplicationService, StartApplicationService.WithFakeProviders>()
             .AddSingleton<IBuilderRegistrationService, BuilderRegistrationService>()
-            .AddSingleton<ISetupService, SetupService>()
+            .AddSingleton<ISetupService, SetupServiceBase>()
             .RegisterBuilders();
     }
 }
