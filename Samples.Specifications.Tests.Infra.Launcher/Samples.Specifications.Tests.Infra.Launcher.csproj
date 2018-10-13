@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Attest.Testing.Contracts" Version="1.4.1-rc2" />
+    <PackageReference Include="Attest.Testing.Contracts" Version="1.4.1-rc3" />
     <PackageReference Include="LogoFX.Bootstrapping" Version="1.7.1-rc8" />
     <PackageReference Include="Solid.Bootstrapping" Version="1.2.1-rc4" />
     <PackageReference Include="Solid.Extensibility" Version="1.2.1-rc3" />

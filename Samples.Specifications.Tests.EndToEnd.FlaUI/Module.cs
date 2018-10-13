@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 using Attest.Testing.Contracts;
+using Attest.Testing.Core;
 using JetBrains.Annotations;
-using LogoFX.Client.Testing.Contracts;
 using Samples.Specifications.Tests.Contracts;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;

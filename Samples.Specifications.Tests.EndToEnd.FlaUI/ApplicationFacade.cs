@@ -1,5 +1,5 @@
-﻿using FlaUI.Core;
-using LogoFX.Client.Testing.Contracts;
+﻿using Attest.Testing.Contracts;
+using FlaUI.Core;
 
 namespace Samples.Specifications.Tests.EndToEnd
 {

@@ -1,7 +1,7 @@
 ﻿using Attest.Testing.Contracts;
+using Attest.Testing.Core;
 using Attest.Testing.Core.FakeData;
 using JetBrains.Annotations;
-using LogoFX.Client.Testing.Contracts;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
 
@@ -13,6 +13,6 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra.Fake
         public void RegisterModule(IDependencyRegistrator dependencyRegistrator) => dependencyRegistrator
             .AddSingleton<IStartApplicationService, StartApplicationService>()
             .AddSingleton<IBuilderRegistrationService, BuilderRegistrationService>()
-            .AddSingleton<ISetupService, SetupService>();
+            .AddSingleton<ISetupService, SetupServiceBase>();
     }
 }
