@@ -151,9 +151,6 @@
     <PackageReference Include="FluentAssertions">
       <Version>5.4.2</Version>
     </PackageReference>
-    <PackageReference Include="LogoFX.Bootstrapping">
-      <Version>1.7.1-rc8</Version>
-    </PackageReference>
     <PackageReference Include="Microsoft.Win32.Primitives">
       <Version>4.3.0</Version>
     </PackageReference>
