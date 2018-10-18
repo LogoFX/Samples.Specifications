@@ -20,7 +20,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.1.2" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.1.1" />
     <PackageReference Include="Microsoft.Extensions.PlatformAbstractions" Version="1.1.0" />
-    <PackageReference Include="Solid.Practices.Modularity" Version="1.2.1-rc4" />
+    <PackageReference Include="Solid.Practices.Modularity" Version="1.2.1-rc5" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="3.0.0" />
   </ItemGroup>
 

@@ -16,7 +16,7 @@
     <PackageReference Include="JetBrains.Annotations" Version="2018.2.1" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.1.1" />
     <PackageReference Include="MongoDB.Driver" Version="2.7.0" />
-    <PackageReference Include="Solid.Practices.Modularity" Version="1.2.1-rc4" />
+    <PackageReference Include="Solid.Practices.Modularity" Version="1.2.1-rc5" />
   </ItemGroup>  
   
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

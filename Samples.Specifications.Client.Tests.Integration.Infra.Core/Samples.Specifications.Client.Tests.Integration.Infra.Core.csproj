@@ -101,10 +101,10 @@
       <Version>1.2.1-rc2</Version>
     </PackageReference>
     <PackageReference Include="Solid.Practices.IoC">
-      <Version>1.2.1-rc6</Version>
+      <Version>1.2.1-rc7</Version>
     </PackageReference>
     <PackageReference Include="Solid.Practices.Modularity">
-      <Version>1.2.1-rc4</Version>
+      <Version>1.2.1-rc5</Version>
     </PackageReference>
     <PackageReference Include="System.Reactive.Core">
       <Version>4.0.0</Version>

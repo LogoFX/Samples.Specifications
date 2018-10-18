@@ -141,7 +141,7 @@
       <Version>1.7.1-rc9</Version>
     </PackageReference>
     <PackageReference Include="LogoFX.Client.Bootstrapping.Adapters.SimpleContainer">
-      <Version>1.2.1-rc2</Version>
+      <Version>1.2.1-rc3</Version>
     </PackageReference>
     <PackageReference Include="LogoFX.Client.Bootstrapping.Core">
       <Version>1.7.1-rc5</Version>
