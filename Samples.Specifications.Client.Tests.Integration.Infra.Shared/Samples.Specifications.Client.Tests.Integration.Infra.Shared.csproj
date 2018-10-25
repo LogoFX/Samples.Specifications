@@ -90,7 +90,7 @@
       <Version>1.2.1-rc4</Version>
     </PackageReference>
     <PackageReference Include="LogoFX.Client.Tests.Integration.SpecFlow">
-      <Version>1.4.1-rc7</Version>
+      <Version>1.4.1-rc8</Version>
     </PackageReference>
     <PackageReference Include="LogoFX.Client.Tests.Shared.Caliburn.Micro">
       <Version>1.1.0-rc2</Version>
