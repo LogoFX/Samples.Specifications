@@ -18,10 +18,6 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra.Shared
             this.UseResolver().UseShared().Initialize();
         }
 
-        public override string[] Prefixes => new[]
-        {
-            "Samples.Specifications.Client.Presentation", "Samples.Client.Model",
-            "Samples.Specifications.Client.Data"
-        };        
+        public override string[] Prefixes => Consts.Prefixes;
     }
 }

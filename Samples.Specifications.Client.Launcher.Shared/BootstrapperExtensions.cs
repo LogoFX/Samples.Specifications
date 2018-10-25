@@ -12,5 +12,5 @@ namespace Samples.Specifications.Client.Launcher.Shared
             this IBootstrapperWithContainerAdapter<ExtendedSimpleContainerAdapter> bootstrapper) => bootstrapper
             .UseViewModelCreatorService()
             .UseViewModelFactory();
-    }    
+    }
 }
