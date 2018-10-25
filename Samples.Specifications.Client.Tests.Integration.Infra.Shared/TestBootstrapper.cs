@@ -20,17 +20,8 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra.Shared
 
         public override string[] Prefixes => new[]
         {
-            "Samples.Specifications.Client.Presentation", "Samples.Client.Model", "Samples.Specifications.Client.Data",
-            "Samples.Specifications.Client.Tests", "Samples.Client.Tests", "Samples.Specifications.Tests.Steps"
-        };
-
-        public class SpecBased : TestBootstrapper
-        {
-            public override string[] Prefixes => new[]
-            {
-                "Samples.Specifications.Client.Presentation", "Samples.Client.Model",
-                "Samples.Specifications.Client.Data"
-            };
-        }
+            "Samples.Specifications.Client.Presentation", "Samples.Client.Model",
+            "Samples.Specifications.Client.Data"
+        };        
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Attest.Testing.Contracts;
+using Samples.Client.Model.Shared;
 using Samples.Specifications.Client.Tests.Integration.Infra.Shared;
 
 namespace Samples.Specifications.Client.Tests.Integration
@@ -7,7 +8,8 @@ namespace Samples.Specifications.Client.Tests.Integration
     {
         public void Teardown()
         {
-            TestHelper.AfterTeardown();
+            UserContext.Current = null;
+            LogoFX.Client.Testing.Shared.Caliburn.Micro.TestHelper.Teardown();
         }
     }
 }

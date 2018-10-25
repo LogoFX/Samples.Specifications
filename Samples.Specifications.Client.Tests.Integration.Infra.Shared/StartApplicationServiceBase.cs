@@ -1,4 +1,5 @@
-﻿using LogoFX.Client.Testing.Integration.SpecFlow;
+﻿using Caliburn.Micro;
+using LogoFX.Client.Testing.Integration.SpecFlow;
 using Samples.Specifications.Client.Presentation.Shell.ViewModels;
 using Samples.Specifications.Client.Tests.Integration.Infra.Core;
 
@@ -30,10 +31,17 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra.Shared
         protected override void OnStart(object rootObject)
         {
             base.OnStart(rootObject);
-            RootObjectHelper.ActivateRootObject(_structureHelper, rootObject);
+            ActivateRootObject(_structureHelper, rootObject);
         }
 
-        private sealed class BootstrapperBridge : IntegrationTestsBase<ShellViewModel, TestBootstrapper.SpecBased>.
+        private static void ActivateRootObject(StructureHelper structureHelper, object rootObject)
+        {
+            var shell = (ShellViewModel)rootObject;
+            structureHelper.SetRootObject(shell);
+            ScreenExtensions.TryActivate(shell);
+        }
+
+        private sealed class BootstrapperBridge : IntegrationTestsBase<ShellViewModel, TestBootstrapper>.
             WithExplicitRootObjectCreation
         {
 

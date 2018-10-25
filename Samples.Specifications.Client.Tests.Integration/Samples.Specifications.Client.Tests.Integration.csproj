@@ -86,6 +86,10 @@
       <Project>{848aeeae-e52f-4aa4-888c-c9a6d9005f01}</Project>
       <Name>Samples.Client.Model.Contracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Samples.Client.Model.Shared\Samples.Client.Model.Shared.csproj">
+      <Project>{c68f2be4-0d91-4854-b937-f903edfa266a}</Project>
+      <Name>Samples.Client.Model.Shared</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Client.Presentation.Shell\Samples.Specifications.Client.Presentation.Shell.csproj">
       <Project>{5270F84D-8FF4-4756-83B0-78DD9777643D}</Project>
       <Name>Samples.Specifications.Client.Presentation.Shell</Name>
