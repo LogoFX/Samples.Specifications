@@ -503,8 +503,8 @@ Global
 		{06CBECEE-B066-42D5-8DF6-47DA317B2180}.DebugWithReal|Any CPU.ActiveCfg = Debug|Any CPU
 		{06CBECEE-B066-42D5-8DF6-47DA317B2180}.EndToEndWithFake|Any CPU.ActiveCfg = Release|Any CPU
 		{06CBECEE-B066-42D5-8DF6-47DA317B2180}.EndToEndWithReal|Any CPU.ActiveCfg = Release|Any CPU
-		{06CBECEE-B066-42D5-8DF6-47DA317B2180}.IntegrationWithFake|Any CPU.ActiveCfg = Release|Any CPU
-		{06CBECEE-B066-42D5-8DF6-47DA317B2180}.IntegrationWithFake|Any CPU.Build.0 = Release|Any CPU
+		{06CBECEE-B066-42D5-8DF6-47DA317B2180}.IntegrationWithFake|Any CPU.ActiveCfg = IntegrationWithFake|Any CPU
+		{06CBECEE-B066-42D5-8DF6-47DA317B2180}.IntegrationWithFake|Any CPU.Build.0 = IntegrationWithFake|Any CPU
 		{06CBECEE-B066-42D5-8DF6-47DA317B2180}.IntegrationWithReal|Any CPU.ActiveCfg = Release|Any CPU
 		{06CBECEE-B066-42D5-8DF6-47DA317B2180}.IntegrationWithReal|Any CPU.Build.0 = Release|Any CPU
 		{06CBECEE-B066-42D5-8DF6-47DA317B2180}.Release|Any CPU.ActiveCfg = Release|Any CPU
