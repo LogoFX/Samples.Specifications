@@ -1,5 +1,6 @@
 ﻿using System.Reflection;
 using Attest.Testing.Contracts;
+using Attest.Testing.Integration;
 using JetBrains.Annotations;
 using Samples.Specifications.Tests.Contracts;
 using Solid.Practices.IoC;
@@ -16,7 +17,7 @@ namespace Samples.Specifications.Client.Tests.Integration
                 .RegisterAutomagically(
                 Assembly.LoadFrom(AssemblyInfo.AssemblyName),
                 Assembly.GetExecutingAssembly())
-                .AddSingleton<IStartLocalApplicationService, Attest.Testing.Integration.StartLocalApplicationService>()                
+                .AddSingleton<IStartLocalApplicationService, StartLocalApplicationService>()                
                 .AddSingleton<ITeardownService, TeardownService>();
         }
     }

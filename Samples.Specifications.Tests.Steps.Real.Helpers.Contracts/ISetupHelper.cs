@@ -1,6 +1,6 @@
 ﻿using Samples.Client.Data.Contracts.Dto;
 
-namespace Samples.Specifications.Tests.Steps.Helpers
+namespace Samples.Specifications.Tests.Steps.Real.Helpers
 {
     public interface ISetupHelper
     {

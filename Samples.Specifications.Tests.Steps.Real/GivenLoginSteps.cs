@@ -1,4 +1,4 @@
-﻿using Samples.Specifications.Tests.Steps.Helpers;
+﻿using Samples.Specifications.Tests.Steps.Real.Helpers;
 
 namespace Samples.Specifications.Tests.Steps
 {

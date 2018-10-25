@@ -3,7 +3,6 @@ using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Driver;
 using Samples.Client.Data.Contracts.Dto;
-using Samples.Specifications.Tests.Steps.Helpers;
 
 namespace Samples.Specifications.Tests.Steps.Real.Helpers
 {

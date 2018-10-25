@@ -1,6 +1,5 @@
 ﻿using JetBrains.Annotations;
 using MongoDB.Driver;
-using Samples.Specifications.Tests.Steps.Helpers;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
 
