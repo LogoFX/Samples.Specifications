@@ -11,10 +11,10 @@ using Solid.Practices.Modularity;
 
 namespace Samples.Specifications.Tests.Infra.Launcher
 {
-    internal sealed class Bootstrapper : IInitializable, 
-        IExtensible<Bootstrapper>,         
+    internal sealed class Bootstrapper : IInitializable,
+        IExtensible<Bootstrapper>,
         ICompositionModulesProvider,
-        IHaveRegistrator        
+        IHaveRegistrator
     {
         private readonly
             List<IMiddleware<Bootstrapper>>
@@ -51,9 +51,9 @@ namespace Samples.Specifications.Tests.Infra.Launcher
             finally
             {
                 Modules = compositionManager.Modules.ToArray();
-            }                        
+            }
         }
-              
+
         public Bootstrapper Use(
             IMiddleware<Bootstrapper> middleware)
         {
@@ -65,6 +65,6 @@ namespace Samples.Specifications.Tests.Infra.Launcher
         {
             InitializeCompositionModules();
             MiddlewareApplier.ApplyMiddlewares(this, _middlewares);
-        }        
+        }
     }
 }

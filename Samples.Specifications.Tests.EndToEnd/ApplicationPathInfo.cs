@@ -1,7 +1,9 @@
 using Attest.Testing.Contracts;
+using JetBrains.Annotations;
 
 namespace Samples.Specifications.Tests.EndToEnd
 {    
+    [UsedImplicitly]
     internal sealed class ApplicationPathInfo : IApplicationPathInfo
     {
         public string Executable => "Samples.Specifications.Client.Launcher.exe";
