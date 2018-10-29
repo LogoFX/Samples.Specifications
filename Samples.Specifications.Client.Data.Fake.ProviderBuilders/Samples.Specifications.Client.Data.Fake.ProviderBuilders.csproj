@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <PackageReference Include="Attest.Fake.Builders" Version="1.2.1-rc4" />
+    <PackageReference Include="Attest.Fake.Core" Version="1.2.1-rc4" />
   </ItemGroup>
 
   <ItemGroup>
