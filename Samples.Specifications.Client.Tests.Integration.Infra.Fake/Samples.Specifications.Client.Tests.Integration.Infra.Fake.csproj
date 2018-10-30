@@ -96,6 +96,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Attest.Fake.Core">
+      <Version>1.2.1-rc4</Version>
+    </PackageReference>
     <PackageReference Include="Attest.Tests.Core">
       <Version>1.4.1-rc7</Version>
     </PackageReference>
