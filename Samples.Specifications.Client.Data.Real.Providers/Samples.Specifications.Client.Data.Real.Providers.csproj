@@ -117,7 +117,7 @@
       <Version>2018.2.1</Version>
     </PackageReference>
     <PackageReference Include="RestSharp">
-      <Version>106.5.3</Version>
+      <Version>106.5.4</Version>
     </PackageReference>
     <PackageReference Include="Solid.Practices.IoC">
       <Version>1.2.1-rc7</Version>

@@ -11,7 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Solid.Practices.Composition.Core" Version="1.2.1-rc8" />
+    <PackageReference Include="Solid.Practices.Composition.Core" Version="1.2.1-rc9" />
     <PackageReference Include="Solid.Practices.IoC" Version="1.2.1-rc7" />
   </ItemGroup>
 
