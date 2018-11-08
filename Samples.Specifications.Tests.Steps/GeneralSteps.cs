@@ -20,7 +20,7 @@ namespace Samples.Specifications.Tests.Steps
 
         public void WhenIOpenTheApplication()
         {
-            _startLocalApplicationService.StartApplication();
+            _startLocalApplicationService.Start();
         }
 
         public void WhenICloseTheApplication()
