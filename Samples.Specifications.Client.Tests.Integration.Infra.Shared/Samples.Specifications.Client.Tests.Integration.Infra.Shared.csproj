@@ -80,7 +80,7 @@
       <Version>1.2.1-rc3</Version>
     </PackageReference>
     <PackageReference Include="LogoFX.Client.Bootstrapping.Testing">
-      <Version>1.7.1-rc6</Version>
+      <Version>1.7.1-rc7</Version>
     </PackageReference>
     <PackageReference Include="LogoFX.Client.Tests.Integration.SpecFlow">
       <Version>1.4.1-rc9</Version>
