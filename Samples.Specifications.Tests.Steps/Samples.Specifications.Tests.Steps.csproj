@@ -33,7 +33,7 @@
 
   <ItemGroup>
     <PackageReference Include="Attest.Testing.Contracts" Version="1.4.1-rc5" />
-    <PackageReference Include="FluentAssertions" Version="5.4.2" />
+    <PackageReference Include="FluentAssertions" Version="5.5.0" />
     <PackageReference Include="JetBrains.Annotations" Version="2018.2.1" />
     <PackageReference Include="Solid.Practices.IoC" Version="1.2.1-rc7" />
     <PackageReference Include="Solid.Practices.Modularity" Version="1.2.1-rc5" />
