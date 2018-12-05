@@ -1,5 +1,6 @@
 ﻿using BoDi;
 using Samples.Specifications.Tests.Infra.Launcher;
+using Solid.Common;
 using Solid.IoC.Adapters.ObjectContainer;
 using Solid.Practices.Composition;
 using Solid.Practices.IoC;

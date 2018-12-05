@@ -19,10 +19,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Attest.Testing.Contracts" Version="1.4.1-rc5" />
+    <PackageReference Include="Attest.Testing.Contracts" Version="2.0.0-rc1" />
     <PackageReference Include="JetBrains.Annotations" Version="2018.2.1" />
-    <PackageReference Include="Solid.Practices.IoC" Version="1.2.1-rc7" />
-    <PackageReference Include="Solid.Practices.Modularity" Version="1.2.1-rc5" />
+    <PackageReference Include="Solid.Practices.IoC" Version="2.0.0-rc1" />
+    <PackageReference Include="Solid.Practices.Modularity" Version="2.0.0-rc1" />
   </ItemGroup>
 
   <ItemGroup>

@@ -146,10 +146,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Attest.Fake.Builders">
-      <Version>1.2.1-rc4</Version>
+      <Version>2.0.0-rc1</Version>
     </PackageReference>
     <PackageReference Include="Attest.Fake.Core">
-      <Version>1.2.1-rc4</Version>
+      <Version>2.0.0-rc1</Version>
     </PackageReference>
     <PackageReference Include="FluentAssertions">
       <Version>5.5.0</Version>
@@ -163,11 +163,8 @@
     <PackageReference Include="Newtonsoft.Json">
       <Version>11.0.2</Version>
     </PackageReference>
-    <PackageReference Include="Solid.Practices.Composition.Core">
-      <Version>1.2.1-rc9</Version>
-    </PackageReference>
     <PackageReference Include="Solid.Practices.IoC">
-      <Version>1.2.1-rc7</Version>
+      <Version>2.0.0-rc1</Version>
     </PackageReference>
     <PackageReference Include="SpecFlow">
       <Version>2.4.0</Version>

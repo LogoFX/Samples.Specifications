@@ -72,22 +72,22 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Attest.Fake.Builders">
-      <Version>1.2.1-rc4</Version>
+      <Version>2.0.0-rc1</Version>
     </PackageReference>
     <PackageReference Include="Attest.Fake.Core">
-      <Version>1.2.1-rc4</Version>
+      <Version>2.0.0-rc1</Version>
     </PackageReference>
     <PackageReference Include="Attest.Tests.Core">
-      <Version>1.4.1-rc9</Version>
+      <Version>2.0.0-rc1</Version>
     </PackageReference>
     <PackageReference Include="JetBrains.Annotations">
       <Version>2018.2.1</Version>
     </PackageReference>
     <PackageReference Include="Solid.Practices.IoC">
-      <Version>1.2.1-rc7</Version>
+      <Version>2.0.0-rc1</Version>
     </PackageReference>
     <PackageReference Include="Solid.Practices.Modularity">
-      <Version>1.2.1-rc5</Version>
+      <Version>2.0.0-rc1</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
