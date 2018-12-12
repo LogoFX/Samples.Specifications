@@ -99,7 +99,7 @@
     <PackageReference Include="Attest.Fake.Core">
       <Version>2.0.0-rc1</Version>
     </PackageReference>
-    <PackageReference Include="Attest.Tests.Core">
+    <PackageReference Include="Attest.Fake.Data">
       <Version>2.0.0-rc1</Version>
     </PackageReference>
     <PackageReference Include="JetBrains.Annotations">

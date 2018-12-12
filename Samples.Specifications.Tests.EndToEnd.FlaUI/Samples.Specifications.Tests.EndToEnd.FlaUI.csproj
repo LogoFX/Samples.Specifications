@@ -80,6 +80,12 @@
     <Compile Include="StructureHelper.cs" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Attest.Testing.Contracts">
+      <Version>2.0.0-rc1</Version>
+    </PackageReference>
+    <PackageReference Include="Attest.Tests.Core">
+      <Version>2.0.0-rc2</Version>
+    </PackageReference>
     <PackageReference Include="FlaUI.UIA3">
       <Version>2.0.0-rc1</Version>
     </PackageReference>

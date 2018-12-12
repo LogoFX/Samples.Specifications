@@ -1,5 +1,7 @@
-﻿using Attest.Testing.Core.FakeData.Modularity;
-using Attest.Testing.Core.FakeData.Shared;
+﻿using System.Linq;
+using Attest.Fake.Data;
+using Attest.Fake.Data.Modularity;
+using Attest.Fake.Registration;
 using JetBrains.Annotations;
 using Samples.Specifications.Client.Data.Fake.Shared;
 using Solid.Practices.IoC;
@@ -7,13 +9,15 @@ using Solid.Practices.IoC;
 namespace Samples.Specifications.Client.Data.Fake.Providers.ContextBased
 {    
     [UsedImplicitly]
-    internal sealed class Module : ProvidersModuleBase
+    internal sealed class Module : ProvidersModuleBase<IDependencyRegistrator>
     {       
-        protected override void OnRegisterProviders(IDependencyRegistrator dependencyRegistrator)
+        protected override void RegisterProviders(IDependencyRegistrator dependencyRegistrator)
         {
-            base.OnRegisterProviders(dependencyRegistrator);
-            dependencyRegistrator.RegisterBuildersProducts(ConventionsHelper.FindContractToBuilderMatches(),
-                BuilderFactory.CreateBuilderInstance);                  
+            var builders = BuildersCollectionHelper.FillMissingBuilders(
+                ConventionsHelper.FindContractToBuilderMatches().Values.ToArray(),
+                BuilderFactory.CreateBuilderInstance);
+            dependencyRegistrator.RegisterBuilders(RegistrationHelper.RegisterBuilderProduct,
+                ConventionsHelper.FindContractToBuilderMatches(), builders);
         }
     }    
 }

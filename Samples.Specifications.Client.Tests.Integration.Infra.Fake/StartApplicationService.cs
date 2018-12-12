@@ -1,4 +1,4 @@
-﻿using Attest.Testing.Core.FakeData.Shared;
+﻿using Attest.Fake.Data;
 using Samples.Specifications.Client.Tests.Integration.Infra.Core;
 using Samples.Specifications.Client.Tests.Integration.Infra.Shared;
 
