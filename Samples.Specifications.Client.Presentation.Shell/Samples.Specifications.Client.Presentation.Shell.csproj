@@ -219,6 +219,9 @@
     <PackageReference Include="LogoFX.Client.Mvvm.ViewModel.Extensions">
       <Version>2.0.0-rc1</Version>
     </PackageReference>
+    <PackageReference Include="LogoFX.Client.Mvvm.ViewModel.Extensions.Core">
+      <Version>2.0.0-rc1</Version>
+    </PackageReference>
     <PackageReference Include="LogoFX.Client.Mvvm.ViewModel.Services.Core">
       <Version>2.0.0-rc1</Version>
     </PackageReference>
