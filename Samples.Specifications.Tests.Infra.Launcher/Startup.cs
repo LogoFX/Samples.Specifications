@@ -1,16 +1,29 @@
-﻿using Solid.Bootstrapping;
+﻿using Attest.Testing.Contracts;
+using Solid.Bootstrapping;
 using Solid.Practices.IoC;
 
 namespace Samples.Specifications.Tests.Infra.Launcher
 {
-    internal sealed class Startup
+    internal sealed class Startup : IInitializable
     {
-        private readonly IDependencyRegistrator _dependencyRegistrator;
+        private readonly IIocContainer _iocContainer;
 
-        public Startup(IDependencyRegistrator dependencyRegistrator) => _dependencyRegistrator = dependencyRegistrator;
+        public Startup(IIocContainer iocContainer)
+        {
+            _iocContainer = iocContainer;
+        }
 
-        public void Initialize() => new Bootstrapper(_dependencyRegistrator)
-            .Use(new ModulesRegistrationMiddleware<Bootstrapper>()).Initialize();
-        
+        public void Initialize()
+        {
+            var bootstrapper = new Bootstrapper(_iocContainer);
+            bootstrapper
+                .Use(new ModulesRegistrationMiddleware<Bootstrapper>())
+                .Use(new RegisterResolverMiddleware<Bootstrapper>(_iocContainer))
+                .Use(new RegisterCollectionMiddleware<Bootstrapper, IDynamicApplicationModule>())
+                .Use(new RegisterCollectionMiddleware<Bootstrapper, IStaticApplicationModule>())
+                .Use(new RegisterCollectionMiddleware<Bootstrapper, ITeardownService>());
+            bootstrapper.Use(new RegisterBootstrappingMiddleware());
+            bootstrapper.Initialize();
+        }
     }
 }

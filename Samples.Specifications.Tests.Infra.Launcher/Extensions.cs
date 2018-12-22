@@ -5,13 +5,24 @@ namespace Samples.Specifications.Tests.Infra.Launcher
 {
     public static class Extensions
     {
-        public static void Initialize(this IDependencyRegistrator dependencyRegistrator) =>
-            new Startup(dependencyRegistrator).Initialize();
+        public static void Initialize(this IIocContainer iocContainer) =>
+            new Startup(iocContainer).Initialize();
 
         public static void Setup(this IDependencyResolver dependencyResolver) =>
             dependencyResolver.Resolve<ISetupService>().Setup();
 
-        public static void Teardown(this IDependencyResolver dependencyResolver) =>
-            dependencyResolver.Resolve<ITeardownService>().Teardown();
+        public static void Teardown(this IDependencyResolver dependencyResolver)
+        {
+            var applicationModules = dependencyResolver.ResolveAll<IDynamicApplicationModule>();
+            foreach (var applicationModule in applicationModules)
+            {
+                applicationModule.Stop();
+            }
+            var teardownServices = dependencyResolver.ResolveAll<ITeardownService>();
+            foreach (var teardownService in teardownServices)
+            {
+                teardownService.Teardown();
+            }
+        }
     }
 }

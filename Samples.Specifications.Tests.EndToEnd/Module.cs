@@ -10,7 +10,7 @@ namespace Samples.Specifications.Tests.EndToEnd
     internal sealed class Module : ICompositionModule<IDependencyRegistrator>
     {
         public void RegisterModule(IDependencyRegistrator dependencyRegistrator) => dependencyRegistrator
-            .AddSingleton<IApplicationPathInfo, ApplicationPathInfo>()
+            .AddSingleton<IApplicationPathInfo, ApplicationPathInfo>()            
             .AddSingleton<IStartLocalApplicationService, StartLocalApplicationService>();
     }
 }

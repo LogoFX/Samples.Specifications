@@ -1,9 +1,7 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
+using System.Reflection;
 using Solid.Bootstrapping;
 using Solid.Extensibility;
-using Solid.Practices.Composition;
-using Solid.Practices.Composition.Container;
 using Solid.Practices.Composition.Contracts;
 using Solid.Practices.IoC;
 using Solid.Practices.Middleware;
@@ -11,60 +9,74 @@ using Solid.Practices.Modularity;
 
 namespace Samples.Specifications.Tests.Infra.Launcher
 {
-    internal sealed class Bootstrapper : IInitializable,
+    internal sealed class Bootstrapper :
+        IInitializable,
         IExtensible<Bootstrapper>,
+        IExtensible<IHaveRegistrator>,
         ICompositionModulesProvider,
+        IAssemblySourceProvider,
         IHaveRegistrator
     {
-        private readonly
-            List<IMiddleware<Bootstrapper>>
-            _middlewares =
-                new List<IMiddleware<Bootstrapper>>();
-
-        public Bootstrapper(IDependencyRegistrator dependencyRegistrator) => Registrator = dependencyRegistrator;
-
-        public IEnumerable<ICompositionModule> Modules { get; private set; } = new ICompositionModule[] { };
-
-        public string ModulesPath => ".";
-
-        public string[] Prefixes { get; } =
+        private readonly ModularityAspect _modularityAspect = new ModularityAspect(new ModularityOptions
         {
-            "Samples.Specifications.Tests", "Samples.Specifications.Client.Tests", "Samples.Specifications.Tests.Steps"
-        };
+            Prefixes = new[]
+            {
+                "Samples.Specifications.Tests", "Samples.Specifications.Client.Tests",
+                "Samples.Specifications.Tests.Steps"
+            },
+            ModulesPath = "."
+        });
+
+        private readonly DiscoveryAspect _discoveryAspect;
+        private readonly ExtensibilityAspect<Bootstrapper> _concreteExtensibilityAspect;
+        private readonly ExtensibilityAspect<IHaveRegistrator> _registratorExtensibilityAspect;
+
+        private readonly List<IAspect> _aspects = new List<IAspect>();
+
+        public Bootstrapper(IDependencyRegistrator dependencyRegistrator) : this() =>
+            Registrator = dependencyRegistrator;
 
         public IDependencyRegistrator Registrator { get; }
 
-        private void InitializeCompositionModules()
+        private Bootstrapper()
         {
-            var compositionManager = new CompositionManager();
-            try
-            {
-                compositionManager.Initialize(ModulesPath, Prefixes);
-            }
-#pragma warning disable 168 
-            //Used for debug
-            catch (AggregateAssemblyInspectionException ex)
-#pragma warning restore 168
-            {
-
-            }
-            finally
-            {
-                Modules = compositionManager.Modules.ToArray();
-            }
-        }
-
-        public Bootstrapper Use(
-            IMiddleware<Bootstrapper> middleware)
-        {
-            _middlewares.Add(middleware);
-            return this;
+            _aspects.Add(new PlatformAspect());
+            _aspects.Add(_modularityAspect);
+            _discoveryAspect = new DiscoveryAspect(_modularityAspect);
+            _aspects.Add(_discoveryAspect);
+            _concreteExtensibilityAspect = new ExtensibilityAspect<Bootstrapper>(this);
+            _aspects.Add(_concreteExtensibilityAspect);
+            _registratorExtensibilityAspect = new ExtensibilityAspect<IHaveRegistrator>(this);
+            _aspects.Add(_registratorExtensibilityAspect);
         }
 
         public void Initialize()
         {
-            InitializeCompositionModules();
-            MiddlewareApplier.ApplyMiddlewares(this, _middlewares);
+            foreach (var aspect in _aspects)
+            {
+                aspect.Initialize();
+            }
         }
+
+        public Bootstrapper UseAspect(IAspect aspect)
+        {
+            _aspects.Add(aspect);
+            return this;
+        }
+
+        IEnumerable<ICompositionModule> ICompositionModulesProvider<ICompositionModule>.Modules =>
+            _modularityAspect.Modules;
+
+        public Bootstrapper Use(IMiddleware<Bootstrapper> middleware)
+        {
+            return _concreteExtensibilityAspect.Use(middleware);
+        }
+
+        public IHaveRegistrator Use(IMiddleware<IHaveRegistrator> middleware)
+        {
+            return _registratorExtensibilityAspect.Use(middleware);
+        }
+
+        IEnumerable<Assembly> IAssemblySourceProvider.Assemblies => _discoveryAspect.Assemblies;
     }
 }
