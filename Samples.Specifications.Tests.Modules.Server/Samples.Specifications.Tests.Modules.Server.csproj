@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>   
+    <Configurations>Debug;Release;EndToEndWithFake;IntegrationWithFake;EndToEndWithReal;IntegrationWithReal</Configurations>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EndToEndWithFake|AnyCPU'">
+    <OutputPath>..\Bin\EndToEndWithFake\Infra\</OutputPath>
+    <DefineConstants>TRACE;NETSTANDARD2_0;</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EndToEndWithReal|AnyCPU'">
+    <OutputPath>..\Bin\EndToEndWithReal\Infra\</OutputPath>
+    <DefineConstants>TRACE;NETSTANDARD2_0;</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IntegrationWithFake|AnyCPU'">
+    <OutputPath>..\Bin\IntegrationWithFake\</OutputPath>
+    <DefineConstants>TRACE;NETSTANDARD2_0;</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IntegrationWithReal|AnyCPU'">
+    <OutputPath>..\Bin\IntegrationWithReal\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Attest.Testing.Contracts" Version="2.0.0-rc1" />
+    <PackageReference Include="Attest.Tests.Core" Version="2.0.0-rc2" />
+    <PackageReference Include="JetBrains.Annotations" Version="2018.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Samples.Client.Data.Contracts.Dto\Samples.Client.Data.Contracts.Dto.csproj" />
+    <ProjectReference Include="..\Samples.Client.Data.Contracts.Providers\Samples.Client.Data.Contracts.Providers.csproj" />
+    <ProjectReference Include="..\Samples.Specifications.Tests.Contracts\Samples.Specifications.Tests.Contracts.csproj" />
+    <ProjectReference Include="..\Samples.Specifications.Tests.Data\Samples.Specifications.Tests.Data.csproj" />
+    <ProjectReference Include="..\Samples.Specifications.Tests.Steps.Contracts\Samples.Specifications.Tests.Steps.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

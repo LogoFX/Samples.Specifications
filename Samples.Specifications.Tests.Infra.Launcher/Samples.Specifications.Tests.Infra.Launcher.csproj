@@ -1,8 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <RootNamespace>Samples.Specifications.Tests.Infra.Launcher</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>    
   </PropertyGroup>
 
   <PropertyGroup>

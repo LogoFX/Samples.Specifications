@@ -22,7 +22,7 @@ namespace Samples.Specifications.Tests.Infra.Launcher
             Prefixes = new[]
             {
                 "Samples.Specifications.Tests", "Samples.Specifications.Client.Tests",
-                "Samples.Specifications.Tests.Steps"
+                "Samples.Specifications.Tests.Steps", "Samples.Specifications.Tests.Infra"
             },
             ModulesPath = "."
         });
