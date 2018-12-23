@@ -81,6 +81,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Samples.Specifications.Clie
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Client.Data.Fake.ProviderBuilders.Setup", "Samples.Specifications.Client.Data.Fake.ProviderBuilders.Setup\Samples.Specifications.Client.Data.Fake.ProviderBuilders.Setup.csproj", "{1DB4C693-200D-46DC-AF84-3C0AD40392B5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Client.Data.Real.Providers", "Samples.Specifications.Client.Data.Real.Providers\Samples.Specifications.Client.Data.Real.Providers.csproj", "{5B2A4689-2F21-48EC-9058-F89511CEACA3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		IntegrationWithFake|Any CPU = IntegrationWithFake|Any CPU
@@ -198,6 +200,9 @@ Global
 		{1DB4C693-200D-46DC-AF84-3C0AD40392B5}.IntegrationWithFake|Any CPU.Build.0 = IntegrationWithFake|Any CPU
 		{1DB4C693-200D-46DC-AF84-3C0AD40392B5}.IntegrationWithReal|Any CPU.ActiveCfg = IntegrationWithFake|Any CPU
 		{1DB4C693-200D-46DC-AF84-3C0AD40392B5}.IntegrationWithReal|Any CPU.Build.0 = IntegrationWithFake|Any CPU
+		{5B2A4689-2F21-48EC-9058-F89511CEACA3}.IntegrationWithFake|Any CPU.ActiveCfg = IntegrationWithFake|Any CPU
+		{5B2A4689-2F21-48EC-9058-F89511CEACA3}.IntegrationWithReal|Any CPU.ActiveCfg = IntegrationWithReal|Any CPU
+		{5B2A4689-2F21-48EC-9058-F89511CEACA3}.IntegrationWithReal|Any CPU.Build.0 = IntegrationWithReal|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -234,6 +239,7 @@ Global
 		{6E684A23-A045-4945-928F-C4B93D50FB8D} = {2736E69E-E6B1-4941-A2AF-FE4932E03E4F}
 		{B1D8ADA9-FD8E-4FC0-B330-74D8FAC5C587} = {2736E69E-E6B1-4941-A2AF-FE4932E03E4F}
 		{1DB4C693-200D-46DC-AF84-3C0AD40392B5} = {2736E69E-E6B1-4941-A2AF-FE4932E03E4F}
+		{5B2A4689-2F21-48EC-9058-F89511CEACA3} = {2736E69E-E6B1-4941-A2AF-FE4932E03E4F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {593C9469-C05F-4128-889C-882A89B62C97}
