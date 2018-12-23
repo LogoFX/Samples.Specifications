@@ -49,7 +49,7 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'EndToEndWithFake|AnyCPU' ">
-    <OutputPath>..\Bin\EndToEndWithFake\Infra\</OutputPath>
+    <OutputPath>..\Bin\Specs\EndToEndWithFake\</OutputPath>
     <DefineConstants>DEBUG</DefineConstants>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>

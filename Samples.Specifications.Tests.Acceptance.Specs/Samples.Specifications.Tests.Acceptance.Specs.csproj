@@ -60,7 +60,7 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'EndToEndWithFake|AnyCPU' ">
-    <OutputPath>..\Bin\EndToEndWithFake\Infra\</OutputPath>
+    <OutputPath>..\Bin\Specs\EndToEndWithFake\</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'IntegrationWithReal|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
