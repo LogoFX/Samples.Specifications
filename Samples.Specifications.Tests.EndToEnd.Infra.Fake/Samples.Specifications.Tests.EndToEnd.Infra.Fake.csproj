@@ -65,12 +65,6 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Samples.Specifications.Client.Data.Fake.Shared\Samples.Specifications.Client.Data.Fake.Shared.csproj">
-      <Project>{82f76a12-e6ae-4339-8b0d-a8066b83420a}</Project>
-      <Name>Samples.Specifications.Client.Data.Fake.Shared</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="Attest.Fake.Builders">
       <Version>2.0.0-rc1</Version>
     </PackageReference>

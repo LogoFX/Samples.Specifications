@@ -58,10 +58,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Samples.Client.Model.Contracts\Samples.Client.Model.Contracts.csproj">
-      <Project>{848AEEAE-E52F-4AA4-888C-C9A6D9005F01}</Project>
-      <Name>Samples.Client.Model.Contracts</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Client.Launcher.Shared\Samples.Specifications.Client.Launcher.Shared.csproj">
       <Project>{99d98150-0e31-4394-817d-047d4637636f}</Project>
       <Name>Samples.Specifications.Client.Launcher.Shared</Name>
