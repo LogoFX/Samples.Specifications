@@ -8,6 +8,6 @@ namespace Samples.Specifications.Tests.Modules.Server
     internal sealed class ApplicationPathInfo : IApplicationPathInfo
     {
         public string Executable => "Samples.Specifications.Server.Facade.dll";
-        public string RelativePath => Path.Combine("..", "..", "server","Debug");
+        public string RelativePath => Path.Combine("..", "..", "Server","Debug");
     }
 }
