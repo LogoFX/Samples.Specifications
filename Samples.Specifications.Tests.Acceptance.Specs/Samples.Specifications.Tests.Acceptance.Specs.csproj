@@ -43,7 +43,7 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'EndToEndWithReal|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\Bin\EndToEndWithReal\Infra\</OutputPath>
+    <OutputPath>..\Bin\Specs\EndToEndWithReal\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>

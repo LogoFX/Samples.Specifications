@@ -46,7 +46,7 @@
     <OutputPath>bin\DebugWithReal\</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'EndToEndWithReal|AnyCPU' ">
-    <OutputPath>..\Bin\EndToEndWithReal\Infra\</OutputPath>
+    <OutputPath>..\Bin\Specs\EndToEndWithReal\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

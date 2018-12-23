@@ -41,7 +41,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'EndToEndWithReal|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\bin\EndToEndWithReal\Infra\</OutputPath>
+    <OutputPath>..\Bin\Specs\EndToEndWithReal\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -111,6 +111,10 @@
     <ProjectReference Include="..\Samples.Specifications.Tests.EndToEnd\Samples.Specifications.Tests.EndToEnd.csproj">
       <Project>{6a61e744-1ce0-49e8-9e71-5bbd05083b31}</Project>
       <Name>Samples.Specifications.Tests.EndToEnd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samples.Specifications.Tests.Infra\Samples.Specifications.Tests.Infra.csproj">
+      <Project>{1E03F181-2690-4EA6-8B99-975D6DA4E759}</Project>
+      <Name>Samples.Specifications.Tests.Infra</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

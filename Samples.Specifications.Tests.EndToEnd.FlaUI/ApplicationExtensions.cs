@@ -3,6 +3,7 @@ using System.Linq;
 using FlaUI.Core;
 using FlaUI.Core.AutomationElements;
 using FlaUI.UIA3;
+using Samples.Specifications.Tests.Infra;
 
 namespace Samples.Specifications.Tests.EndToEnd
 {
