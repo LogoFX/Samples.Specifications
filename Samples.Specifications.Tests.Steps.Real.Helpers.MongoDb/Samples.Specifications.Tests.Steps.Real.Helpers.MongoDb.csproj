@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>.\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -31,12 +31,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'IntegrationWithReal|AnyCPU'">
-    <OutputPath>..\Bin\IntegrationWithReal\</OutputPath>
+    <OutputPath>..\Bin\Specs\IntegrationWithReal\</OutputPath>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'EndToEndWithReal|AnyCPU'">
-    <OutputPath>..\Bin\EndToEndWithReal\Infra\</OutputPath>
+    <OutputPath>..\Bin\Specs\EndToEndWithReal\</OutputPath>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
@@ -71,7 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Samples.Client.Data.Contracts.Dto\Samples.Client.Data.Contracts.Dto.csproj">
-      <Project>{4e61c08a-446e-4656-b983-687916b9b7fc}</Project>
+      <Project>{cb84ca9f-f88d-448d-afac-219246851eb2}</Project>
       <Name>Samples.Client.Data.Contracts.Dto</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Tests.Steps.Real.Helpers.Contracts\Samples.Specifications.Tests.Steps.Real.Helpers.Contracts.csproj">

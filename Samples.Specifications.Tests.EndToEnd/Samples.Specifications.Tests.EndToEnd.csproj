@@ -10,15 +10,17 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EndToEndWithFake|AnyCPU'">
-    <OutputPath>..\Bin\EndToEndWithFake\Infra\</OutputPath>
+    <OutputPath>..\Bin\Specs\EndToEndWithFake</OutputPath>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>TRACE;FAKE</DefineConstants>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EndToEndWithReal|AnyCPU'">
-    <OutputPath>..\Bin\EndToEndWithReal\Infra\</OutputPath>
+    <OutputPath>..\Bin\Specs\EndToEndWithReal</OutputPath>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>TRACE;REAL</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>
@@ -28,6 +30,10 @@
     <PackageReference Include="JetBrains.Annotations" Version="2018.2.1" />
     <PackageReference Include="Solid.Practices.IoC" Version="2.0.0-rc1" />
     <PackageReference Include="Solid.Practices.Modularity" Version="2.0.0-rc1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Samples.Specifications.Tests.Infra\Samples.Specifications.Tests.Infra.csproj" />
   </ItemGroup>
 
 </Project>

@@ -47,7 +47,7 @@
     <OutputPath>bin\EndToEndWithReal\</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'IntegrationWithFake|AnyCPU'">
-    <OutputPath>..\Bin\IntegrationWithFake\</OutputPath>
+    <OutputPath>..\Bin\Specs\IntegrationWithFake\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Module.cs" />

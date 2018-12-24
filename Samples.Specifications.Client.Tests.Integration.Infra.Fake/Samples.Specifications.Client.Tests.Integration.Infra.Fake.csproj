@@ -33,7 +33,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'IntegrationWithFake|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\Bin\IntegrationWithFake\</OutputPath>
+    <OutputPath>..\Bin\Specs\IntegrationWithFake\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -70,22 +70,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Samples.Client.Model.Contracts\Samples.Client.Model.Contracts.csproj">
-      <Project>{848AEEAE-E52F-4AA4-888C-C9A6D9005F01}</Project>
-      <Name>Samples.Client.Model.Contracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Samples.Client.Model.Shared\Samples.Client.Model.Shared.csproj">
-      <Project>{C68F2BE4-0D91-4854-B937-F903EDFA266A}</Project>
-      <Name>Samples.Client.Model.Shared</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Samples.Specifications.Client.Launcher.Shared\Samples.Specifications.Client.Launcher.Shared.csproj">
-      <Project>{99D98150-0E31-4394-817D-047D4637636F}</Project>
-      <Name>Samples.Specifications.Client.Launcher.Shared</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Samples.Specifications.Client.Presentation.Shell\Samples.Specifications.Client.Presentation.Shell.csproj">
-      <Project>{5270f84d-8ff4-4756-83b0-78dd9777643d}</Project>
-      <Name>Samples.Specifications.Client.Presentation.Shell</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Client.Tests.Integration.Infra.Core\Samples.Specifications.Client.Tests.Integration.Infra.Core.csproj">
       <Project>{207D3FBC-1EEC-43EA-BAED-E3C14F793119}</Project>
       <Name>Samples.Specifications.Client.Tests.Integration.Infra.Core</Name>

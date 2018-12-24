@@ -33,7 +33,7 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'IntegrationWithFake|AnyCPU'">
-    <OutputPath>..\Bin\IntegrationWithFake\</OutputPath>
+    <OutputPath>..\Bin\Specs\IntegrationWithFake\</OutputPath>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
@@ -58,10 +58,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Samples.Client.Model.Contracts\Samples.Client.Model.Contracts.csproj">
-      <Project>{848AEEAE-E52F-4AA4-888C-C9A6D9005F01}</Project>
-      <Name>Samples.Client.Model.Contracts</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Client.Launcher.Shared\Samples.Specifications.Client.Launcher.Shared.csproj">
       <Project>{99d98150-0e31-4394-817d-047d4637636f}</Project>
       <Name>Samples.Specifications.Client.Launcher.Shared</Name>
@@ -76,6 +72,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="AutoMapper">
+      <Version>6.1.1</Version>
+    </PackageReference>
     <PackageReference Include="LogoFX.Client.Bootstrapping.Adapters.SimpleContainer">
       <Version>2.0.0-rc1</Version>
     </PackageReference>

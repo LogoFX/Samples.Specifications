@@ -1,10 +1,11 @@
 configuration: EndToEndWithFake
 
 before_build:
-- nuget restore
+- nuget restore Specifications.sln
 
 build:
   verbosity: minimal
+  project: Specifications.sln
 
 image: Visual Studio 2017
   

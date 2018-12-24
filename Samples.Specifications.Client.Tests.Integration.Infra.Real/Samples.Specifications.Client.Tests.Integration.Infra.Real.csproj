@@ -19,7 +19,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>.\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'IntegrationWithReal|AnyCPU'">
-    <OutputPath>..\Bin\IntegrationWithReal\</OutputPath>
+    <OutputPath>..\Bin\Specs\IntegrationWithReal\</OutputPath>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
@@ -57,10 +57,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Samples.Specifications.Client.Presentation.Shell\Samples.Specifications.Client.Presentation.Shell.csproj">
-      <Project>{5270F84D-8FF4-4756-83B0-78DD9777643D}</Project>
-      <Name>Samples.Specifications.Client.Presentation.Shell</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Client.Tests.Integration.Infra.Core\Samples.Specifications.Client.Tests.Integration.Infra.Core.csproj">
       <Project>{207D3FBC-1EEC-43EA-BAED-E3C14F793119}</Project>
       <Name>Samples.Specifications.Client.Tests.Integration.Infra.Core</Name>

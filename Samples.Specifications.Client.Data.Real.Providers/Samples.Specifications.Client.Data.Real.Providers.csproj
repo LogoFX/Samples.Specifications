@@ -61,7 +61,7 @@
     <OutputPath>bin\IntegrationWithFake\</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'IntegrationWithReal|AnyCPU'">
-    <OutputPath>..\Bin\IntegrationWithReal\</OutputPath>
+    <OutputPath>..\Bin\Specs\IntegrationWithReal\</OutputPath>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <DebugType>full</DebugType>

@@ -12,22 +12,22 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EndToEndWithFake|AnyCPU'">
-    <OutputPath>..\Bin\EndToEndWithFake\Infra\</OutputPath>
+    <OutputPath>..\Bin\Specs\EndToEndWithFake</OutputPath>
     <DefineConstants>TRACE;NETSTANDARD2_0;</DefineConstants>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EndToEndWithReal|AnyCPU'">
-    <OutputPath>..\Bin\EndToEndWithReal\Infra\</OutputPath>
+    <OutputPath>..\Bin\Specs\EndToEndWithReal</OutputPath>
     <DefineConstants>TRACE;NETSTANDARD2_0;</DefineConstants>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IntegrationWithFake|AnyCPU'">
-    <OutputPath>..\Bin\IntegrationWithFake\</OutputPath>
+    <OutputPath>..\Bin\Specs\IntegrationWithFake\</OutputPath>
     <DefineConstants>TRACE;NETSTANDARD2_0;</DefineConstants>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IntegrationWithReal|AnyCPU'">
-    <OutputPath>..\Bin\IntegrationWithReal\</OutputPath>
+    <OutputPath>..\Bin\Specs\IntegrationWithReal\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
 
@@ -40,8 +40,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Samples.Client.Data.Contracts.Dto\Samples.Client.Data.Contracts.Dto.csproj" />
-    <ProjectReference Include="..\Samples.Client.Data.Contracts.Providers\Samples.Client.Data.Contracts.Providers.csproj" />
     <ProjectReference Include="..\Samples.Specifications.Tests.Contracts\Samples.Specifications.Tests.Contracts.csproj" />
     <ProjectReference Include="..\Samples.Specifications.Tests.Data\Samples.Specifications.Tests.Data.csproj" />
     <ProjectReference Include="..\Samples.Specifications.Tests.Steps.Contracts\Samples.Specifications.Tests.Steps.Contracts.csproj" />

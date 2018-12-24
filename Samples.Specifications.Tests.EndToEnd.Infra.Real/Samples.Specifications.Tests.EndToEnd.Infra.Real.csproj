@@ -46,7 +46,7 @@
     <OutputPath>bin\DebugWithReal\</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'EndToEndWithReal|AnyCPU' ">
-    <OutputPath>..\Bin\EndToEndWithReal\Infra\</OutputPath>
+    <OutputPath>..\Bin\Specs\EndToEndWithReal\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -80,6 +80,9 @@
     </PackageReference>
     <PackageReference Include="Attest.Testing.Contracts">
       <Version>2.0.0-rc1</Version>
+    </PackageReference>
+    <PackageReference Include="Attest.Tests.Core">
+      <Version>2.0.0-rc2</Version>
     </PackageReference>
     <PackageReference Include="JetBrains.Annotations">
       <Version>2018.2.1</Version>

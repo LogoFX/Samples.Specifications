@@ -1,32 +1,30 @@
-﻿using Solid.Bootstrapping;
-using Solid.Practices.Composition.Contracts;
+﻿using Attest.Testing.Contracts;
+using Solid.Bootstrapping;
 using Solid.Practices.IoC;
-using Solid.Practices.Middleware;
-using Solid.Practices.Modularity;
 
 namespace Samples.Specifications.Tests.Infra.Launcher
 {
-    internal sealed class Startup
+    internal sealed class Startup : IInitializable
     {
-        private readonly IDependencyRegistrator _dependencyRegistrator;
+        private readonly IIocContainer _iocContainer;
 
-        public Startup(IDependencyRegistrator dependencyRegistrator) => _dependencyRegistrator = dependencyRegistrator;
-
-        public void Initialize() => new Bootstrapper(_dependencyRegistrator)
-            .Use(new ModulesRegistrationMiddleware<Bootstrapper>()).Initialize();
-
-        private sealed class ModulesRegistrationMiddleware<TBootstrapper> : IMiddleware<TBootstrapper>
-            where TBootstrapper : class, ICompositionModulesProvider, IHaveRegistrator
+        public Startup(IIocContainer iocContainer)
         {
-            public TBootstrapper Apply(TBootstrapper @object)
-            {
-                var middlewares = new[]
-                {
-                    new ContainerRegistrationMiddleware<IDependencyRegistrator, IDependencyRegistrator>(@object.Modules)
-                };
-                MiddlewareApplier.ApplyMiddlewares(@object.Registrator, middlewares);
-                return @object;
-            }
+            _iocContainer = iocContainer;
+        }
+
+        public void Initialize()
+        {
+            var bootstrapper = new Bootstrapper(_iocContainer);
+            bootstrapper
+                .Use(new ModulesRegistrationMiddleware<Bootstrapper>())
+                .Use(new RegisterResolverMiddleware<Bootstrapper>(_iocContainer))
+                .Use(new RegisterCollectionMiddleware<Bootstrapper, IDynamicApplicationModule>())
+                .Use(new RegisterCollectionMiddleware<Bootstrapper, IStaticApplicationModule>())
+                .Use(new RegisterCollectionMiddleware<Bootstrapper, ISetupService>())
+                .Use(new RegisterCollectionMiddleware<Bootstrapper, ITeardownService>());           
+            bootstrapper.Use(new UseApplicationModulesMiddleware());
+            bootstrapper.Initialize();
         }
     }
 }

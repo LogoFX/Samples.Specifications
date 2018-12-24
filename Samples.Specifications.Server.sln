@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Samples.Specifications.Server.Storage.MongoDb", "Samples.Specifications.Server.Storage.MongoDb\Samples.Specifications.Server.Storage.MongoDb.csproj", "{CB89C7B0-7C4B-4633-AF29-709DEADBB53B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Samples.Specifications.Server.Domain", "Samples.Specifications.Server.Domain\Samples.Specifications.Server.Domain.csproj", "{34A63C12-097F-44AB-BE74-7D3811B70D30}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Samples.Specifications.Server.Facade", "Samples.Specifications.Server.Facade\Samples.Specifications.Server.Facade.csproj", "{A448C8DE-A233-45E1-9B3F-F9166EC6AA3E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Samples.Specifications.Server.Api", "Samples.Specifications.Server.Api\Samples.Specifications.Server.Api.csproj", "{228516FA-0A8E-42E9-8E2C-DF9DCB9EED60}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		DebugWithReal|Any CPU = DebugWithReal|Any CPU
+		EndToEndWithReal|Any CPU = EndToEndWithReal|Any CPU
+		IntegrationWithReal|Any CPU = IntegrationWithReal|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CB89C7B0-7C4B-4633-AF29-709DEADBB53B}.DebugWithReal|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB89C7B0-7C4B-4633-AF29-709DEADBB53B}.DebugWithReal|Any CPU.Build.0 = Debug|Any CPU
+		{CB89C7B0-7C4B-4633-AF29-709DEADBB53B}.EndToEndWithReal|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB89C7B0-7C4B-4633-AF29-709DEADBB53B}.EndToEndWithReal|Any CPU.Build.0 = Debug|Any CPU
+		{CB89C7B0-7C4B-4633-AF29-709DEADBB53B}.IntegrationWithReal|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB89C7B0-7C4B-4633-AF29-709DEADBB53B}.IntegrationWithReal|Any CPU.Build.0 = Debug|Any CPU
+		{34A63C12-097F-44AB-BE74-7D3811B70D30}.DebugWithReal|Any CPU.ActiveCfg = Debug|Any CPU
+		{34A63C12-097F-44AB-BE74-7D3811B70D30}.DebugWithReal|Any CPU.Build.0 = Debug|Any CPU
+		{34A63C12-097F-44AB-BE74-7D3811B70D30}.EndToEndWithReal|Any CPU.ActiveCfg = Debug|Any CPU
+		{34A63C12-097F-44AB-BE74-7D3811B70D30}.EndToEndWithReal|Any CPU.Build.0 = Debug|Any CPU
+		{34A63C12-097F-44AB-BE74-7D3811B70D30}.IntegrationWithReal|Any CPU.ActiveCfg = Debug|Any CPU
+		{34A63C12-097F-44AB-BE74-7D3811B70D30}.IntegrationWithReal|Any CPU.Build.0 = Debug|Any CPU
+		{A448C8DE-A233-45E1-9B3F-F9166EC6AA3E}.DebugWithReal|Any CPU.ActiveCfg = Debug|Any CPU
+		{A448C8DE-A233-45E1-9B3F-F9166EC6AA3E}.DebugWithReal|Any CPU.Build.0 = Debug|Any CPU
+		{A448C8DE-A233-45E1-9B3F-F9166EC6AA3E}.EndToEndWithReal|Any CPU.ActiveCfg = Debug|Any CPU
+		{A448C8DE-A233-45E1-9B3F-F9166EC6AA3E}.EndToEndWithReal|Any CPU.Build.0 = Debug|Any CPU
+		{A448C8DE-A233-45E1-9B3F-F9166EC6AA3E}.IntegrationWithReal|Any CPU.ActiveCfg = Debug|Any CPU
+		{A448C8DE-A233-45E1-9B3F-F9166EC6AA3E}.IntegrationWithReal|Any CPU.Build.0 = Debug|Any CPU
+		{228516FA-0A8E-42E9-8E2C-DF9DCB9EED60}.DebugWithReal|Any CPU.ActiveCfg = Debug|Any CPU
+		{228516FA-0A8E-42E9-8E2C-DF9DCB9EED60}.DebugWithReal|Any CPU.Build.0 = Debug|Any CPU
+		{228516FA-0A8E-42E9-8E2C-DF9DCB9EED60}.EndToEndWithReal|Any CPU.ActiveCfg = Debug|Any CPU
+		{228516FA-0A8E-42E9-8E2C-DF9DCB9EED60}.EndToEndWithReal|Any CPU.Build.0 = Debug|Any CPU
+		{228516FA-0A8E-42E9-8E2C-DF9DCB9EED60}.IntegrationWithReal|Any CPU.ActiveCfg = Debug|Any CPU
+		{228516FA-0A8E-42E9-8E2C-DF9DCB9EED60}.IntegrationWithReal|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {593C9469-C05F-4128-889C-882A89B62C97}
+	EndGlobalSection
+EndGlobal

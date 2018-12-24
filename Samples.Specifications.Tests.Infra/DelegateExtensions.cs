@@ -1,9 +1,10 @@
-using System;
+﻿using System;
 using System.Linq;
-using System.Threading;
+using System.Threading.Tasks;
 
-namespace Samples.Specifications.Tests.EndToEnd
+namespace Samples.Specifications.Tests.Infra
 {
+    //TODO: Move to packages
     public static class DelegateExtensions
     {
         public static void Execute(this Action action) =>
@@ -39,7 +40,7 @@ namespace Samples.Specifications.Tests.EndToEnd
                 catch (TException ex)
                 {
                     lastException = ex;
-                    Thread.Sleep(waitingInterval);
+                    Task.Delay(waitingInterval);
                 }
             }
             if (lastException != null)
@@ -75,7 +76,7 @@ namespace Samples.Specifications.Tests.EndToEnd
                 catch (TException ex)
                 {
                     lastException = ex;
-                    Thread.Sleep(waitingInterval);
+                    Task.Delay(waitingInterval);
                 }
             }
             if (lastException != null)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Samples.Specifications.Tests.Infra;
+using System;
 using System.Linq;
 using TestStack.White;
 using TestStack.White.UIItems.WindowItems;

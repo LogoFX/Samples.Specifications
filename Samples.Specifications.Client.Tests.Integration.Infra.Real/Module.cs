@@ -9,7 +9,6 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra.Real
     internal sealed class Module : ICompositionModule<IDependencyRegistrator>
     {
         public void RegisterModule(IDependencyRegistrator dependencyRegistrator) => dependencyRegistrator
-            .AddSingleton<IStartApplicationService, StartApplicationService>()
-            .AddSingleton<ISetupService, SetupService>();
+            .AddSingleton<IStartApplicationService, StartApplicationService>();
     }
 }

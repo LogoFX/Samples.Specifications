@@ -1,6 +1,6 @@
 ﻿using Attest.Testing.Contracts;
-using Attest.Testing.EndToEnd;
 using JetBrains.Annotations;
+using Samples.Specifications.Tests.Infra;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
 
@@ -11,6 +11,6 @@ namespace Samples.Specifications.Tests.EndToEnd
     {
         public void RegisterModule(IDependencyRegistrator dependencyRegistrator) => dependencyRegistrator
             .AddSingleton<IApplicationPathInfo, ApplicationPathInfo>()
-            .AddSingleton<IStartLocalApplicationService, StartLocalApplicationService>();
+            .UseLocalApplicationForEndToEnd();
     }
 }

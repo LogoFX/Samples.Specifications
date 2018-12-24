@@ -25,7 +25,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'IntegrationWithFake|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\Bin\IntegrationWithFake\</OutputPath>
+    <OutputPath>..\Bin\Specs\IntegrationWithFake\</OutputPath>
     <DefineConstants>TRACE;DEBUG</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -52,7 +52,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'IntegrationWithReal|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\Bin\IntegrationWithReal\</OutputPath>
+    <OutputPath>..\Bin\Specs\IntegrationWithReal\</OutputPath>
     <DefineConstants>TRACE;DEBUG</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -83,15 +83,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Samples.Client.Model.Contracts\Samples.Client.Model.Contracts.csproj">
-      <Project>{848aeeae-e52f-4aa4-888c-c9a6d9005f01}</Project>
+      <Project>{2ae97105-6b5e-4dc4-8bcb-2dda608048c4}</Project>
       <Name>Samples.Client.Model.Contracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samples.Client.Model.Shared\Samples.Client.Model.Shared.csproj">
-      <Project>{c68f2be4-0d91-4854-b937-f903edfa266a}</Project>
+      <Project>{80bb83be-30f4-45fc-92ad-df1b147112e5}</Project>
       <Name>Samples.Client.Model.Shared</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Client.Presentation.Shell\Samples.Specifications.Client.Presentation.Shell.csproj">
-      <Project>{5270F84D-8FF4-4756-83B0-78DD9777643D}</Project>
+      <Project>{5270f84d-8ff4-4756-83b0-78dd9777643d}</Project>
       <Name>Samples.Specifications.Client.Presentation.Shell</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Client.Tests.Integration.Infra.Core\Samples.Specifications.Client.Tests.Integration.Infra.Core.csproj">
@@ -109,6 +109,10 @@
     <ProjectReference Include="..\Samples.Specifications.Tests.Data\Samples.Specifications.Tests.Data.csproj">
       <Project>{1677d87b-7e7b-436e-8e71-e98a242b89b4}</Project>
       <Name>Samples.Specifications.Tests.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samples.Specifications.Tests.Infra\Samples.Specifications.Tests.Infra.csproj">
+      <Project>{1e03f181-2690-4ea6-8b99-975d6da4e759}</Project>
+      <Name>Samples.Specifications.Tests.Infra</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
