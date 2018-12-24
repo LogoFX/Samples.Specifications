@@ -8,8 +8,14 @@ namespace Samples.Specifications.Tests.Infra.Launcher
         public static void Initialize(this IIocContainer iocContainer) =>
             new Startup(iocContainer).Initialize();
 
-        public static void Setup(this IDependencyResolver dependencyResolver) =>
-            dependencyResolver.Resolve<ISetupService>().Setup();
+        public static void Setup(this IDependencyResolver dependencyResolver)
+        {
+            var setupServices = dependencyResolver.ResolveAll<ISetupService>();
+            foreach (var setupService in setupServices)
+            {
+                setupService.Setup();
+            }            
+        }
 
         public static void Teardown(this IDependencyResolver dependencyResolver)
         {
