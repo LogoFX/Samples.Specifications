@@ -1,7 +1,7 @@
 configuration: EndToEndWithFake
 
 before_build:
-- nuget restore
+- nuget restore Specifications.sln
 
 build:
   verbosity: minimal
