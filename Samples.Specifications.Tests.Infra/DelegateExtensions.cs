@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 
 namespace Samples.Specifications.Tests.Infra
 {
+    //TODO: Move to packages
     public static class DelegateExtensions
     {
         public static void Execute(this Action action) =>

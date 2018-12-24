@@ -18,5 +18,5 @@ namespace Samples.Specifications.Tests.Infra.Launcher
                 .AddSingleton<IStaticSetupService, StaticSetupService>();
             return @object;
         }
-    }
+    }    
 }

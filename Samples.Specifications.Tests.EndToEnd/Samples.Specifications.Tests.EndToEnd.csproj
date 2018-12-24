@@ -32,4 +32,8 @@
     <PackageReference Include="Solid.Practices.Modularity" Version="2.0.0-rc1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Samples.Specifications.Tests.Infra\Samples.Specifications.Tests.Infra.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,8 +1,7 @@
 ﻿using System.Reflection;
-using Attest.Testing.Contracts;
-using Attest.Testing.Integration;
 using JetBrains.Annotations;
 using Samples.Specifications.Tests.Contracts;
+using Samples.Specifications.Tests.Infra;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
 
@@ -15,10 +14,9 @@ namespace Samples.Specifications.Client.Tests.Integration
         {
             dependencyRegistrator
                 .RegisterAutomagically(
-                Assembly.LoadFrom(AssemblyInfo.AssemblyName),
-                Assembly.GetExecutingAssembly())
-                .AddSingleton<IStartLocalApplicationService, StartLocalApplicationService>()                
-                .AddSingleton<ITeardownService, TeardownService>();
+                    Assembly.LoadFrom(AssemblyInfo.AssemblyName),
+                    Assembly.GetExecutingAssembly())
+                .UseLocalApplicationForIntegration();
         }
-    }
+    }    
 }

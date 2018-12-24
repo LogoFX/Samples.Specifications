@@ -110,6 +110,10 @@
       <Project>{1677d87b-7e7b-436e-8e71-e98a242b89b4}</Project>
       <Name>Samples.Specifications.Tests.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Samples.Specifications.Tests.Infra\Samples.Specifications.Tests.Infra.csproj">
+      <Project>{1e03f181-2690-4ea6-8b99-975d6da4e759}</Project>
+      <Name>Samples.Specifications.Tests.Infra</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">
