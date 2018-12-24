@@ -22,7 +22,7 @@ namespace Samples.Specifications.Tests.Infra.Launcher
                 .Use(new RegisterCollectionMiddleware<Bootstrapper, IDynamicApplicationModule>())
                 .Use(new RegisterCollectionMiddleware<Bootstrapper, IStaticApplicationModule>())
                 .Use(new RegisterCollectionMiddleware<Bootstrapper, ITeardownService>());
-            bootstrapper.Use(new RegisterBootstrappingMiddleware());
+            bootstrapper.Use(new UseApplicationModulesMiddleware());
             bootstrapper.Initialize();
         }
     }

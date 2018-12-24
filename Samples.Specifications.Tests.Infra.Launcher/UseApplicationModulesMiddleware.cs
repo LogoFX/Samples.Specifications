@@ -7,7 +7,7 @@ using Solid.Practices.Middleware;
 namespace Samples.Specifications.Tests.Infra.Launcher
 {
     //TODO: Move to packages - Take into account it should not be Integration/E2E-specific
-    public class RegisterBootstrappingMiddleware : IMiddleware<IHaveRegistrator>
+    public class UseApplicationModulesMiddleware : IMiddleware<IHaveRegistrator>
     {
         public IHaveRegistrator Apply(IHaveRegistrator @object)
         {            
