@@ -84,7 +84,7 @@
       <Version>2.0.0-rc1</Version>
     </PackageReference>
     <PackageReference Include="Attest.Fake.Data">
-      <Version>2.0.0-rc1</Version>
+      <Version>2.0.0-rc2</Version>
     </PackageReference>
     <PackageReference Include="JetBrains.Annotations">
       <Version>2018.2.1</Version>

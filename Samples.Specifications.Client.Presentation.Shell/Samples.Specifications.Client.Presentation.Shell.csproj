@@ -208,7 +208,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="LogoFX.Client.Mvvm.Commanding">
-      <Version>2.0.0-rc2</Version>
+      <Version>2.0.0-rc3</Version>
     </PackageReference>
     <PackageReference Include="LogoFX.Client.Mvvm.View">
       <Version>2.0.0-rc1</Version>
@@ -223,10 +223,10 @@
       <Version>2.0.0-rc2</Version>
     </PackageReference>
     <PackageReference Include="LogoFX.Client.Mvvm.ViewModel.Services.Core">
-      <Version>2.0.0-rc1</Version>
+      <Version>2.0.0-rc2</Version>
     </PackageReference>
     <PackageReference Include="Solid.Practices.Composition.Core">
-      <Version>2.0.0-rc1</Version>
+      <Version>2.0.0-rc2</Version>
     </PackageReference>
     <PackageReference Include="Solid.Practices.Scheduling">
       <Version>2.0.0-rc1</Version>

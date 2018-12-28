@@ -2,7 +2,7 @@
 using LogoFX.Client.Bootstrapping.Adapters.SimpleContainer;
 using LogoFX.Client.Mvvm.ViewModel.Services;
 using LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer;
-using Solid.Bootstrapping;
+using Solid.Core;
 
 namespace Samples.Specifications.Client.Launcher.Shared
 {    

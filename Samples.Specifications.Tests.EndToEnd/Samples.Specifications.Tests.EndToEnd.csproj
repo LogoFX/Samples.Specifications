@@ -26,7 +26,6 @@
   <ItemGroup>
     <PackageReference Include="Attest.Fake.Core" Version="2.0.0-rc1" />
     <PackageReference Include="Attest.Testing.Contracts" Version="2.0.0-rc1" />
-    <PackageReference Include="Attest.Tests.Core" Version="2.0.0-rc2" />
     <PackageReference Include="JetBrains.Annotations" Version="2018.2.1" />
     <PackageReference Include="Solid.Practices.IoC" Version="2.0.0-rc1" />
     <PackageReference Include="Solid.Practices.Modularity" Version="2.0.0-rc1" />

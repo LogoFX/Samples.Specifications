@@ -1,11 +1,11 @@
 ﻿using JetBrains.Annotations;
-using LogoFX.Bootstrapping;
 using LogoFX.Server.Bootstrapping;
 using LogoFX.Server.Bootstrapping.Mvc;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Solid.Bootstrapping;
 
 namespace Samples.Specifications.Server.Facade
 {
@@ -20,7 +20,7 @@ namespace Samples.Specifications.Server.Facade
         public void ConfigureServices(IServiceCollection services)
         {
             var bootstrapper = new Bootstrapper(services)
-                .UseCompositionModules<BootstrapperBase, IServiceCollection>()
+                .Use(new RegisterCustomCompositionModulesMiddleware<BootstrapperBase, IServiceCollection>())
                 .Use(new RegisterCoreMiddleware<BootstrapperBase>())
                 .Use(new RegisterControllersMiddleware<BootstrapperBase>());            
             bootstrapper.Initialize();
