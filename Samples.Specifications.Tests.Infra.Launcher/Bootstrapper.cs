@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Reflection;
 using Attest.Testing.Bootstrapping;
-using Attest.Testing.Core;
 using Solid.Bootstrapping;
 using Solid.Extensibility;
 using Solid.Practices.Composition;

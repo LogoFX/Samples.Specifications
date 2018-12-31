@@ -2,6 +2,7 @@
 using LogoFX.Client.Bootstrapping.Adapters.SimpleContainer;
 using Samples.Specifications.Client.Launcher.Shared;
 using Samples.Specifications.Client.Presentation.Shell.ViewModels;
+using Solid.Practices.Composition;
 
 namespace Samples.Specifications.Client.Tests.Integration.Infra.Shared
 {
@@ -18,6 +19,6 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra.Shared
             this.UseResolver().UseShared().Initialize();
         }
 
-        public override string[] Prefixes => Consts.Prefixes;
+        public override CompositionOptions CompositionOptions => new CompositionOptions {Prefixes = Consts.Prefixes};
     }
 }
