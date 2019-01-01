@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Tests.Acceptance.Specs", "Samples.Specifications.Tests.Acceptance.Specs\Samples.Specifications.Tests.Acceptance.Specs.csproj", "{DA41EB1E-ECAF-400B-A1A4-82EBACDD7600}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Client.Tests.Integration.Infra.Core", "Samples.Specifications.Client.Tests.Integration.Infra.Core\Samples.Specifications.Client.Tests.Integration.Infra.Core.csproj", "{207D3FBC-1EEC-43EA-BAED-E3C14F793119}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Samples.Specifications.Client.Tests.Integration.Infra.Core", "Samples.Specifications.Client.Tests.Integration.Infra.Core\Samples.Specifications.Client.Tests.Integration.Infra.Core.csproj", "{207D3FBC-1EEC-43EA-BAED-E3C14F793119}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Samples.Specifications.Tests.Data", "Samples.Specifications.Tests.Data\Samples.Specifications.Tests.Data.csproj", "{1677D87B-7E7B-436E-8E71-E98A242B89B4}"
 EndProject
@@ -69,7 +69,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Samples.Client.Model.Shared
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Samples.Client.Model.Contracts", "Samples.Client.Model.Contracts\Samples.Client.Model.Contracts.csproj", "{2AE97105-6B5E-4DC4-8BCB-2DDA608048C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Client.Launcher.Shared", "Samples.Specifications.Client.Launcher.Shared\Samples.Specifications.Client.Launcher.Shared.csproj", "{99D98150-0E31-4394-817D-047D4637636F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Samples.Specifications.Client.Launcher.Shared", "Samples.Specifications.Client.Launcher.Shared\Samples.Specifications.Client.Launcher.Shared.csproj", "{99D98150-0E31-4394-817D-047D4637636F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Samples.Client.Data.Contracts.Dto", "Samples.Client.Data.Contracts.Dto\Samples.Client.Data.Contracts.Dto.csproj", "{CB84CA9F-F88D-448D-AFAC-219246851EB2}"
 EndProject
@@ -81,7 +81,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Samples.Specifications.Clie
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Samples.Specifications.Client.Data.Fake.ProviderBuilders.Setup", "Samples.Specifications.Client.Data.Fake.ProviderBuilders.Setup\Samples.Specifications.Client.Data.Fake.ProviderBuilders.Setup.csproj", "{1DB4C693-200D-46DC-AF84-3C0AD40392B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Client.Data.Real.Providers", "Samples.Specifications.Client.Data.Real.Providers\Samples.Specifications.Client.Data.Real.Providers.csproj", "{5B2A4689-2F21-48EC-9058-F89511CEACA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Samples.Specifications.Client.Data.Real.Providers", "Samples.Specifications.Client.Data.Real.Providers\Samples.Specifications.Client.Data.Real.Providers.csproj", "{5B2A4689-2F21-48EC-9058-F89511CEACA3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Samples.Specifications.Client.Data.Fake.Shared", "Samples.Specifications.Client.Data.Fake.Shared\Samples.Specifications.Client.Data.Fake.Shared.csproj", "{146E9A8B-12B4-481F-87AF-78B47B16A737}"
 EndProject
@@ -274,15 +274,16 @@ Global
 		{67A94ECC-8163-4EE6-94ED-2C07D317BF94}.IntegrationWithFake|Any CPU.Build.0 = IntegrationWithFake|Any CPU
 		{67A94ECC-8163-4EE6-94ED-2C07D317BF94}.IntegrationWithReal|Any CPU.ActiveCfg = IntegrationWithReal|Any CPU
 		{67A94ECC-8163-4EE6-94ED-2C07D317BF94}.IntegrationWithReal|Any CPU.Build.0 = IntegrationWithReal|Any CPU
-		{7AB55A08-4894-40FE-98A4-7587B92FAE6C}.DebugWithFake|Any CPU.ActiveCfg = Debug|Any CPU
-		{7AB55A08-4894-40FE-98A4-7587B92FAE6C}.DebugWithFake|Any CPU.Build.0 = Debug|Any CPU
-		{7AB55A08-4894-40FE-98A4-7587B92FAE6C}.DebugWithReal|Any CPU.ActiveCfg = Debug|Any CPU
-		{7AB55A08-4894-40FE-98A4-7587B92FAE6C}.DebugWithReal|Any CPU.Build.0 = Debug|Any CPU
+		{7AB55A08-4894-40FE-98A4-7587B92FAE6C}.DebugWithFake|Any CPU.ActiveCfg = IntegrationWithReal|Any CPU
+		{7AB55A08-4894-40FE-98A4-7587B92FAE6C}.DebugWithFake|Any CPU.Build.0 = IntegrationWithReal|Any CPU
+		{7AB55A08-4894-40FE-98A4-7587B92FAE6C}.DebugWithReal|Any CPU.ActiveCfg = IntegrationWithReal|Any CPU
+		{7AB55A08-4894-40FE-98A4-7587B92FAE6C}.DebugWithReal|Any CPU.Build.0 = IntegrationWithReal|Any CPU
 		{7AB55A08-4894-40FE-98A4-7587B92FAE6C}.EndToEndWithFake|Any CPU.ActiveCfg = EndToEndWithReal|Any CPU
 		{7AB55A08-4894-40FE-98A4-7587B92FAE6C}.EndToEndWithFake|Any CPU.Build.0 = EndToEndWithReal|Any CPU
 		{7AB55A08-4894-40FE-98A4-7587B92FAE6C}.EndToEndWithReal|Any CPU.ActiveCfg = EndToEndWithReal|Any CPU
 		{7AB55A08-4894-40FE-98A4-7587B92FAE6C}.EndToEndWithReal|Any CPU.Build.0 = EndToEndWithReal|Any CPU
-		{7AB55A08-4894-40FE-98A4-7587B92FAE6C}.IntegrationWithFake|Any CPU.ActiveCfg = Release|Any CPU
+		{7AB55A08-4894-40FE-98A4-7587B92FAE6C}.IntegrationWithFake|Any CPU.ActiveCfg = IntegrationWithReal|Any CPU
+		{7AB55A08-4894-40FE-98A4-7587B92FAE6C}.IntegrationWithFake|Any CPU.Build.0 = IntegrationWithReal|Any CPU
 		{7AB55A08-4894-40FE-98A4-7587B92FAE6C}.IntegrationWithReal|Any CPU.ActiveCfg = IntegrationWithReal|Any CPU
 		{7AB55A08-4894-40FE-98A4-7587B92FAE6C}.IntegrationWithReal|Any CPU.Build.0 = IntegrationWithReal|Any CPU
 		{F6035D7B-D04D-4413-8B9E-6F6E0A6DCF69}.DebugWithFake|Any CPU.ActiveCfg = Debug|Any CPU
