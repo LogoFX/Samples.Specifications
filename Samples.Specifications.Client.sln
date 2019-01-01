@@ -79,10 +79,12 @@ Global
 		{1DB4C693-200D-46DC-AF84-3C0AD40392B5}.DebugWithReal|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{1DB4C693-200D-46DC-AF84-3C0AD40392B5}.EndToEndWithFake|Any CPU.ActiveCfg = EndToEndWithFake|Any CPU
 		{1DB4C693-200D-46DC-AF84-3C0AD40392B5}.EndToEndWithFake|Any CPU.Build.0 = EndToEndWithFake|Any CPU
-		{1DB4C693-200D-46DC-AF84-3C0AD40392B5}.EndToEndWithReal|Any CPU.ActiveCfg = EndToEndWithReal|Any CPU
+		{1DB4C693-200D-46DC-AF84-3C0AD40392B5}.EndToEndWithReal|Any CPU.ActiveCfg = EndToEndWithFake|Any CPU
+		{1DB4C693-200D-46DC-AF84-3C0AD40392B5}.EndToEndWithReal|Any CPU.Build.0 = EndToEndWithFake|Any CPU
 		{1DB4C693-200D-46DC-AF84-3C0AD40392B5}.IntegrationWithFake|Any CPU.ActiveCfg = IntegrationWithFake|Any CPU
 		{1DB4C693-200D-46DC-AF84-3C0AD40392B5}.IntegrationWithFake|Any CPU.Build.0 = IntegrationWithFake|Any CPU
-		{1DB4C693-200D-46DC-AF84-3C0AD40392B5}.IntegrationWithReal|Any CPU.ActiveCfg = DebugWithReal|Any CPU
+		{1DB4C693-200D-46DC-AF84-3C0AD40392B5}.IntegrationWithReal|Any CPU.ActiveCfg = IntegrationWithFake|Any CPU
+		{1DB4C693-200D-46DC-AF84-3C0AD40392B5}.IntegrationWithReal|Any CPU.Build.0 = IntegrationWithFake|Any CPU
 		{A4245326-BB01-4B7A-B4DE-6EBCA9C8094E}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
 		{A4245326-BB01-4B7A-B4DE-6EBCA9C8094E}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{A4245326-BB01-4B7A-B4DE-6EBCA9C8094E}.DebugWithReal|Any CPU.ActiveCfg = DebugWithReal|Any CPU
