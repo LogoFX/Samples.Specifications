@@ -1,96 +1,44 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{99D98150-0E31-4394-817D-047D4637636F}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Samples.Specifications.Client.Launcher.Shared</RootNamespace>
-    <AssemblyName>Samples.Specifications.Client.Launcher.Shared</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
+    <TargetFramework>netstandard2.0</TargetFramework>   
+    <Configurations>DebugWithFake;EndToEndWithFake;IntegrationWithFake;DebugWithReal;EndToEndWithReal;IntegrationWithReal</Configurations>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+
+  <PropertyGroup>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithFake|AnyCPU'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\bin\DebugWithFake\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugWithFake|AnyCPU'">
+    <OutputPath>..\Bin\DebugWithFake\</OutputPath>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'EndToEndWithFake|AnyCPU' ">
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EndToEndWithFake|AnyCPU'">
     <OutputPath>..\Bin\EndToEndWithFake\</OutputPath>
-    <DebugType>full</DebugType>
-    <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithReal|AnyCPU'">
-    <OutputPath>bin\DebugWithReal\</OutputPath>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'EndToEndWithReal|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\Bin\EndToEndWithReal\</OutputPath>
-    <DebugType>full</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'IntegrationWithFake|AnyCPU'">
-    <DebugSymbols>true</DebugSymbols>
+  
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IntegrationWithFake|AnyCPU'">
     <OutputPath>..\Bin\IntegrationWithFake\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'IntegrationWithReal|AnyCPU'">
-    <DebugSymbols>true</DebugSymbols>
+  
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugWithReal|AnyCPU'">
+    <OutputPath>..\Bin\DebugWithReal\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EndToEndWithReal|AnyCPU'">
+    <OutputPath>..\Bin\EndToEndWithReal\</OutputPath>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IntegrationWithReal|AnyCPU'">
     <OutputPath>..\Bin\IntegrationWithReal\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="BootstrapperExtensions.cs" />
-    <Compile Include="Consts.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="LogoFX.Bootstrapping">
-      <Version>2.0.0-rc3</Version>
-    </PackageReference>
-    <PackageReference Include="LogoFX.Client.Bootstrapping.Adapters.SimpleContainer">
-      <Version>2.0.0-rc1</Version>
-    </PackageReference>
-    <PackageReference Include="LogoFX.Client.Mvvm.ViewModel.Core">
-      <Version>2.0.0-rc1</Version>
-    </PackageReference>
-    <PackageReference Include="LogoFX.Client.Mvvm.ViewModel.Services.Core">
-      <Version>2.0.0-rc2</Version>
-    </PackageReference>
-    <PackageReference Include="LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer">
-      <Version>2.0.0-rc2</Version>
-    </PackageReference>
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+
+  <ItemGroup>   
+    <PackageReference Include="LogoFX.Bootstrapping" Version="2.0.0-rc3" />
+    <PackageReference Include="LogoFX.Client.Bootstrapping.Adapters.SimpleContainer" Version="2.0.0-rc1" />
+	<PackageReference Include="LogoFX.Client.Mvvm.ViewModel.Core" Version="2.0.0-rc1" />
+	<PackageReference Include="LogoFX.Client.Mvvm.ViewModel.Services.Core" Version="2.0.0-rc2" />
+	<PackageReference Include="LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer" Version="2.0.0-rc2" />
+  </ItemGroup> 
+
 </Project>
