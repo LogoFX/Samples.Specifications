@@ -108,9 +108,9 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Samples.Specifications.Client.Presentation.Shell\Samples.Specifications.Client.Presentation.Shell.csproj">
-      <Project>{5270f84d-8ff4-4756-83b0-78dd9777643d}</Project>
-      <Name>Samples.Specifications.Client.Presentation.Shell</Name>
+    <ProjectReference Include="..\Samples.Specifications.Client.Presentation.Shell.Contracts\Samples.Specifications.Client.Presentation.Shell.Contracts.csproj">
+      <Project>{70BA4536-2CE3-43B4-8F83-258AFED37C73}</Project>
+      <Name>Samples.Specifications.Client.Presentation.Shell.Contracts</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

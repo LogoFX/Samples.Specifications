@@ -90,9 +90,9 @@
       <Project>{80bb83be-30f4-45fc-92ad-df1b147112e5}</Project>
       <Name>Samples.Client.Model.Shared</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Samples.Specifications.Client.Presentation.Shell\Samples.Specifications.Client.Presentation.Shell.csproj">
-      <Project>{5270f84d-8ff4-4756-83b0-78dd9777643d}</Project>
-      <Name>Samples.Specifications.Client.Presentation.Shell</Name>
+    <ProjectReference Include="..\Samples.Specifications.Client.Presentation.Shell.Contracts\Samples.Specifications.Client.Presentation.Shell.Contracts.csproj">
+      <Project>{70ba4536-2ce3-43b4-8f83-258afed37c73}</Project>
+      <Name>Samples.Specifications.Client.Presentation.Shell.Contracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Client.Tests.Integration.Infra.Core\Samples.Specifications.Client.Tests.Integration.Infra.Core.csproj">
       <Project>{207D3FBC-1EEC-43EA-BAED-E3C14F793119}</Project>

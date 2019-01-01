@@ -1,15 +1,15 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.ComponentModel;
 using System.Windows.Input;
 using LogoFX.Client.Mvvm.Commanding;
 using LogoFX.Client.Mvvm.ViewModel;
 using LogoFX.Client.Mvvm.ViewModel.Extensions;
 using Samples.Client.Model.Contracts;
+using Samples.Specifications.Client.Presentation.Shell.Contracts.ViewModels;
 
 namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
-{
-    public sealed class EventsViewModel : BusyScreen, IDisposable
+{    
+    public sealed class EventsViewModel : BusyScreen, IEventsViewModel
     {
         private readonly IDataService _dataService;        
 

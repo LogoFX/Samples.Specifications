@@ -10,11 +10,12 @@ using LogoFX.Client.Mvvm.ViewModel.Services;
 using LogoFX.Client.Mvvm.ViewModel.Shared;
 using LogoFX.Core;
 using Samples.Client.Model.Contracts;
+using Samples.Specifications.Client.Presentation.Shell.Contracts.ViewModels;
 
 namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
-{
+{    
     [UsedImplicitly]
-    public sealed class MainViewModel : BusyScreen, IDisposable
+    public sealed class MainViewModel : BusyScreen, IMainViewModel
     {
         private readonly IViewModelCreatorService _viewModelCreatorService;
         private readonly IDataService _dataService;
@@ -44,7 +45,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
                 .RequeryOnPropertyChanged(this, () => ActiveWarehouseItem);        
 
         private WarehouseItemContainerViewModel _activeWarehouseItem;
-        public WarehouseItemContainerViewModel ActiveWarehouseItem
+        public IWarehouseItemContainerViewModel ActiveWarehouseItem
         {
             get => _activeWarehouseItem;
             set
@@ -60,7 +61,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
                     _activeWarehouseItem.Saved -= OnSaved;
                 }
 
-                _activeWarehouseItem = value;
+                _activeWarehouseItem = value as WarehouseItemContainerViewModel;
 
                 if (_activeWarehouseItem != null)
                 {
@@ -93,7 +94,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         }
 
         private WarehouseItemsViewModel _warehouseItems;
-        public WarehouseItemsViewModel WarehouseItems => _warehouseItems ?? (_warehouseItems = CreateWarehouseItems());
+        public IWarehouseItemsViewModel WarehouseItems => _warehouseItems ?? (_warehouseItems = CreateWarehouseItems());
 
         private WarehouseItemsViewModel CreateWarehouseItems()
         {
@@ -112,7 +113,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         }
 
         private EventsViewModel _events;
-        public EventsViewModel Events => _events ?? (_events = _viewModelCreatorService.CreateViewModel<EventsViewModel>());
+        public IEventsViewModel Events => _events ?? (_events = _viewModelCreatorService.CreateViewModel<EventsViewModel>());
 
         private async void NewWarehouseItem()
         {            

@@ -4,12 +4,13 @@ using JetBrains.Annotations;
 using LogoFX.Client.Mvvm.Commanding;
 using LogoFX.Client.Mvvm.ViewModel.Extensions;
 using Samples.Client.Model.Contracts;
+using Samples.Specifications.Client.Presentation.Shell.Contracts.ViewModels;
 using Samples.Specifications.Client.Presentation.Shell.Properties;
 
 namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
-{   
+{    
     [UsedImplicitly]
-    public sealed class LoginViewModel : BusyScreen, IDisposable
+    public sealed class LoginViewModel : BusyScreen, ILoginViewModel
     {
         private readonly ILoginService _loginService;
 

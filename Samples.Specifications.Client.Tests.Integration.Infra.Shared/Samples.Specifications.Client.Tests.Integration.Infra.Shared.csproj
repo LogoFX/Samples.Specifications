@@ -62,6 +62,10 @@
       <Project>{99d98150-0e31-4394-817d-047d4637636f}</Project>
       <Name>Samples.Specifications.Client.Launcher.Shared</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Samples.Specifications.Client.Presentation.Shell.Contracts\Samples.Specifications.Client.Presentation.Shell.Contracts.csproj">
+      <Project>{70BA4536-2CE3-43B4-8F83-258AFED37C73}</Project>
+      <Name>Samples.Specifications.Client.Presentation.Shell.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Samples.Specifications.Client.Presentation.Shell\Samples.Specifications.Client.Presentation.Shell.csproj">
       <Project>{5270f84d-8ff4-4756-83b0-78dd9777643d}</Project>
       <Name>Samples.Specifications.Client.Presentation.Shell</Name>

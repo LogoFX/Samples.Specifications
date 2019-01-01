@@ -107,6 +107,7 @@
   <ItemGroup>
     <Compile Include="Behaviors\NextControlOnReturnBehavior.cs" />
     <Compile Include="Converters\BooleanToCommandsContextConverter.cs" />
+    <Compile Include="Module.cs" />
     <Compile Include="ViewModels\EventsViewModel.cs" />
     <Compile Include="ViewModels\EventViewModel.cs" />
     <Compile Include="ViewModels\ExitOptionsViewModel.cs" />
@@ -199,6 +200,10 @@
     <ProjectReference Include="..\Samples.Specifications.Client.Presentation.Shared\Samples.Specifications.Client.Presentation.Shared.csproj">
       <Project>{a4245326-bb01-4b7a-b4de-6ebca9c8094e}</Project>
       <Name>Samples.Specifications.Client.Presentation.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samples.Specifications.Client.Presentation.Shell.Contracts\Samples.Specifications.Client.Presentation.Shell.Contracts.csproj">
+      <Project>{1f9e7279-72bf-4b0d-88f2-cce3aed0cb03}</Project>
+      <Name>Samples.Specifications.Client.Presentation.Shell.Contracts</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
