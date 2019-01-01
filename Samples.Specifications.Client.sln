@@ -59,11 +59,14 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{E27A6439-921C-455F-A062-1EBCB50F439F}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
 		{E27A6439-921C-455F-A062-1EBCB50F439F}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
-		{E27A6439-921C-455F-A062-1EBCB50F439F}.DebugWithReal|Any CPU.ActiveCfg = DebugWithReal|Any CPU
+		{E27A6439-921C-455F-A062-1EBCB50F439F}.DebugWithReal|Any CPU.ActiveCfg = DebugWithFake|Any CPU
+		{E27A6439-921C-455F-A062-1EBCB50F439F}.DebugWithReal|Any CPU.Build.0 = DebugWithFake|Any CPU
 		{E27A6439-921C-455F-A062-1EBCB50F439F}.EndToEndWithFake|Any CPU.ActiveCfg = EndToEndWithFake|Any CPU
-		{E27A6439-921C-455F-A062-1EBCB50F439F}.EndToEndWithReal|Any CPU.ActiveCfg = EndToEndWithReal|Any CPU
+		{E27A6439-921C-455F-A062-1EBCB50F439F}.EndToEndWithReal|Any CPU.ActiveCfg = EndToEndWithFake|Any CPU
+		{E27A6439-921C-455F-A062-1EBCB50F439F}.EndToEndWithReal|Any CPU.Build.0 = EndToEndWithFake|Any CPU
 		{E27A6439-921C-455F-A062-1EBCB50F439F}.IntegrationWithFake|Any CPU.ActiveCfg = IntegrationWithFake|Any CPU
-		{E27A6439-921C-455F-A062-1EBCB50F439F}.IntegrationWithReal|Any CPU.ActiveCfg = DebugWithReal|Any CPU
+		{E27A6439-921C-455F-A062-1EBCB50F439F}.IntegrationWithReal|Any CPU.ActiveCfg = IntegrationWithFake|Any CPU
+		{E27A6439-921C-455F-A062-1EBCB50F439F}.IntegrationWithReal|Any CPU.Build.0 = IntegrationWithFake|Any CPU
 		{5B2A4689-2F21-48EC-9058-F89511CEACA3}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
 		{5B2A4689-2F21-48EC-9058-F89511CEACA3}.DebugWithReal|Any CPU.ActiveCfg = DebugWithReal|Any CPU
 		{5B2A4689-2F21-48EC-9058-F89511CEACA3}.DebugWithReal|Any CPU.Build.0 = DebugWithReal|Any CPU
