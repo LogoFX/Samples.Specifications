@@ -22,7 +22,7 @@
   </PropertyGroup>
   
    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EndToEndWithReal|AnyCPU'">
-    <OutputPath>..\Bin\EndToEndWithReal\</OutputPath>
+    <OutputPath>..\Bin\Specs\EndToEndWithReal\</OutputPath>
   </PropertyGroup>
   
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IntegrationWithFake|AnyCPU'">
@@ -30,7 +30,7 @@
   </PropertyGroup>
   
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IntegrationWithReal|AnyCPU'">
-    <OutputPath>..\Bin\IntegrationWithReal\</OutputPath>
+    <OutputPath>..\Bin\Specs\IntegrationWithReal\</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
