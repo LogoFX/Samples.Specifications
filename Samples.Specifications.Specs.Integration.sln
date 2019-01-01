@@ -87,6 +87,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Samples.Specifications.Clie
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Samples.Specifications.Client.Presentation.Shell.Contracts", "Samples.Specifications.Client.Presentation.Shell.Contracts\Samples.Specifications.Client.Presentation.Shell.Contracts.csproj", "{70BA4536-2CE3-43B4-8F83-258AFED37C73}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Samples.Specifications.Client.Tests.Integration.Core", "Samples.Specifications.Client.Tests.Integration.Core\Samples.Specifications.Client.Tests.Integration.Core.csproj", "{F45AF019-2B82-4F59-9028-13D38617DF1A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		DebugWithFake|Any CPU = DebugWithFake|Any CPU
@@ -121,14 +123,14 @@ Global
 		{DA41EB1E-ECAF-400B-A1A4-82EBACDD7600}.IntegrationWithFake|Any CPU.Build.0 = IntegrationWithFake|Any CPU
 		{DA41EB1E-ECAF-400B-A1A4-82EBACDD7600}.IntegrationWithReal|Any CPU.ActiveCfg = IntegrationWithReal|Any CPU
 		{DA41EB1E-ECAF-400B-A1A4-82EBACDD7600}.IntegrationWithReal|Any CPU.Build.0 = IntegrationWithReal|Any CPU
-		{207D3FBC-1EEC-43EA-BAED-E3C14F793119}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
-		{207D3FBC-1EEC-43EA-BAED-E3C14F793119}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
-		{207D3FBC-1EEC-43EA-BAED-E3C14F793119}.DebugWithReal|Any CPU.ActiveCfg = DebugWithReal|Any CPU
-		{207D3FBC-1EEC-43EA-BAED-E3C14F793119}.DebugWithReal|Any CPU.Build.0 = DebugWithReal|Any CPU
-		{207D3FBC-1EEC-43EA-BAED-E3C14F793119}.EndToEndWithFake|Any CPU.ActiveCfg = EndToEndWithFake|Any CPU
-		{207D3FBC-1EEC-43EA-BAED-E3C14F793119}.EndToEndWithFake|Any CPU.Build.0 = EndToEndWithFake|Any CPU
-		{207D3FBC-1EEC-43EA-BAED-E3C14F793119}.EndToEndWithReal|Any CPU.ActiveCfg = EndToEndWithReal|Any CPU
-		{207D3FBC-1EEC-43EA-BAED-E3C14F793119}.EndToEndWithReal|Any CPU.Build.0 = EndToEndWithReal|Any CPU
+		{207D3FBC-1EEC-43EA-BAED-E3C14F793119}.DebugWithFake|Any CPU.ActiveCfg = IntegrationWithReal|Any CPU
+		{207D3FBC-1EEC-43EA-BAED-E3C14F793119}.DebugWithFake|Any CPU.Build.0 = IntegrationWithReal|Any CPU
+		{207D3FBC-1EEC-43EA-BAED-E3C14F793119}.DebugWithReal|Any CPU.ActiveCfg = IntegrationWithReal|Any CPU
+		{207D3FBC-1EEC-43EA-BAED-E3C14F793119}.DebugWithReal|Any CPU.Build.0 = IntegrationWithReal|Any CPU
+		{207D3FBC-1EEC-43EA-BAED-E3C14F793119}.EndToEndWithFake|Any CPU.ActiveCfg = IntegrationWithReal|Any CPU
+		{207D3FBC-1EEC-43EA-BAED-E3C14F793119}.EndToEndWithFake|Any CPU.Build.0 = IntegrationWithReal|Any CPU
+		{207D3FBC-1EEC-43EA-BAED-E3C14F793119}.EndToEndWithReal|Any CPU.ActiveCfg = IntegrationWithReal|Any CPU
+		{207D3FBC-1EEC-43EA-BAED-E3C14F793119}.EndToEndWithReal|Any CPU.Build.0 = IntegrationWithReal|Any CPU
 		{207D3FBC-1EEC-43EA-BAED-E3C14F793119}.IntegrationWithFake|Any CPU.ActiveCfg = IntegrationWithFake|Any CPU
 		{207D3FBC-1EEC-43EA-BAED-E3C14F793119}.IntegrationWithFake|Any CPU.Build.0 = IntegrationWithFake|Any CPU
 		{207D3FBC-1EEC-43EA-BAED-E3C14F793119}.IntegrationWithReal|Any CPU.ActiveCfg = IntegrationWithReal|Any CPU
@@ -483,6 +485,18 @@ Global
 		{70BA4536-2CE3-43B4-8F83-258AFED37C73}.IntegrationWithFake|Any CPU.Build.0 = IntegrationWithFake|Any CPU
 		{70BA4536-2CE3-43B4-8F83-258AFED37C73}.IntegrationWithReal|Any CPU.ActiveCfg = IntegrationWithReal|Any CPU
 		{70BA4536-2CE3-43B4-8F83-258AFED37C73}.IntegrationWithReal|Any CPU.Build.0 = IntegrationWithReal|Any CPU
+		{F45AF019-2B82-4F59-9028-13D38617DF1A}.DebugWithFake|Any CPU.ActiveCfg = IntegrationWithReal|Any CPU
+		{F45AF019-2B82-4F59-9028-13D38617DF1A}.DebugWithFake|Any CPU.Build.0 = IntegrationWithReal|Any CPU
+		{F45AF019-2B82-4F59-9028-13D38617DF1A}.DebugWithReal|Any CPU.ActiveCfg = IntegrationWithReal|Any CPU
+		{F45AF019-2B82-4F59-9028-13D38617DF1A}.DebugWithReal|Any CPU.Build.0 = IntegrationWithReal|Any CPU
+		{F45AF019-2B82-4F59-9028-13D38617DF1A}.EndToEndWithFake|Any CPU.ActiveCfg = IntegrationWithReal|Any CPU
+		{F45AF019-2B82-4F59-9028-13D38617DF1A}.EndToEndWithFake|Any CPU.Build.0 = IntegrationWithReal|Any CPU
+		{F45AF019-2B82-4F59-9028-13D38617DF1A}.EndToEndWithReal|Any CPU.ActiveCfg = IntegrationWithReal|Any CPU
+		{F45AF019-2B82-4F59-9028-13D38617DF1A}.EndToEndWithReal|Any CPU.Build.0 = IntegrationWithReal|Any CPU
+		{F45AF019-2B82-4F59-9028-13D38617DF1A}.IntegrationWithFake|Any CPU.ActiveCfg = IntegrationWithFake|Any CPU
+		{F45AF019-2B82-4F59-9028-13D38617DF1A}.IntegrationWithFake|Any CPU.Build.0 = IntegrationWithFake|Any CPU
+		{F45AF019-2B82-4F59-9028-13D38617DF1A}.IntegrationWithReal|Any CPU.ActiveCfg = IntegrationWithReal|Any CPU
+		{F45AF019-2B82-4F59-9028-13D38617DF1A}.IntegrationWithReal|Any CPU.Build.0 = IntegrationWithReal|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -522,6 +536,7 @@ Global
 		{5B2A4689-2F21-48EC-9058-F89511CEACA3} = {2736E69E-E6B1-4941-A2AF-FE4932E03E4F}
 		{146E9A8B-12B4-481F-87AF-78B47B16A737} = {2736E69E-E6B1-4941-A2AF-FE4932E03E4F}
 		{70BA4536-2CE3-43B4-8F83-258AFED37C73} = {2736E69E-E6B1-4941-A2AF-FE4932E03E4F}
+		{F45AF019-2B82-4F59-9028-13D38617DF1A} = {1B15D99B-27E6-4BD4-802D-2E3F025789B1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {593C9469-C05F-4128-889C-882A89B62C97}
