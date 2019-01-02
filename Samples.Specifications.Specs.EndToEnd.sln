@@ -33,7 +33,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contracts", "Contracts", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Samples.Specifications.Tests.Contracts", "Samples.Specifications.Tests.Contracts\Samples.Specifications.Tests.Contracts.csproj", "{5FD6C592-4F6B-4D1A-95E7-46038C91DA23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Tests.Steps.Real.Helpers.MongoDb", "Samples.Specifications.Tests.Steps.Real.Helpers.MongoDb\Samples.Specifications.Tests.Steps.Real.Helpers.MongoDb.csproj", "{7AB55A08-4894-40FE-98A4-7587B92FAE6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Samples.Specifications.Tests.Steps.Real.Helpers.MongoDb", "Samples.Specifications.Tests.Steps.Real.Helpers.MongoDb\Samples.Specifications.Tests.Steps.Real.Helpers.MongoDb.csproj", "{7AB55A08-4894-40FE-98A4-7587B92FAE6C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{F6F37C2D-41B2-4A3D-B95B-9136E5FAF795}"
 EndProject
@@ -51,7 +51,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Samples.Client.Data.Contrac
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Samples.Specifications.Client.Data.Fake.ProviderBuilders", "Samples.Specifications.Client.Data.Fake.ProviderBuilders\Samples.Specifications.Client.Data.Fake.ProviderBuilders.csproj", "{B1D8ADA9-FD8E-4FC0-B330-74D8FAC5C587}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Client.Data.Fake.ProviderBuilders.Setup", "Samples.Specifications.Client.Data.Fake.ProviderBuilders.Setup\Samples.Specifications.Client.Data.Fake.ProviderBuilders.Setup.csproj", "{1DB4C693-200D-46DC-AF84-3C0AD40392B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Samples.Specifications.Client.Data.Fake.ProviderBuilders.Setup", "Samples.Specifications.Client.Data.Fake.ProviderBuilders.Setup\Samples.Specifications.Client.Data.Fake.ProviderBuilders.Setup.csproj", "{1DB4C693-200D-46DC-AF84-3C0AD40392B5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EndToEnd", "EndToEnd", "{BBAFE13B-DA85-4C5A-9DFA-44C4BEC009EE}"
 EndProject
@@ -112,7 +112,7 @@ Global
 		{5FD6C592-4F6B-4D1A-95E7-46038C91DA23}.EndToEndWithFake|Any CPU.Build.0 = Debug|Any CPU
 		{5FD6C592-4F6B-4D1A-95E7-46038C91DA23}.EndToEndWithReal|Any CPU.ActiveCfg = Debug|Any CPU
 		{5FD6C592-4F6B-4D1A-95E7-46038C91DA23}.EndToEndWithReal|Any CPU.Build.0 = Debug|Any CPU
-		{7AB55A08-4894-40FE-98A4-7587B92FAE6C}.EndToEndWithFake|Any CPU.ActiveCfg = Release|Any CPU
+		{7AB55A08-4894-40FE-98A4-7587B92FAE6C}.EndToEndWithFake|Any CPU.ActiveCfg = EndToEndWithReal|Any CPU
 		{7AB55A08-4894-40FE-98A4-7587B92FAE6C}.EndToEndWithReal|Any CPU.ActiveCfg = EndToEndWithReal|Any CPU
 		{7AB55A08-4894-40FE-98A4-7587B92FAE6C}.EndToEndWithReal|Any CPU.Build.0 = EndToEndWithReal|Any CPU
 		{F6035D7B-D04D-4413-8B9E-6F6E0A6DCF69}.EndToEndWithFake|Any CPU.ActiveCfg = EndToEndWithFake|Any CPU
@@ -139,8 +139,8 @@ Global
 		{B1D8ADA9-FD8E-4FC0-B330-74D8FAC5C587}.EndToEndWithReal|Any CPU.Build.0 = EndToEndWithFake|Any CPU
 		{1DB4C693-200D-46DC-AF84-3C0AD40392B5}.EndToEndWithFake|Any CPU.ActiveCfg = EndToEndWithFake|Any CPU
 		{1DB4C693-200D-46DC-AF84-3C0AD40392B5}.EndToEndWithFake|Any CPU.Build.0 = EndToEndWithFake|Any CPU
-		{1DB4C693-200D-46DC-AF84-3C0AD40392B5}.EndToEndWithReal|Any CPU.ActiveCfg = EndToEndWithReal|Any CPU
-		{1DB4C693-200D-46DC-AF84-3C0AD40392B5}.EndToEndWithReal|Any CPU.Build.0 = EndToEndWithReal|Any CPU
+		{1DB4C693-200D-46DC-AF84-3C0AD40392B5}.EndToEndWithReal|Any CPU.ActiveCfg = EndToEndWithFake|Any CPU
+		{1DB4C693-200D-46DC-AF84-3C0AD40392B5}.EndToEndWithReal|Any CPU.Build.0 = EndToEndWithFake|Any CPU
 		{A3B306E2-2A20-4591-812D-677DD44E6640}.EndToEndWithFake|Any CPU.ActiveCfg = EndToEndWithFake|Any CPU
 		{A3B306E2-2A20-4591-812D-677DD44E6640}.EndToEndWithFake|Any CPU.Build.0 = EndToEndWithFake|Any CPU
 		{A3B306E2-2A20-4591-812D-677DD44E6640}.EndToEndWithReal|Any CPU.ActiveCfg = EndToEndWithReal|Any CPU
