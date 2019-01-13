@@ -41,7 +41,7 @@
 	<PackageReference Include="LogoFX.Client.Mvvm.ViewModel.Core" Version="2.0.0-rc1" />
 	<PackageReference Include="LogoFX.Client.Mvvm.ViewModel.Services.Core" Version="2.0.0-rc2" />
 	<PackageReference Include="LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer" Version="2.0.0-rc2" />
-	<PackageReference Include="RestSharp" Version="106.5.4" />
+	<PackageReference Include="RestSharp" Version="106.5.4" />	
   </ItemGroup> 
 
 </Project>
