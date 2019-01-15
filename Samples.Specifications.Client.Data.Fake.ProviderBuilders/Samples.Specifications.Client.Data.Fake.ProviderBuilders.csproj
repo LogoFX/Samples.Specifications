@@ -1,9 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>Samples.Specifications.Client.Data.Fake.ProviderBuilders</AssemblyName>
-    <RootNamespace>Samples.Specifications.Client.Data.Fake.ProviderBuilders</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>   
     <Configurations>Debug;Release;DebugWithFake;EndToEndWithFake</Configurations>
   </PropertyGroup>
 
@@ -20,8 +18,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Attest.Fake.Builders" Version="2.0.0-rc1" />
-    <PackageReference Include="Attest.Fake.Core" Version="2.0.0-rc1" />
+    <PackageReference Include="Attest.Fake.Builders" Version="2.0.0-rc2" />
+    <PackageReference Include="Attest.Fake.Core" Version="2.0.0-rc2" />
   </ItemGroup>
 
   <ItemGroup>

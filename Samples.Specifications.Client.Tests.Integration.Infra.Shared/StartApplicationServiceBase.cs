@@ -1,5 +1,6 @@
 ﻿using Caliburn.Micro;
 using LogoFX.Client.Testing.Integration.SpecFlow;
+using Samples.Specifications.Client.Presentation.Shell.Contracts.ViewModels;
 using Samples.Specifications.Client.Presentation.Shell.ViewModels;
 using Samples.Specifications.Client.Tests.Integration.Infra.Core;
 
@@ -36,7 +37,7 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra.Shared
 
         private static void ActivateRootObject(StructureHelper structureHelper, object rootObject)
         {
-            var shell = (ShellViewModel)rootObject;
+            var shell = (IShellViewModel)rootObject;
             structureHelper.SetRootObject(shell);
             ScreenExtensions.TryActivate(shell);
         }

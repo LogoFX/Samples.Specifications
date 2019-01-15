@@ -32,16 +32,14 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IntegrationWithReal|AnyCPU'">
     <OutputPath>..\Bin\IntegrationWithReal\</OutputPath>
   </PropertyGroup>
-
-  <ItemGroup>   
-    <PackageReference Include="Attest.Fake.Data" Version="2.0.0-rc3" />   
-    <PackageReference Include="Attest.Fake.Moq" Version="2.0.0-rc3" />   
-    <PackageReference Include="LogoFX.Bootstrapping" Version="2.0.0-rc4" />
-    <PackageReference Include="LogoFX.Client.Bootstrapping.Adapters.SimpleContainer" Version="2.0.0-rc2" />
-	<PackageReference Include="LogoFX.Client.Mvvm.ViewModel.Core" Version="2.0.0-rc1" />
-	<PackageReference Include="LogoFX.Client.Mvvm.ViewModel.Services.Core" Version="2.0.0-rc3" />
-	<PackageReference Include="LogoFX.Client.Mvvm.ViewModelFactory.SimpleContainer" Version="2.0.0-rc3" />
-	<PackageReference Include="RestSharp" Version="106.5.4" />	
-  </ItemGroup> 
+  
+  <ItemGroup>
+    <PackageReference Include="LogoFX.Client.Mvvm.ViewModel.Core" Version="2.0.0-rc1" />
+    <PackageReference Include="LogoFX.Client.Mvvm.ViewModel.Shared" Version="2.0.0-rc1" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Samples.Client.Model.Contracts\Samples.Client.Model.Contracts.csproj" />
+  </ItemGroup>  
 
 </Project>

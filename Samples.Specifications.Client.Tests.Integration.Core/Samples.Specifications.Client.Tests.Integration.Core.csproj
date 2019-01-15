@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>   
+    <Configurations>IntegrationWithFake;IntegrationWithReal</Configurations>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <RootNamespace>Samples.Specifications.Client.Tests.Integration</RootNamespace>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IntegrationWithFake|AnyCPU'">
+    <OutputPath>..\Bin\Specs\IntegrationWithFake\</OutputPath>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IntegrationWithReal|AnyCPU'">
+    <OutputPath>..\Bin\Specs\IntegrationWithReal\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<PackageReference Include="Solid.Practices.IoC" Version="2.0.0" />
+	<PackageReference Include="Solid.Practices.Modularity" Version="2.0.0" />	
+	<PackageReference Include="JetBrains.Annotations" Version="2018.2.1" />    
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Samples.Specifications.Client.Presentation.Shell.Contracts\Samples.Specifications.Client.Presentation.Shell.Contracts.csproj" />
+    <ProjectReference Include="..\Samples.Specifications.Client.Tests.Integration.Infra.Core\Samples.Specifications.Client.Tests.Integration.Infra.Core.csproj" />
+    <ProjectReference Include="..\Samples.Specifications.Tests.Contracts\Samples.Specifications.Tests.Contracts.csproj" />
+    <ProjectReference Include="..\Samples.Specifications.Tests.Infra\Samples.Specifications.Tests.Infra.csproj" />
+  </ItemGroup> 
+  
+</Project>

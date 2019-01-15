@@ -10,13 +10,14 @@ using LogoFX.Client.Mvvm.Commanding;
 using LogoFX.Client.Mvvm.ViewModel.Services;
 using LogoFX.Core;
 using Samples.Client.Model.Shared;
+using Samples.Specifications.Client.Presentation.Shell.Contracts.ViewModels;
 using Samples.Specifications.Client.Presentation.Shell.Properties;
 using Solid.Practices.Scheduling;
 
 namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
-{
+{    
     [UsedImplicitly]
-    public sealed class ShellViewModel : Conductor<INotifyPropertyChanged>.Collection.OneActive, IDisposable
+    public sealed class ShellViewModel : Conductor<INotifyPropertyChanged>.Collection.OneActive, IShellViewModel
     {
         private readonly IWindowManager _windowManager;
         private readonly IViewModelCreatorService _viewModelCreatorService;
@@ -55,7 +56,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         public bool IsLoggedIn => UserContext.Current != null;
 
         private LoginViewModel _loginViewModel;
-        public LoginViewModel LoginViewModel => _loginViewModel ?? (_loginViewModel = CreateLoginViewModel());
+        public ILoginViewModel LoginViewModel => _loginViewModel ?? (_loginViewModel = CreateLoginViewModel());
 
         private LoginViewModel CreateLoginViewModel()
         {
@@ -63,7 +64,7 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         }
 
         private MainViewModel _mainViewModel;
-        public MainViewModel MainViewModel => _mainViewModel ?? (_mainViewModel = CreateMainViewModel());
+        public IMainViewModel MainViewModel => _mainViewModel ?? (_mainViewModel = CreateMainViewModel());
 
         private MainViewModel CreateMainViewModel()
         {

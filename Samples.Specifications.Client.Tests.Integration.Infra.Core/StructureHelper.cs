@@ -1,4 +1,4 @@
-﻿using Samples.Specifications.Client.Presentation.Shell.ViewModels;
+﻿using Samples.Specifications.Client.Presentation.Shell.Contracts.ViewModels;
 
 namespace Samples.Specifications.Client.Tests.Integration.Infra.Core
 {
@@ -7,24 +7,24 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra.Core
     /// </summary>
     public sealed class StructureHelper
     {
-        private ShellViewModel _rootObject;
+        private IShellViewModel _rootObject;
 
         /// <summary>
         /// Sets the root object which is the shell view model.
         /// </summary>
         /// <param name="rootObject">The root object.</param>
-        public void SetRootObject(ShellViewModel rootObject) => _rootObject = rootObject;
+        public void SetRootObject(IShellViewModel rootObject) => _rootObject = rootObject;
 
         /// <summary>
         /// Gets the shell view model.
         /// </summary>
         /// <returns>Shell view model</returns>
-        public ShellViewModel GetShell() => GetShellInternal();
+        public IShellViewModel GetShell() => GetShellInternal();
 
-        public LoginViewModel GetLogin() => GetShellInternal()?.LoginViewModel;
+        public ILoginViewModel GetLogin() => GetShellInternal()?.LoginViewModel;
 
-        public MainViewModel GetMain() => GetShellInternal()?.MainViewModel;
+        public IMainViewModel GetMain() => GetShellInternal()?.MainViewModel;
 
-        private ShellViewModel GetShellInternal() => _rootObject;
+        private IShellViewModel GetShellInternal() => _rootObject;
     }
 }

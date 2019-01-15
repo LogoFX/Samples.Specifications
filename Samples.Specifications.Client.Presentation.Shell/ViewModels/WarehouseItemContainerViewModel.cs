@@ -2,10 +2,11 @@ using System.Threading.Tasks;
 using LogoFX.Client.Mvvm.ViewModel.Extensions;
 using LogoFX.Client.Mvvm.ViewModel.Services;
 using Samples.Client.Model.Contracts;
+using Samples.Specifications.Client.Presentation.Shell.Contracts.ViewModels;
 
 namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
-{
-    public sealed class WarehouseItemContainerViewModel : EditableObjectViewModel<IWarehouseItem>
+{   
+    public sealed class WarehouseItemContainerViewModel : EditableObjectViewModel<IWarehouseItem>, IWarehouseItemContainerViewModel
     {
         private readonly IWarehouseItem _model;
         private readonly IViewModelCreatorService _viewModelCreatorService;
@@ -23,12 +24,12 @@ namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
         }
 
         private WarehouseItemCommandsViewModel _commands;
-        public WarehouseItemCommandsViewModel Commands => _commands ??
+        public IWarehouseItemCommandsViewModel Commands => _commands ??
                                                           (_commands = _viewModelCreatorService
                                                               .CreateViewModel<WarehouseItemCommandsViewModel>());
 
         private WarehouseItemViewModel _item;
-        public WarehouseItemViewModel Item => _item ??
+        public IWarehouseItemViewModel Item => _item ??
                                               (_item =
                                                   _viewModelCreatorService
                                                       .CreateViewModel<IWarehouseItem, WarehouseItemViewModel>(_model));

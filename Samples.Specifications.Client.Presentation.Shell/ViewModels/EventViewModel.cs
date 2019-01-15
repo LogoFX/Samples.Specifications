@@ -1,10 +1,11 @@
 ﻿using System;
 using LogoFX.Client.Mvvm.ViewModel;
 using Samples.Client.Model.Contracts;
+using Samples.Specifications.Client.Presentation.Shell.Contracts.ViewModels;
 
 namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
-{
-    public sealed class EventViewModel : ObjectViewModel<IEvent>
+{   
+    public sealed class EventViewModel : ObjectViewModel<IEvent>, IEventViewModel
     {
         public EventViewModel(IEvent model)
             : base(model)

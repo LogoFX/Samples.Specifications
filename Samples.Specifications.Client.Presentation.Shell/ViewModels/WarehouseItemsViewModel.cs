@@ -3,11 +3,12 @@ using JetBrains.Annotations;
 using LogoFX.Client.Mvvm.ViewModel;
 using LogoFX.Client.Mvvm.ViewModel.Services;
 using Samples.Client.Model.Contracts;
+using Samples.Specifications.Client.Presentation.Shell.Contracts.ViewModels;
 
 namespace Samples.Specifications.Client.Presentation.Shell.ViewModels
-{
+{    
     [UsedImplicitly]
-    public sealed class WarehouseItemsViewModel : PropertyChangedBase
+    public sealed class WarehouseItemsViewModel : PropertyChangedBase, IWarehouseItemsViewModel
     {
         private readonly IDataService _dataService;
         private readonly IViewModelCreatorService _viewModelCreatorService;
