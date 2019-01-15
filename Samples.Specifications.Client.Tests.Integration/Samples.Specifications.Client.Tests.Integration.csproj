@@ -88,6 +88,17 @@
       <Name>Samples.Client.Model.Shared</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Attest.Testing.Contracts">
+      <Version>2.0.0-rc2</Version>
+    </PackageReference>
+    <PackageReference Include="JetBrains.Annotations">
+      <Version>2018.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="LogoFX.Client.Tests.Shared.Caliburn.Micro">
+      <Version>2.0.0-rc1</Version>
+    </PackageReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
