@@ -1,5 +1,4 @@
-﻿using Attest.Testing.Contracts;
-using Solid.Bootstrapping;
+﻿using Solid.Bootstrapping;
 using Solid.Core;
 using Solid.Practices.IoC;
 
@@ -20,11 +19,7 @@ namespace Samples.Specifications.Tests.Infra.Launcher
             bootstrapper
                 .Use(new ModulesRegistrationMiddleware<Bootstrapper>())
                 .Use(new RegisterResolverMiddleware<Bootstrapper>(_iocContainer))
-                .Use(new RegisterCollectionMiddleware<Bootstrapper, IDynamicApplicationModule>())
-                .Use(new RegisterCollectionMiddleware<Bootstrapper, IStaticApplicationModule>())
-                .Use(new RegisterCollectionMiddleware<Bootstrapper, ISetupService>())
-                .Use(new RegisterCollectionMiddleware<Bootstrapper, ITeardownService>());        
-            bootstrapper.Use(new UseApplicationModulesMiddleware());
+                .Use(new UseLifecycleMiddleware<Bootstrapper>());                                  
             bootstrapper.Initialize();
         }
     }

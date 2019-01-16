@@ -42,6 +42,7 @@ namespace Samples.Specifications.Client.Tests.Integration.Infra.Shared
             ScreenExtensions.TryActivate(shell);
         }
 
+        //TODO: provide func for registering the root object as its interface
         private sealed class BootstrapperBridge : IntegrationTestsBase<ShellViewModel, TestBootstrapper>.
             WithExplicitRootObjectCreation
         {
