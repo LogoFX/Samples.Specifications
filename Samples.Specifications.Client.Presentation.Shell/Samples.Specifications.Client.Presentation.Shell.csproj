@@ -107,7 +107,6 @@
   <ItemGroup>
     <Compile Include="Behaviors\NextControlOnReturnBehavior.cs" />
     <Compile Include="Converters\BooleanToCommandsContextConverter.cs" />
-    <Compile Include="Module.cs" />
     <Compile Include="ViewModels\EventsViewModel.cs" />
     <Compile Include="ViewModels\EventViewModel.cs" />
     <Compile Include="ViewModels\ExitOptionsViewModel.cs" />
