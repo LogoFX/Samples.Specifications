@@ -8,7 +8,8 @@ using Solid.Practices.Middleware;
 
 namespace Samples.Specifications.Tests.Infra.Launcher
 {
-    //TODO: Move to packages
+    //TODO: Move to packages - pat attention that "EndToEnd" should be changed into something else 
+    //as the classes are used also in integration tests
     public class UseLifecycleMiddleware<TBootstrapper> : IMiddleware<TBootstrapper>
         where TBootstrapper : class, IHaveRegistrator, IAssemblySourceProvider
     {        
