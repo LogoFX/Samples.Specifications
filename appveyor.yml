@@ -8,6 +8,9 @@ build:
   project: Specifications.sln
 
 image: Visual Studio 2017
+
+environment:
+  APPVEYOR_BUILD_WORKER_CLOUD: GCE
   
 notifications:
 - provider: Email
