@@ -1,0 +1,26 @@
+environment:
+  APPVEYOR_BUILD_WORKER_CLOUD: GCE
+  matrix:
+    - solution_name: Samples.Specifications.Client.sln
+    - config: DebugWithSpecs
+    - solution_name: Samples.Specifications.Specs.EndToEnd.sln
+    - config: EndToEndWithFake
+
+before_build:
+  - nuget restore %solution_name%
+
+build_script:
+  - msbuild %solution_name% /property:Configuration=%config%
+
+image: Visual Studio 2017
+  
+notifications:
+- provider: Email
+  to:
+  - gennady.verdel@logoui.co.il
+  - david@logoui.co.il
+  - dmitry.bublik@logoui.co.il
+  on_build_success: false
+  on_build_failure: false
+  on_build_status_changed: true
+  
