@@ -2,9 +2,9 @@ environment:
   APPVEYOR_BUILD_WORKER_CLOUD: GCE
   matrix:
     - solution_name: Samples.Specifications.Client.sln
-    - config: DebugWithSpecs
+      config: DebugWithSpecs
     - solution_name: Samples.Specifications.Specs.EndToEnd.sln
-    - config: EndToEndWithFake
+      config: EndToEndWithFake
 
 before_build:
   - nuget restore %solution_name%
