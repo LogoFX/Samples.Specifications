@@ -3,6 +3,10 @@ configuration: EndToEndWithFake
 before_build:
 - nuget restore Specifications.sln
 
+branches:
+  only:
+    - master
+
 build:
   verbosity: minimal
   project: Specifications.sln
