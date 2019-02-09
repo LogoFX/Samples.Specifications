@@ -12,7 +12,7 @@ namespace Samples.Specifications.Tests.Infra.Launcher
     //as the classes are used also in integration tests
     public class UseLifecycleMiddleware<TBootstrapper> : IMiddleware<TBootstrapper>
         where TBootstrapper : class, IHaveRegistrator, IAssemblySourceProvider
-    {        
+    {
         private readonly List<IMiddleware<TBootstrapper>> _middlewares = new List<IMiddleware<TBootstrapper>>
         {
             new RegisterCollectionMiddleware<TBootstrapper, IDynamicApplicationModule>(),
@@ -22,14 +22,14 @@ namespace Samples.Specifications.Tests.Infra.Launcher
         };
 
         public TBootstrapper Apply(TBootstrapper @object)
-        {                        
-            @object.Registrator                
+        {
+            @object.Registrator
                 .AddSingleton<IStartDynamicApplicationModuleService, StartDynamicApplicationModuleService>()
                 .AddSingleton<IStartStaticApplicationModuleService, StartStaticApplicationModuleService>()
                 .AddSingleton<ILifecycleService, StaticLifecycleService>()
                 .AddSingleton<IStaticSetupService, StaticSetupService>();
             MiddlewareApplier.ApplyMiddlewares(@object, _middlewares);
             return @object;
-        }        
-    }    
+        }
+    }
 }

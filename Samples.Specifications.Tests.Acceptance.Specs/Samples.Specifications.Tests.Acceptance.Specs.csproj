@@ -143,6 +143,10 @@
       <Project>{3fc45a34-c028-4f72-b8a7-7b8bf15c5bb8}</Project>
       <Name>Samples.Specifications.Tests.Infra.Launcher</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Samples.Specifications.Tests.Infra\Samples.Specifications.Tests.Infra.csproj">
+      <Project>{1E03F181-2690-4EA6-8B99-975D6DA4E759}</Project>
+      <Name>Samples.Specifications.Tests.Infra</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Attest.Fake.Builders">

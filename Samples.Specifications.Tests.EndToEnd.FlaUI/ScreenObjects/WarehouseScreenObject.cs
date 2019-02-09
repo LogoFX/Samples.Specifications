@@ -5,6 +5,7 @@ using System.Linq;
 using FlaUI.Core.AutomationElements;
 using Samples.Specifications.Tests.Contracts.ScreenObjects;
 using Samples.Specifications.Tests.Data;
+using Samples.Specifications.Tests.Infra;
 
 namespace Samples.Specifications.Tests.EndToEnd.ScreenObjects
 {
@@ -30,7 +31,9 @@ namespace Samples.Specifications.Tests.EndToEnd.ScreenObjects
         private GridRow GetRowByKind(string kind)
         {
             var shell = StructureHelper.GetShell();
-            var dataGrid = shell.FindFirstDescendant("WarehouseItemsDataGrid").AsGrid();
+            var dataGrid =
+                DelegateExtensions.ExecuteWithResult(() =>
+                    shell.FindFirstDescendant("WarehouseItemsDataGrid").AsGrid());
             var match = dataGrid.Rows.FirstOrDefault(t => t.Cells[0].Value == kind);
             if (match == null)
             {

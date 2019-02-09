@@ -1,20 +1,17 @@
-using Attest.Testing.Contracts;
+﻿using Attest.Testing.Contracts;
 using Solid.Practices.IoC;
 
-namespace Samples.Specifications.Tests.Infra.Launcher
+namespace Samples.Specifications.Tests.Infra
 {
-    public static class Extensions
+    public static class ResolverExtensions
     {
-        public static void Initialize(this IIocContainer iocContainer) =>
-            new Startup(iocContainer).Initialize();
-
         public static void Setup(this IDependencyResolver dependencyResolver)
         {
             var setupServices = dependencyResolver.ResolveAll<ISetupService>();
             foreach (var setupService in setupServices)
             {
                 setupService.Setup();
-            }            
+            }
         }
 
         public static void Teardown(this IDependencyResolver dependencyResolver)

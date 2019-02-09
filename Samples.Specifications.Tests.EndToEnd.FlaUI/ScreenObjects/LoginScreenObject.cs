@@ -1,5 +1,6 @@
 ﻿using FlaUI.Core.AutomationElements;
 using Samples.Specifications.Tests.Contracts.ScreenObjects;
+using Samples.Specifications.Tests.Infra;
 
 namespace Samples.Specifications.Tests.EndToEnd.ScreenObjects
 {
@@ -43,7 +44,9 @@ namespace Samples.Specifications.Tests.EndToEnd.ScreenObjects
         public string GetErrorMessage()
         {
             var loginScreen = GetLoginScreen();
-            var errorLabel = loginScreen.FindFirstDescendant("Login_FailureTextBlock").AsLabel();
+            var errorLabel = DelegateExtensions.ExecuteWithResult(() =>
+                    loginScreen.FindFirstDescendant("Login_FailureTextBlock").AsLabel(), r => r.Text,
+                new[] { null, string.Empty });            
             return errorLabel.Text;
         }
     }
