@@ -3,4 +3,5 @@
 	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;&#xD;
   &lt;Assembly Path="Y:\Workspace\Samples.Specifications\packages\LogoFX.Client.Bootstrapping.1.7.1-rc5\lib\net461\LogoFX.Client.Bootstrapping.Platform.dll" /&gt;&#xD;
 &lt;/AssemblyExplorer&gt;</s:String>
-	<s:Int64 x:Key="/Default/Environment/SearchAndNavigation/DefaultOccurrencesGroupingIndex/@EntryValue">0</s:Int64></wpf:ResourceDictionary>
+	<s:Int64 x:Key="/Default/Environment/SearchAndNavigation/DefaultOccurrencesGroupingIndex/@EntryValue">0</s:Int64>
+	<s:String x:Key="/Default/Housekeeping/ProjectModelSynchronizer/UseMsbuildStrategy/@EntryValue">AUTO</s:String></wpf:ResourceDictionary>
