@@ -1,6 +1,6 @@
 ﻿using Attest.Testing.Contracts;
+using Attest.Testing.Core;
 using JetBrains.Annotations;
-using Samples.Specifications.Tests.Infra;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
 

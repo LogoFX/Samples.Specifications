@@ -34,8 +34,8 @@
   </PropertyGroup>
   
   <ItemGroup>
-    <PackageReference Include="LogoFX.Client.Mvvm.ViewModel.Core" Version="2.0.0-rc1" />
-    <PackageReference Include="LogoFX.Client.Mvvm.ViewModel.Shared" Version="2.0.0-rc1" />
+    <PackageReference Include="LogoFX.Client.Mvvm.ViewModel.Core" Version="2.0.0-rc2" />
+    <PackageReference Include="LogoFX.Client.Mvvm.ViewModel.Shared" Version="2.0.0-rc2" />
   </ItemGroup>
   
   <ItemGroup>

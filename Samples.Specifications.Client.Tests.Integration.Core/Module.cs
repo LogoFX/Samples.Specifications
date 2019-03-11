@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
+using Attest.Testing.Core;
 using JetBrains.Annotations;
 using Samples.Specifications.Tests.Contracts;
-using Samples.Specifications.Tests.Infra;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
 

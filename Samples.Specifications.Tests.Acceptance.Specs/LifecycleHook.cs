@@ -1,7 +1,7 @@
 ﻿using Attest.Testing.Contracts;
+using Attest.Testing.Core;
 using BoDi;
 using JetBrains.Annotations;
-using Samples.Specifications.Tests.Infra;
 using Samples.Specifications.Tests.Infra.Launcher;
 using Solid.Common;
 using Solid.IoC.Adapters.ObjectContainer;

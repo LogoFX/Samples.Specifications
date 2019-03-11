@@ -11,7 +11,7 @@ namespace Samples.Specifications.Client.Data.Fake.Shared
     {
         public static void RegisterFakeProviders(this IDependencyRegistrator dependencyRegistrator)
         {
-            var assembliesProvider = new CustomAssemblySourceProvider(PlatformProvider.Current.GetRootPath(),
+            var assembliesProvider = new CustomAssemblySourceProvider(PlatformProvider.Current.GetRootPath(), null,
                 new[] {Consts.ContractsAssemblyEnding, Consts.FakeAssemblyEnding});
             var allAssemblies = assembliesProvider.Assemblies.ToArray();
             var contractTypes = allAssemblies.FindContractTypes();
@@ -36,7 +36,7 @@ namespace Samples.Specifications.Client.Data.Fake.Shared
 
         public static IDependencyRegistrator RegisterBuilders(this IDependencyRegistrator dependencyRegistrator)
         {
-            var assembliesProvider = new CustomAssemblySourceProvider(PlatformProvider.Current.GetRootPath(),
+            var assembliesProvider = new CustomAssemblySourceProvider(PlatformProvider.Current.GetRootPath(), null,
                 new[] {Consts.BuildersAssemblyEnding});
             var assemblies = assembliesProvider.Assemblies.ToArray();
             var buildersTypes = assemblies.FindBuildersTypes();

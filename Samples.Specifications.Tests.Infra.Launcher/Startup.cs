@@ -1,4 +1,5 @@
-﻿using Solid.Bootstrapping;
+﻿using Attest.Testing.Core;
+using Solid.Bootstrapping;
 using Solid.Core;
 using Solid.Practices.IoC;
 

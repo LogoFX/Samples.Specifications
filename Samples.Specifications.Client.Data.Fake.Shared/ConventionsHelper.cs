@@ -11,7 +11,7 @@ namespace Samples.Specifications.Client.Data.Fake.Shared
     {
         public static Dictionary<Type, Type> FindContractToBuilderMatches()
         {
-            var assembliesProvider = new CustomAssemblySourceProvider(PlatformProvider.Current.GetRootPath(),
+            var assembliesProvider = new CustomAssemblySourceProvider(PlatformProvider.Current.GetRootPath(), null,
                 new[] {Consts.ContractsAssemblyEnding, Consts.BuildersAssemblyEnding});
             var assemblies = assembliesProvider.Assemblies.ToArray();
             var contractTypes = assemblies.FindContractTypes();
