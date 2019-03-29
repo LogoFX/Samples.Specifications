@@ -1,9 +1,9 @@
 ﻿using System.Linq;
+using Attest.Fake.Conventions;
 using Attest.Fake.Data;
 using Attest.Fake.Data.Modularity;
 using Attest.Fake.Registration;
 using JetBrains.Annotations;
-using Samples.Specifications.Client.Data.Fake.Shared;
 using Solid.Practices.IoC;
 
 namespace Samples.Specifications.Client.Data.Fake.Providers.ContextBased
@@ -14,10 +14,10 @@ namespace Samples.Specifications.Client.Data.Fake.Providers.ContextBased
         protected override void RegisterProviders(IDependencyRegistrator dependencyRegistrator)
         {
             var builders = BuildersCollectionHelper.FillMissingBuilders(
-                ConventionsHelper.FindContractToBuilderMatches().Values.ToArray(),
+                TypeLocator.FindContractToBuilderMatches().Values.ToArray(),
                 BuilderFactory.CreateBuilderInstance);
             dependencyRegistrator.RegisterBuilders(RegistrationHelper.RegisterBuilderProduct,
-                ConventionsHelper.FindContractToBuilderMatches(), builders);
+                TypeLocator.FindContractToBuilderMatches(), builders);
         }
     }    
 }

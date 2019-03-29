@@ -137,6 +137,9 @@
     <PackageReference Include="Attest.Fake.Builders">
       <Version>2.0.0-rc3</Version>
     </PackageReference>
+    <PackageReference Include="Attest.Fake.Conventions">
+      <Version>2.0.0-rc1</Version>
+    </PackageReference>
     <PackageReference Include="AutoMapper">
       <Version>6.1.1</Version>
     </PackageReference>

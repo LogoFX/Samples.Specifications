@@ -22,6 +22,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+	<PackageReference Include="Attest.Fake.Conventions" Version="2.0.0-rc1" />
 	<PackageReference Include="Solid.Practices.IoC" Version="2.1.0" />
 	<PackageReference Include="Solid.Practices.Modularity" Version="2.1.0" />
 	<PackageReference Include="Solid.Practices.Composition.Core" Version="2.1.0" />
@@ -35,6 +36,5 @@
     <ProjectReference Include="..\Samples.Client.Data.Contracts.Providers\Samples.Client.Data.Contracts.Providers.csproj" />
     <ProjectReference Include="..\Samples.Specifications.Client.Data.Fake.Containers\Samples.Specifications.Client.Data.Fake.Containers.csproj" />
     <ProjectReference Include="..\Samples.Specifications.Client.Data.Fake.ProviderBuilders\Samples.Specifications.Client.Data.Fake.ProviderBuilders.csproj" />
-    <ProjectReference Include="..\Samples.Specifications.Client.Data.Fake.Shared\Samples.Specifications.Client.Data.Fake.Shared.csproj" />
   </ItemGroup> 
 </Project>

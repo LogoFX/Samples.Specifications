@@ -67,8 +67,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Specifications.Tests.EndToEnd.FlaUI", "Samples.Specifications.Tests.EndToEnd.FlaUI\Samples.Specifications.Tests.EndToEnd.FlaUI.csproj", "{D12F36FC-FCBC-4941-9199-D44F6E1C2767}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Samples.Specifications.Client.Data.Fake.Shared", "Samples.Specifications.Client.Data.Fake.Shared\Samples.Specifications.Client.Data.Fake.Shared.csproj", "{3E32F8F8-E157-40E8-98A7-A96F2F32D3AD}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		EndToEndWithFake|Any CPU = EndToEndWithFake|Any CPU
@@ -158,10 +156,6 @@ Global
 		{DE6BB2E9-4303-426B-AE23-D58DD6C78339}.EndToEndWithReal|Any CPU.Build.0 = EndToEndWithReal|Any CPU
 		{D12F36FC-FCBC-4941-9199-D44F6E1C2767}.EndToEndWithFake|Any CPU.ActiveCfg = EndToEndWithFake|Any CPU
 		{D12F36FC-FCBC-4941-9199-D44F6E1C2767}.EndToEndWithReal|Any CPU.ActiveCfg = EndToEndWithReal|Any CPU
-		{3E32F8F8-E157-40E8-98A7-A96F2F32D3AD}.EndToEndWithFake|Any CPU.ActiveCfg = Debug|Any CPU
-		{3E32F8F8-E157-40E8-98A7-A96F2F32D3AD}.EndToEndWithFake|Any CPU.Build.0 = Debug|Any CPU
-		{3E32F8F8-E157-40E8-98A7-A96F2F32D3AD}.EndToEndWithReal|Any CPU.ActiveCfg = Debug|Any CPU
-		{3E32F8F8-E157-40E8-98A7-A96F2F32D3AD}.EndToEndWithReal|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -191,7 +185,6 @@ Global
 		{BEA182A3-1028-4B5A-898E-103A05FE5F5E} = {BBAFE13B-DA85-4C5A-9DFA-44C4BEC009EE}
 		{DE6BB2E9-4303-426B-AE23-D58DD6C78339} = {BBAFE13B-DA85-4C5A-9DFA-44C4BEC009EE}
 		{D12F36FC-FCBC-4941-9199-D44F6E1C2767} = {BBAFE13B-DA85-4C5A-9DFA-44C4BEC009EE}
-		{3E32F8F8-E157-40E8-98A7-A96F2F32D3AD} = {2736E69E-E6B1-4941-A2AF-FE4932E03E4F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {593C9469-C05F-4128-889C-882A89B62C97}

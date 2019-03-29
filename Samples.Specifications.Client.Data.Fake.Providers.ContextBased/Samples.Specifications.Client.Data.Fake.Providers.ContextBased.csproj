@@ -22,19 +22,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+	  <PackageReference Include="Attest.Fake.Conventions" Version="2.0.0-rc1" />
 	  <PackageReference Include="Solid.Practices.IoC" Version="2.1.0" />
 	  <PackageReference Include="Solid.Practices.Modularity" Version="2.1.0" />
 	  <PackageReference Include="Solid.Extensibility" Version="2.1.0" />
 	  <PackageReference Include="JetBrains.Annotations" Version="2018.3.0" />
     <PackageReference Include="Attest.Fake.Builders" Version="2.0.0-rc3" />
     <PackageReference Include="Attest.Fake.Core" Version="2.0.0-rc3" />
-	  <PackageReference Include="Attest.Fake.Data" Version="2.0.0-rc4" />
+	  <PackageReference Include="Attest.Fake.Data" Version="2.0.0-rc5" />
   </ItemGroup>  
 
   <ItemGroup>
     <ProjectReference Include="..\Samples.Client.Data.Contracts.Dto\Samples.Client.Data.Contracts.Dto.csproj" />
     <ProjectReference Include="..\Samples.Client.Data.Contracts.Providers\Samples.Client.Data.Contracts.Providers.csproj" />
     <ProjectReference Include="..\Samples.Specifications.Client.Data.Fake.ProviderBuilders\Samples.Specifications.Client.Data.Fake.ProviderBuilders.csproj" />
-    <ProjectReference Include="..\Samples.Specifications.Client.Data.Fake.Shared\Samples.Specifications.Client.Data.Fake.Shared.csproj" />
   </ItemGroup> 
 </Project>

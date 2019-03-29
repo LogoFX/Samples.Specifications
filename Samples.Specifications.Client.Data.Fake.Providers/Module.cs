@@ -1,8 +1,8 @@
 ﻿using System;
+using Attest.Fake.Conventions;
 using JetBrains.Annotations;
 using Samples.Client.Data.Contracts.Dto;
 using Samples.Specifications.Client.Data.Fake.Containers;
-using Samples.Specifications.Client.Data.Fake.Shared;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
 

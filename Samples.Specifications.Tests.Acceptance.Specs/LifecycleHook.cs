@@ -4,7 +4,7 @@ using BoDi;
 using JetBrains.Annotations;
 using Samples.Specifications.Tests.Infra.Launcher;
 using Solid.Common;
-using Solid.IoC.Adapters.ObjectContainer;
+using Solid.IoC.Adapters.BoDi;
 using Solid.Practices.IoC;
 using TechTalk.SpecFlow;
 

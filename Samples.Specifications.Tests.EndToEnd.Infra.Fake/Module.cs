@@ -1,9 +1,9 @@
-﻿using Attest.Testing.Contracts;
+﻿using Attest.Fake.Conventions;
+using Attest.Testing.Contracts;
 using Attest.Testing.Core;
 using Attest.Testing.Core.FakeData;
 using Attest.Testing.EndToEnd;
 using JetBrains.Annotations;
-using Samples.Specifications.Client.Data.Fake.Shared;
 using Solid.Practices.IoC;
 using Solid.Practices.Modularity;
 
