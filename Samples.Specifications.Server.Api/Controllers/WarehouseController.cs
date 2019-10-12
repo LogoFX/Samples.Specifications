@@ -12,10 +12,14 @@ namespace Samples.Specifications.Server.Api.Controllers
     [Route("api/[controller]")]
     public class WarehouseController : Controller
     {
+        private readonly WarehouseMapper _warehouseMapper;
         private readonly IWarehouseRepository _warehouseRepository;
 
-        public WarehouseController(IWarehouseRepository warehouseRepository)
+        public WarehouseController(
+            WarehouseMapper warehouseMapper,
+            IWarehouseRepository warehouseRepository)
         {
+            _warehouseMapper = warehouseMapper;
             _warehouseRepository = warehouseRepository;
         }
         
@@ -23,20 +27,20 @@ namespace Samples.Specifications.Server.Api.Controllers
         public async Task<IEnumerable<WarehouseItemDto>> Get()
         {
             var warehouseItems = await _warehouseRepository.GetAll();
-            return warehouseItems.Select(WarehouseMapper.MapToWarehouseItemDto);            
+            return warehouseItems.Select(_warehouseMapper.MapToWarehouseItemDto);            
         }               
         
         [HttpPost]
         public async Task<IActionResult> Post([FromBody]WarehouseItemDto warehouseItem)
         {
-            await _warehouseRepository.Add(WarehouseMapper.MapToWarehouseItem(warehouseItem));
+            await _warehouseRepository.Add(_warehouseMapper.MapToWarehouseItem(warehouseItem));
             return Ok();
         }
         
         [HttpPut("{id}")]
         public async Task<IActionResult> Put(Guid id, [FromBody]WarehouseItemDto warehouseItem)
         {
-            await _warehouseRepository.Update(WarehouseMapper.MapToWarehouseItem(warehouseItem));
+            await _warehouseRepository.Update(_warehouseMapper.MapToWarehouseItem(warehouseItem));
             return Ok();
         }
         

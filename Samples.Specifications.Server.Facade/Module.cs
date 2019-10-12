@@ -12,6 +12,6 @@ namespace Samples.Specifications.Server.Facade
                 options.AddPolicy("AllowAny",
                     builder => builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin()))
             .AddMvc()
-            .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            .SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
     }
 }

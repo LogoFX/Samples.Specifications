@@ -1,11 +1,12 @@
 ﻿using JetBrains.Annotations;
-using LogoFX.Server.Bootstrapping;
 using LogoFX.Server.Bootstrapping.Mvc;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Solid.Bootstrapping;
+using BootstrapperBase = LogoFX.Server.Bootstrapping.BootstrapperBase;
 
 namespace Samples.Specifications.Server.Facade
 {
@@ -22,27 +23,20 @@ namespace Samples.Specifications.Server.Facade
             var bootstrapper = new Bootstrapper(services)
                 .Use(new RegisterCustomCompositionModulesMiddleware<BootstrapperBase, IServiceCollection>())
                 .Use(new RegisterCoreMiddleware<BootstrapperBase>())
-                .Use(new RegisterControllersMiddleware<BootstrapperBase>());            
+                .Use(new RegisterControllersMiddleware<BootstrapperBase>());
             bootstrapper.Initialize();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         [UsedImplicitly]
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseCors("AllowAny")
-                .UseHsts()
-                .UseAuthentication()
-                .UseSwagger()
-                .UseSwaggerUI(c =>
-                {
-                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-                }).UseMvc();
+            app.UseMvc();
         }
     }
 }
