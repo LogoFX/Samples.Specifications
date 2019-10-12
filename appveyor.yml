@@ -12,9 +12,6 @@ build:
   project: Specifications.sln
 
 image: Visual Studio 2019
-
-environment:
-  APPVEYOR_BUILD_WORKER_CLOUD: GCE
   
 notifications:
 - provider: Email
