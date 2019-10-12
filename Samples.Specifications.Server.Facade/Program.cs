@@ -1,6 +1,5 @@
 ﻿using System.Reflection;
 using JetBrains.Annotations;
-using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
